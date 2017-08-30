@@ -3,9 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "classnames": "^2.2.5",
+    "prop-types": "^15.5.10",
     "react": "^15.6.1",
+    "react-bootstrap": "^0.31.2",
     "react-dom": "^15.6.1",
-    "react-scripts": "0.9.5"
+    "react-scripts": "0.9.5",
+    "react-scroll": "^1.5.4"
   },
   "devDependencies": {},
   "scripts": {

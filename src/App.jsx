@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Button, Carousel, CarouselItem, Col, Grid, Jumbotron, Nav, Navbar, NavbarBrand, Row } from 'react-bootstrap';
+import { Button, Carousel, CarouselItem, Col, Grid, Jumbotron, Nav, Navbar, NavbarBrand, NavItem, Row } from 'react-bootstrap';
 import { Link } from 'react-scroll';
 import LeadGenForm from './LeadGenForm';
 import PageSection from './PageSection';
@@ -38,6 +38,7 @@ class App extends Component {
                             <NavScrollItem to={sections.LEARN}>Learn</NavScrollItem>
                             <NavScrollItem to={sections.TEAM}>Team</NavScrollItem>
                             <NavScrollItem to={sections.ADVISORS}>Advisors</NavScrollItem>
+                            <NavItem href="https://blog.keep.network">Blog</NavItem>
                         </Nav>
                     </Navbar.Collapse>
                 </Navbar>
@@ -61,7 +62,7 @@ class App extends Component {
                             <CarouselItem>
                                 <div className="carousel-item-inner-wrap">
                                     <div>
-                                        <h3 class="h2">Habitant eleifend libero placerat suspendisse</h3>
+                                        <h3 className="h2">Habitant eleifend libero placerat suspendisse</h3>
                                         <p>Est dictumst penatibus bibendum neque vitae consequat platea ante ornare sollicitudin ridiculus, nascetur facilisi at dis magnis leo tortor lacinia hendrerit magna, vulputate etiam tristique montes sagittis sociosqu purus in convallis aliquet. Magnis gravida taciti tempus vel ullamcorper ad curabitur penatibus iaculis accumsan nam ante nunc, justo massa senectus nibh rutrum pellentesque pulvinar urna sed quam fringilla lobortis. Per vel lectus quam suspendisse faucibus laoreet suscipit vehicula ridiculus volutpat, inceptos mattis purus mauris tempor pharetra curae rutrum sapien dapibus mus, in egestas aenean nec sollicitudin imperdiet felis facilisis conubia.</p>
                                     </div>
                                 </div>
@@ -69,7 +70,7 @@ class App extends Component {
                             <CarouselItem>
                                 <div className="carousel-item-inner-wrap">
                                     <div>
-                                        <h3 class="h2">Quisque enim lectus orci ridiculus</h3>
+                                        <h3 className="h2">Quisque enim lectus orci ridiculus</h3>
                                         <p>Curae porttitor vulputate est per duis eros nisl ornare metus facilisi, luctus vestibulum aliquam habitant donec tellus aliquet ac malesuada ligula, ullamcorper eleifend sodales sapien vivamus mollis neque eget eu. Habitant lacinia sociosqu suscipit gravida odio ut feugiat consequat senectus, ridiculus metus integer sapien fringilla nunc natoque proin porta, nec maecenas per at quam libero imperdiet facilisi.</p>
                                     </div>
                                 </div>
@@ -77,7 +78,7 @@ class App extends Component {
                             <CarouselItem>
                                 <div className="carousel-item-inner-wrap">
                                     <div>
-                                        <h3 class="h2">Purus nascetur feugiat</h3>
+                                        <h3 className="h2">Purus nascetur feugiat</h3>
                                         <p>Lectus pharetra netus nullam quisque curae laoreet, mollis platea phasellus litora. Porttitor eleifend eu sociosqu integer est dictum aptent mus, pretium egestas cursus quam lectus tristique parturient condimentum vehicula, ac nascetur et netus convallis lobortis nibh. Semper at iaculis facilisis suscipit ligula, maecenas interdum taciti nullam. Dictumst donec mauris aptent viverra ligula turpis dignissim himenaeos cum sodales curabitur, rutrum purus dictum blandit interdum hendrerit aliquet iaculis scelerisque.</p>
                                     </div>
                                 </div>
@@ -148,8 +149,9 @@ class App extends Component {
                     <footer>
                         <Grid>
                             <ul className="footer-links">
-                                <li><a href="#">Github</a></li>
+                                <li><a href="https://github.com/keep-network">Github</a></li>
                                 <li><a href="#">Slack</a></li>
+                                <li><a href="https://blog.keep.network">Blog</a></li>
                             </ul>
                             <span>&#169; 2017 Keep</span>
                         </Grid>

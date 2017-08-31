@@ -1,0 +1,9 @@
+test:
+  post:
+    - npm run build
+
+deployment:
+    staging:
+        branch: staging
+        heroku:
+            appname: keep-website-staging

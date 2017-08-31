@@ -1,9 +1,18 @@
+machine:
+  node:
+    version: 8.0.0
+
+dependencies:
+  pre:
+    - node --version
+    - npm --version
+
 test:
   post:
     - npm run build
 
 deployment:
-    staging:
-        branch: staging
-        heroku:
-            appname: keep-website-staging
+  staging:
+    branch: staging
+    heroku:
+      appname: keep-website-staging

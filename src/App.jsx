@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Button, Carousel, CarouselItem, Col, Grid, Jumbotron, Nav, NavItem, Navbar, NavbarBrand, Row } from 'react-bootstrap';
+import { Button, Carousel, CarouselItem, Col, Grid, Jumbotron, Nav, Navbar, NavbarBrand, Row } from 'react-bootstrap';
 import { Link } from 'react-scroll';
 import LeadGenForm from './LeadGenForm';
 import PageSection from './PageSection';

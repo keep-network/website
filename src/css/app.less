@@ -1,0 +1,102 @@
+@import 'typography';
+
+.App {
+  text-align: center;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+.main-content {
+  padding-top: 51px;
+}
+
+.jumbotron {
+  padding: 0;
+}
+
+.jumbotron h1 {
+  margin-top: 0;
+}
+
+input#email {
+  padding: 22px 12px;
+}
+
+.profile {
+  text-align: center;
+}
+
+.avatar {
+  display: inline-block;
+  background-color: green;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.avatar img {
+  width: 100%;
+}
+
+.page-section {
+  display: flex;
+  align-items: center;
+  padding: 30px 0;
+}
+
+.page-section .page-section-content {
+  width: 100%;
+}
+
+.carousel-item-inner-wrap {
+  display: flex;
+  align-items: center;
+  min-height: 500px;
+}
+
+.quote-text {
+  font-style: italic;
+}
+
+footer {
+  text-align: left;
+  padding: 30px 0 60px;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  float: right;
+}
+
+.footer-links li {
+  display: inline-block;
+  padding-left: 12px;
+}
+
+@media only screen and (min-width: 768px) {
+  .main-content {
+    padding-top: 0;
+  }
+
+  .jumbotron {
+    padding: 0;
+  }
+
+  .page-section {
+    min-height: 100vh;
+  }
+
+  .navbar {
+    background-color: transparent;
+    border-bottom: none;
+  }
+
+  .quote.right .quote-text {
+    text-align: right;
+  }
+
+  .quote.left .quote-text {
+    text-align: left;
+  }
+}

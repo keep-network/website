@@ -4,6 +4,10 @@
   "private": true,
   "dependencies": {
     "classnames": "^2.2.5",
+    "less": "^2.7.2",
+    "less-plugin-clean-css": "^1.5.1",
+    "less-watch-compiler": "^1.7.0",
+    "npm-run-all": "^4.1.1",
     "prop-types": "^15.5.10",
     "react": "^15.6.1",
     "react-bootstrap": "^0.31.2",
@@ -13,8 +17,11 @@
   },
   "devDependencies": {},
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build-css": "lessc --clean-css src/css/app.less app.css",
+    "watch-css": "npm run build-css && less-watch-compiler src/css src app.less",
+    "start-js": "react-scripts start",
+    "start": "npm-run-all -p watch-css start-js",
+    "build": "npm run build-css && react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   }

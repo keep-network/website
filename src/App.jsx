@@ -9,7 +9,7 @@ import jane from './images/jane.png';
 import matt from './images/matt.jpg';
 import mario from './images/mario.png';
 import yoshi from './images/yoshi.png';
-import './App.css';
+import './app.css';
 
 class App extends Component {
 

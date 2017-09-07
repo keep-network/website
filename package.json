@@ -17,7 +17,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "build-css": "lessc --clean-css src/css/app.less app.css",
+    "build-css": "lessc --clean-css src/css/app.less src/app.css",
     "watch-css": "npm run build-css && less-watch-compiler src/css src app.less",
     "start-js": "react-scripts start",
     "start": "npm-run-all -p watch-css start-js",

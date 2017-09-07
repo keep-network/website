@@ -6,10 +6,10 @@ const LeadGenForm = () => <div className="lead">
     <Form inline>
         <FormGroup controlId="formInlineEmail">
             <ControlLabel style={{display: 'none'}}>Email</ControlLabel>
-            <FormControl type="email" id="email" placeholder="jane.doe@example.com" />
+            <FormControl type="email" id="email" />
         </FormGroup>
         {' '}
-        <Button bsStyle="primary" bsSize="large">Join Keep</Button>
+        <Button bsStyle="primary" bsSize="large">sign up</Button>
     </Form>
 </div>;
 

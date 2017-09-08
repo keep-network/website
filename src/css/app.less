@@ -35,8 +35,7 @@ input#email {
 .avatar {
   display: inline-block;
   background-color: green;
-  width: 150px;
-  height: 150px;
+  max-width: 100%;
   border-radius: 50%;
   overflow: hidden;
 }
@@ -73,12 +72,28 @@ footer {
   }
 
   .page-section {
+    padding: 100px 0;
+  }
+
+  .home {
     min-height: 100vh;
   }
 
   .navbar {
     background-color: transparent;
     border-bottom: none;
+  }
+
+  .blurb {
+    .col-md-9 {
+      text-align: left;
+    }
+  }
+
+  .use-case {
+    p {
+      text-align: left;
+    }
   }
 
   .quote.right .quote-text {

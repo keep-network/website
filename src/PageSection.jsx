@@ -4,8 +4,8 @@ import classNames from 'classnames';
 import { Grid } from 'react-bootstrap';
 
 
-const PageSection = ({ id, children }) => <section
-    className={classNames('page-section', id)} id={id}>
+const PageSection = ({ id, additionalClassNames, children }) => <section
+    className={classNames('page-section', id, additionalClassNames)} id={id}>
     <div className="page-section-content">
         <Grid>
             { children }
@@ -14,7 +14,13 @@ const PageSection = ({ id, children }) => <section
 </section>;
 
 PageSection.propTypes = {
-    id: PropTypes.string
+    id: PropTypes.string,
+    additionalClassNames: PropTypes.array
+};
+
+PageSection.defaultTypes = {
+    id: '',
+    additionalClassNames: []
 };
 
 export default PageSection;

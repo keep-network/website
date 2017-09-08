@@ -2,6 +2,7 @@ body {
     font-family: 'Nunito Sans', sans-serif;
     font-weight: 400;
     font-size: 18px;
+    color: @gunmetal;
 }
 
 h1, .h1 {
@@ -21,4 +22,35 @@ h3, .h3 {
 
 h4, .h4 {
     font-size: 22px;
+}
+
+a {
+    color: @link-color;
+}
+
+.btn {
+    padding: 10px 33px;
+    border-radius: @border-radius;
+}
+
+.btn-default {
+    background-color: @white;
+    color: @link-color;
+    border-color: @white;
+
+    &:hover {
+        background-color: @white;
+        color: @link-color;
+        border-color: @white;
+    }
+}
+
+.btn-primary {
+    background-color: @link-color;
+    border-color: @link-color;
+
+    &:hover {
+        background-color: @link-color;
+        border-color: @link-color;
+    }
 }

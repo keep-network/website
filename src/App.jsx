@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Button, Col, Grid, Jumbotron, Nav, Navbar, NavbarBrand, NavItem, Row } from 'react-bootstrap';
+import { Button, Col, Grid, Nav, Navbar, NavbarBrand, NavItem, Row } from 'react-bootstrap';
 import { Link } from 'react-scroll';
 import LeadGenForm from './LeadGenForm';
 import SlackInviteForm from './SlackInviteForm';
@@ -44,13 +44,15 @@ class App extends Component {
                     </Navbar.Collapse>
                 </Navbar>
                 <div className="main-content">
-                    <Jumbotron>
-                        <PageSection id={sections.HOME}>
-                            <h1 className="display-3">Prepare for the Presale</h1>
-                            <p className="lead">The Keep network is a privacy layer for public blockchains, initially built against the Ethereum blockchain. The network uses "keeps", small, off-chain data enclaves for private information</p>
-                            <LeadGenForm/>
-                        </PageSection>
-                    </Jumbotron>
+                    <PageSection id={sections.HOME}>
+                        <h1>Prepare for the Presale</h1>
+                        <Row>
+                            <Col sm={12} md={8} mdPush={2}>
+                                <p>The Keep network is a privacy layer for public blockchains, initially built against the Ethereum blockchain. The network uses "keeps", small, off-chain data enclaves for private information.</p>
+                                <LeadGenForm/>
+                            </Col>
+                        </Row>
+                    </PageSection>
                     <PageSection id={sections.ABOUT}>
                         <Row>
                             <Col sm={12} md={6}>
@@ -61,7 +63,7 @@ class App extends Component {
                             <Col sm={12} md={6}>
                                 <h3>Read the Whitepaper</h3>
                                 <p>Find out how you can use Keep</p>
-                                <Button bsStyle="primary" bsSize="large">download</Button>
+                                <Button bsSize="large">download</Button>
                             </Col>
                         </Row>
                     </PageSection>

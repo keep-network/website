@@ -5,8 +5,6 @@ import LeadGenForm from './LeadGenForm';
 import SlackInviteForm from './SlackInviteForm';
 import PageSection from './PageSection';
 import NavScrollItem from './NavScrollItem';
-import mario from './images/mario.png';
-import yoshi from './images/yoshi.png';
 import './app.css';
 
 class App extends Component {
@@ -21,8 +19,7 @@ class App extends Component {
             DESCRIPTION: 'description',
             TEAM: 'team',
             BLURB: 'blurb',
-            ADVISORS: 'advisors',
-            QUOTES: 'quotes'
+            ADVISORS: 'advisors'
         };
 
         return (
@@ -221,27 +218,6 @@ class App extends Component {
                             <Col sm={12} md={2} className="profile">
                                 <div className="avatar"><img src={'http://via.placeholder.com/160x160'} alt="Corbin Pon"/></div>
                                 <h4><span>Corbin Pon</span>COO &amp; Founder</h4>
-                            </Col>
-                        </Row>
-                    </PageSection>
-                    <PageSection id={sections.QUOTES}>
-                        <h2>What people are saying</h2>
-                        <Row className="quote right">
-                            <Col sm={12} md={8} className="quote-text">
-                                <h3>"Viverra convallis nostra enim dignissim nisl, maecenas feugiat eros himenaeos porttitor, id velit consequat et. Vehicula nisi viverra diam quisque curae ante bibendum, ac at turpis eu integer facilisis, mi ligula feugiat inceptos mus sociosqu."</h3>
-                            </Col>
-                            <Col sm={12} md={4} >
-                                <div className="avatar"><img src={yoshi} alt="Yoshi"/></div>
-                                <h3>Yoshi</h3>
-                            </Col>
-                        </Row>
-                        <Row className="quote left">
-                            <Col sm={12} md={8} mdPush={4} className="quote-text">
-                                <h3>"Sed feugiat ridiculus etiam vitae morbi semper suscipit aenean dictum, interdum mollis lacinia quis auctor parturient porta cum, ornare pretium risus natoque conubia metus rutrum tincidunt."</h3>
-                            </Col>
-                            <Col sm={12} md={4} mdPull={8}>
-                                <div className="avatar"><img src={mario} alt="Mario"/></div>
-                                <h3>Mario</h3>
                             </Col>
                         </Row>
                     </PageSection>

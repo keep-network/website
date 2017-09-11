@@ -5,6 +5,7 @@ import LeadGenForm from './LeadGenForm';
 import SlackInviteForm from './SlackInviteForm';
 import PageSection from './PageSection';
 import NavScrollItem from './NavScrollItem';
+import Snippet from './Snippet';
 import './app.css';
 
 class App extends Component {
@@ -21,6 +22,14 @@ class App extends Component {
             BLURB: 'blurb',
             ADVISORS: 'advisors'
         };
+
+        const snippetCode = `$ curl https://api.keep.network/v1/btc/main/addrs/1Puw/Q6uWXNeGcEnLCAXmRJozdLZ9M4NWQ7
+{
+    "address": "Q6uWXNeGcEnLCAXmRJozdLZ9M4NWQ7",
+    "balance": 0,
+    "unconfirmed_balance": 0,
+    "txrefs": []
+}`;
 
         return (
             <div className="App">
@@ -71,7 +80,11 @@ class App extends Component {
                                 <p>Meet the online community</p>
                                 <Button bsStyle="primary" bsSize="large">open</Button>
                             </Col>
-                            <Col sm={12} md={6}>
+                            <Col sm={12} md={6} className="snippet">
+                                <h3 className="small-title">Get all recent transactions</h3>
+                                <Snippet component="pre" lang="json">
+                                    {snippetCode}
+                                </Snippet>
                                 <Button bsStyle="primary" bsSize="large">more code snippets</Button>
                             </Col>
                         </Row>

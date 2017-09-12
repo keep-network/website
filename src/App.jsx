@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import { Button, Col, Grid, Nav, Navbar, NavbarBrand, NavItem, Row } from 'react-bootstrap';
 import { Link } from 'react-scroll';
-import LeadGenForm from './LeadGenForm';
-import SlackInviteForm from './SlackInviteForm';
+import EmailForm from './EmailForm';
 import PageSection from './PageSection';
 import NavScrollItem from './NavScrollItem';
 import Snippet from './Snippet';
@@ -58,8 +57,11 @@ class App extends Component {
                             </Col>
                         </Row>
                         <Row>
-                             <Col>
-                                <LeadGenForm/>
+                            <Col sm={12} md={4} mdPush={4}>
+                                <EmailForm
+                                    label="Email"
+                                    btnText="sign up"
+                                    url="/mailing-list/signup" />
                             </Col>
                         </Row>
                     </PageSection>
@@ -68,7 +70,10 @@ class App extends Component {
                             <Col sm={12} md={6}>
                                 <h3>Join the Conversation</h3>
                                 <p>Meet the online community</p>
-                                <SlackInviteForm />
+                                <EmailForm
+                                    label="Slack Email"
+                                    btnText="join"
+                                    url="/slack/invite" />
                             </Col>
                             <Col sm={12} md={6}>
                                 <h3>Read the Whitepaper</h3>

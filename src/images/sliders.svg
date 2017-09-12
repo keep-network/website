@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="84px" height="84px" viewBox="0 0 84 84" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>sliders</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M18.2,5.6 C25.158,5.6 30.8,11.242 30.8,18.2 C30.8,25.158 25.158,30.8 18.2,30.8 C11.242,30.8 5.6,25.158 5.6,18.2 C5.6,11.242 11.242,5.6 18.2,5.6" id="path-1"></path>
+        <filter x="-7.9%" y="-7.9%" width="115.9%" height="115.9%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="-4" dy="0" in="SourceAlpha" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.1 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+        </filter>
+        <path d="M63,50.4 C69.958,50.4 75.6,56.042 75.6,63 C75.6,69.958 69.958,75.6 63,75.6 C56.042,75.6 50.4,69.958 50.4,63 C50.4,56.042 56.042,50.4 63,50.4" id="path-3"></path>
+        <filter x="-7.9%" y="-7.9%" width="115.9%" height="115.9%" filterUnits="objectBoundingBox" id="filter-4">
+            <feOffset dx="-4" dy="0" in="SourceAlpha" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.12 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+        </filter>
+        <path d="M63,0 C73.052,0 81.2,8.148 81.2,18.2 C81.2,28.252 73.052,36.4 63,36.4 L16.8,36.4 C7,36.4 0,27.776 0,18.2 C0,8.624 7,0 16.8,0.07 L16.8,0 L63,0 Z M30.8,18.2 C30.8,11.242 25.158,5.6 18.2,5.6 C11.242,5.6 5.6,11.242 5.6,18.2 C5.6,25.158 11.242,30.8 18.2,30.8 C25.158,30.8 30.8,25.158 30.8,18.2 L30.8,18.2 Z" id="path-5"></path>
+        <filter x="-2.5%" y="-5.5%" width="104.9%" height="111.0%" filterUnits="objectBoundingBox" id="filter-6">
+            <feOffset dx="-4" dy="0" in="SourceAlpha" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.08 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+        </filter>
+        <path d="M63,44.8 C73.052,44.8 81.2,52.948 81.2,63 C81.2,73.052 73.052,81.2 63,81.2 L16.8,81.2 C7,81.2 0,72.576 0,63 C0,53.424 7,44.8 16.8,44.87 L16.8,44.8 L63,44.8 Z M50.4,63 C50.4,69.958 56.042,75.6 63,75.6 C69.958,75.6 75.6,69.958 75.6,63 C75.6,56.042 69.958,50.4 63,50.4 C56.042,50.4 50.4,56.042 50.4,63 L50.4,63 Z" id="path-7"></path>
+        <filter x="-2.5%" y="-5.5%" width="104.9%" height="111.0%" filterUnits="objectBoundingBox" id="filter-8">
+            <feOffset dx="-4" dy="0" in="SourceAlpha" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.08 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="round-3" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="sliders">
+            <g id="fill" transform="translate(1.000000, 1.000000)">
+                <g id="Fill-1">
+                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                    <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                </g>
+                <g id="Fill-3">
+                    <use fill="#C3E6DC" fill-rule="evenodd" xlink:href="#path-3"></use>
+                    <use fill="black" fill-opacity="1" filter="url(#filter-4)" xlink:href="#path-3"></use>
+                </g>
+                <g id="Fill-5">
+                    <use fill="#F7F7F7" fill-rule="evenodd" xlink:href="#path-5"></use>
+                    <use fill="black" fill-opacity="1" filter="url(#filter-6)" xlink:href="#path-5"></use>
+                </g>
+                <g id="Fill-7">
+                    <use fill="#F7F7F7" fill-rule="evenodd" xlink:href="#path-7"></use>
+                    <use fill="black" fill-opacity="1" filter="url(#filter-8)" xlink:href="#path-7"></use>
+                </g>
+            </g>
+            <path d="M64,82.2 C74.052,82.2 82.2,74.052 82.2,64 C82.2,53.948 74.052,45.8 64,45.8 L17.8,45.8 L17.8,45.8714 C8,45.8 1,54.4212 1,64 C1,73.5788 8,82.2 17.8,82.2 L58.4,82.2 L64,82.2 L64,82.2 Z M51.4,64 L19.2,64 L51.4,64 L51.4,64 Z M64,19.2 L31.8,19.2 L64,19.2 L64,19.2 Z M31.8,19.2 C31.8,12.2406 26.1594,6.6 19.2,6.6 C12.2406,6.6 6.6,12.2406 6.6,19.2 C6.6,26.1594 12.2406,31.8 19.2,31.8 C26.1594,31.8 31.8,26.1594 31.8,19.2 L31.8,19.2 L31.8,19.2 Z M64,37.4 C74.052,37.4 82.2,29.252 82.2,19.2 C82.2,9.148 74.052,1 64,1 L17.8,1 L17.8,1.0714 C8,1 1,9.6212 1,19.2 C1,28.7788 8,37.4 17.8,37.4 L58.4,37.4 L64,37.4 L64,37.4 Z M64,76.6 C57.0406,76.6 51.4,70.9594 51.4,64 C51.4,57.0406 57.0406,51.4 64,51.4 C70.9594,51.4 76.6,57.0406 76.6,64 C76.6,70.9594 70.9594,76.6 64,76.6 L64,76.6 L64,76.6 Z" id="stroke" stroke="#505E5B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+        </g>
+    </g>
+</svg>

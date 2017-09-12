@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="84px" height="84px" viewBox="0 0 84 84" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>key-circle</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M11.21372,48.3 C4.42372,43.484 -0.00028,35.56 -0.00028,26.6 C-0.00028,11.914 11.91372,0 26.59972,0 C41.28572,0 53.19972,11.914 53.19972,26.6 C53.19972,30.31 52.42972,33.866 51.04372,37.072 C48.36972,43.344 43.32972,48.37 37.05772,51.058 C33.85172,52.43 30.31112,53.2 26.59972,53.2 C23.11372,53.2 19.78172,52.528 16.72972,51.31 C16.72972,51.31 13.60772,49.994 11.22772,48.3 L11.21372,48.3 Z M15.81972,23.716 C16.81372,24.64 18.14372,25.2 19.59972,25.2 C22.69372,25.2 25.19972,22.694 25.19972,19.6 C25.19972,16.506 22.69372,14 19.59972,14 C16.50572,14 13.99972,16.506 13.99972,19.6 C13.99972,21.238 14.69972,22.708 15.81972,23.716 L15.81972,23.716 Z" id="path-1"></path>
+        <filter x="-3.8%" y="-3.8%" width="107.5%" height="107.5%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="-4" dy="0" in="SourceAlpha" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.1 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+        </filter>
+        <path d="M81.2,67.2 L81.2,81.2 L67.2,81.2 L67.2,75.6 L61.6,75.6 L61.6,70 L56,70 L56,64.4 L50.4,64.4 L37.058,51.058 C43.33,48.37 48.37,43.344 51.044,37.072 L51.1,37.1 L81.2,67.2 Z" id="path-3"></path>
+        <filter x="-4.5%" y="-4.5%" width="109.1%" height="109.1%" filterUnits="objectBoundingBox" id="filter-4">
+            <feOffset dx="-4" dy="0" in="SourceAlpha" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.08 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="round-3" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="key-circle">
+            <g id="fill" transform="translate(1.000000, 1.000000)">
+                <g id="Fill-1">
+                    <use fill="#C3E6DC" fill-rule="evenodd" xlink:href="#path-1"></use>
+                    <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                </g>
+                <g id="Fill-4">
+                    <use fill="#F7F7F7" fill-rule="evenodd" xlink:href="#path-3"></use>
+                    <use fill="black" fill-opacity="1" filter="url(#filter-4)" xlink:href="#path-3"></use>
+                </g>
+            </g>
+            <path d="M21.979,26.8278 C24.4038,26.2132 26.2,24.0152 26.2,21.4 C26.2,18.3074 23.6926,15.8 20.6,15.8 C17.5074,15.8 15,18.3074 15,21.4 C15,23.0618 15.574,24.6508 16.7248,25.677 M51.4,49.4 L76.6,74.6 M43,57.8 L51.4,66.2 L57,66.2 L57,71.8 L62.6,71.8 L62.6,77.4 L68.2,77.4 L68.2,83 L82.2,83 L82.2,69 L57,43.8 M17.7244,53.1058 C20.7778,54.328 24.1098,55 27.6,55 C42.2902,55 54.2,43.0902 54.2,28.4 C54.2,13.7084 42.2902,1.8 27.6,1.8 C12.9084,1.8 1,13.7084 1,28.4 C1,37.3586 5.4296,45.284 12.2182,50.1028 M20.6,59.8552 C20.6,59.8552 20.6,64.8 16.4,64.8 C12.2,64.8 12.2,57.8 12.2,52.2 C12.2,24.2 20.6,21.4 20.6,21.4" id="stroke" stroke="#505E5B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+        </g>
+    </g>
+</svg>

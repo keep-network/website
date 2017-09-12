@@ -5,6 +5,7 @@ import EmailForm from './EmailForm';
 import PageSection from './PageSection';
 import NavScrollItem from './NavScrollItem';
 import Snippet from './Snippet';
+import * as icons from './Icons';
 import './app.css';
 
 class App extends Component {
@@ -113,34 +114,34 @@ class App extends Component {
                         <h2>How Keep Can Be Used</h2>
                         <Row>
                             <Col sm={12} md={4} className="use-case">
-                                <div className="icon"><img alt="use case icon" src="http://via.placeholder.com/100x100" /></div>
+                                <div className="icon"><img alt="Agreement" src={icons.agreement} /></div>
                                 <h4>Decentralized Signing</h4>
                                 <p>For the first time, contracts will be able to assert their identity off-chain, without requiring the recipient's awareness of blockchain state.</p>
                             </Col>
                             <Col sm={12} md={4} className="use-case">
-                                <div className="icon"><img alt="use case icon" src="http://via.placeholder.com/100x100" /></div>
+                                <div className="icon"><img alt="Sliders" src={icons.sliders} /></div>
                                 <h4>Dead Man Switch</h4>
                                 <p>A dead man switch is a device that is automatically activated in case its owner becomes incapacitated. Keeps enable a particular kind of dead man switch - publishing a secret, under certain contract conditions.</p>
                             </Col>
                             <Col sm={12} md={4} className="use-case">
-                                <div className="icon"><img alt="use case icon" src="http://via.placeholder.com/100x100" /></div>
+                                <div className="icon"><img alt="Wallet" src={icons.wallet} /></div>
                                 <h4>Custodial Wallets</h4>
                                 <p>As a special case of a signing service, contracts can use keeps to generate their own cryptocurrency wallets, taking full custody of any received funds.</p>
                             </Col>
                         </Row>
                         <Row>
                             <Col sm={12} md={4} className="use-case">
-                                <div className="icon"><img alt="use case icon" src="http://via.placeholder.com/100x100" /></div>
+                                <div className="icon"><img alt="Shop" src={icons.shop} /></div>
                                 <h4>Marketplaces for Digital Goods</h4>
                                 <p>Buying and selling digital goods on public blockchains today requires settling off-chain. Keeps make marketplaces for digital goods, like audio and video files, straightforward.</p>
                             </Col>
                             <Col sm={12} md={4} className="use-case">
-                                <div className="icon"><img alt="use case icon" src="http://via.placeholder.com/100x100" /></div>
+                                <div className="icon"><img alt="Open Safe" src={icons.safeOpened} /></div>
                                 <h4>Blockchain Storage Encryption</h4>
                                 <p>Keeps can provide a private bridge to blockchain storage, By generating an AES key at keep initialization and providing off-chain data access to the keep, smart contracts can use keeps to secure files stored on decentralized services.</p>
                             </Col>
                             <Col sm={12} md={4} className="use-case">
-                                <div className="icon"><img alt="use case icon" src="http://via.placeholder.com/100x100" /></div>
+                                <div className="icon"><img alt="Paper Study" src={icons.paperStudy} /></div>
                                 <h4>Learn More in the Whitepaper</h4>
                                 <Button bsStyle="primary" bsSize="large">download</Button>
                             </Col>

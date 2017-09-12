@@ -3,6 +3,7 @@
     border: solid 2px @light-blue-grey;
     border-radius: @border-radius;
     background-color: @white;
+    margin: 0 0 1em;
 
     input {
         padding: 22px 12px;
@@ -14,6 +15,12 @@
         &.form-control {
             border-color: transparent;
             box-shadow: none;
+            display: inline-block;
         }
+    }
+
+    .form-group {
+        display: inline-block;
+        margin-bottom: 0;
     }
 }

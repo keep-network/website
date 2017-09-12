@@ -2,7 +2,7 @@ import React from 'react';
 import { Button, ControlLabel, Form, FormGroup,
     FormControl } from 'react-bootstrap';
 
-const LeadGenForm = () => <div className="lead">
+const LeadGenForm = () => <div>
     <Form inline>
         <FormGroup controlId="formInlineEmail">
             <ControlLabel style={{display: 'none'}}>Email</ControlLabel>

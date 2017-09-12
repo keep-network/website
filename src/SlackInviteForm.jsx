@@ -2,7 +2,7 @@ import React from 'react';
 import { Button, ControlLabel, Form, FormGroup,
     FormControl } from 'react-bootstrap';
 
-const SlackInviteForm = () => <div className="lead">
+const SlackInviteForm = () => <div>
     <Form inline>
         <FormGroup controlId="formInlineSlack">
             <ControlLabel style={{display: 'none'}}>Slack Email</ControlLabel>

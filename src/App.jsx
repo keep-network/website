@@ -55,6 +55,10 @@ class App extends Component {
                         <Row>
                             <Col sm={12} md={8} mdPush={2}>
                                 <p>The Keep network is a privacy layer for public blockchains, initially built against the Ethereum blockchain. The network uses "keeps", small, off-chain data enclaves for private information.</p>
+                            </Col>
+                        </Row>
+                        <Row>
+                             <Col>
                                 <LeadGenForm/>
                             </Col>
                         </Row>
@@ -96,7 +100,7 @@ class App extends Component {
                             </Col>
                             <Col sm={12} md={9}>
                                 <p>Keep: noun</p>
-                                <p>The strongest or central tower of a castle, acting as a final refuge</p>
+                                <p>1. the strongest or central tower of a castle, acting as a final refuge</p>
                             </Col>
                         </Row>
                     </PageSection>
@@ -175,7 +179,7 @@ class App extends Component {
                             </Col>
                             <Col sm={12} md={9}>
                                 <p>Keep: noun</p>
-                                <p>The strongest or central tower of a castle, acting as a final refuge</p>
+                                <p>1. the strongest or central tower of a castle, acting as a final refuge</p>
                             </Col>
                         </Row>
                     </PageSection>

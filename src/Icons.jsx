@@ -16,7 +16,7 @@ import shop from './images/shop.svg';
 import skull from './images/skull.svg';
 import slack from './images/slack_monochrome_white.svg';
 import sliders from './images/sliders.svg';
-import swordsIcon from './images/swordsIcon.svg';
+import swords from './images/swordsIcon.svg';
 import timeline from './images/timeline.svg';
 import twitter from './images/Twitter.svg';
 import wallet from './images/wallet.svg';
@@ -40,7 +40,7 @@ export {
     skull,
     slack,
     sliders,
-    swordsIcon,
+    swords,
     timeline,
     twitter,
     wallet

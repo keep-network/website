@@ -5,7 +5,7 @@ import EmailForm from './EmailForm';
 import PageSection from './PageSection';
 import NavScrollItem from './NavScrollItem';
 import Snippet from './Snippet';
-import * as icons from './Icons';
+import * as Icons from './Icons';
 import './app.css';
 
 class App extends Component {
@@ -68,7 +68,8 @@ class App extends Component {
                     </PageSection>
                     <PageSection id={sections.ABOUT}>
                         <Row>
-                            <Col sm={12} md={6}>
+                            <Col sm={12} md={6} className="slack-community">
+                                <img alt="Slack Logo" src={Icons.slack} />
                                 <h3>Join the Conversation</h3>
                                 <p>Meet the online community</p>
                                 <EmailForm
@@ -76,7 +77,8 @@ class App extends Component {
                                     btnText="join"
                                     url="/slack/invite" />
                             </Col>
-                            <Col sm={12} md={6}>
+                            <Col sm={12} md={6} className="whitepaper">
+                                <img alt="Paper Study" src={Icons.paperStudy} />
                                 <h3>Read the Whitepaper</h3>
                                 <p>Find out how you can use Keep</p>
                                 <Button bsSize="large">download</Button>
@@ -86,6 +88,7 @@ class App extends Component {
                     <PageSection id={sections.LEARN}>
                         <Row>
                             <Col sm={12} md={6}>
+                                <img alt="GitHub Logo" src={Icons.github} />
                                 <h3>View the Repository</h3>
                                 <p>Meet the online community</p>
                                 <Button bsStyle="primary" bsSize="large">open</Button>
@@ -102,7 +105,7 @@ class App extends Component {
                     <PageSection id={sections.DICTIONARY} additionalClassNames={['blurb']}>
                         <Row>
                             <Col sm={12} md={3}>
-                                <img alt="Castle Keep" src="http://via.placeholder.com/160x150" />
+                                <img alt="Castle Keep" src={Icons.castle} />
                             </Col>
                             <Col sm={12} md={9}>
                                 <p>Keep: noun</p>
@@ -114,34 +117,34 @@ class App extends Component {
                         <h2>How Keep Can Be Used</h2>
                         <Row>
                             <Col sm={12} md={4} className="use-case">
-                                <div className="icon"><img alt="Agreement" src={icons.agreement} /></div>
+                                <div className="icon"><img alt="Agreement" src={Icons.agreement} /></div>
                                 <h4>Decentralized Signing</h4>
                                 <p>For the first time, contracts will be able to assert their identity off-chain, without requiring the recipient's awareness of blockchain state.</p>
                             </Col>
                             <Col sm={12} md={4} className="use-case">
-                                <div className="icon"><img alt="Sliders" src={icons.sliders} /></div>
+                                <div className="icon"><img alt="Sliders" src={Icons.sliders} /></div>
                                 <h4>Dead Man Switch</h4>
                                 <p>A dead man switch is a device that is automatically activated in case its owner becomes incapacitated. Keeps enable a particular kind of dead man switch - publishing a secret, under certain contract conditions.</p>
                             </Col>
                             <Col sm={12} md={4} className="use-case">
-                                <div className="icon"><img alt="Wallet" src={icons.wallet} /></div>
+                                <div className="icon"><img alt="Wallet" src={Icons.wallet} /></div>
                                 <h4>Custodial Wallets</h4>
                                 <p>As a special case of a signing service, contracts can use keeps to generate their own cryptocurrency wallets, taking full custody of any received funds.</p>
                             </Col>
                         </Row>
                         <Row>
                             <Col sm={12} md={4} className="use-case">
-                                <div className="icon"><img alt="Shop" src={icons.shop} /></div>
+                                <div className="icon"><img alt="Shop" src={Icons.shop} /></div>
                                 <h4>Marketplaces for Digital Goods</h4>
                                 <p>Buying and selling digital goods on public blockchains today requires settling off-chain. Keeps make marketplaces for digital goods, like audio and video files, straightforward.</p>
                             </Col>
                             <Col sm={12} md={4} className="use-case">
-                                <div className="icon"><img alt="Open Safe" src={icons.safeOpened} /></div>
+                                <div className="icon"><img alt="Open Safe" src={Icons.safeOpened} /></div>
                                 <h4>Blockchain Storage Encryption</h4>
                                 <p>Keeps can provide a private bridge to blockchain storage, By generating an AES key at keep initialization and providing off-chain data access to the keep, smart contracts can use keeps to secure files stored on decentralized services.</p>
                             </Col>
                             <Col sm={12} md={4} className="use-case">
-                                <div className="icon"><img alt="Paper Study" src={icons.paperStudy} /></div>
+                                <div className="icon"><img alt="Paper Study" src={Icons.paperStudy} /></div>
                                 <h4>Learn More in the Whitepaper</h4>
                                 <Button bsStyle="primary" bsSize="large">download</Button>
                             </Col>
@@ -153,7 +156,7 @@ class App extends Component {
                                 <p>Keep is a bridge between the world of public blockchains and private data. It enables a new wave of ground-up innovation for blockchain developers.</p>
                             </Col>
                             <Col sm={12} md={3}>
-                                <img alt="swords" src="http://via.placeholder.com/160x150" />
+                                <img alt="swords" src={Icons.swords} />
                             </Col>
                         </Row>
                     </PageSection>
@@ -181,7 +184,7 @@ class App extends Component {
                     <PageSection id={sections.BLURB} additionalClassNames={['blurb']}>
                         <Row>
                             <Col sm={12} md={3}>
-                                <img alt="Castle Keep" src="http://via.placeholder.com/160x150" />
+                                <img alt="Castle Keep" src={Icons.castle} />
                             </Col>
                             <Col sm={12} md={9}>
                                 <p>Keep: noun</p>

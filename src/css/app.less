@@ -10,6 +10,9 @@
 
 .main-content {
   padding-top: 51px;
+  @media @tablet-up {
+    padding-top: 0;
+  }
 }
 
 .page-section {
@@ -23,6 +26,14 @@
 
   h3 {
     margin-bottom: 0;
+  }
+
+  @media @tablet-up {
+    padding: 100px 0;
+
+    h2 {
+      margin-bottom: 74px;
+    }
   }
 }
 
@@ -38,19 +49,59 @@
   .form-inline {
     width: 100%;
   }
+
+  @media @tablet-up {
+    min-height: 100vh;
+  }
 }
 
 .about {
   background-color: @background-med-color;
   color: @light-on-dark-color;
 
+  .slack-community {
+    img {
+      margin: 0 0 10px;
+      width: 129px;
+      height: 37px;
+
+      @media @tablet-up {
+        margin: 23px 0 10px;
+      }
+    }
+  }
+
+  .whitepaper {
+    h3 {
+      margin-top: 12px;
+    }
+
+    img {
+      height: 78px;
+    }
+  }
+
   .form-inline {
     border-color: @light-on-dark-color;
     width: 100%;
+
+    @media @tablet-up {
+      width: 75%;
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 }
 
 .learn {
+  img {
+    width: 129px;
+    height: 35px;
+
+    @media @tablet-up {
+      margin: 66px 0 0;
+    }
+  }
 
   .snippet {
     .small-title {
@@ -88,6 +139,12 @@
     font-size: 24px;
     margin: 0;
   }
+
+  @media @tablet-up {
+    .col-md-9 {
+      text-align: left;
+    }
+  }
 }
 
 .use-case {
@@ -113,47 +170,9 @@ footer {
   background-color: @background-dark-color;
 }
 
-@media only screen and (min-width: 768px) {
-  .main-content {
-    padding-top: 0;
-  }
-
-  .jumbotron {
-    padding: 0;
-  }
-
-  .page-section {
-    padding: 100px 0;
-  }
-
-  .page-section {
-    padding: 100px 0;
-
-    h2 {
-      margin-bottom: 74px;
-    }
-  }
-
-  .home {
-    min-height: 100vh;
-  }
-
-  .about {
-    .form-inline {
-      width: 75%;
-      margin-left: auto;
-      margin-right: auto;
-    }
-  }
-
+@media @tablet-up {
   .navbar {
     background-color: transparent;
     border-bottom: none;
-  }
-
-  .blurb {
-    .col-md-9 {
-      text-align: left;
-    }
   }
 }

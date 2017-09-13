@@ -6,6 +6,7 @@ import PageSection from './PageSection';
 import NavScrollItem from './NavScrollItem';
 import Snippet from './Snippet';
 import * as Icons from './Icons';
+import Profile from './Profile';
 import './app.css';
 
 class App extends Component {
@@ -163,21 +164,33 @@ class App extends Component {
                     <PageSection id={sections.TEAM}>
                         <h2>Team</h2>
                         <Row>
-                            <Col sm={12} md={3} className="profile">
-                                <div className="avatar"><img src={'http://via.placeholder.com/260x260'} alt="Matt Luongo"/></div>
-                                <h4><span>Matt Luongo</span>CEO &amp; Founder</h4>
+                            <Col sm={12} md={3}>
+                                <Profile
+                                    name="Matt Luongo"
+                                    title="CEO & Founder"
+                                    image="http://via.placeholder.com/260x260"
+                                    twitter="https://twitter.com/mhluongo"
+                                    linkedin="https://www.linkedin.com/in/mattluongo" />
                             </Col>
-                            <Col sm={12} md={3} className="profile">
-                                <div className="avatar"><img src={'http://via.placeholder.com/260x260'} alt="Corbin Pon"/></div>
-                                <h4><span>Corbin Pon</span>COO &amp; Founder</h4>
+                            <Col sm={12} md={3}>
+                                <Profile
+                                    name="Corbin Pon"
+                                    title="COO & Founder"
+                                    image="http://via.placeholder.com/260x260"
+                                    twitter="https://twitter.com/CorbinPon"
+                                    linkedin="https://www.linkedin.com/in/corbinpon" />
                             </Col>
-                            <Col sm={12} md={3} className="profile">
-                                <div className="avatar"><img src={'http://via.placeholder.com/260x260'} alt="Matt Luongo"/></div>
-                                <h4><span>Matt Luongo</span>CEO &amp; Founder</h4>
+                            <Col sm={12} md={3}>
+                                <Profile
+                                    name="Laura Wallendal"
+                                    title="Cypherpunk"
+                                    image="http://via.placeholder.com/260x260"
+                                    twitter="https://twitter.com/LauraWallendal"
+                                    linkedin="https://www.linkedin.com/in/laurawallendal" />
                             </Col>
-                            <Col sm={12} md={3} className="profile">
-                                <div className="avatar"><img src={'http://via.placeholder.com/260x260'} alt="Corbin Pon"/></div>
-                                <h4><span>Corbin Pon</span>COO &amp; Founder</h4>
+                            <Col sm={12} md={3}>
+                                <Profile
+                                    title="CEO & Founder"/>
                             </Col>
                         </Row>
                     </PageSection>
@@ -195,55 +208,43 @@ class App extends Component {
                     <PageSection id={sections.ADVISORS}>
                         <h2>Advisors</h2>
                         <Row>
-                            <Col sm={12} md={2} className="profile">
-                                <div className="avatar"><img src={'http://via.placeholder.com/160x160'} alt="Corbin Pon"/></div>
-                                <h4><span>Matt Luongo</span>CEO &amp; Founder</h4>
+                            <Col sm={12} md={2}>
+                                <Profile/>
                             </Col>
-                            <Col sm={12} md={2} className="profile">
-                                <div className="avatar"><img src={'http://via.placeholder.com/160x160'} alt="Corbin Pon"/></div>
-                                <h4><span>Corbin Pon</span>COO &amp; Founder</h4>
+                            <Col sm={12} md={2}>
+                                <Profile/>
                             </Col>
-                            <Col sm={12} md={2} className="profile">
-                                <div className="avatar"><img src={'http://via.placeholder.com/160x160'} alt="Corbin Pon"/></div>
-                                <h4><span>Matt Luongo</span>CEO &amp; Founder</h4>
+                            <Col sm={12} md={2}>
+                                <Profile/>
                             </Col>
-                            <Col sm={12} md={2} className="profile">
-                                <div className="avatar"><img src={'http://via.placeholder.com/160x160'} alt="Corbin Pon"/></div>
-                                <h4><span>Corbin Pon</span>COO &amp; Founder</h4>
+                            <Col sm={12} md={2}>
+                                <Profile/>
                             </Col>
-                            <Col sm={12} md={2} className="profile">
-                                <div className="avatar"><img src={'http://via.placeholder.com/160x160'} alt="Corbin Pon"/></div>
-                                <h4><span>Matt Luongo</span>CEO &amp; Founder</h4>
+                            <Col sm={12} md={2}>
+                                <Profile/>
                             </Col>
-                            <Col sm={12} md={2} className="profile">
-                                <div className="avatar"><img src={'http://via.placeholder.com/160x160'} alt="Corbin Pon"/></div>
-                                <h4><span>Corbin Pon</span>COO &amp; Founder</h4>
+                            <Col sm={12} md={2}>
+                                <Profile/>
                             </Col>
                         </Row>
                         <Row>
-                            <Col sm={12} md={2} className="profile">
-                                <div className="avatar"><img src={'http://via.placeholder.com/160x160'} alt="Corbin Pon"/></div>
-                                <h4><span>Matt Luongo</span>CEO &amp; Founder</h4>
+                            <Col sm={12} md={2}>
+                                <Profile/>
                             </Col>
-                            <Col sm={12} md={2} className="profile">
-                                <div className="avatar"><img src={'http://via.placeholder.com/160x160'} alt="Corbin Pon"/></div>
-                                <h4><span>Corbin Pon</span>COO &amp; Founder</h4>
+                            <Col sm={12} md={2}>
+                                <Profile/>
                             </Col>
-                            <Col sm={12} md={2} className="profile">
-                                <div className="avatar"><img src={'http://via.placeholder.com/160x160'} alt="Corbin Pon"/></div>
-                                <h4><span>Matt Luongo</span>CEO &amp; Founder</h4>
+                            <Col sm={12} md={2}>
+                                <Profile/>
                             </Col>
-                            <Col sm={12} md={2} className="profile">
-                                <div className="avatar"><img src={'http://via.placeholder.com/160x160'} alt="Corbin Pon"/></div>
-                                <h4><span>Corbin Pon</span>COO &amp; Founder</h4>
+                            <Col sm={12} md={2}>
+                                <Profile/>
                             </Col>
-                            <Col sm={12} md={2} className="profile">
-                                <div className="avatar"><img src={'http://via.placeholder.com/160x160'} alt="Corbin Pon"/></div>
-                                <h4><span>Matt Luongo</span>CEO &amp; Founder</h4>
+                            <Col sm={12} md={2}>
+                                <Profile/>
                             </Col>
-                            <Col sm={12} md={2} className="profile">
-                                <div className="avatar"><img src={'http://via.placeholder.com/160x160'} alt="Corbin Pon"/></div>
-                                <h4><span>Corbin Pon</span>COO &amp; Founder</h4>
+                            <Col sm={12} md={2}>
+                                <Profile/>
                             </Col>
                         </Row>
                     </PageSection>

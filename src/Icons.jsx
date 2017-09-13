@@ -6,7 +6,6 @@ import bank from './images/bank.svg';
 import castle from './images/castleIcon.svg';
 import fingerprint from './images/fingerprint.svg';
 import github from './images/GitHub_Logo.svg';
-import keep from './images/keepLogo.svg';
 import keyCircle from './images/key-circle.svg';
 import moneyShare from './images/money-share.svg';
 import networkLock from './images/network-lock.svg';
@@ -21,6 +20,7 @@ import sliders from './images/sliders.svg';
 import swords from './images/swordsIcon.svg';
 import timeline from './images/timeline.svg';
 import wallet from './images/wallet.svg';
+
 
 const LinkedIn = ({ color, height, width }) => (
     <svg height={height} width={width} version="1.1" viewBox="0 0 27 26">
@@ -78,7 +78,6 @@ export {
     castle,
     fingerprint,
     github,
-    keep,
     keyCircle,
     LinkedIn,
     moneyShare,

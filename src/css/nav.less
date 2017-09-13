@@ -8,4 +8,27 @@
             }
         }
     }
+
+    .navbar-brand {
+        background-image: url('images/keepLogo.png');
+        width: 198px;
+        height: 61px;
+        background-size: 100%;
+        color: transparent;
+        cursor: pointer;
+
+        &:hover,
+        &:active,
+        &:focus {
+            color: transparent;
+        }
+
+        @media @high-res {
+            background-image: url('images/keepLogo@3x.png');
+        }
+    }
+
+    @media @tablet-up {
+        margin-top: 64px;
+    }
 }

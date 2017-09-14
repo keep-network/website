@@ -87,7 +87,7 @@ class App extends Component {
                             </Col>
                         </Row>
                     </PageSection>
-                    <PageSection id={sections.LEARN}>
+                    <PageSection id={sections.LEARN} convex>
                         <Row>
                             <Col sm={12} md={6}>
                                 <img alt="GitHub Logo" src={Icons.github} />
@@ -120,7 +120,7 @@ class App extends Component {
                             </Col>
                         </Row>
                     </PageSection>
-                    <PageSection id={sections.USES}>
+                    <PageSection id={sections.USES} convex>
                         <h2>How Keep Can Be Used</h2>
                         <Row>
                             <Col sm={12} md={4} className="use-case">
@@ -167,7 +167,7 @@ class App extends Component {
                             </Col>
                         </Row>
                     </PageSection>
-                    <PageSection id={sections.TEAM}>
+                    <PageSection id={sections.TEAM} convex>
                         <h2>Team</h2>
                         <Row>
                             <Col sm={12} md={3}>
@@ -207,11 +207,11 @@ class App extends Component {
                             </Col>
                             <Col sm={12} md={9}>
                                 <p>Keep: noun</p>
-                                <p>1. the strongest or central tower of a castle, acting as a final refuge</p>
+                                <p>The strongest or central tower of a castle, acting as a final refuge</p>
                             </Col>
                         </Row>
                     </PageSection>
-                    <PageSection id={sections.ADVISORS}>
+                    <PageSection id={sections.ADVISORS} convex>
                         <h2>Advisors</h2>
                         <Row>
                             <Col sm={12} md={2}>

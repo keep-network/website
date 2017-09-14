@@ -104,19 +104,14 @@ class App extends Component {
                             </Col>
                         </Row>
                     </PageSection>
-                    <PageSection id={sections.TIMELINE} additionalClassNames={['blurb']}>
+                    <PageSection id={sections.DEFINITION} additionalClassNames={['blurb']}>
                         <Row>
                             <Col sm={12} md={3}>
-                                <TimelinePoint label="Keep Announced" date="09/18/17"/>
+                                <img alt="Castle Keep" src={Icons.castle} />
                             </Col>
-                            <Col sm={12} md={3}>
-                                <TimelinePoint label="Pre-Sale Opens" date="09/25/17"/>
-                            </Col>
-                            <Col sm={12} md={3}>
-                                <TimelinePoint label="Public Sale"/>
-                            </Col>
-                            <Col sm={12} md={3}>
-                                <TimelinePoint label="Network Launch" highlight/>
+                            <Col sm={12} md={9}>
+                                <p>Keep: noun</p>
+                                <p>The strongest or central tower of a castle, acting as a final refuge</p>
                             </Col>
                         </Row>
                     </PageSection>
@@ -157,13 +152,19 @@ class App extends Component {
                             </Col>
                         </Row>
                     </PageSection>
-                    <PageSection id={sections.DESCRIPTION} additionalClassNames={['blurb']}>
+                    <PageSection id={sections.TIMELINE} additionalClassNames={['blurb']}>
                         <Row>
-                            <Col sm={12} md={9}>
-                                <p>Keep is a bridge between the world of public blockchains and private data. It enables a new wave of ground-up innovation for blockchain developers.</p>
+                            <Col sm={12} md={3}>
+                                <TimelinePoint label="Public Announcement" date="09/18/17"/>
                             </Col>
                             <Col sm={12} md={3}>
-                                <img alt="swords" src={Icons.swords} />
+                                <TimelinePoint label="Pre-Sale Opens" date="09/25/17"/>
+                            </Col>
+                            <Col sm={12} md={3}>
+                                <TimelinePoint label="Public Sale" date="November"/>
+                            </Col>
+                            <Col sm={12} md={3}>
+                                <TimelinePoint label="Network Launch" date="December" highlight/>
                             </Col>
                         </Row>
                     </PageSection>
@@ -200,14 +201,13 @@ class App extends Component {
                             </Col>
                         </Row>
                     </PageSection>
-                    <PageSection id={sections.DEFINITION} additionalClassNames={['blurb']}>
+                    <PageSection id={sections.DESCRIPTION} additionalClassNames={['blurb']}>
                         <Row>
-                            <Col sm={12} md={3}>
-                                <img alt="Castle Keep" src={Icons.castle} />
-                            </Col>
                             <Col sm={12} md={9}>
-                                <p>Keep: noun</p>
-                                <p>The strongest or central tower of a castle, acting as a final refuge</p>
+                                <p>Keep is a bridge between the world of public blockchains and private data. It enables a new wave of ground-up innovation for blockchain developers.</p>
+                            </Col>
+                            <Col sm={12} md={3}>
+                                <img alt="swords" src={Icons.swords} />
                             </Col>
                         </Row>
                     </PageSection>

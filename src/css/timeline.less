@@ -10,6 +10,7 @@
         border-radius: 8px;
         border: 2px solid @grey-on-light-color;
         position: relative;
+        margin-top: 0;
 
         // Arrow white part
         &:after {
@@ -103,10 +104,10 @@
 
     // Center line horizontal
     @media @md-up {
-        height: 350px;
+        height: 270px;
 
         .timeline-content {
-            padding-top: 85px;
+            padding-top: 55px;
         }
 
         &:before,
@@ -193,11 +194,18 @@
             }
         }
 
+        @media @tablet-up {
+            &:first-of-type {
+                .timeline-content {
+                    padding-top: 25px;
+                }
+            }
+        }
+
         @media only screen and (min-width: 768px) and (max-width: 1200px) {
-            &:first-of-type,
             &:last-of-type {
                 .timeline-content {
-                    padding-top: 55px;
+                    padding-top: 25px;
                 }
             }
         }

@@ -6,8 +6,14 @@
 @import 'snippet';
 @import 'timeline';
 
+body {
+    background-color: @background-med-dark-color;
+}
+
 .App {
     text-align: center;
+    overflow: hidden;
+    background-color: @white;
 }
 
 .main-content {
@@ -42,7 +48,7 @@
         }
 
         &.convex {
-            padding: 140px 0 270px;
+            padding: 100px 0 270px;
         }
     }
 }
@@ -64,6 +70,7 @@
 
     @media @tablet-up {
         min-height: 100vh;
+        padding: 0 0 50px;
     }
 }
 
@@ -121,6 +128,12 @@
         }
     }
 
+    @media @tablet-up {
+        &.convex {
+            padding-top: 120px;
+        }
+    }
+
     .arc-top(@background-med-color, 300px);
     .arc-bottom(@background-light-color, 300px);
 }
@@ -161,14 +174,34 @@
 .blurb {
     background-color: @background-light-color;
 
+    .row {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+    }
+
     p {
         font-size: 24px;
         margin: 0;
     }
 
     @media @tablet-up {
+        padding: 0 0 50px;
+
         .col-md-9 {
             text-align: left;
+        }
+    }
+
+    @media @sm {
+        .row {
+            flex-direction: column;
+        }
+
+        &.description {
+            .row {
+                flex-direction: column-reverse;
+            }
         }
     }
 }
@@ -219,11 +252,4 @@
 footer {
     padding: 30px 0 60px;
     background-color: @background-dark-color;
-}
-
-@media @tablet-up {
-    .navbar {
-        background-color: transparent;
-        border-bottom: none;
-    }
 }

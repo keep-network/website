@@ -7,6 +7,7 @@ import NavScrollItem from './NavScrollItem';
 import Snippet from './Snippet';
 import * as Icons from './Icons';
 import Profile from './Profile';
+import TimelinePoint from './TimelinePoint';
 import './app.css';
 
 class App extends Component {
@@ -16,11 +17,11 @@ class App extends Component {
             HOME: 'home',
             ABOUT: 'about',
             LEARN: 'learn',
-            DICTIONARY: 'dictionary',
+            TIMELINE: 'timeline',
             USES: 'uses',
             DESCRIPTION: 'description',
             TEAM: 'team',
-            BLURB: 'blurb',
+            DEFINITION: 'definition',
             ADVISORS: 'advisors'
         };
 
@@ -103,14 +104,19 @@ class App extends Component {
                             </Col>
                         </Row>
                     </PageSection>
-                    <PageSection id={sections.DICTIONARY} additionalClassNames={['blurb']}>
+                    <PageSection id={sections.TIMELINE} additionalClassNames={['blurb']}>
                         <Row>
                             <Col sm={12} md={3}>
-                                <img alt="Castle Keep" src={Icons.castle} />
+                                <TimelinePoint label="Keep Announced" date="09/18/17"/>
                             </Col>
-                            <Col sm={12} md={9}>
-                                <p>Keep: noun</p>
-                                <p>1. the strongest or central tower of a castle, acting as a final refuge</p>
+                            <Col sm={12} md={3}>
+                                <TimelinePoint label="Pre-Sale Opens" date="09/25/17"/>
+                            </Col>
+                            <Col sm={12} md={3}>
+                                <TimelinePoint label="Public Sale"/>
+                            </Col>
+                            <Col sm={12} md={3}>
+                                <TimelinePoint label="Network Launch" highlight/>
                             </Col>
                         </Row>
                     </PageSection>
@@ -194,7 +200,7 @@ class App extends Component {
                             </Col>
                         </Row>
                     </PageSection>
-                    <PageSection id={sections.BLURB} additionalClassNames={['blurb']}>
+                    <PageSection id={sections.DEFINITION} additionalClassNames={['blurb']}>
                         <Row>
                             <Col sm={12} md={3}>
                                 <img alt="Castle Keep" src={Icons.castle} />

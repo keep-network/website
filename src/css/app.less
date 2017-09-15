@@ -26,7 +26,7 @@ body {
 .page-section {
     display: flex;
     align-items: center;
-    padding: 30px 0;
+    padding: 40px 0;
     position: relative;
     overflow: visible;
 
@@ -58,10 +58,6 @@ body {
         margin: 0 0 14px;
     }
 
-    p {
-        margin: 0 0 42px;
-    }
-
     .form-inline {
         width: 100%;
     }
@@ -71,6 +67,10 @@ body {
     @media @tablet-up {
         min-height: 100vh;
         padding: 0 0 50px;
+
+        p {
+            margin: 0 0 42px;
+        }
     }
 }
 
@@ -110,6 +110,17 @@ body {
             margin-right: auto;
         }
     }
+
+    @media @sm {
+        .row {
+            display: flex;
+            flex-direction: column-reverse;
+
+            > * {
+                padding: 35px 15px;
+            }
+        }
+    }
 }
 
 .learn {
@@ -131,6 +142,14 @@ body {
     @media @tablet-up {
         &.convex {
             padding-top: 120px;
+        }
+    }
+
+    @media @sm {
+        .row {
+            > * {
+                padding: 35px 15px;
+            }
         }
     }
 
@@ -181,8 +200,11 @@ body {
     }
 
     p {
-        font-size: 24px;
         margin: 0;
+
+        span {
+            font-weight: bold;
+        }
     }
 
     @media @tablet-up {
@@ -191,23 +213,39 @@ body {
         .col-md-9 {
             text-align: left;
         }
+
+        p {
+            font-size: 24px;
+        }
+
+        &.description {
+            .row {
+                flex-direction: row-reverse;
+            }
+        }
     }
 
     @media @sm {
         .row {
             flex-direction: column;
-        }
 
-        &.description {
-            .row {
-                flex-direction: column-reverse;
+            [class*="col"] {
+                padding: 35px 15px;
+
+                &:last-of-type {
+                    padding: 0 15px 35px;
+                }
             }
         }
     }
 }
 
 .timeline {
-    padding: 0;
+    background-color: @background-light-color;
+
+    @media @md-up {
+        padding: 0;
+    }
 }
 
 .uses {
@@ -229,6 +267,10 @@ body {
 
         .btn {
             margin: 15px 0 0;
+        }
+
+        @media @mobile {
+            margin-bottom: 40px;
         }
     }
 }

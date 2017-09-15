@@ -3,7 +3,11 @@ body {
     font-weight: 400;
     font-size: 18px;
     color: @gunmetal;
-    line-height: 1.79;
+    line-height: 1.44;
+
+    @media @tablet-up {
+        line-height: 1.79;
+    }
 }
 
 h1, .h1 {
@@ -30,6 +34,19 @@ h2, .h2,
 h3, .h3,
 h4, .h4 {
     line-height: 1.38;
+}
+
+@media @mobile {
+    h1, .h1,
+    h2, .h2,
+    h3, .h3 {
+        font-size: 30px;
+        line-height: 1.33;
+    }
+
+    h2, .h2 {
+        margin-bottom: 50px;
+    }
 }
 
 p {

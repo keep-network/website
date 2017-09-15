@@ -14,9 +14,11 @@
 
     .navbar-brand {
         background-image: url('images/keepLogo.png');
-        width: 198px;
-        height: 61px;
+        background-repeat: no-repeat;
         background-size: 100%;
+        width: 100px;
+        height: 30px;
+        margin: 8px 15px;
         color: transparent;
         cursor: pointer;
 
@@ -26,8 +28,24 @@
             color: transparent;
         }
 
+        @media @tablet-up {
+            width: 198px;
+            height: 61px;
+            margin: 0;
+        }
+
         @media @high-res {
             background-image: url('images/keepLogo@3x.png');
+        }
+    }
+
+    .navbar-toggle {
+        border: 0;
+
+        &:hover,
+        &:focus,
+        &:active {
+            background-color: transparent;
         }
     }
 

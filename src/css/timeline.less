@@ -143,6 +143,7 @@
 
             .date {
                 right: calc(50% + 5px);
+                font-size: 18px;
             }
 
             .dot {
@@ -154,6 +155,10 @@
                 margin: 0;
                 left: calc(50% + 5px);
                 text-align: left;
+                font-size: 18px;
+                padding: 8px 16px;
+                word-wrap: break-word;
+                max-width: 40%;
             }
 
         }
@@ -175,6 +180,22 @@
 
         &:after {
             top: 50%;
+        }
+    }
+
+    @media @xs {
+        .timeline-content {
+            .date {
+                right: calc(50% + 10px);
+            }
+
+            .timeline-label {
+                left: calc(50% + 10px);
+                padding: 8px 16px;
+                word-wrap: break-word;
+                max-width: 40%;
+            }
+
         }
     }
 }

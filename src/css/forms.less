@@ -49,5 +49,46 @@
         position: absolute;
         top: 0;
         right: 0;
+        width: 120px;
+        transition: 0.25s all ease-in;
+
+        &:focus {
+            outline: 0;
+        }
+
+        &:active {
+            width: 100%;
+            color: transparent;
+            background-color: @link-active-color;
+        }
+    }
+
+    &.has-error {
+        border-color: @error-color;
+
+        .form-group {
+            .form-control {
+                &:focus {
+                    border-color: transparent;
+                }
+            }
+        }
+
+        .btn {
+            background-color: @error-color;
+            border-color: @error-color;
+        }
+    }
+}
+
+.email-form {
+    position: relative;
+    .error-message {
+        color: @error-color;
+        position: absolute;
+        width: 100%;
+        top: calc(100% - 15px);
+        left: 0;
+        text-align: center;
     }
 }

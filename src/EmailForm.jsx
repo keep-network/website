@@ -55,8 +55,8 @@ class EmailForm extends Component {
         const { hasError } = this.state;
 
         return (
-            <div>
-                <Form inline className={classNames({hasError: hasError})}>
+            <div className="email-form">
+                <Form inline className={classNames({'has-error': hasError})}>
                     <FormGroup controlId={`formInline${pascalCase(label)}`}>
                         <ControlLabel style={{display: 'none'}}>
                             {label}
@@ -73,6 +73,7 @@ class EmailForm extends Component {
                         {btnText}
                     </Button>
                 </Form>
+                { hasError && <small className="error-message">Oops! That doesn't look like an email address!</small> }
             </div>
         );
     }

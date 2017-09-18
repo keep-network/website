@@ -55,10 +55,10 @@ class App extends Component {
                 </Navbar>
                 <div className="main-content">
                     <PageSection id={sections.HOME}>
-                        <h1>Prepare for the Presale</h1>
+                        <h1>Keep: a privacy layer for Ethereum</h1>
                         <Row>
                             <Col sm={12} md={8} mdPush={2}>
-                                <p>The Keep network is a privacy layer for public blockchains, initially built against the Ethereum blockchain. The network uses "keeps", small, off-chain data enclaves for private information.</p>
+                                <p>A keep is an off-chain container for private data. Keeps allow contracts to manage and use private data without exposing that data to the public blockchain.</p>
                             </Col>
                         </Row>
                         <Row>
@@ -135,29 +135,29 @@ class App extends Component {
                             <Col sm={12} md={4} className="use-case">
                                 <div className="icon"><img alt="Agreement" src={Icons.agreement} /></div>
                                 <h4>Decentralized Signing</h4>
-                                <p>For the first time, contracts will be able to assert their identity off-chain, without requiring the recipient's awareness of blockchain state.</p>
+                                <p>Acting as a digital notary, contracts will be able to assert their identity off-chain without requiring a third party confirmation of blockchain state. Integrating with tools like PGP, SSH, and TLS keep is a bridge to public private key infrastructure.</p>
                             </Col>
                             <Col sm={12} md={4} className="use-case">
                                 <div className="icon"><img alt="Sliders" src={Icons.sliders} /></div>
                                 <h4>Dead Man Switch</h4>
-                                <p>A dead man switch is a device that is automatically activated in case its owner becomes incapacitated. Keeps enable a particular kind of dead man switch - publishing a secret, under certain contract conditions.</p>
+                                <p>Knowing when to expose private information is just as important as keeping it hidden. With keeps you can have trusts and estate plans automatically activated to expose instructions and transfer funds.</p>
                             </Col>
                             <Col sm={12} md={4} className="use-case">
                                 <div className="icon"><img alt="Wallet" src={Icons.wallet} /></div>
                                 <h4>Custodial Wallets</h4>
-                                <p>As a special case of a signing service, contracts can use keeps to generate their own cryptocurrency wallets, taking full custody of any received funds.</p>
+                                <p>Ethereum smart contracts can use keeps to generate their own cryptocurrency wallets to send Bitcoin, Litecoin, and Dash. Boom, cross-chain exchange.</p>
                             </Col>
                         </Row>
                         <Row>
                             <Col sm={12} md={4} className="use-case">
                                 <div className="icon"><img alt="Shop" src={Icons.shop} /></div>
                                 <h4>Marketplaces for Digital Goods</h4>
-                                <p>Buying and selling digital goods on public blockchains today requires settling off-chain. Keeps make marketplaces for digital goods, like audio and video files, straightforward.</p>
+                                <p>With keeps, you can easily sell digital goods like ebooks, videos, MP3’s and more without the need of a server and custom download processor.</p>
                             </Col>
                             <Col sm={12} md={4} className="use-case">
                                 <div className="icon"><img alt="Open Safe" src={Icons.safeOpened} /></div>
                                 <h4>Blockchain Storage Encryption</h4>
-                                <p>Keeps can provide a private bridge to blockchain storage, By generating an AES key at keep initialization and providing off-chain data access to the keep, smart contracts can use keeps to secure files stored on decentralized services.</p>
+                                <p>Keeps provide a bridge to private blockchain storage making it possible for smart contracts and DAO’s to store files privately. You no longer need to trust a third party with your most sensitive, private data.</p>
                             </Col>
                             <Col sm={12} md={4} className="use-case">
                                 <div className="icon"><img alt="Paper Study" src={Icons.paperStudy} /></div>
@@ -227,7 +227,7 @@ class App extends Component {
                                 <img alt="swords" src={Icons.swords} />
                             </Col>
                             <Col sm={12} md={9}>
-                                <p>Keep is a bridge between the world of public blockchains and private data. It enables a new wave of ground-up innovation for blockchain developers.</p>
+                                <p>Keeps provide a bridge between the world of public blockchains and private data. It enables a new wave of ground-up innovation for blockchain developers.</p>
                             </Col>
                         </Row>
                     </PageSection>

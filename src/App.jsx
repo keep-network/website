@@ -4,7 +4,7 @@ import { Link } from 'react-scroll';
 import EmailForm from './EmailForm';
 import PageSection from './PageSection';
 import NavScrollItem from './NavScrollItem';
-import Snippet from './Snippet';
+// import Snippet from './Snippet';
 import * as Icons from './Icons';
 import Profile from './Profile';
 import TimelinePoint from './TimelinePoint';
@@ -25,13 +25,13 @@ class App extends Component {
             ADVISORS: 'advisors'
         };
 
-        const snippetCode = `$ curl https://api.keep.network/v1/btc/main/addrs/1Puw/Q6uWXNeGcEnLCAXmRJozdLZ9M4NWQ7
-{
-    "address": "Q6uWXNeGcEnLCAXmRJozdLZ9M4NWQ7",
-    "balance": 0,
-    "unconfirmed_balance": 0,
-    "txrefs": []
-}`;
+//         const snippetCode = `$ curl https://api.keep.network/v1/btc/main/addrs/1Puw/Q6uWXNeGcEnLCAXmRJozdLZ9M4NWQ7
+// {
+//     "address": "Q6uWXNeGcEnLCAXmRJozdLZ9M4NWQ7",
+//     "balance": 0,
+//     "unconfirmed_balance": 0,
+//     "txrefs": []
+// }`;
 
         const WHITEPAPER_URL = 'https://59-100537042-gh.circle-artifacts.com/0/home/ubuntu/whitepaper/keep.pdf';
 
@@ -97,7 +97,7 @@ class App extends Component {
                     </PageSection>
                     <PageSection id={sections.LEARN} convex>
                         <Row>
-                            <Col sm={12} md={6}>
+                            <Col sm={12} md={6} className="github">
                                 <img alt="GitHub Logo" src={Icons.github} />
                                 <h3>View the Repository</h3>
                                 <p>Meet the online community</p>
@@ -109,12 +109,18 @@ class App extends Component {
                                     open
                                 </Button>
                             </Col>
-                            <Col sm={12} md={6} className="snippet">
-                                <h3 className="small-title">Get all recent transactions</h3>
-                                <Snippet component="pre" lang="json">
-                                    {snippetCode}
-                                </Snippet>
-                                <Button bsStyle="primary" bsSize="large">more code snippets</Button>
+                            <Col sm={12} md={6} className="primer">
+                                <img alt="Paper Study" src={Icons.paperStudy} />
+                                <h3>Download the Business Primer</h3>
+                                <p>Coming soon</p>
+                                <Button
+                                    disabled
+                                    bsStyle="primary"
+                                    download="Keep Business Primer"
+                                    target="_blank"
+                                    bsSize="large">
+                                    download
+                                </Button>
                             </Col>
                         </Row>
                     </PageSection>

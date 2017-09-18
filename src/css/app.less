@@ -128,12 +128,15 @@ body {
 }
 
 .learn {
-    img {
-        width: 129px;
-        height: 35px;
 
-        @media @tablet-up {
-            margin: 66px 0 0;
+    .github {
+        img {
+            width: 129px;
+            height: 35px;
+
+            @media @tablet-up {
+                margin: 66px 0 0;
+            }
         }
     }
 
@@ -146,6 +149,13 @@ body {
     @media @tablet-up {
         &.convex {
             padding-top: 120px;
+        }
+    }
+
+    @media @md-up {
+        .row {
+            display: flex;
+            align-items: flex-end;
         }
     }
 

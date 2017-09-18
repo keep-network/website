@@ -33,6 +33,8 @@ class App extends Component {
     "txrefs": []
 }`;
 
+        const WHITEPAPER_URL = 'https://59-100537042-gh.circle-artifacts.com/0/home/ubuntu/whitepaper/keep.pdf';
+
         return (
             <div className="App">
                 <Navbar fixedTop>
@@ -83,7 +85,13 @@ class App extends Component {
                                 <img alt="Paper Study" src={Icons.paperStudy} />
                                 <h3>Read the Whitepaper</h3>
                                 <p>Find out how you can use Keep</p>
-                                <Button bsSize="large">download</Button>
+                                <Button
+                                    href={WHITEPAPER_URL}
+                                    download="Keep Whitepaper"
+                                    target="_blank"
+                                    bsSize="large">
+                                    download
+                                </Button>
                             </Col>
                         </Row>
                     </PageSection>
@@ -93,7 +101,13 @@ class App extends Component {
                                 <img alt="GitHub Logo" src={Icons.github} />
                                 <h3>View the Repository</h3>
                                 <p>Meet the online community</p>
-                                <Button bsStyle="primary" bsSize="large">open</Button>
+                                <Button
+                                    href="https://github.com/keep-network"
+                                    bsStyle="primary"
+                                    bsSize="large"
+                                    target="_blank">
+                                    open
+                                </Button>
                             </Col>
                             <Col sm={12} md={6} className="snippet">
                                 <h3 className="small-title">Get all recent transactions</h3>
@@ -148,7 +162,13 @@ class App extends Component {
                             <Col sm={12} md={4} className="use-case">
                                 <div className="icon"><img alt="Paper Study" src={Icons.paperStudy} /></div>
                                 <h4>Learn More in the Whitepaper</h4>
-                                <Button bsStyle="primary" bsSize="large">download</Button>
+                                <Button
+                                    href={WHITEPAPER_URL}
+                                    download="Keep Whitepaper"
+                                    target="_blank"
+                                    bsSize="large">
+                                    download
+                                </Button>
                             </Col>
                         </Row>
                     </PageSection>

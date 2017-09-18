@@ -76,21 +76,29 @@ a {
     background-color: @white;
     color: @link-color;
     border-color: @white;
-
-    &:hover {
-        background-color: @white;
-        color: @link-color;
-        border-color: @white;
-    }
 }
 
 .btn-primary {
     background-color: @link-color;
     border-color: @link-color;
+}
+
+.btn-default,
+.btn-primary {
+    transition: 0.25s all ease-in;
 
     &:hover,
+    &:focus,
+    &:active,
+    &.active.focus,
+    &.active,
+    &.focus {
+        background-color: @link-active-color;
+        border-color: @link-active-color;
+        color: @white;
+    }
+
     &:focus {
-        background-color: @link-color;
-        border-color: @link-color;
+        outline: 0;
     }
 }

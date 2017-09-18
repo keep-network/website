@@ -169,6 +169,7 @@ class App extends Component {
                                 <div className="icon"><img alt="Paper Study" src={Icons.paperStudy} /></div>
                                 <h4>Learn More in the Whitepaper</h4>
                                 <Button
+                                    bsStyle="primary"
                                     href={WHITEPAPER_URL}
                                     download="Keep Whitepaper"
                                     target="_blank"

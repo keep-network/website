@@ -13,14 +13,18 @@
     }
 
     .navbar-brand {
-        background-image: url('images/keepLogo.png');
         background-repeat: no-repeat;
         background-size: 100%;
-        width: 100px;
-        height: 30px;
-        margin: 8px 15px;
+        margin: 14px 15px 0;
+        padding: 0;
         color: transparent;
         cursor: pointer;
+        height: auto;
+
+        svg {
+            height: 20px;
+            width: 77px;
+        }
 
         &:hover,
         &:active,
@@ -29,13 +33,11 @@
         }
 
         @media @tablet-up {
-            width: 198px;
-            height: 61px;
-            margin: 0;
-        }
-
-        @media @high-res {
-            background-image: url('images/keepLogo@3x.png');
+            margin: 10px 0;
+            svg {
+                height: 40px;
+                width: 154px;
+            }
         }
     }
 

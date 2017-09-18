@@ -38,7 +38,7 @@ class App extends Component {
                 <Navbar fixedTop>
                     <Navbar.Header>
                         <NavbarBrand>
-                            <Link activeClass="active" to={sections.HOME} smooth spy duration={500}>Keep</Link>
+                            <Link activeClass="active" to={sections.HOME} smooth spy duration={500}><Icons.Keep height="61px" width="235px"/></Link>
                         </NavbarBrand>
                         <Navbar.Toggle />
                     </Navbar.Header>

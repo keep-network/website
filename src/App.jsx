@@ -201,7 +201,7 @@ class App extends Component {
                             <Col sm={12} md={3}>
                                 <Profile
                                     name="Matt Luongo"
-                                    title="CEO & Founder"
+                                    title="Project Lead"
                                     image="http://via.placeholder.com/260x260"
                                     twitter="https://twitter.com/mhluongo"
                                     linkedin="https://www.linkedin.com/in/mattluongo" />
@@ -209,7 +209,7 @@ class App extends Component {
                             <Col sm={12} md={3}>
                                 <Profile
                                     name="Corbin Pon"
-                                    title="COO & Founder"
+                                    title="Developer"
                                     image="http://via.placeholder.com/260x260"
                                     twitter="https://twitter.com/CorbinPon"
                                     linkedin="https://www.linkedin.com/in/corbinpon" />
@@ -217,14 +217,10 @@ class App extends Component {
                             <Col sm={12} md={3}>
                                 <Profile
                                     name="Laura Wallendal"
-                                    title="Cypherpunk"
+                                    title="Growth & Operations"
                                     image="http://via.placeholder.com/260x260"
                                     twitter="https://twitter.com/LauraWallendal"
                                     linkedin="https://www.linkedin.com/in/laurawallendal" />
-                            </Col>
-                            <Col sm={12} md={3}>
-                                <Profile
-                                    title="CEO & Founder"/>
                             </Col>
                         </Row>
                     </PageSection>

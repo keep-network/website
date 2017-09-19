@@ -209,7 +209,7 @@ class App extends Component {
                             <Col sm={12} md={3}>
                                 <Profile
                                     name="Corbin Pon"
-                                    title="Developer"
+                                    title="Developer & Ops"
                                     image="http://via.placeholder.com/260x260"
                                     twitter="https://twitter.com/CorbinPon"
                                     linkedin="https://www.linkedin.com/in/corbinpon" />
@@ -217,7 +217,7 @@ class App extends Component {
                             <Col sm={12} md={3}>
                                 <Profile
                                     name="Laura Wallendal"
-                                    title="Growth & Operations"
+                                    title="Growth"
                                     image="http://via.placeholder.com/260x260"
                                     twitter="https://twitter.com/LauraWallendal"
                                     linkedin="https://www.linkedin.com/in/laurawallendal" />

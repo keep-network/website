@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { LinkedIn, Twitter } from './Icons';
 
 
-const Profile = ({ name, image, title, twitter, linkedin }) => <div className="profile">
+export const Profile = ({ name, image, title, twitter, linkedin }) => <div className="profile">
     <div className="avatar">
         <img src={image} alt={name}/>
     </div>
@@ -26,6 +26,13 @@ Profile.propTypes = {
 };
 
 Profile.defaultProps = {
+    name: 'Unnamed Contributor',
+    image: 'http://via.placeholder.com/260x260'
+};
+
+export const ExampleProfile = (props) => <Profile {...props} />;
+
+ExampleProfile.defaultProps = {
     name: 'Matt Luongo',
     image: 'http://via.placeholder.com/260x260',
     twitter: 'https://twitter.com/mhluongo',

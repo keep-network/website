@@ -6,7 +6,7 @@ import PageSection from './PageSection';
 import NavScrollItem from './NavScrollItem';
 // import Snippet from './Snippet';
 import * as Icons from './Icons';
-import Profile from './Profile';
+import { ExampleProfile, Profile } from './Profile';
 import TimelinePoint from './TimelinePoint';
 import './app.css';
 
@@ -245,42 +245,42 @@ class App extends Component {
                         <h2>Advisors</h2>
                         <Row>
                             <Col sm={12} md={2}>
-                                <Profile/>
+                                <ExampleProfile/>
                             </Col>
                             <Col sm={12} md={2}>
-                                <Profile/>
+                                <ExampleProfile/>
                             </Col>
                             <Col sm={12} md={2}>
-                                <Profile/>
+                                <ExampleProfile/>
                             </Col>
                             <Col sm={12} md={2}>
-                                <Profile/>
+                                <ExampleProfile/>
                             </Col>
                             <Col sm={12} md={2}>
-                                <Profile/>
+                                <ExampleProfile/>
                             </Col>
                             <Col sm={12} md={2}>
-                                <Profile/>
+                                <ExampleProfile/>
                             </Col>
                         </Row>
                         <Row>
                             <Col sm={12} md={2}>
-                                <Profile/>
+                                <ExampleProfile/>
                             </Col>
                             <Col sm={12} md={2}>
-                                <Profile/>
+                                <ExampleProfile/>
                             </Col>
                             <Col sm={12} md={2}>
-                                <Profile/>
+                                <ExampleProfile/>
                             </Col>
                             <Col sm={12} md={2}>
-                                <Profile/>
+                                <ExampleProfile/>
                             </Col>
                             <Col sm={12} md={2}>
-                                <Profile/>
+                                <ExampleProfile/>
                             </Col>
                             <Col sm={12} md={2}>
-                                <Profile/>
+                                <ExampleProfile/>
                             </Col>
                         </Row>
                     </PageSection>

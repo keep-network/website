@@ -222,6 +222,13 @@ class App extends Component {
                                     twitter="https://twitter.com/LauraWallendal"
                                     linkedin="https://www.linkedin.com/in/laurawallendal" />
                             </Col>
+                            <Col sm={12} md={3}>
+                                <Profile
+                                    name="Erin Ng"
+                                    title="Developer"
+                                    image="http://via.placeholder.com/260x260"
+                                    linkedin="https://www.linkedin.com/in/erinng/" />
+                            </Col>
                         </Row>
                     </PageSection>
                     <PageSection id={sections.DESCRIPTION} additionalClassNames={['blurb']}>

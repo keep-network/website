@@ -296,10 +296,18 @@ body {
 
 .team {
     .arc-top(@background-light-color, 300px);
-    .arc-bottom(@background-light-color, 300px);
+    //.arc-bottom(@background-light-color, 300px);
+    // TODO get rid of this once we have advisors
+    .arc-bottom(@background-dark-color, 300px);
+}
+
+.description {
+    display: none;  // TODO get rid of this once we have advisors
 }
 
 .advisors {
+    display: none; // TODO get rid of this once we have advisors
+
     @media @tablet-up {
         .row {
             margin-bottom: 50px;

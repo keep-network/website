@@ -111,7 +111,7 @@ class App extends Component {
                             </Col>
                             <Col sm={12} md={6} className="primer">
                                 <img alt="Paper Study" src={Icons.paperStudy} />
-                                <h3>Download the Business Primer</h3>
+                                <h3>Read the Business Primer</h3>
                                 <p>Coming soon</p>
                                 <Button
                                     disabled

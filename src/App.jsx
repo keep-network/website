@@ -250,6 +250,15 @@ class App extends Component {
                         <Row>
                             <Col sm={12} md={4}>
                                 <Profile
+                                    name="Brayton Williams"
+                                    title="Boost VC"
+                                    imagePath="/images/headshots/brayton"
+                                    imageMaxRes="3"
+                                    twitter="https://twitter.com/BraytonKey"
+                                    linkedin="https://www.linkedin.com/in/braytonwilliams" />
+                            </Col>
+                            <Col sm={12} md={4}>
+                                <Profile
                                     name="John Packel"
                                     title="ConsenSys"
                                     imagePath="/images/headshots/john"
@@ -264,15 +273,6 @@ class App extends Component {
                                     imagePath="/images/headshots/axel"
                                     imageMaxRes="3"
                                     linkedin="https://www.linkedin.com/in/axel-blikstad-77534814" />
-                            </Col>
-                            <Col sm={12} md={4}>
-                                <Profile
-                                    name="Brayton Williams"
-                                    title="Boost VC"
-                                    imagePath="/images/headshots/brayton"
-                                    imageMaxRes="3"
-                                    twitter="https://twitter.com/BraytonKey"
-                                    linkedin="https://www.linkedin.com/in/braytonwilliams" />
                             </Col>
                         </Row>
                     </PageSection>

@@ -49,7 +49,9 @@ class App extends Component {
                             <NavScrollItem to={sections.ABOUT}>Whitepaper</NavScrollItem>
                             <NavScrollItem to={sections.TEAM}>Team</NavScrollItem>
                             <NavScrollItem to={sections.ADVISORS}>Advisors</NavScrollItem>
-                            <NavItem href="https://blog.keep.network">Blog</NavItem>
+                            <NavItem
+                                href="https://blog.keep.network"
+                                target="_blank">Blog</NavItem>
                         </Nav>
                     </Navbar.Collapse>
                 </Navbar>

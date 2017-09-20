@@ -60,7 +60,7 @@ class App extends Component {
                         <h1>Keep: A privacy layer for Ethereum</h1>
                         <Row>
                             <Col sm={12} md={8} mdPush={2}>
-                                <p>A keep is an off-chain container for private data.  Keeps let contracts harness the full power of the public blockchain&emdash;enabling deeper interactivity with private data than any other solution today.</p>
+                                <p>A keep is an off-chain container for private data. Keeps help contracts harness the full power of the public blockchain &mdash; enabling deep interactivity with private data.</p>
                             </Col>
                         </Row>
                         <Row>

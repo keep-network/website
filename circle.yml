@@ -13,7 +13,7 @@ test:
   post:
     - npm run build
     - docker build --rm=false -t "keepnetwork/website:$CIRCLE_SHA1" .
-    - docker login -u "$DOCKER_USER" -p "$DOCKER_PASS"
+    - docker login -e "$DOCKER_EMAIL" -u "$DOCKER_USER" -p "$DOCKER_PASS"
     - docker push "keepnetwork/website:$CIRCLE_SHA1"
 
 deployment:

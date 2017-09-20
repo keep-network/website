@@ -203,7 +203,7 @@ class App extends Component {
                                     name="Matt Luongo"
                                     title="Project Lead"
                                     imagePath="/images/headshots/matt"
-                                    imageMaxRes="3"
+                                    imageMaxRes={3}
                                     twitter="https://twitter.com/mhluongo"
                                     linkedin="https://www.linkedin.com/in/mattluongo" />
                             </Col>
@@ -212,7 +212,7 @@ class App extends Component {
                                     name="Corbin Pon"
                                     title="Developer & Ops"
                                     imagePath="/images/headshots/corbin"
-                                    imageMaxRes="3"
+                                    imageMaxRes={3}
                                     twitter="https://twitter.com/CorbinPon"
                                     linkedin="https://www.linkedin.com/in/corbinpon" />
                             </Col>
@@ -221,7 +221,7 @@ class App extends Component {
                                     name="Laura Wallendal"
                                     title="Growth"
                                     imagePath="/images/headshots/laura"
-                                    imageMaxRes="3"
+                                    imageMaxRes={3}
                                     twitter="https://twitter.com/LauraWallendal"
                                     linkedin="https://www.linkedin.com/in/laurawallendal" />
                             </Col>
@@ -230,7 +230,7 @@ class App extends Component {
                                     name="Erin Ng"
                                     title="Developer"
                                     imagePath="/images/headshots/erin"
-                                    imageMaxRes="3"
+                                    imageMaxRes={3}
                                     linkedin="https://www.linkedin.com/in/erinng/" />
                             </Col>
                         </Row>
@@ -253,7 +253,7 @@ class App extends Component {
                                     name="Brayton Williams"
                                     title="Boost VC"
                                     imagePath="/images/headshots/brayton"
-                                    imageMaxRes="3"
+                                    imageMaxRes={3}
                                     twitter="https://twitter.com/BraytonKey"
                                     linkedin="https://www.linkedin.com/in/braytonwilliams" />
                             </Col>
@@ -262,7 +262,7 @@ class App extends Component {
                                     name="John Packel"
                                     title="ConsenSys"
                                     imagePath="/images/headshots/john"
-                                    imageMaxRes="3"
+                                    imageMaxRes={3}
                                     twitter="https://twitter.com/jpackel"
                                     linkedin="https://www.linkedin.com/in/johnpackel" />
                             </Col>
@@ -271,7 +271,7 @@ class App extends Component {
                                     name="Axel Blikstad"
                                     title="DBM Cloud Systems"
                                     imagePath="/images/headshots/axel"
-                                    imageMaxRes="3"
+                                    imageMaxRes={3}
                                     linkedin="https://www.linkedin.com/in/axel-blikstad-77534814" />
                             </Col>
                         </Row>

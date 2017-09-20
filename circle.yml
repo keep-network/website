@@ -12,9 +12,9 @@ dependencies:
 test:
   post:
     - npm run build
-    - docker build --rm=false -t "keepnetwork/website:$CIRCLE_SHA1" .
+    - docker build --rm=false -t "keepnetwork/website:$CIRCLE_BUILD_NUM" .
     - docker login -e "$DOCKER_EMAIL" -u "$DOCKER_USER" -p "$DOCKER_PASS"
-    - docker push "keepnetwork/website:$CIRCLE_SHA1"
+    - docker push "keepnetwork/website:$CIRCLE_BUILD_NUM"
 
 deployment:
   production:

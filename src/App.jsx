@@ -271,7 +271,7 @@ class App extends Component {
                             <Col sm={12} md={4}>
                                 <Profile
                                     name="Axel Blikstad"
-                                    title="DBM Cloud Systems"
+                                    title="International Finance"
                                     imagePath="/images/headshots/axel"
                                     imageMaxRes={3}
                                     linkedin="https://www.linkedin.com/in/axel-blikstad-77534814" />

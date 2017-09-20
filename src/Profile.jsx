@@ -22,7 +22,7 @@ const getSrc = (imagePath, imageType, imageMaxRes) => {
     return srcset.join(', ');
 };
 
-const Profile = ({ name, imagePath, imageType, imageMaxRes, title, twitter, linkedin }) => <div className="profile">
+export const Profile = ({ name, imagePath, imageType, imageMaxRes, title, twitter, linkedin }) => <div className="profile">
     <div className="avatar">
         <Picture src={getSrc(imagePath, imageType, imageMaxRes)} />
     </div>
@@ -46,8 +46,18 @@ Profile.propTypes = {
 };
 
 Profile.defaultProps = {
+    name: 'Unnamed Contributor',
+    imagePath: '/images/headshots/placeholder',
+    imageType: 'jpg',
+    imageMaxRes: 1
+};
+
+export const ExampleProfile = (props) => <Profile {...props} />;
+
+ExampleProfile.defaultProps = {
     name: 'Matt Luongo',
-    imageName: 'http://via.placeholder.com/260x260',
+    title: 'Project Lead',
+    imagePath: '/images/headshots/matt',
     imageType: 'jpg',
     imageMaxRes: 3,
     twitter: 'https://twitter.com/mhluongo',

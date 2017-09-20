@@ -6,7 +6,7 @@ import PageSection from './PageSection';
 import NavScrollItem from './NavScrollItem';
 // import Snippet from './Snippet';
 import * as Icons from './Icons';
-import Profile from './Profile';
+import { Profile } from './Profile';
 import TimelinePoint from './TimelinePoint';
 import './app.css';
 
@@ -111,7 +111,7 @@ class App extends Component {
                             </Col>
                             <Col sm={12} md={6} className="primer">
                                 <img alt="Paper Study" src={Icons.paperStudy} />
-                                <h3>Download the Business Primer</h3>
+                                <h3>Read the Business Primer</h3>
                                 <p>Coming soon</p>
                                 <Button
                                     disabled
@@ -201,33 +201,37 @@ class App extends Component {
                             <Col sm={12} md={3}>
                                 <Profile
                                     name="Matt Luongo"
-                                    title="CEO & Founder"
+                                    title="Project Lead"
                                     imagePath="/images/headshots/matt"
+                                    imageMaxRes="3"
                                     twitter="https://twitter.com/mhluongo"
                                     linkedin="https://www.linkedin.com/in/mattluongo" />
                             </Col>
                             <Col sm={12} md={3}>
                                 <Profile
                                     name="Corbin Pon"
-                                    title="COO & Founder"
+                                    title="Developer & Ops"
                                     imagePath="/images/headshots/corbin"
+                                    imageMaxRes="3"
                                     twitter="https://twitter.com/CorbinPon"
                                     linkedin="https://www.linkedin.com/in/corbinpon" />
                             </Col>
                             <Col sm={12} md={3}>
                                 <Profile
                                     name="Laura Wallendal"
-                                    title="Cypherpunk"
+                                    title="Growth"
                                     imagePath="/images/headshots/laura"
+                                    imageMaxRes="3"
                                     twitter="https://twitter.com/LauraWallendal"
                                     linkedin="https://www.linkedin.com/in/laurawallendal" />
                             </Col>
                             <Col sm={12} md={3}>
                                 <Profile
                                     name="Erin Ng"
-                                    title="Software Engineer"
+                                    title="Developer"
                                     imagePath="/images/headshots/erin"
-                                    linkedin="https://www.linkedin.com/in/erinng" />
+                                    imageMaxRes="3"
+                                    linkedin="https://www.linkedin.com/in/erinng/" />
                             </Col>
                         </Row>
                     </PageSection>
@@ -249,6 +253,7 @@ class App extends Component {
                                     name="John Packel"
                                     title="ConsenSys"
                                     imagePath="/images/headshots/john"
+                                    imageMaxRes="3"
                                     twitter="https://twitter.com/jpackel"
                                     linkedin="https://www.linkedin.com/in/johnpackel" />
                             </Col>
@@ -257,6 +262,7 @@ class App extends Component {
                                     name="Axel Blikstad"
                                     title="DBM Cloud Systems"
                                     imagePath="/images/headshots/axel"
+                                    imageMaxRes="3"
                                     linkedin="https://www.linkedin.com/in/axel-blikstad-77534814" />
                             </Col>
                             <Col sm={12} md={4}>
@@ -264,6 +270,7 @@ class App extends Component {
                                     name="Brayton Williams"
                                     title="Boost VC"
                                     imagePath="/images/headshots/brayton"
+                                    imageMaxRes="3"
                                     twitter="https://twitter.com/BraytonKey"
                                     linkedin="https://www.linkedin.com/in/braytonwilliams" />
                             </Col>
@@ -271,7 +278,7 @@ class App extends Component {
                     </PageSection>
                     <footer>
                         <Grid>
-                            <span>&#169; 2017 Card for Coin, Inc. All Rights Reserved.</span>
+                            <span>&#169; 2017 Keep. All Rights Reserved.</span>
                         </Grid>
                     </footer>
                 </div>

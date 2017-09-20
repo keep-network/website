@@ -10,4 +10,4 @@ COPY build/ /var/www/
 
 EXPOSE 80
 
-CMD service nginx start
+CMD ["nginx", "-g", "daemon off;"]

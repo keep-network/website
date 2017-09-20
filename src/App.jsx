@@ -57,10 +57,10 @@ class App extends Component {
                 </Navbar>
                 <div className="main-content">
                     <PageSection id={sections.HOME}>
-                        <h1>Keep: a privacy layer for Ethereum</h1>
+                        <h1>Keep: A privacy layer for Ethereum</h1>
                         <Row>
                             <Col sm={12} md={8} mdPush={2}>
-                                <p>A keep is an off-chain container for private data. Keeps allow contracts to manage and use private data without exposing that data to the public blockchain.</p>
+                                <p>A keep is an off-chain container for private data.  Keeps let contracts harness the full power of the public blockchain - enabling deeper interactivity with private data than any other solution today.</p>
                             </Col>
                         </Row>
                         <Row>

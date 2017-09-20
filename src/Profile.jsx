@@ -1,12 +1,30 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Picture } from 'react-responsive-picture';
 
 import { LinkedIn, Twitter } from './Icons';
 
+const getSrc = (imagePath, imageType, imageMaxRes) => {
+    const srcset = [];
+    let count = imageMaxRes;
 
-const Profile = ({ name, image, title, twitter, linkedin }) => <div className="profile">
+    while (count) {
+        let src = '';
+        if (count === 1) {
+            src = `${imagePath}.${imageType} ${count}x`;
+        } else {
+            src = `${imagePath}@${count}x.${imageType} ${count}x`;
+        }
+        srcset.push(src);
+        count--;
+    }
+
+    return srcset.join(', ');
+};
+
+const Profile = ({ name, imagePath, imageType, imageMaxRes, title, twitter, linkedin }) => <div className="profile">
     <div className="avatar">
-        <img src={image} alt={name}/>
+        <Picture src={getSrc(imagePath, imageType, imageMaxRes)} />
     </div>
     <h4><span>{name}</span>{title && title}</h4>
     <div className="social-links">
@@ -19,7 +37,9 @@ const Profile = ({ name, image, title, twitter, linkedin }) => <div className="p
 
 Profile.propTypes = {
     name: PropTypes.string,
-    image: PropTypes.string,
+    imagePath: PropTypes.string,
+    imageType: PropTypes.string,
+    imageMaxRes: PropTypes.number,
     title: PropTypes.string,
     twitter: PropTypes.string,
     linkedin: PropTypes.string
@@ -27,7 +47,9 @@ Profile.propTypes = {
 
 Profile.defaultProps = {
     name: 'Matt Luongo',
-    image: 'http://via.placeholder.com/260x260',
+    imageName: 'http://via.placeholder.com/260x260',
+    imageType: 'jpg',
+    imageMaxRes: 3,
     twitter: 'https://twitter.com/mhluongo',
     linkedin: 'https://www.linkedin.com/in/mattluongo'
 };

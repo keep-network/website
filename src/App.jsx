@@ -202,7 +202,7 @@ class App extends Component {
                                 <Profile
                                     name="Matt Luongo"
                                     title="CEO & Founder"
-                                    image="http://via.placeholder.com/260x260"
+                                    imagePath="/images/headshots/matt"
                                     twitter="https://twitter.com/mhluongo"
                                     linkedin="https://www.linkedin.com/in/mattluongo" />
                             </Col>
@@ -210,7 +210,7 @@ class App extends Component {
                                 <Profile
                                     name="Corbin Pon"
                                     title="COO & Founder"
-                                    image="http://via.placeholder.com/260x260"
+                                    imagePath="/images/headshots/corbin"
                                     twitter="https://twitter.com/CorbinPon"
                                     linkedin="https://www.linkedin.com/in/corbinpon" />
                             </Col>
@@ -218,13 +218,16 @@ class App extends Component {
                                 <Profile
                                     name="Laura Wallendal"
                                     title="Cypherpunk"
-                                    image="http://via.placeholder.com/260x260"
+                                    imagePath="/images/headshots/laura"
                                     twitter="https://twitter.com/LauraWallendal"
                                     linkedin="https://www.linkedin.com/in/laurawallendal" />
                             </Col>
                             <Col sm={12} md={3}>
                                 <Profile
-                                    title="CEO & Founder"/>
+                                    name="Erin Ng"
+                                    title="Software Engineer"
+                                    imagePath="/images/headshots/erin"
+                                    linkedin="https://www.linkedin.com/in/erinng" />
                             </Col>
                         </Row>
                     </PageSection>
@@ -241,43 +244,28 @@ class App extends Component {
                     <PageSection id={sections.ADVISORS} convex>
                         <h2>Advisors</h2>
                         <Row>
-                            <Col sm={12} md={2}>
-                                <Profile/>
+                            <Col sm={12} md={4}>
+                                <Profile
+                                    name="John Packel"
+                                    title="ConsenSys"
+                                    imagePath="/images/headshots/john"
+                                    twitter="https://twitter.com/jpackel"
+                                    linkedin="https://www.linkedin.com/in/johnpackel" />
                             </Col>
-                            <Col sm={12} md={2}>
-                                <Profile/>
+                            <Col sm={12} md={4}>
+                                <Profile
+                                    name="Axel Blikstad"
+                                    title="DBM Cloud Systems"
+                                    imagePath="/images/headshots/axel"
+                                    linkedin="https://www.linkedin.com/in/axel-blikstad-77534814" />
                             </Col>
-                            <Col sm={12} md={2}>
-                                <Profile/>
-                            </Col>
-                            <Col sm={12} md={2}>
-                                <Profile/>
-                            </Col>
-                            <Col sm={12} md={2}>
-                                <Profile/>
-                            </Col>
-                            <Col sm={12} md={2}>
-                                <Profile/>
-                            </Col>
-                        </Row>
-                        <Row>
-                            <Col sm={12} md={2}>
-                                <Profile/>
-                            </Col>
-                            <Col sm={12} md={2}>
-                                <Profile/>
-                            </Col>
-                            <Col sm={12} md={2}>
-                                <Profile/>
-                            </Col>
-                            <Col sm={12} md={2}>
-                                <Profile/>
-                            </Col>
-                            <Col sm={12} md={2}>
-                                <Profile/>
-                            </Col>
-                            <Col sm={12} md={2}>
-                                <Profile/>
+                            <Col sm={12} md={4}>
+                                <Profile
+                                    name="Brayton Williams"
+                                    title="Boost VC"
+                                    imagePath="/images/headshots/brayton"
+                                    twitter="https://twitter.com/BraytonKey"
+                                    linkedin="https://www.linkedin.com/in/braytonwilliams" />
                             </Col>
                         </Row>
                     </PageSection>

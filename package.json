@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "classnames": "^2.2.5",
+    "glamor": "^2.20.40",
     "less": "^2.7.2",
     "less-plugin-clean-css": "^1.5.1",
     "less-watch-compiler": "^1.7.0",
@@ -16,6 +17,7 @@
     "react-bootstrap": "^0.31.2",
     "react-dom": "^15.6.1",
     "react-prism": "^4.3.0",
+    "react-responsive-picture": "^2.0.0",
     "react-scripts": "0.9.5",
     "react-scroll": "^1.5.4",
     "superagent": "^3.6.0",

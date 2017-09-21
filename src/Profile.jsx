@@ -22,16 +22,24 @@ const getSrc = (imagePath, imageType, imageMaxRes) => {
     return srcset.join(', ');
 };
 
-export const Profile = ({ name, imagePath, imageType, imageMaxRes, title, twitter, linkedin }) => <div className="profile">
+export const Profile = ({
+    name,
+    imagePath,
+    imageType,
+    imageMaxRes,
+    title,
+    twitter,
+    linkedin
+}) => <div className="profile">
     <div className="avatar">
         <Picture src={getSrc(imagePath, imageType, imageMaxRes)} />
     </div>
     <h4><span>{name}</span>{title && title}</h4>
     <div className="social-links">
         { twitter &&
-            <a href={twitter}><Twitter/></a>}
+            <a href={twitter} target="_blank"><Twitter/></a>}
         { linkedin &&
-            <a href={linkedin}><LinkedIn/></a>}
+            <a href={linkedin} target="_blank"><LinkedIn/></a>}
     </div>
 </div>;
 

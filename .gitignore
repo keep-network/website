@@ -7,6 +7,9 @@
 # production
 /build
 
+# compiled
+/src/app.css
+
 # misc
 .DS_Store
 .env

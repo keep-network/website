@@ -296,18 +296,21 @@ body {
     }
 }
 
-.team {
-    .arc-top(@background-light-color, 300px);
-    .arc-bottom(@background-light-color, 300px);
-}
-
+.team,
 .advisors {
     @media @tablet-up {
         .row {
             margin-bottom: 50px;
         }
     }
+}
 
+.team {
+    .arc-top(@background-light-color, 300px);
+    .arc-bottom(@background-light-color, 300px);
+}
+
+.advisors {
     .arc-top(@background-light-color, 300px);
     .arc-bottom(@background-dark-color, 300px);
 }

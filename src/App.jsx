@@ -200,7 +200,7 @@ class App extends Component {
                     <PageSection id={sections.TEAM} convex>
                         <h2>Team</h2>
                         <Row>
-                            <Col sm={12} md={3}>
+                            <Col sm={12} md={4}>
                                 <Profile
                                     name="Matt Luongo"
                                     title="Project Lead"
@@ -210,7 +210,7 @@ class App extends Component {
                                     linkedin="https://www.linkedin.com/in/mattluongo"
                                     github="https://github.com/mhluongo" />
                             </Col>
-                            <Col sm={12} md={3}>
+                            <Col sm={12} md={4}>
                                 <Profile
                                     name="Corbin Pon"
                                     title="Developer & Ops"
@@ -220,7 +220,7 @@ class App extends Component {
                                     linkedin="https://www.linkedin.com/in/corbinpon"
                                     github="https://github.com/clp16" />
                             </Col>
-                            <Col sm={12} md={3}>
+                            <Col sm={12} md={4}>
                                 <Profile
                                     name="Laura Wallendal"
                                     title="Growth"
@@ -229,7 +229,9 @@ class App extends Component {
                                     twitter="https://twitter.com/LauraWallendal"
                                     linkedin="https://www.linkedin.com/in/laurawallendal" />
                             </Col>
-                            <Col sm={12} md={3}>
+                        </Row>
+                        <Row>
+                            <Col sm={12} md={4} mdPush={2}>
                                 <Profile
                                     name="Erin Ng"
                                     title="Developer"
@@ -237,6 +239,16 @@ class App extends Component {
                                     imageMaxRes={3}
                                     linkedin="https://www.linkedin.com/in/erinng/"
                                     github="https://github.com/ironng" />
+                            </Col>
+                            <Col sm={12} md={4} mdPush={2}>
+                                <Profile
+                                    name="Nik Grinkevich"
+                                    title="Developer"
+                                    imagePath="/images/headshots/nik"
+                                    imageMaxRes={3}
+                                    twitter="https://ngmodules.com/users/ngrinkevich"
+                                    linkedin="https://www.linkedin.com/in/nikgrinkevich"
+                                    github="https://github.com/ngrinkevich" />
                             </Col>
                         </Row>
                     </PageSection>

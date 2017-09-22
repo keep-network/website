@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Picture } from 'react-responsive-picture';
 
-import { LinkedIn, Twitter } from './Icons';
+import { GithubSocial, LinkedIn, Twitter } from './Icons';
 
 const getSrc = (imagePath, imageType, imageMaxRes) => {
     const srcset = [];
@@ -29,7 +29,8 @@ export const Profile = ({
     imageMaxRes,
     title,
     twitter,
-    linkedin
+    linkedin,
+    github
 }) => <div className="profile">
     <div className="avatar">
         <Picture src={getSrc(imagePath, imageType, imageMaxRes)} />
@@ -40,6 +41,8 @@ export const Profile = ({
             <a href={twitter} target="_blank"><Twitter/></a>}
         { linkedin &&
             <a href={linkedin} target="_blank"><LinkedIn/></a>}
+        { github &&
+            <a href={github} target="_blank"><GithubSocial/></a>}
     </div>
 </div>;
 
@@ -50,7 +53,8 @@ Profile.propTypes = {
     imageMaxRes: PropTypes.number,
     title: PropTypes.string,
     twitter: PropTypes.string,
-    linkedin: PropTypes.string
+    linkedin: PropTypes.string,
+    github: PropTypes.string
 };
 
 Profile.defaultProps = {
@@ -69,7 +73,8 @@ ExampleProfile.defaultProps = {
     imageType: 'jpg',
     imageMaxRes: 3,
     twitter: 'https://twitter.com/mhluongo',
-    linkedin: 'https://www.linkedin.com/in/mattluongo'
+    linkedin: 'https://www.linkedin.com/in/mattluongo',
+    github: 'https://github.com/mhluongo'
 };
 
 export default Profile;

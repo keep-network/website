@@ -207,7 +207,8 @@ class App extends Component {
                                     imagePath="/images/headshots/matt"
                                     imageMaxRes={3}
                                     twitter="https://twitter.com/mhluongo"
-                                    linkedin="https://www.linkedin.com/in/mattluongo" />
+                                    linkedin="https://www.linkedin.com/in/mattluongo"
+                                    github="https://github.com/mhluongo" />
                             </Col>
                             <Col sm={12} md={3}>
                                 <Profile
@@ -216,7 +217,8 @@ class App extends Component {
                                     imagePath="/images/headshots/corbin"
                                     imageMaxRes={3}
                                     twitter="https://twitter.com/CorbinPon"
-                                    linkedin="https://www.linkedin.com/in/corbinpon" />
+                                    linkedin="https://www.linkedin.com/in/corbinpon"
+                                    github="https://github.com/clp16" />
                             </Col>
                             <Col sm={12} md={3}>
                                 <Profile
@@ -233,7 +235,8 @@ class App extends Component {
                                     title="Developer"
                                     imagePath="/images/headshots/erin"
                                     imageMaxRes={3}
-                                    linkedin="https://www.linkedin.com/in/erinng/" />
+                                    linkedin="https://www.linkedin.com/in/erinng/"
+                                    github="https://github.com/ironng" />
                             </Col>
                         </Row>
                     </PageSection>

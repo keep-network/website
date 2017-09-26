@@ -184,10 +184,10 @@ class App extends Component {
                     <PageSection id={sections.TIMELINE}>
                         <Row>
                             <Col sm={12} md={3}>
-                                <TimelinePoint label="Public Announcement" date="09/18/17"/>
+                                <TimelinePoint label="Public Announcement" date="09/26/17"/>
                             </Col>
                             <Col sm={12} md={3}>
-                                <TimelinePoint label="Pre-Sale Opens" date="09/25/17"/>
+                                <TimelinePoint label="Pre-Sale Opens" date="10/02/17"/>
                             </Col>
                             <Col sm={12} md={3}>
                                 <TimelinePoint label="Public Sale" date="November"/>

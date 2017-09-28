@@ -33,7 +33,7 @@ class App extends Component {
 //     "txrefs": []
 // }`;
 
-        const WHITEPAPER_URL = 'https://59-100537042-gh.circle-artifacts.com/0/home/ubuntu/whitepaper/keep.pdf';
+        const WHITEPAPER_URL = 'https://keep.network/whitepaper';
 
         return (
             <div className="App">

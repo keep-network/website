@@ -46,7 +46,9 @@ class App extends Component {
                     </Navbar.Header>
                     <Navbar.Collapse>
                         <Nav pullRight>
-                            <NavScrollItem to={sections.ABOUT}>Whitepaper</NavScrollItem>
+                            <NavItem
+                                href={WHITEPAPER_URL}
+                                target="_blank">Whitepaper</NavItem>
                             <NavScrollItem to={sections.TEAM}>Team</NavScrollItem>
                             <NavScrollItem to={sections.ADVISORS}>Advisors</NavScrollItem>
                             <NavItem

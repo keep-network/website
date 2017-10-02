@@ -187,7 +187,7 @@ class App extends Component {
                                 <TimelinePoint label="Public Announcement" date="09/26/17"/>
                             </Col>
                             <Col sm={12} md={3}>
-                                <TimelinePoint label="Pre-Sale Opens" date="10/02/17"/>
+                                <TimelinePoint label="Pre-Sale" date="October"/>
                             </Col>
                             <Col sm={12} md={3}>
                                 <TimelinePoint label="Public Sale" date="November"/>

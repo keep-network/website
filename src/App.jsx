@@ -246,7 +246,7 @@ class App extends Component {
                                     title="Developer"
                                     imagePath="/images/headshots/nik"
                                     imageMaxRes={3}
-                                    twitter="https://ngmodules.com/users/ngrinkevich"
+                                    twitter="https://twitter.com/ngrinkevich"
                                     linkedin="https://www.linkedin.com/in/nikgrinkevich"
                                     github="https://github.com/ngrinkevich" />
                             </Col>

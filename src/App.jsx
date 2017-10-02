@@ -46,7 +46,9 @@ class App extends Component {
                     </Navbar.Header>
                     <Navbar.Collapse>
                         <Nav pullRight>
-                            <NavScrollItem to={sections.ABOUT}>Whitepaper</NavScrollItem>
+                            <NavItem
+                                href={WHITEPAPER_URL}
+                                target="_blank">Whitepaper</NavItem>
                             <NavScrollItem to={sections.TEAM}>Team</NavScrollItem>
                             <NavScrollItem to={sections.ADVISORS}>Advisors</NavScrollItem>
                             <NavItem
@@ -187,7 +189,7 @@ class App extends Component {
                                 <TimelinePoint label="Public Announcement" date="09/26/17"/>
                             </Col>
                             <Col sm={12} md={3}>
-                                <TimelinePoint label="Pre-Sale Opens" date="10/02/17"/>
+                                <TimelinePoint label="Pre-Sale" date="October"/>
                             </Col>
                             <Col sm={12} md={3}>
                                 <TimelinePoint label="Public Sale" date="November"/>

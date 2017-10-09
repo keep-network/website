@@ -116,9 +116,9 @@ class App extends Component {
                             <Col sm={12} md={6} className="primer">
                                 <img alt="Paper Study" src={Icons.paperStudy} />
                                 <h3>Read the Business Primer</h3>
-                                <p>Coming soon</p>
+                                <p>Find out how you can use Keep</p>
                                 <Button
-                                    disabled
+                                    href="/KeepBusinessPrimer.pdf"
                                     bsStyle="primary"
                                     download="Keep Business Primer"
                                     target="_blank"

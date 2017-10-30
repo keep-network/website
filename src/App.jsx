@@ -202,7 +202,7 @@ class App extends Component {
                     <PageSection id={sections.TEAM} convex>
                         <h2>Team</h2>
                         <Row>
-                            <Col sm={12} md={4}>
+                            <Col sm={12} md={3}>
                                 <Profile
                                     name="Matt Luongo"
                                     title="Project Lead"
@@ -210,9 +210,10 @@ class App extends Component {
                                     imageMaxRes={3}
                                     twitter="https://twitter.com/mhluongo"
                                     linkedin="https://www.linkedin.com/in/mattluongo"
-                                    github="https://github.com/mhluongo" />
+                                    github="https://github.com/mhluongo"
+                                    keybase="http://keybase.io/mhluongo" />
                             </Col>
-                            <Col sm={12} md={4}>
+                            <Col sm={12} md={3}>
                                 <Profile
                                     name="Corbin Pon"
                                     title="Developer & Ops"
@@ -220,37 +221,76 @@ class App extends Component {
                                     imageMaxRes={3}
                                     twitter="https://twitter.com/CorbinPon"
                                     linkedin="https://www.linkedin.com/in/corbinpon"
-                                    github="https://github.com/clp16" />
+                                    github="https://github.com/clp16"
+                                    keybase="http://keybase.io/corbinpon"/>
                             </Col>
-                            <Col sm={12} md={4}>
+                            <Col sm={12} md={3}>
+                                <Profile
+                                    name="Antonio Salazar Cardozo"
+                                    title="Tech Lead"
+                                    imagePath="/images/headshots/antonio"
+                                    imageType="png"
+                                    imageMaxRes={3}
+                                    twitter="https://twitter.com/lightfiend"
+                                    linkedin="https://www.linkedin.com/in/lightfiend"
+                                    github="https://github.com/Shadowfiend"
+                                    keybase="http://keybase.io/shadowfiend" />
+                            </Col>
+                            <Col sm={12} md={3}>
                                 <Profile
                                     name="Laura Wallendal"
                                     title="Growth"
                                     imagePath="/images/headshots/laura"
                                     imageMaxRes={3}
                                     twitter="https://twitter.com/LauraWallendal"
-                                    linkedin="https://www.linkedin.com/in/laurawallendal" />
+                                    linkedin="https://www.linkedin.com/in/laurawallendal"
+                                    keybase="http://keybase.io/lwallendal" />
                             </Col>
                         </Row>
                         <Row>
-                            <Col sm={12} md={4} mdPush={2}>
+                            <Col sm={12} md={3}>
+                                <Profile
+                                    name="Prashanth Irudayaraj"
+                                    title="Ops"
+                                    imagePath="/images/headshots/prashanth"
+                                    imageType="png"
+                                    imageMaxRes={3}
+                                    twitter="https://twitter.com/Zarathusthra"
+                                    linkedin="https://www.linkedin.com/in/pirudayaraj"
+                                    keybase="http://keybase.io/starsitar" />
+                            </Col>
+                            <Col sm={12} md={3}>
                                 <Profile
                                     name="Erin Ng"
                                     title="Developer"
                                     imagePath="/images/headshots/erin"
                                     imageMaxRes={3}
                                     linkedin="https://www.linkedin.com/in/erinng/"
-                                    github="https://github.com/ironng" />
+                                    github="https://github.com/ironng"
+                                    keybase="http://keybase.io/ironng" />
                             </Col>
-                            <Col sm={12} md={4} mdPush={2}>
+                            <Col sm={12} md={3}>
                                 <Profile
                                     name="Nik Grinkevich"
                                     title="Developer"
                                     imagePath="/images/headshots/nik"
                                     imageMaxRes={3}
-                                    twitter="https://ngmodules.com/users/ngrinkevich"
+                                    twitter="https://twitter.com/ngrinkevich"
                                     linkedin="https://www.linkedin.com/in/nikgrinkevich"
-                                    github="https://github.com/ngrinkevich" />
+                                    github="https://github.com/ngrinkevich"
+                                    keybase="https://keybase.io/nikgrinkevich" />
+                            </Col>
+                            <Col sm={12} md={3}>
+                                <Profile
+                                    name="Jack Knutson"
+                                    title="Community Manager"
+                                    imagePath="/images/headshots/jack"
+                                    imageType="png"
+                                    imageMaxRes={3}
+                                    twitter="https://twitter.com/KnutsonRussell"
+                                    linkedin="https://www.linkedin.com/in/jack-knutson-jr"
+                                    github="https://github.com/drknudy"
+                                    keybase="http://keybase.io/drknudy" />
                             </Col>
                         </Row>
                     </PageSection>

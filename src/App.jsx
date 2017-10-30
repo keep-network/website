@@ -255,6 +255,7 @@ class App extends Component {
                                     imagePath="/images/headshots/prashanth"
                                     imageType="png"
                                     imageMaxRes={3}
+                                    twitter="https://twitter.com/Zarathusthra"
                                     linkedin="https://www.linkedin.com/in/pirudayaraj"
                                     keybase="http://keybase.io/starsitar" />
                             </Col>

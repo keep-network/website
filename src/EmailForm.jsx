@@ -54,6 +54,16 @@ class EmailForm extends Component {
     }
 
     onClick(e) {
+        this.submit();
+    }
+
+    onKeyUp(e) {
+        if (e.keyCode === 13) {
+            this.submit();
+        }
+    }
+
+    submit() {
         const { email } = this.state;
         const { url } = this.props;
 
@@ -100,7 +110,8 @@ class EmailForm extends Component {
 
         return (
             <div className="email-form">
-                <Form inline className={classNames(classes)}>
+                <Form inline className={classNames(classes)}
+                    onSubmit={(e) => { e.preventDefault(); }}>
                     <FormGroup controlId={`formInline${pascalCase(label)}`}>
                         <ControlLabel style={{display: 'none'}}>
                             {label}
@@ -108,7 +119,8 @@ class EmailForm extends Component {
                         <FormControl
                             type="email"
                             value={email}
-                            onChange={this.onChange.bind(this)}/>
+                            onChange={this.onChange.bind(this)}
+                            onKeyUp={this.onKeyUp.bind(this)}/>
                     </FormGroup>
                     {' '}
                     <Button

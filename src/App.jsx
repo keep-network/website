@@ -251,7 +251,7 @@ class App extends Component {
                             <Col sm={12} md={3}>
                                 <Profile
                                     name="Prashanth Irudayaraj"
-                                    title="Ops"
+                                    title="Ops & Research"
                                     imagePath="/images/headshots/prashanth"
                                     imageType="png"
                                     imageMaxRes={3}

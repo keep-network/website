@@ -189,13 +189,13 @@ class App extends Component {
                                 <TimelinePoint label="Public Announcement" date="9/26/17"/>
                             </Col>
                             <Col sm={12} md={3}>
-                                <TimelinePoint label="Pre-Sale" date="November"/>
+                                <TimelinePoint label="Pre-Sale" date="November" highlight/>
                             </Col>
                             <Col sm={12} md={3}>
                                 <TimelinePoint label="Public Sale" date="January"/>
                             </Col>
                             <Col sm={12} md={3}>
-                                <TimelinePoint label="Network Launch" date="February" highlight/>
+                                <TimelinePoint label="Network Launch" date="February"/>
                             </Col>
                         </Row>
                     </PageSection>

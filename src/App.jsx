@@ -76,7 +76,8 @@ class App extends Component {
                     </PageSection>
                     <PageSection id={sections.ABOUT}>
                         <Row>
-                            <Col sm={12} md={6} className="slack-community">
+                            <Col sm={12} md={6} className="slack-community"
+                                id="slack">
                                 <img alt="Slack Logo" src={Icons.slack} />
                                 <h3>Join the Conversation</h3>
                                 <p>Meet the online community</p>

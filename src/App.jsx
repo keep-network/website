@@ -308,7 +308,7 @@ class App extends Component {
                     <PageSection id={sections.ADVISORS} convex>
                         <h2>Advisors</h2>
                         <Row>
-                            <Col sm={12} md={4}>
+                            <Col sm={12} md={3}>
                                 <Profile
                                     name="Brayton Williams"
                                     title="Boost VC"
@@ -317,7 +317,7 @@ class App extends Component {
                                     twitter="https://twitter.com/BraytonKey"
                                     linkedin="https://www.linkedin.com/in/braytonwilliams" />
                             </Col>
-                            <Col sm={12} md={4}>
+                            <Col sm={12} md={3}>
                                 <Profile
                                     name="John Packel"
                                     title="ConsenSys"
@@ -326,7 +326,15 @@ class App extends Component {
                                     twitter="https://twitter.com/jpackel"
                                     linkedin="https://www.linkedin.com/in/johnpackel" />
                             </Col>
-                            <Col sm={12} md={4}>
+                            <Col sm={12} md={3}>
+                                <Profile
+                                    name="James Prestwich"
+                                    title="Storj Labs"
+                                    imagePath="/images/headshots/jamesPrestwich"
+                                    imageMaxRes={3}
+                                    linkedin="https://www.linkedin.com/in/prestwich" />
+                            </Col>
+                            <Col sm={12} md={3}>
                                 <Profile
                                     name="Axel Blikstad"
                                     title="International Finance"

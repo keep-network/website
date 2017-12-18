@@ -6,7 +6,7 @@ import PageSection from './PageSection';
 import NavScrollItem from './NavScrollItem';
 // import Snippet from './Snippet';
 import * as Icons from './Icons';
-import { Profile } from './Profile';
+import { Avatar, Profile } from './Profile';
 import TimelinePoint from './TimelinePoint';
 import './app.css';
 
@@ -22,7 +22,11 @@ class App extends Component {
             DESCRIPTION: 'description',
             TEAM: 'team',
             DEFINITION: 'definition',
-            ADVISORS: 'advisors'
+            ADVISORS: 'advisors',
+            JAMES_QUOTE: 'james-quote',
+            PARTNERS: 'partners',
+            VIGNESH_QUOTE: 'vignesh-quote',
+            SUPPORTERS: 'supporters'
         };
 
 //         const snippetCode = `$ curl https://api.keep.network/v1/btc/main/addrs/1Puw/Q6uWXNeGcEnLCAXmRJozdLZ9M4NWQ7
@@ -343,6 +347,42 @@ class App extends Component {
                                     linkedin="https://www.linkedin.com/in/axel-blikstad-77534814" />
                             </Col>
                         </Row>
+                    </PageSection>
+                    <PageSection id={sections.JAMES_QUOTE} additionalClassNames={['quote']}>
+                        <Row className="left">
+                            <Col sm={12} md={9} mdPush={3} className="quote-text">
+                                <p>
+                                    &#8220;Keep is taking something novel and theoretical like sMPC and pairing it with real world incentive models to solve pressing challenges for the decentralized ecosystem&#8221;
+                                    <span>-Storj Founder, James Prestwich</span>
+                                </p>
+                            </Col>
+                            <Col sm={12} md={3} mdPull={9}>
+                                <Avatar
+                                    imagePath="/images/headshots/jamesPrestwich"
+                                    imageMaxRes={3} />
+                            </Col>
+                        </Row>
+                    </PageSection>
+                    <PageSection id={sections.PARTNERS} convex>
+                        <h2>Our Partners</h2>
+                    </PageSection>
+                    <PageSection id={sections.VIGNESH_QUOTE} additionalClassNames={['quote']}>
+                        <Row className="right">
+                            <Col sm={12} md={9} className="quote-text">
+                                <p>
+                                    &#8220;Keep fits a key requirement of our protocol like a glove. The smart contract acts &#8216;human&#8217;, one with notary powers, who signs the offer off-chain. Gas cost is thus saved, transaction turnaround time is reduced, and overall efficiency is increased. Also for Lendroid, integrating with Keep is a nice experience of its compatibility with other protocols in the ecosystem.&#8221;
+                                    <span>-Lendroid Founder, Vignesh Sundaresan</span>
+                                </p>
+                            </Col>
+                            <Col sm={12} md={3}>
+                                <Avatar
+                                    imagePath="/images/headshots/vigneshSundaresan"
+                                    imageMaxRes={3} />
+                            </Col>
+                        </Row>
+                    </PageSection>
+                    <PageSection id={sections.SUPPORTERS} convex>
+                        <h2>Our Supporters</h2>
                     </PageSection>
                     <footer>
                         <Grid>

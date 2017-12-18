@@ -22,6 +22,23 @@ const getSrc = (imagePath, imageType, imageMaxRes) => {
     return srcset.join(', ');
 };
 
+export const Avatar = ({ imagePath, imageType, imageMaxRes }) => <div
+    className="avatar">
+    <Picture src={getSrc(imagePath, imageType, imageMaxRes)} />
+</div>;
+
+Avatar.propTypes = {
+    imagePath: PropTypes.string,
+    imageType: PropTypes.string,
+    imageMaxRes: PropTypes.number
+};
+
+Avatar.defaultProps = {
+    imagePath: '/images/headshots/placeholder',
+    imageType: 'jpg',
+    imageMaxRes: 1
+};
+
 export const Profile = ({
     name,
     imagePath,
@@ -33,9 +50,10 @@ export const Profile = ({
     github,
     keybase
 }) => <div className="profile">
-    <div className="avatar">
-        <Picture src={getSrc(imagePath, imageType, imageMaxRes)} />
-    </div>
+    <Avatar
+        imagePath={imagePath}
+        imageType={imageType}
+        imageMaxRes={imageMaxRes} />
     <h4><span>{name}</span>{title && title}</h4>
     <div className="social-links">
         { twitter &&

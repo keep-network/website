@@ -1,0 +1,29 @@
+.page-section {
+    display: flex;
+    align-items: center;
+    padding: 40px 0;
+    position: relative;
+    overflow: visible;
+
+    .page-section-content {
+        width: 100%;
+        position: relative;
+        z-index: 1;
+    }
+
+    h3 {
+        margin-bottom: 0;
+    }
+
+    @media @tablet-up {
+        padding: 0 0 100px;
+
+        h2 {
+            margin-bottom: 74px;
+        }
+
+        &.convex {
+            padding: 100px 0 270px;
+        }
+    }
+}

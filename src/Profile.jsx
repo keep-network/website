@@ -3,24 +3,7 @@ import PropTypes from 'prop-types';
 import { Picture } from 'react-responsive-picture';
 
 import { GithubSocial, Keybase, LinkedIn, Twitter } from './Icons';
-
-const getSrc = (imagePath, imageType, imageMaxRes) => {
-    const srcset = [];
-    let count = imageMaxRes;
-
-    while (count) {
-        let src = '';
-        if (count === 1) {
-            src = `${imagePath}.${imageType} ${count}x`;
-        } else {
-            src = `${imagePath}@${count}x.${imageType} ${count}x`;
-        }
-        srcset.push(src);
-        count--;
-    }
-
-    return srcset.join(', ');
-};
+import { getSrc } from './utils';
 
 export const Avatar = ({ imagePath, imageType, imageMaxRes }) => <div
     className="avatar">

@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Button, Col, Grid, Nav, Navbar, NavbarBrand, NavItem, Row } from 'react-bootstrap';
 import { Link } from 'react-scroll';
+import { Picture } from 'react-responsive-picture';
+
 import EmailForm from './EmailForm';
 import PageSection from './PageSection';
 import NavScrollItem from './NavScrollItem';
@@ -8,6 +10,8 @@ import NavScrollItem from './NavScrollItem';
 import * as Icons from './Icons';
 import { Avatar, Profile } from './Profile';
 import TimelinePoint from './TimelinePoint';
+import { getSrc } from './utils';
+
 import './app.css';
 
 class App extends Component {
@@ -365,6 +369,13 @@ class App extends Component {
                     </PageSection>
                     <PageSection id={sections.PARTNERS} convex>
                         <h2>Our Partners</h2>
+                        <Row>
+                            <Col sm={12} md={4} mdPush={4}>
+                                <a href="https://lendroid.com/" target="_blank">
+                                    <Picture src={getSrc('/images/logos/lendroidLogo', 'jpg', 3)} />
+                                </a>
+                            </Col>
+                        </Row>
                     </PageSection>
                     <PageSection id={sections.VIGNESH_QUOTE} additionalClassNames={['quote']}>
                         <Row className="right">
@@ -383,6 +394,23 @@ class App extends Component {
                     </PageSection>
                     <PageSection id={sections.SUPPORTERS} convex>
                         <h2>Our Supporters</h2>
+                        <Row>
+                            <Col sm={12} md={4}>
+                                <a href="http://polychain.capital/" target="_blank">
+                                    <Picture src={getSrc('/images/logos/polychainLogo', 'png', 3)} />
+                                </a>
+                            </Col>
+                            <Col sm={12} md={4}>
+                                <a href="http://www.dhvc.com/" target="_blank">
+                                    <Picture src={getSrc('/images/logos/DHVCLogo', 'png', 3)} />
+                                </a>
+                            </Col>
+                            <Col sm={12} md={4}>
+                                <a href="https://www.distributedcapital.io/" target="_blank">
+                                    <Picture src={getSrc('/images/logos/distributedCapPartnersLogo', 'png', 3)} />
+                                </a>
+                            </Col>
+                        </Row>
                     </PageSection>
                     <footer>
                         <Grid>

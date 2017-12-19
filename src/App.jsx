@@ -337,7 +337,7 @@ class App extends Component {
                             <Col sm={12} md={3}>
                                 <Profile
                                     name="James Prestwich"
-                                    title="Storj Labs"
+                                    title="Integral, formerly Storj Labs"
                                     imagePath="/images/headshots/jamesPrestwich"
                                     imageMaxRes={3}
                                     linkedin="https://www.linkedin.com/in/prestwich" />

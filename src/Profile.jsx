@@ -3,23 +3,23 @@ import PropTypes from 'prop-types';
 import { Picture } from 'react-responsive-picture';
 
 import { GithubSocial, Keybase, LinkedIn, Twitter } from './Icons';
+import { getSrc } from './utils';
 
-const getSrc = (imagePath, imageType, imageMaxRes) => {
-    const srcset = [];
-    let count = imageMaxRes;
+export const Avatar = ({ imagePath, imageType, imageMaxRes }) => <div
+    className="avatar">
+    <Picture src={getSrc(imagePath, imageType, imageMaxRes)} />
+</div>;
 
-    while (count) {
-        let src = '';
-        if (count === 1) {
-            src = `${imagePath}.${imageType} ${count}x`;
-        } else {
-            src = `${imagePath}@${count}x.${imageType} ${count}x`;
-        }
-        srcset.push(src);
-        count--;
-    }
+Avatar.propTypes = {
+    imagePath: PropTypes.string,
+    imageType: PropTypes.string,
+    imageMaxRes: PropTypes.number
+};
 
-    return srcset.join(', ');
+Avatar.defaultProps = {
+    imagePath: '/images/headshots/placeholder',
+    imageType: 'jpg',
+    imageMaxRes: 1
 };
 
 export const Profile = ({
@@ -33,9 +33,10 @@ export const Profile = ({
     github,
     keybase
 }) => <div className="profile">
-    <div className="avatar">
-        <Picture src={getSrc(imagePath, imageType, imageMaxRes)} />
-    </div>
+    <Avatar
+        imagePath={imagePath}
+        imageType={imageType}
+        imageMaxRes={imageMaxRes} />
     <h4><span>{name}</span>{title && title}</h4>
     <div className="social-links">
         { twitter &&

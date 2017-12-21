@@ -73,26 +73,28 @@ class App extends Component {
                                 <p>A keep is an off-chain container for private data. Keeps help contracts harness the full power of the public blockchain &mdash; enabling deep interactivity with private data.</p>
                             </Col>
                         </Row>
-                        <Row>
-                            <Col sm={12} md={4} mdPush={4}>
+                        <Row className="slack-signup">
+                            <Col sm={12} md={2} mdPush={3} className="col-icon">
+                                <img alt="Slack Logo" src={Icons.slackGreen} />
+                            </Col>
+                            <Col sm={12} md={4} mdPush={3}>
                                 <EmailForm
-                                    label="Email"
-                                    btnText="sign up"
-                                    url="/mailing-list/signup" />
+                                    label="Slack Email"
+                                    btnText="join"
+                                    url="/slack/invite" />
                             </Col>
                         </Row>
                     </PageSection>
                     <PageSection id={sections.ABOUT}>
                         <Row>
-                            <Col sm={12} md={6} className="slack-community"
-                                id="slack">
-                                <img alt="Slack Logo" src={Icons.slack} />
-                                <h3>Join the Conversation</h3>
-                                <p>Meet the online community</p>
+                            <Col sm={12} md={6} className="mailing-list">
+                                <img alt="Email" src={Icons.email} />
+                                <h3>Join the Mailing List</h3>
+                                <p>Stay informed</p>
                                 <EmailForm
-                                    label="Slack Email"
+                                    label="Email"
                                     btnText="join"
-                                    url="/slack/invite" />
+                                    url="/mailing-list/signup" />
                             </Col>
                             <Col sm={12} md={6} className="whitepaper">
                                 <img alt="Paper Study" src={Icons.paperStudy} />

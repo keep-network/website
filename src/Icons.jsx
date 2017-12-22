@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import agreement from './images/agreement.svg';
 import bank from './images/bank.svg';
 import castle from './images/castleIcon.svg';
+import email from './images/emailIcon.svg';
 import fingerprint from './images/fingerprint.svg';
 import github from './images/GitHub_Logo.svg';
 import keyCircle from './images/key-circle.svg';
@@ -15,7 +16,8 @@ import remoteLock from './images/remote-lock.svg';
 import safeOpened from './images/safe-opened.svg';
 import shop from './images/shop.svg';
 import skull from './images/skull.svg';
-import slack from './images/slack_monochrome_white.svg';
+import slackGreen from './images/slack_monochrome_green.svg';
+import slackWhite from './images/slack_monochrome_white.svg';
 import sliders from './images/sliders.svg';
 import swords from './images/swordsIcon.svg';
 import timeline from './images/timeline.svg';
@@ -151,6 +153,7 @@ export {
     agreement,
     bank,
     castle,
+    email,
     fingerprint,
     github,
     GithubSocial,
@@ -166,7 +169,8 @@ export {
     safeOpened,
     shop,
     skull,
-    slack,
+    slackGreen,
+    slackWhite,
     sliders,
     swords,
     timeline,

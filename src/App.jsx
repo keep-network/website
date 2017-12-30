@@ -73,26 +73,28 @@ class App extends Component {
                                 <p>A keep is an off-chain container for private data. Keeps help contracts harness the full power of the public blockchain &mdash; enabling deep interactivity with private data.</p>
                             </Col>
                         </Row>
-                        <Row>
-                            <Col sm={12} md={4} mdPush={4}>
+                        <Row className="slack-signup">
+                            <Col sm={12} md={2} mdPush={3} className="col-icon">
+                                <img alt="Slack Logo" src={Icons.slackGreen} />
+                            </Col>
+                            <Col sm={12} md={4} mdPush={3}>
                                 <EmailForm
-                                    label="Email"
-                                    btnText="sign up"
-                                    url="/mailing-list/signup" />
+                                    label="Slack Email"
+                                    btnText="join"
+                                    url="/slack/invite" />
                             </Col>
                         </Row>
                     </PageSection>
                     <PageSection id={sections.ABOUT}>
                         <Row>
-                            <Col sm={12} md={6} className="slack-community"
-                                id="slack">
-                                <img alt="Slack Logo" src={Icons.slack} />
-                                <h3>Join the Conversation</h3>
-                                <p>Meet the online community</p>
+                            <Col sm={12} md={6} className="mailing-list">
+                                <img alt="Email" src={Icons.email} />
+                                <h3>Join the Mailing List</h3>
+                                <p>Stay informed</p>
                                 <EmailForm
-                                    label="Slack Email"
+                                    label="Email"
                                     btnText="join"
-                                    url="/slack/invite" />
+                                    url="/mailing-list/signup" />
                             </Col>
                             <Col sm={12} md={6} className="whitepaper">
                                 <img alt="Paper Study" src={Icons.paperStudy} />
@@ -198,13 +200,13 @@ class App extends Component {
                                 <TimelinePoint label="Public Announcement" date="9/26/17"/>
                             </Col>
                             <Col sm={12} md={3}>
-                                <TimelinePoint label="Pre-Sale" date="November"/>
+                                <TimelinePoint label="Pre-Sale" date="November" highlight/>
                             </Col>
                             <Col sm={12} md={3}>
                                 <TimelinePoint label="Public Sale" date="January"/>
                             </Col>
                             <Col sm={12} md={3}>
-                                <TimelinePoint label="Network Launch" date="February" highlight/>
+                                <TimelinePoint label="Network Launch" date="February"/>
                             </Col>
                         </Row>
                     </PageSection>
@@ -316,7 +318,7 @@ class App extends Component {
                     <PageSection id={sections.ADVISORS} convex>
                         <h2>Advisors</h2>
                         <Row>
-                            <Col sm={12} md={3}>
+                            <Col sm={12} md={4}>
                                 <Profile
                                     name="Brayton Williams"
                                     title="Boost VC"
@@ -325,7 +327,7 @@ class App extends Component {
                                     twitter="https://twitter.com/BraytonKey"
                                     linkedin="https://www.linkedin.com/in/braytonwilliams" />
                             </Col>
-                            <Col sm={12} md={3}>
+                            <Col sm={12} md={4}>
                                 <Profile
                                     name="John Packel"
                                     title="ConsenSys"
@@ -334,7 +336,7 @@ class App extends Component {
                                     twitter="https://twitter.com/jpackel"
                                     linkedin="https://www.linkedin.com/in/johnpackel" />
                             </Col>
-                            <Col sm={12} md={3}>
+                            <Col sm={12} md={4}>
                                 <Profile
                                     name="James Prestwich"
                                     title="Integral, formerly Storj Labs"
@@ -342,13 +344,33 @@ class App extends Component {
                                     imageMaxRes={3}
                                     linkedin="https://www.linkedin.com/in/prestwich" />
                             </Col>
-                            <Col sm={12} md={3}>
+                        </Row>
+                        <Row>
+                            <Col sm={12} md={4}>
                                 <Profile
                                     name="Axel Blikstad"
                                     title="International Finance"
                                     imagePath="/images/headshots/axel"
                                     imageMaxRes={3}
                                     linkedin="https://www.linkedin.com/in/axel-blikstad-77534814" />
+                            </Col>
+                            <Col sm={12} md={4}>
+                                <Profile
+                                    name="Joseph Urgo"
+                                    title="district0x"
+                                    imagePath="/images/headshots/josephUrgo"
+                                    imageMaxRes={3}
+                                    twitter="https://twitter.com/jfurgo?lang=en"
+                                    linkedin="https://www.linkedin.com/in/joseph-urgo-a8b77983/" />
+                            </Col>
+                            <Col sm={12} md={4}>
+                                <Profile
+                                    name="Luis Cuende"
+                                    title="Aragon"
+                                    imagePath="/images/headshots/luisCuende"
+                                    imageMaxRes={3}
+                                    twitter="https://twitter.com/licuende?lang=en"
+                                    linkedin="https://www.linkedin.com/in/luisivancuende/" />
                             </Col>
                         </Row>
                     </PageSection>
@@ -415,6 +437,14 @@ class App extends Component {
                     <footer>
                         <Grid>
                             <span>&#169; 2017 Keep. All Rights Reserved.</span>
+                            <div className="social-footer">
+                                <a href="https://twitter.com/keep_project" target="_blank">
+                                    <Icons.Twitter color="#91ABA5" />
+                                </a>
+                                <a href="https://www.reddit.com/r/KeepNetwork/" target="_blank">
+                                    <Icons.Reddit/>
+                                </a>
+                            </div>
                         </Grid>
                     </footer>
                 </div>

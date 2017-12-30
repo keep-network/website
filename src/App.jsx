@@ -417,6 +417,14 @@ class App extends Component {
                     <footer>
                         <Grid>
                             <span>&#169; 2017 Keep. All Rights Reserved.</span>
+                            <div className="social-footer">
+                                <a href="https://twitter.com/keep_project" target="_blank">
+                                    <Icons.Twitter color="#91ABA5" />
+                                </a>
+                                <a href="https://www.reddit.com/r/KeepNetwork/" target="_blank">
+                                    <Icons.Reddit/>
+                                </a>
+                            </div>
                         </Grid>
                     </footer>
                 </div>

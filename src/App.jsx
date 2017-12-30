@@ -318,7 +318,7 @@ class App extends Component {
                     <PageSection id={sections.ADVISORS} convex>
                         <h2>Advisors</h2>
                         <Row>
-                            <Col sm={12} md={3}>
+                            <Col sm={12} md={4}>
                                 <Profile
                                     name="Brayton Williams"
                                     title="Boost VC"
@@ -327,7 +327,7 @@ class App extends Component {
                                     twitter="https://twitter.com/BraytonKey"
                                     linkedin="https://www.linkedin.com/in/braytonwilliams" />
                             </Col>
-                            <Col sm={12} md={3}>
+                            <Col sm={12} md={4}>
                                 <Profile
                                     name="John Packel"
                                     title="ConsenSys"
@@ -336,7 +336,7 @@ class App extends Component {
                                     twitter="https://twitter.com/jpackel"
                                     linkedin="https://www.linkedin.com/in/johnpackel" />
                             </Col>
-                            <Col sm={12} md={3}>
+                            <Col sm={12} md={4}>
                                 <Profile
                                     name="James Prestwich"
                                     title="Integral, formerly Storj Labs"
@@ -344,13 +344,33 @@ class App extends Component {
                                     imageMaxRes={3}
                                     linkedin="https://www.linkedin.com/in/prestwich" />
                             </Col>
-                            <Col sm={12} md={3}>
+                        </Row>
+                        <Row>
+                            <Col sm={12} md={4}>
                                 <Profile
                                     name="Axel Blikstad"
                                     title="International Finance"
                                     imagePath="/images/headshots/axel"
                                     imageMaxRes={3}
                                     linkedin="https://www.linkedin.com/in/axel-blikstad-77534814" />
+                            </Col>
+                            <Col sm={12} md={4}>
+                                <Profile
+                                    name="Joseph Urgo"
+                                    title="district0x"
+                                    imagePath="/images/headshots/josephUrgo"
+                                    imageMaxRes={3}
+                                    twitter="https://twitter.com/jfurgo?lang=en"
+                                    linkedin="https://www.linkedin.com/in/joseph-urgo-a8b77983/" />
+                            </Col>
+                            <Col sm={12} md={4}>
+                                <Profile
+                                    name="Luis Cuende"
+                                    title="Aragon"
+                                    imagePath="/images/headshots/luisCuende"
+                                    imageMaxRes={3}
+                                    twitter="https://twitter.com/licuende?lang=en"
+                                    linkedin="https://www.linkedin.com/in/luisivancuende/" />
                             </Col>
                         </Row>
                     </PageSection>

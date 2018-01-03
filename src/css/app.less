@@ -375,6 +375,39 @@ body {
     }
 }
 
+.our-content {
+    .blog-item {
+        text-align: left;
+        margin-bottom: 50px;
+
+        .image-link {
+            display: flex;
+            min-height: 250px;
+            align-items: center;
+        }
+
+        img {
+            width: 100%;
+            max-width: 100%;
+            border-radius: 8px;
+            margin: 0 0 8px;
+        }
+
+        a {
+            color: #999;
+            text-decoration: none;
+        }
+
+        span {
+            display: block;
+
+            &.blog-title {
+                color: @body-text-color;
+            }
+        }
+    }
+}
+
 footer {
     padding: 30px 0 60px;
     background-color: @background-dark-color;

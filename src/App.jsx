@@ -11,6 +11,7 @@ import NavScrollItem from './NavScrollItem'
 import * as Icons from './Icons'
 import { Avatar, Profile } from './Profile'
 import TimelinePoint from './TimelinePoint'
+import BlogContentSection from './BlogContentSection'
 import { getSrc } from './utils'
 import { actionTypes } from './redux'
 
@@ -553,6 +554,7 @@ class App extends Component {
                             </Col>
                         </Row>
                     </PageSection>
+                    <BlogContentSection/>
                     <footer>
                         <Grid>
                             <span>&#169; 2018 Keep. All Rights Reserved.</span>

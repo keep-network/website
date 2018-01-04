@@ -16,6 +16,11 @@ const formatDate = (dateString) => {
     return moment(dateString, 'YYYY-MM-DD HH:mm:ss').format('MM/DD/YYYY')
 }
 
+const htmlDecode = (input) => {
+    const doc = new DOMParser().parseFromString(input, 'text/html');
+    return doc.documentElement.textContent;
+}
+
 class BlogContentSection extends Component {
     constructor(props) {
         super(props)
@@ -58,12 +63,14 @@ class BlogContentSection extends Component {
                     </a>
                     <h4>
                         <a href={item.link}>
-                            <span className="blog-title">{item.title}</span>
+                            <span className="blog-title">
+                                { htmlDecode(item.title) }
+                            </span>
                             <span className="blog-author">
-                                by {item.author}
+                                by { item.author }
                             </span>
                             <span className="blog-date">
-                                {formatDate(item.pubDate)}
+                                { formatDate(item.pubDate) }
                             </span>
                         </a>
                     </h4>

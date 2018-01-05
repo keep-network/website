@@ -386,11 +386,14 @@ body {
             align-items: center;
         }
 
-        img {
-            width: 100%;
-            max-width: 100%;
+        canvas {
+            margin: 0 auto;
             border-radius: 8px;
-            margin: 0 0 8px;
+
+            @media @md-up,
+            (max-width: 600px) {
+                width: 100% !important;
+            }
         }
 
         a {

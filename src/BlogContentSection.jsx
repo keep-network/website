@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import { Col, Row } from 'react-bootstrap'
 import request from 'superagent'
 import moment from 'moment'
+import smartcrop from 'smartcrop'
 
 import PageSection from './PageSection'
 
@@ -17,8 +19,56 @@ const formatDate = (dateString) => {
 }
 
 const htmlDecode = (input) => {
-    const doc = new DOMParser().parseFromString(input, 'text/html');
-    return doc.documentElement.textContent;
+    const doc = new DOMParser().parseFromString(input, 'text/html')
+    return doc.documentElement.textContent
+}
+
+const CANVAS_WIDTH = 600
+
+const CANVAS_HEIGHT = 400
+
+const loadImage = (src) => {
+    return new Promise((resolve) => {
+        let img = new Image()
+        img.onload = () => {
+            resolve(img)
+        }
+        img.crossOrigin = 'Anonymous'
+        img.src = src
+    })
+}
+
+class ImageCrop extends Component {
+
+    componentDidMount() {
+        const { src } = this.props
+        const ctx = this.refs.canvas.getContext('2d')
+        let img = null
+
+        loadImage(src)
+            .then((loadedImg) => {
+                img = loadedImg
+                smartcrop.crop(img, {
+                    width: CANVAS_WIDTH,
+                    height: CANVAS_HEIGHT,
+                    minScale: 1,
+                    ruleOfThirds: true
+                }).then((result) => {
+                    const crop = result.topCrop
+                    ctx.drawImage(img, crop.x, crop.y, crop.width, crop.height,
+                        0, 0, CANVAS_WIDTH, CANVAS_HEIGHT)
+                })
+            })
+    }
+
+    render() {
+        return <canvas ref="canvas"
+            width={CANVAS_WIDTH} height={CANVAS_HEIGHT}></canvas>
+    }
+}
+
+ImageCrop.propTypes = {
+    src: PropTypes.string
 }
 
 class BlogContentSection extends Component {
@@ -58,7 +108,7 @@ class BlogContentSection extends Component {
                 blogItems.map((item, i) => <Col sm={12} md={4}
                     key={`blog-item-${i}`} className="blog-item">
                     <a href={item.link} className="image-link">
-                        <img alt={item.title}
+                        <ImageCrop
                             src={getImgSrc(item.description)}/>
                     </a>
                     <h4>

@@ -21,6 +21,7 @@
     "redux": "^3.7.2",
     "redux-devtools-extension": "^2.13.2",
     "redux-saga": "^0.16.0",
+    "smartcrop": "^1.1.1",
     "superagent": "^3.6.0",
     "validator": "^8.2.0"
   },

@@ -112,7 +112,7 @@
 
         &:before,
         &:after {
-            width: calc(50% + 15px);
+            width: calc(50% + 10px);
             height: 2px;
             top: 50%;
             z-index: 0;
@@ -202,7 +202,7 @@
 
 
 .timeline {
-    .col-md-3 {
+    .col-md-4 {
         &:first-of-type {
             .timeline-point:before {
                 display: none;
@@ -212,22 +212,6 @@
         &:last-of-type {
             .timeline-point:after {
                 display: none;
-            }
-        }
-
-        @media @tablet-up {
-            &:first-of-type {
-                .timeline-content {
-                    padding-top: 25px;
-                }
-            }
-        }
-
-        @media only screen and (min-width: 768px) and (max-width: 1200px) {
-            &:last-of-type {
-                .timeline-content {
-                    padding-top: 25px;
-                }
             }
         }
     }

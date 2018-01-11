@@ -196,17 +196,14 @@ class App extends Component {
                     </PageSection>
                     <PageSection id={sections.TIMELINE}>
                         <Row>
-                            <Col sm={12} md={3}>
+                            <Col sm={12} md={4}>
                                 <TimelinePoint label="Public Announcement" date="9/26/17"/>
                             </Col>
-                            <Col sm={12} md={3}>
-                                <TimelinePoint label="Pre-Sale" date="November" highlight/>
+                            <Col sm={12} md={4}>
+                                <TimelinePoint label="Public Sale" date="February"/>
                             </Col>
-                            <Col sm={12} md={3}>
-                                <TimelinePoint label="Public Sale" date="January"/>
-                            </Col>
-                            <Col sm={12} md={3}>
-                                <TimelinePoint label="Network Launch" date="February"/>
+                            <Col sm={12} md={4}>
+                                <TimelinePoint label="Network Launch" date="March"/>
                             </Col>
                         </Row>
                     </PageSection>

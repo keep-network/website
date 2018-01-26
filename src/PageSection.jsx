@@ -20,7 +20,7 @@ PageSection.propTypes = {
     convex: PropTypes.bool
 };
 
-PageSection.defaultTypes = {
+PageSection.defaultProps = {
     id: '',
     additionalClassNames: [],
     convex: false

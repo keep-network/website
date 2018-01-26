@@ -43,14 +43,21 @@ class EmailForm extends Component {
     }
 
     onRequestSuccess() {
+        const { resetOnSuccess, onSuccess } = this.props;
+
         this.setState({
             hasError: false,
             requestSent: true,
             requestSuccess: true
         });
-        window.setTimeout(() => {
-            this.setState(this.getInitialState());
-        }, RESET_DELAY);
+
+        onSuccess();
+
+        if (resetOnSuccess) {
+            window.setTimeout(() => {
+                this.setState(this.getInitialState());
+            }, RESET_DELAY);
+        }
     }
 
     onClick(e) {
@@ -95,7 +102,10 @@ class EmailForm extends Component {
     }
 
     render() {
-        const { label, btnText } = this.props;
+        const { label,
+                btnText,
+                successMessage,
+                showSuccessMessage } = this.props;
         const { email,
                 hasError,
                 requestSent,
@@ -104,12 +114,12 @@ class EmailForm extends Component {
 
         const classes = {
             'has-error': hasError,
-            'request-sent': requestSent,
-            'request-success': requestSuccess
+            'request-sent': requestSent || showSuccessMessage,
+            'request-success': requestSuccess || showSuccessMessage
         };
 
         return (
-            <div className="email-form">
+            <div className={classNames('email-form', classes)}>
                 <Form inline className={classNames(classes)}
                     onSubmit={(e) => { e.preventDefault(); }}>
                     <FormGroup controlId={`formInline${pascalCase(label)}`}>
@@ -132,9 +142,9 @@ class EmailForm extends Component {
                 </Form>
                 { hasError &&
                     <small className="error-message">{errorMsg}</small> }
-                { requestSuccess &&
+                { (requestSuccess || showSuccessMessage) &&
                     <div className="success-message">
-                        Thanks, you're signed up!
+                        { successMessage || 'Thanks, you\'re signed up!' }
                     </div> }
             </div>
         );
@@ -144,13 +154,21 @@ class EmailForm extends Component {
 EmailForm.propTypes = {
     btnText: PropTypes.string,
     label: PropTypes.string,
-    url: PropTypes.string
+    url: PropTypes.string,
+    successMessage: PropTypes.string,
+    resetOnSuccess: PropTypes.bool,
+    onSuccess: PropTypes.func,
+    showSuccessMessage: PropTypes.bool
 };
 
-EmailForm.defaultTypes = {
+EmailForm.defaultProps = {
     btnText: 'submit',
     label: 'Email',
-    url: ''
+    url: '',
+    successMessage: '',
+    resetOnSuccess: true,
+    onSuccess: () => {},
+    showSuccessMessage: false
 };
 
 export default EmailForm;

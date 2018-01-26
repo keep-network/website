@@ -110,6 +110,8 @@
 
 .email-form {
     position: relative;
+    transition: 0.25s all ease-in;
+
     .error-message {
         color: @error-color;
         position: absolute;
@@ -126,5 +128,19 @@
         left: 0;
         text-align: center;
         color: @white;
+
+        @media @md-up and (max-width: 1200px),
+        only screen and (max-width: 369px) {
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+
+    &.request-success {
+        @media @md-up and (max-width: 1200px),
+        only screen and (max-width: 369px) {
+            background-color: @background-dark-color;
+            border-radius: 8px;
+        }
     }
 }

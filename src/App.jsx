@@ -81,7 +81,9 @@ class App extends Component {
                                 <EmailForm
                                     label="Slack Email"
                                     btnText="join"
-                                    url="/slack/invite" />
+                                    url="/slack/invite"
+                                    successMessage="Thanks, you've been added to the waitlist!"
+                                    resetOnSuccess={false} />
                             </Col>
                         </Row>
                     </PageSection>

@@ -19,7 +19,7 @@ Snippet.propTypes = {
     lang: PropTypes.string
 };
 
-Snippet.defaultTypes = {
+Snippet.defaultProps = {
     component: 'code',
     lang: 'json'
 };

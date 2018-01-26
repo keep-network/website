@@ -43,14 +43,15 @@ class EmailForm extends Component {
     }
 
     onRequestSuccess() {
-        const { resetOnSuccess } = this.props;
-        debugger;
+        const { resetOnSuccess, onSuccess } = this.props;
 
         this.setState({
             hasError: false,
             requestSent: true,
             requestSuccess: true
         });
+
+        onSuccess();
 
         if (resetOnSuccess) {
             window.setTimeout(() => {
@@ -101,7 +102,10 @@ class EmailForm extends Component {
     }
 
     render() {
-        const { label, btnText, successMessage } = this.props;
+        const { label,
+                btnText,
+                successMessage,
+                showSuccessMessage } = this.props;
         const { email,
                 hasError,
                 requestSent,
@@ -110,8 +114,8 @@ class EmailForm extends Component {
 
         const classes = {
             'has-error': hasError,
-            'request-sent': requestSent,
-            'request-success': requestSuccess
+            'request-sent': requestSent || showSuccessMessage,
+            'request-success': requestSuccess || showSuccessMessage
         };
 
         return (
@@ -138,7 +142,7 @@ class EmailForm extends Component {
                 </Form>
                 { hasError &&
                     <small className="error-message">{errorMsg}</small> }
-                { requestSuccess &&
+                { (requestSuccess || showSuccessMessage) &&
                     <div className="success-message">
                         { successMessage || 'Thanks, you\'re signed up!' }
                     </div> }
@@ -152,7 +156,9 @@ EmailForm.propTypes = {
     label: PropTypes.string,
     url: PropTypes.string,
     successMessage: PropTypes.string,
-    resetOnSuccess: PropTypes.bool
+    resetOnSuccess: PropTypes.bool,
+    onSuccess: PropTypes.func,
+    showSuccessMessage: PropTypes.bool
 };
 
 EmailForm.defaultProps = {
@@ -160,7 +166,9 @@ EmailForm.defaultProps = {
     label: 'Email',
     url: '',
     successMessage: '',
-    resetOnSuccess: true
+    resetOnSuccess: true,
+    onSuccess: () => {},
+    showSuccessMessage: false
 };
 
 export default EmailForm;

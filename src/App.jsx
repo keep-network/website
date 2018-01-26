@@ -83,7 +83,14 @@ class App extends Component {
                                     btnText="join"
                                     url="/slack/invite"
                                     successMessage="Thanks, you've been added to the waitlist!"
-                                    resetOnSuccess={false} />
+                                    resetOnSuccess={false}
+                                    onSuccess={() => {
+                                        window.sessionStorage &&
+                                            window.sessionStorage.setItem('isSlackWaitlisted', true);
+                                    }}
+                                    showSuccessMessage={
+                                        window.sessionStorage &&
+                                            window.sessionStorage.getItem('isSlackWaitlisted') === 'true'} />
                             </Col>
                         </Row>
                     </PageSection>

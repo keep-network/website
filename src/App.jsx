@@ -1,18 +1,19 @@
-import React, { Component } from 'react';
-import { Button, Col, Grid, Nav, Navbar, NavbarBrand, NavItem, Row } from 'react-bootstrap';
-import { Link } from 'react-scroll';
-import { Picture } from 'react-responsive-picture';
+import React, { Component } from 'react'
+import { Button, Col, Grid, Nav, Navbar, NavbarBrand, NavItem, Row } from 'react-bootstrap'
+import { Link } from 'react-scroll'
+import { Picture } from 'react-responsive-picture'
 
-import EmailForm from './EmailForm';
-import PageSection from './PageSection';
-import NavScrollItem from './NavScrollItem';
-// import Snippet from './Snippet';
-import * as Icons from './Icons';
-import { Avatar, Profile } from './Profile';
-import TimelinePoint from './TimelinePoint';
-import { getSrc } from './utils';
+import EmailForm from './EmailForm'
+import PageSection from './PageSection'
+import NavScrollItem from './NavScrollItem'
+// import Snippet from './Snippet'
+import * as Icons from './Icons'
+import { Avatar, Profile } from './Profile'
+import TimelinePoint from './TimelinePoint'
+import { getSrc } from './utils'
+import { actionTypes } from './redux'
 
-import './app.css';
+import './app.css'
 
 class App extends Component {
 
@@ -31,7 +32,7 @@ class App extends Component {
             PARTNERS: 'partners',
             VIGNESH_QUOTE: 'vignesh-quote',
             SUPPORTERS: 'supporters'
-        };
+        }
 
 //         const snippetCode = `$ curl https://api.keep.network/v1/btc/main/addrs/1Puw/Q6uWXNeGcEnLCAXmRJozdLZ9M4NWQ7
 // {
@@ -39,9 +40,11 @@ class App extends Component {
 //     "balance": 0,
 //     "unconfirmed_balance": 0,
 //     "txrefs": []
-// }`;
+// }`
 
-        const WHITEPAPER_URL = 'https://keep.network/whitepaper';
+        const WHITEPAPER_URL = 'https://keep.network/whitepaper'
+
+        const { signupSlack, signupMailingList, ajaxRequestStates } = this.props
 
         return (
             <div className="App">
@@ -81,16 +84,18 @@ class App extends Component {
                                 <EmailForm
                                     label="Slack Email"
                                     btnText="join"
-                                    url="/slack/invite"
+                                    onSubmit={signupSlack}
                                     successMessage="Thanks, you've been added to the waitlist!"
                                     resetOnSuccess={false}
                                     onSuccess={() => {
                                         window.sessionStorage &&
-                                            window.sessionStorage.setItem('isSlackWaitlisted', true);
+                                            window.sessionStorage.setItem('isSlackWaitlisted', true)
                                     }}
                                     showSuccessMessage={
                                         window.sessionStorage &&
-                                            window.sessionStorage.getItem('isSlackWaitlisted') === 'true'} />
+                                            window.sessionStorage.getItem('isSlackWaitlisted') === 'true'}
+                                    requestStates={ajaxRequestStates}
+                                    request={actionTypes.SIGNUP_SLACK} />
                             </Col>
                         </Row>
                     </PageSection>
@@ -103,7 +108,9 @@ class App extends Component {
                                 <EmailForm
                                     label="Email"
                                     btnText="join"
-                                    url="/mailing-list/signup" />
+                                    onSubmit={signupMailingList}
+                                    requestStates={ajaxRequestStates}
+                                    request={actionTypes.SIGNUP_MAILING_LIST} />
                             </Col>
                             <Col sm={12} md={6} className="whitepaper">
                                 <img alt="Paper Study" src={Icons.paperStudy} />
@@ -455,8 +462,8 @@ class App extends Component {
                     </footer>
                 </div>
             </div>
-        );
+        )
     }
 }
 
-export default App;
+export default App

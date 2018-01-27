@@ -1,29 +1,26 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import { Button, ControlLabel, Form, FormGroup,
-    FormControl } from 'react-bootstrap';
-import isEmail from 'validator/lib/isEmail';
-import pascalCase from 'pascal-case';
-import classNames from 'classnames';
-import request from 'superagent';
-import merge from 'lodash/merge';
+    FormControl } from 'react-bootstrap'
+import isEmail from 'validator/lib/isEmail'
+import pascalCase from 'pascal-case'
+import classNames from 'classnames'
+import merge from 'lodash/merge'
 
-
-const API_URL = 'https://backend.keep.network';
 
 const ERRORS = {
     INVALID_EMAIL: `Oops! That doesn't look like an email address!`,
     SERVER: `Sorry, your request cannot be completed at this time.`
-};
+}
 
-const RESET_DELAY = 3000; // 3 seconds
+const RESET_DELAY = 3000 // 3 seconds
 
 
 class EmailForm extends Component {
     constructor(props) {
-        super(props);
+        super(props)
 
-        this.state = this.getInitialState();
+        this.state = this.getInitialState()
     }
 
     getInitialState() {
@@ -33,71 +30,74 @@ class EmailForm extends Component {
             requestSent: false,
             requestSuccess: false,
             errorMsg: ERRORS.INVALID_EMAIL,
-        };
+        }
+    }
+
+    componentWillReceiveProps(nextProps) {
+        const { requestStates, request } = nextProps
+
+        if (requestStates.currentRequest === request) {
+            if (requestStates[request].error) {
+                this.setState({
+                    hasError: true,
+                    requestSent: false,
+                    errorMsg: ERRORS.SERVER
+                })
+            } else {
+                this.onRequestSuccess()
+            }
+        }
     }
 
     onChange(e) {
         this.setState(
             merge({}, this.getInitialState(), { email: e.target.value })
-        );
+        )
     }
 
     onRequestSuccess() {
-        const { resetOnSuccess, onSuccess } = this.props;
+        const { resetOnSuccess, onSuccess } = this.props
 
         this.setState({
             hasError: false,
             requestSent: true,
             requestSuccess: true
-        });
+        })
 
-        onSuccess();
+        onSuccess()
 
         if (resetOnSuccess) {
             window.setTimeout(() => {
-                this.setState(this.getInitialState());
-            }, RESET_DELAY);
+                this.setState(this.getInitialState())
+            }, RESET_DELAY)
         }
     }
 
     onClick(e) {
-        this.submit();
+        this.submit()
     }
 
     onKeyUp(e) {
         if (e.keyCode === 13) {
-            this.submit();
+            this.submit()
         }
     }
 
     submit() {
-        const { email } = this.state;
-        const { url } = this.props;
+        const { email } = this.state
+        const { onSubmit } = this.props
 
         if (!isEmail(email)) {
             this.setState({
                 hasError: true,
                 requestSent: false,
                 errorMsg: ERRORS.INVALID_EMAIL
-            });
+            })
         } else {
             this.setState({
                 requestSent: true
-            });
-            request
-                .post(`${API_URL}${url}`)
-                .send({ email: email })
-                .end((err, res) => {
-                    if (err) {
-                        this.setState({
-                            hasError: true,
-                            requestSent: false,
-                            errorMsg: ERRORS.SERVER
-                        });
-                    } else {
-                       this.onRequestSuccess();
-                    }
-                });
+            })
+            onSubmit({ email })
         }
     }
 
@@ -105,23 +105,23 @@ class EmailForm extends Component {
         const { label,
                 btnText,
                 successMessage,
-                showSuccessMessage } = this.props;
+                showSuccessMessage } = this.props
         const { email,
                 hasError,
                 requestSent,
                 errorMsg,
-                requestSuccess } = this.state;
+                requestSuccess } = this.state
 
         const classes = {
             'has-error': hasError,
             'request-sent': requestSent || showSuccessMessage,
             'request-success': requestSuccess || showSuccessMessage
-        };
+        }
 
         return (
             <div className={classNames('email-form', classes)}>
                 <Form inline className={classNames(classes)}
-                    onSubmit={(e) => { e.preventDefault(); }}>
+                    onSubmit={(e) => { e.preventDefault() }}>
                     <FormGroup controlId={`formInline${pascalCase(label)}`}>
                         <ControlLabel style={{display: 'none'}}>
                             {label}
@@ -147,28 +147,32 @@ class EmailForm extends Component {
                         { successMessage || 'Thanks, you\'re signed up!' }
                     </div> }
             </div>
-        );
+        )
     }
 }
 
 EmailForm.propTypes = {
     btnText: PropTypes.string,
     label: PropTypes.string,
-    url: PropTypes.string,
     successMessage: PropTypes.string,
     resetOnSuccess: PropTypes.bool,
     onSuccess: PropTypes.func,
-    showSuccessMessage: PropTypes.bool
-};
+    showSuccessMessage: PropTypes.bool,
+    onSubmit: PropTypes.func,
+    requestStates: PropTypes.object,
+    request: PropTypes.string
+}
 
 EmailForm.defaultProps = {
     btnText: 'submit',
     label: 'Email',
-    url: '',
     successMessage: '',
     resetOnSuccess: true,
     onSuccess: () => {},
-    showSuccessMessage: false
-};
+    showSuccessMessage: false,
+    onSubmit: () => {},
+    requestStates: {},
+    request: ''
+}
 
-export default EmailForm;
+export default EmailForm

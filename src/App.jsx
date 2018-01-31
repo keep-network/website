@@ -449,7 +449,7 @@ class App extends Component {
                     </PageSection>
                     <footer>
                         <Grid>
-                            <span>&#169; 2017 Keep. All Rights Reserved.</span>
+                            <span>&#169; 2018 Keep. All Rights Reserved.</span>
                             <div className="social-footer">
                                 <a href="https://twitter.com/keep_project" target="_blank">
                                     <Icons.Twitter color="#91ABA5" />

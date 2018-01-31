@@ -416,7 +416,7 @@ class App extends Component {
                     </PageSection>
                     <footer>
                         <Grid>
-                            <span>&#169; 2017 Keep. All Rights Reserved.</span>
+                            <span>&#169; 2018 Keep. All Rights Reserved.</span>
                         </Grid>
                     </footer>
                 </div>

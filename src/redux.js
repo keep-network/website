@@ -106,7 +106,7 @@ function* createSession(action) {
             .send({ url: location.href, referrer: document.referrer })
 
         let response = yield req
-        yield put({ type: actionTypes.CREATE_SESSION_SUCCESS }, response)
+        yield put({ type: actionTypes.CREATE_SESSION_SUCCESS, response })
         stripQuery()
     } catch (error) {
         yield put({ type: actionTypes.CREATE_SESSION_FAILURE, error })

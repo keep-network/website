@@ -464,9 +464,14 @@ class App extends Component {
                     <PageSection id={sections.PARTNERS} convex>
                         <h2>Our Partners</h2>
                         <Row>
-                            <Col sm={12} md={4} mdPush={4}>
+                            <Col sm={12} md={4} mdPush={1}>
                                 <a href="https://lendroid.com/" target="_blank">
                                     <Picture src={getSrc('/images/logos/lendroidLogo', 'jpg', 3)} />
+                                </a>
+                            </Col>
+                            <Col sm={12} md={4} mdPush={3}>
+                                <a href="https://district0x.io/" target="_blank">
+                                    <Picture src={getSrc('/images/logos/district0x_logo', 'png', 3)} />
                                 </a>
                             </Col>
                         </Row>

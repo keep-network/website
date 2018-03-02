@@ -317,6 +317,65 @@ class App extends Component {
                                     keybase="http://keybase.io/drknudy" />
                             </Col>
                         </Row>
+                        <Row>
+                            <Col sm={12} md={3}>
+                                <Profile
+                                    name="Lex Sheehan"
+                                    title="Developer"
+                                    imagePath="/images/headshots/lexSheehan"
+                                    imageType="jpg"
+                                    imageMaxRes={3}
+                                    twitter="https://twitter.com/lex_sheehan?lang=en"
+                                    linkedin="https://www.linkedin.com/in/lexsheehan/"
+                                    github="https://github.com/l3x"
+                                    keybase="https://keybase.io/l3x" />
+                            </Col>
+                            <Col sm={12} md={3}>
+                                <Profile
+                                    name="Raghav Gulati"
+                                    title="Developer"
+                                    imagePath="/images/headshots/raghavGulati"
+                                    imageMaxRes={3}
+                                    twitter="https://twitter.com/rargulati"
+                                    linkedin="https://www.linkedin.com/in/rargulati/"
+                                    github="https://github.com/rargulati"
+                                    keybase="http://keybase.io/raj" />
+                            </Col>
+                            <Col sm={12} md={3}>
+                                <Profile
+                                    name="Philip Schlump"
+                                    title="Developer"
+                                    imagePath="/images/headshots/philipSchlump"
+                                    imageMaxRes={3}
+                                    twitter="https://twitter.com/pschlump"
+                                    linkedin="https://www.linkedin.com/in/philip-schlump-73100429/"
+                                    github="https://github.com/pschlump"
+                                    keybase="https://keybase.io/pschlump" />
+                            </Col>
+                            <Col sm={12} md={3}>
+                                <Profile
+                                    name="Eliza Petrovska"
+                                    title="Community Manager"
+                                    imagePath="/images/headshots/elizapetrovska_1"
+                                    imageType="png"
+                                    imageMaxRes={3}
+                                    twitter="https://twitter.com/elizapetrovska"
+                                    github="https://github.com/elizapetrovska"
+                                    keybase="http://keybase.io/elizapetrovska" />
+                            </Col>
+                        </Row>
+                        <Row>
+                            <Col sm={12} md={3}>
+                                <Profile
+                                    name="Hope Cowan"
+                                    title="Support"
+                                    imagePath="/images/headshots/hope_cowen"
+                                    imageType="png"
+                                    imageMaxRes={3}
+                                    linkedin="https://www.linkedin.com/in/hopecowan/"
+                                    keybase="http://keybase.io/hecowan" />
+                            </Col>
+                        </Row>
                     </PageSection>
                     <PageSection id={sections.DESCRIPTION} additionalClassNames={['blurb']}>
                         <Row>

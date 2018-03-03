@@ -10,6 +10,8 @@ dependencies:
     - npm --version
 
 test:
+  pre:
+    - npm run build-css
   post:
     - npm run build
     - docker build --rm=false -t "keepnetwork/website:$CIRCLE_BUILD_NUM" .

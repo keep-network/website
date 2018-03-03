@@ -8,20 +8,20 @@ const TimelinePoint = ({ label, date, highlight }) => (
         <div className="timeline-content">
             <h4 className="timeline-label">{label}</h4>
             <div className="dot"></div>
-            <div className="date">{date}</div>
+            <div className="date">{date()}</div>
         </div>
     </div>
 );
 
 TimelinePoint.propTypes = {
     label: PropTypes.string,
-    date: PropTypes.string,
+    date: PropTypes.func,
     highlight: PropTypes.bool
 };
 
 TimelinePoint.defaultProps = {
     label: 'Point in Time',
-    date: 'TBD',
+    date: () => 'TBD',
     highlight: false
 };
 

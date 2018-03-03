@@ -213,13 +213,18 @@ class App extends Component {
                     <PageSection id={sections.TIMELINE}>
                         <Row>
                             <Col sm={12} md={4}>
-                                <TimelinePoint label="Public Announcement" date="9/26/17"/>
+                                <TimelinePoint label="Public Announcement" date={() => '9/26/17'}/>
                             </Col>
                             <Col sm={12} md={4}>
-                                <TimelinePoint label="Public Sale" date="February"/>
+                                <TimelinePoint label="Public Sale"
+                                    date={() => <span>
+                                        <span>Q2 2018</span>
+                                        <br/>
+                                        <strong>Not Yet Announced</strong>
+                                    </span>}/>
                             </Col>
                             <Col sm={12} md={4}>
-                                <TimelinePoint label="Network Launch" date="March"/>
+                                <TimelinePoint label="Network Launch" date={() => '2018'}/>
                             </Col>
                         </Row>
                     </PageSection>

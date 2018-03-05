@@ -1,3 +1,6 @@
+# built css
+/src/app.css
+
 # dependencies
 /node_modules
 

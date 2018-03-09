@@ -288,16 +288,7 @@ class App extends Component {
                                     linkedin="https://www.linkedin.com/in/pirudayaraj"
                                     keybase="http://keybase.io/starsitar" />
                             </Col>
-                            <Col sm={12} md={3}>
-                                <Profile
-                                    name="Erin Ng"
-                                    title="Developer"
-                                    imagePath="/images/headshots/erin"
-                                    imageMaxRes={3}
-                                    linkedin="https://www.linkedin.com/in/erinng/"
-                                    github="https://github.com/ironng"
-                                    keybase="http://keybase.io/ironng" />
-                            </Col>
+
                             <Col sm={12} md={3}>
                                 <Profile
                                     name="Nik Grinkevich"
@@ -308,32 +299,6 @@ class App extends Component {
                                     linkedin="https://www.linkedin.com/in/nikgrinkevich"
                                     github="https://github.com/ngrinkevich"
                                     keybase="https://keybase.io/nikgrinkevich" />
-                            </Col>
-                            <Col sm={12} md={3}>
-                                <Profile
-                                    name="Jack Knutson"
-                                    title="Community Manager"
-                                    imagePath="/images/headshots/jack"
-                                    imageType="png"
-                                    imageMaxRes={3}
-                                    twitter="https://twitter.com/KnutsonRussell"
-                                    linkedin="https://www.linkedin.com/in/jack-knutson-jr"
-                                    github="https://github.com/drknudy"
-                                    keybase="http://keybase.io/drknudy" />
-                            </Col>
-                        </Row>
-                        <Row>
-                            <Col sm={12} md={3}>
-                                <Profile
-                                    name="Lex Sheehan"
-                                    title="Developer"
-                                    imagePath="/images/headshots/lexSheehan"
-                                    imageType="jpg"
-                                    imageMaxRes={3}
-                                    twitter="https://twitter.com/lex_sheehan?lang=en"
-                                    linkedin="https://www.linkedin.com/in/lexsheehan/"
-                                    github="https://github.com/l3x"
-                                    keybase="https://keybase.io/l3x" />
                             </Col>
                             <Col sm={12} md={3}>
                                 <Profile
@@ -348,6 +313,21 @@ class App extends Component {
                             </Col>
                             <Col sm={12} md={3}>
                                 <Profile
+                                    name="Lex Sheehan"
+                                    title="Developer"
+                                    imagePath="/images/headshots/lexSheehan"
+                                    imageType="jpg"
+                                    imageMaxRes={3}
+                                    twitter="https://twitter.com/lex_sheehan?lang=en"
+                                    linkedin="https://www.linkedin.com/in/lexsheehan/"
+                                    github="https://github.com/l3x"
+                                    keybase="https://keybase.io/l3x" />
+                            </Col>
+
+                        </Row>
+                        <Row>
+                            <Col sm={12} md={3}>
+                                <Profile
                                     name="Philip Schlump"
                                     title="Developer"
                                     imagePath="/images/headshots/philipSchlump"
@@ -356,6 +336,28 @@ class App extends Component {
                                     linkedin="https://www.linkedin.com/in/philip-schlump-73100429/"
                                     github="https://github.com/pschlump"
                                     keybase="https://keybase.io/pschlump" />
+                            </Col>
+                            <Col sm={12} md={3}>
+                                <Profile
+                                    name="Erin Ng"
+                                    title="Developer"
+                                    imagePath="/images/headshots/erin"
+                                    imageMaxRes={3}
+                                    linkedin="https://www.linkedin.com/in/erinng/"
+                                    github="https://github.com/ironng"
+                                    keybase="http://keybase.io/ironng" />
+                            </Col>
+                            <Col sm={12} md={3}>
+                                <Profile
+                                    name="Jack Knutson"
+                                    title="Community Manager"
+                                    imagePath="/images/headshots/jack"
+                                    imageType="png"
+                                    imageMaxRes={3}
+                                    twitter="https://twitter.com/KnutsonRussell"
+                                    linkedin="https://www.linkedin.com/in/jack-knutson-jr"
+                                    github="https://github.com/drknudy"
+                                    keybase="http://keybase.io/drknudy" />
                             </Col>
                             <Col sm={12} md={3}>
                                 <Profile

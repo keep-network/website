@@ -528,6 +528,9 @@ class App extends Component {
                                 <a href="https://www.reddit.com/r/KeepNetwork/" target="_blank">
                                     <Icons.Reddit/>
                                 </a>
+                                <a href="https://t.me/KeepNetworkOfficial/" target="_blank">
+                                    <Icons.Telegram/>
+                                </a>
                             </div>
                         </Grid>
                     </footer>

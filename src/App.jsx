@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
-import { Button, Col, Grid, Nav, Navbar, NavbarBrand, NavItem, Row } from 'react-bootstrap'
+import { Alert, Button, Col, Grid, Nav, Navbar, NavbarBrand, NavItem, Row } from 'react-bootstrap'
 import { Link } from 'react-scroll'
 import { Picture } from 'react-responsive-picture'
+import moment from 'moment'
+import classNames from 'classnames'
 
 import EmailForm from './EmailForm'
 import PageSection from './PageSection'
@@ -16,6 +18,9 @@ import { actionTypes } from './redux'
 import './app.css'
 
 class App extends Component {
+    state = {
+        alertMessage: `Keep Alert: As of ${ moment().format('L') }, we have not announced any token sale or air drop of any kind.`
+    }
 
     render() {
         const sections = {
@@ -45,9 +50,10 @@ class App extends Component {
         const WHITEPAPER_URL = 'https://keep.network/whitepaper'
 
         const { signupSlack, signupMailingList, ajaxRequestStates } = this.props
+        const { alertMessage } = this.state
 
         return (
-            <div className="App">
+            <div className={classNames('App', {' has-alert': !!alertMessage })}>
                 <Navbar fixedTop>
                     <Navbar.Header>
                         <NavbarBrand>
@@ -535,6 +541,9 @@ class App extends Component {
                         </Grid>
                     </footer>
                 </div>
+                { alertMessage && <Alert bsStyle="info">
+                        <p>{ alertMessage }</p>
+                    </Alert> }
             </div>
         )
     }

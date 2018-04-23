@@ -7,6 +7,7 @@
 @import 'timeline';
 @import 'profile';
 @import 'page-section';
+@import 'alerts';
 
 body {
     background-color: @background-med-dark-color;
@@ -24,6 +25,19 @@ body {
     padding-top: 51px;
     @media @tablet-up {
         padding-top: 0;
+    }
+
+    .has-alert & {
+        padding-top: 146px;
+
+        @media only screen and (min-width: 409px) {
+            padding-top: 117px;
+        }
+
+        @media @tablet-up {
+            padding-top: 48px;
+        }
+
     }
 
     .slack-signup {

@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import { Alert, Button, Col, Grid, Nav, Navbar, NavbarBrand, NavItem, Row } from 'react-bootstrap'
 import { Link } from 'react-scroll'
 import { Picture } from 'react-responsive-picture'
-import moment from 'moment'
 import classNames from 'classnames'
 
 import EmailForm from './EmailForm'
@@ -19,7 +18,7 @@ import './app.css'
 
 class App extends Component {
     state = {
-        alertMessage: `Keep Alert: As of ${ moment().format('L') }, we have not announced any token sale or air drop of any kind.`
+        alertMessage: `Keep Alert: As of ${ new Date().toLocaleDateString() }, we have not announced any token sale or air drop of any kind.`
     }
 
     render() {

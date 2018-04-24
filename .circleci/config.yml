@@ -62,7 +62,7 @@ jobs:
           name: Build and push docker image
           command: |
             docker build --rm=false -t "keepnetwork/website:$CIRCLE_BUILD_NUM" .
-            docker login -e "$DOCKER_EMAIL" -u "$DOCKER_USER" -p "$DOCKER_PASS"
+            docker login -u "$DOCKER_USER" -p "$DOCKER_PASS"
             docker push "keepnetwork/website:$CIRCLE_BUILD_NUM"
 
 

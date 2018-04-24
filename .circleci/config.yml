@@ -1,0 +1,75 @@
+version: 2
+jobs:
+  test-job:
+    docker:
+      - image: circleci/node:8
+
+    working_directory: ~/repo
+
+    steps:
+      - checkout
+
+      - restore_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+
+      - run:
+          name: Install less compiler
+          command: sudo npm install less@3.0.1 -g
+
+      - run:
+          name: Install node dependencies
+          command: npm install
+
+      - save_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+          paths:
+            - ./node_modules
+
+      - run:
+          name: Run frontend tests
+          command: npm run build-css && npm test
+
+  build:
+    docker:
+      - image: circleci/node:8
+
+    working_directory: ~/repo
+
+    steps:
+      - checkout
+
+      - restore_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+
+      - run:
+          name: Install node dependencies
+          command: npm install
+
+      - save_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+          paths:
+            - ./node_modules
+
+      - run:
+          name: Build app
+          command: |
+            npm run build
+
+      - setup_remote_docker:
+          docker_layer_caching: true
+
+      - run:
+          name: Build and push docker image
+          command: |
+            docker build --rm=false -t "keepnetwork/website:$CIRCLE_BUILD_NUM" .
+            docker login -e "$DOCKER_EMAIL" -u "$DOCKER_USER" -p "$DOCKER_PASS"
+            docker push "keepnetwork/website:$CIRCLE_BUILD_NUM"
+
+
+workflows:
+  version: 2
+  build-deploy:
+    jobs:
+      - test-job
+      - build
+    # TODO deploy!

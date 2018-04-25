@@ -1,0 +1,21 @@
+.alert {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1050;
+    width: 100%;
+    text-align: center;
+    border-radius: 0;
+    border: 0;
+    background-color: @error-color;
+    color: @white;
+    padding: 8px;
+
+    @media only screen and (min-width: 366px) and (max-width: 378px) {
+        padding: 8px 15px;
+    }
+
+    @media only screen and (min-width: 709px) and (max-width: 757px) {
+        padding: 8px 30px;
+    }
+}

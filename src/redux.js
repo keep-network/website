@@ -86,7 +86,7 @@ export const getReducers = function () {
 const API_URL = 'https://backend.keep.network'
 
 const stripQuery = () => {
-    history.pushState(null, '', location.href.split('?')[0])
+    window.history.pushState(null, '', window.location.href.split('?')[0])
 }
 
 export const getSessionCreatedFromState = (state) => state.sessionCreated
@@ -103,7 +103,7 @@ function* waitFor(selector, expectedValue) {
 function* createSession(action) {
     try {
         const req = request.post(`${API_URL}/session`)
-            .send({ url: location.href, referrer: document.referrer })
+            .send({ url: window.location.href, referrer: document.referrer })
 
         let response = yield req
         yield put({ type: actionTypes.CREATE_SESSION_SUCCESS, response })

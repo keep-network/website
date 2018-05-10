@@ -5,11 +5,7 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "glamor": "^2.20.40",
-    "less": "^2.7.2",
-    "less-plugin-clean-css": "^1.5.1",
-    "less-watch-compiler": "^1.7.0",
     "lodash": "^4.17.4",
-    "npm-run-all": "^4.1.1",
     "pascal-case": "^2.0.1",
     "prismjs": "^1.7.0",
     "prop-types": "^15.5.10",
@@ -19,7 +15,6 @@
     "react-prism": "^4.3.0",
     "react-redux": "^5.0.6",
     "react-responsive-picture": "^2.0.0",
-    "react-scripts": "0.9.5",
     "react-scroll": "^1.5.4",
     "redux": "^3.7.2",
     "redux-devtools-extension": "^2.13.2",
@@ -27,7 +22,15 @@
     "superagent": "^3.6.0",
     "validator": "^8.2.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "ajv": "^6.5.0",
+    "less": "^3.0.4",
+    "less-plugin-clean-css": "^1.5.1",
+    "less-watch-compiler": "^1.11.3",
+    "npm-run-all": "^4.1.1",
+    "react-scripts": "1.1.4",
+    "webpack": "^3.8.1"
+  },
   "scripts": {
     "build-css": "lessc --clean-css src/css/app.less src/app.css",
     "watch-css": "npm run build-css && less-watch-compiler src/css src app.less",

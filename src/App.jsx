@@ -64,11 +64,13 @@ class App extends Component {
                         <Nav pullRight>
                             <NavItem
                                 href={WHITEPAPER_URL}
+                                rel="noopener noreferrer"
                                 target="_blank">Whitepaper</NavItem>
                             <NavScrollItem to={sections.TEAM}>Team</NavScrollItem>
                             <NavScrollItem to={sections.ADVISORS}>Advisors</NavScrollItem>
                             <NavItem
                                 href="https://blog.keep.network"
+                                rel="noopener noreferrer"
                                 target="_blank">Blog</NavItem>
                         </Nav>
                     </Navbar.Collapse>
@@ -124,6 +126,7 @@ class App extends Component {
                                 <Button
                                     href={WHITEPAPER_URL}
                                     download="Keep Whitepaper"
+                                    rel="noopener noreferrer"
                                     target="_blank"
                                     bsSize="large">
                                     download
@@ -141,6 +144,7 @@ class App extends Component {
                                     href="https://github.com/keep-network"
                                     bsStyle="primary"
                                     bsSize="large"
+                                    rel="noopener noreferrer"
                                     target="_blank">
                                     open
                                 </Button>
@@ -153,6 +157,7 @@ class App extends Component {
                                     href="/KeepBusinessPrimer.pdf"
                                     bsStyle="primary"
                                     download="Keep Business Primer"
+                                    rel="noopener noreferrer"
                                     target="_blank"
                                     bsSize="large">
                                     download
@@ -208,6 +213,7 @@ class App extends Component {
                                     bsStyle="primary"
                                     href={WHITEPAPER_URL}
                                     download="Keep Whitepaper"
+                                    rel="noopener noreferrer"
                                     target="_blank"
                                     bsSize="large">
                                     download
@@ -477,12 +483,12 @@ class App extends Component {
                         <h2>Our Partners</h2>
                         <Row>
                             <Col sm={12} md={4} mdPush={1}>
-                                <a href="https://lendroid.com/" target="_blank">
+                                <a href="https://lendroid.com/" rel="noopener noreferrer" target="_blank">
                                     <Picture src={getSrc('/images/logos/lendroidLogo', 'jpg', 3)} />
                                 </a>
                             </Col>
                             <Col sm={12} md={4} mdPush={3}>
-                                <a href="https://district0x.io/" target="_blank">
+                                <a href="https://district0x.io/" rel="noopener noreferrer" target="_blank">
                                     <Picture src={getSrc('/images/logos/district0x_logo', 'png', 3)} />
                                 </a>
                             </Col>
@@ -507,17 +513,17 @@ class App extends Component {
                         <h2>Our Supporters</h2>
                         <Row>
                             <Col sm={12} md={4}>
-                                <a href="http://polychain.capital/" target="_blank">
+                                <a href="http://polychain.capital/" rel="noopener noreferrer" target="_blank">
                                     <Picture src={getSrc('/images/logos/polychainLogo', 'png', 3)} />
                                 </a>
                             </Col>
                             <Col sm={12} md={4}>
-                                <a href="http://www.dhvc.com/" target="_blank">
+                                <a href="http://www.dhvc.com/" rel="noopener noreferrer" target="_blank">
                                     <Picture src={getSrc('/images/logos/DHVCLogo', 'png', 3)} />
                                 </a>
                             </Col>
                             <Col sm={12} md={4}>
-                                <a href="https://www.distributedcapital.io/" target="_blank">
+                                <a href="https://www.distributedcapital.io/" rel="noopener noreferrer" target="_blank">
                                     <Picture src={getSrc('/images/logos/distributedCapPartnersLogo', 'png', 3)} />
                                 </a>
                             </Col>
@@ -527,13 +533,13 @@ class App extends Component {
                         <Grid>
                             <span>&#169; 2018 Keep. All Rights Reserved.</span>
                             <div className="social-footer">
-                                <a href="https://twitter.com/keep_project" target="_blank">
+                                <a href="https://twitter.com/keep_project" rel="noopener noreferrer" target="_blank">
                                     <Icons.Twitter color="#91ABA5" />
                                 </a>
-                                <a href="https://www.reddit.com/r/KeepNetwork/" target="_blank">
+                                <a href="https://www.reddit.com/r/KeepNetwork/" rel="noopener noreferrer" target="_blank">
                                     <Icons.Reddit/>
                                 </a>
-                                <a href="https://t.me/KeepNetworkOfficial/" target="_blank">
+                                <a href="https://t.me/KeepNetworkOfficial/" rel="noopener noreferrer" target="_blank">
                                     <Icons.Telegram/>
                                 </a>
                             </div>

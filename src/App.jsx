@@ -409,7 +409,7 @@ class App extends Component {
                             <Col sm={12} md={3}>
                                 <Profile
                                     name="Hope Cowan"
-                                    title="Support"
+                                    title="Content Manager"
                                     imagePath="/images/headshots/hope_cowen"
                                     imageType="png"
                                     imageMaxRes={3}

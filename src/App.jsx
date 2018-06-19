@@ -402,6 +402,7 @@ class App extends Component {
                                     imageType="png"
                                     imageMaxRes={3}
                                     twitter="https://twitter.com/elizapetrovska"
+                                    linkedin="https://www.linkedin.com/in/elizapetrovska/"
                                     github="https://github.com/elizapetrovska"
                                     keybase="http://keybase.io/elizapetrovska" />
                             </Col>

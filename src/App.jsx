@@ -350,6 +350,28 @@ class App extends Component {
                             </Col>
                             <Col sm={12} md={3}>
                                 <Profile
+                                    name="Piotr Dyraga"
+                                    title="Developer"
+                                    imagePath="/images/headshots/piotr"
+                                    imageMaxRes={3}
+                                    imageType="jpg"
+                                    twitter="https://twitter.com/piotrdyraga?lang=en"
+                                    linkedin="https://www.linkedin.com/in/piotrdyraga/"
+                                    github="https://github.com/pdyraga" />
+                            </Col>
+                            <Col sm={12} md={3}>
+                                <Profile
+                                    name="Jakub Nowakowski"
+                                    title="Developer"
+                                    imagePath="/images/headshots/jakub"
+                                    imageMaxRes={3}
+                                    imageType="jpg"
+                                    twitter="https://twitter.com/jnowakow8"
+                                    linkedin="https://www.linkedin.com/in/jnowakowski8/"
+                                    github="https://github.com/nkuba" />
+                            </Col>
+                            <Col sm={12} md={3}>
+                                <Profile
                                     name="Erin Ng"
                                     title="Developer"
                                     imagePath="/images/headshots/erin"
@@ -358,6 +380,8 @@ class App extends Component {
                                     github="https://github.com/ironng"
                                     keybase="http://keybase.io/ironng" />
                             </Col>
+                        </Row>
+                        <Row>
                             <Col sm={12} md={3}>
                                 <Profile
                                     name="Jack Knutson"
@@ -381,8 +405,6 @@ class App extends Component {
                                     github="https://github.com/elizapetrovska"
                                     keybase="http://keybase.io/elizapetrovska" />
                             </Col>
-                        </Row>
-                        <Row>
                             <Col sm={12} md={3}>
                                 <Profile
                                     name="Hope Cowan"

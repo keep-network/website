@@ -551,6 +551,18 @@ class App extends Component {
                                 </a>
                             </Col>
                         </Row>
+                        <Row>
+                            <Col sm={12} md={4} mdPush={2}>
+                                <a href="https://a16z.com/" rel="noopener noreferrer" target="_blank">
+                                    <Picture src={getSrc('/images/logos/andreessenHorowitzLogo', 'png', 3)} />
+                                </a>
+                            </Col>
+                            <Col sm={12} md={4} mdPush={2}>
+                                <a href="http://www.draper.vc/" rel="noopener noreferrer" target="_blank">
+                                    <Picture src={getSrc('/images/logos/draperAssociatesLogo', 'png', 3)} />
+                                </a>
+                            </Col>
+                        </Row>
                     </PageSection>
                     <footer>
                         <Grid>

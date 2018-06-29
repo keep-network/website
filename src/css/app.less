@@ -356,9 +356,21 @@ body {
 }
 
 .supporters {
+    @media @tablet-up {
+        .row {
+            margin-bottom: 75px;
+        }
+    }
+
     @media @mobile {
         .container {
             padding: 0 0 50px;
+        }
+
+        .row {
+            > * {
+                margin-bottom: 20px;
+            }
         }
     }
 }

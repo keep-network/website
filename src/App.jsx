@@ -541,11 +541,24 @@ class App extends Component {
                                 </a>
                             </Col>
                             <Col sm={12} md={4}>
+
+                                <a href="https://a16z.com/" rel="noopener noreferrer" target="_blank">
+                                    <Picture src={getSrc('/images/logos/andreessenHorowitzLogo', 'png', 3)} />
+                                </a>
+                            </Col>
+                            <Col sm={12} md={4}>
                                 <a href="http://www.dhvc.com/" rel="noopener noreferrer" target="_blank">
                                     <Picture src={getSrc('/images/logos/DHVCLogo', 'png', 3)} />
                                 </a>
                             </Col>
-                            <Col sm={12} md={4}>
+                        </Row>
+                        <Row>
+                            <Col sm={12} md={4} mdPush={2}>
+                                <a href="http://www.draper.vc/" rel="noopener noreferrer" target="_blank">
+                                    <Picture src={getSrc('/images/logos/draperAssociatesLogo', 'png', 3)} />
+                                </a>
+                            </Col>
+                            <Col sm={12} md={4} mdPush={2}>
                                 <a href="https://www.distributedcapital.io/" rel="noopener noreferrer" target="_blank">
                                     <Picture src={getSrc('/images/logos/distributedCapPartnersLogo', 'png', 3)} />
                                 </a>

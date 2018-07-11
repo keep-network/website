@@ -231,12 +231,8 @@ class App extends Component {
                                 <TimelinePoint label="Public Announcement" date={() => '9/26/17'}/>
                             </Col>
                             <Col sm={12} md={4}>
-                                <TimelinePoint label="Public Sale"
-                                    date={() => <span>
-                                        <span>Q2 2018</span>
-                                        <br/>
-                                        <strong>Not Yet Announced</strong>
-                                    </span>}/>
+                                <TimelinePoint label="Public Distribution"
+                                    date={() => 'More Info in Q3 2018'}/>
                             </Col>
                             <Col sm={12} md={4}>
                                 <TimelinePoint label="Network Launch" date={() => '2018'}/>

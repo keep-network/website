@@ -554,6 +554,21 @@ class App extends Component {
                             </Col>
                         </Row>
                     </PageSection>
+                    <PageSection id={sections.LUIS_QUOTE} additionalClassNames={['quote']}>
+                        <Row className="left">
+                            <Col sm={12} md={9} mdPush={3} className="quote-text">
+                                <p>
+                                    &#8220;One of the use cases we have on the roadmap for Aragon is having shared encrypted data vaults for DAOs — and I’d totally see Keep being a key part of it.&#8221;
+                                    <span>-Luis Cuende, Aragon</span>
+                                </p>
+                            </Col>
+                            <Col sm={12} md={3} mdPull={9}>
+                                <Avatar
+                                    imagePath="/images/headshots/luisCuende"
+                                    imageMaxRes={3} />
+                            </Col>
+                        </Row>
+                    </PageSection>
                     <BlogContentSection/>
                     <footer>
                         <Grid>

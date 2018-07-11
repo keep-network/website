@@ -277,7 +277,7 @@ body {
 
 .supporters {
     .arc-top(@background-light-color, 300px);
-    .arc-bottom(@background-dark-color, 300px);
+    .arc-bottom(@background-light-color, 300px);
 }
 
 .quote {
@@ -376,6 +376,9 @@ body {
 }
 
 .our-content {
+    .arc-top(@background-light-color, 300px);
+    .arc-bottom(@background-dark-color, 300px);
+
     .blog-item {
         text-align: left;
         margin-bottom: 50px;
@@ -394,6 +397,11 @@ body {
             (max-width: 600px) {
                 width: 100% !important;
             }
+        }
+
+        h4 {
+            max-width: 600px;
+            margin: 10px auto;
         }
 
         a {

@@ -313,6 +313,10 @@ body {
         p {
             font-size: 24px;
         }
+
+        &.joe-urgo-quote {
+            padding: 0 0 130px;
+        }
     }
 
     @media @sm {
@@ -414,6 +418,18 @@ body {
             &.blog-title {
                 color: @body-text-color;
             }
+        }
+    }
+}
+
+.hiring {
+    @media @mobile {
+        .bg-ellipse:after {
+            display: none;
+        }
+
+        &:after {
+            height: 300px;
         }
     }
 }

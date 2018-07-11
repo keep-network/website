@@ -38,7 +38,8 @@ class App extends Component {
             VIGNESH_QUOTE: 'vignesh-quote',
             SUPPORTERS: 'supporters',
             LUIS_QUOTE: 'luis-quote',
-            JOE_QUOTE: 'joe-urgo-quote'
+            JOE_QUOTE: 'joe-urgo-quote',
+            HIRING: 'hiring'
         }
 
 //         const snippetCode = `$ curl https://api.keep.network/v1/btc/main/addrs/1Puw/Q6uWXNeGcEnLCAXmRJozdLZ9M4NWQ7
@@ -584,6 +585,14 @@ class App extends Component {
                                 <Avatar
                                     imagePath="/images/headshots/josephUrgo"
                                     imageMaxRes={3} />
+                            </Col>
+                        </Row>
+                    </PageSection>
+                    <PageSection id={sections.HIRING} convex>
+                        <h2>We're Hiring!</h2>
+                        <Row>
+                            <Col sm={12} md={12}>
+                                <p>Please email us at <a href="mailto:work@keep.network">work@keep.network</a> if you're interested in joining the Keep team.</p>
                             </Col>
                         </Row>
                     </PageSection>

@@ -36,7 +36,9 @@ class App extends Component {
             JAMES_QUOTE: 'james-quote',
             PARTNERS: 'partners',
             VIGNESH_QUOTE: 'vignesh-quote',
-            SUPPORTERS: 'supporters'
+            SUPPORTERS: 'supporters',
+            LUIS_QUOTE: 'luis-quote',
+            JOE_QUOTE: 'joe-urgo-quote'
         }
 
 //         const snippetCode = `$ curl https://api.keep.network/v1/btc/main/addrs/1Puw/Q6uWXNeGcEnLCAXmRJozdLZ9M4NWQ7
@@ -570,6 +572,21 @@ class App extends Component {
                         </Row>
                     </PageSection>
                     <BlogContentSection/>
+                    <PageSection id={sections.JOE_QUOTE} additionalClassNames={['quote']}>
+                        <Row className="right">
+                            <Col sm={12} md={9} className="quote-text">
+                                <p>
+                                    &#8220;At district0x, we aim to allow anyone to create their own markets and begin selling goods within a matter of minutes. Keep provides a perfect solution for creators looking to sell music, images, and other types of digital art. We also envision members of districts leveraging Keep to privately share data necessary to effectively govern their district.&#8221;
+                                    <span>-District0x Founder, Joe Urgo</span>
+                                </p>
+                            </Col>
+                            <Col sm={12} md={3}>
+                                <Avatar
+                                    imagePath="/images/headshots/josephUrgo"
+                                    imageMaxRes={3} />
+                            </Col>
+                        </Row>
+                    </PageSection>
                     <footer>
                         <Grid>
                             <span>&#169; 2018 Keep. All Rights Reserved.</span>

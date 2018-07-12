@@ -10,7 +10,6 @@ import NavScrollItem from './NavScrollItem'
 // import Snippet from './Snippet'
 import * as Icons from './Icons'
 import { Avatar, Profile } from './Profile'
-import TimelinePoint from './TimelinePoint'
 import BlogContentSection from './BlogContentSection'
 import { getSrc } from './utils'
 import { actionTypes } from './redux'
@@ -222,20 +221,6 @@ class App extends Component {
                                     bsSize="large">
                                     download
                                 </Button>
-                            </Col>
-                        </Row>
-                    </PageSection>
-                    <PageSection id={sections.TIMELINE}>
-                        <Row>
-                            <Col sm={12} md={4}>
-                                <TimelinePoint label="Public Announcement" date={() => '9/26/17'}/>
-                            </Col>
-                            <Col sm={12} md={4}>
-                                <TimelinePoint label="Public Distribution"
-                                    date={() => 'More Info in Q3 2018'}/>
-                            </Col>
-                            <Col sm={12} md={4}>
-                                <TimelinePoint label="Network Launch" date={() => '2018'}/>
                             </Col>
                         </Row>
                     </PageSection>

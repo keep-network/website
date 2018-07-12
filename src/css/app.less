@@ -361,6 +361,24 @@ body {
     }
 }
 
+// Adjust ellipses border for removing timeline section
+.uses {
+    @media @mobile {
+        &:after {
+            bottom: 25px;
+        }
+    }
+}
+
+.team {
+    @media @mobile {
+        .bg-ellipse:after {
+            top: 25px;
+        }
+    }
+}
+// end adjustment
+
 .supporters {
     @media @tablet-up {
         .row {

@@ -1,26 +1,14 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { Col, Row } from 'react-bootstrap'
-import request from 'superagent'
 import moment from 'moment'
 import smartcrop from 'smartcrop'
 
 import PageSection from './PageSection'
 
 
-const getImgSrc = (str) => {
-    const start = str.indexOf('src="') + 5
-    const end = str.substring(start).indexOf('"') + start
-    return str.substring(start, end)
-}
-
 const formatDate = (dateString) => {
     return moment(dateString, 'YYYY-MM-DD HH:mm:ss').format('MM/DD/YYYY')
-}
-
-const htmlDecode = (input) => {
-    const doc = new DOMParser().parseFromString(input, 'text/html')
-    return doc.documentElement.textContent
 }
 
 const CANVAS_WIDTH = 600
@@ -76,26 +64,26 @@ class BlogContentSection extends Component {
         super(props)
 
         this.state = {
-            blogItems: []
+            blogItems: [{
+                link: 'https://blog.keep.network/junedapphack-3f031be766e5',
+                img: '/images/blog/dapp-hack.png',
+                title: 'Hacking away this summer: DappHack 2018',
+                author: 'Eliza Petrovska',
+                pubDate: '2018-07-11 17:07:31'
+            }, {
+                link: 'https://blog.keep.network/introducing-our-new-team-members-e27c72aefac8',
+                img: '/images/blog/new-team-members.png',
+                title: 'Introducing Our New Team Members',
+                author: 'Hope Cowan',
+                pubDate: '2018-06-18 16:23:47'
+            }, {
+                link: 'https://blog.keep.network/keep-roundup-april-27th-2018-e369443f1676',
+                img: '/images/blog/keep-weekly-roundup.png',
+                title: 'Keep Roundup - April 27th, 2018',
+                author: 'Jack Knutson',
+                pubDate: '2018-04-27 19:01:01'
+            }]
         }
-    }
-
-    componentDidMount() {
-        request
-            .get('https://api.rss2json.com/v1/api.json')
-            .query({ rss_url: 'https://blog.keep.network/feed' })
-            .then((res) => {
-                let items = res.body.items
-
-                if (items.length) {
-                    this.setState({
-                        blogItems: items.length > 3 ? items.slice(0, 3) : items
-                    })
-                }
-            })
-            .catch((err) => {
-                console.error(err)
-            })
     }
 
     render() {
@@ -108,13 +96,12 @@ class BlogContentSection extends Component {
                 blogItems.map((item, i) => <Col sm={12} md={4}
                     key={`blog-item-${i}`} className="blog-item">
                     <a href={item.link} className="image-link">
-                        <ImageCrop
-                            src={getImgSrc(item.description)}/>
+                        <img src={item.img} alt={item.title} />
                     </a>
                     <h4>
                         <a href={item.link}>
                             <span className="blog-title">
-                                { htmlDecode(item.title) }
+                                { item.title }
                             </span>
                             <span className="blog-author">
                                 by { item.author }

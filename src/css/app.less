@@ -270,12 +270,14 @@ body {
 
 .team,
 .advisors,
-.partners {
+.partners,
+.supporters,
+.our-content {
     .arc-top(@background-light-color, 300px);
     .arc-bottom(@background-light-color, 300px);
 }
 
-.supporters {
+.hiring {
     .arc-top(@background-light-color, 300px);
     .arc-bottom(@background-dark-color, 300px);
 }
@@ -310,6 +312,10 @@ body {
 
         p {
             font-size: 24px;
+        }
+
+        &.joe-urgo-quote {
+            padding: 0 0 130px;
         }
     }
 
@@ -355,6 +361,24 @@ body {
     }
 }
 
+// Adjust ellipses border for removing timeline section
+.uses {
+    @media @mobile {
+        &:after {
+            bottom: 25px;
+        }
+    }
+}
+
+.team {
+    @media @mobile {
+        .bg-ellipse:after {
+            top: 25px;
+        }
+    }
+}
+// end adjustment
+
 .supporters {
     @media @tablet-up {
         .row {
@@ -371,6 +395,60 @@ body {
             > * {
                 margin-bottom: 20px;
             }
+        }
+    }
+}
+
+.our-content {
+    .blog-item {
+        text-align: left;
+        margin-bottom: 50px;
+
+        .image-link {
+            display: flex;
+            min-height: 250px;
+            align-items: center;
+        }
+
+        canvas,
+        img {
+            margin: 0 auto;
+            border-radius: 8px;
+
+            @media @md-up,
+            (max-width: 600px) {
+                width: 100% !important;
+            }
+        }
+
+        h4 {
+            max-width: 600px;
+            margin: 10px auto;
+        }
+
+        a {
+            color: #999;
+            text-decoration: none;
+        }
+
+        span {
+            display: block;
+
+            &.blog-title {
+                color: @body-text-color;
+            }
+        }
+    }
+}
+
+.hiring {
+    @media @mobile {
+        .bg-ellipse:after {
+            display: none;
+        }
+
+        &:after {
+            height: 300px;
         }
     }
 }

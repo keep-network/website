@@ -10,7 +10,7 @@ import NavScrollItem from './NavScrollItem'
 // import Snippet from './Snippet'
 import * as Icons from './Icons'
 import { Avatar, Profile } from './Profile'
-import TimelinePoint from './TimelinePoint'
+import BlogContentSection from './BlogContentSection'
 import { getSrc } from './utils'
 import { actionTypes } from './redux'
 
@@ -35,7 +35,10 @@ class App extends Component {
             JAMES_QUOTE: 'james-quote',
             PARTNERS: 'partners',
             VIGNESH_QUOTE: 'vignesh-quote',
-            SUPPORTERS: 'supporters'
+            SUPPORTERS: 'supporters',
+            LUIS_QUOTE: 'luis-quote',
+            JOE_QUOTE: 'joe-urgo-quote',
+            HIRING: 'hiring'
         }
 
 //         const snippetCode = `$ curl https://api.keep.network/v1/btc/main/addrs/1Puw/Q6uWXNeGcEnLCAXmRJozdLZ9M4NWQ7
@@ -218,24 +221,6 @@ class App extends Component {
                                     bsSize="large">
                                     download
                                 </Button>
-                            </Col>
-                        </Row>
-                    </PageSection>
-                    <PageSection id={sections.TIMELINE}>
-                        <Row>
-                            <Col sm={12} md={4}>
-                                <TimelinePoint label="Public Announcement" date={() => '9/26/17'}/>
-                            </Col>
-                            <Col sm={12} md={4}>
-                                <TimelinePoint label="Public Sale"
-                                    date={() => <span>
-                                        <span>Q2 2018</span>
-                                        <br/>
-                                        <strong>Not Yet Announced</strong>
-                                    </span>}/>
-                            </Col>
-                            <Col sm={12} md={4}>
-                                <TimelinePoint label="Network Launch" date={() => '2018'}/>
                             </Col>
                         </Row>
                     </PageSection>
@@ -550,6 +535,45 @@ class App extends Component {
                                 <a href="https://www.distributedcapital.io/" rel="noopener noreferrer" target="_blank">
                                     <Picture src={getSrc('/images/logos/distributedCapPartnersLogo', 'png', 3)} />
                                 </a>
+                            </Col>
+                        </Row>
+                    </PageSection>
+                    <PageSection id={sections.LUIS_QUOTE} additionalClassNames={['quote']}>
+                        <Row className="left">
+                            <Col sm={12} md={9} mdPush={3} className="quote-text">
+                                <p>
+                                    &#8220;One of the use cases we have on the roadmap for Aragon is having shared encrypted data vaults for DAOs — and I’d totally see Keep being a key part of it.&#8221;
+                                    <span>-Luis Cuende, Aragon</span>
+                                </p>
+                            </Col>
+                            <Col sm={12} md={3} mdPull={9}>
+                                <Avatar
+                                    imagePath="/images/headshots/luisCuende"
+                                    imageMaxRes={3} />
+                            </Col>
+                        </Row>
+                    </PageSection>
+                    <BlogContentSection/>
+                    <PageSection id={sections.JOE_QUOTE} additionalClassNames={['quote']}>
+                        <Row className="right">
+                            <Col sm={12} md={9} className="quote-text">
+                                <p>
+                                    &#8220;At district0x, we aim to allow anyone to create their own markets and begin selling goods within a matter of minutes. Keep provides a perfect solution for creators looking to sell music, images, and other types of digital art. We also envision members of districts leveraging Keep to privately share data necessary to effectively govern their district.&#8221;
+                                    <span>-District0x Founder, Joe Urgo</span>
+                                </p>
+                            </Col>
+                            <Col sm={12} md={3}>
+                                <Avatar
+                                    imagePath="/images/headshots/josephUrgo"
+                                    imageMaxRes={3} />
+                            </Col>
+                        </Row>
+                    </PageSection>
+                    <PageSection id={sections.HIRING} convex>
+                        <h2>We're Hiring!</h2>
+                        <Row>
+                            <Col sm={12} md={12}>
+                                <p>Please email us at <a href="mailto:work@keep.network">work@keep.network</a> if you're interested in joining the Keep team.</p>
                             </Col>
                         </Row>
                     </PageSection>

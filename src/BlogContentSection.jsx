@@ -78,7 +78,7 @@ class BlogContentSection extends Component {
                 pubDate: '2018-09-20T16:36:19.114Z'
             }, {
                 link: 'https://blog.keep.network/building-a-beacon-the-road-to-mainnet-6e1904f0c986',
-                img: 'https://cdn-images-1.medium.com/max/2000/1*ZOWjx1zqvBPXdHNHtju5vw.jpeg',
+                img: 'images/blog/mainnet.jpeg',
                 title: 'Building a Beacon: The Road to Mainnet',
                 author: 'Antonio Salazar Cardozo',
                 pubDate: '2018-09-11T14:20:25.662Z'

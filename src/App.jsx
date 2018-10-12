@@ -95,15 +95,6 @@ class App extends Component {
                                     label="Slack Email"
                                     btnText="join"
                                     onSubmit={signupSlack}
-                                    successMessage="Thanks, you've been added to the waitlist!"
-                                    resetOnSuccess={false}
-                                    onSuccess={() => {
-                                        window.sessionStorage &&
-                                            window.sessionStorage.setItem('isSlackWaitlisted', true)
-                                    }}
-                                    showSuccessMessage={
-                                        window.sessionStorage &&
-                                            window.sessionStorage.getItem('isSlackWaitlisted') === 'true'}
                                     requestStates={ajaxRequestStates}
                                     request={actionTypes.SIGNUP_SLACK} />
                             </Col>

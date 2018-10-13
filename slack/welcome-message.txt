@@ -1,0 +1,52 @@
+We're thrilled to welcome you to the Keep :keep: community! 
+
+*Here's a quick overview of the available channels:*
+<#C6Q6AR1N3|announcements> - Official announcements by Keep team members.
+<#C6Z9Q82DB|github> - Discuss work on our open source projects.
+<#C776GK7L6|keep> - Discuss anything related to the Keep network.
+<#C6P5D4C5S|random> - Anything not related to the Keep network. 
+<#C6Z9GUQSH|technical> - Discuss the underlying technology and concepts of Keep
+<#C76JFAF0V|welcome> - Introduce yourself to the community!
+
+Frequently Asked Questions: https://www.reddit.com/r/KeepNetwork/comments/9en4br/keep_network_frequently_asked_questions_faq/
+
+*Keep Team members are:*
+* _Matt Luongo_ (Project Lead) - <@U6Q6AQZ5M>
+* _Corbin Pon_ (Developer & Ops) - <@U6Z9Y0E93>
+* _Antonio Salazar Cardozo_ (Tech Lead) - <@U7L4NCLCW>
+* _Laura Wallendal_ (Growth) - <@U6YKKC3MF>
+* _Prashanth Irudayaraj_ (Ops & Research) - <@U7GNCA2DD>
+* _Erin Ng_ (Developer) - <@U7H04GPBL>
+* _Nik Grinkevich_ (Developer) - <@U73G5RRV3>
+* _Philip Schlump_ (Developer) - <@U8UQWH1F1> 
+* _Piotr Dyraga_ (Developer) - <@UAGC1JHKJ> 
+* _Raghav Gulati_ (Developer) - <@U8PGG5ADV>
+* _Jakub "Kuba" Nowakowski_ (Developer) - <@UBAQS4CSJ> 
+* _Promethea Raschke_ (Protocol Developer) - <@U8D66U3U6>
+* _Jack Knutson_ (Community Manager) - <@U7HT271C6>
+* _Eliza Petrovska_ (Community Manager) - <@U8WCKN0P6>
+* _Hope Cowan_ (Content Manager) - <@U9ENDED37>
+
+You can invite your friends by sharing this link with them: https://keep-network.slack.com/
+
+*Some house rules for this community [strictly enforced - report if otherwise]:*
+1. FUDing / Shilling strictly prohibited. 
+2. Please report any suspicious activities (i.e. scams)
+3. Unwarranted/hostile behavior is unacceptable and such members will be removed. 
+5. Never post any ETH/BTC addresses. Violators will be flagged and banned. 
+4. Obvious promotion will be met with immediate ban.
+5. NO Referral links allowed.
+6. Team Flair :keep: is only for team members. Anyone trying to use :keep: will automatically have their account deactivated.
+7. Have fun and ask questions if you have them!
+
+*For more information and other social channels:*
+* _Site_ - https://keep.network/
+* _Blog_ - https://blog.keep.network/
+* _Reddit_ - https://www.reddit.com/r/KeepNetwork/ 
+* _Whitepaper_ - https://keep.network/whitepaper
+* _Twitter_ - https://twitter.com/keep_project
+* _Telegram_ - https://t.me/KeepNetworkOfficial
+
+*Note*: We will never message you for contributions or link information directly to the token sale on Slack. Consider all messages and attempts to be SCAMS and report any such behavior!
+
+~ *Keep Team*

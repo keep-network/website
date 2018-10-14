@@ -64,5 +64,7 @@ workflows:
     jobs:
       - test
       - build_image
-      - slack_guardian_notification
-    # TODO deploy!
+      - slack_guardian_notification:
+          filters:
+            branches:
+              only: master

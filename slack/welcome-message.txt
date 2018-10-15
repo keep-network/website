@@ -1,10 +1,10 @@
 We're thrilled to welcome you to the Keep :keep: community! 
 
 *Here's a quick overview of the available channels:*
-<#CD7NK42BV|keep_ru> - Channel for Keep's Russian-speaking community
 <#C6Q6AR1N3|announcements> - Official announcements by Keep team members.
 <#C6Z9Q82DB|github> - Discuss work on our open source projects.
 <#C776GK7L6|keep> - Discuss anything related to the Keep network.
+<#CD7NK42BV|keep_ru> - Channel for Keep's Russian-speaking community
 <#C6P5D4C5S|random> - Anything not related to the Keep network. 
 <#C6Z9GUQSH|technical> - Discuss the underlying technology and concepts of Keep
 <#C76JFAF0V|welcome> - Introduce yourself to the community!

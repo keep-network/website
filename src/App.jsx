@@ -407,7 +407,7 @@ class App extends Component {
                             <Col sm={12} md={4}>
                                 <Profile
                                     name="John Packel"
-                                    title="ConsenSys"
+                                    title="Hard Core Decentralization Developer"
                                     imagePath="/images/headshots/john"
                                     imageMaxRes={3}
                                     twitter="https://twitter.com/jpackel"

@@ -380,6 +380,17 @@ class App extends Component {
                                     linkedin="https://www.linkedin.com/in/hopecowan/"
                                     keybase="http://keybase.io/hecowan" />
                             </Col>
+                            <Col sm={12} md={3}>
+                                <Profile
+                                    name="Aaron O'Hearn"
+                                    title="Growth Operations"
+                                    imagePath="/images/headshots/aaron"
+                                    imageType="png"
+                                    imageMaxRes={1}
+                                    twitter="https://twitter.com/aaron0"
+                                    linkedin="https://www.linkedin.com/in/aaronohearn/"
+                                    keybase="https://keybase.io/aohearn" />
+                            </Col>
                         </Row>
                     </PageSection>
                     <PageSection id={sections.DESCRIPTION} additionalClassNames={['blurb']}>
@@ -407,7 +418,7 @@ class App extends Component {
                             <Col sm={12} md={4}>
                                 <Profile
                                     name="John Packel"
-                                    title="ConsenSys"
+                                    title="Hard Core Decentralization Developer"
                                     imagePath="/images/headshots/john"
                                     imageMaxRes={3}
                                     twitter="https://twitter.com/jpackel"

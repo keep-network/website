@@ -346,6 +346,28 @@ class App extends Component {
                             </Col>
                             <Col sm={12} md={3}>
                                 <Profile
+                                    name="Marcin Pawlowski"
+                                    title="Developer"
+                                    imagePath="/images/headshots/marcin"
+                                    imageMaxRes={3}
+                                    twitter="https://twitter.com/mpspp"
+                                    linkedin="https://www.linkedin.com/in/mpspp/"
+                                    github="https://github.com/madxor"
+                                    keybase="http://keybase.io/mpp" />
+                            </Col>
+                            <Col sm={12} md={3}>
+                                <Profile
+                                    name="Markus Fix"
+                                    title="Developer"
+                                    imagePath="/images/headshots/markus"
+                                    imageMaxRes={3}
+                                    twitter="https://twitter.com/lispmeister"
+                                    linkedin="https://www.linkedin.com/in/lispmeister/"
+                                    github="https://github.com/lispmeister"
+                                    keybase="http://keybase.io/lispmeister" />
+                            </Col>
+                            <Col sm={12} md={3}>
+                                <Profile
                                     name="Jack Knutson"
                                     title="Community Manager"
                                     imagePath="/images/headshots/jack"

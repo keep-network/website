@@ -349,6 +349,7 @@ class App extends Component {
                                     name="Marcin Pawlowski"
                                     title="Developer"
                                     imagePath="/images/headshots/marcin"
+                                    imageType="png"
                                     imageMaxRes={3}
                                     twitter="https://twitter.com/mpspp"
                                     linkedin="https://www.linkedin.com/in/mpspp/"
@@ -360,6 +361,7 @@ class App extends Component {
                                     name="Markus Fix"
                                     title="Developer"
                                     imagePath="/images/headshots/markus"
+                                    imageType="png"
                                     imageMaxRes={3}
                                     twitter="https://twitter.com/lispmeister"
                                     linkedin="https://www.linkedin.com/in/lispmeister/"

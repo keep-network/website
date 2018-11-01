@@ -356,6 +356,8 @@ class App extends Component {
                                     github="https://github.com/madxor"
                                     keybase="http://keybase.io/mpp" />
                             </Col>
+                        </Row>
+                        <Row>
                             <Col sm={12} md={3}>
                                 <Profile
                                     name="Markus Fix"
@@ -380,8 +382,6 @@ class App extends Component {
                                     github="https://github.com/drknudy"
                                     keybase="http://keybase.io/drknudy" />
                             </Col>
-                        </Row>
-                        <Row>
                             <Col sm={12} md={3}>
                                 <Profile
                                     name="Eliza Petrovska"
@@ -404,6 +404,8 @@ class App extends Component {
                                     linkedin="https://www.linkedin.com/in/hopecowan/"
                                     keybase="http://keybase.io/hecowan" />
                             </Col>
+                        </Row>
+                        <Row>
                             <Col sm={12} md={3}>
                                 <Profile
                                     name="Aaron O'Hearn"

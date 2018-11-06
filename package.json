@@ -32,8 +32,7 @@
     "less-plugin-clean-css": "^1.5.1",
     "less-watch-compiler": "^1.11.3",
     "npm-run-all": "^4.1.1",
-    "react-scripts": "1.1.4",
-    "webpack": "^3.8.1"
+    "react-scripts": "^2.1.1"
   },
   "scripts": {
     "build-css": "lessc --clean-css src/css/app.less src/app.css",
@@ -41,7 +40,13 @@
     "start-js": "react-scripts start",
     "start": "npm-run-all -p watch-css start-js",
     "build": "npm run build-css && react-scripts build",
-    "test": "react-scripts test --env=jsdom",
+    "test": "react-scripts test",
     "eject": "react-scripts eject"
-  }
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }

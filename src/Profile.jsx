@@ -40,13 +40,13 @@ export const Profile = ({
     <h4><span>{name}</span>{title && title}</h4>
     <div className="social-links">
         { twitter &&
-            <a href={twitter} target="_blank"><Twitter/></a>}
+            <a href={twitter} target="_blank" rel="noopener noreferrer"><Twitter/></a>}
         { linkedin &&
-            <a href={linkedin} target="_blank"><LinkedIn/></a>}
+            <a href={linkedin} target="_blank" rel="noopener noreferrer"><LinkedIn/></a>}
         { github &&
-            <a href={github} target="_blank"><GithubSocial/></a>}
+            <a href={github} target="_blank" rel="noopener noreferrer"><GithubSocial/></a>}
         { keybase &&
-            <a href={keybase} target="_blank"><Keybase/></a>}
+            <a href={keybase} target="_blank" rel="noopener noreferrer"><Keybase/></a>}
     </div>
 </div>;
 

@@ -95,7 +95,7 @@ class BlogContentSection extends Component {
             { blogItems.length &&
                 blogItems.map((item, i) => <Col sm={12} md={4}
                     key={`blog-item-${i}`} className="blog-item">
-                    <a href={item.link} className="image-link" target="_blank">
+                    <a href={item.link} className="image-link" target="_blank" rel="noopener noreferrer">
                         <img src={item.img} alt={item.title} />
                     </a>
                     <h4>

@@ -44,7 +44,8 @@ You can invite your friends by sharing this link with them: https://keep-network
 * _Site_ - https://keep.network/
 * _Blog_ - https://blog.keep.network/
 * _Reddit_ - https://www.reddit.com/r/KeepNetwork/ 
-* _Whitepaper_ - https://keep.network/whitepaper
+* _Whitepaper (EN)_ - https://keep.network/whitepaper
+* _Whitepaper draft (RU)_ - https://backend.keep.network/whitepaper-ru
 * _Twitter_ - https://twitter.com/keep_project
 * _Telegram_ - https://t.me/KeepNetworkOfficial
 

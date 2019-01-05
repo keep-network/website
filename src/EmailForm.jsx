@@ -7,6 +7,8 @@ import pascalCase from 'pascal-case'
 import classNames from 'classnames'
 import merge from 'lodash/merge'
 
+import { ArrowRight } from './Icons'
+
 
 const ERRORS = {
     INVALID_EMAIL: `Oops! That doesn't look like an email address!`,
@@ -103,7 +105,6 @@ class EmailForm extends Component {
 
     render() {
         const { label,
-                btnText,
                 successMessage,
                 showSuccessMessage } = this.props
         const { email,
@@ -137,7 +138,7 @@ class EmailForm extends Component {
                         bsStyle="primary"
                         bsSize="large"
                         onClick={this.onClick.bind(this)}>
-                        {btnText}
+                        <ArrowRight />
                     </Button>
                 </Form>
                 { hasError &&
@@ -152,7 +153,6 @@ class EmailForm extends Component {
 }
 
 EmailForm.propTypes = {
-    btnText: PropTypes.string,
     label: PropTypes.string,
     successMessage: PropTypes.string,
     resetOnSuccess: PropTypes.bool,

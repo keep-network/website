@@ -79,16 +79,19 @@ class App extends Component {
                     </PageSection>
                     <PageSection id={sections.SLACK}>
                         <Row className="slack-signup">
-                            <Col sm={12} md={2} mdPush={3} className="col-icon">
-                                <img alt="Slack Logo" src={Icons.slackGreen} />
-                            </Col>
-                            <Col sm={12} md={4} mdPush={3}>
+                            <Col sm={12} md={6}>
+                                <h3>
+                                    Join our community in
+                                    <Icons.Slack color="#AC6E16"/>
+                                </h3>
                                 <EmailForm
                                     label="Slack Email"
-                                    btnText="join"
                                     onSubmit={signupSlack}
                                     requestStates={ajaxRequestStates}
                                     request={actionTypes.SIGNUP_SLACK} />
+                            </Col>
+                            <Col sm={12} md={6} className="col-circles">
+                                <Picture src={getSrc('/images/texture-circle-2', 'png', 3)} />
                             </Col>
                         </Row>
                     </PageSection>

@@ -75,7 +75,7 @@ a {
 
 .btn {
     padding: 10px 33px;
-    border-radius: @border-radius;
+    border-radius: 0;
 }
 
 .btn-default {
@@ -85,8 +85,9 @@ a {
 }
 
 .btn-primary {
-    background-color: @link-color;
-    border-color: @link-color;
+    background-color: @black;
+    border-color: @black;
+    color: @link-color;
 }
 
 .btn-default,
@@ -95,15 +96,22 @@ a {
 .btn-primary.disabled {
     transition: 0.25s all ease-in;
 
-    &:hover,
+    &:hover {
+        background-color: @black;
+        color: @white;
+    }
+
     &:focus,
     &:active,
     &.active.focus,
+    &:active:focus,
     &.active,
     &.focus {
-        background-color: @link-active-color;
-        border-color: @link-active-color;
-        color: @white;
+        background-color: @link-color;
+        border-color: @link-color;
+        color: @black;
+        box-shadow: none;
+        padding: 8px 30px;
     }
 
     &:focus {

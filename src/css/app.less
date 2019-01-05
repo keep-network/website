@@ -36,26 +36,6 @@ body {
         }
 
     }
-
-    .slack-signup {
-        @media @md-up {
-            .col-icon {
-                height: 50px;
-                display: flex;
-                align-items: center;
-            }
-
-            img {
-                width: 100%;
-            }
-        }
-
-        @media @sm {
-            .col-icon {
-                margin: 0 0 12px;
-            }
-        }
-    }
 }
 
 .page-section {
@@ -88,7 +68,30 @@ body {
     }
 
     @media @tablet-up {
-        padding: 140px 0 100px;
+        padding: 140px 0 0;
+    }
+}
+
+.slack {
+    background-color: @background-med-color;
+
+    h3 {
+        color: @accent-text-color;
+
+        @media @tablet-up {
+            margin: 110px 0 30px;
+        }
+
+        svg {
+            position: relative;
+            top: 14px;
+            display: inline-block;
+            padding: 0 0 7px;
+        }
+    }
+
+    @media @tablet-up {
+        padding: 0;
     }
 }
 

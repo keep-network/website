@@ -9,8 +9,7 @@ import PageSection from './PageSection'
 import NavScrollItem from './NavScrollItem'
 // import Snippet from './Snippet'
 import * as Icons from './Icons'
-import { Avatar, Profile } from './Profile'
-import BlogContentSection from './BlogContentSection'
+import { Profile } from './Profile'
 import { getSrc } from './utils'
 import { actionTypes } from './redux'
 
@@ -41,17 +40,9 @@ class App extends Component {
             HIRING: 'hiring'
         }
 
-//         const snippetCode = `$ curl https://api.keep.network/v1/btc/main/addrs/1Puw/Q6uWXNeGcEnLCAXmRJozdLZ9M4NWQ7
-// {
-//     "address": "Q6uWXNeGcEnLCAXmRJozdLZ9M4NWQ7",
-//     "balance": 0,
-//     "unconfirmed_balance": 0,
-//     "txrefs": []
-// }`
-
         const WHITEPAPER_URL = 'https://keep.network/whitepaper'
 
-        const { signupSlack, signupMailingList, ajaxRequestStates } = this.props
+        const { signupSlack, ajaxRequestStates } = this.props
         const { alertMessage } = this.state
 
         return (
@@ -80,12 +71,14 @@ class App extends Component {
                 </Navbar>
                 <div className="main-content">
                     <PageSection id={sections.HOME}>
-                        <h1>Keep: A privacy layer for Ethereum</h1>
                         <Row>
-                            <Col sm={12} md={8} mdPush={2}>
+                            <Col sm={12} md={8}>
+                                <h1>A privacy layer for Ethereum</h1>
                                 <p>A keep is an off-chain container for private data. Keeps help contracts harness the full power of the public blockchain &mdash; enabling deep interactivity with private data.</p>
                             </Col>
                         </Row>
+                    </PageSection>
+                    <PageSection>
                         <Row className="slack-signup">
                             <Col sm={12} md={2} mdPush={3} className="col-icon">
                                 <img alt="Slack Logo" src={Icons.slackGreen} />
@@ -102,17 +95,6 @@ class App extends Component {
                     </PageSection>
                     <PageSection id={sections.ABOUT}>
                         <Row>
-                            <Col sm={12} md={6} className="mailing-list">
-                                <img alt="Email" src={Icons.email} />
-                                <h3>Join the Mailing List</h3>
-                                <p>Stay informed</p>
-                                <EmailForm
-                                    label="Email"
-                                    btnText="join"
-                                    onSubmit={signupMailingList}
-                                    requestStates={ajaxRequestStates}
-                                    request={actionTypes.SIGNUP_MAILING_LIST} />
-                            </Col>
                             <Col sm={12} md={6} className="whitepaper">
                                 <img alt="Paper Study" src={Icons.paperStudy} />
                                 <h3>Read the Whitepaper</h3>
@@ -176,29 +158,24 @@ class App extends Component {
                             <Col sm={12} md={4} className="use-case">
                                 <div className="icon"><img alt="Agreement" src={Icons.agreement} /></div>
                                 <h4>Decentralized Signing</h4>
-                                <p>Acting as a digital notary, contracts will be able to assert their identity off-chain without requiring a third party confirmation of blockchain state. Integrating with tools like PGP, SSH, and TLS keep is a bridge to public private key infrastructure.</p>
                             </Col>
                             <Col sm={12} md={4} className="use-case">
                                 <div className="icon"><img alt="Sliders" src={Icons.sliders} /></div>
                                 <h4>Dead Man Switch</h4>
-                                <p>Knowing when to expose private information is just as important as keeping it hidden. With keeps you can have trusts and estate plans automatically activated to expose instructions and transfer funds.</p>
                             </Col>
                             <Col sm={12} md={4} className="use-case">
                                 <div className="icon"><img alt="Wallet" src={Icons.wallet} /></div>
                                 <h4>Custodial Wallets</h4>
-                                <p>Ethereum smart contracts can use keeps to generate their own cryptocurrency wallets to send Bitcoin, Litecoin, and Dash. Boom, cross-chain exchange.</p>
                             </Col>
                         </Row>
                         <Row>
                             <Col sm={12} md={4} className="use-case">
                                 <div className="icon"><img alt="Shop" src={Icons.shop} /></div>
                                 <h4>Marketplaces for Digital Goods</h4>
-                                <p>With keeps, you can easily sell digital goods like ebooks, videos, MP3’s and more without the need of a server and custom download processor.</p>
                             </Col>
                             <Col sm={12} md={4} className="use-case">
                                 <div className="icon"><img alt="Open Safe" src={Icons.safeOpened} /></div>
                                 <h4>Blockchain Storage Encryption</h4>
-                                <p>Keeps provide a bridge to private blockchain storage making it possible for smart contracts and DAO’s to store files privately. You no longer need to trust a third party with your most sensitive, private data.</p>
                             </Col>
                             <Col sm={12} md={4} className="use-case">
                                 <div className="icon"><img alt="Paper Study" src={Icons.paperStudy} /></div>
@@ -488,21 +465,6 @@ class App extends Component {
                             </Col>
                         </Row>
                     </PageSection>
-                    <PageSection id={sections.JAMES_QUOTE} additionalClassNames={['quote']}>
-                        <Row className="left">
-                            <Col sm={12} md={9} mdPush={3} className="quote-text">
-                                <p>
-                                    &#8220;Keep is taking something novel and theoretical like sMPC and pairing it with real world incentive models to solve pressing challenges for the decentralized ecosystem&#8221;
-                                    <span>-Storj Founder, James Prestwich</span>
-                                </p>
-                            </Col>
-                            <Col sm={12} md={3} mdPull={9}>
-                                <Avatar
-                                    imagePath="/images/headshots/jamesPrestwich"
-                                    imageMaxRes={3} />
-                            </Col>
-                        </Row>
-                    </PageSection>
                     <PageSection id={sections.PARTNERS} convex>
                         <h2>Our Partners</h2>
                         <Row>
@@ -515,21 +477,6 @@ class App extends Component {
                                 <a href="https://district0x.io/" rel="noopener noreferrer" target="_blank">
                                     <Picture src={getSrc('/images/logos/district0x_logo', 'png', 3)} />
                                 </a>
-                            </Col>
-                        </Row>
-                    </PageSection>
-                    <PageSection id={sections.VIGNESH_QUOTE} additionalClassNames={['quote']}>
-                        <Row className="right">
-                            <Col sm={12} md={9} className="quote-text">
-                                <p>
-                                    &#8220;Keep fits a key requirement of our protocol like a glove. The smart contract acts &#8216;human&#8217;, one with notary powers, who signs the offer off-chain. Gas cost is thus saved, transaction turnaround time is reduced, and overall efficiency is increased. Also for Lendroid, integrating with Keep is a nice experience of its compatibility with other protocols in the ecosystem.&#8221;
-                                    <span>-Lendroid Founder, Vignesh Sundaresan</span>
-                                </p>
-                            </Col>
-                            <Col sm={12} md={3}>
-                                <Avatar
-                                    imagePath="/images/headshots/vigneshSundaresan"
-                                    imageMaxRes={3} />
                             </Col>
                         </Row>
                     </PageSection>
@@ -563,37 +510,6 @@ class App extends Component {
                                 <a href="https://www.distributedcapital.io/" rel="noopener noreferrer" target="_blank">
                                     <Picture src={getSrc('/images/logos/distributedCapPartnersLogo', 'png', 3)} />
                                 </a>
-                            </Col>
-                        </Row>
-                    </PageSection>
-                    <PageSection id={sections.LUIS_QUOTE} additionalClassNames={['quote']}>
-                        <Row className="left">
-                            <Col sm={12} md={9} mdPush={3} className="quote-text">
-                                <p>
-                                    &#8220;One of the use cases we have on the roadmap for Aragon is having shared encrypted data vaults for DAOs — and I’d totally see Keep being a key part of it.&#8221;
-                                    <span>-Luis Cuende, Aragon</span>
-                                </p>
-                            </Col>
-                            <Col sm={12} md={3} mdPull={9}>
-                                <Avatar
-                                    imagePath="/images/headshots/luisCuende"
-                                    imageMaxRes={3} />
-                            </Col>
-                        </Row>
-                    </PageSection>
-                    <BlogContentSection/>
-                    <PageSection id={sections.JOE_QUOTE} additionalClassNames={['quote']}>
-                        <Row className="right">
-                            <Col sm={12} md={9} className="quote-text">
-                                <p>
-                                    &#8220;At district0x, we aim to allow anyone to create their own markets and begin selling goods within a matter of minutes. Keep provides a perfect solution for creators looking to sell music, images, and other types of digital art. We also envision members of districts leveraging Keep to privately share data necessary to effectively govern their district.&#8221;
-                                    <span>-District0x Founder, Joe Urgo</span>
-                                </p>
-                            </Col>
-                            <Col sm={12} md={3}>
-                                <Avatar
-                                    imagePath="/images/headshots/josephUrgo"
-                                    imageMaxRes={3} />
                             </Col>
                         </Row>
                     </PageSection>

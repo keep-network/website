@@ -74,8 +74,6 @@ body {
         width: 100%;
     }
 
-   .arc-bottom(@background-med-color, 33vh);
-
     @media @tablet-up {
         min-height: 100vh;
         max-height: 800px;
@@ -147,12 +145,6 @@ body {
         }
     }
 
-    @media @tablet-up {
-        &.convex {
-            padding-top: 120px;
-        }
-    }
-
     @media @md-up {
         .row {
             display: flex;
@@ -167,9 +159,6 @@ body {
             }
         }
     }
-
-    .arc-top(@background-med-color, 300px);
-    .arc-bottom(@background-light-color, 300px);
 }
 
 .blurb {
@@ -222,18 +211,7 @@ body {
     }
 }
 
-.timeline {
-    background-color: @background-light-color;
-
-    @media @md-up {
-        padding: 0;
-    }
-}
-
 .uses {
-    .arc-top(@background-light-color, 300px);
-    .arc-bottom(@background-light-color, 300px);
-
     .use-case {
         margin: 0 0 30px;
 
@@ -266,20 +244,6 @@ body {
             margin-bottom: 50px;
         }
     }
-}
-
-.team,
-.advisors,
-.partners,
-.supporters,
-.our-content {
-    .arc-top(@background-light-color, 300px);
-    .arc-bottom(@background-light-color, 300px);
-}
-
-.hiring {
-    .arc-top(@background-light-color, 300px);
-    .arc-bottom(@background-dark-color, 300px);
 }
 
 .quote {
@@ -361,24 +325,6 @@ body {
     }
 }
 
-// Adjust ellipses border for removing timeline section
-.uses {
-    @media @mobile {
-        &:after {
-            bottom: 25px;
-        }
-    }
-}
-
-.team {
-    @media @mobile {
-        .bg-ellipse:after {
-            top: 25px;
-        }
-    }
-}
-// end adjustment
-
 .supporters {
     @media @tablet-up {
         .row {
@@ -438,18 +384,6 @@ body {
             &.blog-title {
                 color: @body-text-color;
             }
-        }
-    }
-}
-
-.hiring {
-    @media @mobile {
-        .bg-ellipse:after {
-            display: none;
-        }
-
-        &:after {
-            height: 300px;
         }
     }
 }

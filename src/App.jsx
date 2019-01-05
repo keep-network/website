@@ -72,9 +72,12 @@ class App extends Component {
                 <div className="main-content">
                     <PageSection id={sections.HOME}>
                         <Row>
-                            <Col sm={12} md={8}>
+                            <Col sm={12} md={6}>
                                 <h1>A privacy layer for Ethereum</h1>
                                 <p>A keep is an off-chain container for private data. Keeps help contracts harness the full power of the public blockchain &mdash; enabling deep interactivity with private data.</p>
+                            </Col>
+                            <Col sm={12} md={6} className="col-circles">
+                                <Picture src={getSrc('/images/texture-circle', 'png', 3)} />
                             </Col>
                         </Row>
                     </PageSection>

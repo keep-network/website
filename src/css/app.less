@@ -10,14 +10,11 @@
 @import 'alerts';
 
 body {
-    background-color: @background-med-dark-color;
+    background-color: @background-light-color;
 }
 
 .App {
-    text-align: center;
     overflow: hidden;
-    background-color: @white;
-    max-width: @max-page-width;
     margin: 0 auto;
 }
 
@@ -61,27 +58,37 @@ body {
     }
 }
 
+.page-section {
+    .col-circles {
+        @media @tablet-up {
+            text-align: right;
+
+            img {
+                margin-right: -50px;
+            }
+        }
+    }
+}
+
 .home {
     h1 {
-		margin: 0 0 14px;
+        line-height: 73px;
+
+        @media @tablet-up {
+            margin: 40px 0 1em;
+        }
 
 		@media screen and (min-width: 767px) and (max-width: 992px) {
 			font-size: 41px;
 		}
     }
 
-    .form-inline {
-        width: 100%;
+    p {
+        color: @accent-text-color;
     }
 
     @media @tablet-up {
-        min-height: 100vh;
-        max-height: 800px;
-        padding: 0 0 50px;
-
-        p {
-            margin: 0 0 42px;
-        }
+        padding: 140px 0 100px;
     }
 }
 

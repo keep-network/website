@@ -23,20 +23,16 @@ class App extends Component {
     render() {
         const sections = {
             HOME: 'home',
+            SLACK: 'slack',
             ABOUT: 'about',
             LEARN: 'learn',
-            TIMELINE: 'timeline',
             USES: 'uses',
             DESCRIPTION: 'description',
             TEAM: 'team',
             DEFINITION: 'definition',
             ADVISORS: 'advisors',
-            JAMES_QUOTE: 'james-quote',
             PARTNERS: 'partners',
-            VIGNESH_QUOTE: 'vignesh-quote',
             SUPPORTERS: 'supporters',
-            LUIS_QUOTE: 'luis-quote',
-            JOE_QUOTE: 'joe-urgo-quote',
             HIRING: 'hiring'
         }
 
@@ -81,7 +77,7 @@ class App extends Component {
                             </Col>
                         </Row>
                     </PageSection>
-                    <PageSection>
+                    <PageSection id={sections.SLACK}>
                         <Row className="slack-signup">
                             <Col sm={12} md={2} mdPush={3} className="col-icon">
                                 <img alt="Slack Logo" src={Icons.slackGreen} />

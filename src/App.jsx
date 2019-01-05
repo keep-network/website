@@ -18,7 +18,7 @@ import './app.css'
 
 class App extends Component {
     state = {
-        alertMessage: `Keep Alert: As of ${ new Date().toLocaleDateString() }, we have not announced any token sale or air drop of any kind.`
+        alertMessage: `NOTICE: As of ${ new Date().toLocaleDateString() }, we have not announced any token sale or air drop of any kind.`
     }
 
     render() {

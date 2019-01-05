@@ -4,13 +4,36 @@
     max-width: @max-page-width;
     margin: 0 auto;
 
+    @media @tablet-up {
+        border-bottom: 0.25px solid @border-color;
+    }
+
     .navbar-nav {
         > li {
             > a {
-                color: @link-color;
-                &:extend(.h4);
-                font-weight: 300;
+                font-weight: 400;
+                font-size: 15px;
+                color: @body-text-color;
+                text-transform: uppercase;
                 cursor: pointer;
+
+                @media @tablet-up {
+                    width: 168px;
+                    border-right: 0.25px solid @border-color;
+                }
+
+                @media (min-width: 768px) and (max-width: 991px) {
+                    width: 122px;
+                    font-size: 13px;
+                }
+            }
+
+            &:first-of-type {
+                > a {
+                    @media @tablet-up {
+                        border-left: 0.25px solid @border-color;
+                    }
+                }
             }
         }
     }
@@ -23,6 +46,7 @@
         color: transparent;
         cursor: pointer;
         height: auto;
+        line-height: 0.85;
 
         svg {
             height: 30px;
@@ -36,10 +60,14 @@
         }
 
         @media @tablet-up {
-            margin: 10px 0;
+            margin: 0;
+
+            border-left: 0.25px solid @border-color;
+            border-right: 0.25px solid @border-color;
             svg {
-                height: 40px;
-                width: 154px;
+                height: 25.63px;
+                width: 100px;
+                margin: 12px 40px;
             }
         }
     }
@@ -55,10 +83,6 @@
         }
     }
 
-    @media @tablet-up {
-        padding: 30px 0;
-    }
-
     .has-alert & {
         top: 91px;
 
@@ -67,7 +91,7 @@
         }
 
         @media @tablet-up {
-            top: 48px;
+            top: 46px;
         }
     }
 }

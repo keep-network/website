@@ -159,44 +159,35 @@ class App extends Component {
                             </div>
                         </div>
                     </PageSection>
-                    <PageSection id={sections.USES} convex>
-                        <h2>How Keep Can Be Used</h2>
+                    <PageSection id={sections.USES}>
+                        <h2 className="h1">Keep Applications</h2>
                         <Row>
-                            <Col sm={12} md={4} className="use-case">
-                                <div className="icon"><img alt="Agreement" src={Icons.agreement} /></div>
+                            <div className="use-case">
+                                <Icons.Signing />
                                 <h4>Decentralized Signing</h4>
-                            </Col>
-                            <Col sm={12} md={4} className="use-case">
-                                <div className="icon"><img alt="Sliders" src={Icons.sliders} /></div>
+                            </div>
+                            <div className="use-case">
+                                <Icons.Switch />
                                 <h4>Dead Man Switch</h4>
-                            </Col>
-                            <Col sm={12} md={4} className="use-case">
-                                <div className="icon"><img alt="Wallet" src={Icons.wallet} /></div>
-                                <h4>Custodial Wallets</h4>
-                            </Col>
+                            </div>
+                            <div className="use-case">
+                                <Icons.Wallet />
+                                 <h4>Custodial Wallets</h4>
+                            </div>
                         </Row>
                         <Row>
-                            <Col sm={12} md={4} className="use-case">
-                                <div className="icon"><img alt="Shop" src={Icons.shop} /></div>
+                            <div className="use-case">
+                                <Icons.Cart />
                                 <h4>Marketplaces for Digital Goods</h4>
-                            </Col>
-                            <Col sm={12} md={4} className="use-case">
-                                <div className="icon"><img alt="Open Safe" src={Icons.safeOpened} /></div>
+                            </div>
+                            <div className="use-case">
+                                <Icons.BlockchainStorage />
                                 <h4>Blockchain Storage Encryption</h4>
-                            </Col>
-                            <Col sm={12} md={4} className="use-case">
-                                <div className="icon"><img alt="Paper Study" src={Icons.paperStudy} /></div>
+                            </div>
+                            <div className="use-case">
+                                <Icons.Book color="#48dbb4" />
                                 <h4>Learn More in the Whitepaper</h4>
-                                <Button
-                                    bsStyle="primary"
-                                    href={WHITEPAPER_URL}
-                                    download="Keep Whitepaper"
-                                    rel="noopener noreferrer"
-                                    target="_blank"
-                                    bsSize="large">
-                                    download
-                                </Button>
-                            </Col>
+                            </div>
                         </Row>
                     </PageSection>
                     <PageSection id={sections.TEAM} convex>

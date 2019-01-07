@@ -229,56 +229,6 @@ body {
     }
 }
 
-.blurb {
-    background-color: @background-light-color;
-
-    .row {
-        display: flex;
-        align-items: center;
-        flex-direction: row;
-    }
-
-    p {
-        margin: 0;
-
-        span {
-            font-weight: bold;
-        }
-    }
-
-    @media @md-up {
-        padding: 0 0 50px;
-
-        .col-md-9 {
-            text-align: left;
-        }
-
-        p {
-            font-size: 24px;
-        }
-
-        &.description {
-            .row {
-                flex-direction: row-reverse;
-            }
-        }
-    }
-
-    @media @sm {
-        .row {
-            flex-direction: column;
-
-            [class*="col"] {
-                padding: 35px 15px;
-
-                &:last-of-type {
-                    padding: 0 15px 35px;
-                }
-            }
-        }
-    }
-}
-
 .uses {
     .use-case {
         margin: 0 0 30px;

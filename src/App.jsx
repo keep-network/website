@@ -149,15 +149,15 @@ class App extends Component {
                         </div>
                     </PageSection>
                     <PageSection id={sections.DEFINITION} additionalClassNames={['blurb']}>
-                        <Row>
-                            <Col sm={12} md={3}>
-                                <img alt="Castle Keep" src={Icons.castle} />
-                            </Col>
-                            <Col sm={12} md={9}>
-                                <p>Keep: <span>noun</span></p>
+                        <div className="blurb-panel">
+                            <div className="blurb-icon">
+                                <Icons.CastleGate />
+                            </div>
+                            <div className="blurb-text">
+                                <p>Keep: <span>(n.)</span></p>
                                 <p>The strongest or central tower of a castle, acting as a final refuge</p>
-                            </Col>
-                        </Row>
+                            </div>
+                        </div>
                     </PageSection>
                     <PageSection id={sections.USES} convex>
                         <h2>How Keep Can Be Used</h2>

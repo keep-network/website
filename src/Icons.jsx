@@ -72,6 +72,51 @@ Book.defaultProps = {
     width:'50'
 };
 
+export const CastleGate = ({ height, width }) => (
+    <svg width={width} height={height} fill="none" viewBox="0 0 50 50">
+        <path
+            d="M29.706 39.89l-25-11.765 2.66-5.654 22.348 10.516M29.706 14.063L12.615 24.94"
+            stroke="#48DBB4"
+            strokeWidth={2.5}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        />
+        <path
+            d="M48.456 42.188H26.581a3.125 3.125 0 0 0-3.125 3.124v3.126M29.706 14.063h15.625v28.125H29.706z"
+            stroke="#000"
+            strokeWidth={2.5}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        />
+        <path
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M26.581 1.563h21.875v10.416c0 1.15-.933 2.084-2.083 2.084H28.664a2.083 2.083 0 0 1-2.083-2.084V1.563z"
+            stroke="#000"
+            strokeWidth={2.5}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        />
+        <path
+            d="M32.831 1.563v3.125M42.206 1.563v3.125M1.563 45.11a6.276 6.276 0 0 0 1.58.209 6.21 6.21 0 0 0 4.688-2.156 6.173 6.173 0 0 0 9.375 0"
+            stroke="#000"
+            strokeWidth={2.5}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        />
+    </svg>
+);
+
+CastleGate.propTypes = {
+    height: PropTypes.string,
+    width: PropTypes.string
+};
+
+CastleGate.defaultProps = {
+    height: '50',
+    width:'50'
+};
+
 const Keep = ({ color, height, width }) => (
     <svg height={height} id="svg2" width={width} version="1.1" viewBox="0 0 928.81335 238.16" xmlSpace="preserve">
         <defs id="defs6"/>

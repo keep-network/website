@@ -21,4 +21,37 @@
             margin-bottom: 74px;
         }
     }
+
+    &.blurb {
+        @media @tablet-up {
+            padding: 40px 0;
+        }
+
+        .blurb-panel {
+            padding: 60px;
+            background-color: @background-med-color;
+            text-align: center;
+
+            > div {
+                display: inline-block;
+            }
+        }
+
+        .blurb-icon {
+            padding-right: 40px;
+        }
+
+        .blurb-text {
+            color: @accent-text-color;
+            font-size: 18px;
+            font-weight: 500;
+            max-width: 420px;
+            text-align: left;
+        }
+
+        p {
+            margin: 0;
+            line-height: 22px;
+        }
+    }
 }

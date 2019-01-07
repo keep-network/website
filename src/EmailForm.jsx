@@ -51,7 +51,7 @@ class EmailForm extends Component {
         }
     }
 
-    onChange(e) {
+    onChange = (e) => {
         this.setState(
             merge({}, this.getInitialState(), { email: e.target.value })
         )
@@ -75,11 +75,11 @@ class EmailForm extends Component {
         }
     }
 
-    onClick(e) {
+    onClick = (e) => {
         this.submit()
     }
 
-    onKeyUp(e) {
+    onKeyUp = (e) => {
         if (e.keyCode === 13) {
             this.submit()
         }
@@ -103,10 +103,10 @@ class EmailForm extends Component {
         }
     }
 
-    render() {
+    renderForm() {
         const { label,
-                successMessage,
-                showSuccessMessage } = this.props
+                showSuccessMessage,
+                children } = this.props
         const { email,
                 hasError,
                 requestSent,
@@ -120,7 +120,8 @@ class EmailForm extends Component {
         }
 
         return (
-            <div className={classNames('email-form', classes)}>
+            <div>
+                { children }
                 <Form inline className={classNames(classes)}
                     onSubmit={(e) => { e.preventDefault() }}>
                     <FormGroup controlId={`formInline${pascalCase(label)}`}>
@@ -130,23 +131,44 @@ class EmailForm extends Component {
                         <FormControl
                             type="email"
                             value={email}
-                            onChange={this.onChange.bind(this)}
-                            onKeyUp={this.onKeyUp.bind(this)}/>
+                            onChange={this.onChange}
+                            onKeyUp={this.onKeyUp}/>
                     </FormGroup>
                     {' '}
                     <Button
                         bsStyle="primary"
                         bsSize="large"
-                        onClick={this.onClick.bind(this)}>
+                        onClick={this.onClick}>
                         <ArrowRight />
                     </Button>
                 </Form>
                 { hasError &&
                     <small className="error-message">{errorMsg}</small> }
-                { (requestSuccess || showSuccessMessage) &&
-                    <div className="success-message">
-                        { successMessage || 'Thanks, you\'re signed up!' }
-                    </div> }
+            </div>
+        )
+    }
+
+    renderSuccessMessage() {
+        return (
+            <div className="success-message">
+                { this.props.successMessage || 'Thanks for joining!' }
+            </div>
+        )
+    }
+
+    render() {
+        const { showSuccessMessage } = this.props
+        const { requestSuccess } = this.state
+
+        return (
+            <div className="email-form">
+                {
+                    (requestSuccess || showSuccessMessage) ? (
+                        this.renderSuccessMessage()
+                    ) : (
+                        this.renderForm()
+                    )
+                }
             </div>
         )
     }

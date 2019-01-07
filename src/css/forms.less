@@ -69,10 +69,6 @@
     &.request-sent {
         border-color: @link-active-color;
     }
-
-    &.request-success {
-
-    }
 }
 
 .email-form {
@@ -119,28 +115,5 @@
         width: 100%;
         top: calc(100% - 15px);
         left: 0;
-    }
-
-    .success-message {
-        width: 100%;
-        position: absolute;
-        top: 9px;
-        left: 0;
-        text-align: center;
-        color: @white;
-
-        @media @md-up and (max-width: 1200px),
-        only screen and (max-width: 369px) {
-            top: 50%;
-            transform: translateY(-50%);
-        }
-    }
-
-    &.request-success {
-        @media @md-up and (max-width: 1200px),
-        only screen and (max-width: 369px) {
-            background-color: @background-dark-color;
-            border-radius: 8px;
-        }
     }
 }

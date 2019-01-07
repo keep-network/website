@@ -331,56 +331,6 @@ body {
     }
 }
 
-.quote {
-    background-color: @background-light-color;
-
-    .row {
-        display: flex;
-        align-items: center;
-        flex-direction: column-reverse;
-    }
-
-    p {
-        span {
-            display: block;
-            font-weight: bold;
-            margin-top: 1em;
-        }
-    }
-
-    @media @md-up {
-        padding: 0 0 50px;
-
-        .row {
-            flex-direction: row;
-        }
-
-        .quote-text {
-            text-align: left;
-        }
-
-        p {
-            font-size: 24px;
-        }
-
-        &.joe-urgo-quote {
-            padding: 0 0 130px;
-        }
-    }
-
-    @media @sm {
-        .row {
-            [class*="col"] {
-                padding: 0 15px 35px;
-
-                &:last-of-type {
-                    padding: 35px 15px;
-                }
-            }
-        }
-    }
-}
-
 .partners,
 .supporters {
     .row {
@@ -425,49 +375,6 @@ body {
         .row {
             > * {
                 margin-bottom: 20px;
-            }
-        }
-    }
-}
-
-.our-content {
-    .blog-item {
-        text-align: left;
-        margin-bottom: 50px;
-
-        .image-link {
-            display: flex;
-            min-height: 250px;
-            align-items: center;
-        }
-
-        canvas,
-        img {
-            margin: 0 auto;
-            border-radius: 8px;
-            max-width: 100%;
-
-            @media @md-up,
-            (max-width: 600px) {
-                width: 100% !important;
-            }
-        }
-
-        h4 {
-            max-width: 600px;
-            margin: 10px auto;
-        }
-
-        a {
-            color: #999;
-            text-decoration: none;
-        }
-
-        span {
-            display: block;
-
-            &.blog-title {
-                color: @body-text-color;
             }
         }
     }

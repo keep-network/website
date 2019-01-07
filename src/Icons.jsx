@@ -317,7 +317,7 @@ GithubSocial.propTypes = {
 };
 
 GithubSocial.defaultProps = {
-    color: '#505E5B',
+    color: '#0A0806',
     height: '24px',
     width:'25px'
 };
@@ -346,7 +346,7 @@ Keybase.propTypes = {
 };
 
 Keybase.defaultProps = {
-    color: '#505E5B',
+    color: '#0A0806',
     height: '34px',
     width:'32px'
 };
@@ -372,7 +372,7 @@ LinkedIn.propTypes = {
 };
 
 LinkedIn.defaultProps = {
-    color: '#505E5B',
+    color: '#0A0806',
     height: '26px',
     width:'27px'
 };
@@ -790,7 +790,7 @@ Twitter.propTypes = {
 };
 
 Twitter.defaultProps = {
-    color: '#505E5B',
+    color: '#0A0806',
     height: '24px',
     width:'30px'
 };

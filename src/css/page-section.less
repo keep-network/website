@@ -3,6 +3,8 @@
     padding: 40px 0;
     position: relative;
     overflow: visible;
+    transition: max-height 0.25s ease-in;
+    max-height: none;
 
     .page-section-content {
         width: 100%;
@@ -14,11 +16,52 @@
         margin-bottom: 0;
     }
 
+    .see-all {
+        display: none;
+    }
+
     @media @tablet-up {
         padding: 100px 0;
 
         h2 {
             margin-bottom: 74px;
+        }
+    }
+
+    &.collapsed {
+        overflow: hidden;
+
+        .container {
+            position: relative;
+        }
+
+        .see-all {
+            display: block;
+            cursor: pointer;
+            position: absolute;
+            right: 0;
+            font-size: 25px;
+            font-weight: 800;
+
+            svg {
+                path {
+                    stroke: @black;
+                }
+            }
+        }
+
+        @media @tablet-up {
+            max-height: 780px;
+
+            .row {
+                &:first-of-type {
+                    margin-bottom: 150px;
+                }
+            }
+
+            .see-all {
+                top: 600px;
+            }
         }
     }
 

@@ -186,8 +186,8 @@ class App extends Component {
                             <h4>Learn More in the Whitepaper</h4>
                         </div>
                     </PageSection>
-                    <PageSection id={sections.TEAM} convex>
-                        <h2>Team</h2>
+                    <PageSection id={sections.TEAM} collapsible>
+                        <h2>Our Team</h2>
                         <Row>
                             <Col sm={12} md={3}>
                                 <Profile
@@ -400,7 +400,7 @@ class App extends Component {
                             </div>
                         </div>
                     </PageSection>
-                    <PageSection id={sections.ADVISORS} convex>
+                    <PageSection id={sections.ADVISORS} collapsible>
                         <h2>Advisors</h2>
                         <Row>
                             <Col sm={12} md={4}>

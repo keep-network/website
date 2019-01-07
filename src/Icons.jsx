@@ -6,7 +6,6 @@ import bank from './images/bank.svg';
 import castle from './images/castleIcon.svg';
 import email from './images/emailIcon.svg';
 import fingerprint from './images/fingerprint.svg';
-import github from './images/GitHub_Logo.svg';
 import keyCircle from './images/key-circle.svg';
 import moneyShare from './images/money-share.svg';
 import networkLock from './images/network-lock.svg';
@@ -23,7 +22,7 @@ import wallet from './images/wallet.svg';
 
 
 const ArrowRight = ({ color, height, width }) => (
-    <svg width={width} height={height} fill="none"viewBox="0 0 59 22" >
+    <svg width={width} height={height} fill="none" viewBox="0 0 59 22" >
         <path stroke={color} strokeWidth={4} d="M0 11h54M47 2l9 9-9 9" />
     </svg>
 );
@@ -36,8 +35,39 @@ ArrowRight.propTypes = {
 
 ArrowRight.defaultProps = {
     color: '#48DBB4',
-    height: '22',
-    width:'59'
+    height: '18',
+    width:'56'
+};
+
+export const Book = ({ height, width }) => (
+    <svg width={width} height={height} fill="none" viewBox="0 0 50 50">
+        <path
+            d="M37.5 8.633a64.908 64.908 0 0 1 9.858-.82c.284-.005.558.103.763.3.2.194.315.461.316.741v32.85a1.052 1.052 0 0 1-1.041 1.042C30.119 42.96 25 48.437 25 48.437m0 0V13.505s-5.115-5.47-22.358-5.692a1.077 1.077 0 0 0-.767.3c-.2.196-.312.463-.313.742v32.85a1.052 1.052 0 0 0 1.042 1.042C19.881 42.96 25 48.437 25 48.437z"
+            stroke="#F2F2F2"
+            strokeWidth={3}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        />
+        <path
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M25 47.41c.33-2.7 1.525-5.22 3.408-7.183a17.142 17.142 0 0 1 9.092-5.131V2.589a1.002 1.002 0 0 0-.475-.833 1.25 1.25 0 0 0-1.03-.137 16.25 16.25 0 0 0-7.587 4.743A12.573 12.573 0 0 0 25 13.542"
+            stroke="#000"
+            strokeWidth={3}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        />
+    </svg>
+)
+
+Book.propTypes = {
+    height: PropTypes.string,
+    width: PropTypes.string
+};
+
+Book.defaultProps = {
+    height: '50',
+    width:'50'
 };
 
 const Keep = ({ color, height, width }) => (
@@ -64,6 +94,26 @@ Keep.defaultProps = {
     color: '#293330',
     height: '238.16',
     width:'917.41333'
+};
+
+const Github = ({ color, height, width }) => (
+    <svg width={width} height={height} viewBox="0 0 129 35">
+        <g fill={color} fillRule="evenodd">
+            <path d="M24.5 14.98H13.812c-.276 0-.5.228-.5.509v5.317c0 .28.224.509.5.509h4.17v6.606s-.936.325-3.525.325c-3.054 0-7.32-1.136-7.32-10.68 0-9.547 4.442-10.803 8.613-10.803 3.61 0 5.166.646 6.155.958.312.097.6-.218.6-.499l1.191-5.137a.477.477 0 0 0-.19-.397C23.103 1.396 20.65 0 14.456 0 7.32 0 0 3.089 0 17.938 0 32.788 8.38 35 15.443 35c5.848 0 9.395-2.542 9.395-2.542.146-.082.162-.29.162-.385V15.489a.504.504 0 0 0-.5-.509M81 1.51a.508.508 0 0 0-.51-.51h-6.17a.51.51 0 0 0-.512.51l.002 11.81h-9.62V1.51a.508.508 0 0 0-.509-.51H57.51a.51.51 0 0 0-.51.51V33.49c0 .282.23.511.51.511h6.171a.51.51 0 0 0 .51-.511V19.81h9.62l-.018 13.679c0 .282.23.511.512.511h6.185a.51.51 0 0 0 .51-.511V1.51M37 5.998A3.997 3.997 0 0 0 33 2c-2.208 0-4 1.787-4 3.998a4.001 4.001 0 0 0 8 0M36 26.916V12.498a.498.498 0 0 0-.497-.498H29.52c-.275 0-.52.282-.52.555v20.657c0 .607.38.788.872.788h5.391c.592 0 .737-.289.737-.798v-6.286M104.485 12h-6.141a.51.51 0 0 0-.511.509v15.587s-1.56 1.12-3.775 1.12c-2.214 0-2.802-.986-2.802-3.114V12.509a.51.51 0 0 0-.51-.509h-6.234a.511.511 0 0 0-.512.509V27.13C84 33.453 87.59 35 92.527 35c4.052 0 7.318-2.197 7.318-2.197s.156 1.158.226 1.295.254.275.452.275l3.965-.017a.511.511 0 0 0 .512-.508l-.002-21.34a.51.51 0 0 0-.513-.508M118.301 29.3c-2.057-.064-3.453-1-3.453-1v-9.938s1.377-.847 3.066-.998c2.136-.192 4.193.455 4.193 5.568 0 5.39-.928 6.454-3.806 6.367zm2.34-17.682c-3.37 0-5.66 1.508-5.66 1.508V2.501c0-.278-.221-.501-.493-.501h-5.994a.497.497 0 0 0-.494.5v31.381c0 .277.221.502.494.502h4.159c.187 0 .329-.097.434-.266.103-.17.252-1.448.252-1.448S115.79 35 120.43 35c5.447 0 8.571-2.772 8.571-12.445s-4.989-10.937-8.36-10.937zM53.36 11.514h-4.545L48.81 5.41c0-.232-.118-.347-.38-.347h-6.194c-.241 0-.37.108-.37.343v6.308s-3.104.762-3.315.823a.511.511 0 0 0-.362.491v3.964c0 .286.224.515.5.515h3.177v9.537c0 7.083 4.887 7.779 8.185 7.779 1.507 0 3.31-.492 3.607-.604.18-.067.285-.257.285-.462l.005-4.36a.516.516 0 0 0-.502-.516c-.266 0-.943.11-1.64.11-2.233 0-2.99-1.055-2.99-2.421v-9.063h4.546c.277 0 .501-.23.501-.515v-4.965a.507.507 0 0 0-.501-.513" />
+        </g>
+    </svg>
+);
+
+Github.propTypes = {
+    color: PropTypes.string,
+    height: PropTypes.string,
+    width: PropTypes.string
+};
+
+Github.defaultProps = {
+    color: '#AC6E16',
+    height: '35',
+    width:'129'
 };
 
 const GithubSocial = ({ color, height, width }) => (
@@ -273,7 +323,7 @@ export {
     castle,
     email,
     fingerprint,
-    github,
+    Github,
     GithubSocial,
     Keep,
     Keybase,

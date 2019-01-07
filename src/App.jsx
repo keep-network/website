@@ -24,7 +24,7 @@ class App extends Component {
         const sections = {
             HOME: 'home',
             SLACK: 'slack',
-            ABOUT: 'about',
+            GITHUB: 'github',
             LEARN: 'learn',
             USES: 'uses',
             DESCRIPTION: 'description',
@@ -96,51 +96,58 @@ class App extends Component {
                             </Col>
                         </Row>
                     </PageSection>
-                    <PageSection id={sections.ABOUT}>
+                    <PageSection id={sections.GITHUB}>
                         <Row>
-                            <Col sm={12} md={6} className="whitepaper">
-                                <img alt="Paper Study" src={Icons.paperStudy} />
-                                <h3>Read the Whitepaper</h3>
-                                <p>Find out how you can use Keep</p>
-                                <Button
-                                    href={WHITEPAPER_URL}
-                                    download="Keep Whitepaper"
-                                    rel="noopener noreferrer"
-                                    target="_blank"
-                                    bsSize="large">
-                                    download
-                                </Button>
+                            <Col sm={12} md={12}>
+                                <h3>
+                                    View the <Icons.Github /> Repository
+                                    <Button
+                                        href="https://github.com/keep-network"
+                                        bsStyle="primary"
+                                        bsSize="large"
+                                        rel="noopener noreferrer"
+                                        target="_blank">
+                                        <Icons.ArrowRight />
+                                    </Button>
+                                </h3>
                             </Col>
                         </Row>
                     </PageSection>
                     <PageSection id={sections.LEARN} convex>
                         <Row>
-                            <Col sm={12} md={6} className="github">
-                                <img alt="GitHub Logo" src={Icons.github} />
-                                <h3>View the Repository</h3>
-                                <p>Meet the online community</p>
-                                <Button
-                                    href="https://github.com/keep-network"
-                                    bsStyle="primary"
-                                    bsSize="large"
-                                    rel="noopener noreferrer"
-                                    target="_blank">
-                                    open
-                                </Button>
+                            <Col sm={12} md={6}>
+                                <h2 className="h1">
+                                    Find out how to use Keep
+                                </h2>
                             </Col>
-                            <Col sm={12} md={6} className="primer">
-                                <img alt="Paper Study" src={Icons.paperStudy} />
-                                <h3>Read the Business Primer</h3>
-                                <p>Find out how you can use Keep</p>
-                                <Button
-                                    href="/KeepBusinessPrimer.pdf"
-                                    bsStyle="primary"
-                                    download="Keep Business Primer"
-                                    rel="noopener noreferrer"
-                                    target="_blank"
-                                    bsSize="large">
-                                    download
-                                </Button>
+                            <Col sm={12} md={6}>
+                                <div>
+                                    <img alt="Paper Study" src={Icons.paperStudy} />
+                                    <h3>Read the Whitepaper</h3>
+                                    <p>Find out how you can use Keep</p>
+                                    <Button
+                                        href={WHITEPAPER_URL}
+                                        download="Keep Whitepaper"
+                                        rel="noopener noreferrer"
+                                        target="_blank"
+                                        bsSize="large">
+                                        download
+                                    </Button>
+                                </div>
+                                <div>
+                                    <img alt="Paper Study" src={Icons.paperStudy} />
+                                    <h3>Read the Business Primer</h3>
+                                    <p>Find out how you can use Keep</p>
+                                    <Button
+                                        href="/KeepBusinessPrimer.pdf"
+                                        bsStyle="primary"
+                                        download="Keep Business Primer"
+                                        rel="noopener noreferrer"
+                                        target="_blank"
+                                        bsSize="large">
+                                        download
+                                    </Button>
+                                </div>
                             </Col>
                         </Row>
                     </PageSection>

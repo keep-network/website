@@ -230,25 +230,92 @@ body {
 }
 
 .uses {
-    .use-case {
-        margin: 0 0 30px;
+    @media @tablet-up {
+        padding: 0;
+    }
 
-        img {
-            width: 84px;
-            height: 84px;
-            margin-bottom: 15px;
-        }
-
-        p {
-            text-align: left;
-        }
-
-        .btn {
-            margin: 15px 0 0;
+    h2 {
+        @media @tablet-up {
+            text-align: center;
         }
 
         @media @mobile {
-            margin-bottom: 40px;
+            margin-bottom: 50px;
+        }
+    }
+
+    .use-case {
+        text-align: center;
+        display: inline-block;
+        border-bottom: 1px solid fade(@black, 50%);
+
+        h4 {
+            width: 85%;
+            margin: 20px auto;
+        }
+
+        @media @tablet-up {
+            width: 33%;
+            padding: 70px 0;
+
+            &:first-of-type {
+                padding: 30px 0 70px;
+            }
+
+            &:nth-child(3n+3) {
+                border-left: 1px solid fade(@black, 50%);
+                border-right: 1px solid fade(@black, 50%);
+            }
+
+            &:nth-child(5),
+            &:nth-child(6),
+            &:nth-child(7) {
+                border-bottom: 0;
+            }
+        }
+
+        @media @mobile {
+            width: 50%;
+            padding: 40px 0;
+
+            &:nth-child(6),
+            &:nth-child(7) {
+                border-bottom: 0;
+            }
+        }
+    }
+
+    .page-section-content {
+        @media @mobile {
+            &:before {
+                content: '';
+                display: block;
+                position: absolute;
+                top: 100px;
+                left: 50%;
+                width: 1px;
+                height: 100%;
+                background-color: fade(@black, 50%);
+            }
+        }
+
+        @media @tablet-up {
+            &:after {
+                content: '';
+                display: block;
+                position: absolute;
+                bottom: -10px;
+                left: 0;
+                width: 100%;
+                height: 10px;
+
+                background-image: url(./images/wall-pattern.png);
+                background-repeat: repeat-x;
+
+                @media @high-res {
+                    background-image: url(./images/wall-pattern@2x.png);
+                }
+            }
         }
     }
 }

@@ -161,34 +161,30 @@ class App extends Component {
                     </PageSection>
                     <PageSection id={sections.USES}>
                         <h2 className="h1">Keep Applications</h2>
-                        <Row>
-                            <div className="use-case">
-                                <Icons.Signing />
-                                <h4>Decentralized Signing</h4>
-                            </div>
-                            <div className="use-case">
-                                <Icons.Switch />
-                                <h4>Dead Man Switch</h4>
-                            </div>
-                            <div className="use-case">
-                                <Icons.Wallet />
-                                 <h4>Custodial Wallets</h4>
-                            </div>
-                        </Row>
-                        <Row>
-                            <div className="use-case">
-                                <Icons.Cart />
-                                <h4>Marketplaces for Digital Goods</h4>
-                            </div>
-                            <div className="use-case">
-                                <Icons.BlockchainStorage />
-                                <h4>Blockchain Storage Encryption</h4>
-                            </div>
-                            <div className="use-case">
-                                <Icons.Book color="#48dbb4" />
-                                <h4>Learn More in the Whitepaper</h4>
-                            </div>
-                        </Row>
+                        <div className="use-case">
+                            <Icons.Signing />
+                            <h4>Decentralized Signing</h4>
+                        </div>
+                        <div className="use-case">
+                            <Icons.Switch />
+                            <h4>Dead Man Switch</h4>
+                        </div>
+                        <div className="use-case">
+                            <Icons.Wallet />
+                             <h4>Custodial Wallets</h4>
+                        </div>
+                        <div className="use-case">
+                            <Icons.Cart />
+                            <h4>Marketplaces for Digital Goods</h4>
+                        </div>
+                        <div className="use-case">
+                            <Icons.BlockchainStorage />
+                            <h4>Blockchain Storage Encryption</h4>
+                        </div>
+                        <div className="use-case">
+                            <Icons.Book color="#48dbb4" />
+                            <h4>Learn More in the Whitepaper</h4>
+                        </div>
                     </PageSection>
                     <PageSection id={sections.TEAM} convex>
                         <h2>Team</h2>

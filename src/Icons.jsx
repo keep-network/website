@@ -77,6 +77,81 @@ Axe.defaultProps = {
     width:'50'
 };
 
+export const BlockchainStorage = ({ height, width }) => (
+    <svg width={width} height={height} fill="none" viewBox="0 0 52 59">
+        <path
+            d="M23.08 18.75h2.884M31.733 18.75h5.77"
+            stroke="#000"
+            strokeWidth={2.5}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        />
+        <path
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M44.714 18.75a8.654 8.654 0 0 1-8.654 8.654H10.098a8.654 8.654 0 0 1 0-17.308H36.06a8.654 8.654 0 0 1 8.654 8.654z"
+            stroke="#000"
+            strokeWidth={2.5}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        />
+        <path
+            d="M10.82 18.029a.72.72 0 1 0 .719.721.721.721 0 0 0-.722-.721"
+            stroke="#48DBB4"
+            strokeWidth={2.5}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        />
+        <path
+            d="M23.08 36.058h2.884M42.179 29.939a8.654 8.654 0 0 0-6.12-2.535H10.1a8.654 8.654 0 0 0 0 17.308h16.824"
+            stroke="#000"
+            strokeWidth={2.5}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        />
+        <path
+            d="M10.82 35.337a.721.721 0 1 0 .719.72.721.721 0 0 0-.722-.72v0"
+            stroke="#48DBB4"
+            strokeWidth={2.5}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        />
+        <path
+            d="M43.898 15.083l-4.84-10.321a5.77 5.77 0 0 0-5.223-3.32H12.323a5.77 5.77 0 0 0-5.225 3.32L2.26 15.082"
+            stroke="#000"
+            strokeWidth={2.5}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        />
+        <path
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M32.692 44.77a1.5 1.5 0 0 1 1.5-1.5H48.5a1.5 1.5 0 0 1 1.5 1.5v11.422a1.5 1.5 0 0 1-1.5 1.5H34.192a1.5 1.5 0 0 1-1.5-1.5V44.77zM41.346 34.615v0a5.77 5.77 0 0 0-5.769 5.77v2.884h11.539v-2.884a5.77 5.77 0 0 0-5.77-5.77z"
+            stroke="#48DBB4"
+            strokeWidth={2.5}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        />
+        <path
+            d="M41.346 49.815a.721.721 0 1 0 0 1.443.721.721 0 0 0 0-1.443v0"
+            stroke="#48DBB4"
+            strokeWidth={2.5}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        />
+    </svg>
+);
+
+BlockchainStorage.propTypes = {
+    height: PropTypes.string,
+    width: PropTypes.string
+};
+
+BlockchainStorage.defaultProps = {
+    height: '52',
+    width:'59'
+};
+
 export const Book = ({ height, width, color }) => (
     <svg width={width} height={height} fill="none" viewBox="0 0 50 50">
         <path
@@ -108,6 +183,51 @@ Book.defaultProps = {
     color: '#F2F2F2',
     height: '50',
     width:'50'
+};
+
+export const Cart = ({ height, width }) => (
+    <svg width={width} height={height} fill="none" viewBox="0 0 53 53">
+        <path
+            d="M35.813 13.938l-4.688 15.624h-12.5L15.5 20.188h18.438M19.406 34.25a.781.781 0 1 1 0 1.563.781.781 0 0 1 0-1.563M30.344 34.25a.781.781 0 1 1 0 1.563.781.781 0 0 1 0-1.563"
+            stroke="#48DBB4"
+            strokeWidth={2.5}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        />
+        <path
+            d="M32.897 46.599a22.998 22.998 0 1 1 3.931-41.323 22.998 22.998 0 0 1 10.048 26.818"
+            stroke="#000"
+            strokeWidth={2.5}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        />
+        <path
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M37.075 37.073l5.523 14.365 3.314-5.525 5.525-3.315-14.362-5.525z"
+            stroke="#000"
+            strokeWidth={2.5}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        />
+        <path
+            d="M51.437 51.438l-5.525-5.525"
+            stroke="#000"
+            strokeWidth={2.5}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        />
+    </svg>
+);
+
+Cart.propTypes = {
+    height: PropTypes.string,
+    width: PropTypes.string
+};
+
+Cart.defaultProps = {
+    height: '53',
+    width:'53'
 };
 
 export const CastleGate = ({ height, width }) => (
@@ -300,6 +420,226 @@ Reddit.defaultProps = {
     width:'36px'
 };
 
+export const Signing = ({ height, width }) => (
+    <svg width={width} height={height} fill="none" viewBox="0 0 88 88">
+        <path
+            d="M30 62.241l-9 9.004a1.5 1.5 0 0 1-2.12 0l-2.128-2.122a1.5 1.5 0 0 1 0-2.121L25.754 58"
+            stroke="#000"
+            strokeWidth={1.5}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        />
+        <path
+            d="M31.125 52.63a3 3 0 0 0-4.242 0l-3.237 3.235"
+            stroke="#48DBB4"
+            strokeWidth={1.5}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        />
+        <path
+            d="M35.35 52.646a3 3 0 0 0-4.225-.017L25.755 58 30 62.242l5.368-5.37a3 3 0 0 0-.017-4.226zM15.691 72.305l-1.944 1.945"
+            stroke="#48DBB4"
+            strokeWidth={1.5}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        />
+        <path
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M14.63 71.244l2.122-2.121 2.122 2.121-2.122 2.121-2.121-2.12z"
+            stroke="#000"
+            strokeWidth={1.5}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        />
+        <path
+            d="M46.97 66.899l.002 12.73a1.5 1.5 0 0 1-1.5 1.5l-3.004.003a1.5 1.5 0 0 1-1.5-1.5v-12.73"
+            stroke="#000"
+            strokeWidth={1.5}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        />
+        <path
+            d="M40.968 59.306a3 3 0 0 0-3 3v4.577M43.968 56.33a3 3 0 0 0-3 2.976v7.596l6.002-.003-.002-7.594a3 3 0 0 0-3-2.975zM43.968 84.133v2.75"
+            stroke="#48DBB4"
+            strokeWidth={1.5}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        />
+        <path
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M42.468 84.132v-3h3v3h-3z"
+            stroke="#000"
+            strokeWidth={1.5}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        />
+        <path
+            d="M62.3 57.941l9.004 9a1.5 1.5 0 0 1 0 2.121l-2.122 2.127a1.5 1.5 0 0 1-2.121 0l-9.002-9.002"
+            stroke="#000"
+            strokeWidth={1.5}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        />
+        <path
+            d="M52.687 56.816a3 3 0 0 0 0 4.242l3.236 3.237M52.704 52.59a3 3 0 0 0-.017 4.226l5.371 5.371 4.242-4.246-5.37-5.368a3 3 0 0 0-4.226.018zM72.363 72.25l1.945 1.944"
+            stroke="#48DBB4"
+            strokeWidth={1.5}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        />
+        <path
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M71.303 73.31l-2.122-2.12 2.122-2.122 2.121 2.12-2.121 2.122z"
+            stroke="#000"
+            strokeWidth={1.5}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        />
+        <path
+            d="M66.898 40.972l12.73-.003a1.5 1.5 0 0 1 1.5 1.5l.004 3.004a1.5 1.5 0 0 1-1.5 1.5h-12.73"
+            stroke="#000"
+            strokeWidth={1.5}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        />
+        <path
+            d="M59.306 46.973a3 3 0 0 0 3 3h4.576M56.33 43.973a3 3 0 0 0 2.976 3H66.9l-.003-6.002-7.593.002a3 3 0 0 0-2.975 3zM84.132 43.973h2.75"
+            stroke="#48DBB4"
+            strokeWidth={1.5}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        />
+        <path
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M84.132 45.473h-3v-3h3v3z"
+            stroke="#000"
+            strokeWidth={1.5}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        />
+        <path
+            d="M58 25.7l9-9.004a1.5 1.5 0 0 1 2.12 0l2.128 2.122a1.5 1.5 0 0 1 0 2.121l-9.002 9.002"
+            stroke="#000"
+            strokeWidth={1.5}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        />
+        <path
+            d="M56.875 35.312a3 3 0 0 0 4.242 0l3.237-3.236"
+            stroke="#48DBB4"
+            strokeWidth={1.5}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        />
+        <path
+            d="M52.65 35.295a3 3 0 0 0 4.225.017l5.37-5.37L58 25.7l-5.368 5.37a3 3 0 0 0 .017 4.225zM72.309 15.636l1.944-1.945"
+            stroke="#48DBB4"
+            strokeWidth={1.5}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        />
+        <path
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M73.37 16.697l-2.122 2.121-2.122-2.12 2.122-2.122 2.121 2.121z"
+            stroke="#000"
+            strokeWidth={1.5}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        />
+        <path
+            d="M40.971 21.042l-.002-12.73a1.5 1.5 0 0 1 1.5-1.5l3.004-.004a1.5 1.5 0 0 1 1.5 1.5V21.04"
+            stroke="#000"
+            strokeWidth={1.5}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        />
+        <path
+            d="M46.973 28.635a3 3 0 0 0 3-3v-4.577M43.973 31.61a3 3 0 0 0 3-2.975v-7.596l-6.002.003.002 7.593a3 3 0 0 0 3 2.976zM43.973 3.808v-2.75"
+            stroke="#48DBB4"
+            strokeWidth={1.5}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        />
+        <path
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M45.473 3.809v3h-3v-3h3z"
+            stroke="#000"
+            strokeWidth={1.5}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        />
+        <path
+            d="M25.7 30l-9.004-9a1.5 1.5 0 0 1 0-2.12l2.122-2.128a1.5 1.5 0 0 1 2.12 0l9.003 9.002"
+            stroke="#000"
+            strokeWidth={1.5}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        />
+        <path
+            d="M35.312 31.125a3 3 0 0 0 0-4.242l-3.236-3.237"
+            stroke="#48DBB4"
+            strokeWidth={1.5}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        />
+        <path
+            d="M35.295 35.35a3 3 0 0 0 .017-4.225l-5.37-5.37L25.7 30l5.37 5.368a3 3 0 0 0 4.225-.018zM15.636 15.691l-1.945-1.944"
+            stroke="#48DBB4"
+            strokeWidth={1.5}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        />
+        <path
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M16.697 14.63l2.121 2.122-2.121 2.122-2.121-2.122 2.12-2.121z"
+            stroke="#000"
+            strokeWidth={1.5}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        />
+        <path
+            d="M21.043 46.97l-12.73.002a1.5 1.5 0 0 1-1.5-1.5l-.004-3.004a1.5 1.5 0 0 1 1.5-1.5h12.73"
+            stroke="#000"
+            strokeWidth={1.5}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        />
+        <path
+            d="M28.635 40.968a3 3 0 0 0-3-3h-4.577M31.611 43.968a3 3 0 0 0-2.976-3H21.04l.003 6.002 7.593-.002a3 3 0 0 0 2.975-3zM3.809 43.968h-2.75"
+            stroke="#48DBB4"
+            strokeWidth={1.5}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        />
+        <path
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M3.81 42.468h3v3h-3v-3z"
+            stroke="#000"
+            strokeWidth={1.5}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        />
+    </svg>
+);
+
+Signing.propTypes = {
+    height: PropTypes.string,
+    width: PropTypes.string
+};
+
+Signing.defaultProps = {
+    height: '88',
+    width:'88'
+};
+
 const Slack = ({ color, height, width }) => (
     <svg width={width} height={height} viewBox="0 0 129 37">
     <defs>
@@ -387,6 +727,48 @@ Strategy.defaultProps = {
     width: '50'
 };
 
+export const Switch = ({ height, width }) => (
+    <svg width={width} height={height} fill="none" viewBox="0 0 50 50">
+        <path
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M4.688 31.188a1.5 1.5 0 0 1 1.5-1.5h37.624a1.5 1.5 0 0 1 1.5 1.5v9.5a1.5 1.5 0 0 1-1.5 1.5H6.188a1.5 1.5 0 0 1-1.5-1.5v-9.5z"
+            stroke="#000"
+            strokeWidth={2.5}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        />
+        <path
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M26.562 20.313c-.937-2-6.508-13.948-8.287-16.63a4.612 4.612 0 0 0-6.5-1.31 4.61 4.61 0 0 0-1.31 6.498c1.318 1.985 6.516 7.864 9.727 11.441h6.37z"
+            stroke="#48DBB4"
+            strokeWidth={2.5}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        />
+        <path
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M35.938 20.313H14.061a3.125 3.125 0 0 0-3.124 3.125v6.25h28.124v-6.25c0-1.726-1.399-3.125-3.124-3.125z"
+            stroke="#000"
+            strokeWidth={2.5}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        />
+    </svg>
+);
+
+Switch.propTypes = {
+    height: PropTypes.string,
+    width: PropTypes.string
+};
+
+Switch.defaultProps = {
+    height: '50',
+    width: '50'
+};
+
 const Telegram = ({ color, height, width }) => (
     <svg height={height} width={width} version="1.1" x="0px" y="0px" viewBox="0 0 26.649 26.649" >
         <g>
@@ -430,6 +812,51 @@ Twitter.defaultProps = {
     color: '#505E5B',
     height: '24px',
     width:'30px'
+};
+
+export const Wallet = ({ height, width }) => (
+    <svg width={width} height={height} fill="none" viewBox="0 0 50 50">
+        <path
+            d="M39.063 13.542L34.21 3.838a3.125 3.125 0 0 0-4.193-1.398L7.813 13.542"
+            stroke="#48DBB4"
+            strokeWidth={2.5}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        />
+        <path
+            d="M45.313 38.542v3.125a6.25 6.25 0 0 1-6.25 6.25H7.813a6.25 6.25 0 0 1-6.25-6.25V19.792a6.25 6.25 0 0 1 6.25-6.25h31.25a6.25 6.25 0 0 1 6.25 6.25v3.125"
+            stroke="#000"
+            strokeWidth={2.5}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        />
+        <path
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M45.313 38.542c1.725 0 3.124-1.4 3.124-3.125v-9.375c0-1.726-1.399-3.125-3.124-3.125H37.5a7.813 7.813 0 0 0 0 15.625h7.813z"
+            stroke="#48DBB4"
+            strokeWidth={2.5}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        />
+        <path
+            d="M37.5 29.948a.781.781 0 1 1 0 1.563.781.781 0 0 1 0-1.563"
+            stroke="#48DBB4"
+            strokeWidth={2.5}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        />
+    </svg>
+);
+
+Wallet.propTypes = {
+    height: PropTypes.string,
+    width: PropTypes.string
+};
+
+Wallet.defaultProps = {
+    height: '50',
+    width: '50'
 };
 
 export {

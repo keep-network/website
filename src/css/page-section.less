@@ -30,11 +30,9 @@
         .blurb-panel {
             padding: 60px;
             background-color: @background-med-color;
-            text-align: center;
-
-            > div {
-                display: inline-block;
-            }
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .blurb-icon {
@@ -52,6 +50,12 @@
         p {
             margin: 0;
             line-height: 22px;
+        }
+    }
+
+    @media @mobile {
+        &.blurb-desktop {
+            display: none;
         }
     }
 }

@@ -39,6 +39,44 @@ ArrowRight.defaultProps = {
     width:'56'
 };
 
+export const Axe = ({ height, width }) => (
+    <svg width={width} height={height} fill="none" viewBox="0 0 50 50">
+        <path
+            d="M25.063 29.375a16.02 16.02 0 0 1 2.675 8.187 1.558 1.558 0 0 0 1.525 1.49A18.729 18.729 0 0 0 48.43 19.885a1.565 1.565 0 0 0-1.492-1.525 16.009 16.009 0 0 1-8.188-2.69M34.334 11.25a16.02 16.02 0 0 1-2.684-8.198 1.562 1.562 0 0 0-1.524-1.485 18.73 18.73 0 0 0-19.167 19.166 1.56 1.56 0 0 0 1.49 1.525 16.008 16.008 0 0 1 8.193 2.68"
+            stroke="#48DBB4"
+            strokeWidth={2.5}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        />
+        <path
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M36.323 9.258a3.125 3.125 0 0 1 4.42 4.42L6.897 47.522a3.126 3.126 0 1 1-4.42-4.42L36.323 9.257z"
+            stroke="#000"
+            strokeWidth={2.5}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        />
+        <path
+            d="M17.567 23.333A12.5 12.5 0 0 1 32.729 8.177M26.668 32.433a12.5 12.5 0 0 0 15.156-15.162"
+            stroke="#000"
+            strokeWidth={2.5}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        />
+    </svg>
+);
+
+Axe.propTypes = {
+    height: PropTypes.string,
+    width: PropTypes.string
+};
+
+Axe.defaultProps = {
+    height: '50',
+    width:'50'
+};
+
 export const Book = ({ height, width, color }) => (
     <svg width={width} height={height} fill="none" viewBox="0 0 50 50">
         <path

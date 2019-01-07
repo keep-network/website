@@ -148,7 +148,7 @@ class App extends Component {
                             </div>
                         </div>
                     </PageSection>
-                    <PageSection id={sections.DEFINITION} additionalClassNames={['blurb']}>
+                    <PageSection id={sections.DEFINITION} additionalClassNames={['blurb', 'blurb-desktop']}>
                         <div className="blurb-panel">
                             <div className="blurb-icon">
                                 <Icons.CastleGate />
@@ -403,15 +403,15 @@ class App extends Component {
                             </Col>
                         </Row>
                     </PageSection>
-                    <PageSection id={sections.DESCRIPTION} additionalClassNames={['blurb']}>
-                        <Row>
-                            <Col sm={12} md={3}>
-                                <img alt="swords" src={Icons.swords} />
-                            </Col>
-                            <Col sm={12} md={9}>
+                    <PageSection id={sections.DESCRIPTION} additionalClassNames={['blurb', 'blurb-desktop']}>
+                        <div className="blurb-panel">
+                            <div className="blurb-icon">
+                                <Icons.Axe />
+                            </div>
+                            <div className="blurb-text">
                                 <p>Keeps provide a bridge between the world of public blockchains and private data. It enables a new wave of ground-up innovation for blockchain developers.</p>
-                            </Col>
-                        </Row>
+                            </div>
+                        </div>
                     </PageSection>
                     <PageSection id={sections.ADVISORS} convex>
                         <h2>Advisors</h2>

@@ -401,7 +401,7 @@ class App extends Component {
                         </div>
                     </PageSection>
                     <PageSection id={sections.ADVISORS} collapsible>
-                        <h2>Advisors</h2>
+                        <h2>Our Advisors</h2>
                         <Row>
                             <Col sm={12} md={4}>
                                 <Profile
@@ -508,10 +508,15 @@ class App extends Component {
                         </Row>
                     </PageSection>
                     <PageSection id={sections.HIRING} convex>
-                        <h2>We're Hiring!</h2>
                         <Row>
-                            <Col sm={12} md={12}>
-                                <p>Please email us at <a href="mailto:work@keep.network">work@keep.network</a> if you're interested in joining the Keep team.</p>
+                            <Col sm={12} md={6}>
+                                <h2>Interested in working with us?</h2>
+                                <h3>
+                                    email <span>work@keep.network</span>
+                                    <a className="btn btn-primary" href="mailto:work@keep.network">
+                                        <Icons.ArrowRight/>
+                                    </a>
+                                </h3>
                             </Col>
                         </Row>
                     </PageSection>
@@ -529,6 +534,7 @@ class App extends Component {
                                     <Icons.Telegram/>
                                 </a>
                             </div>
+                            <Picture className="half-circle" src={getSrc('/images/texture-circle-3', 'png', 3)} />
                         </Grid>
                     </footer>
                 </div>

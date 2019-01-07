@@ -331,8 +331,28 @@ body {
     }
 }
 
+.description {
+    .page-section-content {
+        @media @tablet-up {
+            &:before {
+                content: '';
+                display: block;
+                width: 100%;
+                height: 1px;
+                background-color: fade(@black, 50%);
+                position: absolute;
+                top: 50%;
+                left: 0;
+                z-index: -1;
+            }
+        }
+    }
+}
+
 .partners,
 .supporters {
+    background-color: @background-med-color;
+
     .row {
         > * {
             img {
@@ -361,6 +381,8 @@ body {
 }
 
 .supporters {
+    border-top: 1px solid fade(@black, 50%);
+
     @media @tablet-up {
         .row {
             margin-bottom: 75px;
@@ -380,9 +402,61 @@ body {
     }
 }
 
+.hiring {
+    background-color: @black;
+    color: @white;
+
+    h3 {
+        font-weight: 400;
+        
+        span {
+            font-weight: 700;
+        }
+    }
+
+    .btn {
+        background-color: @link-color;
+
+        svg {
+            path {
+                stroke: @black;
+            }
+        }
+    }
+
+    @media @tablet-up {
+        h2 {
+            width: 80%;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            margin-left: 20px;
+        }
+    }
+
+    @media @mobile {
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            font-size: 20px;
+        }
+
+        .btn {
+            display: block;
+            max-width: 177px;
+            margin: 30px auto;
+        }
+    }
+}
+
 footer {
+    position: relative;
     padding: 30px 0 60px;
-    background-color: @background-dark-color;
+    background-color: @black;
+    color: @white;
 
     .social-footer {
         display: flex;
@@ -392,6 +466,25 @@ footer {
         a {
             display: inline-block;
             padding: 20px 15px;
+        }
+    }
+
+    .half-circle {
+        position: absolute;
+    }
+
+    @media @tablet-up {
+        .half-circle {
+            right: 0;
+            bottom: 50%;
+        }
+    }
+
+    @media @mobile {
+        .half-circle {
+            bottom: -102px;
+            left: 50%;
+            transform: rotate(90deg) translateY(30%);
         }
     }
 }

@@ -282,6 +282,27 @@ Keep.defaultProps = {
     width:'917.41333'
 };
 
+export const KeepCircle =({ color, height, width }) => (
+    <svg width={width} height={height} viewBox="0 0 50 50">
+        <path
+            d="M25 0C11.197 0 0 11.197 0 25s11.197 25 25 25 25-11.197 25-25C49.979 11.197 38.782 0 25 0zm10.483 19.412h-1.575l-4.77 5.567 4.77 5.567h1.575v4.475H25.357v-4.433h1.576l-3.13-3.655H22.52v3.655h1.786v4.433h-9.811v-4.475h2.122V19.412h-2.122v-4.475h2.416v1.66h1.302v-1.66h2.374v1.66h1.303v-1.66h2.395v4.412H22.5v3.655h1.282l3.13-3.655h-1.576v-4.412h10.126v4.475h.021z"
+            fill={color}
+        />
+    </svg>
+);
+
+KeepCircle.propTypes = {
+    color: PropTypes.string,
+    height: PropTypes.string,
+    width: PropTypes.string
+};
+
+KeepCircle.defaultProps = {
+    color: '#F2F2F2',
+    height: '50',
+    width: '50'
+};
+
 export const Github = ({ color, height, width }) => (
     <svg width={width} height={height} viewBox="0 0 129 35">
         <g fill={color} fillRule="evenodd">

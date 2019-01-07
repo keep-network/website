@@ -522,18 +522,23 @@ class App extends Component {
                     </PageSection>
                     <footer>
                         <Grid>
-                            <span>&#169; 2018 Keep. All Rights Reserved.</span>
-                            <div className="social-footer">
-                                <a href="https://twitter.com/keep_project" rel="noopener noreferrer" target="_blank">
-                                    <Icons.Twitter color="#91ABA5" />
-                                </a>
-                                <a href="https://www.reddit.com/r/KeepNetwork/" rel="noopener noreferrer" target="_blank">
-                                    <Icons.Reddit/>
-                                </a>
-                                <a href="https://t.me/KeepNetworkOfficial/" rel="noopener noreferrer" target="_blank">
-                                    <Icons.Telegram/>
-                                </a>
+                            <div className="footer-columns">
+                                <div className="footer-column-1">
+                                    <Icons.KeepCircle />
+                                </div>
+                                <ul className="footer-column-2">
+                                    <li><a href={WHITEPAPER_URL} rel="noopener noreferrer" target="_blank">Whitepaper</a></li>
+                                    <li><a href="#team">Team</a></li>
+                                    <li><a href="#advisors">Advisors</a></li>
+                                    <li><a href="https://blog.keep.network" rel="noopener noreferrer" target="_blank">Blog</a></li>
+                                </ul>
+                                <ul className="footer-column-3">
+                                    <li><a href="https://twitter.com/keep_project" rel="noopener noreferrer" target="_blank">Twitter</a></li>
+                                    <li><a href="https://t.me/KeepNetworkOfficial/" rel="noopener noreferrer" target="_blank">Telegram</a></li>
+                                    <li><a href="https://www.reddit.com/r/KeepNetwork/" rel="noopener noreferrer" target="_blank">Reddit</a></li>
+                                </ul>
                             </div>
+                            <span>&#169; 2019 Keep. All Rights Reserved.</span>
                             <Picture className="half-circle" src={getSrc('/images/texture-circle-3', 'png', 3)} />
                         </Grid>
                     </footer>

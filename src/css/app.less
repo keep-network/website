@@ -458,15 +458,33 @@ footer {
     background-color: @black;
     color: @white;
 
-    .social-footer {
+    .footer-columns {
         display: flex;
-        align-items: center;
-        justify-content: center;
+        align-items: flex-start;
 
-        a {
+        > * {
             display: inline-block;
-            padding: 20px 15px;
         }
+
+        ul {
+            padding: 0 50px 30px;
+        }
+
+        li {
+            list-style: none;
+
+            a {
+                color: @white;
+                font-weight: 700;
+                font-size: 20px;
+            }
+        }
+    }
+
+    span {
+        font-size: 14px;
+        font-weight: 700;
+        color: #4c4c4c;
     }
 
     .half-circle {
@@ -481,10 +499,33 @@ footer {
     }
 
     @media @mobile {
+        padding: 30px 0 220px;
+        .footer-columns {
+            ul {
+                padding: 0 0 30px 30px;
+            }
+
+            li {
+                a {
+                    font-size: 18px;
+                }
+            }
+        }
+
         .half-circle {
             bottom: -102px;
             left: 50%;
             transform: rotate(90deg) translateY(30%);
+        }
+    }
+
+    @media (max-width: 340px) {
+        .footer-columns {
+            li {
+                a {
+                    font-size: 16px;
+                }
+            }
         }
     }
 }

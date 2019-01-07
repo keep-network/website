@@ -113,43 +113,40 @@ class App extends Component {
                             </Col>
                         </Row>
                     </PageSection>
-                    <PageSection id={sections.LEARN} convex>
-                        <Row>
-                            <Col sm={12} md={6}>
-                                <h2 className="h1">
-                                    Find out how to use Keep
-                                </h2>
-                            </Col>
-                            <Col sm={12} md={6}>
-                                <div>
-                                    <img alt="Paper Study" src={Icons.paperStudy} />
-                                    <h3>Read the Whitepaper</h3>
-                                    <p>Find out how you can use Keep</p>
-                                    <Button
-                                        href={WHITEPAPER_URL}
-                                        download="Keep Whitepaper"
-                                        rel="noopener noreferrer"
-                                        target="_blank"
-                                        bsSize="large">
-                                        download
-                                    </Button>
-                                </div>
-                                <div>
-                                    <img alt="Paper Study" src={Icons.paperStudy} />
-                                    <h3>Read the Business Primer</h3>
-                                    <p>Find out how you can use Keep</p>
-                                    <Button
-                                        href="/KeepBusinessPrimer.pdf"
-                                        bsStyle="primary"
-                                        download="Keep Business Primer"
-                                        rel="noopener noreferrer"
-                                        target="_blank"
-                                        bsSize="large">
-                                        download
-                                    </Button>
-                                </div>
-                            </Col>
-                        </Row>
+                    <PageSection id={sections.LEARN}>
+                        <div className="col">
+                            <h2 className="h1">
+                                Find out how to use Keep
+                            </h2>
+                        </div>
+                        <div className="col">
+                            <div>
+                                <Icons.Book />
+                                <h4>Whitepaper</h4>
+                                <Button
+                                    href={WHITEPAPER_URL}
+                                    bsStyle="primary"
+                                    download="Keep Whitepaper"
+                                    rel="noopener noreferrer"
+                                    target="_blank"
+                                    bsSize="large">
+                                    Download
+                                </Button>
+                            </div>
+                            <div>
+                                <Icons.Strategy />
+                                <h4>Business Primer</h4>
+                                <Button
+                                    href="/KeepBusinessPrimer.pdf"
+                                    bsStyle="primary"
+                                    download="Keep Business Primer"
+                                    rel="noopener noreferrer"
+                                    target="_blank"
+                                    bsSize="large">
+                                    Download
+                                </Button>
+                            </div>
+                        </div>
                     </PageSection>
                     <PageSection id={sections.DEFINITION} additionalClassNames={['blurb']}>
                         <Row>

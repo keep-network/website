@@ -52,8 +52,6 @@ body {
 
 .home {
     h1 {
-        line-height: 73px;
-
         @media @tablet-up {
             margin: 40px 0 1em;
         }
@@ -139,19 +137,94 @@ body {
 
 .learn {
     background-color: @link-color;
+    padding: 0;
 
-    @media @md-up {
-        .row {
-            display: flex;
-            align-items: flex-end;
+    .page-section-content {
+        @media @tablet-up {
+            &:after {
+                content: '';
+                display: block;
+                width: 50%;
+                height: 1px;
+                background-color: fade(@white, 50%);
+                position: absolute;
+                left: 50%;
+                top: 50%;
+            }
         }
     }
 
-    @media @sm {
-        .row {
-            > * {
-                padding: 35px 15px;
+    .container {
+        @media @tablet-up {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    .col {
+        @media @tablet-up {
+            width: 50%;
+
+            &:last-of-type {
+                border-left: 1px solid fade(@white, 50%);
             }
+        }
+    }
+
+    h2 {
+        @media @tablet-up {
+            margin: 0;
+        }
+
+        @media @sm {
+            padding: 60px 60px 0;
+        }
+    }
+
+    .col > div {
+        text-align: center;
+        padding: 75px 50px;
+
+        @media @md-up {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        @media @sm {
+            svg {
+                margin-right: 20px;
+                position: relative;
+                top: 15px;
+            }
+        }
+
+        @media @mobile {
+            &:last-of-type {
+                border-top: 1px solid fade(@white, 50%);
+            }
+        }
+    }
+
+    h4 {
+        font-size: 25px;
+        font-weight: 600;
+        color: @white;
+
+        @media @md-up {
+            width: 50%;
+        }
+
+        @media @sm {
+            display: inline;
+        }
+    }
+
+    .btn {
+        @media @sm {
+            display: block;
+            margin: 40px auto 0;
+            max-width: 177px;
         }
     }
 }

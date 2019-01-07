@@ -39,11 +39,11 @@ ArrowRight.defaultProps = {
     width:'56'
 };
 
-export const Book = ({ height, width }) => (
+export const Book = ({ height, width, color }) => (
     <svg width={width} height={height} fill="none" viewBox="0 0 50 50">
         <path
             d="M37.5 8.633a64.908 64.908 0 0 1 9.858-.82c.284-.005.558.103.763.3.2.194.315.461.316.741v32.85a1.052 1.052 0 0 1-1.041 1.042C30.119 42.96 25 48.437 25 48.437m0 0V13.505s-5.115-5.47-22.358-5.692a1.077 1.077 0 0 0-.767.3c-.2.196-.312.463-.313.742v32.85a1.052 1.052 0 0 0 1.042 1.042C19.881 42.96 25 48.437 25 48.437z"
-            stroke="#F2F2F2"
+            stroke={color}
             strokeWidth={3}
             strokeLinecap="round"
             strokeLinejoin="round"
@@ -58,14 +58,16 @@ export const Book = ({ height, width }) => (
             strokeLinejoin="round"
         />
     </svg>
-)
+);
 
 Book.propTypes = {
+    color: PropTypes.string,
     height: PropTypes.string,
     width: PropTypes.string
 };
 
 Book.defaultProps = {
+    color: '#F2F2F2',
     height: '50',
     width:'50'
 };
@@ -269,6 +271,37 @@ Slack.defaultProps = {
     color: '#48DBB4',
     height: '37px',
     width: '129px'
+};
+
+export const Strategy = ({ height, width }) => (
+    <svg width={width} height={height} fill="none" viewBox="0 0 50 50">
+        <path
+            d="M11.208 27.984C19.852 30.692 25 35.9 25 45.732v2.708M38.792 27.984C30.148 30.692 25 35.9 25 45.732v2.708M25 12.5v33.231"
+            stroke="#F2F2F2"
+            strokeWidth={3}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        />
+        <path
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M20.106 12.5a1.152 1.152 0 0 1-.992-1.737l4.894-8.68a1.152 1.152 0 0 1 1.983 0l4.896 8.678a1.154 1.154 0 0 1-.993 1.74h-9.788zM13.358 22.792a1.156 1.156 0 0 0-1.227-1.586l-9.583 1.348a1.152 1.152 0 0 0-.76 1.838l5.816 7.723a1.156 1.156 0 0 0 1.99-.254l1.875-4.534 1.89-4.535zM36.642 22.792a1.156 1.156 0 0 1 1.227-1.586l9.583 1.348a1.152 1.152 0 0 1 .76 1.838l-5.816 7.723a1.156 1.156 0 0 1-1.99-.254l-1.875-4.534-1.89-4.535z"
+            stroke="#000"
+            strokeWidth={3}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        />
+    </svg>
+);
+
+Strategy.propTypes = {
+    height: PropTypes.string,
+    width: PropTypes.string
+};
+
+Strategy.defaultProps = {
+    height: '50',
+    width: '50'
 };
 
 const Telegram = ({ color, height, width }) => (

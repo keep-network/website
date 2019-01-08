@@ -92,7 +92,9 @@ class App extends Component {
                                 </EmailForm>
                             </Col>
                             <Col xs={5} className="col-circles">
-                                <Picture src={getSrc('/images/texture-circle-2', 'png', 3)} />
+                                <div>
+                                    <Picture src={getSrc('/images/texture-circle-2', 'png', 3)} />
+                                </div>
                             </Col>
                         </Row>
                     </PageSection>

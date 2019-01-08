@@ -168,10 +168,35 @@ body {
         }
 
         .col-circles {
+            .aspect-ratio(1, 1);
+
+            &:after {
+                content: '';
+                display: block;
+                width: 100%;
+                padding-top: 50%;
+                padding-bottom: 40px;
+                background-color: @background-light-color;
+                position: absolute;
+                left: 0;
+                bottom: -40px;
+                z-index: -1;
+            }
+
             img {
                 transform: rotate(90deg);
                 transform-origin: center;
                 width: 100%;
+                position: absolute;
+                left: 0;
+            }
+        }
+    }
+
+    @media (max-width: 400px) {
+        .col-circles {
+            &:after {
+                padding-bottom: 0;
             }
         }
     }

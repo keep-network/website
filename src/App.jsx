@@ -184,8 +184,13 @@ class App extends Component {
                             <h4>Blockchain Storage Encryption</h4>
                         </div>
                         <div className="use-case">
-                            <Icons.Book color="#48dbb4" />
-                            <h4>Learn More in the Whitepaper</h4>
+                            <a href={WHITEPAPER_URL}
+                                download="Keep Whitepaper"
+                                rel="noopener noreferrer"
+                                target="_blank">
+                                <Icons.Book color="#48dbb4" />
+                                <h4>Learn More in the Whitepaper</h4>
+                            </a>
                         </div>
                         <div className="blurb-panel blurb-mobile">
                             <div className="blurb-icon">

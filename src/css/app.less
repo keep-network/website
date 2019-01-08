@@ -8,6 +8,7 @@
 @import 'profile';
 @import 'page-section';
 @import 'alerts';
+@import 'blurb';
 
 body {
     background-color: @background-light-color;
@@ -380,6 +381,12 @@ body {
                 border-bottom: 0;
             }
         }
+
+        @media @xs {
+            h4 {
+                font-size: 18px;
+            }
+        }
     }
 
     .page-section-content {
@@ -391,7 +398,7 @@ body {
                 top: 100px;
                 left: 50%;
                 width: 1px;
-                height: 100%;
+                height: 90%;
                 background-color: fade(@black, 50%);
             }
         }
@@ -413,6 +420,19 @@ body {
                     background-image: url(./images/wall-pattern@2x.png);
                 }
             }
+        }
+    }
+
+    .blurb-mobile {
+        @media @tablet-up {
+            display: none;
+        }
+
+        @media @mobile {
+            display: flex;
+            position: relative;
+            z-index: 1;
+            margin-top: 35px;
         }
     }
 }

@@ -187,6 +187,23 @@ class App extends Component {
                             <Icons.Book color="#48dbb4" />
                             <h4>Learn More in the Whitepaper</h4>
                         </div>
+                        <div className="blurb-panel blurb-mobile">
+                            <div className="blurb-icon">
+                                <Icons.CastleGate />
+                            </div>
+                            <div className="blurb-text">
+                                <p>Keep: <span>(n.)</span></p>
+                                <p>The strongest or central tower of a castle, acting as a final refuge</p>
+                            </div>
+                        </div>
+                        <div className="blurb-panel blurb-mobile">
+                            <div className="blurb-icon">
+                                <Icons.Axe />
+                            </div>
+                            <div className="blurb-text">
+                                <p>Keeps provide a bridge between the world of public blockchains and private data. It enables a new wave of ground-up innovation for blockchain developers.</p>
+                            </div>
+                        </div>
                     </PageSection>
                     <PageSection id={sections.TEAM} collapsible>
                         <h2>Our Team</h2>

@@ -213,7 +213,7 @@ body {
             height: 30px;
 
             position: relative;
-            top: 1px;
+            top: 2px;
         }
     }
 
@@ -266,23 +266,32 @@ body {
     }
 
     h2 {
+        @media @xl {
+            width: 80%;
+        }
+
         @media @tablet-up {
             margin: 0;
         }
 
-        @media @sm {
-            padding: 60px 60px 0;
+        @media @mobile {
+            padding: 20px 30px 0;
+        }
+
+        @media (min-width: 480px) and (max-width: 767px) {
+            text-align: center;
         }
     }
 
     .col > div {
         text-align: center;
-        padding: 75px 50px;
+        padding: 75px 0;
 
-        @media @md-up {
+        @media @xl {
             display: flex;
             align-items: center;
             justify-content: space-around;
+            padding: 75px 50px;
         }
 
         @media @sm {
@@ -294,6 +303,12 @@ body {
         }
 
         @media @mobile {
+            padding: 40px 0 50px;
+
+            &:first-of-type {
+                padding: 20px 0 50px;
+            }
+
             &:last-of-type {
                 border-top: 1px solid fade(@white, 50%);
             }
@@ -305,7 +320,7 @@ body {
         font-weight: 600;
         color: @white;
 
-        @media @md-up {
+        @media @xl {
             width: 50%;
         }
 

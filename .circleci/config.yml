@@ -7,7 +7,7 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-          key: v2-dependency-cache-{{ checksum "package.json" }}
+          key: v3-dependency-cache-{{ checksum "package.json" }}
       - run:
           name: Install less compiler
           command: sudo npm install less@3.0.1 -g
@@ -15,7 +15,7 @@ jobs:
           name: Install node dependencies
           command: npm install
       - save_cache:
-          key: v2-dependency-cache-{{ checksum "package.json" }}
+          key: v3-dependency-cache-{{ checksum "package.json" }}
           paths:
             - ./node_modules
       - run:
@@ -29,12 +29,12 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-          key: v2-dependency-cache-{{ checksum "package.json" }}
+          key: v3-dependency-cache-{{ checksum "package.json" }}
       - run:
           name: Install node dependencies
           command: npm install
       - save_cache:
-          key: v2-dependency-cache-{{ checksum "package.json" }}
+          key: v3-dependency-cache-{{ checksum "package.json" }}
           paths:
             - ./node_modules
       - run:

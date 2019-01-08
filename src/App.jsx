@@ -424,12 +424,12 @@ class App extends Component {
                     <PageSection id={sections.PARTNERS} convex>
                         <h2>Our Partners</h2>
                         <Row>
-                            <Col sm={12} md={4} mdPush={1}>
+                            <Col xs={12} sm={4} smPush={1}>
                                 <a href="https://lendroid.com/" rel="noopener noreferrer" target="_blank">
                                     <Picture src={getSrc('/images/logos/lendroidLogo', 'png', 3)} />
                                 </a>
                             </Col>
-                            <Col sm={12} md={4} mdPush={3}>
+                            <Col xs={12} sm={4} smPush={3}>
                                 <a href="https://district0x.io/" rel="noopener noreferrer" target="_blank">
                                     <Picture src={getSrc('/images/logos/district0x_logo', 'png', 3)} />
                                 </a>
@@ -439,30 +439,30 @@ class App extends Component {
                     <PageSection id={sections.SUPPORTERS} convex>
                         <h2>Our Supporters</h2>
                         <Row>
-                            <Col sm={12} md={4}>
+                            <Col xs={12} sm={4}>
                                 <a href="http://polychain.capital/" rel="noopener noreferrer" target="_blank">
                                     <Picture src={getSrc('/images/logos/polychainLogo', 'png', 3)} />
                                 </a>
                             </Col>
-                            <Col sm={12} md={4}>
+                            <Col xs={12} sm={4}>
 
                                 <a href="https://a16z.com/" rel="noopener noreferrer" target="_blank">
                                     <Picture src={getSrc('/images/logos/andreessenHorowitzLogo', 'png', 3)} />
                                 </a>
                             </Col>
-                            <Col sm={12} md={4}>
+                            <Col xs={12} sm={4}>
                                 <a href="http://www.dhvc.com/" rel="noopener noreferrer" target="_blank">
                                     <Picture src={getSrc('/images/logos/DHVCLogo', 'png', 3)} />
                                 </a>
                             </Col>
                         </Row>
                         <Row>
-                            <Col sm={12} md={4} mdPush={2}>
+                            <Col xs={12} sm={4} smPush={2}>
                                 <a href="http://www.draper.vc/" rel="noopener noreferrer" target="_blank">
                                     <Picture src={getSrc('/images/logos/draperAssociatesLogo', 'png', 3)} />
                                 </a>
                             </Col>
-                            <Col sm={12} md={4} mdPush={2}>
+                            <Col xs={12} sm={4} smPush={2}>
                                 <a href="https://www.distributedcapital.io/" rel="noopener noreferrer" target="_blank">
                                     <Picture src={getSrc('/images/logos/distributedCapPartnersLogo', 'png', 3)} />
                                 </a>

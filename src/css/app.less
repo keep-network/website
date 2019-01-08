@@ -497,18 +497,20 @@ body {
             }
         }
     }
+
+    @media @mobile {
+        text-align: center;
+
+        h2 {
+            text-align: left;
+        }
+    }
 }
 
 .partners {
     @media @sm {
         .col-md-4 {
             margin: 0 auto 30px;
-        }
-    }
-
-    @media @mobile {
-        .container {
-            padding: 100px 0 150px;
         }
     }
 }
@@ -523,10 +525,6 @@ body {
     }
 
     @media @mobile {
-        .container {
-            padding: 0 0 50px;
-        }
-
         .row {
             > * {
                 margin-bottom: 20px;

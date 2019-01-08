@@ -518,9 +518,15 @@ body {
 .supporters {
     border-top: 1px solid fade(@black, 50%);
 
+    .row {
+        text-align: center;
+    }
+
     @media @tablet-up {
         .row {
             margin-bottom: 75px;
+            display: flex;
+            align-items: center;
         }
     }
 

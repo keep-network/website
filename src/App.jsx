@@ -457,14 +457,19 @@ class App extends Component {
                             </Col>
                         </Row>
                         <Row>
-                            <Col xs={12} sm={4} smPush={2}>
+                            <Col xs={12} sm={4}>
                                 <a href="http://www.draper.vc/" rel="noopener noreferrer" target="_blank">
                                     <Picture src={getSrc('/images/logos/draperAssociatesLogo', 'png', 3)} />
                                 </a>
                             </Col>
-                            <Col xs={12} sm={4} smPush={2}>
+                            <Col xs={12} sm={4}>
                                 <a href="https://www.distributedcapital.io/" rel="noopener noreferrer" target="_blank">
                                     <Picture src={getSrc('/images/logos/distributedCapitalPartnersLogo', 'png', 3)} />
+                                </a>
+                            </Col>
+                            <Col xs={12} sm={4}>
+                                <a href="https://www.fabric.vc/" rel="noopener noreferrer" target="_blank">
+                                    <Picture src={getSrc('/images/logos/fabricVenturesLogo', 'png', 3)} />
                                 </a>
                             </Col>
                         </Row>

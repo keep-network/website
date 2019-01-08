@@ -16,10 +16,6 @@
         margin-bottom: 0;
     }
 
-    .see-all {
-        display: none;
-    }
-
     @media @tablet-up {
         padding: 100px 0;
 
@@ -28,9 +24,7 @@
         }
     }
 
-    &.collapsed {
-        overflow: hidden;
-
+    &.collapsible {
         .container {
             position: relative;
         }
@@ -38,10 +32,11 @@
         .see-all {
             display: block;
             cursor: pointer;
-            position: absolute;
-            right: 0;
             font-size: 25px;
             font-weight: 800;
+            position: absolute;
+            right: 15px;
+            bottom: 0;
 
             svg {
                 path {
@@ -50,17 +45,61 @@
             }
         }
 
+        .profile {
+            transition: opacity 0.25s ease-in;
+        }
+    }
+
+    &.collapsed {
+        overflow: hidden;
+
         @media @tablet-up {
             max-height: 780px;
 
-            .row {
-                &:first-of-type {
-                    margin-bottom: 150px;
+            .profile {
+                &:nth-child(n+6) {
+                    opacity: 0;
                 }
             }
 
             .see-all {
                 top: 600px;
+            }
+        }
+
+        @media @mobile {
+            max-height: 700px;
+
+            .profile {
+                &:nth-child(n+5) {
+                    opacity: 0;
+                }
+            }
+
+            .see-all {
+                top: 550px;
+            }
+        }
+
+        @media @xs {
+            max-height: 600px;
+
+            .profile {
+                &:nth-child(n+4) {
+                    opacity: 0;
+                }
+            }
+
+            .see-all {
+                top: 460px;
+            }
+        }
+
+        @media (max-width: 365px) {
+            max-height: 550px;
+
+            .see-all {
+                top: 440px;
             }
         }
     }

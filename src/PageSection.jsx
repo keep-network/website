@@ -21,7 +21,8 @@ class PageSection extends Component {
         const { isCollapsed } = this.state
 
         const classes = classNames('page-section',
-            { collapsed: isCollapsed }, id, additionalClassNames)
+            { collapsible: collapsible, collapsed: isCollapsed }, id,
+            additionalClassNames)
 
         return (
             <section className={classes} id={id}>
@@ -32,7 +33,8 @@ class PageSection extends Component {
                             collapsible ? (
                                 <h4 className="see-all"
                                     onClick={this.toggleCollapse}>
-                                    See all <ArrowRight />
+                                    { isCollapsed ? 'See all' : 'See less' }
+                                    <ArrowRight />
                                 </h4>
                             ) : ''
                         }

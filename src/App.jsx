@@ -464,7 +464,7 @@ class App extends Component {
                             </Col>
                             <Col xs={12} sm={4} smPush={2}>
                                 <a href="https://www.distributedcapital.io/" rel="noopener noreferrer" target="_blank">
-                                    <Picture src={getSrc('/images/logos/distributedCapPartnersLogo', 'png', 3)} />
+                                    <Picture src={getSrc('/images/logos/distributedCapitalPartnersLogo', 'png', 3)} />
                                 </a>
                             </Col>
                         </Row>

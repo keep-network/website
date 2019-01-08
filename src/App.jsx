@@ -68,37 +68,37 @@ class App extends Component {
                 <div className="main-content">
                     <PageSection id={sections.HOME}>
                         <Row>
-                            <Col sm={12} md={6}>
+                            <Col xs={7}>
                                 <h1>A privacy layer for Ethereum</h1>
                                 <p>A keep is an off-chain container for private data. Keeps help contracts harness the full power of the public blockchain &mdash; enabling deep interactivity with private data.</p>
                             </Col>
-                            <Col sm={12} md={6} className="col-circles">
+                            <Col xs={5} className="col-circles">
                                 <Picture src={getSrc('/images/texture-circle', 'png', 3)} />
                             </Col>
                         </Row>
                     </PageSection>
                     <PageSection id={sections.SLACK}>
                         <Row className="slack-signup">
-                            <Col sm={12} md={6}>
+                            <Col xs={7}>
                                 <EmailForm
                                     label="Slack Email"
                                     onSubmit={signupSlack}
                                     requestStates={ajaxRequestStates}
                                     request={actionTypes.SIGNUP_SLACK}>
                                     <h3>
-                                        Join our community in
+                                        Join our community on
                                         <Icons.Slack color="#AC6E16"/>
                                     </h3>
                                 </EmailForm>
                             </Col>
-                            <Col sm={12} md={6} className="col-circles">
+                            <Col xs={5} className="col-circles">
                                 <Picture src={getSrc('/images/texture-circle-2', 'png', 3)} />
                             </Col>
                         </Row>
                     </PageSection>
                     <PageSection id={sections.GITHUB}>
                         <Row>
-                            <Col sm={12} md={12}>
+                            <Col xs={12} md={12}>
                                 <h3>
                                     View the <Icons.Github /> Repository
                                     <Button

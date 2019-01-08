@@ -38,35 +38,63 @@ body {
     }
 }
 
-.page-section {
+.home,
+.slack {
     .col-circles {
-        @media @tablet-up {
-            text-align: right;
+        text-align: center;
 
-            img {
-                margin-right: -50px;
-            }
+        img {
+            max-width: 100%;
+        }
+    }
+
+    @media (min-width: 620px) {
+        .row {
+            display: flex;
+        }
+    }
+
+    @media (max-width: 619px) {
+        .row > div {
+            width: 100%;
         }
     }
 }
 
 .home {
     h1 {
-        @media @tablet-up {
-            margin: 40px 0 1em;
-        }
-
-		@media screen and (min-width: 767px) and (max-width: 992px) {
-			font-size: 41px;
-		}
+        margin: 40px 0 1em;
     }
 
     p {
         color: @accent-text-color;
     }
 
+    @media @xl {
+        h1, p {
+            width: 85%;
+        }
+    }
+
     @media @tablet-up {
         padding: 140px 0 0;
+    }
+
+    @media @mobile {
+        padding: 40px 0 0;
+    }
+
+    @media (min-width: 768px) and (max-width: 991px) {
+        h1 {
+            font-size: 40px;
+            line-height: 42px;
+        }
+    }
+
+    @media (min-width: 620px) {
+        .col-circles {
+            align-self: flex-end;
+        }
     }
 }
 
@@ -75,10 +103,7 @@ body {
 
     h3 {
         color: @accent-text-color;
-
-        @media @tablet-up {
-            margin: 10px 0 30px;
-        }
+        margin: 10px 0 30px;
 
         svg {
             position: relative;
@@ -92,19 +117,63 @@ body {
         .success-message {
             .h3;
             color: @accent-text-color;
-
-            @media @tablet-up {
-                padding: 60px 0 0;
-            }
-        }
-
-        @media @tablet-up {
-            margin: 110px 0 0;
         }
     }
 
-    @media @tablet-up {
+    @media @mobile {
+        h3 {
+            font-size: 22px;
+
+            svg {
+                width: 104px;
+                height: 30px;
+                top: 12px;
+            }
+        }
+
+        .email-form .success-message {
+            font-size: 22px;
+        }
+    }
+
+    @media (min-width: 620px) {
         padding: 0;
+
+        .col-xs-7 {
+            align-self: center;
+        }
+
+        .col-circles {
+            align-self: flex-start;
+        }
+    }
+
+    @media (max-width: 619px) {
+        text-align: center;
+
+        h3,
+        .email-form .success-message {
+            font-weight: 400;
+        }
+
+        .form-inline,
+        .form-group {
+            display: block;
+        }
+
+        .btn {
+            display: block;
+            width: 177px;
+            margin: 10px auto 20px;
+        }
+
+        .col-circles {
+            img {
+                transform: rotate(90deg);
+                transform-origin: center;
+                width: 100%;
+            }
+        }
     }
 }
 

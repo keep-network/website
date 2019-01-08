@@ -16,10 +16,49 @@
                 color: @body-text-color;
                 text-transform: uppercase;
                 cursor: pointer;
+                transition: all 0.25s ease-in;
 
                 @media @tablet-up {
                     width: 168px;
                     border-right: 0.25px solid @border-color;
+                    position: relative;
+
+                    &:hover,
+                    &:focus,
+                    &:active,
+                    &.active.focus,
+                    &:active:focus,
+                    &.active,
+                    &.focus {
+                        &:after {
+                            display: block;
+                            content: '';
+                            width: 100%;
+                            height: 3px;
+                            position: absolute;
+                            bottom: -4px;
+                            left: 0;
+                        }
+                    }
+
+                    &:hover {
+                        &:after {
+                            background-color: @black;
+                        }
+                    }
+
+                    &:focus,
+                    &:active,
+                    &.active.focus,
+                    &:active:focus,
+                    &.active,
+                    &.focus {
+                        font-weight: 700;
+
+                        &:after {
+                            background-color: @link-color;
+                        }
+                    }
                 }
 
                 @media (min-width: 768px) and (max-width: 991px) {

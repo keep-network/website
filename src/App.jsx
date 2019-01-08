@@ -207,207 +207,161 @@ class App extends Component {
                     </PageSection>
                     <PageSection id={sections.TEAM} collapsible>
                         <h2>Our Team</h2>
-                        <Row>
-                            <Col sm={12} md={3}>
-                                <Profile
-                                    name="Matt Luongo"
-                                    title="Project Lead"
-                                    imagePath="/images/headshots/matt"
-                                    imageMaxRes={3}
-                                    twitter="https://twitter.com/mhluongo"
-                                    linkedin="https://www.linkedin.com/in/mattluongo"
-                                    github="https://github.com/mhluongo"
-                                    keybase="http://keybase.io/mhluongo" />
-                            </Col>
-                            <Col sm={12} md={3}>
-                                <Profile
-                                    name="Corbin Pon"
-                                    title="Developer & Ops"
-                                    imagePath="/images/headshots/corbin"
-                                    imageMaxRes={3}
-                                    twitter="https://twitter.com/CorbinPon"
-                                    linkedin="https://www.linkedin.com/in/corbinpon"
-                                    github="https://github.com/clp16"
-                                    keybase="http://keybase.io/corbinpon"/>
-                            </Col>
-                            <Col sm={12} md={3}>
-                                <Profile
-                                    name="Antonio Salazar Cardozo"
-                                    title="Tech Lead"
-                                    imagePath="/images/headshots/antonio"
-                                    imageType="png"
-                                    imageMaxRes={3}
-                                    twitter="https://twitter.com/lightfiend"
-                                    linkedin="https://www.linkedin.com/in/lightfiend"
-                                    github="https://github.com/Shadowfiend"
-                                    keybase="http://keybase.io/shadowfiend" />
-                            </Col>
-                            <Col sm={12} md={3}>
-                                <Profile
-                                    name="Laura Wallendal"
-                                    title="Growth"
-                                    imagePath="/images/headshots/laura"
-                                    imageMaxRes={3}
-                                    twitter="https://twitter.com/LauraWallendal"
-                                    linkedin="https://www.linkedin.com/in/laurawallendal"
-                                    keybase="http://keybase.io/lwallendal" />
-                            </Col>
-                        </Row>
-                        <Row>
-                            <Col sm={12} md={3}>
-                                <Profile
-                                    name="Prashanth Irudayaraj"
-                                    title="Ops & Research"
-                                    imagePath="/images/headshots/prashanth"
-                                    imageType="png"
-                                    imageMaxRes={3}
-                                    twitter="https://twitter.com/Zarathusthra"
-                                    linkedin="https://www.linkedin.com/in/pirudayaraj"
-                                    keybase="http://keybase.io/starsitar" />
-                            </Col>
-
-                            <Col sm={12} md={3}>
-                                <Profile
-                                    name="Nik Grinkevich"
-                                    title="Developer"
-                                    imagePath="/images/headshots/nik"
-                                    imageMaxRes={3}
-                                    twitter="https://twitter.com/ngrinkevich"
-                                    linkedin="https://www.linkedin.com/in/nikgrinkevich"
-                                    github="https://github.com/ngrinkevich"
-                                    keybase="https://keybase.io/nikgrinkevich" />
-                            </Col>
-                            <Col sm={12} md={3}>
-                                <Profile
-                                    name="Raghav Gulati"
-                                    title="Developer"
-                                    imagePath="/images/headshots/raghavGulati"
-                                    imageMaxRes={3}
-                                    twitter="https://twitter.com/rargulati"
-                                    linkedin="https://www.linkedin.com/in/rargulati/"
-                                    github="https://github.com/rargulati"
-                                    keybase="http://keybase.io/raj" />
-                            </Col>
-                            <Col sm={12} md={3}>
-                                <Profile
-                                    name="Philip Schlump"
-                                    title="Developer"
-                                    imagePath="/images/headshots/philipSchlump"
-                                    imageMaxRes={3}
-                                    twitter="https://twitter.com/pschlump"
-                                    linkedin="https://www.linkedin.com/in/philip-schlump-73100429/"
-                                    github="https://github.com/pschlump"
-                                    keybase="https://keybase.io/pschlump" />
-                            </Col>
-
-                        </Row>
-                        <Row>
-                            <Col sm={12} md={3}>
-                                <Profile
-                                    name="Piotr Dyraga"
-                                    title="Developer"
-                                    imagePath="/images/headshots/piotr"
-                                    imageMaxRes={3}
-                                    imageType="jpg"
-                                    twitter="https://twitter.com/piotrdyraga?lang=en"
-                                    linkedin="https://www.linkedin.com/in/piotrdyraga/"
-                                    github="https://github.com/pdyraga" />
-                            </Col>
-                            <Col sm={12} md={3}>
-                                <Profile
-                                    name="Jakub Nowakowski"
-                                    title="Developer"
-                                    imagePath="/images/headshots/jakub"
-                                    imageMaxRes={3}
-                                    imageType="jpg"
-                                    twitter="https://twitter.com/jnowakow8"
-                                    linkedin="https://www.linkedin.com/in/jnowakowski8/"
-                                    github="https://github.com/nkuba" />
-                            </Col>
-                            <Col sm={12} md={3}>
-                                <Profile
-                                    name="Erin Ng"
-                                    title="Developer"
-                                    imagePath="/images/headshots/erin"
-                                    imageMaxRes={3}
-                                    linkedin="https://www.linkedin.com/in/erinng/"
-                                    github="https://github.com/ironng"
-                                    keybase="http://keybase.io/ironng" />
-                            </Col>
-                            <Col sm={12} md={3}>
-                                <Profile
-                                    name="Marcin Pawlowski"
-                                    title="Developer"
-                                    imagePath="/images/headshots/marcin"
-                                    imageType="png"
-                                    imageMaxRes={3}
-                                    twitter="https://twitter.com/mpspp"
-                                    linkedin="https://www.linkedin.com/in/mpspp/"
-                                    github="https://github.com/madxor"
-                                    keybase="http://keybase.io/mpp" />
-                            </Col>
-                        </Row>
-                        <Row>
-                            <Col sm={12} md={3}>
-                                <Profile
-                                    name="Markus Fix"
-                                    title="Developer"
-                                    imagePath="/images/headshots/markus"
-                                    imageType="png"
-                                    imageMaxRes={3}
-                                    twitter="https://twitter.com/lispmeister"
-                                    linkedin="https://www.linkedin.com/in/lispmeister/"
-                                    github="https://github.com/lispmeister"
-                                    keybase="http://keybase.io/lispmeister" />
-                            </Col>
-                            <Col sm={12} md={3}>
-                                <Profile
-                                    name="Jack Knutson"
-                                    title="Community Manager"
-                                    imagePath="/images/headshots/jack"
-                                    imageType="png"
-                                    imageMaxRes={3}
-                                    twitter="https://twitter.com/KnutsonRussell"
-                                    linkedin="https://www.linkedin.com/in/jack-knutson-jr"
-                                    github="https://github.com/drknudy"
-                                    keybase="http://keybase.io/drknudy" />
-                            </Col>
-                            <Col sm={12} md={3}>
-                                <Profile
-                                    name="Eliza Petrovska"
-                                    title="Community Manager"
-                                    imagePath="/images/headshots/elizapetrovska_1"
-                                    imageType="png"
-                                    imageMaxRes={3}
-                                    twitter="https://twitter.com/elizapetrovska"
-                                    linkedin="https://www.linkedin.com/in/elizapetrovska/"
-                                    github="https://github.com/elizapetrovska"
-                                    keybase="http://keybase.io/elizapetrovska" />
-                            </Col>
-                            <Col sm={12} md={3}>
-                                <Profile
-                                    name="Hope Cowan"
-                                    title="Content Manager"
-                                    imagePath="/images/headshots/hope_cowen"
-                                    imageType="png"
-                                    imageMaxRes={3}
-                                    linkedin="https://www.linkedin.com/in/hopecowan/"
-                                    keybase="http://keybase.io/hecowan" />
-                            </Col>
-                        </Row>
-                        <Row>
-                            <Col sm={12} md={3}>
-                                <Profile
-                                    name="Aaron O'Hearn"
-                                    title="Growth Operations"
-                                    imagePath="/images/headshots/aaron"
-                                    imageType="png"
-                                    imageMaxRes={1}
-                                    twitter="https://twitter.com/aaron0"
-                                    linkedin="https://www.linkedin.com/in/aaronohearn/"
-                                    keybase="https://keybase.io/aohearn" />
-                            </Col>
-                        </Row>
+                        <Profile
+                            name="Matt Luongo"
+                            title="Project Lead"
+                            imagePath="/images/headshots/matt"
+                            imageMaxRes={3}
+                            twitter="https://twitter.com/mhluongo"
+                            linkedin="https://www.linkedin.com/in/mattluongo"
+                            github="https://github.com/mhluongo"
+                            keybase="http://keybase.io/mhluongo" />
+                        <Profile
+                            name="Corbin Pon"
+                            title="Developer & Ops"
+                            imagePath="/images/headshots/corbin"
+                            imageMaxRes={3}
+                            twitter="https://twitter.com/CorbinPon"
+                            linkedin="https://www.linkedin.com/in/corbinpon"
+                            github="https://github.com/clp16"
+                            keybase="http://keybase.io/corbinpon"/>
+                        <Profile
+                            name="Antonio Salazar Cardozo"
+                            title="Tech Lead"
+                            imagePath="/images/headshots/antonio"
+                            imageType="png"
+                            imageMaxRes={3}
+                            twitter="https://twitter.com/lightfiend"
+                            linkedin="https://www.linkedin.com/in/lightfiend"
+                            github="https://github.com/Shadowfiend"
+                            keybase="http://keybase.io/shadowfiend" />
+                        <Profile
+                            name="Laura Wallendal"
+                            title="Growth"
+                            imagePath="/images/headshots/laura"
+                            imageMaxRes={3}
+                            twitter="https://twitter.com/LauraWallendal"
+                            linkedin="https://www.linkedin.com/in/laurawallendal"
+                            keybase="http://keybase.io/lwallendal" />
+                        <Profile
+                            name="Prashanth Irudayaraj"
+                            title="Ops & Research"
+                            imagePath="/images/headshots/prashanth"
+                            imageType="png"
+                            imageMaxRes={3}
+                            twitter="https://twitter.com/Zarathusthra"
+                            linkedin="https://www.linkedin.com/in/pirudayaraj"
+                            keybase="http://keybase.io/starsitar" />
+                        <Profile
+                            name="Nik Grinkevich"
+                            title="Developer"
+                            imagePath="/images/headshots/nik"
+                            imageMaxRes={3}
+                            twitter="https://twitter.com/ngrinkevich"
+                            linkedin="https://www.linkedin.com/in/nikgrinkevich"
+                            github="https://github.com/ngrinkevich"
+                            keybase="https://keybase.io/nikgrinkevich" />
+                        <Profile
+                            name="Raghav Gulati"
+                            title="Developer"
+                            imagePath="/images/headshots/raghavGulati"
+                            imageMaxRes={3}
+                            twitter="https://twitter.com/rargulati"
+                            linkedin="https://www.linkedin.com/in/rargulati/"
+                            github="https://github.com/rargulati"
+                            keybase="http://keybase.io/raj" />
+                        <Profile
+                            name="Philip Schlump"
+                            title="Developer"
+                            imagePath="/images/headshots/philipSchlump"
+                            imageMaxRes={3}
+                            twitter="https://twitter.com/pschlump"
+                            linkedin="https://www.linkedin.com/in/philip-schlump-73100429/"
+                            github="https://github.com/pschlump"
+                            keybase="https://keybase.io/pschlump" />
+                        <Profile
+                            name="Piotr Dyraga"
+                            title="Developer"
+                            imagePath="/images/headshots/piotr"
+                            imageMaxRes={3}
+                            imageType="jpg"
+                            twitter="https://twitter.com/piotrdyraga?lang=en"
+                            linkedin="https://www.linkedin.com/in/piotrdyraga/"
+                            github="https://github.com/pdyraga" />
+                        <Profile
+                            name="Jakub Nowakowski"
+                            title="Developer"
+                            imagePath="/images/headshots/jakub"
+                            imageMaxRes={3}
+                            imageType="jpg"
+                            twitter="https://twitter.com/jnowakow8"
+                            linkedin="https://www.linkedin.com/in/jnowakowski8/"
+                            github="https://github.com/nkuba" />
+                        <Profile
+                            name="Erin Ng"
+                            title="Developer"
+                            imagePath="/images/headshots/erin"
+                            imageMaxRes={3}
+                            linkedin="https://www.linkedin.com/in/erinng/"
+                            github="https://github.com/ironng"
+                            keybase="http://keybase.io/ironng" />
+                        <Profile
+                            name="Marcin Pawlowski"
+                            title="Developer"
+                            imagePath="/images/headshots/marcin"
+                            imageType="png"
+                            imageMaxRes={3}
+                            twitter="https://twitter.com/mpspp"
+                            linkedin="https://www.linkedin.com/in/mpspp/"
+                            github="https://github.com/madxor"
+                            keybase="http://keybase.io/mpp" />
+                        <Profile
+                            name="Markus Fix"
+                            title="Developer"
+                            imagePath="/images/headshots/markus"
+                            imageType="png"
+                            imageMaxRes={3}
+                            twitter="https://twitter.com/lispmeister"
+                            linkedin="https://www.linkedin.com/in/lispmeister/"
+                            github="https://github.com/lispmeister"
+                            keybase="http://keybase.io/lispmeister" />
+                        <Profile
+                            name="Jack Knutson"
+                            title="Community Manager"
+                            imagePath="/images/headshots/jack"
+                            imageType="png"
+                            imageMaxRes={3}
+                            twitter="https://twitter.com/KnutsonRussell"
+                            linkedin="https://www.linkedin.com/in/jack-knutson-jr"
+                            github="https://github.com/drknudy"
+                            keybase="http://keybase.io/drknudy" />
+                        <Profile
+                            name="Eliza Petrovska"
+                            title="Community Manager"
+                            imagePath="/images/headshots/elizapetrovska_1"
+                            imageType="png"
+                            imageMaxRes={3}
+                            twitter="https://twitter.com/elizapetrovska"
+                            linkedin="https://www.linkedin.com/in/elizapetrovska/"
+                            github="https://github.com/elizapetrovska"
+                            keybase="http://keybase.io/elizapetrovska" />
+                        <Profile
+                            name="Hope Cowan"
+                            title="Content Manager"
+                            imagePath="/images/headshots/hope_cowen"
+                            imageType="png"
+                            imageMaxRes={3}
+                            linkedin="https://www.linkedin.com/in/hopecowan/"
+                            keybase="http://keybase.io/hecowan" />
+                        <Profile
+                            name="Aaron O'Hearn"
+                            title="Growth Operations"
+                            imagePath="/images/headshots/aaron"
+                            imageType="png"
+                            imageMaxRes={1}
+                            twitter="https://twitter.com/aaron0"
+                            linkedin="https://www.linkedin.com/in/aaronohearn/"
+                            keybase="https://keybase.io/aohearn" />
                     </PageSection>
                     <PageSection id={sections.DESCRIPTION} additionalClassNames={['blurb', 'blurb-desktop']}>
                         <div className="blurb-panel">
@@ -421,62 +375,46 @@ class App extends Component {
                     </PageSection>
                     <PageSection id={sections.ADVISORS} collapsible>
                         <h2>Our Advisors</h2>
-                        <Row>
-                            <Col sm={12} md={4}>
-                                <Profile
-                                    name="Brayton Williams"
-                                    title="Boost VC"
-                                    imagePath="/images/headshots/brayton"
-                                    imageMaxRes={3}
-                                    twitter="https://twitter.com/BraytonKey"
-                                    linkedin="https://www.linkedin.com/in/braytonwilliams" />
-                            </Col>
-                            <Col sm={12} md={4}>
-                                <Profile
-                                    name="John Packel"
-                                    title="Hard Core Decentralization Developer"
-                                    imagePath="/images/headshots/john"
-                                    imageMaxRes={3}
-                                    twitter="https://twitter.com/jpackel"
-                                    linkedin="https://www.linkedin.com/in/johnpackel" />
-                            </Col>
-                            <Col sm={12} md={4}>
-                                <Profile
-                                    name="James Prestwich"
-                                    title="Summa, formerly Storj Labs"
-                                    imagePath="/images/headshots/jamesPrestwich"
-                                    imageMaxRes={3}
-                                    linkedin="https://www.linkedin.com/in/prestwich" />
-                            </Col>
-                        </Row>
-                        <Row>
-                            <Col sm={12} md={4}>
-                                <Profile
-                                    name="Axel Blikstad"
-                                    title="International Finance"
-                                    imagePath="/images/headshots/axel"
-                                    imageMaxRes={3}
-                                    linkedin="https://www.linkedin.com/in/axel-blikstad-77534814" />
-                            </Col>
-                            <Col sm={12} md={4}>
-                                <Profile
-                                    name="Joseph Urgo"
-                                    title="district0x"
-                                    imagePath="/images/headshots/josephUrgo"
-                                    imageMaxRes={3}
-                                    twitter="https://twitter.com/jfurgo?lang=en"
-                                    linkedin="https://www.linkedin.com/in/joseph-urgo-a8b77983/" />
-                            </Col>
-                            <Col sm={12} md={4}>
-                                <Profile
-                                    name="Luis Cuende"
-                                    title="Aragon"
-                                    imagePath="/images/headshots/luisCuende"
-                                    imageMaxRes={3}
-                                    twitter="https://twitter.com/licuende?lang=en"
-                                    linkedin="https://www.linkedin.com/in/luisivancuende/" />
-                            </Col>
-                        </Row>
+                        <Profile
+                            name="Brayton Williams"
+                            title="Boost VC"
+                            imagePath="/images/headshots/brayton"
+                            imageMaxRes={3}
+                            twitter="https://twitter.com/BraytonKey"
+                            linkedin="https://www.linkedin.com/in/braytonwilliams" />
+                        <Profile
+                            name="John Packel"
+                            title="Hard Core Decentralization Developer"
+                            imagePath="/images/headshots/john"
+                            imageMaxRes={3}
+                            twitter="https://twitter.com/jpackel"
+                            linkedin="https://www.linkedin.com/in/johnpackel" />
+                        <Profile
+                            name="James Prestwich"
+                            title="Summa, formerly Storj Labs"
+                            imagePath="/images/headshots/jamesPrestwich"
+                            imageMaxRes={3}
+                            linkedin="https://www.linkedin.com/in/prestwich" />
+                        <Profile
+                            name="Axel Blikstad"
+                            title="International Finance"
+                            imagePath="/images/headshots/axel"
+                            imageMaxRes={3}
+                            linkedin="https://www.linkedin.com/in/axel-blikstad-77534814" />
+                        <Profile
+                            name="Joseph Urgo"
+                            title="district0x"
+                            imagePath="/images/headshots/josephUrgo"
+                            imageMaxRes={3}
+                            twitter="https://twitter.com/jfurgo?lang=en"
+                            linkedin="https://www.linkedin.com/in/joseph-urgo-a8b77983/" />
+                        <Profile
+                            name="Luis Cuende"
+                            title="Aragon"
+                            imagePath="/images/headshots/luisCuende"
+                            imageMaxRes={3}
+                            twitter="https://twitter.com/licuende?lang=en"
+                            linkedin="https://www.linkedin.com/in/luisivancuende/" />
                     </PageSection>
                     <PageSection id={sections.PARTNERS} convex>
                         <h2>Our Partners</h2>

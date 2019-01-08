@@ -13,6 +13,8 @@
 
 .profile {
     text-align: center;
+    display: inline-block;
+    padding: 0 5px 20px;
 
     h4 {
         margin-bottom: 12px;
@@ -43,7 +45,27 @@
         }
     }
 
+    @media @tablet-up {
+        width: 25%;
+    }
+
     @media @sm {
         margin-bottom: 50px;
+    }
+
+    @media @mobile {
+        width: 33.3333%;
+
+        h4 {
+            font-size: 16px;
+
+            span {
+                font-size: 20px;
+            }
+        }
+    }
+
+    @media @xs {
+        width: 50%;
     }
 }

@@ -102,7 +102,15 @@ class App extends Component {
                         <Row>
                             <Col xs={12} md={12}>
                                 <h3>
-                                    View the <Icons.Github /> Repository
+                                    View the
+                                    <a
+                                        className="github-logo"
+                                        href="https://github.com/keep-network"
+                                        rel="noopener noreferrer"
+                                        target="_blank">
+                                        GitHub
+                                    </a>
+                                    Repository
                                     <Button
                                         href="https://github.com/keep-network"
                                         bsStyle="primary"

@@ -479,7 +479,11 @@ class App extends Component {
                             <Col sm={12} md={6}>
                                 <h2>Interested in working with us?</h2>
                                 <h3>
-                                    email <span>work@keep.network</span>
+
+                                    email
+                                    <a className="email-text" href="mailto:work@keep.network">
+                                        work@keep.network
+                                    </a>
                                     <a className="btn btn-primary" href="mailto:work@keep.network">
                                         <Icons.ArrowRight/>
                                     </a>

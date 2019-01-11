@@ -17,6 +17,10 @@
             box-shadow: none;
             display: inline-block;
             width: 100%;
+            font-size: 19px;
+            font-weight: 400;
+            line-height: 1;
+            .placeholder(#b4b4b4);
         }
     }
 
@@ -101,6 +105,15 @@
                     stroke: @black;
                 }
             }
+        }
+    }
+
+    .success-message {
+        .h3;
+        color: @accent-text-color;
+
+        @media @mobile {
+            font-size: 22px;
         }
     }
 

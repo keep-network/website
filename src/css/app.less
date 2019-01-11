@@ -102,10 +102,13 @@ body {
         }
     }
 
-    .email-form {
-        .success-message {
-            .h3;
-            color: @accent-text-color;
+    @media @md-up {
+        .form-inline {
+            min-width: 475px;
+        }
+
+        .form-group {
+            min-width: 70%;
         }
     }
 
@@ -119,10 +122,6 @@ body {
                 top: 12px;
             }
         }
-
-        .email-form .success-message {
-            font-size: 22px;
-        }
     }
 
     @media (min-width: 620px) {
@@ -134,6 +133,15 @@ body {
 
         .col-circles {
             align-self: flex-start;
+        }
+
+        .form-inline {
+            display: flex;
+            align-items: center;
+        }
+
+        .form-group {
+            margin-right: 5px;
         }
     }
 
@@ -219,6 +227,50 @@ body {
         @media @tablet-up {
             display: inline-block;
             margin: 0 0 0 15px;
+        }
+    }
+}
+
+.mailing-list {
+    border-top: 1px solid fade(@black, 50%);
+    text-align: center;
+
+    h3 {
+        margin: 0 0 20px;
+    }
+
+    .form-inline {
+        width: 100%;
+    }
+
+    @media @tablet-up {
+        .form-group {
+            min-width: 60%;
+        }
+    }
+
+    @media (min-width: 481px) {
+        .form-inline {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .form-group {
+            margin-right: 5px;
+        }
+    }
+
+    @media @xs {
+        .form-inline,
+        .form-group {
+            display: block;
+        }
+
+        .btn {
+            display: block;
+            width: 177px;
+            margin: 10px auto 20px;
         }
     }
 }

@@ -106,6 +106,7 @@ class EmailForm extends Component {
     renderForm() {
         const { label,
                 showSuccessMessage,
+                placeholder,
                 children } = this.props
         const { email,
                 hasError,
@@ -131,6 +132,7 @@ class EmailForm extends Component {
                         <FormControl
                             type="email"
                             value={email}
+                            placeholder={placeholder}
                             onChange={this.onChange}
                             onKeyUp={this.onKeyUp}/>
                     </FormGroup>

@@ -25,6 +25,7 @@ class App extends Component {
             HOME: 'home',
             SLACK: 'slack',
             GITHUB: 'github',
+            MAILING_LIST: 'mailing-list',
             LEARN: 'learn',
             USES: 'uses',
             DESCRIPTION: 'description',
@@ -38,7 +39,7 @@ class App extends Component {
 
         const WHITEPAPER_URL = 'https://keep.network/whitepaper'
 
-        const { signupSlack, ajaxRequestStates } = this.props
+        const { signupSlack, signupMailingList, ajaxRequestStates } = this.props
         const { alertMessage } = this.state
 
         return (
@@ -82,6 +83,7 @@ class App extends Component {
                             <Col xs={7}>
                                 <EmailForm
                                     label="Slack Email"
+                                    placeholder="you@example.com"
                                     onSubmit={signupSlack}
                                     requestStates={ajaxRequestStates}
                                     request={actionTypes.SIGNUP_SLACK}>
@@ -120,6 +122,22 @@ class App extends Component {
                                         <Icons.ArrowRight />
                                     </Button>
                                 </h3>
+                            </Col>
+                        </Row>
+                    </PageSection>
+                    <PageSection id={sections.MAILING_LIST}>
+                        <Row >
+                            <Col xs={12} md={8} mdPush={2}>
+                                <EmailForm
+                                    label="Email"
+                                    placeholder="you@example.com"
+                                    onSubmit={signupMailingList}
+                                    requestStates={ajaxRequestStates}
+                                    request={actionTypes.SIGNUP_MAILING_LIST}>
+                                        <h3>
+                                            Join our mailing list
+                                        </h3>
+                                </EmailForm>
                             </Col>
                         </Row>
                     </PageSection>

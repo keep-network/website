@@ -1,8 +1,5 @@
 .form-inline {
     display: inline-block;
-    border: solid 2px @light-blue-grey;
-    border-radius: @border-radius;
-    background-color: @white;
     margin: 0 0 1em;
     position: relative;
     transition: 0.25s all ease-in;
@@ -11,23 +8,25 @@
     input {
         padding: 12px;
         height: auto;
-        border-color: transparent;
         box-shadow: none;
-        border-radius: @border-radius;
         outline: 0;
 
         &.form-control {
-            border-color: transparent;
+            border: 1px solid @black;
+            border-radius: 0;
             box-shadow: none;
             display: inline-block;
             width: 100%;
+            font-size: 19px;
+            font-weight: 400;
+            line-height: 1;
+            .placeholder(#b4b4b4);
         }
     }
 
     .form-group {
         display: inline-block;
         margin-bottom: 0;
-        width: 100%;
 
         &.has-success {
             .form-control {
@@ -49,21 +48,11 @@
     }
 
     .btn {
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 120px;
+        display: inline-block;
         transition: 0.25s all ease-in;
 
         &:focus {
             outline: 0;
-        }
-
-        &:active {
-            width: 100%;
-            color: transparent;
-            background-color: @link-active-color;
-            border-color: @link-active-color;
         }
     }
 
@@ -72,39 +61,17 @@
 
         .form-group {
             .form-control {
+                border-color: @error-color;
+
                 &:focus {
                     border-color: transparent;
                 }
             }
         }
-
-        .btn {
-            background-color: @error-color;
-            border-color: @error-color;
-        }
     }
 
     &.request-sent {
         border-color: @link-active-color;
-
-        .btn {
-            width: 100%;
-            color: transparent;
-            background-color: @link-active-color;
-            border-color: @link-active-color;
-        }
-    }
-
-    &.request-success {
-        border-color: @background-dark-color;
-        background-color: @background-dark-color;
-        border-radius: 8px;
-
-        .btn {
-            border-radius: 8px;
-            background-color: @background-dark-color;
-            border-color: @background-dark-color;
-        }
     }
 }
 
@@ -112,35 +79,46 @@
     position: relative;
     transition: 0.25s all ease-in;
 
-    .error-message {
-        color: @error-color;
-        position: absolute;
-        width: 100%;
-        top: calc(100% - 15px);
-        left: 0;
-        text-align: center;
+    .btn {
+        svg {
+            path {
+                transition: all 0.25s ease-in;
+            }
+        }
+
+        &:hover {
+            svg {
+                path {
+                    stroke: @white;
+                }
+            }
+        }
+
+        &:focus,
+        &:active,
+        &.active.focus,
+        &:active:focus,
+        &.active,
+        &.focus {
+             svg {
+                path {
+                    stroke: @black;
+                }
+            }
+        }
     }
 
     .success-message {
-        width: 100%;
-        position: absolute;
-        top: 9px;
-        left: 0;
-        text-align: center;
-        color: @white;
+        .h3;
+        color: @accent-text-color;
 
-        @media @md-up and (max-width: 1200px),
-        only screen and (max-width: 369px) {
-            top: 50%;
-            transform: translateY(-50%);
+        @media @mobile {
+            font-size: 22px;
         }
     }
 
-    &.request-success {
-        @media @md-up and (max-width: 1200px),
-        only screen and (max-width: 369px) {
-            background-color: @background-dark-color;
-            border-radius: 8px;
-        }
+    .error-message {
+        color: @error-color;
+        display: block;
     }
 }

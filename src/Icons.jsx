@@ -1,29 +1,262 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import agreement from './images/agreement.svg';
-import bank from './images/bank.svg';
-import castle from './images/castleIcon.svg';
-import email from './images/emailIcon.svg';
-import fingerprint from './images/fingerprint.svg';
-import github from './images/GitHub_Logo.svg';
-import keyCircle from './images/key-circle.svg';
-import moneyShare from './images/money-share.svg';
-import networkLock from './images/network-lock.svg';
-import paperStudy from './images/paper-study.svg';
-import priceTag from './images/price-tag.svg';
-import remoteLock from './images/remote-lock.svg';
-import safeOpened from './images/safe-opened.svg';
-import shop from './images/shop.svg';
-import skull from './images/skull.svg';
-import slackGreen from './images/slack_monochrome_green.svg';
-import slackWhite from './images/slack_monochrome_white.svg';
-import sliders from './images/sliders.svg';
-import swords from './images/swordsIcon.svg';
-import timeline from './images/timeline.svg';
-import wallet from './images/wallet.svg';
 
-const Keep = ({ color, height, width }) => (
+export const ArrowRight = ({ color, height, width }) => (
+    <svg width={width} height={height} fill="none" viewBox="0 0 59 22" >
+        <path stroke={color} strokeWidth={4} d="M0 11h54M47 2l9 9-9 9" />
+    </svg>
+);
+
+ArrowRight.propTypes = {
+    color: PropTypes.string,
+    height: PropTypes.string,
+    width: PropTypes.string
+};
+
+ArrowRight.defaultProps = {
+    color: '#48DBB4',
+    height: '18',
+    width:'56'
+};
+
+export const Axe = ({ height, width }) => (
+    <svg width={width} height={height} fill="none" viewBox="0 0 50 50">
+        <path
+            d="M25.063 29.375a16.02 16.02 0 0 1 2.675 8.187 1.558 1.558 0 0 0 1.525 1.49A18.729 18.729 0 0 0 48.43 19.885a1.565 1.565 0 0 0-1.492-1.525 16.009 16.009 0 0 1-8.188-2.69M34.334 11.25a16.02 16.02 0 0 1-2.684-8.198 1.562 1.562 0 0 0-1.524-1.485 18.73 18.73 0 0 0-19.167 19.166 1.56 1.56 0 0 0 1.49 1.525 16.008 16.008 0 0 1 8.193 2.68"
+            stroke="#48DBB4"
+            strokeWidth={2.5}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        />
+        <path
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M36.323 9.258a3.125 3.125 0 0 1 4.42 4.42L6.897 47.522a3.126 3.126 0 1 1-4.42-4.42L36.323 9.257z"
+            stroke="#000"
+            strokeWidth={2.5}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        />
+        <path
+            d="M17.567 23.333A12.5 12.5 0 0 1 32.729 8.177M26.668 32.433a12.5 12.5 0 0 0 15.156-15.162"
+            stroke="#000"
+            strokeWidth={2.5}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        />
+    </svg>
+);
+
+Axe.propTypes = {
+    height: PropTypes.string,
+    width: PropTypes.string
+};
+
+Axe.defaultProps = {
+    height: '50',
+    width:'50'
+};
+
+export const BlockchainStorage = ({ height, width }) => (
+    <svg width={width} height={height} fill="none" viewBox="0 0 52 59">
+        <path
+            d="M23.08 18.75h2.884M31.733 18.75h5.77"
+            stroke="#000"
+            strokeWidth={2.5}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        />
+        <path
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M44.714 18.75a8.654 8.654 0 0 1-8.654 8.654H10.098a8.654 8.654 0 0 1 0-17.308H36.06a8.654 8.654 0 0 1 8.654 8.654z"
+            stroke="#000"
+            strokeWidth={2.5}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        />
+        <path
+            d="M10.82 18.029a.72.72 0 1 0 .719.721.721.721 0 0 0-.722-.721"
+            stroke="#48DBB4"
+            strokeWidth={2.5}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        />
+        <path
+            d="M23.08 36.058h2.884M42.179 29.939a8.654 8.654 0 0 0-6.12-2.535H10.1a8.654 8.654 0 0 0 0 17.308h16.824"
+            stroke="#000"
+            strokeWidth={2.5}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        />
+        <path
+            d="M10.82 35.337a.721.721 0 1 0 .719.72.721.721 0 0 0-.722-.72v0"
+            stroke="#48DBB4"
+            strokeWidth={2.5}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        />
+        <path
+            d="M43.898 15.083l-4.84-10.321a5.77 5.77 0 0 0-5.223-3.32H12.323a5.77 5.77 0 0 0-5.225 3.32L2.26 15.082"
+            stroke="#000"
+            strokeWidth={2.5}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        />
+        <path
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M32.692 44.77a1.5 1.5 0 0 1 1.5-1.5H48.5a1.5 1.5 0 0 1 1.5 1.5v11.422a1.5 1.5 0 0 1-1.5 1.5H34.192a1.5 1.5 0 0 1-1.5-1.5V44.77zM41.346 34.615v0a5.77 5.77 0 0 0-5.769 5.77v2.884h11.539v-2.884a5.77 5.77 0 0 0-5.77-5.77z"
+            stroke="#48DBB4"
+            strokeWidth={2.5}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        />
+        <path
+            d="M41.346 49.815a.721.721 0 1 0 0 1.443.721.721 0 0 0 0-1.443v0"
+            stroke="#48DBB4"
+            strokeWidth={2.5}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        />
+    </svg>
+);
+
+BlockchainStorage.propTypes = {
+    height: PropTypes.string,
+    width: PropTypes.string
+};
+
+BlockchainStorage.defaultProps = {
+    height: '52',
+    width:'59'
+};
+
+export const Book = ({ height, width, color }) => (
+    <svg width={width} height={height} fill="none" viewBox="0 0 50 50">
+        <path
+            d="M37.5 8.633a64.908 64.908 0 0 1 9.858-.82c.284-.005.558.103.763.3.2.194.315.461.316.741v32.85a1.052 1.052 0 0 1-1.041 1.042C30.119 42.96 25 48.437 25 48.437m0 0V13.505s-5.115-5.47-22.358-5.692a1.077 1.077 0 0 0-.767.3c-.2.196-.312.463-.313.742v32.85a1.052 1.052 0 0 0 1.042 1.042C19.881 42.96 25 48.437 25 48.437z"
+            stroke={color}
+            strokeWidth={3}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        />
+        <path
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M25 47.41c.33-2.7 1.525-5.22 3.408-7.183a17.142 17.142 0 0 1 9.092-5.131V2.589a1.002 1.002 0 0 0-.475-.833 1.25 1.25 0 0 0-1.03-.137 16.25 16.25 0 0 0-7.587 4.743A12.573 12.573 0 0 0 25 13.542"
+            stroke="#000"
+            strokeWidth={3}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        />
+    </svg>
+);
+
+Book.propTypes = {
+    color: PropTypes.string,
+    height: PropTypes.string,
+    width: PropTypes.string
+};
+
+Book.defaultProps = {
+    color: '#F2F2F2',
+    height: '50',
+    width:'50'
+};
+
+export const Cart = ({ height, width }) => (
+    <svg width={width} height={height} fill="none" viewBox="0 0 53 53">
+        <path
+            d="M35.813 13.938l-4.688 15.624h-12.5L15.5 20.188h18.438M19.406 34.25a.781.781 0 1 1 0 1.563.781.781 0 0 1 0-1.563M30.344 34.25a.781.781 0 1 1 0 1.563.781.781 0 0 1 0-1.563"
+            stroke="#48DBB4"
+            strokeWidth={2.5}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        />
+        <path
+            d="M32.897 46.599a22.998 22.998 0 1 1 3.931-41.323 22.998 22.998 0 0 1 10.048 26.818"
+            stroke="#000"
+            strokeWidth={2.5}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        />
+        <path
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M37.075 37.073l5.523 14.365 3.314-5.525 5.525-3.315-14.362-5.525z"
+            stroke="#000"
+            strokeWidth={2.5}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        />
+        <path
+            d="M51.437 51.438l-5.525-5.525"
+            stroke="#000"
+            strokeWidth={2.5}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        />
+    </svg>
+);
+
+Cart.propTypes = {
+    height: PropTypes.string,
+    width: PropTypes.string
+};
+
+Cart.defaultProps = {
+    height: '53',
+    width:'53'
+};
+
+export const CastleGate = ({ height, width }) => (
+    <svg width={width} height={height} fill="none" viewBox="0 0 50 50">
+        <path
+            d="M29.706 39.89l-25-11.765 2.66-5.654 22.348 10.516M29.706 14.063L12.615 24.94"
+            stroke="#48DBB4"
+            strokeWidth={2.5}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        />
+        <path
+            d="M48.456 42.188H26.581a3.125 3.125 0 0 0-3.125 3.124v3.126M29.706 14.063h15.625v28.125H29.706z"
+            stroke="#000"
+            strokeWidth={2.5}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        />
+        <path
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M26.581 1.563h21.875v10.416c0 1.15-.933 2.084-2.083 2.084H28.664a2.083 2.083 0 0 1-2.083-2.084V1.563z"
+            stroke="#000"
+            strokeWidth={2.5}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        />
+        <path
+            d="M32.831 1.563v3.125M42.206 1.563v3.125M1.563 45.11a6.276 6.276 0 0 0 1.58.209 6.21 6.21 0 0 0 4.688-2.156 6.173 6.173 0 0 0 9.375 0"
+            stroke="#000"
+            strokeWidth={2.5}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        />
+    </svg>
+);
+
+CastleGate.propTypes = {
+    height: PropTypes.string,
+    width: PropTypes.string
+};
+
+CastleGate.defaultProps = {
+    height: '50',
+    width:'50'
+};
+
+export const Keep = ({ color, height, width }) => (
     <svg height={height} id="svg2" width={width} version="1.1" viewBox="0 0 928.81335 238.16" xmlSpace="preserve">
         <defs id="defs6"/>
         <g id="g10" transform="matrix(1.3333333,0,0,-1.3333333,0,238.16)">
@@ -49,7 +282,48 @@ Keep.defaultProps = {
     width:'917.41333'
 };
 
-const GithubSocial = ({ color, height, width }) => (
+export const KeepCircle =({ color, height, width }) => (
+    <svg width={width} height={height} viewBox="0 0 50 50">
+        <path
+            d="M25 0C11.197 0 0 11.197 0 25s11.197 25 25 25 25-11.197 25-25C49.979 11.197 38.782 0 25 0zm10.483 19.412h-1.575l-4.77 5.567 4.77 5.567h1.575v4.475H25.357v-4.433h1.576l-3.13-3.655H22.52v3.655h1.786v4.433h-9.811v-4.475h2.122V19.412h-2.122v-4.475h2.416v1.66h1.302v-1.66h2.374v1.66h1.303v-1.66h2.395v4.412H22.5v3.655h1.282l3.13-3.655h-1.576v-4.412h10.126v4.475h.021z"
+            fill={color}
+        />
+    </svg>
+);
+
+KeepCircle.propTypes = {
+    color: PropTypes.string,
+    height: PropTypes.string,
+    width: PropTypes.string
+};
+
+KeepCircle.defaultProps = {
+    color: '#F2F2F2',
+    height: '50',
+    width: '50'
+};
+
+export const Github = ({ color, height, width }) => (
+    <svg width={width} height={height} viewBox="0 0 129 35">
+        <g fill={color} fillRule="evenodd">
+            <path d="M24.5 14.98H13.812c-.276 0-.5.228-.5.509v5.317c0 .28.224.509.5.509h4.17v6.606s-.936.325-3.525.325c-3.054 0-7.32-1.136-7.32-10.68 0-9.547 4.442-10.803 8.613-10.803 3.61 0 5.166.646 6.155.958.312.097.6-.218.6-.499l1.191-5.137a.477.477 0 0 0-.19-.397C23.103 1.396 20.65 0 14.456 0 7.32 0 0 3.089 0 17.938 0 32.788 8.38 35 15.443 35c5.848 0 9.395-2.542 9.395-2.542.146-.082.162-.29.162-.385V15.489a.504.504 0 0 0-.5-.509M81 1.51a.508.508 0 0 0-.51-.51h-6.17a.51.51 0 0 0-.512.51l.002 11.81h-9.62V1.51a.508.508 0 0 0-.509-.51H57.51a.51.51 0 0 0-.51.51V33.49c0 .282.23.511.51.511h6.171a.51.51 0 0 0 .51-.511V19.81h9.62l-.018 13.679c0 .282.23.511.512.511h6.185a.51.51 0 0 0 .51-.511V1.51M37 5.998A3.997 3.997 0 0 0 33 2c-2.208 0-4 1.787-4 3.998a4.001 4.001 0 0 0 8 0M36 26.916V12.498a.498.498 0 0 0-.497-.498H29.52c-.275 0-.52.282-.52.555v20.657c0 .607.38.788.872.788h5.391c.592 0 .737-.289.737-.798v-6.286M104.485 12h-6.141a.51.51 0 0 0-.511.509v15.587s-1.56 1.12-3.775 1.12c-2.214 0-2.802-.986-2.802-3.114V12.509a.51.51 0 0 0-.51-.509h-6.234a.511.511 0 0 0-.512.509V27.13C84 33.453 87.59 35 92.527 35c4.052 0 7.318-2.197 7.318-2.197s.156 1.158.226 1.295.254.275.452.275l3.965-.017a.511.511 0 0 0 .512-.508l-.002-21.34a.51.51 0 0 0-.513-.508M118.301 29.3c-2.057-.064-3.453-1-3.453-1v-9.938s1.377-.847 3.066-.998c2.136-.192 4.193.455 4.193 5.568 0 5.39-.928 6.454-3.806 6.367zm2.34-17.682c-3.37 0-5.66 1.508-5.66 1.508V2.501c0-.278-.221-.501-.493-.501h-5.994a.497.497 0 0 0-.494.5v31.381c0 .277.221.502.494.502h4.159c.187 0 .329-.097.434-.266.103-.17.252-1.448.252-1.448S115.79 35 120.43 35c5.447 0 8.571-2.772 8.571-12.445s-4.989-10.937-8.36-10.937zM53.36 11.514h-4.545L48.81 5.41c0-.232-.118-.347-.38-.347h-6.194c-.241 0-.37.108-.37.343v6.308s-3.104.762-3.315.823a.511.511 0 0 0-.362.491v3.964c0 .286.224.515.5.515h3.177v9.537c0 7.083 4.887 7.779 8.185 7.779 1.507 0 3.31-.492 3.607-.604.18-.067.285-.257.285-.462l.005-4.36a.516.516 0 0 0-.502-.516c-.266 0-.943.11-1.64.11-2.233 0-2.99-1.055-2.99-2.421v-9.063h4.546c.277 0 .501-.23.501-.515v-4.965a.507.507 0 0 0-.501-.513" />
+        </g>
+    </svg>
+);
+
+Github.propTypes = {
+    color: PropTypes.string,
+    height: PropTypes.string,
+    width: PropTypes.string
+};
+
+Github.defaultProps = {
+    color: '#AC6E16',
+    height: '35',
+    width:'129'
+};
+
+export const GithubSocial = ({ color, height, width }) => (
     <svg height={height} width={width} preserveAspectRatio="xMidYMid" version="1.1" viewBox="0 0 256 250">
         <g>
             <path d="M128.00106,0 C57.3172926,0 0,57.3066942 0,128.00106 C0,184.555281 36.6761997,232.535542 87.534937,249.460899 C93.9320223,250.645779 96.280588,246.684165 96.280588,243.303333 C96.280588,240.251045 96.1618878,230.167899 96.106777,219.472176 C60.4967585,227.215235 52.9826207,204.369712 52.9826207,204.369712 C47.1599584,189.574598 38.770408,185.640538 38.770408,185.640538 C27.1568785,177.696113 39.6458206,177.859325 39.6458206,177.859325 C52.4993419,178.762293 59.267365,191.04987 59.267365,191.04987 C70.6837675,210.618423 89.2115753,204.961093 96.5158685,201.690482 C97.6647155,193.417512 100.981959,187.77078 104.642583,184.574357 C76.211799,181.33766 46.324819,170.362144 46.324819,121.315702 C46.324819,107.340889 51.3250588,95.9223682 59.5132437,86.9583937 C58.1842268,83.7344152 53.8029229,70.715562 60.7532354,53.0843636 C60.7532354,53.0843636 71.5019501,49.6441813 95.9626412,66.2049595 C106.172967,63.368876 117.123047,61.9465949 128.00106,61.8978432 C138.879073,61.9465949 149.837632,63.368876 160.067033,66.2049595 C184.49805,49.6441813 195.231926,53.0843636 195.231926,53.0843636 C202.199197,70.715562 197.815773,83.7344152 196.486756,86.9583937 C204.694018,95.9223682 209.660343,107.340889 209.660343,121.315702 C209.660343,170.478725 179.716133,181.303747 151.213281,184.472614 C155.80443,188.444828 159.895342,196.234518 159.895342,208.176593 C159.895342,225.303317 159.746968,239.087361 159.746968,243.303333 C159.746968,246.709601 162.05102,250.70089 168.53925,249.443941 C219.370432,232.499507 256,184.536204 256,128.00106 C256,57.3066942 198.691187,0 128.00106,0 Z M47.9405593,182.340212 C47.6586465,182.976105 46.6581745,183.166873 45.7467277,182.730227 C44.8183235,182.312656 44.2968914,181.445722 44.5978808,180.80771 C44.8734344,180.152739 45.876026,179.97045 46.8023103,180.409216 C47.7328342,180.826786 48.2627451,181.702199 47.9405593,182.340212 Z M54.2367892,187.958254 C53.6263318,188.524199 52.4329723,188.261363 51.6232682,187.366874 C50.7860088,186.474504 50.6291553,185.281144 51.2480912,184.70672 C51.8776254,184.140775 53.0349512,184.405731 53.8743302,185.298101 C54.7115892,186.201069 54.8748019,187.38595 54.2367892,187.958254 Z M58.5562413,195.146347 C57.7719732,195.691096 56.4895886,195.180261 55.6968417,194.042013 C54.9125733,192.903764 54.9125733,191.538713 55.713799,190.991845 C56.5086651,190.444977 57.7719732,190.936735 58.5753181,192.066505 C59.3574669,193.22383 59.3574669,194.58888 58.5562413,195.146347 Z M65.8613592,203.471174 C65.1597571,204.244846 63.6654083,204.03712 62.5716717,202.981538 C61.4524999,201.94927 61.1409122,200.484596 61.8446341,199.710926 C62.5547146,198.935137 64.0575422,199.15346 65.1597571,200.200564 C66.2704506,201.230712 66.6095936,202.705984 65.8613592,203.471174 Z M75.3025151,206.281542 C74.9930474,207.284134 73.553809,207.739857 72.1039724,207.313809 C70.6562556,206.875043 69.7087748,205.700761 70.0012857,204.687571 C70.302275,203.678621 71.7478721,203.20382 73.2083069,203.659543 C74.6539041,204.09619 75.6035048,205.261994 75.3025151,206.281542 Z M86.046947,207.473627 C86.0829806,208.529209 84.8535871,209.404622 83.3316829,209.4237 C81.8013,209.457614 80.563428,208.603398 80.5464708,207.564772 C80.5464708,206.498591 81.7483088,205.631657 83.2786917,205.606221 C84.8005962,205.576546 86.046947,206.424403 86.046947,207.473627 Z M96.6021471,207.069023 C96.7844366,208.099171 95.7267341,209.156872 94.215428,209.438785 C92.7295577,209.710099 91.3539086,209.074206 91.1652603,208.052538 C90.9808515,206.996955 92.0576306,205.939253 93.5413813,205.66582 C95.054807,205.402984 96.4092596,206.021919 96.6021471,207.069023 Z" fill={color}/>
@@ -64,12 +338,12 @@ GithubSocial.propTypes = {
 };
 
 GithubSocial.defaultProps = {
-    color: '#505E5B',
+    color: '#0A0806',
     height: '24px',
     width:'25px'
 };
 
-const Keybase = ({ color, height, width }) => (
+export const Keybase = ({ color, height, width }) => (
     <svg height={height} width={width} version="1.1" viewBox="0 0 32 34">
         <defs/>
         <g id="Website" fill="none" fillRule="evenodd" stroke="none" strokeWidth="1">
@@ -93,13 +367,13 @@ Keybase.propTypes = {
 };
 
 Keybase.defaultProps = {
-    color: '#505E5B',
+    color: '#0A0806',
     height: '34px',
     width:'32px'
 };
 
 
-const LinkedIn = ({ color, height, width }) => (
+export const LinkedIn = ({ color, height, width }) => (
     <svg height={height} width={width} version="1.1" viewBox="0 0 27 26">
         <defs/>
         <g id="round-3" fill="none" fillRule="evenodd" stroke="none" strokeWidth="1">
@@ -119,12 +393,12 @@ LinkedIn.propTypes = {
 };
 
 LinkedIn.defaultProps = {
-    color: '#505E5B',
+    color: '#0A0806',
     height: '26px',
     width:'27px'
 };
 
-const Reddit = ({ color, height, width }) => (
+export const Reddit = ({ color, height, width }) => (
     <svg height={height} width={width} version="1.1" viewBox="0 0 36 31">
         <defs/>
         <g id="Keep-Presale-Web-Final-Copy-4" fill="none" fillRule="evenodd" stroke="none" strokeWidth="1" transform="translate(-730.000000, -6905.000000)">
@@ -148,7 +422,356 @@ Reddit.defaultProps = {
     width:'36px'
 };
 
-const Telegram = ({ color, height, width }) => (
+export const Signing = ({ height, width }) => (
+    <svg width={width} height={height} fill="none" viewBox="0 0 88 88">
+        <path
+            d="M30 62.241l-9 9.004a1.5 1.5 0 0 1-2.12 0l-2.128-2.122a1.5 1.5 0 0 1 0-2.121L25.754 58"
+            stroke="#000"
+            strokeWidth={1.5}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        />
+        <path
+            d="M31.125 52.63a3 3 0 0 0-4.242 0l-3.237 3.235"
+            stroke="#48DBB4"
+            strokeWidth={1.5}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        />
+        <path
+            d="M35.35 52.646a3 3 0 0 0-4.225-.017L25.755 58 30 62.242l5.368-5.37a3 3 0 0 0-.017-4.226zM15.691 72.305l-1.944 1.945"
+            stroke="#48DBB4"
+            strokeWidth={1.5}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        />
+        <path
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M14.63 71.244l2.122-2.121 2.122 2.121-2.122 2.121-2.121-2.12z"
+            stroke="#000"
+            strokeWidth={1.5}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        />
+        <path
+            d="M46.97 66.899l.002 12.73a1.5 1.5 0 0 1-1.5 1.5l-3.004.003a1.5 1.5 0 0 1-1.5-1.5v-12.73"
+            stroke="#000"
+            strokeWidth={1.5}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        />
+        <path
+            d="M40.968 59.306a3 3 0 0 0-3 3v4.577M43.968 56.33a3 3 0 0 0-3 2.976v7.596l6.002-.003-.002-7.594a3 3 0 0 0-3-2.975zM43.968 84.133v2.75"
+            stroke="#48DBB4"
+            strokeWidth={1.5}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        />
+        <path
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M42.468 84.132v-3h3v3h-3z"
+            stroke="#000"
+            strokeWidth={1.5}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        />
+        <path
+            d="M62.3 57.941l9.004 9a1.5 1.5 0 0 1 0 2.121l-2.122 2.127a1.5 1.5 0 0 1-2.121 0l-9.002-9.002"
+            stroke="#000"
+            strokeWidth={1.5}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        />
+        <path
+            d="M52.687 56.816a3 3 0 0 0 0 4.242l3.236 3.237M52.704 52.59a3 3 0 0 0-.017 4.226l5.371 5.371 4.242-4.246-5.37-5.368a3 3 0 0 0-4.226.018zM72.363 72.25l1.945 1.944"
+            stroke="#48DBB4"
+            strokeWidth={1.5}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        />
+        <path
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M71.303 73.31l-2.122-2.12 2.122-2.122 2.121 2.12-2.121 2.122z"
+            stroke="#000"
+            strokeWidth={1.5}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        />
+        <path
+            d="M66.898 40.972l12.73-.003a1.5 1.5 0 0 1 1.5 1.5l.004 3.004a1.5 1.5 0 0 1-1.5 1.5h-12.73"
+            stroke="#000"
+            strokeWidth={1.5}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        />
+        <path
+            d="M59.306 46.973a3 3 0 0 0 3 3h4.576M56.33 43.973a3 3 0 0 0 2.976 3H66.9l-.003-6.002-7.593.002a3 3 0 0 0-2.975 3zM84.132 43.973h2.75"
+            stroke="#48DBB4"
+            strokeWidth={1.5}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        />
+        <path
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M84.132 45.473h-3v-3h3v3z"
+            stroke="#000"
+            strokeWidth={1.5}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        />
+        <path
+            d="M58 25.7l9-9.004a1.5 1.5 0 0 1 2.12 0l2.128 2.122a1.5 1.5 0 0 1 0 2.121l-9.002 9.002"
+            stroke="#000"
+            strokeWidth={1.5}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        />
+        <path
+            d="M56.875 35.312a3 3 0 0 0 4.242 0l3.237-3.236"
+            stroke="#48DBB4"
+            strokeWidth={1.5}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        />
+        <path
+            d="M52.65 35.295a3 3 0 0 0 4.225.017l5.37-5.37L58 25.7l-5.368 5.37a3 3 0 0 0 .017 4.225zM72.309 15.636l1.944-1.945"
+            stroke="#48DBB4"
+            strokeWidth={1.5}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        />
+        <path
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M73.37 16.697l-2.122 2.121-2.122-2.12 2.122-2.122 2.121 2.121z"
+            stroke="#000"
+            strokeWidth={1.5}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        />
+        <path
+            d="M40.971 21.042l-.002-12.73a1.5 1.5 0 0 1 1.5-1.5l3.004-.004a1.5 1.5 0 0 1 1.5 1.5V21.04"
+            stroke="#000"
+            strokeWidth={1.5}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        />
+        <path
+            d="M46.973 28.635a3 3 0 0 0 3-3v-4.577M43.973 31.61a3 3 0 0 0 3-2.975v-7.596l-6.002.003.002 7.593a3 3 0 0 0 3 2.976zM43.973 3.808v-2.75"
+            stroke="#48DBB4"
+            strokeWidth={1.5}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        />
+        <path
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M45.473 3.809v3h-3v-3h3z"
+            stroke="#000"
+            strokeWidth={1.5}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        />
+        <path
+            d="M25.7 30l-9.004-9a1.5 1.5 0 0 1 0-2.12l2.122-2.128a1.5 1.5 0 0 1 2.12 0l9.003 9.002"
+            stroke="#000"
+            strokeWidth={1.5}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        />
+        <path
+            d="M35.312 31.125a3 3 0 0 0 0-4.242l-3.236-3.237"
+            stroke="#48DBB4"
+            strokeWidth={1.5}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        />
+        <path
+            d="M35.295 35.35a3 3 0 0 0 .017-4.225l-5.37-5.37L25.7 30l5.37 5.368a3 3 0 0 0 4.225-.018zM15.636 15.691l-1.945-1.944"
+            stroke="#48DBB4"
+            strokeWidth={1.5}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        />
+        <path
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M16.697 14.63l2.121 2.122-2.121 2.122-2.121-2.122 2.12-2.121z"
+            stroke="#000"
+            strokeWidth={1.5}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        />
+        <path
+            d="M21.043 46.97l-12.73.002a1.5 1.5 0 0 1-1.5-1.5l-.004-3.004a1.5 1.5 0 0 1 1.5-1.5h12.73"
+            stroke="#000"
+            strokeWidth={1.5}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        />
+        <path
+            d="M28.635 40.968a3 3 0 0 0-3-3h-4.577M31.611 43.968a3 3 0 0 0-2.976-3H21.04l.003 6.002 7.593-.002a3 3 0 0 0 2.975-3zM3.809 43.968h-2.75"
+            stroke="#48DBB4"
+            strokeWidth={1.5}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        />
+        <path
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M3.81 42.468h3v3h-3v-3z"
+            stroke="#000"
+            strokeWidth={1.5}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        />
+    </svg>
+);
+
+Signing.propTypes = {
+    height: PropTypes.string,
+    width: PropTypes.string
+};
+
+Signing.defaultProps = {
+    height: '88',
+    width:'88'
+};
+
+export const Slack = ({ color, height, width }) => (
+    <svg width={width} height={height} viewBox="0 0 129 37">
+    <defs>
+        <path id="prefix__a" d="M19.452.138H38.8v29.694H.105V.138h19.347z" />
+        <path id="prefix__c" d="M36.721 36.982H.001V.28h36.72v36.703z" />
+    </defs>
+    <g fill="none" fillRule="evenodd">
+        <path
+            d="M57.583 9.524c1.113.494 1.194.864.324 2.553-.89 1.729-1.113 1.832-2.205 1.379-1.376-.597-3.136-1.05-4.27-1.05-1.86 0-3.095.68-3.095 1.709C48.337 17.512 59 15.68 59 22.926 59 26.571 55.924 29 51.312 29c-2.429 0-5.423-.823-7.487-1.894-1.032-.535-1.092-.844-.202-2.573.769-1.524 1.012-1.689 2.124-1.215 1.76.782 3.986 1.38 5.484 1.38 1.699 0 2.832-.7 2.832-1.73 0-3.294-10.845-1.73-10.845-8.75C43.218 10.49 46.274 8 50.846 8c2.145 0 4.856.659 6.737 1.524M67 1.496v27.64c0 .422-.437.864-1.062.864h-2.876c-.624 0-1.062-.442-1.062-.864V1.496C62 .126 62.375 0 64.5 0c2.417 0 2.5.168 2.5 1.496M74.78 22.844c0 1.38 1.185 2.306 2.973 2.306 2.162 0 4.115-1.03 5.259-2.78V20.56a11.176 11.176 0 0 0-3.783-.68c-2.66 0-4.448 1.256-4.448 2.965zM88 16.112v11.632c0 .618-.436 1.05-1.06 1.05h-2.827c-.644 0-1.101-.473-1.06-1.111l.042-1.256C81.557 28.115 79.353 29 77.15 29 72.868 29 70 26.55 70 22.885c0-3.89 3.243-6.506 8.106-6.526 1.85 0 3.534.33 4.906.885v-1.338c0-2.141-1.705-3.418-4.594-3.418-1.351 0-3.014.536-4.344 1.297-1.018.577-1.268.536-2.37-1.09-1.08-1.627-1.039-1.936 0-2.595C73.7 8.824 76.403 8 78.897 8 84.487 8 88 11.006 88 16.112z"
+            fill={color}
+        />
+        <g transform="translate(90)">
+            <mask id="prefix__b" fill="#fff">
+                <use xlinkHref="#prefix__a" />
+            </mask>
+            <path
+                d="M16.955 10.298c1.026.6 1.068.932-.061 2.69-1.068 1.656-1.252 1.76-2.38 1.18-.863-.455-2.238-.849-3.367-.849-3.55 0-5.91 2.36-5.91 5.919 0 3.704 2.36 6.187 5.91 6.187 1.232 0 2.77-.476 3.776-1.035 1.027-.6 1.252-.559 2.34 1.035.985 1.49.965 1.841.082 2.462-1.58 1.097-4.084 1.945-6.28 1.945-6.568 0-10.96-4.242-10.96-10.594 0-6.312 4.392-10.512 11.001-10.512 2.011 0 4.372.683 5.85 1.572M38.383 27.038c.821 1.056.492 1.428-1.56 2.173-2.093.766-2.38.724-3.12-.248l-5.87-7.904-2.627 2.565v5.132c0 .414-.43.848-1.046.848h-2.832c-.616 0-1.047-.434-1.047-.848V1.607c0-1.345.37-1.469 2.463-1.469 2.38 0 2.462.166 2.462 1.47v15.436l8.046-7.78c.883-.849 1.375-.787 2.955.269 1.745 1.138 1.868 1.448 1.026 2.276l-5.993 5.876 7.143 9.353"
+                fill={color}
+                mask="url(#prefix__b)"
+            />
+        </g>
+        <path
+            fill="#FFFFFE"
+            d="M15 17.549L16.463 22 21 20.451 19.537 16 15 17.549"
+        />
+        <g>
+            <mask id="prefix__d" fill="#fff">
+                <use xlinkHref="#prefix__c" />
+            </mask>
+            <path
+                fill={color}
+                mask="url(#prefix__d)"
+                d="M15.116 17.1l1.582 4.722 4.906-1.643-1.581-4.722-4.907 1.643"
+            />
+            <path
+                d="M28.802 21.783l-2.379.797.825 2.462a1.903 1.903 0 1 1-3.61 1.209l-.825-2.462-4.906 1.643.825 2.462a1.903 1.903 0 0 1-3.61 1.209l-.824-2.462-2.38.797a1.903 1.903 0 1 1-1.209-3.61l2.38-.797-1.582-4.722-2.38.797a1.902 1.902 0 0 1-2.409-1.2 1.903 1.903 0 0 1 1.2-2.41l2.38-.797-.825-2.462a1.904 1.904 0 0 1 3.61-1.209l.824 2.462 4.907-1.643-.825-2.462a1.904 1.904 0 0 1 3.61-1.209l.824 2.462 2.38-.797a1.904 1.904 0 0 1 1.209 3.61l-2.38.797 1.582 4.722 2.38-.797a1.903 1.903 0 0 1 1.208 3.61zm6.382-8.19C31.4.974 25.931-1.97 13.314 1.815.695 5.6-2.249 11.069 1.536 23.686c3.785 12.618 9.253 15.562 21.87 11.777 12.618-3.785 15.563-9.253 11.777-21.87z"
+                fill={color}
+                mask="url(#prefix__d)"
+            />
+        </g>
+    </g>
+  </svg>
+)
+
+Slack.propTypes = {
+    color: PropTypes.string,
+    height: PropTypes.string,
+    width: PropTypes.string
+};
+
+Slack.defaultProps = {
+    color: '#48DBB4',
+    height: '37px',
+    width: '129px'
+};
+
+export const Strategy = ({ height, width }) => (
+    <svg width={width} height={height} fill="none" viewBox="0 0 50 50">
+        <path
+            d="M11.208 27.984C19.852 30.692 25 35.9 25 45.732v2.708M38.792 27.984C30.148 30.692 25 35.9 25 45.732v2.708M25 12.5v33.231"
+            stroke="#F2F2F2"
+            strokeWidth={3}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        />
+        <path
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M20.106 12.5a1.152 1.152 0 0 1-.992-1.737l4.894-8.68a1.152 1.152 0 0 1 1.983 0l4.896 8.678a1.154 1.154 0 0 1-.993 1.74h-9.788zM13.358 22.792a1.156 1.156 0 0 0-1.227-1.586l-9.583 1.348a1.152 1.152 0 0 0-.76 1.838l5.816 7.723a1.156 1.156 0 0 0 1.99-.254l1.875-4.534 1.89-4.535zM36.642 22.792a1.156 1.156 0 0 1 1.227-1.586l9.583 1.348a1.152 1.152 0 0 1 .76 1.838l-5.816 7.723a1.156 1.156 0 0 1-1.99-.254l-1.875-4.534-1.89-4.535z"
+            stroke="#000"
+            strokeWidth={3}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        />
+    </svg>
+);
+
+Strategy.propTypes = {
+    height: PropTypes.string,
+    width: PropTypes.string
+};
+
+Strategy.defaultProps = {
+    height: '50',
+    width: '50'
+};
+
+export const Switch = ({ height, width }) => (
+    <svg width={width} height={height} fill="none" viewBox="0 0 50 50">
+        <path
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M4.688 31.188a1.5 1.5 0 0 1 1.5-1.5h37.624a1.5 1.5 0 0 1 1.5 1.5v9.5a1.5 1.5 0 0 1-1.5 1.5H6.188a1.5 1.5 0 0 1-1.5-1.5v-9.5z"
+            stroke="#000"
+            strokeWidth={2.5}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        />
+        <path
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M26.562 20.313c-.937-2-6.508-13.948-8.287-16.63a4.612 4.612 0 0 0-6.5-1.31 4.61 4.61 0 0 0-1.31 6.498c1.318 1.985 6.516 7.864 9.727 11.441h6.37z"
+            stroke="#48DBB4"
+            strokeWidth={2.5}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        />
+        <path
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M35.938 20.313H14.061a3.125 3.125 0 0 0-3.124 3.125v6.25h28.124v-6.25c0-1.726-1.399-3.125-3.124-3.125z"
+            stroke="#000"
+            strokeWidth={2.5}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        />
+    </svg>
+);
+
+Switch.propTypes = {
+    height: PropTypes.string,
+    width: PropTypes.string
+};
+
+Switch.defaultProps = {
+    height: '50',
+    width: '50'
+};
+
+export const Telegram = ({ color, height, width }) => (
     <svg height={height} width={width} version="1.1" x="0px" y="0px" viewBox="0 0 26.649 26.649" >
         <g>
             <path d="M26.157,1.238c-0.434-0.567-1.107-0.892-1.847-0.892c-0.478,0-0.973,0.133-1.472,0.395L1.593,11.88   c-1.51,0.793-1.615,1.987-1.59,2.463c0.024,0.479,0.255,1.654,1.839,2.283L4.557,17.7c0.515,0.204,1.091,0.309,1.711,0.309   c0.098,0,0.192-0.013,0.289-0.018c-0.037,0.048-0.082,0.085-0.116,0.135c-0.506,0.757-0.531,1.783-0.073,2.888   c0.007,0.019,0.014,0.035,0.021,0.051c0.803,1.779,1.696,3.787,1.804,4.066c0.266,0.694,0.944,1.172,1.688,1.172   c1.146,0,1.486-0.552,3.361-3.604c0.146-0.224,0.471-0.744,0.526-1.406c0.219,0.089,0.425,0.171,0.601,0.242l3.008,1.226   c0.603,0.246,1.131,0.463,1.409,0.578c0.086,0.053,0.177,0.098,0.272,0.137c0.212,0.084,0.438,0.127,0.665,0.127   c1.368,0,1.696-1.185,1.872-1.82c0.087-0.314,0.207-0.749,0.336-1.229l4.588-16.858C26.865,2.423,26.44,1.61,26.157,1.238z    M11.727,21.739c0,0-1.702,2.771-1.847,2.771c-0.004,0-0.006-0.002-0.008-0.006c-0.167-0.449-1.849-4.176-1.849-4.176   c-0.31-0.747-0.254-1.387,0.279-1.387c0.117,0,0.257,0.031,0.421,0.099l1.306,0.679c0.218,0.149,0.456,0.278,0.718,0.381   l0.066,0.025l0.123,0.062C11.945,20.721,12.266,20.914,11.727,21.739z M24.789,3.224l-4.586,16.858   c-0.259,0.95-0.475,1.727-0.479,1.727c-0.004-0.002-0.009-0.02-0.009-0.023c0-0.006-0.748-0.312-1.662-0.686l-3.01-1.226   c-0.914-0.37-2.413-0.969-3.332-1.323l-0.152-0.061l-0.562-0.292c-0.557-0.427-0.606-1.131-0.046-1.728l9.312-9.971   c0.374-0.399,0.515-0.605,0.434-0.605c-0.064,0-0.271,0.133-0.617,0.404L8.298,15.592c-0.514,0.401-1.295,0.625-2.029,0.625   c-0.376,0-0.741-0.06-1.052-0.183l-2.713-1.073c-0.917-0.363-0.952-1.033-0.079-1.493L23.672,2.327   c0.245-0.128,0.46-0.188,0.638-0.188C24.767,2.139,24.975,2.539,24.789,3.224z" fill={color}/>
@@ -168,7 +791,7 @@ Telegram.defaultProps = {
     width:'31px'
 };
 
-const Twitter = ({ color, height, width }) => (
+export const Twitter = ({ color, height, width }) => (
     <svg height={height} width={width} version="1.1" viewBox="0 0 30 24">
         <defs/>
         <g id="round-3" fill="none" fillRule="evenodd" stroke="none" strokeWidth="1">
@@ -188,38 +811,52 @@ Twitter.propTypes = {
 };
 
 Twitter.defaultProps = {
-    color: '#505E5B',
+    color: '#0A0806',
     height: '24px',
     width:'30px'
 };
 
-export {
-    agreement,
-    bank,
-    castle,
-    email,
-    fingerprint,
-    github,
-    GithubSocial,
-    Keep,
-    Keybase,
-    keyCircle,
-    LinkedIn,
-    moneyShare,
-    networkLock,
-    paperStudy,
-    priceTag,
-    Reddit,
-    remoteLock,
-    safeOpened,
-    shop,
-    skull,
-    slackGreen,
-    slackWhite,
-    sliders,
-    swords,
-    Telegram,
-    timeline,
-    Twitter,
-    wallet
+export const Wallet = ({ height, width }) => (
+    <svg width={width} height={height} fill="none" viewBox="0 0 50 50">
+        <path
+            d="M39.063 13.542L34.21 3.838a3.125 3.125 0 0 0-4.193-1.398L7.813 13.542"
+            stroke="#48DBB4"
+            strokeWidth={2.5}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        />
+        <path
+            d="M45.313 38.542v3.125a6.25 6.25 0 0 1-6.25 6.25H7.813a6.25 6.25 0 0 1-6.25-6.25V19.792a6.25 6.25 0 0 1 6.25-6.25h31.25a6.25 6.25 0 0 1 6.25 6.25v3.125"
+            stroke="#000"
+            strokeWidth={2.5}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        />
+        <path
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M45.313 38.542c1.725 0 3.124-1.4 3.124-3.125v-9.375c0-1.726-1.399-3.125-3.124-3.125H37.5a7.813 7.813 0 0 0 0 15.625h7.813z"
+            stroke="#48DBB4"
+            strokeWidth={2.5}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        />
+        <path
+            d="M37.5 29.948a.781.781 0 1 1 0 1.563.781.781 0 0 1 0-1.563"
+            stroke="#48DBB4"
+            strokeWidth={2.5}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        />
+    </svg>
+);
+
+Wallet.propTypes = {
+    height: PropTypes.string,
+    width: PropTypes.string
+};
+
+Wallet.defaultProps = {
+    height: '50',
+    width: '50'
 };

@@ -1,26 +1,31 @@
 // Colors
 
 @aqua-marine: #48dbb4;
-@pale-grey: #edfaf7;
+@pale-grey: #F1F1F1;
 @light-blue-grey: #cfe6e0;
 @light-green: #c3e6dc;
 @charcoal: #293330;
 @gunmetal: #505e5b;
-@steel-grey: #6c807a;
-@white: #fff;
-@black: #333;
-@rose-pink: #f57f97;
+@stone-grey: #E6E6E6;
+@white: #f2f2f2;
+@black: #0A0806;
+@violet: #7850CD;
+@violet-light: #B2A3DB;
+@brass: #AC6E16;
 
-@body-text-color: @gunmetal;
+@body-text-color: @black;
+@accent-text-color: @brass;
 @link-color: @aqua-marine;
 @link-active-color: @gunmetal;
-@syntax-highlight-color: @rose-pink;
+@syntax-highlight-color: @violet;
 @light-on-dark-color: @white;
 @grey-on-light-color: @gunmetal;
-@error-color: @rose-pink;
+@border-color: fade(@body-text-color, 90%);
+@error-color: @violet;
+@error-color-light: @violet-light;
 @background-light-color: @pale-grey;
 @background-dark-color: @charcoal;
-@background-med-color: @aqua-marine;
+@background-med-color: @stone-grey;
 @background-med-light-color: @light-green;
 @background-med-dark-color: @gunmetal;
 
@@ -29,6 +34,7 @@
 
 // Breakpoints
 @max-page-width: 1440px;
+@xl: ~'only screen and (min-width: 1200px)';
 @mobile: ~'only screen and (max-width: 767px)';
 @tablet-up: ~'only screen and (min-width: 768px)';
 @md-up: ~'only screen and (min-width: 992px)'; // Bootstrap grid md breakpoint

@@ -1,9 +1,11 @@
 body {
-    font-family: 'Nunito Sans', sans-serif;
-    font-weight: 400;
-    font-size: 18px;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
     color: @body-text-color;
     line-height: 1.44;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 
     @media @tablet-up {
         line-height: 1.79;
@@ -11,25 +13,27 @@ body {
 }
 
 h1, .h1 {
-    font-weight: 200;
-    font-size: 62px;
+    font-weight: 800;
+    font-size: 70px;
+    letter-spacing: -1px;
+    line-height: 73px;
 }
 
 h2, .h2 {
-    font-weight: 200;
+    font-weight: 800;
     font-size: 50px;
 }
 
 h3, .h3 {
-    font-weight: 300;
-    font-size: 34px;
+    font-weight: 600;
+    font-size: 30px;
 }
 
 h4, .h4 {
-    font-size: 22px;
+    font-weight: 700;
+    font-size: 20px;
 }
 
-h1, .h1,
 h2, .h2,
 h3, .h3,
 h4, .h4 {
@@ -62,14 +66,26 @@ a {
     color: @link-color;
 }
 
+.light-font {
+    font-weight: 400;
+}
+
 .small-title {
     font-size: 16px;
     font-weight: 500;
 }
 
 .btn {
-    padding: 10px 33px;
-    border-radius: @border-radius;
+    padding: 12px 33px;
+    border-radius: 0;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    svg {
+        vertical-align: middle;
+    }
 }
 
 .btn-default {
@@ -79,8 +95,9 @@ a {
 }
 
 .btn-primary {
-    background-color: @link-color;
-    border-color: @link-color;
+    background-color: @black;
+    border-color: @black;
+    color: @link-color;
 }
 
 .btn-default,
@@ -89,15 +106,22 @@ a {
 .btn-primary.disabled {
     transition: 0.25s all ease-in;
 
-    &:hover,
+    &:hover {
+        background-color: @black;
+        color: @white;
+    }
+
     &:focus,
     &:active,
     &.active.focus,
+    &:active:focus,
     &.active,
     &.focus {
-        background-color: @link-active-color;
-        border-color: @link-active-color;
-        color: @white;
+        background-color: @link-color;
+        border-color: @link-color;
+        color: @black;
+        box-shadow: none;
+        padding: 8px 30px;
     }
 
     &:focus {

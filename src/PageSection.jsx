@@ -1,29 +1,60 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import classNames from 'classnames';
-import { Grid } from 'react-bootstrap';
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
+import classNames from 'classnames'
+import { Grid } from 'react-bootstrap'
 
+import { ArrowRight } from './Icons'
 
-const PageSection = ({ id, additionalClassNames, children, convex }) => <section
-    className={classNames('page-section', { convex: convex }, id, additionalClassNames)} id={id}>
-    <div className="page-section-content">
-        <Grid>
-            { children }
-        </Grid>
-    </div>
-    {convex && <div className="bg-ellipse"></div>}
-</section>;
+class PageSection extends Component {
+    state = {
+        isCollapsed: this.props.collapsible ? true : false
+    }
+
+    toggleCollapse = () => {
+        this.setState(prevState => ({
+            isCollapsed: !prevState.isCollapsed
+        }))
+    }
+
+    render() {
+        const { id, additionalClassNames, children, collapsible } = this.props
+        const { isCollapsed } = this.state
+
+        const classes = classNames('page-section',
+            { collapsible: collapsible, collapsed: isCollapsed }, id,
+            additionalClassNames)
+
+        return (
+            <section className={classes} id={id}>
+                <div className="page-section-content">
+                    <Grid>
+                        { children }
+                        {
+                            collapsible ? (
+                                <h4 className="see-all"
+                                    onClick={this.toggleCollapse}>
+                                    { isCollapsed ? 'See all' : 'See less' }
+                                    <ArrowRight />
+                                </h4>
+                            ) : ''
+                        }
+                    </Grid>
+                </div>
+            </section>
+        )
+    }
+}
 
 PageSection.propTypes = {
     id: PropTypes.string,
     additionalClassNames: PropTypes.array,
-    convex: PropTypes.bool
+    collapsible: PropTypes.bool
 };
 
 PageSection.defaultProps = {
     id: '',
     additionalClassNames: [],
-    convex: false
+    collapsible: false
 };
 
 export default PageSection;

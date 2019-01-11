@@ -5,5 +5,5 @@ if [ $? == 0 ]; then
   curl -XPOST --data "" $GUARDIAN_UPDATE_ENDPOINT
 else
   echo "No Slack updates detected in diff, not issuing a notification."
-  git diff --stat --name-status HEAD^
+  git --no-pager diff --stat --name-status HEAD^
 fi

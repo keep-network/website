@@ -502,7 +502,7 @@ class App extends Component {
                     </PageSection>
                     <PageSection id={sections.HIRING} convex>
                         <Row>
-                            <Col sm={12} md={6}>
+                            <Col sm={12} md={8}>
                                 <h2>Interested in working with us?</h2>
                                 <h3>
 

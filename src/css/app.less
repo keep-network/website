@@ -476,9 +476,13 @@ body {
 
                 background-image: url(./images/wall-pattern.png);
                 background-repeat: repeat-x;
+                background-size: cover;
 
-                @media @high-res {
+                @media @2x {
                     background-image: url(./images/wall-pattern@2x.png);
+                }
+                @media @3x {
+                    background-image: url(./images/wall-pattern@3x.png);
                 }
             }
         }
@@ -626,6 +630,12 @@ body {
         h2 {
             width: 80%;
             margin-bottom: 30px;
+        }
+    }
+
+    @media @xl {
+        h2 {
+            width: 70%;
         }
     }
 

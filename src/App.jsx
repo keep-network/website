@@ -451,7 +451,7 @@ class App extends Component {
                         <h2>Our Partners</h2>
                         <Row>
                             <Col xs={12} sm={4} smPush={1}>
-                                <a href="https://lendroid.com/" rel="noopener noreferrer" target="_blank">
+                                <a href="https://www.lendroid.com/" rel="noopener noreferrer" target="_blank">
                                     <Picture src={getSrc('/images/logos/lendroidLogo', 'png', 3)} />
                                 </a>
                             </Col>

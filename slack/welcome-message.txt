@@ -25,6 +25,7 @@ Frequently Asked Questions: https://www.reddit.com/r/KeepNetwork/comments/9en4br
 * _Jakub "Kuba" Nowakowski_ (Developer) - <@UBAQS4CSJ> 
 * _Markus Fix_ (Developer) - <@UDHSFHQR4>
 * _Marcin Pawlowski_ (Developer) - <@UDECK58AV>
+* _Nicholas Evans_ (Developer) - <@UFN2Q8V8B>
 * _Promethea Raschke_ (Protocol Developer) - <@U8D66U3U6>
 * _Jack Knutson_ (Community Manager) - <@U7HT271C6>
 * _Eliza Petrovska_ (Community Manager) - <@U8WCKN0P6>

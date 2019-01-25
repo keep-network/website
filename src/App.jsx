@@ -275,8 +275,25 @@ class App extends Component {
                             linkedin="https://www.linkedin.com/in/laurawallendal"
                             keybase="http://keybase.io/lwallendal" />
                         <Profile
+                            name="Michael Gluzman"
+                            title="Design Lead"
+                            imagePath="/images/headshots/michael"
+                            imageType="png"
+                            imageMaxRes={3}
+                            twitter="https://twitter.com/gluzman"
+                            linkedin="https://www.linkedin.com/in/michaelgluzman/"
+                            github="https://github.com/gluzman"
+                            keybase="http://keybase.io/gluzzz" />
+                        <Profile
+                            name="Promethea Raschke"
+                            title="Protocol Designer"
+                            imagePath="/images/headshots/promethea"
+                            imageType="png"
+                            imageMaxRes={3}
+                            github="https://github.com/eth-r" />
+                        <Profile
                             name="Prashanth Irudayaraj"
-                            title="Ops & Research"
+                            title="Research Manager"
                             imagePath="/images/headshots/prashanth"
                             imageType="png"
                             imageMaxRes={3}
@@ -357,18 +374,17 @@ class App extends Component {
                             github="https://github.com/lispmeister"
                             keybase="http://keybase.io/lispmeister" />
                         <Profile
-                            name="Jack Knutson"
-                            title="Community Manager"
-                            imagePath="/images/headshots/jack"
+                            name="Nicholas Evans"
+                            title="Developer"
+                            imagePath="/images/headshots/nicholas"
                             imageType="png"
                             imageMaxRes={3}
-                            twitter="https://twitter.com/KnutsonRussell"
-                            linkedin="https://www.linkedin.com/in/jack-knutson-jr"
-                            github="https://github.com/drknudy"
-                            keybase="http://keybase.io/drknudy" />
+                            twitter="https://twitter.com/NicholasEvans14"
+                            github="https://github.com/NicholasDotSol"
+                            keybase="http://keybase.io/evansnicholaskb" />
                         <Profile
                             name="Eliza Petrovska"
-                            title="Community Manager"
+                            title="Community and Content Manager"
                             imagePath="/images/headshots/elizapetrovska_1"
                             imageType="png"
                             imageMaxRes={3}
@@ -376,14 +392,6 @@ class App extends Component {
                             linkedin="https://www.linkedin.com/in/elizapetrovska/"
                             github="https://github.com/elizapetrovska"
                             keybase="http://keybase.io/elizapetrovska" />
-                        <Profile
-                            name="Hope Cowan"
-                            title="Content Manager"
-                            imagePath="/images/headshots/hope_cowen"
-                            imageType="png"
-                            imageMaxRes={3}
-                            linkedin="https://www.linkedin.com/in/hopecowan/"
-                            keybase="http://keybase.io/hecowan" />
                         <Profile
                             name="Aaron O'Hearn"
                             title="Growth Operations"

@@ -16,7 +16,8 @@ Frequently Asked Questions: https://www.reddit.com/r/KeepNetwork/comments/9en4br
 * _Corbin Pon_ (Developer & Ops) - <@U6Z9Y0E93>
 * _Antonio Salazar Cardozo_ (Tech Lead) - <@U7L4NCLCW>
 * _Laura Wallendal_ (Growth) - <@U6YKKC3MF>
-* _Prashanth Irudayaraj_ (Ops & Research) - <@U7GNCA2DD>
+* _Michael Gluzman_ (Design Lead) - <@U96C0RKQT>
+* _Prashanth Irudayaraj_ (Research Manager) - <@U7GNCA2DD>
 * _Erin Ng_ (Developer) - <@U7H04GPBL>
 * _Nik Grinkevich_ (Developer) - <@U73G5RRV3>
 * _Philip Schlump_ (Developer) - <@U8UQWH1F1> 
@@ -25,10 +26,9 @@ Frequently Asked Questions: https://www.reddit.com/r/KeepNetwork/comments/9en4br
 * _Jakub "Kuba" Nowakowski_ (Developer) - <@UBAQS4CSJ> 
 * _Markus Fix_ (Developer) - <@UDHSFHQR4>
 * _Marcin Pawlowski_ (Developer) - <@UDECK58AV>
+* _Nicholas Evans_ (Developer) - <@UFN2Q8V8B>
 * _Promethea Raschke_ (Protocol Developer) - <@U8D66U3U6>
-* _Jack Knutson_ (Community Manager) - <@U7HT271C6>
-* _Eliza Petrovska_ (Community Manager) - <@U8WCKN0P6>
-* _Hope Cowan_ (Content Manager) - <@U9ENDED37>
+* _Eliza Petrovska_ (Community and Content Manager) - <@U8WCKN0P6>
 
 You can invite your friends by sharing this link with them: https://keep-network.slack.com/
 

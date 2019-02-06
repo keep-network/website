@@ -258,7 +258,7 @@ class App extends Component {
                             keybase="http://keybase.io/corbinpon"/>
                         <Profile
                             name="Antonio Salazar Cardozo"
-                            title="Tech Lead"
+                            title="Head of Engineering"
                             imagePath="/images/headshots/antonio"
                             imageType="png"
                             imageMaxRes={3}
@@ -268,7 +268,7 @@ class App extends Component {
                             keybase="http://keybase.io/shadowfiend" />
                         <Profile
                             name="Laura Wallendal"
-                            title="Growth"
+                            title="Head of Growth"
                             imagePath="/images/headshots/laura"
                             imageMaxRes={3}
                             twitter="https://twitter.com/LauraWallendal"
@@ -276,7 +276,7 @@ class App extends Component {
                             keybase="http://keybase.io/lwallendal" />
                         <Profile
                             name="Michael Gluzman"
-                            title="Design Lead"
+                            title="Head of Design"
                             imagePath="/images/headshots/michael"
                             imageType="png"
                             imageMaxRes={3}
@@ -284,6 +284,15 @@ class App extends Component {
                             linkedin="https://www.linkedin.com/in/michaelgluzman/"
                             github="https://github.com/gluzman"
                             keybase="http://keybase.io/gluzzz" />
+                        <Profile
+                            name="Piotr Dyraga"
+                            title="Tech Lead"
+                            imagePath="/images/headshots/piotr"
+                            imageMaxRes={3}
+                            imageType="jpg"
+                            twitter="https://twitter.com/piotrdyraga?lang=en"
+                            linkedin="https://www.linkedin.com/in/piotrdyraga/"
+                            github="https://github.com/pdyraga" />
                         <Profile
                             name="Promethea Raschke"
                             title="Protocol Designer"
@@ -327,15 +336,6 @@ class App extends Component {
                             linkedin="https://www.linkedin.com/in/philip-schlump-73100429/"
                             github="https://github.com/pschlump"
                             keybase="https://keybase.io/pschlump" />
-                        <Profile
-                            name="Piotr Dyraga"
-                            title="Developer"
-                            imagePath="/images/headshots/piotr"
-                            imageMaxRes={3}
-                            imageType="jpg"
-                            twitter="https://twitter.com/piotrdyraga?lang=en"
-                            linkedin="https://www.linkedin.com/in/piotrdyraga/"
-                            github="https://github.com/pdyraga" />
                         <Profile
                             name="Jakub Nowakowski"
                             title="Developer"

@@ -9,7 +9,8 @@ We're thrilled to welcome you to the Keep :keep: community!
 <#C6Z9GUQSH|technical> - Discuss the underlying technology and concepts of Keep
 <#C76JFAF0V|welcome> - Introduce yourself to the community!
 
-Frequently Asked Questions: https://www.reddit.com/r/KeepNetwork/comments/9en4br/keep_network_frequently_asked_questions_faq/
+Frequently Asked Questions: 
+https://www.reddit.com/r/KeepNetwork/comments/anqgb5/keep_network_frequently_asked_questions_faq/
 
 *Keep Team members are:*
 * _Matt Luongo_ (Project Lead) - <@U6Q6AQZ5M>

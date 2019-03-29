@@ -1,4 +1,48 @@
-version: 2
+version: 2.1
+orbs:
+  gcp:
+    executors:
+      google-cloud:
+        docker:
+          - image: google/cloud-sdk:latest
+    commands:
+      auth:
+        parameters:
+          project_id:
+            description: Id of the GCP project.
+            type: string
+          cluster_name:
+            description: Name of the GCP cluster.
+            type: string
+          compute_zone:
+            description: Name of the GCP Compute Zone.
+            type: enum
+            enum: ["us-east4-c", "us-east4-b", "us-east4-a", "us-east1-b"]
+        steps:
+          - run:
+              name: Set up GCP
+              command: |
+                echo $GCLOUD_SERVICE_KEY > ${HOME}/gcloud-service-key.json
+                gcloud --quiet auth activate-service-account --key-file ${HOME}/gcloud-service-key.json
+                gcloud --quiet config set project << parameters.project_id >>
+                gcloud --quiet config set container/cluster << parameters.cluster_name >>
+                gcloud --quiet container clusters get-credentials << parameters.cluster_name >> --zone << parameters.compute_zone >>
+                gcloud --quiet auth configure-docker
+      deploy:
+        parameters:
+          deployment:
+            description: Name of the Kubernetes deployment to update.
+            type: string
+          container:
+            description: Name of the Kubernetes container to update.
+            type: string
+          image:
+            description: Name of the image to deploy.
+            type: string
+        steps:
+          - run:
+              kubectl set image deployment/<< parameters.deployment >> << parameters.container >>=<< parameters.image >>
+
 jobs:
   test:
     docker:
@@ -45,9 +89,21 @@ jobs:
       - run:
           name: Build and push docker image
           command: |
-            docker build --rm=false -t "keepnetwork/website:$CIRCLE_BUILD_NUM" .
+            docker build --rm=false -t "keepnetwork/website:$CIRCLE_SHA1" .
             docker login -u "$DOCKER_USER" -p "$DOCKER_PASS"
-            docker push "keepnetwork/website:$CIRCLE_BUILD_NUM"
+            docker push "keepnetwork/website:$CIRCLE_SHA1"
+
+  deploy_image:
+    executor: gcp/google-cloud
+    steps:
+      - gcp/auth:
+          project_id: cfc-production
+          cluster_name: prod-1
+          compute_zone: us-east1-b
+      - gcp/deploy:
+          deployment: keep-website
+          container: keep-website
+          image: keepnetwork/website:$CIRCLE_SHA1
 
   slack_guardian_notification:
     docker:
@@ -64,6 +120,14 @@ workflows:
     jobs:
       - test
       - build_image
+      - deploy_image:
+          context: gcp
+          filters:
+            branches:
+              only: master
+          requires:
+            - build_image
+            - test
       - slack_guardian_notification:
           filters:
             branches:

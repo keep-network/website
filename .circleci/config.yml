@@ -1,6 +1,6 @@
 version: 2.1
 orbs:
-  gcp:
+  gke:
     executors:
       google-cloud:
         docker:
@@ -12,7 +12,7 @@ orbs:
             description: Id of the GCP project.
             type: string
           cluster_name:
-            description: Name of the GCP cluster.
+            description: Name of the GKE cluster.
             type: string
           compute_zone:
             description: Name of the GCP Compute Zone.
@@ -20,7 +20,7 @@ orbs:
             enum: ["us-east4-c", "us-east4-b", "us-east4-a", "us-east1-b"]
         steps:
           - run:
-              name: Set up GCP
+              name: Set up Google Cloud and Kubernetes Engine Access
               command: |
                 echo $GCLOUD_SERVICE_KEY > ${HOME}/gcloud-service-key.json
                 gcloud --quiet auth activate-service-account --key-file ${HOME}/gcloud-service-key.json
@@ -94,13 +94,13 @@ jobs:
             docker push "keepnetwork/website:$CIRCLE_SHA1"
 
   deploy_image:
-    executor: gcp/google-cloud
+    executor: gke/google-cloud
     steps:
-      - gcp/auth:
+      - gke/auth:
           project_id: cfc-production
           cluster_name: prod-1
           compute_zone: us-east1-b
-      - gcp/deploy:
+      - gke/deploy:
           deployment: keep-website
           container: keep-website
           image: keepnetwork/website:$CIRCLE_SHA1

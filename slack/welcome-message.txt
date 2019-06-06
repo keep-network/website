@@ -23,7 +23,6 @@ https://www.reddit.com/r/KeepNetwork/comments/anqgb5/keep_network_frequently_ask
 * _Prashanth Irudayaraj_ (Research Manager) - <@U7GNCA2DD>
 * _Erin Ng_ (Developer) - <@U7H04GPBL>
 * _Nik Grinkevich_ (Developer) - <@U73G5RRV3> 
-* _Raghav Gulati_ (Developer) - <@U8PGG5ADV>
 * _Jakub "Kuba" Nowakowski_ (Developer) - <@UBAQS4CSJ> 
 * _Markus Fix_ (Developer) - <@UDHSFHQR4>
 * _Marcin Pawlowski_ (Developer) - <@UDECK58AV>
@@ -47,7 +46,7 @@ You can invite your friends by sharing this link with them: https://keep-network
 *For more information and other social channels:*
 
 * _Whitepaper (EN)_ - https://keep.network/whitepaper
-* _Whitepaper draft (RU)_ - https://backend.keep.network/whitepaper-ru
+* _Whitepaper (RU)_ - https://backend.keep.network/whitepaper-ru
 * _Random Beacon yellowpaper draft PDF_ - http://docs.keep.network/random-beacon/index.pdf
 * _Site_ - https://keep.network/
 * _Blog_ - https://blog.keep.network/

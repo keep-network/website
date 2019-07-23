@@ -352,7 +352,7 @@ class App extends Component {
                             imagePath="/images/headshots/dmitryParemski"
                             imageType="jpg"
                             imageMaxRes={3}
-                            twitter="https://twitter.com/dparemski"
+                            twitter="https://twitter.com/dmitry_paremski"
                             linkedin="https://www.linkedin.com/in/paremski/"
                             github="https://github.com/dimpar"
                             keybase="http://keybase.io/dparemski" />

@@ -310,6 +310,16 @@ class App extends Component {
                             linkedin="https://www.linkedin.com/in/pirudayaraj"
                             keybase="http://keybase.io/starsitar" />
                         <Profile
+                            name="Sloan Thompson"
+                            title="Head of DevOps"
+                            imagePath="/images/headshots/sloanThompson"
+                            imageType="jpg"
+                            imageMaxRes={3}
+                            twitter="https://twitter.com/SloanThompson"
+                            linkedin="https://www.linkedin.com/in/sloansthompson/"
+                            github="https://github.com/sthompson22"
+                            keybase="http://keybase.io/fekta" />
+                        <Profile
                             name="Nik Grinkevich"
                             title="Developer"
                             imagePath="/images/headshots/nik"

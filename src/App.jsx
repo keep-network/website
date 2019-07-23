@@ -310,6 +310,16 @@ class App extends Component {
                             linkedin="https://www.linkedin.com/in/pirudayaraj"
                             keybase="http://keybase.io/starsitar" />
                         <Profile
+                            name="Sloan Thompson"
+                            title="Head of DevOps"
+                            imagePath="/images/headshots/sloanThompson"
+                            imageType="jpg"
+                            imageMaxRes={3}
+                            twitter="https://twitter.com/SloanThompson"
+                            linkedin="https://www.linkedin.com/in/sloansthompson/"
+                            github="https://github.com/sthompson22"
+                            keybase="http://keybase.io/fekta" />
+                        <Profile
                             name="Nik Grinkevich"
                             title="Developer"
                             imagePath="/images/headshots/nik"
@@ -318,24 +328,6 @@ class App extends Component {
                             linkedin="https://www.linkedin.com/in/nikgrinkevich"
                             github="https://github.com/ngrinkevich"
                             keybase="https://keybase.io/nikgrinkevich" />
-                        <Profile
-                            name="Raghav Gulati"
-                            title="Developer"
-                            imagePath="/images/headshots/raghavGulati"
-                            imageMaxRes={3}
-                            twitter="https://twitter.com/rargulati"
-                            linkedin="https://www.linkedin.com/in/rargulati/"
-                            github="https://github.com/rargulati"
-                            keybase="http://keybase.io/raj" />
-                        <Profile
-                            name="Philip Schlump"
-                            title="Developer"
-                            imagePath="/images/headshots/philipSchlump"
-                            imageMaxRes={3}
-                            twitter="https://twitter.com/pschlump"
-                            linkedin="https://www.linkedin.com/in/philip-schlump-73100429/"
-                            github="https://github.com/pschlump"
-                            keybase="https://keybase.io/pschlump" />
                         <Profile
                             name="Jakub Nowakowski"
                             title="Developer"
@@ -346,6 +338,34 @@ class App extends Component {
                             linkedin="https://www.linkedin.com/in/jnowakowski8/"
                             github="https://github.com/nkuba" />
                         <Profile
+                            name="Nicholas Evans"
+                            title="Developer"
+                            imagePath="/images/headshots/nicholas"
+                            imageType="png"
+                            imageMaxRes={3}
+                            twitter="https://twitter.com/NicholasEvans14"
+                            github="https://github.com/NicholasDotSol"
+                            keybase="http://keybase.io/evansnicholaskb" />
+                        <Profile
+                            name="Dmitry Paremski"
+                            title="Developer"
+                            imagePath="/images/headshots/dmitryParemski"
+                            imageType="jpg"
+                            imageMaxRes={3}
+                            twitter="https://twitter.com/dmitry_paremski"
+                            linkedin="https://www.linkedin.com/in/paremski/"
+                            github="https://github.com/dimpar"
+                            keybase="http://keybase.io/dparemski" />
+                        <Profile
+                            name="Liam Zebedee"
+                            title="Developer"
+                            imagePath="/images/headshots/liamZebedee"
+                            imageMaxRes={3}
+                            twitter="https://twitter.com/liamzebedee"
+                            linkedin="https://www.linkedin.com/in/liamedwardsplayne/"
+                            github="https://github.com/liamzebedee"
+                            keybase="https://keybase.io/liamzebedee" />
+                        <Profile
                             name="Erin Ng"
                             title="Developer"
                             imagePath="/images/headshots/erin"
@@ -353,16 +373,6 @@ class App extends Component {
                             linkedin="https://www.linkedin.com/in/erinng/"
                             github="https://github.com/ironng"
                             keybase="http://keybase.io/ironng" />
-                        <Profile
-                            name="Marcin Pawlowski"
-                            title="Developer"
-                            imagePath="/images/headshots/marcin"
-                            imageType="png"
-                            imageMaxRes={3}
-                            twitter="https://twitter.com/mpspp"
-                            linkedin="https://www.linkedin.com/in/mpspp/"
-                            github="https://github.com/madxor"
-                            keybase="http://keybase.io/mpp" />
                         <Profile
                             name="Markus Fix"
                             title="Developer"
@@ -374,15 +384,6 @@ class App extends Component {
                             github="https://github.com/lispmeister"
                             keybase="http://keybase.io/lispmeister" />
                         <Profile
-                            name="Nicholas Evans"
-                            title="Developer"
-                            imagePath="/images/headshots/nicholas"
-                            imageType="png"
-                            imageMaxRes={3}
-                            twitter="https://twitter.com/NicholasEvans14"
-                            github="https://github.com/NicholasDotSol"
-                            keybase="http://keybase.io/evansnicholaskb" />
-                        <Profile
                             name="Eliza Petrovska"
                             title="Community and Content Manager"
                             imagePath="/images/headshots/elizapetrovska_1"
@@ -393,14 +394,23 @@ class App extends Component {
                             github="https://github.com/elizapetrovska"
                             keybase="http://keybase.io/elizapetrovska" />
                         <Profile
-                            name="Aaron O'Hearn"
-                            title="Growth Operations"
-                            imagePath="/images/headshots/aaron"
-                            imageType="png"
+                            name="Jarrell James"
+                            title="Ecosystem Growth and Innovation Lead"
+                            imagePath="/images/headshots/jarrellJames"
+                            imageType="jpg"
+                            imageMaxRes={3}
+                            twitter="https://twitter.com/jarrelljames_"
+                            linkedin="https://www.linkedin.com/in/jarrell-james/"
+                            keybase="http://keybase.io/JarrellJames" />
+                        <Profile
+                            name="Olivia Lovenmark"
+                            title="Writer and Communication Strategist"
+                            imagePath="/images/headshots/oliviaLovenmark"
+                            imageType="jpg"
                             imageMaxRes={1}
-                            twitter="https://twitter.com/aaron0"
-                            linkedin="https://www.linkedin.com/in/aaronohearn/"
-                            keybase="https://keybase.io/aohearn" />
+                            twitter="https://twitter.com/olivialovenmark"
+                            linkedin="https://www.linkedin.com/in/olovenmark/"
+                            keybase="https://keybase.io/olivialovenmark" />
                     </PageSection>
                     <PageSection id={sections.DESCRIPTION} additionalClassNames={['blurb', 'blurb-desktop']}>
                         <div className="blurb-panel">

@@ -16,8 +16,13 @@ const sections = {
 
 const WHITEPAPER_URL = 'https://keep.network/whitepaper'
 
+const routes = {
+    MAIN: '/',
+    PRESS: '/press'
+}
 
 export {
+    routes,
     sections,
     WHITEPAPER_URL
 }

@@ -18,14 +18,15 @@ class MainContent extends Component {
         const hash = location.hash && location.hash.slice(1)
 
         if (hash) {
-            scroller.scrollTo(hash, {
-                active: false,
-                activeClass: 'active',
-                spy: true,
-                smooth: true,
-                duration: 500,
-                offset: hash === sections.HOME ? 0 : 100
-            })
+            setTimeout(() => {
+                scroller.scrollTo(hash, {
+                    active: false,
+                    activeClass: 'active',
+                    spy: true,
+                    smooth: true,
+                    duration: 500
+                })
+            }, 50)
         }
     }
 

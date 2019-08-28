@@ -6,7 +6,7 @@ import NavScrollItem from './NavScrollItem'
 import * as Icons from './Icons'
 import { routes, sections, WHITEPAPER_URL } from './shared'
 
-const NavContent = ({ history }) => {
+const NavContent = () => {
     return (
         <Navbar fixedTop>
             <Navbar.Header>
@@ -31,6 +31,8 @@ const NavContent = ({ history }) => {
                     <NavScrollItem
                         href={routes.MAIN}
                         to={sections.ADVISORS}>Advisors</NavScrollItem>
+                    <NavItem
+                        href={routes.PRESS}>Press</NavItem>
                     <NavItem
                         href="https://blog.keep.network"
                         rel="noopener noreferrer"

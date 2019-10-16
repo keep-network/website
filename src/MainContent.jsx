@@ -26,7 +26,7 @@ class MainContent extends Component {
                     smooth: true,
                     duration: 500
                 })
-            }, 50)
+            }, 100)
         }
     }
 

@@ -30,7 +30,8 @@ const NavContent = () => {
                         hashSpy={true}>Team</NavScrollItem>
                     <NavScrollItem
                         href={routes.MAIN}
-                        to={sections.ADVISORS}>Advisors</NavScrollItem>
+                        to={sections.ADVISORS}
+                        hashSpy={true}>Advisors</NavScrollItem>
                     <NavItem
                         href={routes.PRESS}>Press</NavItem>
                     <NavItem

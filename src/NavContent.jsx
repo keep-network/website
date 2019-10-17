@@ -1,6 +1,5 @@
 import React from 'react'
 import { Nav, Navbar, NavbarBrand, NavItem } from 'react-bootstrap'
-import { Link } from 'react-scroll'
 
 import NavScrollItem from './NavScrollItem'
 import * as Icons from './Icons'

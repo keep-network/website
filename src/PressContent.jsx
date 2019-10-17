@@ -151,18 +151,21 @@ const PressItem = ({ title, date, source, aboveTheFold, url }) => (
                 <div className="article-title">
                     {title}
                 </div>
-                <div className="date">
+                <div className="date date-large">
                     {date}
                 </div>
             </div>
-            <div className="source">
+            <div className="source source-large">
                 {source}
+            </div>
+            <div className="date date-mobile">
+                {date}
             </div>
             <div className="bottom">
                 <div className="above-the-fold">
                     <ClampLines
                         text={aboveTheFold}
-                        lines={2}
+                        lines={ window.innerWidth < 767 ? 4 : 2 }
                         ellipsis="..."
                         buttons={false}
                         />

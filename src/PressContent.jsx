@@ -100,7 +100,7 @@ class PressContent extends Component {
                             <h3>Find everything you might need in our media kit</h3>
                         </div>
                         <div className="media-kit-right">
-                            <a>
+                            <a href="http://google.com" target="_blank" rel="noopener noreferrer">
                                 <div className="media-kit-link">
                                     <Newspaper />
                                     <div className="media-kit-link-text">

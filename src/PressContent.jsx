@@ -6,71 +6,83 @@ import Arrow from './Arrow'
 import Newspaper from './Newspaper'
 
 const allPressEntries = [{
-    title: 'Ep 47, Announcing tBTC with James Prestwich and Matt Luongo of Cross-Chain Group',
-    date: 'August 9, 2019',
-    source: 'Wyre Talks Podcast',
-    aboveTheFold: "DeFi is better with Bitcoin.  But there's no way to bring BTC onto Ethereum that is censorship-resistant AND adheres to the #1 principle of Bitcoin: No printing money money money money money money money money money money money money money money money money money money money money money money money",
-    url: 'http://1.com'
+    title: 'These Bitcoin Users Want DAI and DeFi – Here’s How They Plan to Get It',
+    date: 'August 16, 2019',
+    source: 'Coindesk',
+    aboveTheFold: "Leigh Cuen covers Cross-Chain Group’s first-ever Cross-Chain Summit for blockchain interoperability in San Francisco, highlighting the Group’s announcement of tBTC.",
+    url: 'https://www.coindesk.com/these-bitcoin-users-want-dai-and-defi-heres-how-they-plan-to-get-it'
 },{
-    title: 'Ep 47, Announcing tBTC with James Prestwich and Matt Luongo of Cross-Chain Group',
-    date: 'August 9, 2019',
-    source: 'Wyre Talks Podcast',
-    aboveTheFold: "DeFi is better with Bitcoin.  But there's no way to bring BTC onto Ethereum that is censorship-resistant AND adheres to the #1 principle of Bitcoin: No printing money money money money money money money money money money money money money money money money money money money money money money money",
-    url: 'http://2.com'
+    title: 'Messari adds 11 new Disclosures Registry participants, surpassing 50 members',
+    date: 'August 20, 2019',
+    source: 'Messari',
+    aboveTheFold: "Keep has joined the Messari Disclosures Registry as 11 new crypto projects are added. Read Coindesk’s coverage.",
+    url: 'https://messari.io/article/announcement-messari-adds-11-new-disclosures-registry-participants-surpassing-50-members'
 },{
-    title: 'Ep 47, Announcing tBTC with James Prestwich and Matt Luongo of Cross-Chain Group',
-    date: 'August 9, 2019',
+    title: 'Announcing tBTC with James Prestwich and Matt Luongo of Cross-Chain Group',
+    date: 'August 21, 2019',
     source: 'Wyre Talks Podcast',
-    aboveTheFold: "DeFi is better with Bitcoin.  But there's no way to bring BTC onto Ethereum that is censorship-resistant AND adheres to the #1 principle of Bitcoin: No printing money money money money money money money money money money money money money money money money money money money money money money money",
-    url: 'http://3.com'
+    aboveTheFold: "Cross-Chain Group founders Matt Luongo and James Prestwich join Wyre hosts Louis Aboud Hogben and Tom Scaria to discuss Bitcoin for DeFi; how tBTC facilitates interoperability and brings Bitcoin to other chains.",
+    url: 'https://wyre-talks.simplecast.com/episodes/ep-47-announcing-tbtc-with-james-prestwich-and-matt-luongo-of-cross-chain-group-tHcZr3jW'
 },{
-    title: 'Ep 47, Announcing tBTC with James Prestwich and Matt Luongo of Cross-Chain Group',
-    date: 'August 9, 2019',
-    source: 'Wyre Talks Podcast',
-    aboveTheFold: "DeFi is better with Bitcoin.  But there's no way to bring BTC onto Ethereum that is censorship-resistant AND adheres to the #1 principle of Bitcoin: No printing money money money money money money money money money money money money money money money money money money money money money money money",
-    url: 'http://4.com'
+    title: 'Episode 041 - Matt Luongo (Keep)',
+    date: 'June 17, 2109',
+    source: 'Baselayer Podcast',
+    aboveTheFold: "David invited Keep Project Lead, Matt Luongo, to join the podcast and discuss privacy, interoperability, and the blockchain space as a whole.",
+    url: 'https://podcasts.apple.com/us/podcast/base-layer-episode-041-matt-luongo-keep/id1445373535?i=1000441792480'
 },{
-    title: 'Ep 47, Announcing tBTC with James Prestwich and Matt Luongo of Cross-Chain Group',
-    date: 'August 9, 2019',
-    source: 'Wyre Talks Podcast',
-    aboveTheFold: "DeFi is better with Bitcoin.  But there's no way to bring BTC onto Ethereum that is censorship-resistant AND adheres to the #1 principle of Bitcoin: No printing money money money money money money money money money money money money money money money money money money money money money money money",
-    url: 'http://5.com'
+    title: 'Privacy and Scaling EIPs accepted for Ethereum Hard Fork',
+    date: 'September 4, 2019',
+    source: 'Keep Blog',
+    aboveTheFold: "With community partners, Keep Network brings privacy-preserving technology to the EVM with EIPs 152 and 1108.",
+    url: 'https://blog.keep.network/privacy-and-scaling-focused-eips-accepted-for-ethereum-istanbul-hard-fork-1a75fe0c4e4a'
 },{
-    title: 'Ep 47, Announcing tBTC with James Prestwich and Matt Luongo of Cross-Chain Group',
-    date: 'August 9, 2019',
-    source: 'Wyre Talks Podcast',
-    aboveTheFold: "DeFi is better with Bitcoin.  But there's no way to bring BTC onto Ethereum that is censorship-resistant AND adheres to the #1 principle of Bitcoin: No printing money money money money money money money money money money money money money money money money money money money money money money money",
-    url: 'http://6.com'
+    title: 'What’s Needed Now in Interoperability Infrastructure',
+    date: 'August 30, 2019',
+    source: 'Keep Blog',
+    aboveTheFold: "A look back at the first Cross-Chain Summit and DeFi BTC.",
+    url: 'https://blog.keep.network/whats-needed-now-in-interoperability-infrastructure-e968405bbc5c'
 },{
-    title: 'Ep 47, Announcing tBTC with James Prestwich and Matt Luongo of Cross-Chain Group',
-    date: 'August 9, 2019',
-    source: 'Wyre Talks Podcast',
-    aboveTheFold: "DeFi is better with Bitcoin.  But there's no way to bring BTC onto Ethereum that is censorship-resistant AND adheres to the #1 principle of Bitcoin: No printing money money money money money money money money money money money money money money money money money money money money money money money",
-    url: 'http://7.com'
+    title: 'Bridging Bitcoin and Ethereum',
+    date: 'August 28, 2019',
+    source: 'Keep Blog',
+    aboveTheFold: "Announcing tBTC, the first DApp built on the Keep Network.",
+    url: 'https://blog.keep.network/bridging-bitcoin-and-ethereum-b2f9923630a7'
 },{
-    title: 'Ep 47, Announcing tBTC with James Prestwich and Matt Luongo of Cross-Chain Group',
-    date: 'August 9, 2019',
-    source: 'Wyre Talks Podcast',
-    aboveTheFold: "DeFi is better with Bitcoin.  But there's no way to bring BTC onto Ethereum that is censorship-resistant AND adheres to the #1 principle of Bitcoin: No printing money money money money money money money money money money money money money money money money money money money money money money money",
-    url: 'http://8.com'
+    title: 'Keep collaborates with Electric Coin Co., Ethereum Foundation, & Iqlusion to bring interoperability to Zcash',
+    date: 'August 13, 2019',
+    source: 'Keep Blog',
+    aboveTheFold: "Together, they are funding the addition of FlyClient proofs in Zcash.",
+    url: 'https://blog.keep.network/july-roundup-1a1d71e22575'
 },{
-    title: 'Ep 47, Announcing tBTC with James Prestwich and Matt Luongo of Cross-Chain Group',
-    date: 'August 9, 2019',
-    source: 'Wyre Talks Podcast',
-    aboveTheFold: "DeFi is better with Bitcoin.  But there's no way to bring BTC onto Ethereum that is censorship-resistant AND adheres to the #1 principle of Bitcoin: No printing money money money money money money money money money money money money money money money money money money money money money money money",
-    url: 'http://9.com'
+    title: 'Summa and Keep Partner on Cross-Chain Working Group',
+    date: 'August 1, 2019',
+    source: 'Keep Blog',
+    aboveTheFold: "Laura Wallendal shares Keep’s partnership with Summa to form the Cross-Chain Group, a working group and industry resource for technologies, projects, and efforts at the forefront of blockchain interoperability.",
+    url: 'https://blog.keep.network/blockchain-interoperability-working-group-keep-summa-30eb8071f865'
 },{
-    title: 'Ep 47, Announcing tBTC with James Prestwich and Matt Luongo of Cross-Chain Group',
-    date: 'August 9, 2019',
-    source: 'Wyre Talks Podcast',
-    aboveTheFold: "DeFi is better with Bitcoin.  But there's no way to bring BTC onto Ethereum that is censorship-resistant AND adheres to the #1 principle of Bitcoin: No printing money money money money money money money money money money money money money money money money money money money money money money money",
-    url: 'http://10.com'
+    title: 'Zcon Workshop: “Toward Cross-Chain Interoperability with Zcash”',
+    date: 'June 23, 2019',
+    source: 'Keep Blog',
+    aboveTheFold: "Matt Luong and James Prestwich hosted a workshop at the conference to discuss future economic interoperability between Ethereum and Zcash.",
+    url: 'https://blog.keep.network/keep-network-june-roundup-db063f305ad9'
 },{
-    title: 'Ep 47, Announcing tBTC with James Prestwich and Matt Luongo of Cross-Chain Group',
-    date: 'August 9, 2019',
-    source: 'Wyre Talks Podcast',
-    aboveTheFold: "DeFi is better with Bitcoin.  But there's no way to bring BTC onto Ethereum that is censorship-resistant AND adheres to the #1 principle of Bitcoin: No printing money money money money money money money money money money money money money money money money money money money money money money money",
-    url: 'http://11.com'
+    title: 'Speaking at CognitionX Conference in London',
+    date: 'June 9, 2019',
+    source: 'Keep Blog',
+    aboveTheFold: "Ecosystem Growth & Innovation Lead Jarrell James joined a panel at CogX discussing adoption challenges, inherently bad actors with centralized companies, secure multi-party computation & real-life, tangible use cases, how data is stored and shared from a centralized corporate perspective and more.",
+    url: 'https://blog.keep.network/keep-network-june-roundup-db063f305ad9'
+},{
+    title: 'Keep developers present network component libp2p to IPFS',
+    date: 'May 6, 2019',
+    source: 'IPFS Youtube Channel',
+    aboveTheFold: "Piotr Dyraga and Raghav Gulati gave a presentation at an IPFS Weekly Call + Contributor Office Hours on one of the important components of Keep — libp2p.",
+    url: 'https://www.youtube.com/watch?v=EamY2U2Ohyk'
+},{
+    title: 'Corbin Pon interviewed by Underscore VC Co-Founder',
+    date: 'April 23, 2019',
+    source: 'Underscore VC Youtube Channel',
+    aboveTheFold: "Discussing the future of blockchain, Corbin Pon and Richard Dulude covered the possibilities that Keep enables for public blockchains, different levels of privacy and security, hopes and plans for a safer financial world with ownership certainty, and the top things hindering blockchain.",
+    url: 'https://www.youtube.com/watch?v=PfwJODGY6yQ'
 }]
 
 class PressContent extends Component {

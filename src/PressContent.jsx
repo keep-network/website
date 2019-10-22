@@ -145,9 +145,9 @@ class PressContent extends Component {
                     (allPressEntries.length > 10) && (this.state.pressEntries.length === 10)
                     ? (
                         <PageSection id="see-all">
-                            <div className="see-all-button" onClick={this.handleShowAll}>
+                            <button className="see-all-button" onClick={this.handleShowAll}>
                                 See all <Arrow height={22} width={59} />
-                            </div>
+                            </button>
                         </PageSection>
                     ) : ''
                 }

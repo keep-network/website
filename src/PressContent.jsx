@@ -101,7 +101,7 @@ class PressContent extends Component {
             <div className="press-content">
                 <PageSection id="title-container">
                     <div className="title">
-                        <h1>Press Coverage</h1>
+                        <h1>Keep in the Press</h1>
                         <h3>For press inquiries, please contact us at social@keep.network</h3>
                     </div>
                 </PageSection>
@@ -109,7 +109,7 @@ class PressContent extends Component {
                     <div className="media-kit">
                         <div className="media-kit-left">
                             <h2>Do you want to write about us?</h2>
-                            <h3>Find everything you might need in our media kit</h3>
+                            <h3>Find everything you might need in our media kit.</h3>
                         </div>
                         <div className="media-kit-right">
                             <a href="media/KeepMediaKit.zip" target="_blank" rel="noopener noreferrer">

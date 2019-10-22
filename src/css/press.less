@@ -61,12 +61,27 @@
                     display: block;
                     text-decoration: inherit;
                     width: 400px;
+                    margin: 0 auto;
 
                     .media-kit-link {
                         display: flex;
                         flex-direction: row;
                         justify-content: space-around;
                         align-items: center;
+                        flex-wrap: wrap;
+
+                        @media @mobile {
+                            justify-content: center;
+
+                            .media-kit-link-text {
+                                margin-left: 20px;
+                            }
+
+                            .media-kit-link-button {
+                                flex-basis: 100%;
+                                margin: 20px 50px 0 50px;
+                            }
+                        }
     
                         .media-kit-link-text {
                             color: #fff;
@@ -80,6 +95,7 @@
                             font-weight: bold;
                             font-size: .9em;
                             padding: 10px 20px;
+                            text-align: center;
                         }
                     }
 

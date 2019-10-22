@@ -2,6 +2,7 @@ import classNames from 'classnames';
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-scroll';
+import { withRouter } from "react-router";
 
 
 const propTypes = {
@@ -27,17 +28,23 @@ const defaultProps = {
 
 // A Scroll Aware NavItem compatible with React Bootstrap's Nav
 class NavScrollItem extends React.Component {
-    constructor(props, context) {
-        super(props, context);
+    handleClick = (e) => {
+        const { eventKey, onSelect, onClick, href, history, to } = this.props
 
-        this.handleClick = this.handleClick.bind(this);
-    }
+        if (typeof onClick === 'function') {
+            onClick()
+        }
 
-    handleClick(e) {
-        if (this.props.onSelect) {
+        if (href) {
+            e.stopPropagation()
+
+            history.push(`${href}#${to || ''}`)
+        }
+
+        if (onSelect) {
             e.preventDefault();
 
-            this.props.onSelect(this.props.eventKey, e);
+            onSelect(eventKey, e);
         }
     }
 
@@ -48,6 +55,7 @@ class NavScrollItem extends React.Component {
             className,
             style,
             activeClass,
+            hashSpy,
             to,
             spy,
             smooth,
@@ -75,17 +83,15 @@ class NavScrollItem extends React.Component {
             <li
                 role="presentation"
                 className={classNames(className, { active })}
-                style={style}
-                onClick={() => {
-                    onClick();
-                    this.handleClick();
-                }}>
+                style={style}>
                 <Link
                     activeClass={activeClass}
                     to={to}
                     spy={spy}
+                    hashSpy={hashSpy}
                     smooth={smooth}
-                    duration={duration}>
+                    duration={duration}
+                    onClick={this.handleClick}>
                     {children}
                 </Link>
             </li>
@@ -96,4 +102,4 @@ class NavScrollItem extends React.Component {
 NavScrollItem.propTypes = propTypes;
 NavScrollItem.defaultProps = defaultProps;
 
-export default NavScrollItem;
+export default withRouter(NavScrollItem);

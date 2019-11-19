@@ -63,7 +63,7 @@ const allPressEntries = [{
     title: 'Zcon Workshop: “Toward Cross-Chain Interoperability with Zcash”',
     date: 'June 23, 2019',
     source: 'Keep Blog',
-    aboveTheFold: "Matt Luong and James Prestwich hosted a workshop at the conference to discuss future economic interoperability between Ethereum and Zcash.",
+    aboveTheFold: "Matt Luongo and James Prestwich hosted a workshop at the conference to discuss future economic interoperability between Ethereum and Zcash.",
     url: 'https://blog.keep.network/keep-network-june-roundup-db063f305ad9'
 },{
     title: 'Speaking at CognitionX Conference in London',

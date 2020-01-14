@@ -64,7 +64,7 @@ class App extends Component {
                                     <li><a href="https://www.reddit.com/r/KeepNetwork/" rel="noopener noreferrer" target="_blank">Reddit</a></li>
                                 </ul>
                             </div>
-                            <span>&#169; 2019 Keep. All Rights Reserved.</span>
+                            <span>&#169; 2020 Keep SEZC. All Rights Reserved.</span>
                             <Picture className="half-circle" src={getSrc('/images/texture-circle-3', 'png', 3)} />
                         </Grid>
                     </footer>

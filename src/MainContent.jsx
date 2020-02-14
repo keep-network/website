@@ -235,13 +235,15 @@ class MainContent extends Component {
                         github="https://github.com/Shadowfiend"
                         keybase="http://keybase.io/shadowfiend" />
                     <Profile
-                        name="Laura Wallendal"
-                        title="Head of Growth"
-                        imagePath="/images/headshots/laura"
-                        imageMaxRes={3}
-                        twitter="https://twitter.com/LauraWallendal"
-                        linkedin="https://www.linkedin.com/in/laurawallendal"
-                        keybase="http://keybase.io/lwallendal" />
+                        name="Carolyn Reckhow"
+                        title="Head of Business Strategy"
+                        imagePath="/images/headshots/carolyn"
+                        imageType="jpg"
+                        imageMaxRes={2}
+                        twitter="https://twitter.com/CReckhow"
+                        linkedin="https://www.linkedin.com/in/carolyn-reckhow-73345a1a"
+                        github="https://github.com/creckhow"
+                        keybase="http://keybase.io/carolynreckhow" />
                     <Profile
                         name="Michael Gluzman"
                         title="Head of Design"
@@ -268,15 +270,6 @@ class MainContent extends Component {
                         imageType="png"
                         imageMaxRes={3}
                         github="https://github.com/eth-r" />
-                    <Profile
-                        name="Prashanth Irudayaraj"
-                        title="Research Manager"
-                        imagePath="/images/headshots/prashanth"
-                        imageType="png"
-                        imageMaxRes={3}
-                        twitter="https://twitter.com/Zarathusthra"
-                        linkedin="https://www.linkedin.com/in/pirudayaraj"
-                        keybase="http://keybase.io/starsitar" />
                     <Profile
                         name="Sloan Thompson"
                         title="Head of DevOps"
@@ -342,43 +335,13 @@ class MainContent extends Component {
                         github="https://github.com/ironng"
                         keybase="http://keybase.io/ironng" />
                     <Profile
-                        name="Markus Fix"
-                        title="Developer"
-                        imagePath="/images/headshots/markus"
-                        imageType="png"
+                        name="Laura Wallendal"
+                        title="General Manager"
+                        imagePath="/images/headshots/laura"
                         imageMaxRes={3}
-                        twitter="https://twitter.com/lispmeister"
-                        linkedin="https://www.linkedin.com/in/lispmeister/"
-                        github="https://github.com/lispmeister"
-                        keybase="http://keybase.io/lispmeister" />
-                    <Profile
-                        name="Eliza Petrovska"
-                        title="Community and Content Manager"
-                        imagePath="/images/headshots/elizapetrovska_1"
-                        imageType="png"
-                        imageMaxRes={3}
-                        twitter="https://twitter.com/elizapetrovska"
-                        linkedin="https://www.linkedin.com/in/elizapetrovska/"
-                        github="https://github.com/elizapetrovska"
-                        keybase="http://keybase.io/elizapetrovska" />
-                    <Profile
-                        name="Jarrell James"
-                        title="Ecosystem Growth and Innovation Lead"
-                        imagePath="/images/headshots/jarrellJames"
-                        imageType="jpg"
-                        imageMaxRes={3}
-                        twitter="https://twitter.com/jarrelljames_"
-                        linkedin="https://www.linkedin.com/in/jarrell-james/"
-                        keybase="http://keybase.io/JarrellJames" />
-                    <Profile
-                        name="Olivia Lovenmark"
-                        title="Writer and Communication Strategist"
-                        imagePath="/images/headshots/oliviaLovenmark"
-                        imageType="jpg"
-                        imageMaxRes={1}
-                        twitter="https://twitter.com/olivialovenmark"
-                        linkedin="https://www.linkedin.com/in/olovenmark/"
-                        keybase="https://keybase.io/olivialovenmark" />
+                        twitter="https://twitter.com/LauraWallendal"
+                        linkedin="https://www.linkedin.com/in/laurawallendal"
+                        keybase="http://keybase.io/lwallendal" />
                 </PageSection>
                 <PageSection id={sections.DESCRIPTION} additionalClassNames={['blurb', 'blurb-desktop']}>
                     <div className="blurb-panel">

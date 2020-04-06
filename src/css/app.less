@@ -29,7 +29,7 @@ body {
 }
 
 .home,
-.slack {
+.discord {
     .col-circles {
         text-align: center;
 
@@ -88,41 +88,34 @@ body {
     }
 }
 
-.slack {
+.discord {
     background-color: @background-med-color;
 
     h3 {
         color: @accent-text-color;
         margin: 10px 0 30px;
 
-        svg {
-            position: relative;
-            top: 14px;
-            display: inline-block;
-            padding: 0 0 7px;
+        span {
+            display: flex;
+            align-items: center;
+            text-align: center;
         }
     }
 
-    @media @md-up {
-        .form-inline {
-            min-width: 475px;
-        }
-
-        .form-group {
-            min-width: 70%;
-        }
+    .discord-logo {
+        display: inline-block;
+        width: 221px;
+        height: 75px;
+        text-indent: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        background-image: url(./images/Discord-Logo+Wordmark.svg);
+        background-repeat: no-repeat;
+        background-position: center;
     }
 
-    @media @mobile {
-        h3 {
-            font-size: 22px;
-
-            svg {
-                width: 104px;
-                height: 30px;
-                top: 12px;
-            }
-        }
+    .btn {
+        margin: 0 15px;
     }
 
     @media (min-width: 620px) {
@@ -135,34 +128,28 @@ body {
         .col-circles {
             align-self: flex-start;
         }
-
-        .form-inline {
-            display: flex;
-            align-items: center;
-        }
-
-        .form-group {
-            margin-right: 5px;
-        }
     }
 
     @media (max-width: 619px) {
         text-align: center;
 
-        h3,
-        .email-form .success-message {
-            font-weight: 400;
+        h3 {
+            span {
+                justify-content: center;
+
+                &:last-of-type {
+                    flex-direction: column;
+                }
+            }
         }
 
-        .form-inline,
-        .form-group {
-            display: block;
+        .discord-logo {
+            margin-bottom: 10px;
         }
 
         .btn {
             display: block;
             width: 177px;
-            margin: 10px auto 20px;
         }
 
         .col-circles {

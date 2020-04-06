@@ -31,7 +31,7 @@ class MainContent extends Component {
     }
 
     render() {
-        const { signupSlack, signupMailingList, ajaxRequestStates } = this.props
+        const { signupMailingList, ajaxRequestStates } = this.props
 
         return (
             <div className="main-content">
@@ -46,20 +46,30 @@ class MainContent extends Component {
                         </Col>
                     </Row>
                 </PageSection>
-                <PageSection id={sections.SLACK}>
-                    <Row className="slack-signup">
+                <PageSection id={sections.DISCORD}>
+                    <Row className="discord-signup">
                         <Col xs={7}>
-                            <EmailForm
-                                label="Slack Email"
-                                placeholder="you@example.com"
-                                onSubmit={signupSlack}
-                                requestStates={ajaxRequestStates}
-                                request={actionTypes.SIGNUP_SLACK}>
-                                <h3>
+                            <h3>
+                                <span>
                                     Join our community on
-                                    <Icons.Slack color="#AC6E16"/>
-                                </h3>
-                            </EmailForm>
+                                </span>
+                                <span>
+                                    <a className="discord-logo"
+                                        href="https://discord.gg/wYezN7v"
+                                        target="_blank"
+                                        rel="noopener noreferrer">
+                                        Discord
+                                    </a>
+                                    <Button
+                                        href="https://discord.gg/wYezN7v"
+                                        bsStyle="primary"
+                                        bsSize="large"
+                                        rel="noopener noreferrer"
+                                        target="_blank">
+                                        <Icons.ArrowRight />
+                                    </Button>
+                                </span>
+                            </h3>
                         </Col>
                         <Col xs={5} className="col-circles">
                             <div>

@@ -62,6 +62,7 @@ class App extends Component {
                                     <li><a href="https://twitter.com/keep_project" rel="noopener noreferrer" target="_blank">Twitter</a></li>
                                     <li><a href="https://t.me/KeepNetworkOfficial/" rel="noopener noreferrer" target="_blank">Telegram</a></li>
                                     <li><a href="https://www.reddit.com/r/KeepNetwork/" rel="noopener noreferrer" target="_blank">Reddit</a></li>
+                                    <li><a href="https://discord.gg/wYezN7v" rel="noopener noreferrer" target="_blank">Discord</a></li>
                                 </ul>
                             </div>
                             <span>&#169; 2020 Keep SEZC. All Rights Reserved.</span>

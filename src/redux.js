@@ -8,9 +8,6 @@ export const actionTypes = Enum(
     'CREATE_SESSION',
     'CREATE_SESSION_SUCCESS',
     'CREATE_SESSION_FAILURE',
-    'SIGNUP_SLACK',
-    'SIGNUP_SLACK_SUCCESS',
-    'SIGNUP_SLACK_FAILURE',
     'SIGNUP_MAILING_LIST',
     'SIGNUP_MAILING_LIST_SUCCESS',
     'SIGNUP_MAILING_LIST_FAILURE'
@@ -19,10 +16,6 @@ export const actionTypes = Enum(
 export const actions = {
     createSession: () => ({
         type: actionTypes.CREATE_SESSION
-    }),
-    signupSlack: ({ email }) => ({
-        type: actionTypes.SIGNUP_SLACK,
-        payload: { email }
     }),
     signupMailingList: ({ email }) => ({
         type: actionTypes.SIGNUP_MAILING_LIST,
@@ -58,12 +51,6 @@ export const ajaxRequestStates = (state = {}, action) => {
         return newState
     case actionTypes.CREATE_SESSION_FAILURE:
         newState.CREATE_SESSION = assignData(false, 'CREATE_SESSION')
-        return newState
-    case actionTypes.SIGNUP_SLACK_SUCCESS:
-        newState.SIGNUP_SLACK = assignData(true, 'SIGNUP_SLACK')
-        return newState
-    case actionTypes.SIGNUP_SLACK_FAILURE:
-        newState.SIGNUP_SLACK = assignData(false, 'SIGNUP_SLACK')
         return newState
     case actionTypes.SIGNUP_MAILING_LIST_SUCCESS:
         newState.SIGNUP_MAILING_LIST = assignData(true, 'SIGNUP_MAILING_LIST')
@@ -114,19 +101,6 @@ function* createSession(action) {
     }
 }
 
-function* signupSlack(action) {
-    try {
-        yield call(waitFor, getSessionCreatedFromState, true)
-        const req = request.post(`${API_URL}/slack/invite`)
-                .send({ email: action.payload.email })
-        const response = yield req
-        yield put({ type: actionTypes.SIGNUP_SLACK_SUCCESS, response })
-    } catch (error) {
-        yield put({ type: actionTypes.SIGNUP_SLACK_FAILURE, error })
-        console.error(error)
-    }
-}
-
 function* signupMailingList(action) {
     try {
         yield call(waitFor, getSessionCreatedFromState, true)
@@ -143,7 +117,6 @@ function* signupMailingList(action) {
 export const saga = function*() {
     yield all([
         takeLatest(actionTypes.CREATE_SESSION, createSession),
-        takeLatest(actionTypes.SIGNUP_SLACK, signupSlack),
         takeLatest(actionTypes.SIGNUP_MAILING_LIST, signupMailingList)
     ])
 }

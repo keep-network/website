@@ -31,7 +31,7 @@ class MainContent extends Component {
     }
 
     render() {
-        const { signupMailingList, ajaxRequestStates } = this.props
+        const { signupDiscord, signupMailingList, ajaxRequestStates } = this.props
 
         return (
             <div className="main-content">
@@ -52,7 +52,7 @@ class MainContent extends Component {
                             <EmailForm
                                 label="Discord Email"
                                 placeholder="you@example.com"
-                                onSubmit={signupMailingList}
+                                onSubmit={signupDiscord}
                                 requestStates={ajaxRequestStates}
                                 request={actionTypes.SIGNUP_MAILING_LIST}>
                                 <h3>

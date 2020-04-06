@@ -8,6 +8,7 @@ export const actionTypes = Enum(
     'CREATE_SESSION',
     'CREATE_SESSION_SUCCESS',
     'CREATE_SESSION_FAILURE',
+    'SIGNUP_DISCORD',
     'SIGNUP_MAILING_LIST',
     'SIGNUP_MAILING_LIST_SUCCESS',
     'SIGNUP_MAILING_LIST_FAILURE'
@@ -16,6 +17,10 @@ export const actionTypes = Enum(
 export const actions = {
     createSession: () => ({
         type: actionTypes.CREATE_SESSION
+    }),
+    signupDiscord: ({ email }) => ({
+        type: actionTypes.SIGNUP_DISCORD,
+        payload: { email }
     }),
     signupMailingList: ({ email }) => ({
         type: actionTypes.SIGNUP_MAILING_LIST,
@@ -101,6 +106,12 @@ function* createSession(action) {
     }
 }
 
+function* signupDiscord(action) {
+    yield put(actions.signupMailingList(action.payload))
+    yield take(actionTypes.SIGNUP_MAILING_LIST_SUCCESS)
+    yield call(window.open, 'https://discord.gg/wYezN7v')
+}
+
 function* signupMailingList(action) {
     try {
         yield call(waitFor, getSessionCreatedFromState, true)
@@ -117,6 +128,7 @@ function* signupMailingList(action) {
 export const saga = function*() {
     yield all([
         takeLatest(actionTypes.CREATE_SESSION, createSession),
+        takeLatest(actionTypes.SIGNUP_DISCORD, signupDiscord),
         takeLatest(actionTypes.SIGNUP_MAILING_LIST, signupMailingList)
     ])
 }

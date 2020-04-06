@@ -1,6 +1,6 @@
 const sections = {
     HOME: 'home',
-    SLACK: 'slack',
+    DISCORD: 'discord',
     GITHUB: 'github',
     MAILING_LIST: 'mailing-list',
     LEARN: 'learn',

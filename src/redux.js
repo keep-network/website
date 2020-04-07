@@ -22,9 +22,9 @@ export const actions = {
         type: actionTypes.SIGNUP_DISCORD,
         payload: { email }
     }),
-    signupMailingList: ({ email }) => ({
+    signupMailingList: ({ email, discord_signup }) => ({
         type: actionTypes.SIGNUP_MAILING_LIST,
-        payload: { email }
+        payload: { email, discord_signup }
     })
 }
 
@@ -107,16 +107,14 @@ function* createSession(action) {
 }
 
 function* signupDiscord(action) {
-    yield put(actions.signupMailingList(action.payload))
-    yield take(actionTypes.SIGNUP_MAILING_LIST_SUCCESS)
-    yield call(window.open, 'https://discord.gg/wYezN7v')
+    yield put(actions.signupMailingList({ discord_signup: true, ...action.payload }))
 }
 
 function* signupMailingList(action) {
     try {
         yield call(waitFor, getSessionCreatedFromState, true)
         const req = request.post(`${API_URL}/mailing-list/signup`)
-                .send({ email: action.payload.email })
+                .send(action.payload)
         const response = yield req
         yield put({ type: actionTypes.SIGNUP_MAILING_LIST_SUCCESS, response })
     } catch (error) {

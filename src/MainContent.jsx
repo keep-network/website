@@ -31,7 +31,7 @@ class MainContent extends Component {
     }
 
     render() {
-        const { signupSlack, signupMailingList, ajaxRequestStates } = this.props
+        const { signupDiscord, signupMailingList, ajaxRequestStates } = this.props
 
         return (
             <div className="main-content">
@@ -46,18 +46,18 @@ class MainContent extends Component {
                         </Col>
                     </Row>
                 </PageSection>
-                <PageSection id={sections.SLACK}>
-                    <Row className="slack-signup">
+                <PageSection id={sections.DISCORD}>
+                    <Row className="discord-signup">
                         <Col xs={7}>
                             <EmailForm
-                                label="Slack Email"
+                                label="Discord Email"
                                 placeholder="you@example.com"
-                                onSubmit={signupSlack}
+                                onSubmit={signupDiscord}
                                 requestStates={ajaxRequestStates}
-                                request={actionTypes.SIGNUP_SLACK}>
+                                request={actionTypes.SIGNUP_MAILING_LIST}>
                                 <h3>
                                     Join our community on
-                                    <Icons.Slack color="#AC6E16"/>
+                                    <span className="discord-logo">Discord</span>
                                 </h3>
                             </EmailForm>
                         </Col>

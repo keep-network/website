@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import { Button, ControlLabel, Form, FormGroup,
+import { ControlLabel, Form, FormGroup,
     FormControl } from 'react-bootstrap'
 import isEmail from 'validator/lib/isEmail'
 import pascalCase from 'pascal-case'
@@ -8,6 +8,7 @@ import classNames from 'classnames'
 import merge from 'lodash/merge'
 
 import { ArrowRight } from './Icons'
+import SubmitButton from './SubmitButton'
 
 
 const ERRORS = {
@@ -137,12 +138,11 @@ class EmailForm extends Component {
                             onKeyUp={this.onKeyUp}/>
                     </FormGroup>
                     {' '}
-                    <Button
-                        bsStyle="primary"
-                        bsSize="large"
+                    <SubmitButton
+                        isLoading={requestSent && !requestSuccess}
                         onClick={this.onClick}>
                         <ArrowRight />
-                    </Button>
+                    </SubmitButton>
                 </Form>
                 { hasError &&
                     <small className="error-message">{errorMsg}</small> }

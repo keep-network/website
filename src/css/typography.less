@@ -134,3 +134,56 @@ a {
 fieldset[disabled] .btn {
     opacity: 0.5;
 }
+
+.btn-submit {
+    min-width: 124px;
+    text-align: center;
+    vertical-align: middle;
+
+    .spinner {
+        display: inline-block;
+        position: relative;
+        top: 2px;
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        background: linear-gradient(to right, #ffffff 10%, rgba(255, 255, 255, 0) 42%);
+        position: relative;
+        animation: rotate 1.4s linear infinite;
+        transform: translateZ(0);
+
+        &:before {
+            content: '';
+            width: 50%;
+            height: 50%;
+            background: #fff;
+            border-radius: 100% 0 0 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        &:after {
+            background: @black;
+            width: 75%;
+            height: 75%;
+            border-radius: 50%;
+            content: '';
+            margin: auto;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+        }
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

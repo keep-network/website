@@ -11,7 +11,7 @@ If you are looking to help to with a code contribution, our project uses:
 - [ES6](https://developer.mozilla.org/en-US/docs/Web/JavaScript/New_in_JavaScript/ECMAScript_2015_support_in_Mozilla)
 - [Docker](https://www.docker.com/)
 
-If you don't feel ready to make a code contribution yet, no problem! There are many ways to contribute to our community without writing code. You can submit bug reports or feature requests by opening an issue here in our repository. Outside of our repo, you can join the discussion about Keep in our [slack channel](https://keep.network/), or even write a blog post or tutorial.
+If you don't feel ready to make a code contribution yet, no problem! There are many ways to contribute to our community without writing code. You can submit bug reports or feature requests by opening an issue here in our repository. Outside of our repo, you can join the discussion about Keep in [Discord](https://discord.gg/wYezN7v), or even write a blog post or tutorial.
 
 ## How do I contribute?
 

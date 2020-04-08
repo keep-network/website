@@ -29,7 +29,7 @@ body {
 }
 
 .home,
-.slack {
+.discord {
     .col-circles {
         text-align: center;
 
@@ -88,19 +88,30 @@ body {
     }
 }
 
-.slack {
+.discord {
     background-color: @background-med-color;
 
     h3 {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
         color: @accent-text-color;
         margin: 10px 0 30px;
+    }
 
-        svg {
-            position: relative;
-            top: 14px;
-            display: inline-block;
-            padding: 0 0 7px;
-        }
+    .discord-logo {
+        display: inline-block;
+        width: 135px;
+        height: 33px;
+        text-indent: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        background-image: url(./images/Discord-Wordmark-Gold.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        margin: 0 9px;
+        position: relative;
+        bottom: -2px;
     }
 
     @media @md-up {
@@ -116,12 +127,12 @@ body {
     @media @mobile {
         h3 {
             font-size: 22px;
+        }
+    }
 
-            svg {
-                width: 104px;
-                height: 30px;
-                top: 12px;
-            }
+    @media (min-width: 768px) and (max-width: 991px) {
+        .discord-logo {
+            margin: 0;
         }
     }
 
@@ -149,7 +160,10 @@ body {
     @media (max-width: 619px) {
         text-align: center;
 
-        h3,
+        h3 {
+            justify-content: center;
+        }
+
         .email-form .success-message {
             font-weight: 400;
         }

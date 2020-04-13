@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { Alert, Grid, Col, Row } from 'react-bootstrap'
-import classNames from 'classnames'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import { Picture } from 'react-responsive-picture'
 
@@ -16,16 +15,10 @@ import { getSrc } from './utils'
 import './app.css'
 
 class App extends Component {
-    state = {
-        alertMessage: `NOTICE: As of ${ new Date().toLocaleDateString() }, we have not announced any token sale or air drop of any kind.`
-    }
-
     render() {
-        const { alertMessage } = this.state
-
         return (
             <Router>
-                <div className={classNames('App', {' has-alert': !!alertMessage })}>
+                <div className="App has-alert">
                     <NavContent />
                     <Route path={routes.MAIN} exact component={() => <MainContent {...this.props} />} />
                     <Route path={routes.PRESS} component={PressContent} />
@@ -68,9 +61,11 @@ class App extends Component {
                             <Picture className="half-circle" src={getSrc('/images/texture-circle-3', 'png', 3)} />
                         </Grid>
                     </footer>
-                    { alertMessage && <Alert bsStyle="info">
-                            <p>{ alertMessage }</p>
-                        </Alert> }
+                    <Alert bsStyle="info">
+                        <p>
+                            <span>ANNOUNCING:</span> First stakedrop for tBTC on June 8, 2020. <a href="#">Add to Calendar</a>
+                        </p>
+                    </Alert>
                 </div>
             </Router>
         )

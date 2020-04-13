@@ -2,7 +2,6 @@ import classNames from 'classnames';
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-scroll';
-import { withRouter } from "react-router";
 
 
 const propTypes = {
@@ -102,4 +101,4 @@ class NavScrollItem extends React.Component {
 NavScrollItem.propTypes = propTypes;
 NavScrollItem.defaultProps = defaultProps;
 
-export default withRouter(NavScrollItem);
+export default NavScrollItem;

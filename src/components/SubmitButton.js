@@ -3,8 +3,8 @@ import { Button } from 'reactstrap'
 
 const SubmitButton = ({ isLoading, onClick, children }) => (
     <Button
-        bsStyle="primary"
-        bsSize="large"
+        color="primary"
+        size="lg"
         className="btn-submit"
         disabled={isLoading}
         onClick={onClick}>

@@ -8,7 +8,6 @@ import PageSection from './PageSection'
 import PressContent from './PressContent'
 import Profile from './Profile'
 import SubmitButton from './SubmitButton'
-import TimelinePoint from './TimelinePoint'
 
 export {
   App,
@@ -20,6 +19,5 @@ export {
   PageSection,
   PressContent,
   Profile,
-  SubmitButton,
-  TimelinePoint
+  SubmitButton
 }

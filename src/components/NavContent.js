@@ -1,23 +1,24 @@
-import React from 'react'
-import { Nav, Navbar, NavbarBrand, NavItem } from 'reactstrap'
+import React, { useState } from 'react'
+import { Collapse, Nav, Navbar, NavbarBrand, NavItem, NavbarToggler } from 'reactstrap'
 
 import NavScrollItem from './NavScrollItem'
 import * as Icons from './Icons'
 import { routes, sections, WHITEPAPER_URL } from '../constants'
 
 const NavContent = () => {
+    const [collapsed, setCollapsed] = useState(true)
+    const toggleNavbar = () => setCollapsed(!collapsed)
+
     return (
-        <Navbar fixedTop>
-            <Navbar.Header>
-                <NavbarBrand>
-                    <NavScrollItem
-                        activeClass="active"
-                        href={routes.MAIN}
-                        to={sections.HOME}><Icons.Keep height="61px" width="235px"/></NavScrollItem>
-                </NavbarBrand>
-                <Navbar.Toggle />
-            </Navbar.Header>
-            <Navbar.Collapse>
+        <Navbar fixed="top">
+            <NavbarBrand>
+                <NavScrollItem
+                    activeClass="active"
+                    href={routes.MAIN}
+                    to={sections.HOME}><Icons.Keep height="61px" width="235px"/></NavScrollItem>
+            </NavbarBrand>
+            <NavbarToggler onClick={toggleNavbar} />
+            <Collapse isOpen={!collapsed} navbar>
                 <Nav pullRight>
                     <NavItem
                         href={WHITEPAPER_URL}
@@ -38,7 +39,7 @@ const NavContent = () => {
                         rel="noopener noreferrer"
                         target="_blank">Blog</NavItem>
                 </Nav>
-            </Navbar.Collapse>
+            </Collapse>
         </Navbar>
     )
 }

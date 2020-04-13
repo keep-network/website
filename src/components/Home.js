@@ -14,7 +14,7 @@ import { sections, WHITEPAPER_URL } from '../constants'
 class Home extends Component {
     componentDidMount() {
         const { location } = this.props
-        const hash = location.hash && location.hash.slice(1)
+        const hash = location && location.hash && location.hash.slice(1)
 
         if (hash) {
             setTimeout(() => {
@@ -81,8 +81,8 @@ class Home extends Component {
                                 Repository
                                 <Button
                                     href="https://github.com/keep-network"
-                                    bsStyle="primary"
-                                    bsSize="large"
+                                    color="primary"
+                                    size="lg"
                                     rel="noopener noreferrer"
                                     target="_blank">
                                     <Icons.ArrowRight />
@@ -118,11 +118,11 @@ class Home extends Component {
                             <h4>Whitepaper</h4>
                             <Button
                                 href={WHITEPAPER_URL}
-                                bsStyle="primary"
+                                color="primary"
                                 download="Keep Whitepaper"
                                 rel="noopener noreferrer"
                                 target="_blank"
-                                bsSize="large">
+                                size="lg">
                                 Download
                             </Button>
                         </div>
@@ -131,11 +131,11 @@ class Home extends Component {
                             <h4>Business Primer</h4>
                             <Button
                                 href="/KeepBusinessPrimer.pdf"
-                                bsStyle="primary"
+                                color="primary"
                                 download="Keep Business Primer"
                                 rel="noopener noreferrer"
                                 target="_blank"
-                                bsSize="large">
+                                size="lg">
                                 Download
                             </Button>
                         </div>

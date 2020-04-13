@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
-import { Grid } from 'reactstrap'
+import { Container } from 'reactstrap'
 
-import { ArrowRight } from './Icons'
+import { ArrowRight } from './icons'
 
 class PageSection extends Component {
     state = {
@@ -27,7 +27,7 @@ class PageSection extends Component {
         return (
             <section className={classes} id={id}>
                 <div className="page-section-content">
-                    <Grid>
+                    <Container>
                         { children }
                         {
                             collapsible ? (
@@ -38,7 +38,7 @@ class PageSection extends Component {
                                 </h4>
                             ) : ''
                         }
-                    </Grid>
+                    </Container>
                 </div>
             </section>
         )

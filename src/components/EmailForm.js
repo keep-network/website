@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import { ControlLabel, Form, FormGroup,
-    FormControl } from 'reactstrap'
+import { Label, Form, FormGroup, Input } from 'reactstrap'
 import isEmail from 'validator/lib/isEmail'
 import pascalCase from 'pascal-case'
 import classNames from 'classnames'
@@ -126,11 +125,11 @@ class EmailForm extends Component {
                 { children }
                 <Form inline className={classNames(classes)}
                     onSubmit={(e) => { e.preventDefault() }}>
-                    <FormGroup controlId={`formInline${pascalCase(label)}`}>
-                        <ControlLabel style={{display: 'none'}}>
+                    <FormGroup>
+                        <Label style={{display: 'none'}}>
                             {label}
-                        </ControlLabel>
-                        <FormControl
+                        </Label>
+                        <Input
                             type="email"
                             value={email}
                             placeholder={placeholder}

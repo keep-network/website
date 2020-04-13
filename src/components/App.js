@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Alert, Grid, Col, Row } from 'reactstrap'
+import { Alert, Container, Col, Row } from 'reactstrap'
 import classNames from 'classnames'
 import { Picture } from 'react-responsive-picture'
 
@@ -42,7 +42,7 @@ class App extends Component {
                     </Row>
                 </PageSection>
                 <footer>
-                    <Grid>
+                    <Container>
                         <div className="footer-columns">
                             <div className="footer-column-1">
                                 <Icons.KeepCircle />
@@ -61,9 +61,9 @@ class App extends Component {
                         </div>
                         <span>&#169; 2020 Keep SEZC. All Rights Reserved.</span>
                         <Picture className="half-circle" src={getSrc('/images/texture-circle-3', 'png', 3)} />
-                    </Grid>
+                    </Container>
                 </footer>
-                { alertMessage && <Alert bsStyle="info">
+                { alertMessage && <Alert color="info">
                         <p>{ alertMessage }</p>
                     </Alert> }
             </div>

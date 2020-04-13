@@ -7,10 +7,23 @@
     text-align: center;
     border-radius: 0;
     border: 0;
-    background-color: @error-color-light;
+    background-color: @error-color;
     color: @white;
-    padding: 9px;
+    padding: 12px;
     .light-font;
+    font-size: 15px;
+
+    span {
+        font-variant: small-caps;
+        font-weight: 600;
+        font-size: 14px;
+    }
+
+    a {
+        color: @white;
+        text-decoration: underline;
+    }
+
 
     @media only screen and (min-width: 366px) and (max-width: 378px) {
         padding: 8px 15px;

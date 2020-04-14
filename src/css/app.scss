@@ -310,7 +310,7 @@ body {
         }
     }
 
-    .container {
+    .container-md {
         @media (min-width: #{$bp-medium}) {
             display: flex;
             align-items: center;
@@ -533,7 +533,7 @@ body {
         width: 100%;
     }
 
-    .container {
+    .container-md {
         display: flex;
         flex-wrap: wrap;
     }

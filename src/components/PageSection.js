@@ -27,7 +27,7 @@ class PageSection extends Component {
         return (
             <section className={classes} id={id}>
                 <div className="page-section-content">
-                    <Container>
+                    <Container fluid="md">
                         { children }
                         {
                             collapsible ? (

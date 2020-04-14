@@ -36,18 +36,18 @@ class Home extends Component {
             <div className="main-content">
                 <PageSection id={sections.HOME}>
                     <Row>
-                        <Col xs={7}>
+                        <Col xs={12} sm={7}>
                             <h1>A privacy layer for Ethereum</h1>
                             <p>A keep is an off-chain container for private data. Keeps help contracts harness the full power of the public blockchain &mdash; enabling deep interactivity with private data.</p>
                         </Col>
-                        <Col xs={5} className="col-circles">
+                        <Col xs={12} sm={5} className="col-circles">
                             <Picture src={getSrc('/images/texture-circle', 'png', 3)} />
                         </Col>
                     </Row>
                 </PageSection>
                 <PageSection id={sections.DISCORD}>
                     <Row className="discord-signup">
-                        <Col xs={7}>
+                        <Col xs={12} sm={7}>
                             <EmailForm
                                 label="Discord Email"
                                 placeholder="you@example.com"
@@ -59,7 +59,7 @@ class Home extends Component {
                                 </h3>
                             </EmailForm>
                         </Col>
-                        <Col xs={5} className="col-circles">
+                        <Col xs={12} sm={5} className="col-circles">
                             <div>
                                 <Picture src={getSrc('/images/texture-circle-2', 'png', 3)} />
                             </div>
@@ -93,7 +93,7 @@ class Home extends Component {
                 </PageSection>
                 <PageSection id={sections.MAILING_LIST}>
                     <Row >
-                        <Col xs={12} md={8} mdPush={2}>
+                        <Col sm={12} md={{size: 8, offset: 2}}>
                             <EmailForm
                                 label="Email"
                                 placeholder="you@example.com"
@@ -396,12 +396,12 @@ class Home extends Component {
                 <PageSection id={sections.PARTNERS} convex>
                     <h2>Our Partners</h2>
                     <Row>
-                        <Col xs={12} sm={4} smPush={1}>
+                        <Col xs={12} sm={{ size: 4, offset: 1 }}>
                             <a href="https://www.lendroid.com/" rel="noopener noreferrer" target="_blank">
                                 <Picture src={getSrc('/images/logos/lendroidLogo', 'png', 3)} />
                             </a>
                         </Col>
-                        <Col xs={12} sm={4} smPush={3}>
+                        <Col xs={12} sm={{ size: 4, offset: 2 }}>
                             <a href="https://district0x.io/" rel="noopener noreferrer" target="_blank">
                                 <Picture src={getSrc('/images/logos/district0x_logo', 'png', 3)} />
                             </a>

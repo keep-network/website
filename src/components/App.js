@@ -6,6 +6,7 @@ import { Picture } from 'react-responsive-picture'
 import NavContent from './NavContent';
 import PageSection from './PageSection'
 import * as Icons from './Icons'
+import SEO from './SEO.js'
 import { sections, WHITEPAPER_URL } from '../constants'
 import { getSrc } from '../utils'
 
@@ -22,6 +23,7 @@ class App extends Component {
 
         return (
             <div className={classNames('App', {' has-alert': !!alertMessage })}>
+                <SEO />
                 <NavContent />
                 { this.props.children }
                 <PageSection id={sections.HIRING} convex>

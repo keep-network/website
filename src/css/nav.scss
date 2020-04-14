@@ -1,41 +1,43 @@
-.navbar-default {
+.navbar {
     background-color: $background-light-color;
-    border-bottom: none;
+    border-bottom: 0.25px solid $border-color;
     margin: 0 auto;
+    padding: 0;
+    position: relative;
 
     @media (min-width: #{$bp-medium}) {
-        border-bottom: 0.25px solid $border-color;
+        position: fixed;
         text-align: center;
-    }
 
-    @media (max-width: #{$bp-medium}) {
-        position: relative;
-
-        .navbar-header {
-            border-bottom: 0.25px solid $border-color;
-        }
-
-        .navbar-collapse.in {
-            border-top: 0;
-            border-bottom: 0.25px solid fade($border-color, 80%);
-            box-shadow: none;
+        .navbar-collapse {
+            display: block !important;
+            flex-basis: auto;
+            flex-grow: unset;
         }
     }
 
-    .navbar-nav {
+    .nav {
+        @media (max-width: #{$bp-medium - 1}) {
+            flex-direction: column;
+            margin: 7.5px -15px;
+        }
+
         > li {
             > a {
+                display: block;
                 font-weight: 400;
                 font-size: 15px;
                 color: $body-text-color;
+                line-height: 20px;
                 text-transform: uppercase;
                 cursor: pointer;
-                transition: all 0.25s ease-in;
+                transition: color, font-weight 0.25s ease-in;
                 position: relative;
 
                 @media (min-width: #{$bp-medium}) {
                     width: 168px;
                     border-right: 0.25px solid $border-color;
+                    padding: 15px;
 
                     &:hover,
                     &:focus,
@@ -75,17 +77,17 @@
                     }
                 }
 
-                @media (min-width: 992px) and (max-width: 1200px) {
+                @media (min-width: #{$bp-large}) and (max-width: #{$bp-extra-large}) {
                     width: 140px;
                 }
 
-                @media (min-width: 768px) and (max-width: 991px) {
+                @media (min-width: #{$bp-medium}) and (max-width: #{$bp-large - 1}) {
                     width: 102px;
                     font-size: 12px;
                 }
 
                 @media (max-width: #{$bp-medium}) {
-                    padding-left: 40px;
+                    padding: 15px 15px 15px 30px;
 
                     &:hover,
                     &:focus,
@@ -97,10 +99,10 @@
                         &:after {
                             display: block;
                             content: '';
-                            width: 30px;
+                            width: 20px;
                             height: 10px;
                             position: absolute;
-                            top: 15px;
+                            top: 19px;
                             left: 0;
                         }
                     }
@@ -136,7 +138,7 @@
         }
     }
 
-    .navbar-brand {
+    .brand {
         background-repeat: no-repeat;
         background-size: 100%;
         margin: 15px;
@@ -169,27 +171,57 @@
             }
         }
 
-        @media (max-width: #{$bp-medium}) {
+        @media (min-width: #{$bp-medium}) and (max-width: #{$bp-large}){
+            svg {
+                margin: 12px 30px;
+            }
+        }
+
+        @media (max-width: #{$bp-medium - 1}) {
             margin: 17px 15px;
         }
     }
 
-    .navbar-toggle {
+    .navbar-toggler {
+        width: 38px;
+        height: 38px;
         margin: 14px 15px;
         border: 2px solid $black;
         border-radius: 50%;
         padding: 10px 7px;
+        position: relative;
 
-        .icon-bar {
+        span,
+        span:before,
+        span:after {
+            display: block;
             background-color: $black;
             width: 20px;
-            border-radius: 2px;
+            height: 2px;
+        }
+
+        span:before,
+        span:after {
+            content: '';
+            position: absolute;
+        }
+
+        span:before {
+            top: 10px;
+        }
+
+        span:after {
+            bottom: 10px;
         }
 
         &:hover,
         &:focus,
         &:active {
             background-color: transparent;
+        }
+
+        @media (min-width: #{$bp-medium}) {
+            display: none;
         }
     }
 

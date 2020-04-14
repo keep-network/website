@@ -14,7 +14,8 @@ const propTypes = {
     eventKey: PropTypes.any,
     spy: PropTypes.bool,
     smooth: PropTypes.bool,
-    duration: PropTypes.number
+    duration: PropTypes.number,
+    element: PropTypes.string
 };
 
 const defaultProps = {
@@ -22,7 +23,8 @@ const defaultProps = {
     activeClass: 'active',
     spy: true,
     smooth: true,
-    duration: 500
+    duration: 500,
+    element: 'li'
 };
 
 // A Scroll Aware NavItem compatible with React Bootstrap's Nav
@@ -60,6 +62,7 @@ class NavScrollItem extends React.Component {
             smooth,
             duration,
             children,
+            element: Element,
             ...props
         } = this.props;
 
@@ -79,7 +82,7 @@ class NavScrollItem extends React.Component {
         }
 
         return (
-            <li
+            <Element
                 role="presentation"
                 className={classNames(className, { active })}
                 style={style}>
@@ -93,7 +96,7 @@ class NavScrollItem extends React.Component {
                     onClick={this.handleClick}>
                     {children}
                 </Link>
-            </li>
+            </Element>
         );
     }
 }

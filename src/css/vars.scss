@@ -18,7 +18,7 @@ $link-color: $aqua-marine;
 $link-active-color: $gunmetal;
 $syntax-highlight-color: $violet;
 $grey-on-light-color: $gunmetal;
-$border-color: fade($body-text-color, 90%);
+$border-color: rgba($body-text-color, 0.9);
 $error-color: $violet;
 $error-color-light: $violet-light;
 $background-light-color: $pale-grey;

@@ -63,7 +63,10 @@ class App extends Component {
                     </footer>
                     <Alert bsStyle="info">
                         <p>
-                            <span>ANNOUNCING:</span> First stakedrop for tBTC on June 8, 2020. <a href="#">Add to Calendar</a>
+                            Stake ETH, Earn KEEP: Join us for a live stakedrop event on June 8, 2020!
+                            <a href="https://www.crowdcast.io/e/keep-stakedrop---live" rel="noopener noreferrer" target="_blank">
+                                RSVP Here
+                            </a>
                         </p>
                     </Alert>
                 </div>

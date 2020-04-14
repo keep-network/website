@@ -46,15 +46,12 @@ orbs:
 jobs:
   test:
     docker:
-      - image: circleci/node:8
+      - image: circleci/node:12
     working_directory: ~/repo
     steps:
       - checkout
       - restore_cache:
           key: v3-dependency-cache-{{ checksum "package.json" }}
-      - run:
-          name: Install less compiler
-          command: sudo npm install less@3.0.1 -g
       - run:
           name: Install node dependencies
           command: npm install
@@ -64,11 +61,11 @@ jobs:
             - ./node_modules
       - run:
           name: Run frontend tests
-          command: npm run build-css && npm test
+          command: npm test
 
   build_image:
     docker:
-      - image: circleci/node:8
+      - image: circleci/node:12
     working_directory: ~/repo
     steps:
       - checkout

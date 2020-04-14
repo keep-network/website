@@ -71,7 +71,7 @@ body {
         padding: 140px 0 0;
     }
 
-    @media (max-width: #{$bp-medium}) {
+    @media (max-width: #{($bp-medium - 1)}) {
         padding: 40px 0 0;
     }
 
@@ -125,7 +125,7 @@ body {
         }
     }
 
-    @media (max-width: #{$bp-medium}) {
+    @media (max-width: #{($bp-medium - 1)}) {
         h3 {
             font-size: 22px;
         }
@@ -336,7 +336,7 @@ body {
             margin: 0;
         }
 
-        @media (max-width: #{$bp-medium}) {
+        @media (max-width: #{($bp-medium - 1)}) {
             padding: 20px 30px 0;
         }
 
@@ -356,15 +356,15 @@ body {
             padding: 75px 25px;
         }
 
-        @media (max-width: #{$bp-large}) {
+        @media (max-width: #{($bp-large - 1)}) {
             svg {
                 margin-right: 20px;
                 position: relative;
-                top: 15px;
+                top: -4px;
             }
         }
 
-        @media (max-width: #{$bp-medium}) {
+        @media (max-width: #{($bp-medium - 1)}) {
             padding: 40px 0 50px;
 
             &:first-of-type {
@@ -386,13 +386,13 @@ body {
             width: 50%;
         }
 
-        @media (max-width: #{$bp-large}) {
+        @media (max-width: #{($bp-large - 1)}) {
             display: inline;
         }
     }
 
     .btn {
-        @media (max-width: #{$bp-large}) {
+        @media (max-width: #{($bp-large - 1)}) {
             display: block;
             margin: 40px auto 0;
             max-width: 177px;
@@ -410,7 +410,7 @@ body {
             text-align: center;
         }
 
-        @media (max-width: #{$bp-medium}) {
+        @media (max-width: #{($bp-medium - 1)}) {
             margin-bottom: 50px;
         }
     }
@@ -449,7 +449,7 @@ body {
             }
         }
 
-        @media (max-width: #{$bp-medium}) {
+        @media (max-width: #{($bp-medium - 1)}) {
             width: 50%;
             padding: 40px 0;
 
@@ -459,7 +459,7 @@ body {
             }
         }
 
-        @media (max-width: #{$bp-small}) {
+        @media (max-width: #{($bp-small - 1)}) {
             h4 {
                 font-size: 18px;
             }
@@ -467,7 +467,7 @@ body {
     }
 
     .page-section-content {
-        @media (max-width: #{$bp-medium}) {
+        @media (max-width: #{($bp-medium - 1)}) {
             &:before {
                 content: '';
                 display: block;
@@ -505,15 +505,13 @@ body {
     }
 
     .blurb-mobile {
+        display: flex;
+        position: relative;
+        z-index: 1;
+        margin-top: 35px;
+
         @media (min-width: #{$bp-medium}) {
             display: none;
-        }
-
-        @media (max-width: #{$bp-medium}) {
-            display: flex;
-            position: relative;
-            z-index: 1;
-            margin-top: 35px;
         }
     }
 }
@@ -568,14 +566,14 @@ body {
             img {
                 max-width: 100%;
 
-                @media (max-width: #{$bp-large}) {
+                @media (max-width: #{($bp-large - 1)}) {
                     padding: 15px;
                 }
             }
         }
     }
 
-    @media (max-width: #{$bp-medium}) {
+    @media (max-width: #{($bp-medium - 1)}) {
         text-align: center;
 
         h2 {
@@ -585,7 +583,7 @@ body {
 }
 
 .partners {
-    @media (max-width: #{$bp-large}) {
+    @media (max-width: #{($bp-large - 1)}) {
         .col-md-4 {
             margin: 0 auto 30px;
         }
@@ -607,7 +605,7 @@ body {
         }
     }
 
-    @media (max-width: #{$bp-medium}) {
+    @media (max-width: #{($bp-medium - 1)}) {
         .row {
             > * {
                 margin-bottom: 20px;
@@ -655,7 +653,7 @@ body {
         }
     }
 
-    @media (max-width: #{$bp-medium}) {
+    @media (max-width: #{($bp-medium - 1)}) {
         h2 {
             margin-bottom: 20px;
         }
@@ -669,7 +667,7 @@ body {
         }
     }
 
-    @media (max-width: #{$bp-small}) {
+    @media (max-width: #{($bp-small - 1)}) {
         .btn {
             display: block;
             max-width: 177px;
@@ -724,7 +722,7 @@ footer {
         }
     }
 
-    @media (max-width: #{$bp-medium}) {
+    @media (max-width: #{($bp-medium - 1)}) {
         padding: 30px 0 220px;
         .footer-columns {
             ul {

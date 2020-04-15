@@ -1,9 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Arrow from './Arrow'
-import Newspaper from './Newspaper'
 
+export const Arrow = ({ width = 59, height = 22 }) => (
+    <svg width={width} height={height} viewBox="0 0 59 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <line x1="-1.74846e-07" y1="11" x2="54" y2="11" stroke="#0A0806" strokeWidth="4"/>
+        <path d="M47 2L56 11L47 20" stroke="#0A0806" strokeWidth="4"/>
+    </svg>
+)
 
 export const ArrowRight = ({ color, height, width }) => (
     <svg width={width} height={height} fill="none" viewBox="0 0 59 22" >
@@ -400,6 +404,16 @@ LinkedIn.defaultProps = {
     height: '26px',
     width:'27px'
 };
+
+export const Newspaper = ({ width = 44, height = 40 }) => (
+    <svg width={width} height={height} viewBox="0 0 44 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M2 34.2038C2 36.2999 4.12733 37.9982 6.75673 38.0085L37.0854 38.0168C39.7252 38.0168 41.8654 36.3123 41.8654 34.21L41.9958 3.00418C41.9981 2.45027 41.5497 2 40.9958 2H12.3608C11.8085 2 11.3608 2.44772 11.3608 3V20.9562L3.00066 20.9507C2.44812 20.9503 2 21.3981 2 21.9507V34.2038Z" stroke="white" strokeWidth="2.5" strokeMiterlimit="10"/>
+        <path d="M6.59863 38.0027C9.22803 37.9924 11.3554 36.2899 11.3554 34.1897V17.5859" stroke="white" strokeWidth="2.5" strokeMiterlimit="10"/>
+        <path d="M35.8712 8H17.415C17.277 8 17.165 8.11193 17.165 8.25V14.3847C17.165 14.5227 17.277 14.6347 17.415 14.6347H35.8712C36.0093 14.6347 36.1212 14.5227 36.1212 14.3847V8.25C36.1212 8.11193 36.0093 8 35.8712 8Z" stroke="black" strokeWidth="2.5" strokeMiterlimit="10"/>
+        <line x1="17.467" y1="21.6021" x2="35.8189" y2="21.6021" stroke="black" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+        <line x1="17.467" y1="28.2363" x2="35.8189" y2="28.2363" stroke="black" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+    </svg>
+)
 
 export const Reddit = ({ color, height, width }) => (
     <svg height={height} width={width} version="1.1" viewBox="0 0 36 31">
@@ -807,8 +821,3 @@ Wallet.defaultProps = {
     height: '50',
     width: '50'
 };
-
-export {
-    Arrow,
-    Newspaper
-}

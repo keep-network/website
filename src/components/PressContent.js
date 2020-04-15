@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import ClampLines from 'react-clamp-lines'
 
 import PageSection from './PageSection'
-import { Arrow, Newspaper } from './icons'
+import { Arrow, Newspaper } from './Icons'
 
 const allPressEntries = [{
     title: 'These Bitcoin Users Want DAI and DeFi – Here’s How They Plan to Get It',

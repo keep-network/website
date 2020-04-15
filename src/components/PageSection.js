@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import classNames from 'classnames'
 import { Container } from 'reactstrap'
 
-import { ArrowRight } from './icons'
+import { ArrowRight } from './Icons'
 
 class PageSection extends Component {
     state = {

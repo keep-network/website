@@ -1,7 +1,7 @@
 import App from './App'
 import EmailForm from './EmailForm'
 import Home from './Home'
-import * as Icons from './icons'
+import * as Icons from './Icons'
 import NavContent from './NavContent'
 import NavScrollItem from './NavScrollItem'
 import PageSection from './PageSection'

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Picture } from 'react-responsive-picture';
 
-import { GithubSocial, Keybase, LinkedIn, Twitter } from './icons';
+import { GithubSocial, Keybase, LinkedIn, Twitter } from './Icons';
 import { getSrc } from '../utils';
 
 export const Avatar = ({ imagePath, imageType, imageMaxRes }) => <div

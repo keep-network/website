@@ -44,7 +44,7 @@ class App extends Component {
                     </Row>
                 </PageSection>
                 <footer>
-                    <Container>
+                    <Container fluid="md">
                         <div className="footer-columns">
                             <div className="footer-column-1">
                                 <Icons.KeepCircle />

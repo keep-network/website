@@ -75,9 +75,7 @@ export const getReducers = function () {
     }
 }
 
-// const API_URL = 'https://backend.keep.network'
-
-const API_URL = 'http://localhost:8000'
+const API_URL = 'https://backend.keep.network'
 
 const stripQuery = () => {
     window.history.pushState(null, '', window.location.href.split('?')[0])

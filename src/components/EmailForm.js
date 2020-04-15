@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { Label, Form, FormGroup, Input } from 'reactstrap'
 import isEmail from 'validator/lib/isEmail'
-import pascalCase from 'pascal-case'
 import classNames from 'classnames'
 import merge from 'lodash/merge'
 

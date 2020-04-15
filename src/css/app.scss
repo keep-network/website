@@ -39,15 +39,13 @@ body {
         }
     }
 
-    @media (min-width: 620px) {
-        .row {
-            display: flex;
-        }
-    }
-
     @media (max-width: 619px) {
-        .row > div {
-            width: 100%;
+        .row {
+            flex-direction: column;
+            > div {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
         }
     }
 }
@@ -150,11 +148,13 @@ body {
 
         .form-inline {
             display: flex;
+            flex-wrap: nowrap;
             align-items: center;
         }
 
         .form-group {
             margin-right: 5px;
+            flex: unset;
         }
     }
 

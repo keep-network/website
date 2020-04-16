@@ -1,6 +1,5 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { Alert, Container, Col, Row } from 'reactstrap'
-import classNames from 'classnames'
 import { Picture } from 'react-responsive-picture'
 
 import NavContent from './NavContent';

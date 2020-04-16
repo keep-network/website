@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, useEffect, useState } from 'react'
 import ClampLines from 'react-clamp-lines'
 
 import PageSection from './PageSection'
@@ -155,8 +155,14 @@ class PressContent extends Component {
     }
 }
 
-const PressItem = ({ title, date, source, aboveTheFold, url }) => (
-    <a href={url} target="_blank" rel="noopener noreferrer">
+const PressItem = ({ title, date, source, aboveTheFold, url }) => {
+    const [windowWidth, setWindowWidth] = useState(0);
+
+    useEffect(() => {
+        setWindowWidth(window.innerWidth)
+    }, [])
+
+    return <a href={url} target="_blank" rel="noopener noreferrer">
         <div className="press-item">
             <div className="top">
                 <div className="article-title">
@@ -176,7 +182,7 @@ const PressItem = ({ title, date, source, aboveTheFold, url }) => (
                 <div className="above-the-fold">
                     <ClampLines
                         text={aboveTheFold}
-                        lines={ window.innerWidth < 767 ? 4 : 2 }
+                        lines={ windowWidth < 767 ? 4 : 2 }
                         ellipsis="..."
                         buttons={false}
                         />
@@ -187,6 +193,6 @@ const PressItem = ({ title, date, source, aboveTheFold, url }) => (
             </div>
         </div>
     </a>
-)
+}
 
 export default PressContent

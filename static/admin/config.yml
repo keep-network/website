@@ -1,0 +1,9 @@
+backend:
+  name: github
+  repo: keep-network/website
+  site_domain: keep.network
+
+site_url: https://tbtc.network
+
+media_folder: static/img
+public_folder: /img

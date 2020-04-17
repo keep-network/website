@@ -1,0 +1,220 @@
+.timeline-point {
+    @extend .h4;
+    font-weight: 600;
+
+    .timeline-label {
+        font-weight: 600;
+        display: inline-block;
+        background-color: $white;
+        padding: 8px 26px;
+        border-radius: 8px;
+        border: 2px solid $grey-on-light-color;
+        position: relative;
+        margin-top: 0;
+
+        // Arrow white part
+        &:after {
+            content: '';
+            display: inline-block;
+            width: 0;
+            height: 0;
+            border-left: 12px solid transparent;
+            border-right: 12px solid transparent;
+            border-top: 12px solid $white;
+            position: absolute;
+            bottom: 50%;
+            left: -15px;
+            transform: translateY(50%) rotate(90deg);
+            z-index: 0;
+        }
+
+        // Arrow border
+        &:before {
+            content: '';
+            display: inline-block;
+            width: 0;
+            height: 0;
+            border-left: 12px solid transparent;
+            border-right: 12px solid transparent;
+            border-top: 12px solid $grey-on-light-color;
+            position: absolute;
+            transform: translateY(50%) rotate(90deg);
+            bottom: 50%;
+            left: -18px;
+            z-index: 0;
+        }
+
+        // Arrow position on bottom
+        @media (min-width: #{$bp-large}) {
+            &:after {
+                bottom: -10px;
+                left: 50%;
+                transform: translateX(-50%) rotate(0);
+            }
+
+            &:before {
+                bottom: -13px;
+                left: 50%;
+                transform: translateX(-50%) rotate(0);
+            }
+        }
+    }
+
+    .dot {
+        width: 20px;
+        height: 20px;
+        background-color: $white;
+        border: 2px solid $grey-on-light-color;
+        border-radius: 50%;
+        margin: 0 auto;
+        position: relative;
+        z-index: 10;
+
+        @media (min-width: #{$bp-large}) {
+            margin: 10px auto;
+        }
+
+        @media (max-width: #{$bp-large}) {
+            margin: 0;
+        }
+    }
+
+    &.highlight {
+        .timeline-label,
+        .dot {
+            background-color: $background-med-light-color;
+        }
+
+        .timeline-label {
+            &:after {
+                border-top: 12px solid $background-med-light-color;
+            }
+        }
+    }
+
+    // Center line
+    &:before,
+    &:after {
+        position: absolute;
+        content: '';
+        display: inline-block;
+        background-color: $grey-on-light-color;
+    }
+
+
+    // Center line horizontal
+    @media (min-width: #{$bp-large}) {
+        height: 270px;
+
+        .timeline-content {
+            padding-top: 55px;
+        }
+
+        &:before,
+        &:after {
+            width: calc(50% + 10px);
+            height: 2px;
+            top: 50%;
+            z-index: 0;
+            transform: translateY(-50%);
+        }
+
+        &:before {
+            left: -20px;
+        }
+
+
+        &:after {
+            left: 50%;
+        }
+    }
+
+    // Vertical orientation
+    @media (max-width: #{$bp-large}) {
+        .timeline-content {
+            position: relative;
+            height: 120px;
+
+            > * {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+
+            .date {
+                right: calc(50% + 20px);
+                font-size: 18px;
+                text-align: right;
+            }
+
+            .dot {
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+            .timeline-label {
+                margin: 0;
+                left: calc(50% + 30px);
+                text-align: left;
+                font-size: 18px;
+                padding: 8px 16px;
+                word-wrap: break-word;
+                max-width: 40%;
+            }
+
+        }
+
+        // Center line vertical
+        &:before,
+        &:after {
+            width: 2px;
+            height: 60px;
+            left: 50%;
+            z-index: 0;
+            transform: translateX(-50%);
+        }
+
+        &:before {
+            top: 0;
+        }
+
+
+        &:after {
+            top: 50%;
+        }
+    }
+
+    @media (max-width: #{$bp-small}) {
+        .timeline-content {
+            .date {
+                right: calc(50% + 20px);
+                font-size: 14px;
+            }
+
+            .timeline-label {
+                left: calc(50% + 30px);
+                padding: 10px;
+                font-size: 11px;
+                max-width: 40%;
+            }
+
+        }
+    }
+}
+
+
+.timeline {
+    .col-md-4 {
+        &:first-of-type {
+            .timeline-point:before {
+                display: none;
+            }
+        }
+
+        &:last-of-type {
+            .timeline-point:after {
+                display: none;
+            }
+        }
+    }
+}

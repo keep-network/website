@@ -17,6 +17,7 @@ const sections = {
 const WHITEPAPER_URL = 'https://keep.network/whitepaper'
 
 const routes = {
+    CALIFORNIA_PRIVACY: '/california-privacy-notice',
     MAIN: '/',
     PRESS: '/press',
     PRIVACY: '/privacy-policy',

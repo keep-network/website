@@ -8,6 +8,7 @@ import NavContent from './NavContent';
 import PressContent from './PressContent'
 import PageSection from './PageSection'
 import PrivacyContent from './PrivacyContent'
+import CaliforniaPrivacyContent from './CaliforniaPrivacyContent'
 import TermsContent from './TermsContent'
 import { routes } from './shared'
 import * as Icons from './Icons'
@@ -25,6 +26,7 @@ class App extends Component {
                     <Route path={routes.MAIN} exact component={() => <MainContent {...this.props} />} />
                     <Route path={routes.PRESS} component={PressContent} />
                     <Route path={routes.PRIVACY} component={PrivacyContent} />
+                    <Route path={routes.CALIFORNIA_PRIVACY} component={CaliforniaPrivacyContent} />
                     <Route path={routes.TERMS} component={TermsContent} />
                     <PageSection id={sections.HIRING} convex>
                         <Row>

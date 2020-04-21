@@ -10,8 +10,7 @@ const sections = {
     DEFINITION: 'definition',
     ADVISORS: 'advisors',
     PARTNERS: 'partners',
-    SUPPORTERS: 'supporters',
-    HIRING: 'hiring'
+    SUPPORTERS: 'supporters'
 }
 
 const WHITEPAPER_URL = 'https://keep.network/whitepaper'

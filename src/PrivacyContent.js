@@ -1,4 +1,6 @@
 import React from 'react'
+import { Button } from 'react-bootstrap'
+import { Link } from 'react-scroll'
 
 const PrivacyContent = () => (
   <div className="legal-page privacy-content">
@@ -8,28 +10,37 @@ const PrivacyContent = () => (
         <h2>Effective and last modified: January 1, 2020</h2>
         <p>At Keep SECZ, we respect your privacy and are committed to protecting it. This notice covers all personal information collected in the use of this website, as well as any other websites, applications, or connected products on which it is posted. If in any case our privacy practices differ from those explained in this policy, we will let you know you at the time we ask for or collect your information.</p>
         <p>Some pages on our websites may contain links to third-party websites. We do not endorse and have no control over the privacy practices or content of such websites. We recommend you carefully read the privacy policy of each site you visit – including ours.</p>
+        <p>If you are a resident of California, please refer to this document:</p>
+        <Button
+            href="/california-privacy-notice"
+            bsStyle="primary"
+            bsSize="large"
+            rel="noopener noreferrer"
+            target="_blank">
+            California Privacy Policy
+        </Button>
       </div>
       <div className="body">
         <h2>1. Table of Contents</h2>
         <p>We cover a lot of ground in this privacy policy. Use the links below to navigate to later sections of the privacy policy of interest to you.</p>
         <ul className="table-of-contents">
-          <li><a href="#Controller">The Controller</a></li>
-          <li><a href="#WhatInfoWeCollect">What information we collect about you</a></li>
-          <li><a href="#ChildrensOnlinePrivacy">Children's Online Privacy</a></li>
-          <li><a href="#HowWeCollectInfo">How we collect personal information about you</a></li>
-          <li><a href="#CookiesAndAutoDataCollection">Cookies and automatic data collection technologies</a></li>
-          <li><a href="#HowWeUseYourInfo">How we use your personal information</a></li>
-          <li><a href="#DisclosureOfYourInfo">Disclosure of Your Information</a></li>
-          <li><a href="#ThirdPartyContent">Third Party Content</a></li>
-          <li><a href="#YourRightsAndChoices">Your Rights and Choices</a></li>
-          <li><a href="#DataSecurity">Data Security</a></li>
-          <li><a href="#YourCaliforniaPrivacyRights">Your California Privacy Rights</a></li>
-          <li><a href="#ChangesToOurPrivacyPolicy">Changes to Our Privacy Policy</a></li>
-          <li><a href="#ContactUs">Contact Us</a></li>
+          <li><Link smooth duration={500} offset={-150} to="Controller">The Controller</Link></li>
+          <li><Link smooth duration={500} offset={-150} to="WhatInfoWeCollect">What information we collect about you</Link></li>
+          <li><Link smooth duration={500} offset={-150} to="ChildrensOnlinePrivacy">Children's Online Privacy</Link></li>
+          <li><Link smooth duration={500} offset={-150} to="HowWeCollectInfo">How we collect personal information about you</Link></li>
+          <li><Link smooth duration={500} offset={-150} to="CookiesAndAutoDataCollection">Cookies and automatic data collection technologies</Link></li>
+          <li><Link smooth duration={500} offset={-150} to="HowWeUseYourInfo">How we use your personal information</Link></li>
+          <li><Link smooth duration={500} offset={-150} to="DisclosureOfYourInfo">Disclosure of Your Information</Link></li>
+          <li><Link smooth duration={500} offset={-150} to="ThirdPartyContent">Third Party Content</Link></li>
+          <li><Link smooth duration={500} offset={-150} to="YourRightsAndChoices">Your Rights and Choices</Link></li>
+          <li><Link smooth duration={500} offset={-150} to="DataSecurity">Data Security</Link></li>
+          <li><Link smooth duration={500} offset={-150} to="YourCaliforniaPrivacyRights">Your California Privacy Rights</Link></li>
+          <li><Link smooth duration={500} offset={-150} to="ChangesToOurPrivacyPolicy">Changes to Our Privacy Policy</Link></li>
+          <li><Link smooth duration={500} offset={-150} to="ContactUs">Contact Us</Link></li>
         </ul>
-        <h2>2. Controller <a id="Controller"></a></h2>
+        <h2 id="Controller">2. Controller</h2>
         <p>Keep SECZ (collectively referred to as "COMPANY", "we", "us" or "our") in this privacy policy is the controller and responsible for your personal data. We have appointed a data privacy manager who is responsible for overseeing questions in relation to this privacy policy. If you have any questions about this privacy policy, including any requests to exercise your legal rights, please contact the data privacy manager using the details set forth below.</p>
-        <h2>3. What information we collect <a id="WhatInfoWeCollect"></a></h2>
+        <h2 id="WhatInfoWeCollect">3. What information we collect</h2>
         <p>Personal information, or personal data, means any information about an individual from which that person can be identified. It does not include data where the identity has been removed (anonymous data), which we can use for any purpose. Some jurisdictions may consider your Ethereum wallet address to be personal data. We may collect, use, store and transfer different kinds of personal information about you which we have grouped together as follows:</p>
         <ul>
           <li><strong>Identity or Contact Data</strong> includes your email address or similar identifiers or contact information.</li>
@@ -40,9 +51,9 @@ const PrivacyContent = () => (
         <p>We may also collect, use and share Aggregated Data such as statistical or demographic data for any purpose. Aggregated Data could be derived from your personal data but is not considered personal data in law as this data will not directly or indirectly reveal your identity. For example, we may aggregate your Usage Data to calculate the percentage of users accessing a specific Network feature. However, if we combine or connect Aggregated Data with your personal data so that it can directly or indirectly identify you, we treat the combined data as personal data which will be used in accordance with this privacy policy.</p>
         <p>We do not collect any Special Categories of Personal Data about you (this includes details about your race or ethnicity, religious or philosophical beliefs, sex life, sexual orientation, political opinions, trade union membership, information about your health, and genetic and biometric data). Nor do we collect any information about criminal convictions and offences.</p>
         <p>We do not retain information about your transaction history, but you acknowledge that the smart contract transactions facilitated by the Network are recorded in perpetuity on the Ethereum blockchain and cannot be reversed or erased. By using the Network and its smart contracts, you acknowledge that the posting of information concerning your Ethereum wallet address is a function of the smart contract functionality to which you agree.</p>
-        <h2>4. Children's data <a id="ChildrensOnlinePrivacy"></a></h2>
+        <h2 id="ChildrensOnlinePrivacy">4. Children's data</h2>
         <p>We do not direct our websites to minors, and we do not knowingly collect personal information from children under 18. If you are under 18, do not use or provide any information on this website. If we learn we have collected or received personal information from a child under 18 without verification of parental consent, we will delete that information. If you believe we might have any information from or about a child under 18 please contact us using our Contact Us page.</p>
-        <h2>5. How we collect your information <a id="HowWeCollectInfo"></a></h2>
+        <h2 id="HowWeCollectInfo">5. How we collect your information</h2>
         <p>We use different methods to collect information from and about you including through:</p>
         <ul>
           <li><strong>Direct interactions.</strong> You may give us information about you by interacting with our smart contracts or by communicating with us e-mail, or otherwise. This includes information you provide when you use our Network, subscribe to one of our newsletters or other communications, join a user group, complete a survey, or when you contact us about one of our products, or services.</li>
@@ -54,7 +65,7 @@ const PrivacyContent = () => (
             </ul>
           </li>
         </ul>
-        <h2>6. Cookies and automatic data collection technologies <a id="CookiesAndAutoDataCollection"></a></h2>
+        <h2 id="CookiesAndAutoDataCollection">6. Cookies and automatic data collection technologies</h2>
         <p>Our websites may use automatic data collection technologies to distinguish you from other website users. This helps us deliver a better and more personalized service when you browse our website. It also allows us to improve our websites by enabling us to:</p>
         <ul>
           <li>Estimate our audience size and usage patterns.</li>
@@ -66,7 +77,7 @@ const PrivacyContent = () => (
           <li><strong>Cookies (or browser cookies).</strong>A cookie is a small file placed on the hard drive of your computer. For information about managing browser settings to refuse cookies, see <em><a href="#YourCaliforniaPrivacyRights">Your Rights and Choices</a></em>.</li>
         </ul>
         <p>We do not respond to or honor "do not track" (a/k/a DNT) signals or similar mechanisms transmitted by web browsers.</p>
-        <h2>7. How we use your personal information <a id="HowWeUseYourInfo"></a></h2>
+        <h2 id="HowWeUseYourInfo">7. How we use your personal information</h2>
         <p>If you provide personal information through the features on our website, we will only use your personal information as the law allows. Examples the activities for which we may collect information, the type of data we collect, and our lawful basis for collecting that data are listed below.</p>
         <table>
           <thead>
@@ -115,7 +126,7 @@ const PrivacyContent = () => (
           <li>For any other purpose with your consent.</li>
         </ul>
         <p>We may use information that is not personal information for any purpose. For example, we may aggregate usage data from many people in a way that does not identify any individuals to calculate the percentage of users accessing a feature on the website.</p>
-        <h2>8. Disclosure of Your Information <a id="DisclosureOfYourInfo"></a></h2>
+        <h2 id="DisclosureOfYourInfo">8. Disclosure of Your Information</h2>
         <p>We may share non-personal information without restriction. We may share your personal information with:</p>
         <ul>
           <li>Any member of our corporate group, which means our subsidiaries, affiliates, our ultimate holding company and its subsidiaries, and affiliates.</li>
@@ -132,14 +143,14 @@ const PrivacyContent = () => (
           <li>To protect the rights, property, or safety of our business, our employees, our customers, or others. This includes exchanging information with other companies and organizations for the purposes of cybersecurity, fraud protection and credit risk reduction.</li>
           <li>To investigate suspected violations of any law, rule or regulation, or the terms or policies for our website.</li>
         </ul>
-        <h2>9. Third Party Links <a id="ThirdPartyContent"></a></h2>
+        <h2 id="ThirdPartyContent">9. Third Party Links</h2>
         <p>Some content or applications on our websites may be served by third parties, content providers and application providers including the following:</p>
         <ol>
           <li><strong>Plugins.</strong> Our website may make available the option for you to use "plugins" that are operated by social media companies. If you choose to use one of these plugins, then it may collect information about you and send it back to the social media company that owns it. This may happen even if you do not click on the plugin, if you are logged into the social media website that owns the plugin when you visit our website. Information collected by a plugin is subject to the privacy policy and terms of the social media company that makes it. If you do not want the social media company who owns a plugin to collect information about you when you visit our websites, sign out of the social media network before visiting. By interacting with a plugin when you are on our websites (for example, clicking the Facebook "Like" button), you are intentionally transferring information to that social media company. Further, if you are logged into a social media website when you visit our websites, then you are directing us to share your data with the social media company that owns the plugin.</li>
           <li><strong>User Content.</strong> Our websites may allow you to upload your own content to public areas of the website. Any information you submit becomes public information, and we do not control how others may use the content you submit. We are not responsible for uses that may violate our privacy policy, the law, or your intellectual property rights.</li>
           <li><strong>Third-party links.</strong> Our websites may contain links to other sites, which we do not control. Those websites have their own privacy policies and terms, and we encourage you to read those terms before interacting with third-party sites.</li>
         </ol>
-        <h2>10. Your Rights and Choices <a id="YourRightsAndChoices"></a></h2>
+        <h2 id="YourRightsAndChoices">10. Your Rights and Choices</h2>
         <p>Your rights may vary depending on where you are located. We have created mechanisms to provide you with the following control over your information.</p>
         <ul>
           <li><strong>Marketing</strong>. If you do not want us to use your email address or other contact information to promote or recommend our own products and services, or third parties' products or services, you can opt-out by checking the relevant box located on the form where we collect your contact information or, if presented with the option to opt-in, do not opt-in. You may also opt-out of further marketing communications by replying to any promotional email we have sent you or following the opt-out links on that message.</li>
@@ -162,14 +173,14 @@ const PrivacyContent = () => (
             </ul>
           </li>
         </ul>
-        <h2>11. Data Security <a id="DataSecurity"></a></h2>
+        <h2 id="DataSecurity">11. Data Security</h2>
         <p>The security of your personal information is very important to us. We use physical, electronic, and administrative safeguards designed to protect your personal information from loss, misuse and unauthorized access, use, alteration or disclosure. We will only retain your personal information for as long as reasonably necessary to fulfil the purpose of collecting it.</p>
         <p>The safety and security of your information also depends on you. You are responsible for keeping your wallet address and your personal information confidential. We ask you not to share your wallet's private key with anyone. We urge you to take care when providing information to social media accounts or message boards, which any website visitor can view.</p>
-        <h2>12. Your California Privacy Rights <a id="YourCaliforniaPrivacyRights"></a></h2>
+        <h2 id="YourCaliforniaPrivacyRights">12. Your California Privacy Rights</h2>
         <p>If you are a California resident, California law may provide you with additional rights regarding our use of your personal information. To learn more about your California privacy rights, you can view our <a href="/california-privacy-notice">Privacy Notice for California Residents</a>.</p>
-        <h2>13. Changes to Our Privacy Policy <a id="ChangesToOurPrivacyPolicy"></a></h2>
+        <h2 id="ChangesToOurPrivacyPolicy">13. Changes to Our Privacy Policy</h2>
         <p>We will post any changes we may make to our privacy policy on this page. If the changes materially alter how we use or treat your information we will notify you through a notice on the website home page. The date the privacy policy was last revised is identified at the top of the page.</p>
-        <h2>14. Contact Us <a id="ContactUs"></a></h2>
+        <h2 id="ContactUs">14. Contact Us</h2>
         <p>If you have any comments or questions about our privacy policy, please contact our data privacy manager at <a href="mailto:legal@keep.network">legal@keep.network</a>.</p>
       </div>
     </div>

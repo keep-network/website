@@ -5,7 +5,7 @@ const TermsContent = () => (
     <div className="container">
       <div className="heading">
         <h1>Keep Network Terms of Use</h1>
-        <p>Last Modified: March 30, 2020</p>
+        <h2>Last Modified: March 30, 2020</h2>
       </div>
       <div className="body">
         <h2>Acceptance of the Terms of Use</h2>
@@ -22,9 +22,9 @@ const TermsContent = () => (
         <h2>Fees</h2>
         <p>Some services on the Network involve the use of blockchains, including the Ethereum blockchain, which may require that you pay a fee, such as "<strong>Ethereum Gas Charges</strong>", for the computational resources required to perform a transaction. You acknowledge and agree that the Company has no control over these fees, including: </p>
         <ul>
-        <li>(a) any Ethereum blockchain transactions;</li>
-        <li>(b) the method of payment of any Ethereum Gas Charges; or </li>
-        <li>(c) any actual payments of Ethereum Gas Charges.</li>
+          <li>(a) any Ethereum blockchain transactions;</li>
+          <li>(b) the method of payment of any Ethereum Gas Charges; or </li>
+          <li>(c) any actual payments of Ethereum Gas Charges.</li>
         </ul>
         <p>Accordingly, you must ensure that you have a sufficient balance of digital assets, such as Ether, stored at your Wallet to complete any transaction on the Ethereum blockchain network before initiating such transactions. You may be subject to additional fees and charges, including fees required to access certain smart contracts. You acknowledge that such fees may be adjusted from time to time by us or by other users who set the terms of their own smart contracts. If you do not agree with the fees charged for Network functionality, do not use or access the Network.</p>
         <p>The use of certain smart contract functionality on the Network may require the purchase of Keep Digital Assets, the payment of fees or the posting of collateral in other types of Digital Assets as determined by the creator of such smart contract. You agree that any such fees or requirements are reasonable, and your use of the Network or any related smart contracts shall constitute your acceptance of such fees or requirements.</p>
@@ -38,56 +38,56 @@ const TermsContent = () => (
         <p>In many jurisdictions, the regulatory frameworks imposed by governmental authorities over the use and sale of cryptocurrencies or Digital Assets are uncertain. Changes in regulations and policies may affect your use of the Network in your jurisdiction, and you are responsible for consulting with legal counsel and complying with all applicable laws in your jurisdiction.</p>
         <p>The Network may rely on the use of third-party platforms, exchanges, Dapps, oracles or other mechanisms to facilitate your use of the Network. We do not control the availability of those platforms, and your access to and use of the Network could be affected by changes in those platforms which are beyond our control.</p>
         <h2>Intellectual Property Rights</h2>
-        <p>You must not delete or alter any copyright, trademark or other proprietary rights notices from copies of materials from this site. The smart contracts and software provided by us to the Network are made available to you under the <a href="https://github.com/keep-network/keep-ecdsa/blob/master/LICENSE">MIT open source license</a>, and the documentation and source code are available at <a href="https://github.com/keep-network">https://github.com/keep-network</a>. Other third-party technology provided to the Network is owned by the third-party provider of such technology or is made available subject to the license identified with the technology.</p>
+        <p>You must not delete or alter any copyright, trademark or other proprietary rights notices from copies of materials from this site. The smart contracts and software provided by us to the Network are made available to you under the <a href="https://github.com/keep-network/keep-ecdsa/blob/master/LICENSE">MIT open source license</a>, and the documentation and source code are available on <a href="https://github.com/keep-network">Github</a>. Other third-party technology provided to the Network is owned by the third-party provider of such technology or is made available subject to the license identified with the technology.</p>
         <p>The Keep name, Company logo and other related trademarks or service marks are the exclusive property of the Company and may not be used without our prior written consent. If you breach these Terms of Use, your right to use the Network will cease immediately and you must, at our option, return or destroy any copies of the materials you have made. No right, title or interest in or to the Network or any content on the Network is transferred to you, and all rights not expressly granted are reserved by the Company. Any use of the Network not expressly permitted by these Terms of Use is a breach of these Terms of Use and may violate copyright, trademark and other laws.</p>
         <h2>Prohibited Uses</h2>
         <p>You may use the Network only for lawful purposes and in accordance with these Terms of Use. You agree not to use the Network:</p>
         <ul>
-        <li>In any way that violates any applicable federal, state, local or international law or regulation (including, without limitation, any laws regarding the export of data or software to and from the US or other countries).</li>
-        <li>For the purpose of exploiting, harming or attempting to exploit or harm minors in any way by exposing them to inappropriate content, asking for personally identifiable information or otherwise.</li>
-        <li>To attempt to circumvent any Network security or access controls or to interfere with the operation of the Network.</li>
-        <li>To impersonate or attempt to impersonate the Company, a Company employee, another user or any other person or entity (including, without limitation, by using e-mail addresses or wallet addresses associated with any of the foregoing).</li>
-        <li>To transmit or exchange Digital Assets that are the direct or indirect proceeds of any illegal, criminal or fraudulent behavior including terrorism.</li>
-        <li>In any manner that could disable, overburden, damage, or impair the site or interfere with any other party's use of the Network, including their ability to engage in real time activities through the Network.</li>
-        <li>Use any robot, spider or other automatic device, process or means to access the Network for any purpose, including monitoring or copying any of the material on the Network.</li>
-        <li>Use any manual process to monitor or copy any of the material on the Network or for any other unauthorized purpose without our prior written consent.</li>
-        <li>Use any device, software or routine that interferes with the proper working of the Network.</li>
-        <li>Introduce any viruses, trojan horses, worms, logic bombs or other material which is malicious or technologically harmful.</li>
-        <li>Otherwise attempt to interfere with the proper working of the Network.</li>
+          <li>In any way that violates any applicable federal, state, local or international law or regulation (including, without limitation, any laws regarding the export of data or software to and from the US or other countries).</li>
+          <li>For the purpose of exploiting, harming or attempting to exploit or harm minors in any way by exposing them to inappropriate content, asking for personally identifiable information or otherwise.</li>
+          <li>To attempt to circumvent any Network security or access controls or to interfere with the operation of the Network.</li>
+          <li>To impersonate or attempt to impersonate the Company, a Company employee, another user or any other person or entity (including, without limitation, by using e-mail addresses or wallet addresses associated with any of the foregoing).</li>
+          <li>To transmit or exchange Digital Assets that are the direct or indirect proceeds of any illegal, criminal or fraudulent behavior including terrorism.</li>
+          <li>In any manner that could disable, overburden, damage, or impair the site or interfere with any other party's use of the Network, including their ability to engage in real time activities through the Network.</li>
+          <li>Use any robot, spider or other automatic device, process or means to access the Network for any purpose, including monitoring or copying any of the material on the Network.</li>
+          <li>Use any manual process to monitor or copy any of the material on the Network or for any other unauthorized purpose without our prior written consent.</li>
+          <li>Use any device, software or routine that interferes with the proper working of the Network.</li>
+          <li>Introduce any viruses, trojan horses, worms, logic bombs or other material which is malicious or technologically harmful.</li>
+          <li>Otherwise attempt to interfere with the proper working of the Network.</li>
         </ul>
         <h2>User Contributions</h2>
         <p>The Network may contain links to social media, message boards, chat rooms, personal web pages or profiles, forums, bulletin boards, FAQs and other interactive features (collectively, "<strong>Interactive Services</strong>") that allow users to post, submit, publish, display, advise or transmit to other users or other persons (hereinafter, "<strong>post</strong>") content or materials (collectively, "<strong>User Contributions</strong>") on or through the Network.</p>
         <p>All User Contributions must comply with the Content Standards set out in these Terms of Use. Any User Contribution you post to the site will be considered non-confidential and non-proprietary. By providing any User Contribution on the Network, you grant us and our affiliates and service providers, and each of their and our respective licensees, successors and assigns the right to use, reproduce, modify, perform, display, distribute and otherwise disclose to third parties any such material for any purpose.</p>
         <p>You represent and warrant that:</p>
         <ul>
-        <li>You own or control all rights in and to the User Contributions and have the right to grant the license granted above to us and our affiliates and service providers, and each of their and our respective licensees, successors and assigns.</li>
-        <li>All of your User Contributions do and will comply with these Terms of Use.</li>
+          <li>You own or control all rights in and to the User Contributions and have the right to grant the license granted above to us and our affiliates and service providers, and each of their and our respective licensees, successors and assigns.</li>
+          <li>All of your User Contributions do and will comply with these Terms of Use.</li>
         </ul>
         <p>You understand and acknowledge that you are responsible for any User Contributions you submit or contribute, and you, not the Company, have fully responsibility for such content, including its legality, reliability, accuracy and appropriateness. We are not responsible, or liable to any third party, for the content or accuracy of any User Contributions posted by you or any other user of the Network.</p>
         <h2>Monitoring and Enforcement; Termination</h2>
         <p>We have the right to:</p>
         <ul>
-        <li>Remove or refuse to post any User Contributions for any or no reason in our sole discretion.</li>
-        <li>Take any action with respect to any User Contribution that we deem necessary or appropriate in our sole discretion, including if we believe that such User Contribution violates the Terms of Use, including the Content Standards, infringes any intellectual property right or other right of any person or entity, threatens the personal safety of users of the Network or the public or could create liability for the Company.</li>
-        <li>Disclose information about you to any third party who claims that material posted by you violates their rights, including their intellectual property rights or their right to privacy.</li>
-        <li>Take appropriate legal action, including without limitation, referral to law enforcement, for any illegal or unauthorized use of the Network.</li>
-        <li>Terminate or suspend your access to all or part of the Network for any or no reason, including without limitation, any violation of these Terms of Use.</li>
+          <li>Remove or refuse to post any User Contributions for any or no reason in our sole discretion.</li>
+          <li>Take any action with respect to any User Contribution that we deem necessary or appropriate in our sole discretion, including if we believe that such User Contribution violates the Terms of Use, including the Content Standards, infringes any intellectual property right or other right of any person or entity, threatens the personal safety of users of the Network or the public or could create liability for the Company.</li>
+          <li>Disclose information about you to any third party who claims that material posted by you violates their rights, including their intellectual property rights or their right to privacy.</li>
+          <li>Take appropriate legal action, including without limitation, referral to law enforcement, for any illegal or unauthorized use of the Network.</li>
+          <li>Terminate or suspend your access to all or part of the Network for any or no reason, including without limitation, any violation of these Terms of Use.</li>
         </ul>
         <p>Without limiting the foregoing, we have the right to fully cooperate with any law enforcement authorities or court order requesting or directing us to disclose the identity or other information of anyone using or posting any materials on or through the Network.</p>
         <p>However, we do not undertake to review material before it is posted on or through the Network and cannot ensure prompt removal of objectionable material after it has been posted. Accordingly, we assume no liability for any action or inaction regarding transmissions, communications or content provided by any user or third party. We have no liability or responsibility to anyone for performance or nonperformance of the activities described in this section.</p>
         <h2>Content Standards</h2>
         <p>These content standards apply to any and all User Contributions and use of Interactive Services. User Contributions must in their entirety comply with all applicable federal, state, local and international laws and regulations. Without limiting the foregoing, User Contributions must not:</p>
         <ul>
-        <li>Contain any material which is defamatory, obscene, indecent, abusive, offensive, harassing, violent, hateful, inflammatory or otherwise objectionable.</li>
-        <li>Promote sexually explicit or pornographic material, violence, or discrimination based on race, sex, religion, nationality, disability, sexual orientation or age.</li>
-        <li>Infringe any patent, trademark, trade secret, copyright or other intellectual property or other rights of any other person.</li>
-        <li>Violate the legal rights (including the rights of publicity and privacy) of others or contain any material that could give rise to any civil or criminal liability under applicable laws or regulations or that otherwise may be in conflict with these Terms of Use and our Privacy Policy [INSERT AS LINK TO PRIVACY POLICY].</li>
-        <li>Be likely to deceive any person.</li>
-        <li>Promote any illegal activity, or advocate, promote or assist any unlawful act.</li>
-        <li>Cause annoyance, inconvenience or needless anxiety or be likely to upset, embarrass, alarm or annoy any other person.</li>
-        <li>Impersonate any person or misrepresent your identity or affiliation with any person or organization.</li>
-        <li>Involve commercial activities or sales, such as contests, sweepstakes and other sales promotions, barter or advertising.</li>
-        <li>Give the impression that they emanate from or are endorsed by us or any other person or entity, if this is not the case.</li>
+          <li>Contain any material which is defamatory, obscene, indecent, abusive, offensive, harassing, violent, hateful, inflammatory or otherwise objectionable.</li>
+          <li>Promote sexually explicit or pornographic material, violence, or discrimination based on race, sex, religion, nationality, disability, sexual orientation or age.</li>
+          <li>Infringe any patent, trademark, trade secret, copyright or other intellectual property or other rights of any other person.</li>
+          <li>Violate the legal rights (including the rights of publicity and privacy) of others or contain any material that could give rise to any civil or criminal liability under applicable laws or regulations or that otherwise may be in conflict with these Terms of Use and our Privacy Policy [INSERT AS LINK TO PRIVACY POLICY].</li>
+          <li>Be likely to deceive any person.</li>
+          <li>Promote any illegal activity, or advocate, promote or assist any unlawful act.</li>
+          <li>Cause annoyance, inconvenience or needless anxiety or be likely to upset, embarrass, alarm or annoy any other person.</li>
+          <li>Impersonate any person or misrepresent your identity or affiliation with any person or organization.</li>
+          <li>Involve commercial activities or sales, such as contests, sweepstakes and other sales promotions, barter or advertising.</li>
+          <li>Give the impression that they emanate from or are endorsed by us or any other person or entity, if this is not the case.</li>
         </ul>
         <h2>Reliance on Information Posted</h2>
         <p>The information presented on or through the Network is made available solely for general information purposes. We do not warrant the accuracy, completeness or usefulness of this information. Any reliance you place on such information is strictly at your own risk. We disclaim all liability and responsibility arising from any reliance placed on such materials by you or any other user of the Network, or by anyone who may be informed of any of its contents.</p>

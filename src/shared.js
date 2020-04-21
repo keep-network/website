@@ -19,6 +19,7 @@ const WHITEPAPER_URL = 'https://keep.network/whitepaper'
 const routes = {
     MAIN: '/',
     PRESS: '/press',
+    PRIVACY: '/privacy-policy',
     TERMS: '/terms-of-use'
 }
 

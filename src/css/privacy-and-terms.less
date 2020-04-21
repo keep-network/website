@@ -1,0 +1,54 @@
+.legal-page {
+    margin-top: 100px;
+
+    .heading {
+        p {
+            color: @accent-text-color;
+            font-size: 20px;
+            font-weight: bold;
+            line-height: 34px;
+            margin: 0.5em 0;
+        }
+    }
+
+    .body {
+        background-color: #fff;
+        padding: 1px 15px 30px;
+        margin: 30px auto 40px;
+
+        h2 {
+            font-size: 26px;
+            font-weight: 500;
+            line-height: 1.2;
+            letter-spacing: -1px;
+            margin: 1em 0;
+        }
+
+        a {
+            color: @violet;
+            text-decoration: none;
+        }
+    }
+
+    @media @tablet-up {
+        margin-top: 160px;
+        .heading {
+            p {
+                font-size: 26px;
+                margin: 1em 0;
+            }
+        }
+
+        .body {
+            padding: 20px 60px 40px;
+            margin: 70px auto;
+        }
+    }
+
+    @media @md-up {
+        margin-top: 200px;
+        .body {
+            margin: 70px auto 180px;
+        }
+    }
+}

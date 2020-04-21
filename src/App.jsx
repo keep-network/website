@@ -7,6 +7,7 @@ import MainContent from './MainContent'
 import NavContent from './NavContent';
 import PressContent from './PressContent'
 import PageSection from './PageSection'
+import TermsContent from './TermsContent'
 import { routes } from './shared'
 import * as Icons from './Icons'
 import { sections, WHITEPAPER_URL } from './shared'
@@ -22,6 +23,7 @@ class App extends Component {
                     <NavContent />
                     <Route path={routes.MAIN} exact component={() => <MainContent {...this.props} />} />
                     <Route path={routes.PRESS} component={PressContent} />
+                    <Route path={routes.TERMS} component={TermsContent} />
                     <PageSection id={sections.HIRING} convex>
                         <Row>
                             <Col sm={12} md={8}>

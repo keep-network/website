@@ -10,15 +10,18 @@ const sections = {
     DEFINITION: 'definition',
     ADVISORS: 'advisors',
     PARTNERS: 'partners',
-    SUPPORTERS: 'supporters',
-    HIRING: 'hiring'
+    SUPPORTERS: 'supporters'
 }
 
 const WHITEPAPER_URL = 'https://keep.network/whitepaper'
 
 const routes = {
+    CALIFORNIA_PRIVACY: '/california-privacy-notice',
     MAIN: '/',
-    PRESS: '/press'
+    PLAYING_FOR_KEEPS_TERMS: '/playing-for-keeps-terms',
+    PRESS: '/press',
+    PRIVACY: '/privacy-policy',
+    TERMS: '/terms-of-use'
 }
 
 export {

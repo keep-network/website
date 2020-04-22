@@ -1,0 +1,106 @@
+.legal-page {
+    margin-top: 100px;
+
+    a:not(.btn) {
+        color: @violet;
+        text-decoration: none;
+    }
+
+    .heading {
+        h2 {
+            color: @accent-text-color;
+            font-family: 'Vitesse', 'Work Sans', sans-serif;
+            font-size: 20px;
+            font-weight: bold;
+            line-height: 34px;
+            margin: 0.5em 0;
+        }
+
+        p:first-of-type {
+            margin-top: 3.5em;
+        }
+
+        .btn {
+            margin-bottom: 3em;
+        }
+    }
+
+    .body {
+        background-color: #fff;
+        padding: 1px 15px 30px;
+        margin: 30px auto 40px;
+
+        h1 {
+            font-size: 30px;
+        }
+
+        h2 {
+            font-size: 26px;
+            font-weight: 500;
+            line-height: 1.2;
+            letter-spacing: -1px;
+            margin: 1em 0;
+        }
+
+        table {
+            width: 100%;
+            border-spacing: 0;
+            border-collapse: collapse;
+            margin-bottom: 2rem;
+    
+            th,
+            td {
+                border: 1px solid @black;
+                padding: 1em;
+                vertical-align: top;
+                border-collapse: collapse;
+            }
+    
+            th {
+                text-align: left;
+            }
+        }
+    }
+
+    .table-of-contents {
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: underline;
+        }
+    }
+
+    @media @tablet-up {
+        margin-top: 160px;
+        .heading {
+            h2 {
+                font-size: 26px;
+                margin: 1em 0;
+            }
+        }
+
+        .body {
+            padding: 20px 60px 60px;
+            margin: 70px auto;
+        }
+    }
+
+    @media @md-up {
+        margin-top: 200px;
+        .body {
+            margin: 70px auto 180px;
+        }
+    }
+
+    @media @mobile {
+        .body {
+            table {
+                table-layout: fixed;
+                overflow-wrap: break-word;
+                font-size: 10px;
+            }
+        }
+    }
+}

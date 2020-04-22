@@ -9,6 +9,7 @@ import PressContent from './PressContent'
 import PrivacyContent from './PrivacyContent'
 import CaliforniaPrivacyContent from './CaliforniaPrivacyContent'
 import TermsContent from './TermsContent'
+import PlayingForKeepsTermsContent from './PlayingForKeepsTermsContent'
 import { routes } from './shared'
 import * as Icons from './Icons'
 import { WHITEPAPER_URL } from './shared'
@@ -27,6 +28,7 @@ class App extends Component {
                     <Route path={routes.PRIVACY} component={PrivacyContent} />
                     <Route path={routes.CALIFORNIA_PRIVACY} component={CaliforniaPrivacyContent} />
                     <Route path={routes.TERMS} component={TermsContent} />
+                    <Route path={routes.PLAYING_FOR_KEEPS_TERMS} component={PlayingForKeepsTermsContent} />
                     <footer>
                         <Grid>
                             <div className="footer-columns">
@@ -64,6 +66,7 @@ class App extends Component {
                                 <ul>
                                     <li><Link to={routes.PRIVACY}>Privacy Policy</Link></li>
                                     <li><Link to={routes.TERMS}>Terms of Use</Link></li>
+                                    <li><Link to={routes.PLAYING_FOR_KEEPS_TERMS}>Playing for Keeps Terms</Link></li>
                                 </ul>
                             </div>
                             <Picture className="half-circle" src={getSrc('/images/texture-circle-3', 'png', 3)} />

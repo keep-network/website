@@ -12,14 +12,14 @@ const PlayingForKeepsTermsContent = () => (
         <p>Keep is committed to helping you succeed on this program and to building a robust decentralized network. To this end, they've set up a <a href="https://discord.gg/wYezN7v">Discord server</a> that anyone can join, and <a href="https://docs.keep.network/run-random-beacon.html">technical documentation</a> to help you run Keep's random beacon client and start staking on testnet.</p>
         <h2><strong>Reward Guidelines</strong></h2>
         <h2>Current Game of Keeps</h2>
-        <p>The current game of Keeps begins on April 15th and will conclude on approximately [DATE].</p>
+        <p>The current game of Keeps begins on April 15th.</p>
         <h2>Rewards</h2>
         <p>Judges will determine what the reward status for each entry is, in their sole discretion. Programs that are suggested by the judges will have their reward status posted.</p>
         <ul>
-          <li>Level 1: Up to [100,000 Keep]</li>
-          <li>Level 2: Up to [10,000 Keep]</li>
-          <li>Level 3: Up to [1,000 Keep]</li>
-          <li>Level 4: Up to [500 Keep]</li>
+          <li>Level 1: Up to 100,000 Keep</li>
+          <li>Level 2: Up to 10,000 Keep</li>
+          <li>Level 3: Up to 1,000 Keep</li>
+          <li>Level 4: Up to 500 Keep</li>
           <li>Level 5: No Keep</li>
         </ul>
         <p>In addition to severity, other variables are also considered when the judges decide the score, including (but not limited to):</p>
@@ -87,12 +87,12 @@ const PlayingForKeepsTermsContent = () => (
         <p>If at any time you have concerns or are uncertain whether your security research is consistent with this policy, please submit a report through one of our Official Channels before going any further.</p>
         <h2>Any submissions to the Game of Keeps requires explicit permission to disclose the results of a submission.</h2>
         <h1>Standard Disclosure Terms</h1>
-        <p>This web page represents a legal document with terms and conditions applicable to all individuals who have registered to participate in a Keep reward program. In addition, the terms and conditions contained in our Terms of Service [ADD LINK] (along with these Standard Disclosure Terms, collectively, the "Researcher Terms and Conditions") are incorporated by reference into these Standard Disclosure Terms. Upon obtaining a user name with Keep, you are referred to as a "Researcher" and you are bound by and are obligated to comply with the Researcher Terms and Conditions.</p>
+        <p>This web page represents a legal document with terms and conditions applicable to all individuals who have registered to participate in a Keep reward program. In addition, the terms and conditions contained in our <a href="/terms-of-use">Terms of Use</a> (along with these Standard Disclosure Terms, collectively, the "Researcher Terms and Conditions") are incorporated by reference into these Standard Disclosure Terms. Upon obtaining a user name with Keep, you are referred to as a "Researcher" and you are bound by and are obligated to comply with the Researcher Terms and Conditions.</p>
         <h2>The Submission Process</h2>
         <p>If you believe you have discovered a vulnerability, please create a submission for the appropriate program through the Keep platform. Each program has a set of guidelines called the Program Brief. The program brief is maintained by the Program Owner. Terms specified in the program brief supersede these terms.</p>
         <p>Each submission will be updated with significant events, including when the issue has been validated, when we need more information from you, or when you have qualified for a reward.</p>
         <p>Each submission is evaluated by the Program Owner on the basis of first-to-find. Keep may assist in the evaluation process.</p>
-        <p>You will qualify for a reward if you were the first person to alert the Program Owner to a previously unknown issue AND <a href="https://www.bugcrowd.com/when-to-reward-a-bug-bounty-submission/">the issue triggers a code or configuration change</a>.</p>
+        <p>You will qualify for a reward if you were the first person to alert the Program Owner to a previously unknown issue AND the issue triggers a code or configuration change.</p>
         <h2>STANDARD PROGRAM RULES</h2>
         <p>We are committed to protecting the interests of Security Researchers. The more closely your behavior follows these rules, the more we'll be able to protect you if a difficult situation escalates.</p>
         <p>Rules can vary for each program. Please carefully read the program brief for specific rules. These rules apply to all programs:</p>
@@ -105,10 +105,10 @@ const PlayingForKeepsTermsContent = () => (
           <li>Submissions should have impact to the target's security posture. Impact means the reported issue affects the target's users, systems, or data security in a meaningful way. Submitters may be asked to defend the impact in order to qualify for a reward.</li>
           <li>Submissions may be closed if a Researcher is non-responsive to requests for information after 7 days.</li>
           <li>The existence or details of private or invitation-only programs must not be communicated to anyone who is not a Keep employee or an authorized employee of the organization responsible for the program.</li>
-          <li>We encourage Researchers to include a video or screenshot Proof-of-Concept in their submissions. These files should not be shared publicly. This includes uploading to any publicly accessible websites (i.e. YouTube, Imgur, etc.). If the file exceeds 100MB, upload the file to a secure online service such as Vimeo, with a password. For more details, please refer to our <a href="https://researcherdocs.bugcrowd.com/v2.0/docs/reporting-a-bug">Reporting a Bug</a> documentation.</li>
-          <li>Violation of a program's stated disclosure policy may result in enforcement action as outlined in the Keep Terms and Conditions.</li>
+          <li>We encourage Researchers to include a video or screenshot Proof-of-Concept in their submissions. These files should not be shared publicly. This includes uploading to any publicly accessible websites (i.e. YouTube, Imgur, etc.). If the file exceeds 100MB, upload the file to a secure online service such as Vimeo, with a password.</li>
+          <li>Violation of a program's stated disclosure policy may result in enforcement action as outlined in the Keep <a href="/terms-of-use">Terms of Use</a>.</li>
         </ul>
-        <p>You must be at least 18 years old or have reached the age of majority in your jurisdiction of primary residence and citizenship to be eligible to receive any monetary compensation as a Researcher. Additional applicable eligibility requirements are stated in the <a href="https://www.bugcrowd.com/terms-and-conditions">Terms of Service</a>. Exceptions with respect to a minor's participation in Bug Bashes may be considered on a case-by-case basis as between Keep and the applicable minor's guardian(s).</p>
+        <p>You must be at least 18 years old or have reached the age of majority in your jurisdiction of primary residence and citizenship to be eligible to receive any monetary compensation as a Researcher. Additional applicable eligibility requirements are stated in the <a href="/terms-of-use">Terms of Use</a>. Exceptions with respect to a minor's participation in Bug Bashes may be considered on a case-by-case basis as between Keep and the applicable minor's guardian(s).</p>
         <h2>USERNAMES AND PASSWORDS</h2>
         <p>You will need to set up a Keep Discord account and user name in order to participate in Play for Keeps. You may not use a third party's account without permission. When you are setting up your account, you must give us accurate and complete information. This means that you cannot set up an account using a name or contact information that does not apply to you, and you must provide accurate and current information on all registration forms that are part of the Website. You may only set up one account. You have complete responsibility for your account and everything that happens on your account. This means you need to be careful with your password. If you find out that someone is using your account without your permission, you must let us know immediately. You may not transfer your account to someone else. We are not liable for any damages or losses caused by someone using your account without your permission. However, if we (or anyone else) suffer any damage due to the unauthorized use of your account, you may be liable. Keep may deny the use of certain user names or require certain user names be changed at Keep's sole discretion and/or to comply with end customers' requirements. User names with offensive or discriminatory words are prohibited.</p>
         <h2>Official Support Channels and Private Communication</h2>
@@ -124,7 +124,7 @@ const PlayingForKeepsTermsContent = () => (
           <li>Keep Submission Messages</li>
           <li>support@Keep.com</li>
         </ul>
-        </div>
+      </div>
     </div>
   </div>
 )

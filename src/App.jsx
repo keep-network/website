@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Alert, Button, Grid } from 'react-bootstrap'
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
+import { BrowserRouter as Router, Route } from 'react-router-dom'
 import { Picture } from 'react-responsive-picture'
 
 import MainContent from './MainContent'
@@ -49,7 +49,7 @@ class App extends Component {
                                 </ul>
                                 <ul className="footer-column-3">
                                     <li>Follow</li>
-                                    <li><Link to={routes.PRESS}>Press</Link></li>
+                                    <li><a href={routes.PRESS}>Press</a></li>
                                     <li><a href="https://twitter.com/keep_project" rel="noopener noreferrer" target="_blank">Twitter</a></li>
                                     <li><a href="https://t.me/KeepNetworkOfficial/" rel="noopener noreferrer" target="_blank">Telegram</a></li>
                                     <li><a href="https://www.reddit.com/r/KeepNetwork/" rel="noopener noreferrer" target="_blank">Reddit</a></li>
@@ -64,9 +64,9 @@ class App extends Component {
                                 <p>A Thesis<sup>*</sup> Build</p>
                                 <p>&#169; 2020 Keep SEZC. All Rights Reserved.</p>
                                 <ul>
-                                    <li><Link to={routes.PRIVACY}>Privacy Policy</Link></li>
-                                    <li><Link to={routes.TERMS}>Terms of Use</Link></li>
-                                    <li><Link to={routes.PLAYING_FOR_KEEPS_TERMS}>Playing for Keeps Terms</Link></li>
+                                    <li><a href={routes.PRIVACY}>Privacy Policy</a></li>
+                                    <li><a href={routes.TERMS}>Terms of Use</a></li>
+                                    <li><a href={routes.PLAYING_FOR_KEEPS_TERMS}>Playing for Keeps Terms</a></li>
                                 </ul>
                             </div>
                             <Picture className="half-circle" src={getSrc('/images/texture-circle-3', 'png', 3)} />

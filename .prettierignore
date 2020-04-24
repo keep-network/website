@@ -1,7 +1,0 @@
-.cache
-.github
-node_modules
-slack
-package.json
-package-lock.json
-public

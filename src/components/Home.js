@@ -9,7 +9,7 @@ import { Profile } from './Profile'
 import { getSrc } from '../utils'
 import * as Icons from './Icons'
 import { sections, WHITEPAPER_URL } from '../constants'
-import { actions } from '../redux'
+import { actions, actionTypes } from '../redux'
 
 
 const Home = ({ signupMailingList, ajaxRequestStates }) => {
@@ -37,7 +37,8 @@ const Home = ({ signupMailingList, ajaxRequestStates }) => {
               label="Discord Email"
               placeholder="you@example.com"
               onSubmit={handleSignupDiscord}
-              requestStates={ajaxRequestStates}>
+              requestStates={ajaxRequestStates}
+              request={actionTypes.SIGNUP_MAILING_LIST}>
               <h3>
                 Join our community on
                 <span className="discord-logo">Discord</span>
@@ -83,7 +84,8 @@ const Home = ({ signupMailingList, ajaxRequestStates }) => {
               label="Email"
               placeholder="you@example.com"
               onSubmit={signupMailingList}
-              requestStates={ajaxRequestStates}>
+              requestStates={ajaxRequestStates}
+              request={actionTypes.SIGNUP_MAILING_LIST}>
               <h3>
                 Join our mailing list
                 </h3>

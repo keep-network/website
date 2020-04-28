@@ -10,7 +10,6 @@ export const actionTypes = Enum(
   "CREATE_SESSION",
   "CREATE_SESSION_SUCCESS",
   "CREATE_SESSION_FAILURE",
-  "SIGNUP_DISCORD",
   "SIGNUP_MAILING_LIST",
   "SIGNUP_MAILING_LIST_SUCCESS",
   "SIGNUP_MAILING_LIST_FAILURE"
@@ -20,13 +19,9 @@ export const actions = {
   createSession: () => ({
     type: actionTypes.CREATE_SESSION
   }),
-  signupDiscord: ({ email }) => ({
-    type: actionTypes.SIGNUP_DISCORD,
-    payload: { email }
-  }),
-  signupMailingList: ({ email, discord_signup }) => ({
+  signupMailingList: ({ email, discordSignup }) => ({
     type: actionTypes.SIGNUP_MAILING_LIST,
-    payload: { email, discord_signup }
+    payload: { email, discordSignup }
   })
 }
 
@@ -108,14 +103,13 @@ function* createSession(action) {
   }
 }
 
-function* signupDiscord(action) {
-  yield put(actions.signupMailingList({ discord_signup: true, ...action.payload }))
-}
-
 function* signupMailingList(action) {
   try {
     yield call(waitFor, getSessionCreatedFromState, true)
-    const req = axios.post(`${API_URL}/mailing-list/signup`, action.payload)
+    const req = axios.post(`${API_URL}/mailing-list/signup`, {
+      email: action.payload.email,
+      discord_signup: action.payload.discordSignup
+    })
     const response = yield req
     yield put({ type: actionTypes.SIGNUP_MAILING_LIST_SUCCESS, response })
   } catch (error) {
@@ -127,7 +121,6 @@ function* signupMailingList(action) {
 export const saga = function* () {
   yield all([
     takeLatest(actionTypes.CREATE_SESSION, createSession),
-    takeLatest(actionTypes.SIGNUP_DISCORD, signupDiscord),
     takeLatest(actionTypes.SIGNUP_MAILING_LIST, signupMailingList)
   ])
 }

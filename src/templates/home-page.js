@@ -5,7 +5,7 @@ import { Picture } from 'react-responsive-picture'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 
-import { App, EmailForm, Icons, PageSection, Profile } from '../components'
+import { App, EmailForm, Icons, Image, PageSection, Profile } from '../components'
 import { sections, WHITEPAPER_URL } from '../constants'
 import { actions, actionTypes } from '../redux'
 import { getSrc } from '../utils'
@@ -13,6 +13,7 @@ import { getSrc } from '../utils'
 
 export const HomePageTemplate = ({
   hero = {},
+  images = {},
   signupMailingList = () => { },
   ajaxRequestStates = {}
 }) => {
@@ -29,7 +30,7 @@ export const HomePageTemplate = ({
             <div className="body" dangerouslySetInnerHTML={{ __html: hero.body }} />
           </Col>
           <Col xs={12} sm={5} className="col-circles">
-            <Picture src={getSrc('/img/texture-circle', 'png', 3)} />
+            <Image imageData={images.textureCircle1} />
           </Col>
         </Row>
       </PageSection>
@@ -50,7 +51,7 @@ export const HomePageTemplate = ({
           </Col>
           <Col xs={12} sm={5} className="col-circles">
             <div>
-              <Picture src={getSrc('/img/texture-circle-2', 'png', 3)} />
+              <Image imageData={images.textureCircle2} />
             </div>
           </Col>
         </Row>
@@ -451,9 +452,13 @@ export const ConnectedHomePage = connect(
 
 const HomePage = ({ data }) => {
   const { markdownRemark: post } = data
+  const images = {
+    textureCircle1: data.textureCircle1,
+    textureCircle2: data.textureCircle2
+  }
   return (
     <App>
-      <ConnectedHomePage {...post.frontmatter} />
+      <ConnectedHomePage {...post.frontmatter} images={images} />
     </App>
   )
 }
@@ -474,6 +479,24 @@ export const query = graphql`
         hero {
           title
           body
+        }
+      }
+    }
+    textureCircle1: file(
+      relativePath: { regex: "/texture-circle.png/" }
+    ) {
+      childImageSharp {
+        fluid(maxWidth: 574, quality: 100) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    textureCircle2: file(
+      relativePath: { regex: "/texture-circle-2.png/" }
+    ) {
+      childImageSharp {
+        fluid(maxWidth: 604, quality: 100) {
+          ...GatsbyImageSharpFluid
         }
       }
     }

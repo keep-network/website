@@ -1,6 +1,7 @@
 import App from './App'
 import EmailForm from './EmailForm'
 import * as Icons from './Icons'
+import Image from './Image'
 import NavContent from './NavContent'
 import NavScrollItem from './NavScrollItem'
 import PageSection from './PageSection'
@@ -12,6 +13,7 @@ export {
   App,
   EmailForm,
   Icons,
+  Image,
   NavContent,
   NavScrollItem,
   PageSection,

@@ -15,7 +15,7 @@ const App = ({ children }) => (
     <div className="app has-alert">
         <SEO />
         <NavContent />
-        { children }
+        {children}
         <footer>
             <Container fluid="md">
                 <div className="footer-columns">
@@ -56,7 +56,7 @@ const App = ({ children }) => (
                         <li><a href={routes.PLAYING_FOR_KEEPS_TERMS}>Playing for Keeps Terms</a></li>
                     </ul>
                 </div>
-                <Picture className="half-circle" src={getSrc('/images/texture-circle-3', 'png', 3)} />
+                <Picture className="half-circle" src={getSrc('/img/texture-circle-3', 'png', 3)} />
             </Container>
         </footer>
         <Alert color="info">

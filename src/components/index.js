@@ -1,6 +1,5 @@
 import App from './App'
 import EmailForm from './EmailForm'
-import Home from './Home'
 import * as Icons from './Icons'
 import NavContent from './NavContent'
 import NavScrollItem from './NavScrollItem'
@@ -12,7 +11,6 @@ import SubmitButton from './SubmitButton'
 export {
   App,
   EmailForm,
-  Home,
   Icons,
   NavContent,
   NavScrollItem,

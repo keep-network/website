@@ -3,8 +3,9 @@ import { connect } from 'react-redux'
 import { Button, Col, Row } from 'reactstrap'
 import { Picture } from 'react-responsive-picture'
 import PropTypes from 'prop-types'
+import { graphql } from 'gatsby'
 
-import { EmailForm, PageSection } from '../components'
+import { App, EmailForm, PageSection } from '../components'
 import * as Icons from '../components/Icons'
 import { Profile } from '../components/Profile'
 import { sections, WHITEPAPER_URL } from '../constants'
@@ -12,7 +13,11 @@ import { actions, actionTypes } from '../redux'
 import { getSrc } from '../utils'
 
 
-export const HomePageTemplate = ({ signupMailingList, ajaxRequestStates }) => {
+export const HomePageTemplate = ({
+  hero = {},
+  signupMailingList = () => { },
+  ajaxRequestStates = {}
+}) => {
   const handleSignupDiscord = ({ email }) => {
     signupMailingList({ email, discordSignup: true })
   }
@@ -22,8 +27,8 @@ export const HomePageTemplate = ({ signupMailingList, ajaxRequestStates }) => {
       <PageSection id={sections.HOME}>
         <Row>
           <Col xs={12} sm={7}>
-            <h1>A privacy layer for Ethereum</h1>
-            <p>A keep is an off-chain container for private data. Keeps help contracts harness the full power of the public blockchain &mdash; enabling deep interactivity with private data.</p>
+            <h1>{hero.title}</h1>
+            <div className="body" dangerouslySetInnerHTML={{ __html: hero.body }} />
           </Col>
           <Col xs={12} sm={5} className="col-circles">
             <Picture src={getSrc('/img/texture-circle', 'png', 3)} />
@@ -444,7 +449,7 @@ const mapStateToProps = (state) => ({
 export const ConnectedHomePage = connect(
   mapStateToProps,
   { signupMailingList: actions.signupMailingList }
-)(Home)
+)(HomePageTemplate)
 
 const HomePage = ({ data }) => {
   const { markdownRemark: post } = data
@@ -462,3 +467,17 @@ HomePage.propTypes = {
 }
 
 export default HomePage
+
+export const query = graphql`
+  query HomePage($id: String!) {
+    markdownRemark(id: { eq: $id }) {
+      id
+      frontmatter {
+        hero {
+          title
+          body
+        }
+      }
+    }
+  }
+`

@@ -3,7 +3,29 @@ backend:
   repo: keep-network/website
   site_domain: keep.network
 
-site_url: https://tbtc.network
+site_url: https://keep.network
 
 media_folder: static/img
 public_folder: /img
+
+collections:
+  - name: "pages"
+    label: "Pages"
+    files:
+      - file: "src/pages/index.md"
+        label: "Home"
+        name: "home"
+        fields:
+          - {
+              label: "Template",
+              name: "template",
+              widget: "hidden",
+              default: "home-page",
+            }
+          - { label: "Path", name: "path", widget: "hidden", default: "/" }
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Body", name: "body", widget: "markdown", required: false}

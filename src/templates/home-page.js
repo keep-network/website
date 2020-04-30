@@ -24,7 +24,8 @@ export const HomePageTemplate = ({
   images = {},
   signupMailingList = () => { },
   ajaxRequestStates = {},
-  partners_section = {}
+  partners_section = {},
+  supporters_section = {}
 }) => {
   const handleSignupDiscord = ({ email }) => {
     signupMailingList({ email, discordSignup: true })
@@ -407,41 +408,16 @@ export const HomePageTemplate = ({
         </Row>
       </PageSection>
       <PageSection id={sections.SUPPORTERS} convex>
-        <h2>Our Supporters</h2>
+        <h2>{supporters_section.title}</h2>
         <Row>
-          <Col xs={12} sm={4}>
-            <a href="http://polychain.capital/" rel="noopener noreferrer" target="_blank">
-              <Picture src={getSrc('/img/logos/polychainLogo', 'png', 3)} />
-            </a>
-          </Col>
-          <Col xs={12} sm={4}>
-
-            <a href="https://a16z.com/" rel="noopener noreferrer" target="_blank">
-              <Picture src={getSrc('/img/logos/andreessenHorowitzLogo', 'png', 3)} />
-            </a>
-          </Col>
-          <Col xs={12} sm={4}>
-            <a href="http://www.dhvc.com/" rel="noopener noreferrer" target="_blank">
-              <Picture src={getSrc('/img/logos/DHVCLogo', 'png', 3)} />
-            </a>
-          </Col>
-        </Row>
-        <Row>
-          <Col xs={12} sm={4}>
-            <a href="http://www.draper.vc/" rel="noopener noreferrer" target="_blank">
-              <Picture src={getSrc('/img/logos/draperAssociatesLogo', 'png', 3)} />
-            </a>
-          </Col>
-          <Col xs={12} sm={4}>
-            <a href="https://www.distributedcapital.io/" rel="noopener noreferrer" target="_blank">
-              <Picture src={getSrc('/img/logos/distributedCapitalPartnersLogo', 'png', 3)} />
-            </a>
-          </Col>
-          <Col xs={12} sm={4}>
-            <a href="https://www.fabric.vc/" rel="noopener noreferrer" target="_blank">
-              <Picture src={getSrc('/img/logos/fabricVenturesLogo', 'png', 3)} />
-            </a>
-          </Col>
+          {supporters_section.supporters.map((supporter, i) => (
+            <ImageLink
+              key={`supporter-${i}`}
+              url={supporter.url}
+              label={supporter.name}
+              image={supporter.logo}
+            />
+          ))}
         </Row>
       </PageSection>
     </div>
@@ -496,6 +472,23 @@ export const query = graphql`
               image {
                 childImageSharp {
                   fluid(maxWidth: 315, quality: 100) {
+                    ...GatsbyImageSharpFluid
+                  }
+                }
+              }
+              alt
+            }
+          }
+        }
+        supporters_section {
+          title
+          supporters {
+            name
+            url
+            logo {
+              image {
+                childImageSharp {
+                  fluid(maxWidth: 300, quality: 100) {
                     ...GatsbyImageSharpFluid
                   }
                 }

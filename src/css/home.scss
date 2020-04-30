@@ -537,14 +537,14 @@
 .partners,
 .supporters {
     background-color: $background-med-color;
-}
 
-.partners {
     .row {
         justify-content: center;
+        align-items: center;
 
         a {
-            margin: 15px;
+            display: block;
+            margin: 20px 15px;
 
             .gatsby-image-wrapper {
                 [aria-hidden="true"] {
@@ -553,6 +553,7 @@
 
                 img {
                     position: static !important;
+                    max-width: 100%;
                 }
             }
 
@@ -565,10 +566,15 @@
     @media (min-width: #{($bp-medium)}) {
         .row {
             justify-content: space-around;
-            align-items: center;
 
             a {
-                width: 33.33333%;
+                margin: 0 0 45px;
+                flex: 0 0 33.33333%;
+                max-width: 33.3333%;
+
+                img {
+                    padding: 30px;
+                }
             }
         }
     }
@@ -576,24 +582,4 @@
 
 .supporters {
     border-top: 1px solid rgba($black, 0.5);
-
-    .row {
-        text-align: center;
-    }
-
-    @media (min-width: #{$bp-medium}) {
-        .row {
-            margin-bottom: 75px;
-            display: flex;
-            align-items: center;
-        }
-    }
-
-    @media (max-width: #{($bp-medium - 1)}) {
-        .row {
-            > * {
-                margin-bottom: 20px;
-            }
-        }
-    }
 }

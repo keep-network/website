@@ -537,32 +537,39 @@
 .partners,
 .supporters {
     background-color: $background-med-color;
+}
 
+.partners {
     .row {
-        > * {
-            img {
-                max-width: 100%;
+        justify-content: center;
 
-                @media (max-width: #{($bp-large - 1)}) {
-                    padding: 15px;
+        a {
+            margin: 15px;
+
+            .gatsby-image-wrapper {
+                [aria-hidden="true"] {
+                    display: none;
                 }
+
+                img {
+                    position: static !important;
+                }
+            }
+
+            span {
+                display: none;
             }
         }
     }
 
-    @media (max-width: #{($bp-medium - 1)}) {
-        text-align: center;
+    @media (min-width: #{($bp-medium)}) {
+        .row {
+            justify-content: space-around;
+            align-items: center;
 
-        h2 {
-            text-align: left;
-        }
-    }
-}
-
-.partners {
-    @media (max-width: #{($bp-large - 1)}) {
-        .col-md-4 {
-            margin: 0 auto 30px;
+            a {
+                width: 33.33333%;
+            }
         }
     }
 }

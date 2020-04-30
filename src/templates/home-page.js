@@ -15,7 +15,8 @@ export const HomePageTemplate = ({
   hero = {},
   images = {},
   signupMailingList = () => { },
-  ajaxRequestStates = {}
+  ajaxRequestStates = {},
+  partners_section = {}
 }) => {
   const handleSignupDiscord = ({ email }) => {
     signupMailingList({ email, discordSignup: true })
@@ -385,18 +386,21 @@ export const HomePageTemplate = ({
           linkedin="https://www.linkedin.com/in/luisivancuende/" />
       </PageSection>
       <PageSection id={sections.PARTNERS} convex>
-        <h2>Our Partners</h2>
+        <h2>{partners_section.title}</h2>
         <Row>
-          <Col xs={12} sm={{ size: 4, offset: 1 }}>
-            <a href="https://www.lendroid.com/" rel="noopener noreferrer" target="_blank">
-              <Picture src={getSrc('/img/logos/lendroidLogo', 'png', 3)} />
+          {partners_section.partners.map((partner, i) => (
+            <a
+              key={`partner-${i}`}
+              href={partner.url}
+              rel="noopener noreferrer"
+              target="_blank">
+              <Image
+                imageData={partner.logo.image}
+                alt={partner.logo.alt}
+              />
+              <span>{partner.name}</span>
             </a>
-          </Col>
-          <Col xs={12} sm={{ size: 4, offset: 2 }}>
-            <a href="https://district0x.io/" rel="noopener noreferrer" target="_blank">
-              <Picture src={getSrc('/img/logos/district0x_logo', 'png', 3)} />
-            </a>
-          </Col>
+          ))}
         </Row>
       </PageSection>
       <PageSection id={sections.SUPPORTERS} convex>
@@ -479,6 +483,23 @@ export const query = graphql`
         hero {
           title
           body
+        }
+        partners_section {
+          title
+          partners {
+            name
+            url
+            logo {
+              image {
+                childImageSharp {
+                  fluid(maxWidth: 315, quality: 100) {
+                    ...GatsbyImageSharpFluid
+                  }
+                }
+              }
+              alt
+            }
+          }
         }
       }
     }

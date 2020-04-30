@@ -5,7 +5,15 @@ import { Picture } from 'react-responsive-picture'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 
-import { App, EmailForm, Icons, Image, PageSection, Profile } from '../components'
+import {
+  App,
+  EmailForm,
+  Icons,
+  Image,
+  ImageLink,
+  PageSection,
+  Profile
+} from '../components'
 import { sections, WHITEPAPER_URL } from '../constants'
 import { actions, actionTypes } from '../redux'
 import { getSrc } from '../utils'
@@ -389,17 +397,12 @@ export const HomePageTemplate = ({
         <h2>{partners_section.title}</h2>
         <Row>
           {partners_section.partners.map((partner, i) => (
-            <a
+            <ImageLink
               key={`partner-${i}`}
-              href={partner.url}
-              rel="noopener noreferrer"
-              target="_blank">
-              <Image
-                imageData={partner.logo.image}
-                alt={partner.logo.alt}
-              />
-              <span>{partner.name}</span>
-            </a>
+              url={partner.url}
+              label={partner.name}
+              image={partner.logo}
+            />
           ))}
         </Row>
       </PageSection>

@@ -3,6 +3,7 @@ import EmailForm from './EmailForm'
 import Footer from './Footer'
 import * as Icons from './Icons'
 import Image from './Image'
+import ImageLink from './ImageLink'
 import NavContent from './NavContent'
 import NavScrollItem from './NavScrollItem'
 import PageSection from './PageSection'
@@ -16,6 +17,7 @@ export {
   Footer,
   Icons,
   Image,
+  ImageLink,
   NavContent,
   NavScrollItem,
   PageSection,

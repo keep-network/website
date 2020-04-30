@@ -1,12 +1,12 @@
 import React from "react"
 import { Container, Button } from "reactstrap"
-import { Picture } from "react-responsive-picture"
+import { graphql, StaticQuery } from "gatsby"
 
 import { KeepCircle } from "./Icons"
+import Image from "./Image"
 import { WHITEPAPER_URL, routes } from "../constants"
-import { getSrc } from "../utils"
 
-const Footer = () => (
+export const FooterTemplate = ({ images = {} }) => (
   <footer>
     <Container fluid="md">
       <div className="footer-columns">
@@ -47,9 +47,31 @@ const Footer = () => (
           <li><a href={routes.PLAYING_FOR_KEEPS_TERMS}>Playing for Keeps Terms</a></li>
         </ul>
       </div>
-      <Picture className="half-circle" src={getSrc('/img/texture-circle-3', 'png', 3)} />
+      <Image className="half-circle" imageData={images.halfCircle} />
     </Container>
   </footer>
 )
 
-export default Footer
+export const query = graphql`
+  query Footer {
+    halfCircle: file(
+      relativePath: { regex: "/texture-circle-3.png/" }
+    ) {
+      childImageSharp {
+        fluid(maxWidth: 205, quality: 100) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`
+
+export default () => (
+  <StaticQuery
+    query={query}
+    render={data => {
+      const { halfCircle } = data
+      return <FooterTemplate images={{ halfCircle }} />
+    }}
+  />
+)

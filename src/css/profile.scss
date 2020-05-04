@@ -1,23 +1,15 @@
-.avatar {
-    display: inline-block;
-    max-width: 100%;
-    border-radius: 50%;
-    overflow: hidden;
-    margin: 0 0 4px;
-
-    img {
-        width: 100%;
-        max-width: 264px;
-    }
-}
-
 .profile {
     text-align: center;
     display: inline-block;
     padding: 0 5px 20px;
 
+    .gatsby-image-wrapper {
+        border-radius: 50%;
+        margin: 0 0 4px;
+    }
+
     h4 {
-        margin-bottom: 12px;
+        margin: 12px 0;
         color: $accent-text-color;
         font-weight: 500;
 

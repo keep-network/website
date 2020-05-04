@@ -1,7 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { Button, Col, Row } from 'reactstrap'
-import { Picture } from 'react-responsive-picture'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 
@@ -16,7 +15,6 @@ import {
 } from '../components'
 import { sections, WHITEPAPER_URL } from '../constants'
 import { actions, actionTypes } from '../redux'
-import { getSrc } from '../utils'
 
 
 export const HomePageTemplate = ({

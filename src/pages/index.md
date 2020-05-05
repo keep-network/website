@@ -11,7 +11,7 @@ team_section:
   team:
     - name: Matt Luongo
       title: Project Lead
-      image: /img/headshots/matt.jpg
+      image: /images/headshots/matt.jpg
       social_links:
         - url: https://twitter.com/mhluongo
         - url: https://www.linkedin.com/in/mattluongo
@@ -19,7 +19,7 @@ team_section:
         - url: http://keybase.io/mhluongo
     - name: Corbin Pon
       title: Developer & Ops
-      image: /img/headshots/corbin.jpg
+      image: /images/headshots/corbin.jpg
       social_links:
         - url: https://twitter.com/CorbinPon
         - url: https://www.linkedin.com/in/corbinpon
@@ -27,7 +27,7 @@ team_section:
         - url: http://keybase.io/corbinpon
     - name: Antonio Salazar Cardozo
       title: Head of Engineering
-      image: /img/headshots/antonio.png
+      image: /images/headshots/antonio.png
       social_links:
         - url: https://twitter.com/lightfiend
         - url: https://www.linkedin.com/in/lightfiend
@@ -35,7 +35,7 @@ team_section:
         - url: http://keybase.io/shadowfiend
     - name: Carolyn Reckhow
       title: Head of Business Strategy
-      image: /img/headshots/carolyn.jpg
+      image: /images/headshots/carolyn.jpg
       social_links:
         - url: https://twitter.com/CReckhow
         - url: https://www.linkedin.com/in/carolyn-reckhow-73345a1a
@@ -43,7 +43,7 @@ team_section:
         - url: http://keybase.io/carolynreckhow
     - name: Michael Gluzman
       title: Head of Design
-      image: /img/headshots/michael.png
+      image: /images/headshots/michael.png
       social_links:
         - url: https://twitter.com/gluzman
         - url: https://www.linkedin.com/in/michaelgluzman/
@@ -51,19 +51,19 @@ team_section:
         - url: http://keybase.io/gluzzz
     - name: Piotr Dyraga
       title: Tech Lead
-      image: /img/headshots/piotr.jpg
+      image: /images/headshots/piotr.jpg
       social_links:
         - url: https://twitter.com/piotrdyraga?lang=en
         - url: https://www.linkedin.com/in/piotrdyraga/
         - url: https://github.com/pdyraga
     - name: Promethea Raschke
       title: Protocol Designer
-      image: /img/headshots/promethea.png
+      image: /images/headshots/promethea.png
       social_links:
         - url: https://github.com/eth-r
     - name: Sloan Thompson
       title: Head of DevOps
-      image: /img/headshots/sloanThompson.jpg
+      image: /images/headshots/sloanThompson.jpg
       social_links:
         - url: https://twitter.com/SloanThompson
         - url: https://www.linkedin.com/in/sloansthompson/
@@ -71,7 +71,7 @@ team_section:
         - url: http://keybase.io/fekta
     - name: Nik Grinkevich
       title: Developer
-      image: /img/headshots/nik.jpg
+      image: /images/headshots/nik.jpg
       social_links:
         - url: https://twitter.com/ngrinkevich
         - url: https://www.linkedin.com/in/nikgrinkevich
@@ -79,21 +79,21 @@ team_section:
         - url: https://keybase.io/nikgrinkevich
     - name: Jakub Nowakowski
       title: Developer
-      image: /img/headshots/jakub.jpg
+      image: /images/headshots/jakub.jpg
       social_links:
         - url: https://twitter.com/jnowakow8
         - url: https://www.linkedin.com/in/jnowakowski8/
         - url: https://github.com/nkuba
     - name: Nicholas Evans
       title: Developer
-      image: /img/headshots/nicholas.png
+      image: /images/headshots/nicholas.png
       social_links:
         - url: https://twitter.com/NicholasEvans14
         - url: https://github.com/NicholasDotSol
         - url: http://keybase.io/evansnicholaskb
     - name: Dmitry Paremski
       title: Developer
-      image: /img/headshots/dmitryParemski.jpg
+      image: /images/headshots/dmitryParemski.jpg
       social_links:
         - url: https://twitter.com/dmitry_paremski
         - url: https://www.linkedin.com/in/paremski/
@@ -101,7 +101,7 @@ team_section:
         - url: http://keybase.io/dparemski
     - name: Liam Zebedee
       title: Developer
-      image: /img/headshots/liamZebedee.jpg
+      image: /images/headshots/liamZebedee.jpg
       social_links:
         - url: https://twitter.com/liamzebedee
         - url: https://www.linkedin.com/in/liamedwardsplayne/
@@ -109,14 +109,14 @@ team_section:
         - url: https://keybase.io/liamzebedee
     - name: Erin Ng
       title: Developer
-      image: /img/headshots/erin.jpg
+      image: /images/headshots/erin.jpg
       social_links:
         - url: https://www.linkedin.com/in/erinng/
         - url: https://github.com/ironng
         - url: http://keybase.io/ironng
     - name: Laura Wallendal
       title: General Manager
-      image: /img/headshots/laura.jpg
+      image: /images/headshots/laura.jpg
       social_links:
         - url: https://twitter.com/LauraWallendal
         - url: https://www.linkedin.com/in/laurawallendal
@@ -126,35 +126,35 @@ advisors_section:
   advisors:
     - name: Brayton Williams
       title: Boost VC
-      image: /img/headshots/brayton.jpg
+      image: /images/headshots/brayton.jpg
       social_links:
         - url: https://twitter.com/BraytonKey
         - url: https://www.linkedin.com/in/braytonwilliams
     - name: John Packel
       title: Hard Core Decentralization Developer
-      image: /img/headshots/john.jpg
+      image: /images/headshots/john.jpg
       social_links:
         - url: https://twitter.com/jpackel
         - url: https://www.linkedin.com/in/johnpackel
     - name: James Prestwich
       title: Summa, formerly Storj Labs
-      image: /img/headshots/jamesPrestwich.jpg
+      image: /images/headshots/jamesPrestwich.jpg
       social_links:
         - url: https://www.linkedin.com/in/prestwich
     - name: Axel Blikstad
       title: International Finance
-      image: /img/headshots/axel.jpg
+      image: /images/headshots/axel.jpg
       social_links:
         - url: https://www.linkedin.com/in/axel-blikstad-77534814
     - name: Joseph Urgo
       title: district0x
-      image: /img/headshots/josephUrgo.jpg
+      image: /images/headshots/josephUrgo.jpg
       social_links:
         - url: https://twitter.com/jfurgo?lang=en
         - url: https://www.linkedin.com/in/joseph-urgo-a8b77983/
     - name: Luis Cuende
       title: Aragon
-      image: /img/headshots/luisCuende.jpg
+      image: /images/headshots/luisCuende.jpg
       social_links:
         - url: https://twitter.com/licuende?lang=en
         - url: https://www.linkedin.com/in/luisivancuende/
@@ -164,12 +164,12 @@ partners_section:
     - name: Lendroid
       logo:
         alt: Lendroid Logo
-        image: /img/logos/lendroidLogo.png
+        image: /images/logos/lendroidLogo.png
       url: https://www.lendroid.com/
     - name: district0x
       logo:
         alt: district0x Logo
-        image: /img/logos/district0x_logo.png
+        image: /images/logos/district0x_logo.png
       url: https://district0x.io/
 supporters_section:
   title: Our Supporters
@@ -177,31 +177,31 @@ supporters_section:
     - name: Polychain Capital
       logo:
         alt: Polychain Capital Logo
-        image: /img/logos/polychainLogo.png
+        image: /images/logos/polychainLogo.png
       url: http://polychain.capital/
     - name: Andressen Horowitz
       logo:
         alt: Andressen Horowitz Logo
-        image: /img/logos/andreessenHorowitzLogo.png
+        image: /images/logos/andreessenHorowitzLogo.png
       url: https://a16z.com/
     - name: DHVC
       logo:
         alt: DHVC Logo
-        image: /img/logos/DHVCLogo.png
+        image: /images/logos/DHVCLogo.png
       url: http://www.dhvc.com/
     - name: Draper Associates
       logo:
         alt: Draper Associates Logo
-        image: /img/logos/draperAssociatesLogo.png
+        image: /images/logos/draperAssociatesLogo.png
       url: http://www.draper.vc/
     - name: Distributed Capital Partners
       logo:
         alt: Distributed Capital Partners Logo
-        image: /img/logos/distributedCapitalPartnersLogo.png
+        image: /images/logos/distributedCapitalPartnersLogo.png
       url: https://www.distributedcapital.io/
     - name: Fabric Ventures
       logo:
         alt: Fabric Ventures Logo
-        image: /img/logos/fabricVenturesLogo.png
+        image: /images/logos/fabricVenturesLogo.png
       url: https://www.fabric.vc/
 ---

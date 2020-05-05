@@ -22,6 +22,7 @@ export const HomePageTemplate = ({
   signupMailingList = () => {},
   ajaxRequestStates = {},
   team_section: teamSection = {},
+  advisors_section: advisorsSection = {},
   partners_section: partnersSection = {},
   supporters_section: supportersSection = {},
 }) => {
@@ -254,53 +255,16 @@ export const HomePageTemplate = ({
         </div>
       </PageSection>
       <PageSection id={sections.ADVISORS} collapsible>
-        <h2>Our Advisors</h2>
-        <Profile
-          name="Brayton Williams"
-          title="Boost VC"
-          imagePath="/img/headshots/brayton"
-          imageMaxRes={3}
-          twitter="https://twitter.com/BraytonKey"
-          linkedin="https://www.linkedin.com/in/braytonwilliams"
-        />
-        <Profile
-          name="John Packel"
-          title="Hard Core Decentralization Developer"
-          imagePath="/img/headshots/john"
-          imageMaxRes={3}
-          twitter="https://twitter.com/jpackel"
-          linkedin="https://www.linkedin.com/in/johnpackel"
-        />
-        <Profile
-          name="James Prestwich"
-          title="Summa, formerly Storj Labs"
-          imagePath="/img/headshots/jamesPrestwich"
-          imageMaxRes={3}
-          linkedin="https://www.linkedin.com/in/prestwich"
-        />
-        <Profile
-          name="Axel Blikstad"
-          title="International Finance"
-          imagePath="/img/headshots/axel"
-          imageMaxRes={3}
-          linkedin="https://www.linkedin.com/in/axel-blikstad-77534814"
-        />
-        <Profile
-          name="Joseph Urgo"
-          title="district0x"
-          imagePath="/img/headshots/josephUrgo"
-          imageMaxRes={3}
-          twitter="https://twitter.com/jfurgo?lang=en"
-          linkedin="https://www.linkedin.com/in/joseph-urgo-a8b77983/"
-        />
-        <Profile
-          name="Luis Cuende"
-          title="Aragon"
-          imagePath="/img/headshots/luisCuende"
-          imageMaxRes={3}
-          twitter="https://twitter.com/licuende?lang=en"
-          linkedin="https://www.linkedin.com/in/luisivancuende/"
-        />
+        <h2>{advisorsSection.title}</h2>
+        {advisorsSection.advisors.map((advisor, i) => (
+          <Profile
+            key={`advisor-${i}`}
+            name={advisor.name}
+            title={advisor.title}
+            image={advisor.image}
+            socials={advisor.social_links}
+          />
+        ))}
       </PageSection>
       <PageSection id={sections.PARTNERS} convex>
         <h2>{partnersSection.title}</h2>
@@ -340,6 +304,7 @@ HomePageTemplate.propTypes = {
   partners_section: PropTypes.object,
   supporters_section: PropTypes.object,
   team_section: PropTypes.object,
+  advisors_section: PropTypes.object,
 }
 
 const mapStateToProps = (state) => ({
@@ -385,6 +350,23 @@ export const query = graphql`
         team_section {
           title
           team {
+            name
+            title
+            image {
+              childImageSharp {
+                fluid(maxWidth: 274, quality: 100) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+            social_links {
+              url
+            }
+          }
+        }
+        advisors_section {
+          title
+          advisors {
             name
             title
             image {

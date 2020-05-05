@@ -121,6 +121,43 @@ team_section:
         - url: https://twitter.com/LauraWallendal
         - url: https://www.linkedin.com/in/laurawallendal
         - url: http://keybase.io/lwallendal
+advisors_section:
+  title: Our Advisors
+  advisors:
+    - name: Brayton Williams
+      title: Boost VC
+      image: /img/headshots/brayton.jpg
+      social_links:
+        - url: https://twitter.com/BraytonKey
+        - url: https://www.linkedin.com/in/braytonwilliams
+    - name: John Packel
+      title: Hard Core Decentralization Developer
+      image: /img/headshots/john.jpg
+      social_links:
+        - url: https://twitter.com/jpackel
+        - url: https://www.linkedin.com/in/johnpackel
+    - name: James Prestwich
+      title: Summa, formerly Storj Labs
+      image: /img/headshots/jamesPrestwich.jpg
+      social_links:
+        - url: https://www.linkedin.com/in/prestwich
+    - name: Axel Blikstad
+      title: International Finance
+      image: /img/headshots/axel.jpg
+      social_links:
+        - url: https://www.linkedin.com/in/axel-blikstad-77534814
+    - name: Joseph Urgo
+      title: district0x
+      image: /img/headshots/josephUrgo.jpg
+      social_links:
+        - url: https://twitter.com/jfurgo?lang=en
+        - url: https://www.linkedin.com/in/joseph-urgo-a8b77983/
+    - name: Luis Cuende
+      title: Aragon
+      image: /img/headshots/luisCuende.jpg
+      social_links:
+        - url: https://twitter.com/licuende?lang=en
+        - url: https://www.linkedin.com/in/luisivancuende/
 partners_section:
   title: Our Partners
   partners:

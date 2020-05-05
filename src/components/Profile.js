@@ -44,7 +44,7 @@ const Profile = ({ name, image, title, socials = [] }) => (
     </h4>
     <div className="social-links">
       {socials.map((link, i) => (
-        <SocialLink key={`social-link-${i}}`} url={link} />
+        <SocialLink key={`social-link-${i}}`} url={link.url} />
       ))}
     </div>
   </div>

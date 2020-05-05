@@ -21,6 +21,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: npm ci
+    - run: npm run lint
     - if: github.event_name == 'push'
       run: npm run build --if-present
     - if: github.event_name == 'pull_request'

@@ -1,12 +1,15 @@
-import { combineReducers, createStore as reduxCreateStore, applyMiddleware } from "redux"
+import {
+  combineReducers,
+  createStore as reduxCreateStore,
+  applyMiddleware,
+} from "redux"
 import { composeWithDevTools } from "redux-devtools-extension"
 import { put, call, select, takeLatest, take, all } from "redux-saga/effects"
 import axios from "axios"
 
-import { Enum } from "./utils"
+import { createEnum } from "./utils"
 
-
-export const actionTypes = Enum(
+export const actionTypes = createEnum(
   "CREATE_SESSION",
   "CREATE_SESSION_SUCCESS",
   "CREATE_SESSION_FAILURE",
@@ -17,12 +20,12 @@ export const actionTypes = Enum(
 
 export const actions = {
   createSession: () => ({
-    type: actionTypes.CREATE_SESSION
+    type: actionTypes.CREATE_SESSION,
   }),
   signupMailingList: ({ email, discordSignup }) => ({
     type: actionTypes.SIGNUP_MAILING_LIST,
-    payload: { email, discordSignup }
-  })
+    payload: { email, discordSignup },
+  }),
 }
 
 export const sessionCreated = (state = false, action) => {
@@ -37,13 +40,13 @@ export const sessionCreated = (state = false, action) => {
 }
 
 export const ajaxRequestStates = (state = {}, action) => {
-  let newState = Object.assign({}, state)
+  const newState = Object.assign({}, state)
 
   const assignData = (isSuccess, currAction) => {
     newState.currentRequest = currAction
     return {
       success: isSuccess,
-      ...action
+      ...action,
     }
   }
 
@@ -67,7 +70,7 @@ export const ajaxRequestStates = (state = {}, action) => {
 
 export const reducers = {
   sessionCreated: sessionCreated,
-  ajaxRequestStates: ajaxRequestStates
+  ajaxRequestStates: ajaxRequestStates,
 }
 
 const API_URL = "https://backend.keep.network"
@@ -91,10 +94,10 @@ function* createSession(action) {
   try {
     const req = axios.post(`${API_URL}/session`, {
       url: window.location.href,
-      referrer: document.referrer
+      referrer: document.referrer,
     })
 
-    let response = yield req
+    const response = yield req
     yield put({ type: actionTypes.CREATE_SESSION_SUCCESS, response })
     stripQuery()
   } catch (error) {
@@ -108,7 +111,7 @@ function* signupMailingList(action) {
     yield call(waitFor, getSessionCreatedFromState, true)
     const req = axios.post(`${API_URL}/mailing-list/signup`, {
       email: action.payload.email,
-      discord_signup: action.payload.discordSignup
+      discord_signup: action.payload.discordSignup,
     })
     const response = yield req
     yield put({ type: actionTypes.SIGNUP_MAILING_LIST_SUCCESS, response })
@@ -121,7 +124,7 @@ function* signupMailingList(action) {
 export const saga = function* () {
   yield all([
     takeLatest(actionTypes.CREATE_SESSION, createSession),
-    takeLatest(actionTypes.SIGNUP_MAILING_LIST, signupMailingList)
+    takeLatest(actionTypes.SIGNUP_MAILING_LIST, signupMailingList),
   ])
 }
 
@@ -130,9 +133,7 @@ const reducer = combineReducers(reducers)
 export const createStore = (middleware) => {
   return reduxCreateStore(
     reducer,
-    composeWithDevTools(applyMiddleware(
-      middleware
-    ))
+    composeWithDevTools(applyMiddleware(middleware))
   )
 }
 
@@ -140,5 +141,5 @@ export default {
   actions,
   actionTypes,
   createStore,
-  saga
+  saga,
 }

@@ -11,12 +11,26 @@ export const ExternalImageLink = ({ className, label, url, image = {} }) => (
   </a>
 )
 
+ExternalImageLink.propTypes = {
+  className: PropTypes.string,
+  label: PropTypes.string,
+  url: PropTypes.string,
+  image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+}
+
 export const InternalImageLink = ({ className, label, url, image = {} }) => (
   <Link className={className} to={url}>
     <Image imageData={image} />
     <span>{label}</span>
   </Link>
 )
+
+InternalImageLink.propTypes = {
+  className: PropTypes.string,
+  label: PropTypes.string,
+  url: PropTypes.string,
+  image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+}
 
 const ImageLink = ({ internal = false, ...other }) => {
   if (internal) {
@@ -27,10 +41,10 @@ const ImageLink = ({ internal = false, ...other }) => {
 }
 
 ImageLink.propTypes = {
+  internal: PropTypes.bool,
   className: PropTypes.string,
   label: PropTypes.string,
   url: PropTypes.string,
-  alt: PropTypes.string,
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
 }
 

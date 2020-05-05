@@ -1,8 +1,8 @@
-import React from 'react'
-import { connect } from 'react-redux'
-import { Button, Col, Row } from 'reactstrap'
-import PropTypes from 'prop-types'
-import { graphql } from 'gatsby'
+import React from "react"
+import { connect } from "react-redux"
+import { Button, Col, Row } from "reactstrap"
+import PropTypes from "prop-types"
+import { graphql } from "gatsby"
 
 import {
   App,
@@ -11,19 +11,18 @@ import {
   Image,
   ImageLink,
   PageSection,
-  Profile
-} from '../components'
-import { sections, WHITEPAPER_URL } from '../constants'
-import { actions, actionTypes } from '../redux'
-
+  Profile,
+} from "../components"
+import { sections, WHITEPAPER_URL } from "../constants"
+import { actions, actionTypes } from "../redux"
 
 export const HomePageTemplate = ({
   hero = {},
   images = {},
-  signupMailingList = () => { },
+  signupMailingList = () => {},
   ajaxRequestStates = {},
-  partners_section = {},
-  supporters_section = {}
+  partners_section: partnersSection = {},
+  supporters_section: supportersSection = {},
 }) => {
   const handleSignupDiscord = ({ email }) => {
     signupMailingList({ email, discordSignup: true })
@@ -35,7 +34,10 @@ export const HomePageTemplate = ({
         <Row>
           <Col xs={12} sm={7}>
             <h1>{hero.title}</h1>
-            <div className="body" dangerouslySetInnerHTML={{ __html: hero.body }} />
+            <div
+              className="body"
+              dangerouslySetInnerHTML={{ __html: hero.body }}
+            />
           </Col>
           <Col xs={12} sm={5} className="col-circles">
             <Image imageData={images.textureCircle1} />
@@ -50,7 +52,8 @@ export const HomePageTemplate = ({
               placeholder="you@example.com"
               onSubmit={handleSignupDiscord}
               requestStates={ajaxRequestStates}
-              request={actionTypes.SIGNUP_MAILING_LIST}>
+              request={actionTypes.SIGNUP_MAILING_LIST}
+            >
               <h3>
                 Join our community on
                 <span className="discord-logo">Discord</span>
@@ -73,7 +76,8 @@ export const HomePageTemplate = ({
                 className="github-logo"
                 href="https://github.com/keep-network"
                 rel="noopener noreferrer"
-                target="_blank">
+                target="_blank"
+              >
                 GitHub
               </a>
               Repository
@@ -82,7 +86,8 @@ export const HomePageTemplate = ({
                 color="primary"
                 size="lg"
                 rel="noopener noreferrer"
-                target="_blank">
+                target="_blank"
+              >
                 <Icons.ArrowRight />
               </Button>
             </h3>
@@ -90,26 +95,23 @@ export const HomePageTemplate = ({
         </Row>
       </PageSection>
       <PageSection id={sections.MAILING_LIST}>
-        <Row >
+        <Row>
           <Col sm={12} md={{ size: 8, offset: 2 }}>
             <EmailForm
               label="Email"
               placeholder="you@example.com"
               onSubmit={signupMailingList}
               requestStates={ajaxRequestStates}
-              request={actionTypes.SIGNUP_MAILING_LIST}>
-              <h3>
-                Join our mailing list
-                </h3>
+              request={actionTypes.SIGNUP_MAILING_LIST}
+            >
+              <h3>Join our mailing list</h3>
             </EmailForm>
           </Col>
         </Row>
       </PageSection>
       <PageSection id={sections.LEARN}>
         <div className="col">
-          <h2 className="h1">
-            Find out how to use Keep
-          </h2>
+          <h2 className="h1">Find out how to use Keep</h2>
         </div>
         <div className="col">
           <div>
@@ -121,7 +123,8 @@ export const HomePageTemplate = ({
               download="Keep Whitepaper"
               rel="noopener noreferrer"
               target="_blank"
-              size="lg">
+              size="lg"
+            >
               Download
             </Button>
           </div>
@@ -134,20 +137,29 @@ export const HomePageTemplate = ({
               download="Keep Business Primer"
               rel="noopener noreferrer"
               target="_blank"
-              size="lg">
+              size="lg"
+            >
               Download
             </Button>
           </div>
         </div>
       </PageSection>
-      <PageSection id={sections.DEFINITION} additionalClassNames={['blurb', 'blurb-desktop']}>
+      <PageSection
+        id={sections.DEFINITION}
+        additionalClassNames={["blurb", "blurb-desktop"]}
+      >
         <div className="blurb-panel">
           <div className="blurb-icon">
             <Icons.CastleGate />
           </div>
           <div className="blurb-text">
-            <p>Keep: <span>(n.)</span></p>
-            <p>The strongest or central tower of a castle, acting as a final refuge</p>
+            <p>
+              Keep: <span>(n.)</span>
+            </p>
+            <p>
+              The strongest or central tower of a castle, acting as a final
+              refuge
+            </p>
           </div>
         </div>
       </PageSection>
@@ -174,10 +186,12 @@ export const HomePageTemplate = ({
           <h4>Blockchain Storage Encryption</h4>
         </div>
         <div className="use-case">
-          <a href={WHITEPAPER_URL}
+          <a
+            href={WHITEPAPER_URL}
             download="Keep Whitepaper"
             rel="noopener noreferrer"
-            target="_blank">
+            target="_blank"
+          >
             <Icons.Book color="#48dbb4" />
             <h4>Learn More in the Whitepaper</h4>
           </a>
@@ -187,8 +201,13 @@ export const HomePageTemplate = ({
             <Icons.CastleGate />
           </div>
           <div className="blurb-text">
-            <p>Keep: <span>(n.)</span></p>
-            <p>The strongest or central tower of a castle, acting as a final refuge</p>
+            <p>
+              Keep: <span>(n.)</span>
+            </p>
+            <p>
+              The strongest or central tower of a castle, acting as a final
+              refuge
+            </p>
           </div>
         </div>
         <div className="blurb-panel blurb-mobile">
@@ -196,7 +215,11 @@ export const HomePageTemplate = ({
             <Icons.Axe />
           </div>
           <div className="blurb-text">
-            <p>Keeps provide a bridge between the world of public blockchains and private data. It enables a new wave of ground-up innovation for blockchain developers.</p>
+            <p>
+              Keeps provide a bridge between the world of public blockchains and
+              private data. It enables a new wave of ground-up innovation for
+              blockchain developers.
+            </p>
           </div>
         </div>
       </PageSection>
@@ -210,7 +233,8 @@ export const HomePageTemplate = ({
           twitter="https://twitter.com/mhluongo"
           linkedin="https://www.linkedin.com/in/mattluongo"
           github="https://github.com/mhluongo"
-          keybase="http://keybase.io/mhluongo" />
+          keybase="http://keybase.io/mhluongo"
+        />
         <Profile
           name="Corbin Pon"
           title="Developer & Ops"
@@ -219,7 +243,8 @@ export const HomePageTemplate = ({
           twitter="https://twitter.com/CorbinPon"
           linkedin="https://www.linkedin.com/in/corbinpon"
           github="https://github.com/clp16"
-          keybase="http://keybase.io/corbinpon" />
+          keybase="http://keybase.io/corbinpon"
+        />
         <Profile
           name="Antonio Salazar Cardozo"
           title="Head of Engineering"
@@ -229,7 +254,8 @@ export const HomePageTemplate = ({
           twitter="https://twitter.com/lightfiend"
           linkedin="https://www.linkedin.com/in/lightfiend"
           github="https://github.com/Shadowfiend"
-          keybase="http://keybase.io/shadowfiend" />
+          keybase="http://keybase.io/shadowfiend"
+        />
         <Profile
           name="Carolyn Reckhow"
           title="Head of Business Strategy"
@@ -239,7 +265,8 @@ export const HomePageTemplate = ({
           twitter="https://twitter.com/CReckhow"
           linkedin="https://www.linkedin.com/in/carolyn-reckhow-73345a1a"
           github="https://github.com/creckhow"
-          keybase="http://keybase.io/carolynreckhow" />
+          keybase="http://keybase.io/carolynreckhow"
+        />
         <Profile
           name="Michael Gluzman"
           title="Head of Design"
@@ -249,7 +276,8 @@ export const HomePageTemplate = ({
           twitter="https://twitter.com/gluzman"
           linkedin="https://www.linkedin.com/in/michaelgluzman/"
           github="https://github.com/gluzman"
-          keybase="http://keybase.io/gluzzz" />
+          keybase="http://keybase.io/gluzzz"
+        />
         <Profile
           name="Piotr Dyraga"
           title="Tech Lead"
@@ -258,14 +286,16 @@ export const HomePageTemplate = ({
           imageType="jpg"
           twitter="https://twitter.com/piotrdyraga?lang=en"
           linkedin="https://www.linkedin.com/in/piotrdyraga/"
-          github="https://github.com/pdyraga" />
+          github="https://github.com/pdyraga"
+        />
         <Profile
           name="Promethea Raschke"
           title="Protocol Designer"
           imagePath="/img/headshots/promethea"
           imageType="png"
           imageMaxRes={3}
-          github="https://github.com/eth-r" />
+          github="https://github.com/eth-r"
+        />
         <Profile
           name="Sloan Thompson"
           title="Head of DevOps"
@@ -275,7 +305,8 @@ export const HomePageTemplate = ({
           twitter="https://twitter.com/SloanThompson"
           linkedin="https://www.linkedin.com/in/sloansthompson/"
           github="https://github.com/sthompson22"
-          keybase="http://keybase.io/fekta" />
+          keybase="http://keybase.io/fekta"
+        />
         <Profile
           name="Nik Grinkevich"
           title="Developer"
@@ -284,7 +315,8 @@ export const HomePageTemplate = ({
           twitter="https://twitter.com/ngrinkevich"
           linkedin="https://www.linkedin.com/in/nikgrinkevich"
           github="https://github.com/ngrinkevich"
-          keybase="https://keybase.io/nikgrinkevich" />
+          keybase="https://keybase.io/nikgrinkevich"
+        />
         <Profile
           name="Jakub Nowakowski"
           title="Developer"
@@ -293,7 +325,8 @@ export const HomePageTemplate = ({
           imageType="jpg"
           twitter="https://twitter.com/jnowakow8"
           linkedin="https://www.linkedin.com/in/jnowakowski8/"
-          github="https://github.com/nkuba" />
+          github="https://github.com/nkuba"
+        />
         <Profile
           name="Nicholas Evans"
           title="Developer"
@@ -302,7 +335,8 @@ export const HomePageTemplate = ({
           imageMaxRes={3}
           twitter="https://twitter.com/NicholasEvans14"
           github="https://github.com/NicholasDotSol"
-          keybase="http://keybase.io/evansnicholaskb" />
+          keybase="http://keybase.io/evansnicholaskb"
+        />
         <Profile
           name="Dmitry Paremski"
           title="Developer"
@@ -312,7 +346,8 @@ export const HomePageTemplate = ({
           twitter="https://twitter.com/dmitry_paremski"
           linkedin="https://www.linkedin.com/in/paremski/"
           github="https://github.com/dimpar"
-          keybase="http://keybase.io/dparemski" />
+          keybase="http://keybase.io/dparemski"
+        />
         <Profile
           name="Liam Zebedee"
           title="Developer"
@@ -321,7 +356,8 @@ export const HomePageTemplate = ({
           twitter="https://twitter.com/liamzebedee"
           linkedin="https://www.linkedin.com/in/liamedwardsplayne/"
           github="https://github.com/liamzebedee"
-          keybase="https://keybase.io/liamzebedee" />
+          keybase="https://keybase.io/liamzebedee"
+        />
         <Profile
           name="Erin Ng"
           title="Developer"
@@ -329,7 +365,8 @@ export const HomePageTemplate = ({
           imageMaxRes={3}
           linkedin="https://www.linkedin.com/in/erinng/"
           github="https://github.com/ironng"
-          keybase="http://keybase.io/ironng" />
+          keybase="http://keybase.io/ironng"
+        />
         <Profile
           name="Laura Wallendal"
           title="General Manager"
@@ -337,15 +374,23 @@ export const HomePageTemplate = ({
           imageMaxRes={3}
           twitter="https://twitter.com/LauraWallendal"
           linkedin="https://www.linkedin.com/in/laurawallendal"
-          keybase="http://keybase.io/lwallendal" />
+          keybase="http://keybase.io/lwallendal"
+        />
       </PageSection>
-      <PageSection id={sections.DESCRIPTION} additionalClassNames={['blurb', 'blurb-desktop']}>
+      <PageSection
+        id={sections.DESCRIPTION}
+        additionalClassNames={["blurb", "blurb-desktop"]}
+      >
         <div className="blurb-panel">
           <div className="blurb-icon">
             <Icons.Axe />
           </div>
           <div className="blurb-text">
-            <p>Keeps provide a bridge between the world of public blockchains and private data. It enables a new wave of ground-up innovation for blockchain developers.</p>
+            <p>
+              Keeps provide a bridge between the world of public blockchains and
+              private data. It enables a new wave of ground-up innovation for
+              blockchain developers.
+            </p>
           </div>
         </div>
       </PageSection>
@@ -357,45 +402,51 @@ export const HomePageTemplate = ({
           imagePath="/img/headshots/brayton"
           imageMaxRes={3}
           twitter="https://twitter.com/BraytonKey"
-          linkedin="https://www.linkedin.com/in/braytonwilliams" />
+          linkedin="https://www.linkedin.com/in/braytonwilliams"
+        />
         <Profile
           name="John Packel"
           title="Hard Core Decentralization Developer"
           imagePath="/img/headshots/john"
           imageMaxRes={3}
           twitter="https://twitter.com/jpackel"
-          linkedin="https://www.linkedin.com/in/johnpackel" />
+          linkedin="https://www.linkedin.com/in/johnpackel"
+        />
         <Profile
           name="James Prestwich"
           title="Summa, formerly Storj Labs"
           imagePath="/img/headshots/jamesPrestwich"
           imageMaxRes={3}
-          linkedin="https://www.linkedin.com/in/prestwich" />
+          linkedin="https://www.linkedin.com/in/prestwich"
+        />
         <Profile
           name="Axel Blikstad"
           title="International Finance"
           imagePath="/img/headshots/axel"
           imageMaxRes={3}
-          linkedin="https://www.linkedin.com/in/axel-blikstad-77534814" />
+          linkedin="https://www.linkedin.com/in/axel-blikstad-77534814"
+        />
         <Profile
           name="Joseph Urgo"
           title="district0x"
           imagePath="/img/headshots/josephUrgo"
           imageMaxRes={3}
           twitter="https://twitter.com/jfurgo?lang=en"
-          linkedin="https://www.linkedin.com/in/joseph-urgo-a8b77983/" />
+          linkedin="https://www.linkedin.com/in/joseph-urgo-a8b77983/"
+        />
         <Profile
           name="Luis Cuende"
           title="Aragon"
           imagePath="/img/headshots/luisCuende"
           imageMaxRes={3}
           twitter="https://twitter.com/licuende?lang=en"
-          linkedin="https://www.linkedin.com/in/luisivancuende/" />
+          linkedin="https://www.linkedin.com/in/luisivancuende/"
+        />
       </PageSection>
       <PageSection id={sections.PARTNERS} convex>
-        <h2>{partners_section.title}</h2>
+        <h2>{partnersSection.title}</h2>
         <Row>
-          {partners_section.partners.map((partner, i) => (
+          {partnersSection.partners.map((partner, i) => (
             <ImageLink
               key={`partner-${i}`}
               url={partner.url}
@@ -406,9 +457,9 @@ export const HomePageTemplate = ({
         </Row>
       </PageSection>
       <PageSection id={sections.SUPPORTERS} convex>
-        <h2>{supporters_section.title}</h2>
+        <h2>{supportersSection.title}</h2>
         <Row>
-          {supporters_section.supporters.map((supporter, i) => (
+          {supportersSection.supporters.map((supporter, i) => (
             <ImageLink
               key={`supporter-${i}`}
               url={supporter.url}
@@ -422,20 +473,28 @@ export const HomePageTemplate = ({
   )
 }
 
+HomePageTemplate.propTypes = {
+  hero: PropTypes.object,
+  images: PropTypes.object,
+  signupMailingList: PropTypes.func,
+  ajaxRequestStates: PropTypes.object,
+  partners_section: PropTypes.object,
+  supporters_section: PropTypes.object,
+}
+
 const mapStateToProps = (state) => ({
   ajaxRequestStates: state.ajaxRequestStates,
 })
 
-export const ConnectedHomePage = connect(
-  mapStateToProps,
-  { signupMailingList: actions.signupMailingList }
-)(HomePageTemplate)
+export const ConnectedHomePage = connect(mapStateToProps, {
+  signupMailingList: actions.signupMailingList,
+})(HomePageTemplate)
 
 const HomePage = ({ data }) => {
   const { markdownRemark: post } = data
   const images = {
     textureCircle1: data.textureCircle1,
-    textureCircle2: data.textureCircle2
+    textureCircle2: data.textureCircle2,
   }
   return (
     <App>
@@ -447,6 +506,8 @@ const HomePage = ({ data }) => {
 HomePage.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.object,
+    textureCircle1: PropTypes.object,
+    textureCircle2: PropTypes.object,
   }),
 }
 
@@ -497,18 +558,14 @@ export const query = graphql`
         }
       }
     }
-    textureCircle1: file(
-      relativePath: { regex: "/texture-circle.png/" }
-    ) {
+    textureCircle1: file(relativePath: { regex: "/texture-circle.png/" }) {
       childImageSharp {
         fluid(maxWidth: 574, quality: 100) {
           ...GatsbyImageSharpFluid
         }
       }
     }
-    textureCircle2: file(
-      relativePath: { regex: "/texture-circle-2.png/" }
-    ) {
+    textureCircle2: file(relativePath: { regex: "/texture-circle-2.png/" }) {
       childImageSharp {
         fluid(maxWidth: 604, quality: 100) {
           ...GatsbyImageSharpFluid

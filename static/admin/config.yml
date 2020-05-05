@@ -3,7 +3,91 @@ backend:
   repo: keep-network/website
   site_domain: keep.network
 
-site_url: https://tbtc.network
+site_url: https://keep.network
 
 media_folder: static/img
 public_folder: /img
+
+collections:
+  - name: "pages"
+    label: "Pages"
+    files:
+      - file: "src/pages/index.md"
+        label: "Home"
+        name: "home"
+        fields:
+          - {
+              label: "Template",
+              name: "template",
+              widget: "hidden",
+              default: "home-page",
+            }
+          - { label: "Path", name: "path", widget: "hidden", default: "/" }
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Body", name: "body", widget: "markdown", required: false}
+          - label: "Partners Section"
+            name: "partners_section"
+            widget: "object"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {
+                label: "Partners",
+                name: "partners",
+                widget: "list",
+                allow_add: true,
+                fields:
+                  [
+                    {label: "Name", name: "name", widget: "string"},
+                    {label: "URL", name: "url", widget: "string"},
+                    {
+                      label: Logo,
+                      name: logo,
+                      widget: object,
+                      fields:
+                        [
+                          {
+                            label: Image,
+                            name: image,
+                            widget: image,
+                            hint: "Image should be at least the 2x resolution size",
+                          },
+                          { label: Alt, name: alt, widget: string },
+                        ],
+                    }
+                  ],
+              }
+          - label: "Supporters Section"
+            name: "supperters_section"
+            widget: "object"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {
+                label: "Supporters",
+                name: "supporters",
+                widget: "list",
+                allow_add: true,
+                fields:
+                  [
+                    {label: "Name", name: "name", widget: "string"},
+                    {label: "URL", name: "url", widget: "string"},
+                    {
+                      label: Logo,
+                      name: logo,
+                      widget: object,
+                      fields:
+                        [
+                          {
+                            label: Image,
+                            name: image,
+                            widget: image,
+                            hint: "Image should be at least the 2x resolution size",
+                          },
+                          { label: Alt, name: alt, widget: string },
+                        ],
+                    }
+                  ],
+              }

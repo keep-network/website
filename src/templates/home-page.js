@@ -1,18 +1,30 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { Button, Col, Row } from 'reactstrap'
-import { Picture } from 'react-responsive-picture'
+import PropTypes from 'prop-types'
+import { graphql } from 'gatsby'
 
-import EmailForm from './EmailForm'
-import PageSection from './PageSection'
-import { Profile } from './Profile'
-import { getSrc } from '../utils'
-import * as Icons from './Icons'
+import {
+  App,
+  EmailForm,
+  Icons,
+  Image,
+  ImageLink,
+  PageSection,
+  Profile
+} from '../components'
 import { sections, WHITEPAPER_URL } from '../constants'
 import { actions, actionTypes } from '../redux'
 
 
-const Home = ({ signupMailingList, ajaxRequestStates }) => {
+export const HomePageTemplate = ({
+  hero = {},
+  images = {},
+  signupMailingList = () => { },
+  ajaxRequestStates = {},
+  partners_section = {},
+  supporters_section = {}
+}) => {
   const handleSignupDiscord = ({ email }) => {
     signupMailingList({ email, discordSignup: true })
   }
@@ -22,11 +34,11 @@ const Home = ({ signupMailingList, ajaxRequestStates }) => {
       <PageSection id={sections.HOME}>
         <Row>
           <Col xs={12} sm={7}>
-            <h1>A privacy layer for Ethereum</h1>
-            <p>A keep is an off-chain container for private data. Keeps help contracts harness the full power of the public blockchain &mdash; enabling deep interactivity with private data.</p>
+            <h1>{hero.title}</h1>
+            <div className="body" dangerouslySetInnerHTML={{ __html: hero.body }} />
           </Col>
           <Col xs={12} sm={5} className="col-circles">
-            <Picture src={getSrc('/images/texture-circle', 'png', 3)} />
+            <Image imageData={images.textureCircle1} />
           </Col>
         </Row>
       </PageSection>
@@ -47,7 +59,7 @@ const Home = ({ signupMailingList, ajaxRequestStates }) => {
           </Col>
           <Col xs={12} sm={5} className="col-circles">
             <div>
-              <Picture src={getSrc('/images/texture-circle-2', 'png', 3)} />
+              <Image imageData={images.textureCircle2} />
             </div>
           </Col>
         </Row>
@@ -193,7 +205,7 @@ const Home = ({ signupMailingList, ajaxRequestStates }) => {
         <Profile
           name="Matt Luongo"
           title="Project Lead"
-          imagePath="/images/headshots/matt"
+          imagePath="/img/headshots/matt"
           imageMaxRes={3}
           twitter="https://twitter.com/mhluongo"
           linkedin="https://www.linkedin.com/in/mattluongo"
@@ -202,7 +214,7 @@ const Home = ({ signupMailingList, ajaxRequestStates }) => {
         <Profile
           name="Corbin Pon"
           title="Developer & Ops"
-          imagePath="/images/headshots/corbin"
+          imagePath="/img/headshots/corbin"
           imageMaxRes={3}
           twitter="https://twitter.com/CorbinPon"
           linkedin="https://www.linkedin.com/in/corbinpon"
@@ -211,7 +223,7 @@ const Home = ({ signupMailingList, ajaxRequestStates }) => {
         <Profile
           name="Antonio Salazar Cardozo"
           title="Head of Engineering"
-          imagePath="/images/headshots/antonio"
+          imagePath="/img/headshots/antonio"
           imageType="png"
           imageMaxRes={3}
           twitter="https://twitter.com/lightfiend"
@@ -221,7 +233,7 @@ const Home = ({ signupMailingList, ajaxRequestStates }) => {
         <Profile
           name="Carolyn Reckhow"
           title="Head of Business Strategy"
-          imagePath="/images/headshots/carolyn"
+          imagePath="/img/headshots/carolyn"
           imageType="jpg"
           imageMaxRes={2}
           twitter="https://twitter.com/CReckhow"
@@ -231,7 +243,7 @@ const Home = ({ signupMailingList, ajaxRequestStates }) => {
         <Profile
           name="Michael Gluzman"
           title="Head of Design"
-          imagePath="/images/headshots/michael"
+          imagePath="/img/headshots/michael"
           imageType="png"
           imageMaxRes={3}
           twitter="https://twitter.com/gluzman"
@@ -241,7 +253,7 @@ const Home = ({ signupMailingList, ajaxRequestStates }) => {
         <Profile
           name="Piotr Dyraga"
           title="Tech Lead"
-          imagePath="/images/headshots/piotr"
+          imagePath="/img/headshots/piotr"
           imageMaxRes={3}
           imageType="jpg"
           twitter="https://twitter.com/piotrdyraga?lang=en"
@@ -250,14 +262,14 @@ const Home = ({ signupMailingList, ajaxRequestStates }) => {
         <Profile
           name="Promethea Raschke"
           title="Protocol Designer"
-          imagePath="/images/headshots/promethea"
+          imagePath="/img/headshots/promethea"
           imageType="png"
           imageMaxRes={3}
           github="https://github.com/eth-r" />
         <Profile
           name="Sloan Thompson"
           title="Head of DevOps"
-          imagePath="/images/headshots/sloanThompson"
+          imagePath="/img/headshots/sloanThompson"
           imageType="jpg"
           imageMaxRes={3}
           twitter="https://twitter.com/SloanThompson"
@@ -267,7 +279,7 @@ const Home = ({ signupMailingList, ajaxRequestStates }) => {
         <Profile
           name="Nik Grinkevich"
           title="Developer"
-          imagePath="/images/headshots/nik"
+          imagePath="/img/headshots/nik"
           imageMaxRes={3}
           twitter="https://twitter.com/ngrinkevich"
           linkedin="https://www.linkedin.com/in/nikgrinkevich"
@@ -276,7 +288,7 @@ const Home = ({ signupMailingList, ajaxRequestStates }) => {
         <Profile
           name="Jakub Nowakowski"
           title="Developer"
-          imagePath="/images/headshots/jakub"
+          imagePath="/img/headshots/jakub"
           imageMaxRes={3}
           imageType="jpg"
           twitter="https://twitter.com/jnowakow8"
@@ -285,7 +297,7 @@ const Home = ({ signupMailingList, ajaxRequestStates }) => {
         <Profile
           name="Nicholas Evans"
           title="Developer"
-          imagePath="/images/headshots/nicholas"
+          imagePath="/img/headshots/nicholas"
           imageType="png"
           imageMaxRes={3}
           twitter="https://twitter.com/NicholasEvans14"
@@ -294,7 +306,7 @@ const Home = ({ signupMailingList, ajaxRequestStates }) => {
         <Profile
           name="Dmitry Paremski"
           title="Developer"
-          imagePath="/images/headshots/dmitryParemski"
+          imagePath="/img/headshots/dmitryParemski"
           imageType="jpg"
           imageMaxRes={3}
           twitter="https://twitter.com/dmitry_paremski"
@@ -304,7 +316,7 @@ const Home = ({ signupMailingList, ajaxRequestStates }) => {
         <Profile
           name="Liam Zebedee"
           title="Developer"
-          imagePath="/images/headshots/liamZebedee"
+          imagePath="/img/headshots/liamZebedee"
           imageMaxRes={3}
           twitter="https://twitter.com/liamzebedee"
           linkedin="https://www.linkedin.com/in/liamedwardsplayne/"
@@ -313,7 +325,7 @@ const Home = ({ signupMailingList, ajaxRequestStates }) => {
         <Profile
           name="Erin Ng"
           title="Developer"
-          imagePath="/images/headshots/erin"
+          imagePath="/img/headshots/erin"
           imageMaxRes={3}
           linkedin="https://www.linkedin.com/in/erinng/"
           github="https://github.com/ironng"
@@ -321,7 +333,7 @@ const Home = ({ signupMailingList, ajaxRequestStates }) => {
         <Profile
           name="Laura Wallendal"
           title="General Manager"
-          imagePath="/images/headshots/laura"
+          imagePath="/img/headshots/laura"
           imageMaxRes={3}
           twitter="https://twitter.com/LauraWallendal"
           linkedin="https://www.linkedin.com/in/laurawallendal"
@@ -342,95 +354,68 @@ const Home = ({ signupMailingList, ajaxRequestStates }) => {
         <Profile
           name="Brayton Williams"
           title="Boost VC"
-          imagePath="/images/headshots/brayton"
+          imagePath="/img/headshots/brayton"
           imageMaxRes={3}
           twitter="https://twitter.com/BraytonKey"
           linkedin="https://www.linkedin.com/in/braytonwilliams" />
         <Profile
           name="John Packel"
           title="Hard Core Decentralization Developer"
-          imagePath="/images/headshots/john"
+          imagePath="/img/headshots/john"
           imageMaxRes={3}
           twitter="https://twitter.com/jpackel"
           linkedin="https://www.linkedin.com/in/johnpackel" />
         <Profile
           name="James Prestwich"
           title="Summa, formerly Storj Labs"
-          imagePath="/images/headshots/jamesPrestwich"
+          imagePath="/img/headshots/jamesPrestwich"
           imageMaxRes={3}
           linkedin="https://www.linkedin.com/in/prestwich" />
         <Profile
           name="Axel Blikstad"
           title="International Finance"
-          imagePath="/images/headshots/axel"
+          imagePath="/img/headshots/axel"
           imageMaxRes={3}
           linkedin="https://www.linkedin.com/in/axel-blikstad-77534814" />
         <Profile
           name="Joseph Urgo"
           title="district0x"
-          imagePath="/images/headshots/josephUrgo"
+          imagePath="/img/headshots/josephUrgo"
           imageMaxRes={3}
           twitter="https://twitter.com/jfurgo?lang=en"
           linkedin="https://www.linkedin.com/in/joseph-urgo-a8b77983/" />
         <Profile
           name="Luis Cuende"
           title="Aragon"
-          imagePath="/images/headshots/luisCuende"
+          imagePath="/img/headshots/luisCuende"
           imageMaxRes={3}
           twitter="https://twitter.com/licuende?lang=en"
           linkedin="https://www.linkedin.com/in/luisivancuende/" />
       </PageSection>
       <PageSection id={sections.PARTNERS} convex>
-        <h2>Our Partners</h2>
+        <h2>{partners_section.title}</h2>
         <Row>
-          <Col xs={12} sm={{ size: 4, offset: 1 }}>
-            <a href="https://www.lendroid.com/" rel="noopener noreferrer" target="_blank">
-              <Picture src={getSrc('/images/logos/lendroidLogo', 'png', 3)} />
-            </a>
-          </Col>
-          <Col xs={12} sm={{ size: 4, offset: 2 }}>
-            <a href="https://district0x.io/" rel="noopener noreferrer" target="_blank">
-              <Picture src={getSrc('/images/logos/district0x_logo', 'png', 3)} />
-            </a>
-          </Col>
+          {partners_section.partners.map((partner, i) => (
+            <ImageLink
+              key={`partner-${i}`}
+              url={partner.url}
+              label={partner.name}
+              image={partner.logo}
+            />
+          ))}
         </Row>
       </PageSection>
       <PageSection id={sections.SUPPORTERS} convex>
-        <h2>Our Supporters</h2>
+        <h2>{supporters_section.title}</h2>
         <Row>
-          <Col xs={12} sm={4}>
-            <a href="http://polychain.capital/" rel="noopener noreferrer" target="_blank">
-              <Picture src={getSrc('/images/logos/polychainLogo', 'png', 3)} />
-            </a>
-          </Col>
-          <Col xs={12} sm={4}>
-
-            <a href="https://a16z.com/" rel="noopener noreferrer" target="_blank">
-              <Picture src={getSrc('/images/logos/andreessenHorowitzLogo', 'png', 3)} />
-            </a>
-          </Col>
-          <Col xs={12} sm={4}>
-            <a href="http://www.dhvc.com/" rel="noopener noreferrer" target="_blank">
-              <Picture src={getSrc('/images/logos/DHVCLogo', 'png', 3)} />
-            </a>
-          </Col>
-        </Row>
-        <Row>
-          <Col xs={12} sm={4}>
-            <a href="http://www.draper.vc/" rel="noopener noreferrer" target="_blank">
-              <Picture src={getSrc('/images/logos/draperAssociatesLogo', 'png', 3)} />
-            </a>
-          </Col>
-          <Col xs={12} sm={4}>
-            <a href="https://www.distributedcapital.io/" rel="noopener noreferrer" target="_blank">
-              <Picture src={getSrc('/images/logos/distributedCapitalPartnersLogo', 'png', 3)} />
-            </a>
-          </Col>
-          <Col xs={12} sm={4}>
-            <a href="https://www.fabric.vc/" rel="noopener noreferrer" target="_blank">
-              <Picture src={getSrc('/images/logos/fabricVenturesLogo', 'png', 3)} />
-            </a>
-          </Col>
+          {supporters_section.supporters.map((supporter, i) => (
+            <ImageLink
+              key={`supporter-${i}`}
+              url={supporter.url}
+              label={supporter.name}
+              image={supporter.logo}
+            />
+          ))}
         </Row>
       </PageSection>
     </div>
@@ -441,7 +426,94 @@ const mapStateToProps = (state) => ({
   ajaxRequestStates: state.ajaxRequestStates,
 })
 
-export default connect(
+export const ConnectedHomePage = connect(
   mapStateToProps,
   { signupMailingList: actions.signupMailingList }
-)(Home)
+)(HomePageTemplate)
+
+const HomePage = ({ data }) => {
+  const { markdownRemark: post } = data
+  const images = {
+    textureCircle1: data.textureCircle1,
+    textureCircle2: data.textureCircle2
+  }
+  return (
+    <App>
+      <ConnectedHomePage {...post.frontmatter} images={images} />
+    </App>
+  )
+}
+
+HomePage.propTypes = {
+  data: PropTypes.shape({
+    markdownRemark: PropTypes.object,
+  }),
+}
+
+export default HomePage
+
+export const query = graphql`
+  query HomePage($id: String!) {
+    markdownRemark(id: { eq: $id }) {
+      id
+      frontmatter {
+        hero {
+          title
+          body
+        }
+        partners_section {
+          title
+          partners {
+            name
+            url
+            logo {
+              image {
+                childImageSharp {
+                  fluid(maxWidth: 315, quality: 100) {
+                    ...GatsbyImageSharpFluid
+                  }
+                }
+              }
+              alt
+            }
+          }
+        }
+        supporters_section {
+          title
+          supporters {
+            name
+            url
+            logo {
+              image {
+                childImageSharp {
+                  fluid(maxWidth: 300, quality: 100) {
+                    ...GatsbyImageSharpFluid
+                  }
+                }
+              }
+              alt
+            }
+          }
+        }
+      }
+    }
+    textureCircle1: file(
+      relativePath: { regex: "/texture-circle.png/" }
+    ) {
+      childImageSharp {
+        fluid(maxWidth: 574, quality: 100) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    textureCircle2: file(
+      relativePath: { regex: "/texture-circle-2.png/" }
+    ) {
+      childImageSharp {
+        fluid(maxWidth: 604, quality: 100) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`

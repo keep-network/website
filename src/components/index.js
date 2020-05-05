@@ -1,7 +1,9 @@
 import App from './App'
 import EmailForm from './EmailForm'
-import Home from './Home'
+import Footer from './Footer'
 import * as Icons from './Icons'
+import Image from './Image'
+import ImageLink from './ImageLink'
 import NavContent from './NavContent'
 import NavScrollItem from './NavScrollItem'
 import PageSection from './PageSection'
@@ -12,8 +14,10 @@ import SubmitButton from './SubmitButton'
 export {
   App,
   EmailForm,
-  Home,
+  Footer,
   Icons,
+  Image,
+  ImageLink,
   NavContent,
   NavScrollItem,
   PageSection,

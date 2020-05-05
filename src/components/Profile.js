@@ -17,7 +17,7 @@ Avatar.propTypes = {
 };
 
 Avatar.defaultProps = {
-    imagePath: '/images/headshots/placeholder',
+    imagePath: '/img/headshots/placeholder',
     imageType: 'jpg',
     imageMaxRes: 1
 };
@@ -63,7 +63,7 @@ Profile.propTypes = {
 
 Profile.defaultProps = {
     name: 'Unnamed Contributor',
-    imagePath: '/images/headshots/placeholder',
+    imagePath: '/img/headshots/placeholder',
     imageType: 'jpg',
     imageMaxRes: 1
 };
@@ -73,7 +73,7 @@ export const ExampleProfile = (props) => <Profile {...props} />;
 ExampleProfile.defaultProps = {
     name: 'Matt Luongo',
     title: 'Project Lead',
-    imagePath: '/images/headshots/matt',
+    imagePath: '/img/headshots/matt',
     imageType: 'jpg',
     imageMaxRes: 3,
     twitter: 'https://twitter.com/mhluongo',

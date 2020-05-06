@@ -47,7 +47,8 @@ collections:
                         label: "Profile Image",
                         name: "image",
                         widget: "image",
-                        hint: "Image should be at least the 2x resolution size",
+                        hint: "Minimum image width of 528px required (to be
+                          rendered as 274px) to support higher resolution screens",
                       },
                       {
                         label: "Social Links",
@@ -78,7 +79,8 @@ collections:
                         label: "Profile Image",
                         name: "image",
                         widget: "image",
-                        hint: "Image should be at least the 2x resolution size",
+                        hint: "Minimum image width of 528px required (to be
+                          rendered as 274px) to support higher resolution screens",
                       },
                       {
                         label: "Social Links",

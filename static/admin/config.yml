@@ -35,56 +35,62 @@ collections:
             fields:
               - {label: "Title", name: "title", widget: "string"}
               - {
-                label: "Team",
-                name: "team",
-                widget: "list",
-                allow_add: true,
-                fields:
-                  - {label: "Name", name: "name", widget: "string"}
-                  - {label: "Title", name: "title", widget: "string"}
-                  - {
-                      label: "Profile Image",
-                      name: "image",
-                      widget: "image",
-                      hint: "Image should be at least the 2x resolution size",
-                    }
-                  - {
-                      label: "Social Links",
-                      name: "social_links",
-                      widget: "list",
-                      allow_add: true,
-                      required: false,
-                      hint: "Only Twitter, LinkedIn, GitHub or Keybase social links will be displayed",
-                      fields: [{ label: URL, name: url, widget: string }],
-                    }
+                  label: "Team",
+                  name: "team",
+                  widget: "list",
+                  allow_add: true,
+                  fields:
+                    [
+                      {label: "Name", name: "name", widget: "string"},
+                      {label: "Title", name: "title", widget: "string"},
+                      {
+                        label: "Profile Image",
+                        name: "image",
+                        widget: "image",
+                        hint: "Image should be at least the 2x resolution size",
+                      },
+                      {
+                        label: "Social Links",
+                        name: "social_links",
+                        widget: "list",
+                        allow_add: true,
+                        required: false,
+                        hint: "Only Twitter, LinkedIn, GitHub or Keybase social links will be displayed",
+                        fields: [{ label: URL, name: url, widget: string }],
+                      },
+                    ]
+                }
           - label: "Advisors Section"
             name: "advisors_section"
             widget: "object"
             fields:
               - {label: "Title", name: "title", widget: "string"}
               - {
-                label: "Advisors",
-                name: "advisors",
-                widget: "list",
-                allow_add: true,
-                fields:
-                  - {label: "Name", name: "name", widget: "string"}
-                  - {label: "Title", name: "title", widget: "string"}
-                  - {
-                      label: "Profile Image",
-                      name: "image",
-                      widget: "image",
-                      hint: "Image should be at least the 2x resolution size",
-                    }
-                  - {
-                      label: "Social Links",
-                      name: "social_links",
-                      widget: "list",
-                      allow_add: true,
-                      required: false,
-                      hint: "Only Twitter, LinkedIn, GitHub or Keybase social links will be displayed",
-                      fields: [{ label: URL, name: url, widget: string }],
-                    }
+                  label: "Advisors",
+                  name: "advisors",
+                  widget: "list",
+                  allow_add: true,
+                  fields:
+                    [
+                      {label: "Name", name: "name", widget: "string"},
+                      {label: "Title", name: "title", widget: "string"},
+                      {
+                        label: "Profile Image",
+                        name: "image",
+                        widget: "image",
+                        hint: "Image should be at least the 2x resolution size",
+                      },
+                      {
+                        label: "Social Links",
+                        name: "social_links",
+                        widget: "list",
+                        allow_add: true,
+                        required: false,
+                        hint: "Only Twitter, LinkedIn, GitHub or Keybase social links will be displayed",
+                        fields: [{ label: URL, name: url, widget: string }],
+                      },
+                    ]
+                }
           - label: "Partners Section"
             name: "partners_section"
             widget: "object"

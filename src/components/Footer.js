@@ -1,6 +1,6 @@
 import React from "react"
 import { Container, Button } from "reactstrap"
-import { graphql, StaticQuery } from "gatsby"
+import { graphql, StaticQuery, Link } from "gatsby"
 import PropTypes from "prop-types"
 
 import { KeepCircle } from "./Icons"
@@ -106,13 +106,15 @@ export const FooterTemplate = ({ images = {} }) => (
         <p>&#169; 2020 Keep SEZC. All Rights Reserved.</p>
         <ul>
           <li>
-            <a href={routes.PRIVACY}>Privacy Policy</a>
+            <Link to={routes.PRIVACY}>Privacy Policy</Link>
           </li>
           <li>
-            <a href={routes.TERMS}>Terms of Use</a>
+            <Link to={routes.TERMS}>Terms of Use</Link>
           </li>
           <li>
-            <a href={routes.PLAYING_FOR_KEEPS_TERMS}>Playing for Keeps Terms</a>
+            <Link to={routes.PLAYING_FOR_KEEPS_TERMS}>
+              Playing for Keeps Terms
+            </Link>
           </li>
         </ul>
       </div>

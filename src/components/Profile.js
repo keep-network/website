@@ -1,105 +1,60 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { Picture } from "react-responsive-picture"
-
+import Image from "./Image"
 import { GithubSocial, Keybase, LinkedIn, Twitter } from "./Icons"
-import { getSrc } from "../utils"
 
-export const Avatar = ({ imagePath, imageType, imageMaxRes }) => (
-  <div className="avatar">
-    <Picture src={getSrc(imagePath, imageType, imageMaxRes)} />
-  </div>
-)
-
-Avatar.propTypes = {
-  imagePath: PropTypes.string,
-  imageType: PropTypes.string,
-  imageMaxRes: PropTypes.number,
+const getIcon = (url) => {
+  if (url.includes("twitter")) {
+    return <Twitter />
+  } else if (url.includes("linkedin")) {
+    return <LinkedIn />
+  } else if (url.includes("github")) {
+    return <GithubSocial />
+  } else if (url.includes("keybase")) {
+    return <Keybase />
+  } else {
+    return null
+  }
 }
 
-Avatar.defaultProps = {
-  imagePath: "/img/headshots/placeholder",
-  imageType: "jpg",
-  imageMaxRes: 1,
+const SocialLink = ({ url }) => {
+  const icon = getIcon(url)
+
+  if (!!icon) {
+    return (
+      <a href={url} target="_blank" rel="noopener noreferrer">
+        {icon}
+      </a>
+    )
+  }
+
+  return null
 }
 
-export const Profile = ({
-  name,
-  imagePath,
-  imageType,
-  imageMaxRes,
-  title,
-  twitter,
-  linkedin,
-  github,
-  keybase,
-}) => (
+SocialLink.propTypes = {
+  url: PropTypes.string,
+}
+
+const Profile = ({ name, image, title, socials = [] }) => (
   <div className="profile">
-    <Avatar
-      imagePath={imagePath}
-      imageType={imageType}
-      imageMaxRes={imageMaxRes}
-    />
+    <Image imageData={{ image, alt: name }} />
     <h4>
       <span>{name}</span>
       {title && title}
     </h4>
     <div className="social-links">
-      {twitter && (
-        <a href={twitter} target="_blank" rel="noopener noreferrer">
-          <Twitter />
-        </a>
-      )}
-      {linkedin && (
-        <a href={linkedin} target="_blank" rel="noopener noreferrer">
-          <LinkedIn />
-        </a>
-      )}
-      {github && (
-        <a href={github} target="_blank" rel="noopener noreferrer">
-          <GithubSocial />
-        </a>
-      )}
-      {keybase && (
-        <a href={keybase} target="_blank" rel="noopener noreferrer">
-          <Keybase />
-        </a>
-      )}
+      {socials.map((link, i) => (
+        <SocialLink key={`social-link-${i}}`} url={link.url} />
+      ))}
     </div>
   </div>
 )
 
 Profile.propTypes = {
   name: PropTypes.string,
-  imagePath: PropTypes.string,
-  imageType: PropTypes.string,
-  imageMaxRes: PropTypes.number,
   title: PropTypes.string,
-  twitter: PropTypes.string,
-  linkedin: PropTypes.string,
-  github: PropTypes.string,
-  keybase: PropTypes.string,
-}
-
-Profile.defaultProps = {
-  name: "Unnamed Contributor",
-  imagePath: "/img/headshots/placeholder",
-  imageType: "jpg",
-  imageMaxRes: 1,
-}
-
-export const ExampleProfile = (props) => <Profile {...props} />
-
-ExampleProfile.defaultProps = {
-  name: "Matt Luongo",
-  title: "Project Lead",
-  imagePath: "/img/headshots/matt",
-  imageType: "jpg",
-  imageMaxRes: 3,
-  twitter: "https://twitter.com/mhluongo",
-  linkedin: "https://www.linkedin.com/in/mattluongo",
-  github: "https://github.com/mhluongo",
-  keybase: "http://keybase.io/mhluongo",
+  image: PropTypes.object,
+  socials: PropTypes.array,
 }
 
 export default Profile

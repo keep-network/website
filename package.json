@@ -32,7 +32,6 @@
     "react-dom": "^16.8.4",
     "react-helmet": "^5.2.0",
     "react-redux": "^7.2.0",
-    "react-responsive-picture": "^3.2.2",
     "react-scroll": "^1.7.16",
     "reactstrap": "^8.4.1",
     "redux": "^4.0.5",

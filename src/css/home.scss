@@ -82,7 +82,7 @@
         text-indent: 100%;
         white-space: nowrap;
         overflow: hidden;
-        background-image: url(../img/Discord-Wordmark-Gold.svg);
+        background-image: url(../images/Discord-Wordmark-Gold.svg);
         background-repeat: no-repeat;
         background-position: center;
         margin: 0 9px;
@@ -203,7 +203,7 @@
         display: inline-block;
         width: 129px;
         height: 35px;
-        background-image: url(../img/GitHub_Logo.svg);
+        background-image: url(../images/GitHub_Logo.svg);
         text-indent: 100%;
         white-space: nowrap;
         overflow: hidden;
@@ -467,15 +467,15 @@
                 width: 100%;
                 height: 10px;
 
-                background-image: url(../img/wall-pattern.png);
+                background-image: url(../images/wall-pattern.png);
                 background-repeat: repeat-x;
                 background-size: cover;
 
                 @include devicePixelRatio2 {
-                    background-image: url(../img/wall-pattern@2x.png);
+                    background-image: url(../images/wall-pattern@2x.png);
                 }
                 @include devicePixelRatio3 {
-                    background-image: url(../img/wall-pattern@3x.png);
+                    background-image: url(../images/wall-pattern@3x.png);
                 }
             }
         }

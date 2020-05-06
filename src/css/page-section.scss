@@ -30,10 +30,16 @@
         }
 
         .see-all {
-            display: block;
+            @extend .h4;
+            display: flex;
+            align-items: center;
+            flex-direction: row-reverse;
+            background-color: initial;
+            border: 0;
             cursor: pointer;
             font-size: 25px;
             font-weight: 800;
+            color: $black;
             position: absolute;
             right: 15px;
             bottom: 0;
@@ -42,6 +48,7 @@
                 path {
                     stroke: $black;
                 }
+                transform: scale(-1);
             }
         }
 
@@ -52,6 +59,14 @@
 
     &.collapsed {
         overflow: hidden;
+
+        .see-all {
+            flex-direction: row;
+            bottom: auto;
+            svg {
+                transform: none;
+            }
+        }
 
         @media (min-width: #{$bp-medium}) {
             max-height: 780px;

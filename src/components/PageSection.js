@@ -1,50 +1,41 @@
-import React, { Component } from "react"
+import React, { useState } from "react"
 import PropTypes from "prop-types"
 import classNames from "classnames"
 import { Container } from "reactstrap"
 
 import { ArrowRight } from "./Icons"
 
-class PageSection extends Component {
-  state = {
-    isCollapsed: this.props.collapsible ? true : false,
+const PageSection = ({ id, additionalClassNames, children, collapsible }) => {
+  const [isCollapsed, setIsCollapsed] = useState(collapsible ? true : false)
+
+  const toggleCollapse = () => {
+    setIsCollapsed(!isCollapsed)
   }
 
-  toggleCollapse = () => {
-    this.setState((prevState) => ({
-      isCollapsed: !prevState.isCollapsed,
-    }))
-  }
+  const classes = classNames(
+    "page-section",
+    { collapsible: collapsible, collapsed: isCollapsed },
+    id,
+    additionalClassNames
+  )
 
-  render() {
-    const { id, additionalClassNames, children, collapsible } = this.props
-    const { isCollapsed } = this.state
-
-    const classes = classNames(
-      "page-section",
-      { collapsible: collapsible, collapsed: isCollapsed },
-      id,
-      additionalClassNames
-    )
-
-    return (
-      <section className={classes} id={id}>
-        <div className="page-section-content">
-          <Container fluid="md">
-            {children}
-            {collapsible ? (
-              <h4 className="see-all" onClick={this.toggleCollapse}>
-                {isCollapsed ? "See all" : "See less"}
-                <ArrowRight />
-              </h4>
-            ) : (
-              ""
-            )}
-          </Container>
-        </div>
-      </section>
-    )
-  }
+  return (
+    <section className={classes} id={id}>
+      <div className="page-section-content">
+        <Container fluid="md">
+          {children}
+          {collapsible ? (
+            <button className="see-all" onClick={toggleCollapse}>
+              <span>{isCollapsed ? "See all" : "See less"}</span>
+              <ArrowRight />
+            </button>
+          ) : (
+            ""
+          )}
+        </Container>
+      </div>
+    </section>
+  )
 }
 
 PageSection.propTypes = {

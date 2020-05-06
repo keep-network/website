@@ -16,13 +16,7 @@ const Image = ({ imageData, className = "" }) => {
   }
 
   if (!!childImageSharp) {
-    return (
-      <Img
-        className={className}
-        fluid={childImageSharp.fluid}
-        alt={alt}
-      />
-    )
+    return <Img className={className} fluid={childImageSharp.fluid} alt={alt} />
   }
 
   if (!!image && typeof image === "string") {
@@ -38,6 +32,7 @@ Image.propTypes = {
     childImageSharp: PropTypes.object,
     image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   }).isRequired,
+  className: PropTypes.string,
 }
 
 export default Image

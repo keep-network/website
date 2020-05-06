@@ -1,9 +1,11 @@
-import React from 'react'
+import React from "react"
 
-import { App, PressContent } from '../../components'
+import { App, PressContent } from "../../components"
 
-export default () => (
-    <App>
-        <PressContent />
-    </App>
+const Press = () => (
+  <App>
+    <PressContent />
+  </App>
 )
+
+export default Press

@@ -12,7 +12,7 @@ import { Link } from "gatsby"
 
 import NavScrollItem from "./NavScrollItem"
 import * as Icons from "./Icons"
-import { routes, sections, WHITEPAPER_URL } from "../constants"
+import { routes, sections } from "../constants"
 
 const Header = () => {
   const [collapsed, setCollapsed] = useState(true)
@@ -33,15 +33,6 @@ const Header = () => {
         <NavbarToggler onClick={toggleNavbar} />
         <Collapse isOpen={!collapsed} navbar>
           <Nav>
-            <NavItem>
-              <NavLink
-                href={WHITEPAPER_URL}
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                Whitepaper
-              </NavLink>
-            </NavItem>
             <NavScrollItem href={routes.MAIN} to={sections.TEAM} hashSpy={true}>
               Team
             </NavScrollItem>

@@ -1,7 +1,9 @@
 import classNames from "classnames"
 import React from "react"
 import PropTypes from "prop-types"
-import { Link } from "react-scroll"
+import { Link as ScrollLink } from "react-scroll"
+import { Link } from "gatsby"
+import { useLocation } from "@reach/router"
 
 const propTypes = {
   active: PropTypes.bool,
@@ -49,6 +51,8 @@ const NavScrollItem = ({
   children,
   element: Element,
 }) => {
+  const location = useLocation()
+
   const handleClick = (e) => {
     if (typeof onClick === "function") {
       onClick()
@@ -67,17 +71,23 @@ const NavScrollItem = ({
       className={classNames(className, { active })}
       style={style}
     >
-      <Link
-        activeClass={activeClass}
-        to={to}
-        spy={spy}
-        hashSpy={hashSpy}
-        smooth={smooth}
-        duration={duration}
-        onClick={handleClick}
-      >
-        {children}
-      </Link>
+      {location.pathname === "/" ? (
+        <ScrollLink
+          activeClass={activeClass}
+          to={to}
+          spy={spy}
+          hashSpy={hashSpy}
+          smooth={smooth}
+          duration={duration}
+          onClick={handleClick}
+        >
+          {children}
+        </ScrollLink>
+      ) : (
+        <Link activeClassName={activeClass} to={`/#${to}`}>
+          {children}
+        </Link>
+      )}
     </Element>
   )
 }

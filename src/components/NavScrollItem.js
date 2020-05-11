@@ -12,14 +12,10 @@ const propTypes = {
   ]),
   className: PropTypes.string,
   hashSpy: PropTypes.bool,
-  history: PropTypes.shape({
-    push: PropTypes.string,
-  }),
   href: PropTypes.string,
   role: PropTypes.string,
   to: PropTypes.string,
   onClick: PropTypes.func,
-  onSelect: PropTypes.func,
   eventKey: PropTypes.any,
   style: PropTypes.object,
   spy: PropTypes.bool,
@@ -37,11 +33,23 @@ const defaultProps = {
   element: "li",
 }
 
-// A Scroll Aware NavItem compatible with React Bootstrap's Nav
-class NavScrollItem extends React.Component {
-  handleClick = (e) => {
-    const { eventKey, onSelect, onClick, href, history, to } = this.props
-
+// A Scroll Aware NavItem compatible
+const NavScrollItem = ({
+  active,
+  className,
+  style,
+  activeClass,
+  href,
+  hashSpy,
+  onClick,
+  to,
+  spy,
+  smooth,
+  duration,
+  children,
+  element: Element,
+}) => {
+  const handleClick = (e) => {
     if (typeof onClick === "function") {
       onClick()
     }
@@ -49,67 +57,29 @@ class NavScrollItem extends React.Component {
     if (href) {
       e.stopPropagation()
 
-      history.push(`${href}#${to || ""}`)
-    }
-
-    if (onSelect) {
-      e.preventDefault()
-
-      onSelect(eventKey, e)
+      window.history.pushState({}, "", `${href}#${to || ""}`)
     }
   }
 
-  render() {
-    const {
-      active,
-      className,
-      style,
-      activeClass,
-      hashSpy,
-      to,
-      spy,
-      smooth,
-      duration,
-      children,
-      element: Element,
-      ...props
-    } = this.props
-
-    delete props.onSelect
-    delete props.eventKey
-
-    // These are injected down by `<Nav>` for building `<SubNav>`s.
-    delete props.activeKey
-    delete props.activeHref
-
-    if (!props.role) {
-      if (props.to === "#") {
-        props.role = "button"
-      }
-    } else if (props.role === "tab") {
-      props["aria-selected"] = active
-    }
-
-    return (
-      <Element
-        role="presentation"
-        className={classNames(className, { active })}
-        style={style}
+  return (
+    <Element
+      role="presentation"
+      className={classNames(className, { active })}
+      style={style}
+    >
+      <Link
+        activeClass={activeClass}
+        to={to}
+        spy={spy}
+        hashSpy={hashSpy}
+        smooth={smooth}
+        duration={duration}
+        onClick={handleClick}
       >
-        <Link
-          activeClass={activeClass}
-          to={to}
-          spy={spy}
-          hashSpy={hashSpy}
-          smooth={smooth}
-          duration={duration}
-          onClick={this.handleClick}
-        >
-          {children}
-        </Link>
-      </Element>
-    )
-  }
+        {children}
+      </Link>
+    </Element>
+  )
 }
 
 NavScrollItem.propTypes = propTypes

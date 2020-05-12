@@ -182,7 +182,7 @@ export const query = graphql`
           title
           press_items {
             title
-            date
+            date(formatString: "MMMM D, YYYY")
             source
             excerpt
             url

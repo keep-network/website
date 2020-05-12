@@ -155,6 +155,65 @@ collections:
                     }
                   ],
               }
+      - file: "src/pages/press.md"
+        label: "Press"
+        name: "press"
+        fields:
+          - {
+              label: "Template",
+              name: "template",
+              widget: "hidden",
+              default: "press-page",
+            }
+          - {label: "Path", name: "path", widget: "hidden", default: "/press"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Subtitle", name: "subtitle", widget: "string"}
+          - label: "Media Kit Section"
+            name: "media_kit_section"
+            widget: "object"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Subtitle", name: "subtitle", widget: "string"}
+              - label: "Media Kit"
+                name: "media_kit"
+                widget: "object"
+                fields:
+                  - {label: "Label", name: "label", widget: "string"}
+                  - {label: "Contents", name: "contents", widget: "list"}
+                  - {
+                      label: Icon,
+                      name: icon,
+                      widget: file,
+                      media_library: { config: { multiple: false } },
+                      hint: "SVG only. SVG must have width and height attributes set in the file."
+                    }
+                  - label: "Download Button"
+                    name: "download_button"
+                    widget: "object"
+                    fields:
+                      - {label: "Label", name: "label", widget: "string"}
+                      - {
+                        label: File,
+                        name: file,
+                        widget: file,
+                        media_library: { config: { multiple: false } },
+                        hint: "Media Kit Zip file"
+                      }
+          - label: "Press Items Section"
+            name: "press_items_section"
+            widget: "object"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - label: "Press Items"
+                name: "press_items"
+                widget: "list"
+                allow_add: true
+                fields:
+                  - {label: "Title", name: "title", widget: "string"}
+                  - {label: "Date", name: "date", widget: "datetime"}
+                  - {label: "Source", name: "source", widget: "string"}
+                  - {label: "Excerpt", name: "excerpt", widget: "markdown"}
+                  - {label: "URL", name: "url", widget: "string"}
       - file: "src/pages/privacy-policy.md"
         label: "Privacy Policy"
         name: "privacy_policy"

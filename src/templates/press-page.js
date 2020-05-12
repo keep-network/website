@@ -3,7 +3,7 @@ import ClampLines from "react-clamp-lines"
 import PropTypes from "prop-types"
 
 import { App, Image, PageSection } from "../components"
-import { Arrow } from "../components/Icons"
+import { ArrowRight } from "../components/Icons"
 
 const PressItem = ({ title, date, source, aboveTheFold, url }) => {
   const [windowWidth, setWindowWidth] = useState(0)
@@ -30,8 +30,8 @@ const PressItem = ({ title, date, source, aboveTheFold, url }) => {
               buttons={false}
             />
           </div>
-          <div className="arrow">
-            <Arrow height={22} width={59} />
+          <div className="ArrowRight">
+            <ArrowRight color="#000" height={22} width={59} />
           </div>
         </div>
       </div>
@@ -113,7 +113,7 @@ export const PressPageTemplate = ({
       {allPressEntries.length > 10 && pressEntries.length === 10 ? (
         <PageSection id="see-all">
           <button className="see-all-button" onClick={handleShowAll}>
-            See all <Arrow height={22} width={59} />
+            See all <ArrowRight color="#000" height={22} width={59} />
           </button>
         </PageSection>
       ) : (

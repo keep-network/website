@@ -3,7 +3,7 @@ import ClampLines from "react-clamp-lines"
 import PropTypes from "prop-types"
 
 import { App, Image, PageSection } from "../components"
-import { ArrowRight } from "../components/Icons"
+import { ArrowRight, ArrowNorthEast } from "../components/Icons"
 
 const PressItem = ({ title, date, source, aboveTheFold, url }) => {
   const [windowWidth, setWindowWidth] = useState(0)
@@ -30,8 +30,8 @@ const PressItem = ({ title, date, source, aboveTheFold, url }) => {
               buttons={false}
             />
           </div>
-          <div className="ArrowRight">
-            <ArrowRight color="#000" height={22} width={59} />
+          <div className="view-arrow">
+            View <ArrowNorthEast />
           </div>
         </div>
       </div>
@@ -63,11 +63,11 @@ export const PressPageTemplate = ({
   }
 
   return (
-    <div className="press-content">
+    <div className="press-page">
       <PageSection id="title-container">
         <div className="title">
           <h1>{title}</h1>
-          <h3>{subtitle}</h3>
+          <h2>{subtitle}</h2>
         </div>
       </PageSection>
       <PageSection id="media-kit-container">
@@ -77,20 +77,24 @@ export const PressPageTemplate = ({
             <h3>{mediaKitSection.subtitle}</h3>
           </div>
           <div className="media-kit-right">
+            <div className="media-kit-description">
+              <Image imageData={mediaKitSection.media_kit.icon} />
+              <div className="media-kit-text">
+                <div className="label">{mediaKitSection.media_kit.label}</div>
+                <ul className="contents">
+                  {mediaKitSection.media_kit.contents.map((item, i) => (
+                    <li key={`media-kit-content-item-${i}`}>{item}</li>
+                  ))}
+                </ul>
+              </div>
+            </div>
             <a
+              className="btn btn-primary"
               href={`/images/${mediaKitSection.media_kit.download_button.file.relativePath}`}
               target="_blank"
               rel="noopener noreferrer"
             >
-              <div className="media-kit-link">
-                <Image imageData={mediaKitSection.media_kit.icon} />
-                <div className="media-kit-link-text">
-                  {mediaKitSection.media_kit.label}
-                </div>
-                <div className="media-kit-link-button">
-                  {mediaKitSection.media_kit.download_button.label}
-                </div>
-              </div>
+              {mediaKitSection.media_kit.download_button.label}
             </a>
           </div>
         </div>

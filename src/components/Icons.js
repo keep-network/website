@@ -27,6 +27,27 @@ ArrowRight.defaultProps = {
   width: "56",
 }
 
+export const ArrowNorthEast = ({ size = 19, color = "#0A0806" }) => (
+  <svg
+    width={size}
+    height={size}
+    fill="none"
+    viewBox="0 0 19 19"
+    aria-labelledby="arrow-north-east-title"
+  >
+    <title id="arrow-north-east-title">North East Arrow Icon</title>
+    <path
+      fill={color}
+      d="M13.04 13.02l-.058-5.883-8.083 8.082-1.118-1.118 8.082-8.083L5.98 5.96l-.02-1.6 8.7-.02-.02 8.7-1.6-.02z"
+    ></path>
+  </svg>
+)
+
+ArrowNorthEast.propTypes = {
+  color: PropTypes.string,
+  size: PropTypes.number,
+}
+
 export const Axe = ({ height, width }) => (
   <svg
     width={width}

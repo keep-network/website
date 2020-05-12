@@ -52,6 +52,9 @@ const NavScrollItem = ({
   element: Element,
 }) => {
   const location = useLocation()
+  const root = process.env.GATSBY_BRANCH
+    ? `/${process.env.GATSBY_BRANCH}/`
+    : "/"
 
   const handleClick = (e) => {
     if (typeof onClick === "function") {
@@ -71,7 +74,7 @@ const NavScrollItem = ({
       className={classNames(className, { active })}
       style={style}
     >
-      {location.pathname === "/" ? (
+      {location.pathname === root ? (
         <ScrollLink
           activeClass={activeClass}
           to={to}

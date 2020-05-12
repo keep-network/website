@@ -1,0 +1,172 @@
+import React, { useEffect, useState } from "react"
+import ClampLines from "react-clamp-lines"
+import PropTypes from "prop-types"
+
+import { App, PageSection } from "../components"
+import { Arrow, Newspaper } from "../components/Icons"
+
+const PressItem = ({ title, date, source, aboveTheFold, url }) => {
+  const [windowWidth, setWindowWidth] = useState(0)
+
+  useEffect(() => {
+    setWindowWidth(window.innerWidth)
+  }, [])
+
+  return (
+    <a href={url} target="_blank" rel="noopener noreferrer">
+      <div className="press-item">
+        <div className="top">
+          <div className="article-title">{title}</div>
+          <div className="date date-large">{date}</div>
+        </div>
+        <div className="source source-large">{source}</div>
+        <div className="date date-mobile">{date}</div>
+        <div className="bottom">
+          <div className="above-the-fold">
+            <ClampLines
+              text={aboveTheFold}
+              lines={windowWidth < 767 ? 4 : 2}
+              ellipsis="..."
+              buttons={false}
+            />
+          </div>
+          <div className="arrow">
+            <Arrow height={22} width={59} />
+          </div>
+        </div>
+      </div>
+    </a>
+  )
+}
+
+PressItem.propTypes = {
+  title: PropTypes.string,
+  date: PropTypes.string,
+  source: PropTypes.string,
+  aboveTheFold: PropTypes.string,
+  url: PropTypes.string,
+}
+
+export const PressPageTemplate = ({ press_items: allPressEntries }) => {
+  const [pressEntries, setPressEntries] = useState(pressItems.slice(0, 10))
+
+  const handleShowAll = () => {
+    setPressEntries(allPressEntries)
+  }
+
+  return (
+    <div className="press-content">
+      <PageSection id="title-container">
+        <div className="title">
+          <h1>Keep in the Press</h1>
+          <h3>For press inquiries, please contact us at social@keep.network</h3>
+        </div>
+      </PageSection>
+      <PageSection id="media-kit-container">
+        <div className="media-kit">
+          <div className="media-kit-left">
+            <h2>Do you want to write about us?</h2>
+            <h3>Find everything you might need in our media kit.</h3>
+          </div>
+          <div className="media-kit-right">
+            <a
+              href="media/KeepMediaKit.zip"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div className="media-kit-link">
+                <Newspaper />
+                <div className="media-kit-link-text">Media Kit</div>
+                <div className="media-kit-link-button">download</div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </PageSection>
+      <PageSection id="press-items-container">
+        <div className="press-items">
+          <h2>In the News</h2>
+          {pressEntries.map((entry) => (
+            <PressItem
+              title={entry.title}
+              date={entry.date}
+              source={entry.source}
+              aboveTheFold={entry.aboveTheFold}
+              url={entry.url}
+              key={entry.url}
+            />
+          ))}
+        </div>
+      </PageSection>
+      {allPressEntries.length > 10 && pressEntries.length === 10 ? (
+        <PageSection id="see-all">
+          <button className="see-all-button" onClick={handleShowAll}>
+            See all <Arrow height={22} width={59} />
+          </button>
+        </PageSection>
+      ) : (
+        ""
+      )}
+    </div>
+  )
+}
+
+PressPageTemplate.propTypes = {
+  press_items: PropTypes.array,
+}
+
+const PressPage = ({ data }) => {
+  const { markdownRemark: post } = data
+  return (
+    <App>
+      <PressPageTemplate {...post.frontmatter} />
+    </App>
+  )
+}
+
+PressPage.propTypes = {
+  data: PropTypes.shape({
+    markdownRemark: PropTypes.object,
+  }),
+}
+
+export default PressPage
+
+export const query = graphql`
+  query PressPage($id: String!) {
+    markdownRemark(id: { eq: $id }) {
+      id
+      frontmatter {
+        title
+        subtitle
+        media_kit_section {
+          title
+          subtitle
+          media_kit {
+            icon {
+              relativePath
+            }
+            label
+            contents
+            download_button {
+              label
+              file {
+                relativePath
+              }
+            }
+          }
+        }
+        press_items_section {
+          title
+          press_items {
+            title
+            date
+            source
+            excerpt
+            url
+          }
+        }
+      }
+    }
+  }
+`

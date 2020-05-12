@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react"
 import ClampLines from "react-clamp-lines"
 import PropTypes from "prop-types"
 
-import { App, PageSection } from "../components"
-import { Arrow, Newspaper } from "../components/Icons"
+import { App, Image, PageSection } from "../components"
+import { Arrow } from "../components/Icons"
 
 const PressItem = ({ title, date, source, aboveTheFold, url }) => {
   const [windowWidth, setWindowWidth] = useState(0)
@@ -47,8 +47,16 @@ PressItem.propTypes = {
   url: PropTypes.string,
 }
 
-export const PressPageTemplate = ({ press_items: allPressEntries }) => {
-  const [pressEntries, setPressEntries] = useState(pressItems.slice(0, 10))
+export const PressPageTemplate = ({
+  title,
+  subtitle,
+  media_kit_section: mediaKitSection,
+  press_items_section: pressItemsSection,
+}) => {
+  const { press_items: allPressEntries } = pressItemsSection
+  const [pressEntries, setPressEntries] = useState(
+    (allPressEntries || []).slice(0, 10)
+  )
 
   const handleShowAll = () => {
     setPressEntries(allPressEntries)
@@ -58,26 +66,30 @@ export const PressPageTemplate = ({ press_items: allPressEntries }) => {
     <div className="press-content">
       <PageSection id="title-container">
         <div className="title">
-          <h1>Keep in the Press</h1>
-          <h3>For press inquiries, please contact us at social@keep.network</h3>
+          <h1>{title}</h1>
+          <h3>{subtitle}</h3>
         </div>
       </PageSection>
       <PageSection id="media-kit-container">
         <div className="media-kit">
           <div className="media-kit-left">
-            <h2>Do you want to write about us?</h2>
-            <h3>Find everything you might need in our media kit.</h3>
+            <h2>{mediaKitSection.title}</h2>
+            <h3>{mediaKitSection.subtitle}</h3>
           </div>
           <div className="media-kit-right">
             <a
-              href="media/KeepMediaKit.zip"
+              href={`/images/${mediaKitSection.media_kit.download_button.file.relativePath}`}
               target="_blank"
               rel="noopener noreferrer"
             >
               <div className="media-kit-link">
-                <Newspaper />
-                <div className="media-kit-link-text">Media Kit</div>
-                <div className="media-kit-link-button">download</div>
+                <Image imageData={mediaKitSection.media_kit.icon} />
+                <div className="media-kit-link-text">
+                  {mediaKitSection.media_kit.label}
+                </div>
+                <div className="media-kit-link-button">
+                  {mediaKitSection.media_kit.download_button.label}
+                </div>
               </div>
             </a>
           </div>
@@ -85,13 +97,13 @@ export const PressPageTemplate = ({ press_items: allPressEntries }) => {
       </PageSection>
       <PageSection id="press-items-container">
         <div className="press-items">
-          <h2>In the News</h2>
+          <h2>{pressItemsSection.title}</h2>
           {pressEntries.map((entry) => (
             <PressItem
               title={entry.title}
               date={entry.date}
               source={entry.source}
-              aboveTheFold={entry.aboveTheFold}
+              aboveTheFold={entry.excerpt}
               url={entry.url}
               key={entry.url}
             />
@@ -112,7 +124,10 @@ export const PressPageTemplate = ({ press_items: allPressEntries }) => {
 }
 
 PressPageTemplate.propTypes = {
-  press_items: PropTypes.array,
+  title: PropTypes.string,
+  subtitle: PropTypes.string,
+  media_kit_section: PropTypes.object,
+  press_items_section: PropTypes.object,
 }
 
 const PressPage = ({ data }) => {
@@ -144,7 +159,10 @@ export const query = graphql`
           subtitle
           media_kit {
             icon {
-              relativePath
+              image {
+                relativePath
+              }
+              alt
             }
             label
             contents

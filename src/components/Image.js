@@ -19,8 +19,14 @@ const Image = ({ imageData, className = "" }) => {
     return <Img className={className} fluid={childImageSharp.fluid} alt={alt} />
   }
 
-  if (!!image && typeof image === "string") {
-    return <img className={className} src={image} alt={alt} />
+  if (!!image && !!image.relativePath) {
+    return (
+      <img
+        className={className}
+        src={`/images/${image.relativePath}`}
+        alt={alt}
+      />
+    )
   }
 
   return null

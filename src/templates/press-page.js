@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react"
 import ClampLines from "react-clamp-lines"
 import PropTypes from "prop-types"
+import { withPrefix } from "gatsby"
 
 import { App, Image, PageSection } from "../components"
 import { ArrowRight, ArrowNorthEast } from "../components/Icons"
@@ -90,7 +91,9 @@ export const PressPageTemplate = ({
             </div>
             <a
               className="btn btn-primary"
-              href={`/images/${mediaKitSection.media_kit.download_button.file.relativePath}`}
+              href={withPrefix(
+                `/images/${mediaKitSection.media_kit.download_button.file.relativePath}`
+              )}
               target="_blank"
               rel="noopener noreferrer"
             >

@@ -1,5 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
+import { withPrefix } from "gatsby"
 import Img from "gatsby-image"
 
 const Image = ({ imageData, className = "" }) => {
@@ -23,7 +24,7 @@ const Image = ({ imageData, className = "" }) => {
     return (
       <img
         className={className}
-        src={`/images/${image.relativePath}`}
+        src={withPrefix(`/images/${image.relativePath}`)}
         alt={alt}
       />
     )

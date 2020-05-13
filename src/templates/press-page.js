@@ -120,7 +120,7 @@ export const PressPageTemplate = ({
       {allPressEntries.length > 10 && pressEntries.length === 10 ? (
         <PageSection id="see-all">
           <button className="see-all-button" onClick={handleShowAll}>
-            See all <ArrowRight color="#000" height={22} width={59} />
+            See all <ArrowRight color="#000" height="22" width="59" />
           </button>
         </PageSection>
       ) : (

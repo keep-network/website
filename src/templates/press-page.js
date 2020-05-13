@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react"
 import ClampLines from "react-clamp-lines"
 import PropTypes from "prop-types"
-import { withPrefix } from "gatsby"
+import { withPrefix, graphql } from "gatsby"
 
 import { App, Image, PageSection } from "../components"
 import { ArrowRight, ArrowNorthEast } from "../components/Icons"
@@ -54,10 +54,23 @@ export const PressPageTemplate = ({
   media_kit_section: mediaKitSection,
   press_items_section: pressItemsSection,
 }) => {
-  const { press_items: allPressEntries } = pressItemsSection
-  const [pressEntries, setPressEntries] = useState(
-    (allPressEntries || []).slice(0, 10)
-  )
+  const { press_items: pressItems } = pressItemsSection
+  const [allPressEntries, setAllPressEntries] = useState([])
+  const [pressEntries, setPressEntries] = useState([])
+
+  useEffect(() => {
+    const dateOptions = { year: "numeric", month: "long", day: "numeric" }
+    const sortedAndFormatted = pressItems
+      .slice()
+      // Sort by latest item date
+      .sort((a, b) => new Date(b.date).valueOf() - new Date(a.date).valueOf())
+      .map((item) => ({
+        ...item,
+        date: new Date(item.date).toLocaleDateString("en-US", dateOptions),
+      }))
+    setAllPressEntries(sortedAndFormatted)
+    setPressEntries(sortedAndFormatted.slice(0, 10))
+  }, [pressItems])
 
   const handleShowAll = () => {
     setPressEntries(allPressEntries)
@@ -185,7 +198,7 @@ export const query = graphql`
           title
           press_items {
             title
-            date(formatString: "MMMM D, YYYY")
+            date
             source
             excerpt
             url

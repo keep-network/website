@@ -1,5 +1,4 @@
 import React from "react"
-import { Alert } from "reactstrap"
 import PropTypes from "prop-types"
 
 import Footer from "./Footer"
@@ -14,19 +13,6 @@ const App = ({ children }) => (
     <Header />
     {children}
     <Footer />
-    <Alert color="info">
-      <p>
-        Stake ETH, Earn KEEP: Join us for a live stakedrop event on June 8,
-        2020!
-        <a
-          href="https://www.crowdcast.io/e/keep-stakedrop---live"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          RSVP Here
-        </a>
-      </p>
-    </Alert>
   </div>
 )
 

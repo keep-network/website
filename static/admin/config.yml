@@ -262,3 +262,14 @@ collections:
           - {label: "Date Heading", name: "date", widget: "string"}
           - {label: "Introduction", name: "intro", widget: "markdown", required: false}
           - {label: "Body", name: "body", widget: "markdown"}
+
+  - name: "header"
+    label: "Header"
+    files:
+      - file: "src/header/announcement.md"
+        label: "Announcement Banner"
+        name: "announcement"
+        fields:
+          - {label: "Template Key", name: "template", widget: "hidden", default: "announcement"}
+          - {label: "Title", name: "title", widget: "string", required: false}
+          - {label: "Body", name: "body", widget: "markdown", required: false, minimal: true}

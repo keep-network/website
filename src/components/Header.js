@@ -1,6 +1,5 @@
 import React, { useState } from "react"
 import {
-  Alert,
   Container,
   Collapse,
   Nav,
@@ -11,6 +10,7 @@ import {
 } from "reactstrap"
 import { Link } from "gatsby"
 
+import Announcement from "./Announcement"
 import NavScrollItem from "./NavScrollItem"
 import * as Icons from "./Icons"
 import { routes, sections } from "../constants"
@@ -21,19 +21,7 @@ const Header = () => {
 
   return (
     <header>
-      <Alert color="info">
-        <p>
-          Stake ETH, Earn KEEP: Join us for a live stakedrop event on June 8,
-          2020!
-          <a
-            href="https://www.crowdcast.io/e/keep-stakedrop---live"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            RSVP Here
-          </a>
-        </p>
-      </Alert>
+      <Announcement />
       <Navbar>
         <Container fluid="md">
           <NavScrollItem

@@ -13,7 +13,6 @@ import PropTypes from "prop-types"
 import Announcement from "./Announcement"
 import NavScrollItem from "./NavScrollItem"
 import * as Icons from "./Icons"
-import { routes, sections } from "../constants"
 
 const NavItem = ({ is_external_link: isExternal, label, url }) => {
   if (isExternal) {
@@ -64,8 +63,8 @@ export const HeaderTemplate = ({ navItems = [] }) => {
             element="div"
             className="brand"
             activeClass="active"
-            href={routes.MAIN}
-            to={sections.HOME}
+            href="/"
+            to="home"
           >
             <Icons.Keep height="61px" width="235px" />
           </NavScrollItem>

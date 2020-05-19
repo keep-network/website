@@ -300,3 +300,64 @@ collections:
                 },
               ],
           }
+  - name: "footer"
+    label: "Footer"
+    files:
+      - file: "src/footer/index.md"
+        label: "Footer Nav"
+        name: "footer_nav"
+        fields:
+          - {label: "Template Key", name: "template", widget: "hidden", default: "footer-nav"}
+          - label: "Email Link"
+            name: "email_link"
+            widget: "object"
+            fields:
+              - {label: "Label", name: "label", widget: "string"}
+              - {label: "Email Address", name: "email", widget: "string"}
+          - label: "Nav Dropdowns"
+            name: "nav_dropdowns"
+            widget: "list"
+            allow_add: true
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {
+                label: "Dropdown Items",
+                name: "dropdown_items",
+                widget: "list",
+                allow_add: true,
+                fields:
+                  [
+                    { label: "Label", name: "label", widget: "string" },
+                    {
+                      label: "External Link",
+                      name: "is_external_link",
+                      widget: "boolean",
+                      default: false
+                    },
+                    {
+                      label: "URL",
+                      name: "url",
+                      widget: "string",
+                      hint: "Use a relative URL (e.g. /press or #team) if the link is an internal link.",
+                    },
+                  ]
+                }
+          - {label: "Copyright Text", name: "copyright_text", widget: "markdown", minimal: true}
+          - label: "Legal Links"
+            name: "legal_links"
+            widget: "list"
+            allow_add: true
+            fields:
+              - {label: "Label", name: "label", widget: "string"}
+              - {
+                  label: "External Link",
+                  name: "is_external_link",
+                  widget: "boolean",
+                  default: false,
+                }
+              - {
+                  label: "URL",
+                  name: "url",
+                  widget: "string",
+                  hint: "Use a relative URL (e.g. /press or #team) if the link is an internal link.",
+                }

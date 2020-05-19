@@ -27,9 +27,10 @@ const NavItem = ({ is_external_link: isExternal, label, url }) => {
   }
 
   // Test if the url is a hash link on the home page
-  if (/^#/.test(url)) {
+  const regex = /^\/?#/
+  if (regex.test(url)) {
     return (
-      <NavScrollItem href="/" to={url.slice(1)} hashSpy={true}>
+      <NavScrollItem href="/" to={url.replace(regex, "")} hashSpy={true}>
         {label}
       </NavScrollItem>
     )

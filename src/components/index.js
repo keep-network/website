@@ -6,6 +6,7 @@ import Header from "./Header"
 import * as Icons from "./Icons"
 import Image from "./Image"
 import ImageLink from "./ImageLink"
+import Link from "./Link"
 import NavScrollItem from "./NavScrollItem"
 import PageSection from "./PageSection"
 import Profile from "./Profile"
@@ -20,6 +21,7 @@ export {
   Icons,
   Image,
   ImageLink,
+  Link,
   NavScrollItem,
   PageSection,
   Profile,

@@ -1,33 +1,32 @@
 footer {
     position: relative;
-    padding: 120px 0 60px;
+    padding: 30px 0 240px;
     background-color: $black;
     color: $white;
 
     .footer-columns {
         display: flex;
-        align-items: flex-start;
+        flex-direction: column;
 
         > * {
             display: inline-block;
         }
 
-        ul {
+        > ul,
+        .collapsible-list {
             padding: 0 30px 30px;
+        }
+
+        .footer-column-1 {
+            flex: 0 0 100%;
         }
 
         li {
             list-style: none;
 
-            &:first-of-type {
-                text-transform: uppercase;
-                color: #fff;
-                margin-bottom: 1.15rem;
-            }
-
             a {
-                color: #818181;
-                font-size: 20px;
+                color: $grey-50;
+                font-size: 16px;
 
                 &.email-btn {
                     background-color: $black;
@@ -41,9 +40,39 @@ footer {
         }
     }
 
+    .collapsible-list {
+        .collapsible-list-label .btn {
+            width: 100%;
+            background-color: transparent;
+            text-transform: uppercase;
+            margin-bottom: 1.15rem;
+            padding: 0;
+            line-height: 1.45;
+            letter-spacing: 0.08em;
+
+            span {
+                color: #fff;
+                font-family: $body-font-family;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 15px;
+            }
+
+            svg {
+                path {
+                    fill: $grey-50;
+                }
+            }
+        }
+
+        ul {
+            padding: 0;
+        }
+    }
+
     .footer-bottom {
         text-align: center;
-        color: #818181;
+        color: $grey-50;
         font-size: 14px;
         margin-top: 40px;
 
@@ -59,7 +88,7 @@ footer {
                 margin: 0 12px;
 
                 a {
-                    color: #818181;
+                    color: $grey-50;
                     text-decoration: underline;
                 }
             }
@@ -76,64 +105,64 @@ footer {
         // override gatsby-image inline style
         position: absolute !important;
         width: 205px;
+        left: 56%;
+        bottom: -102px;
+        transform: rotate(90deg) translateY(30%);
+    }
+
+    @media (min-width: 341px) {
+        .footer-columns {
+            li {
+                a {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+
+    @media (min-width: #{$bp-medium}) {
+        padding: 120px 0 240px;
+
+        .footer-columns {
+            flex-direction: row;
+
+            .footer-column-1 {
+                flex: 0 0 auto;
+            }
+        }
+
+        .collapsible-list {
+            .collapsible-list-label .btn {
+                cursor: default;
+                width: auto;
+                svg {
+                    display: none;
+                }
+            }
+            .collapse {
+                display: block;
+            }
+        }
+
+        .half-circle {
+            left: 52%;
+        }
     }
 
     @media (min-width: #{$bp-large}) {
+        padding: 120px 0 60px;
         .footer-columns {
-            ul {
+            > ul,
+            .collapsible-list {
                 padding: 0 50px 30px;
             }
         }
 
         .half-circle {
+            left: auto;
             right: 0;
             bottom: 50%;
             transform: translateY(50%);
-        }
-    }
-
-    @media (max-width: #{($bp-large - 1)}) {
-        padding: 120px 0 240px;
-
-        .half-circle {
-            bottom: -102px;
-            left: 52%;
-            transform: rotate(90deg) translateY(30%);
-        }
-    }
-
-    @media (max-width: #{($bp-medium - 1)}) {
-        padding: 30px 0 240px;
-        .footer-columns {
-            flex-wrap: wrap;
-
-            .footer-column-1 {
-                flex: 0 0 100%;
-            }
-
-            ul {
-                padding: 0 30px 30px;
-            }
-
-            li {
-                a {
-                    font-size: 18px;
-                }
-            }
-        }
-
-        .half-circle {
-            left: 56%;
-        }
-    }
-
-    @media (max-width: 340px) {
-        .footer-columns {
-            li {
-                a {
-                    font-size: 16px;
-                }
-            }
         }
     }
 }

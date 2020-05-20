@@ -1,6 +1,33 @@
 import React from "react"
 import PropTypes from "prop-types"
 
+export const ArrowDown = ({
+  color = "#0A0806",
+  height = "14",
+  width = "12",
+}) => (
+  <svg
+    width={width}
+    height={height}
+    fill="none"
+    viewBox="0 0 12 14"
+    aria-labelledby="arrow-down-title"
+    role="img"
+  >
+    <title id="arrow-down-title">Down Arrow Icon</title>
+    <path
+      fill={color}
+      d="M1.323 7.013l4.03 3.951V0h1.518v10.964l4.03-3.95L12 8.085 6.112 14 .224 8.086l1.1-1.073z"
+    ></path>
+  </svg>
+)
+
+ArrowDown.propTypes = {
+  color: PropTypes.string,
+  height: PropTypes.string,
+  width: PropTypes.string,
+}
+
 export const ArrowRight = ({ color, height, width }) => (
   <svg
     width={width}

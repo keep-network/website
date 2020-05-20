@@ -8,38 +8,40 @@ footer {
         display: flex;
         flex-direction: column;
 
-        > * {
-            display: inline-block;
-        }
-
-        > ul {
-            padding: 0 30px 30px;
-        }
-
         .footer-column-1 {
+            padding: 0 15px;
+            margin: 0;
             flex: 0 0 100%;
             order: 99;
+            display: flex;
+            flex-direction: column-reverse;
         }
 
         li {
             list-style: none;
             padding: 5px 0;
 
-            a {
+            a:not(.btn) {
                 color: $grey-50;
                 font-size: 21px;
                 font-weight: normal;
+            }
 
-                &.email-btn {
-                    background-color: $black;
-                    color: #fff;
-                    font-size: 15px;
-                    font-weight: normal;
-                    padding: 9px 24px;
-                    margin-top: 1.5em;
-                }
+            .email-btn {
+                @extend .btn-primary-on-dark;
+                width: 100%;
+                margin: 60px 0;
             }
         }
+    }
+
+    .keep-logo {
+        text-indent: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        background-image: url(../images/Keep-wordmark-white.svg);
+        background-repeat: no-repeat;
+        background-position: center;
     }
 
     .collapsible-list {
@@ -82,7 +84,7 @@ footer {
         text-align: center;
         color: $grey-50;
         font-size: 14px;
-        margin-top: 40px;
+        margin-top: 1rem;
 
         p:first-of-type {
             margin-bottom: 0;
@@ -127,15 +129,35 @@ footer {
             .footer-column-1 {
                 flex: 0 0 auto;
                 order: 0;
+                flex-direction: column;
+                padding: 0 30px 30px;
             }
 
             li {
                 padding: 0;
 
-                a {
+                a:not(.btn) {
                     line-height: 1.45;
                 }
+
+                .email-btn {
+                    background-color: $black;
+                    color: #fff;
+                    border-color: #fff;
+                    font-size: 15px;
+                    font-weight: normal;
+                    padding: 9px 24px;
+                    margin: 1.5em 0 0;
+                }
             }
+        }
+
+        .keep-logo {
+            height: 65px;
+            background-image: url(../images/Keep-logo-circle.svg);
+            background-repeat: no-repeat;
+            background-position: top left;
+            background-size: contain;
         }
 
         .collapsible-list {
@@ -161,6 +183,10 @@ footer {
             }
         }
 
+        .footer-bottom {
+            margin-top: 40px;
+        }
+
         .half-circle {
             left: 52%;
         }
@@ -169,7 +195,7 @@ footer {
     @media (min-width: #{$bp-large}) {
         padding: 120px 0 60px;
         .footer-columns {
-            > ul,
+            .footer-column-1,
             .collapsible-list {
                 padding: 0 50px 30px;
             }

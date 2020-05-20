@@ -4,7 +4,6 @@ import { graphql, StaticQuery } from "gatsby"
 import PropTypes from "prop-types"
 
 import CollapsibleList from "./CollapsibleList"
-import { KeepCircle } from "./Icons"
 import Image from "./Image"
 import Link from "./Link"
 
@@ -19,9 +18,7 @@ export const FooterTemplate = ({
     <Container fluid="md">
       <div className="footer-columns">
         <ul className="footer-column-1">
-          <li>
-            <KeepCircle />
-          </li>
+          <li className="keep-logo">Keep</li>
           <li>
             <Button className="email-btn" href={`mailto:${emailLink.email}`}>
               {emailLink.label}

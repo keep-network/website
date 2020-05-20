@@ -111,6 +111,12 @@ a {
     color: $link-color;
 }
 
+.btn-primary-on-dark {
+    background-color: $link-color;
+    border-color: $link-color;
+    color: $black;
+}
+
 .btn-default,
 .btn-primary,
 .btn-primary[disabled],

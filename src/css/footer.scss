@@ -1,6 +1,6 @@
 footer {
     position: relative;
-    padding: 0 0 240px;
+    padding: 0 0 130px;
     background-color: $black;
     color: $white;
 
@@ -114,10 +114,16 @@ footer {
     .half-circle {
         // override gatsby-image inline style
         position: absolute !important;
-        width: 205px;
-        left: 56%;
-        bottom: -102px;
-        transform: rotate(90deg) translateY(30%);
+        width: 100px;
+        height: 200px;
+        transform-origin: bottom left;
+        transform: rotate(-270deg) translateY(50%);
+        left: 50%;
+        bottom: 100px;
+
+        [aria-hidden] {
+            padding-bottom: 0 !important;
+        }
     }
 
     @media (min-width: #{$bp-medium}) {
@@ -188,7 +194,9 @@ footer {
         }
 
         .half-circle {
-            left: 52%;
+            width: 200px;
+            height: 400px;
+            bottom: 200px;
         }
     }
 

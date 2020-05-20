@@ -12,9 +12,6 @@ nav_dropdowns:
         url: /#team
       - label: Advisors
         url: /#advisors
-      - label: Blog
-        is_external_link: true
-        url: https://blog.keep.network/
   - title: Follow
     dropdown_items:
       - label: Press
@@ -28,6 +25,9 @@ nav_dropdowns:
       - label: Reddit
         is_external_link: true
         url: https://www.reddit.com/r/KeepNetwork/
+      - label: Blog
+        is_external_link: true
+        url: https://blog.keep.network/
   - title: Community
     dropdown_items:
       - label: Discord

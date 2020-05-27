@@ -1,34 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-export const Arrow = ({ width = 59, height = 22 }) => (
-  <svg
-    width={width}
-    height={height}
-    viewBox="0 0 59 22"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-    aria-labelledby="arrow-title"
-    role="img"
-  >
-    <title id="arrow-title">Arrow Icon</title>
-    <line
-      x1="-1.74846e-07"
-      y1="11"
-      x2="54"
-      y2="11"
-      stroke="#0A0806"
-      strokeWidth="4"
-    />
-    <path d="M47 2L56 11L47 20" stroke="#0A0806" strokeWidth="4" />
-  </svg>
-)
-
-Arrow.propTypes = {
-  height: PropTypes.number,
-  width: PropTypes.number,
-}
-
 export const ArrowRight = ({ color, height, width }) => (
   <svg
     width={width}
@@ -53,6 +25,27 @@ ArrowRight.defaultProps = {
   color: "#48DBB4",
   height: "18",
   width: "56",
+}
+
+export const ArrowNorthEast = ({ size = 19, color = "#0A0806" }) => (
+  <svg
+    width={size}
+    height={size}
+    fill="none"
+    viewBox="0 0 19 19"
+    aria-labelledby="arrow-north-east-title"
+  >
+    <title id="arrow-north-east-title">North East Arrow Icon</title>
+    <path
+      fill={color}
+      d="M13.04 13.02l-.058-5.883-8.083 8.082-1.118-1.118 8.082-8.083L5.98 5.96l-.02-1.6 8.7-.02-.02 8.7-1.6-.02z"
+    ></path>
+  </svg>
+)
+
+ArrowNorthEast.propTypes = {
+  color: PropTypes.string,
+  size: PropTypes.number,
 }
 
 export const Axe = ({ height, width }) => (
@@ -598,63 +591,6 @@ LinkedIn.defaultProps = {
   color: "#0A0806",
   height: "26px",
   width: "27px",
-}
-
-export const Newspaper = ({ width = 44, height = 40 }) => (
-  <svg
-    width={width}
-    height={height}
-    viewBox="0 0 44 40"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-    aria-labelledby="newspaper-title"
-    role="img"
-  >
-    <title id="newspaper-title">Newspaper Icon</title>
-    <path
-      d="M2 34.2038C2 36.2999 4.12733 37.9982 6.75673 38.0085L37.0854 38.0168C39.7252 38.0168 41.8654 36.3123 41.8654 34.21L41.9958 3.00418C41.9981 2.45027 41.5497 2 40.9958 2H12.3608C11.8085 2 11.3608 2.44772 11.3608 3V20.9562L3.00066 20.9507C2.44812 20.9503 2 21.3981 2 21.9507V34.2038Z"
-      stroke="white"
-      strokeWidth="2.5"
-      strokeMiterlimit="10"
-    />
-    <path
-      d="M6.59863 38.0027C9.22803 37.9924 11.3554 36.2899 11.3554 34.1897V17.5859"
-      stroke="white"
-      strokeWidth="2.5"
-      strokeMiterlimit="10"
-    />
-    <path
-      d="M35.8712 8H17.415C17.277 8 17.165 8.11193 17.165 8.25V14.3847C17.165 14.5227 17.277 14.6347 17.415 14.6347H35.8712C36.0093 14.6347 36.1212 14.5227 36.1212 14.3847V8.25C36.1212 8.11193 36.0093 8 35.8712 8Z"
-      stroke="black"
-      strokeWidth="2.5"
-      strokeMiterlimit="10"
-    />
-    <line
-      x1="17.467"
-      y1="21.6021"
-      x2="35.8189"
-      y2="21.6021"
-      stroke="black"
-      strokeWidth="2.5"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    />
-    <line
-      x1="17.467"
-      y1="28.2363"
-      x2="35.8189"
-      y2="28.2363"
-      stroke="black"
-      strokeWidth="2.5"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    />
-  </svg>
-)
-
-Newspaper.propTypes = {
-  height: PropTypes.number,
-  width: PropTypes.number,
 }
 
 export const Reddit = ({ color, height, width }) => (

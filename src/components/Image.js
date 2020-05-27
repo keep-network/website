@@ -1,5 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
+import { withPrefix } from "gatsby"
 import Img from "gatsby-image"
 
 const Image = ({ imageData, className = "" }) => {
@@ -19,8 +20,14 @@ const Image = ({ imageData, className = "" }) => {
     return <Img className={className} fluid={childImageSharp.fluid} alt={alt} />
   }
 
-  if (!!image && typeof image === "string") {
-    return <img className={className} src={image} alt={alt} />
+  if (!!image && !!image.relativePath) {
+    return (
+      <img
+        className={className}
+        src={withPrefix(`/images/${image.relativePath}`)}
+        alt={alt}
+      />
+    )
   }
 
   return null

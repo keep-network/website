@@ -7,7 +7,6 @@ import Image from "./Image"
 import ImageLink from "./ImageLink"
 import NavScrollItem from "./NavScrollItem"
 import PageSection from "./PageSection"
-import PressContent from "./PressContent"
 import Profile from "./Profile"
 import SubmitButton from "./SubmitButton"
 
@@ -21,7 +20,6 @@ export {
   ImageLink,
   NavScrollItem,
   PageSection,
-  PressContent,
   Profile,
   SubmitButton,
 }

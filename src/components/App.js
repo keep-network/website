@@ -3,7 +3,7 @@ import { Alert } from "reactstrap"
 import PropTypes from "prop-types"
 
 import Footer from "./Footer"
-import NavContent from "./NavContent"
+import Header from "./Header"
 import SEO from "./SEO.js"
 
 import "../css/app.scss"
@@ -11,7 +11,7 @@ import "../css/app.scss"
 const App = ({ children }) => (
   <div className="app has-alert">
     <SEO />
-    <NavContent />
+    <Header />
     {children}
     <Footer />
     <Alert color="info">

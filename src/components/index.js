@@ -1,10 +1,10 @@
 import App from "./App"
 import EmailForm from "./EmailForm"
 import Footer from "./Footer"
+import Header from "./Header"
 import * as Icons from "./Icons"
 import Image from "./Image"
 import ImageLink from "./ImageLink"
-import NavContent from "./NavContent"
 import NavScrollItem from "./NavScrollItem"
 import PageSection from "./PageSection"
 import PressContent from "./PressContent"
@@ -15,10 +15,10 @@ export {
   App,
   EmailForm,
   Footer,
+  Header,
   Icons,
   Image,
   ImageLink,
-  NavContent,
   NavScrollItem,
   PageSection,
   PressContent,

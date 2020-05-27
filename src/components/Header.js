@@ -8,12 +8,13 @@ import {
   NavbarToggler,
   NavLink,
 } from "reactstrap"
+import { Link } from "gatsby"
 
 import NavScrollItem from "./NavScrollItem"
 import * as Icons from "./Icons"
-import { routes, sections, WHITEPAPER_URL } from "../constants"
+import { routes, sections } from "../constants"
 
-const NavContent = () => {
+const Header = () => {
   const [collapsed, setCollapsed] = useState(true)
   const toggleNavbar = () => setCollapsed(!collapsed)
 
@@ -32,15 +33,6 @@ const NavContent = () => {
         <NavbarToggler onClick={toggleNavbar} />
         <Collapse isOpen={!collapsed} navbar>
           <Nav>
-            <NavItem>
-              <NavLink
-                href={WHITEPAPER_URL}
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                Whitepaper
-              </NavLink>
-            </NavItem>
             <NavScrollItem href={routes.MAIN} to={sections.TEAM} hashSpy={true}>
               Team
             </NavScrollItem>
@@ -52,7 +44,9 @@ const NavContent = () => {
               Advisors
             </NavScrollItem>
             <NavItem>
-              <NavLink href={routes.PRESS}>Press</NavLink>
+              <Link to={routes.PRESS} activeClassName="active">
+                Press
+              </Link>
             </NavItem>
             <NavItem>
               <NavLink
@@ -70,4 +64,4 @@ const NavContent = () => {
   )
 }
 
-export default NavContent
+export default Header

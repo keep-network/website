@@ -155,3 +155,43 @@ collections:
                     }
                   ],
               }
+      - file: "src/pages/privacy-policy.md"
+        label: "Privacy Policy"
+        name: "privacy_policy"
+        fields:
+          - {label: "Template Key", name: "template", widget: "hidden", default: "legal-page"}
+          - {label: "Path", name: "path", widget: "hidden", default: "/privacy-policy"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Date Heading", name: "date", widget: "string"}
+          - {label: "Introduction", name: "intro", widget: "markdown", required: false}
+          - {label: "Body", name: "body", widget: "markdown"}
+      - file: "src/pages/california-privacy-notice.md"
+        label: "California Privacy Notice"
+        name: "california_privacy_notice"
+        fields:
+          - {label: "Template Key", name: "template", widget: "hidden", default: "legal-page"}
+          - {label: "Path", name: "path", widget: "hidden", default: "/california-privacy-notice"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Date Heading", name: "date", widget: "string"}
+          - {label: "Introduction", name: "intro", widget: "markdown", required: false}
+          - {label: "Body", name: "body", widget: "markdown"}
+      - file: "src/pages/terms-of-use.md"
+        label: "Terms of Use"
+        name: "terms_of_use"
+        fields:
+          - {label: "Template Key", name: "template", widget: "hidden", default: "legal-page"}
+          - {label: "Path", name: "path", widget: "hidden", default: "/terms-of-use"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Date Heading", name: "date", widget: "string"}
+          - {label: "Introduction", name: "intro", widget: "markdown", required: false}
+          - {label: "Body", name: "body", widget: "markdown"}
+      - file: "src/pages/playing-for-keeps-terms.md"
+        label: "Playing for Keeps Terms"
+        name: "playing_for_keeps_terms"
+        fields:
+          - {label: "Template Key", name: "template", widget: "hidden", default: "legal-page"}
+          - {label: "Path", name: "path", widget: "hidden", default: "/terms-of-use"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Date Heading", name: "date", widget: "string"}
+          - {label: "Introduction", name: "intro", widget: "markdown", required: false}
+          - {label: "Body", name: "body", widget: "markdown"}

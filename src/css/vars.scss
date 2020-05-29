@@ -11,6 +11,8 @@ $black: #0A0806;
 $violet: #7850CD;
 $violet-light: #B2A3DB;
 $brass: #AC6E16;
+$grey-50: #818181;
+$grey-60: #6d6d6d;
 
 $body-text-color: $black;
 $accent-text-color: $brass;
@@ -18,7 +20,7 @@ $link-color: $aqua-marine;
 $link-active-color: $gunmetal;
 $syntax-highlight-color: $violet;
 $grey-on-light-color: $gunmetal;
-$border-color: rgba($body-text-color, 0.9);
+$border-color: rgba($body-text-color, 0.25);
 $error-color: $violet;
 $error-color-light: $violet-light;
 $background-light-color: $pale-grey;

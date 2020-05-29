@@ -1,0 +1,18 @@
+.collapsible-list {
+    .collapsible-list-label {
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border: 0;
+        }
+    }
+
+    &.open {
+        .collapsible-list-label {
+            svg {
+                transform: rotate(180deg);
+            }
+        }
+    }
+}

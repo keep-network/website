@@ -1,121 +1,59 @@
 import React from "react"
 import { Container, Button } from "reactstrap"
-import { graphql, StaticQuery, Link } from "gatsby"
+import { graphql, StaticQuery } from "gatsby"
 import PropTypes from "prop-types"
 
-import { KeepCircle } from "./Icons"
+import CollapsibleList from "./CollapsibleList"
 import Image from "./Image"
-import { WHITEPAPER_URL, routes } from "../constants"
+import Link from "./Link"
 
-export const FooterTemplate = ({ images = {} }) => (
+export const FooterTemplate = ({
+  images = {},
+  emailLink = {},
+  dropdowns = [],
+  copyright = "",
+  legalLinks = [],
+}) => (
   <footer>
     <Container fluid="md">
       <div className="footer-columns">
         <ul className="footer-column-1">
+          <li className="keep-logo">Keep</li>
           <li>
-            <KeepCircle />
-          </li>
-          <li>
-            <Button className="email-btn" href="mailto:work@keep.network">
-              Email Us
+            <Button className="email-btn" href={`mailto:${emailLink.email}`}>
+              {emailLink.label}
             </Button>
           </li>
         </ul>
-        <ul className="footer-column-2">
-          <li>Company</li>
-          <li>
-            <a href={WHITEPAPER_URL} rel="noopener noreferrer" target="_blank">
-              Whitepaper
-            </a>
-          </li>
-          <li>
-            <a href="#team">Team</a>
-          </li>
-          <li>
-            <a href="#advisors">Advisors</a>
-          </li>
-          <li>
-            <a
-              href="https://blog.keep.network"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              Blog
-            </a>
-          </li>
-        </ul>
-        <ul className="footer-column-3">
-          <li>Follow</li>
-          <li>
-            <a href={routes.PRESS}>Press</a>
-          </li>
-          <li>
-            <a
-              href="https://twitter.com/keep_project"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              Twitter
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://t.me/KeepNetworkOfficial/"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              Telegram
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.reddit.com/r/KeepNetwork/"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              Reddit
-            </a>
-          </li>
-        </ul>
-        <ul className="footer-column4">
-          <li>Community</li>
-          <li>
-            <a
-              href="https://discordapp.com/invite/wYezN7v"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              Discord
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://github.com/keep-network/"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              Github
-            </a>
-          </li>
-        </ul>
+        {dropdowns.map((dropdown, i) => (
+          <CollapsibleList
+            key={`nav-dropdown-${i}`}
+            label={dropdown.title}
+            className={`footer-column-${i + 2}`}
+          >
+            <ul>
+              {dropdown.dropdown_items.map((item, j) => (
+                <li key={`nav-dropdown-item-${j}`}>
+                  <Link url={item.url} isExternal={item.is_external_link}>
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </CollapsibleList>
+        ))}
       </div>
       <div className="footer-bottom">
-        <p>
-          A Thesis<sup>*</sup> Build
-        </p>
-        <p>&#169; 2020 Keep SEZC. All Rights Reserved.</p>
+        <div
+          className="copyright"
+          dangerouslySetInnerHTML={{ __html: copyright }}
+        />
         <ul>
-          <li>
-            <Link to={routes.PRIVACY}>Privacy Policy</Link>
-          </li>
-          <li>
-            <Link to={routes.TERMS}>Terms of Use</Link>
-          </li>
-          <li>
-            <Link to={routes.PLAYING_FOR_KEEPS_TERMS}>
-              Playing for Keeps Terms
-            </Link>
-          </li>
+          {legalLinks.map((link, i) => (
+            <li key={`legal-link-${i}`}>
+              <Link url={link.url}>{link.label}</Link>
+            </li>
+          ))}
         </ul>
       </div>
       <Image className="half-circle" imageData={images.halfCircle} />
@@ -125,6 +63,10 @@ export const FooterTemplate = ({ images = {} }) => (
 
 FooterTemplate.propTypes = {
   images: PropTypes.object,
+  emailLink: PropTypes.object,
+  dropdowns: PropTypes.array,
+  copyright: PropTypes.string,
+  legalLinks: PropTypes.array,
 }
 
 export const query = graphql`
@@ -136,6 +78,33 @@ export const query = graphql`
         }
       }
     }
+    allMarkdownRemark(
+      filter: { frontmatter: { template: { eq: "footer-nav" } } }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            email_link {
+              label
+              email
+            }
+            nav_dropdowns {
+              title
+              dropdown_items {
+                label
+                is_external_link
+                url
+              }
+            }
+            copyright_text
+            legal_links {
+              label
+              url
+            }
+          }
+        }
+      }
+    }
   }
 `
 
@@ -143,8 +112,17 @@ const Footer = () => (
   <StaticQuery
     query={query}
     render={(data) => {
-      const { halfCircle } = data
-      return <FooterTemplate images={{ halfCircle }} />
+      const { halfCircle, allMarkdownRemark } = data
+      const { frontmatter } = allMarkdownRemark.edges[0].node
+      return (
+        <FooterTemplate
+          images={{ halfCircle }}
+          emailLink={frontmatter.email_link}
+          dropdowns={frontmatter.nav_dropdowns}
+          copyright={frontmatter.copyright_text}
+          legalLinks={frontmatter.legal_links}
+        />
+      )
     }}
   />
 )

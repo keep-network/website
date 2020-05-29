@@ -1,7 +1,9 @@
 @import 'vitesse-font';
 
+$body-font-family: 'Work Sans', sans-serif;
+
 body {
-    font-family: 'Work Sans', sans-serif;
+    font-family: $body-font-family;
     font-weight: 500;
     font-size: 16px;
     color: $body-text-color;
@@ -107,6 +109,12 @@ a {
     background-color: $black;
     border-color: $black;
     color: $link-color;
+}
+
+.btn-primary-on-dark {
+    background-color: $link-color;
+    border-color: $link-color;
+    color: $black;
 }
 
 .btn-default,

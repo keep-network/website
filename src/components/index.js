@@ -1,4 +1,5 @@
 import App from "./App"
+import Announcement from "./Announcement"
 import EmailForm from "./EmailForm"
 import Footer from "./Footer"
 import Header from "./Header"
@@ -12,6 +13,7 @@ import SubmitButton from "./SubmitButton"
 
 export {
   App,
+  Announcement,
   EmailForm,
   Footer,
   Header,

@@ -4,64 +4,118 @@ import {
   Collapse,
   Nav,
   Navbar,
-  NavItem,
   NavbarToggler,
   NavLink,
 } from "reactstrap"
-import { Link } from "gatsby"
+import { graphql, Link, StaticQuery } from "gatsby"
+import PropTypes from "prop-types"
 
+import Announcement from "./Announcement"
 import NavScrollItem from "./NavScrollItem"
 import * as Icons from "./Icons"
-import { routes, sections } from "../constants"
 
-const Header = () => {
+const NavItem = ({ is_external_link: isExternal, label, url }) => {
+  if (isExternal) {
+    return (
+      <li className="nav-item">
+        <NavLink href={url} rel="noopener noreferrer" target="_blank">
+          {label}
+        </NavLink>
+      </li>
+    )
+  }
+
+  // Test if the url is a hash link on the home page
+  const regex = /^\/?#/
+  if (regex.test(url)) {
+    return (
+      <NavScrollItem href="/" to={url.replace(regex, "")} hashSpy={true}>
+        {label}
+      </NavScrollItem>
+    )
+  }
+
+  return (
+    <li className="nav-item">
+      <Link to={url} activeClassName="active">
+        {label}
+      </Link>
+    </li>
+  )
+}
+
+NavItem.propTypes = {
+  is_external_link: PropTypes.bool,
+  label: PropTypes.string,
+  url: PropTypes.string,
+}
+
+export const HeaderTemplate = ({ navItems = [] }) => {
   const [collapsed, setCollapsed] = useState(true)
   const toggleNavbar = () => setCollapsed(!collapsed)
 
   return (
-    <Navbar fixed="top">
-      <Container fluid="md">
-        <NavScrollItem
-          element="div"
-          className="brand"
-          activeClass="active"
-          href={routes.MAIN}
-          to={sections.HOME}
-        >
-          <Icons.Keep height="61px" width="235px" />
-        </NavScrollItem>
-        <NavbarToggler onClick={toggleNavbar} />
-        <Collapse isOpen={!collapsed} navbar>
-          <Nav>
-            <NavScrollItem href={routes.MAIN} to={sections.TEAM} hashSpy={true}>
-              Team
-            </NavScrollItem>
-            <NavScrollItem
-              href={routes.MAIN}
-              to={sections.ADVISORS}
-              hashSpy={true}
-            >
-              Advisors
-            </NavScrollItem>
-            <NavItem>
-              <Link to={routes.PRESS} activeClassName="active">
-                Press
-              </Link>
-            </NavItem>
-            <NavItem>
-              <NavLink
-                href="https://blog.keep.network"
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                Blog
-              </NavLink>
-            </NavItem>
-          </Nav>
-        </Collapse>
-      </Container>
-    </Navbar>
+    <header>
+      <Announcement />
+      <Navbar>
+        <Container fluid="md">
+          <NavScrollItem
+            element="div"
+            className="brand"
+            activeClass="active"
+            href="/"
+            to="home"
+          >
+            <Icons.Keep height="61px" width="235px" />
+          </NavScrollItem>
+          <NavbarToggler onClick={toggleNavbar} />
+          <Collapse isOpen={!collapsed} navbar>
+            <Nav>
+              {navItems.map((item, i) => (
+                <NavItem key={`nav-item-${i}`} {...item} />
+              ))}
+            </Nav>
+          </Collapse>
+        </Container>
+      </Navbar>
+    </header>
   )
 }
+
+HeaderTemplate.propTypes = {
+  navItems: PropTypes.array,
+}
+
+// Query for Header
+export const query = graphql`
+  query Header {
+    allMarkdownRemark(
+      filter: { frontmatter: { template: { eq: "header-nav" } } }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            nav_items {
+              label
+              is_external_link
+              url
+            }
+          }
+        }
+      }
+    }
+  }
+`
+
+const Header = () => (
+  <StaticQuery
+    query={query}
+    render={(data) => {
+      const navItems =
+        data.allMarkdownRemark.edges[0].node.frontmatter.nav_items
+      return <HeaderTemplate navItems={navItems} />
+    }}
+  />
+)
 
 export default Header

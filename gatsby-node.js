@@ -5,9 +5,11 @@ const { fmImagesToRelative } = require("gatsby-remark-relative-images")
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions
 
+  // Filter only for md files in the src/pages directory. Any md files found
+  // outside of that should not have a page created for it
   const result = await graphql(`
     {
-      allMarkdownRemark(limit: 1000) {
+      allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/(pages)/" } }) {
         edges {
           node {
             id

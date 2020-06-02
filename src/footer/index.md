@@ -7,7 +7,7 @@ nav_dropdowns:
   - title: Company
     dropdown_items:
       - label: Whitepaper
-        url: /whitepaper
+        url: https://backend.keep.network/whitepaper
       - label: Team
         url: /#team
       - label: Advisors

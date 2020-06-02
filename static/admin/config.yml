@@ -287,12 +287,6 @@ collections:
               [
                 { label: "Label", name: "label", widget: "string" },
                 {
-                  label: "External Link",
-                  name: "is_external_link",
-                  widget: "boolean",
-                  default: false
-                },
-                {
                   label: "URL",
                   name: "url",
                   widget: "string",
@@ -328,12 +322,6 @@ collections:
                 fields:
                   [
                     { label: "Label", name: "label", widget: "string" },
-                    {
-                      label: "External Link",
-                      name: "is_external_link",
-                      widget: "boolean",
-                      default: false
-                    },
                     {
                       label: "URL",
                       name: "url",

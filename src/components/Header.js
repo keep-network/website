@@ -14,8 +14,9 @@ import Announcement from "./Announcement"
 import NavScrollItem from "./NavScrollItem"
 import * as Icons from "./Icons"
 
-const NavItem = ({ is_external_link: isExternal, label, url }) => {
-  if (isExternal) {
+const NavItem = ({ label, url }) => {
+  // Test if url is an external link
+  if (/^http/.test(url)) {
     return (
       <li className="nav-item">
         <NavLink href={url} rel="noopener noreferrer" target="_blank">
@@ -45,7 +46,6 @@ const NavItem = ({ is_external_link: isExternal, label, url }) => {
 }
 
 NavItem.propTypes = {
-  is_external_link: PropTypes.bool,
   label: PropTypes.string,
   url: PropTypes.string,
 }
@@ -97,7 +97,6 @@ export const query = graphql`
           frontmatter {
             nav_items {
               label
-              is_external_link
               url
             }
           }

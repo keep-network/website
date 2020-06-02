@@ -34,9 +34,7 @@ export const FooterTemplate = ({
             <ul>
               {dropdown.dropdown_items.map((item, j) => (
                 <li key={`nav-dropdown-item-${j}`}>
-                  <Link url={item.url} isExternal={item.is_external_link}>
-                    {item.label}
-                  </Link>
+                  <Link url={item.url}>{item.label}</Link>
                 </li>
               ))}
             </ul>
@@ -92,7 +90,6 @@ export const query = graphql`
               title
               dropdown_items {
                 label
-                is_external_link
                 url
               }
             }

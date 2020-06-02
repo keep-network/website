@@ -308,15 +308,15 @@ collections:
             fields:
               - {label: "Label", name: "label", widget: "string"}
               - {label: "Email Address", name: "email", widget: "string"}
-          - label: "Nav Dropdowns"
-            name: "nav_dropdowns"
+          - label: "Nav Categories"
+            name: "nav_categories"
             widget: "list"
             allow_add: true
             fields:
               - {label: "Title", name: "title", widget: "string"}
               - {
-                label: "Dropdown Items",
-                name: "dropdown_items",
+                label: "Items",
+                name: "items",
                 widget: "list",
                 allow_add: true,
                 fields:

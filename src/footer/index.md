@@ -3,9 +3,9 @@ template: footer-nav
 email_link:
   label: Email Us
   email: work@keep.network
-nav_dropdowns:
+nav_categories:
   - title: Company
-    dropdown_items:
+    items:
       - label: Whitepaper
         url: https://backend.keep.network/whitepaper
       - label: Team
@@ -13,7 +13,7 @@ nav_dropdowns:
       - label: Advisors
         url: /#advisors
   - title: Follow
-    dropdown_items:
+    items:
       - label: Press
         url: /press
       - label: Twitter
@@ -25,7 +25,7 @@ nav_dropdowns:
       - label: Blog
         url: https://blog.keep.network/
   - title: Community
-    dropdown_items:
+    items:
       - label: Discord
         url: https://discordapp.com/invite/wYezN7v
       - label: GitHub

@@ -68,6 +68,7 @@ export const HeaderTemplate = ({ navItems = [] }) => {
           >
             <Icons.Keep height="61px" width="235px" />
           </NavScrollItem>
+          {/* Mobile nav hamburger button */}
           <NavbarToggler onClick={toggleNavbar} />
           <Collapse isOpen={!collapsed} navbar>
             <Nav>
@@ -86,7 +87,6 @@ HeaderTemplate.propTypes = {
   navItems: PropTypes.array,
 }
 
-// Query for Header
 export const query = graphql`
   query Header {
     allMarkdownRemark(

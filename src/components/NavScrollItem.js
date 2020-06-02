@@ -1,4 +1,3 @@
-import classNames from "classnames"
 import React from "react"
 import PropTypes from "prop-types"
 import { Link as ScrollLink } from "react-scroll"
@@ -67,11 +66,7 @@ const NavScrollItem = ({
   }
 
   return (
-    <Element
-      role="presentation"
-      className={classNames(className, { active })}
-      style={style}
-    >
+    <Element role="presentation" className={className} style={style}>
       {location.pathname === root ? (
         <ScrollLink
           activeClass={activeClass}

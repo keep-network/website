@@ -135,7 +135,9 @@ footer {
             .footer-column-1 {
                 flex: 0 0 auto;
                 order: 0;
-                flex-direction: column;
+                display: inline-block;
+                width: auto;
+                max-width: 30%;
                 padding: 0 30px 30px;
             }
 
@@ -154,6 +156,7 @@ footer {
                     font-weight: normal;
                     padding: 9px 24px;
                     margin: 1.5em 0 0;
+                    width: auto;
                 }
             }
         }

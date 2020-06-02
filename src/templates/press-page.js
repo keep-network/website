@@ -4,7 +4,7 @@ import PropTypes from "prop-types"
 import { withPrefix, graphql } from "gatsby"
 
 import { App, Image, PageSection } from "../components"
-import { ArrowRight, ArrowNorthEast } from "../components/Icons"
+import { ArrowRight } from "../components/Icons"
 
 const PressItem = ({ title, date, source, aboveTheFold, url }) => {
   const [windowWidth, setWindowWidth] = useState(0)
@@ -31,9 +31,7 @@ const PressItem = ({ title, date, source, aboveTheFold, url }) => {
               buttons={false}
             />
           </div>
-          <div className="view-arrow">
-            View <ArrowNorthEast />
-          </div>
+          <div className="view-arrow">View &#x2197;</div>
         </div>
       </div>
     </a>

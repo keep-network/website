@@ -161,10 +161,10 @@ footer {
             }
         }
 
+        // Desktop uses a different logo than mobile
         .keep-logo {
             height: 65px;
             background-image: url(../images/Keep-logo-circle.svg);
-            background-repeat: no-repeat;
             background-position: top left;
             background-size: contain;
         }

@@ -50,6 +50,12 @@ const SEO = ({ title, description, image, pathname, article }) => (
               href="https://fonts.googleapis.com/css?family=Work+Sans:400,500,600,700,800"
               rel="stylesheet"
             />
+            {/* Import arrow glyphs (not included by default and not specified in any subset)
+            See https://stackoverflow.com/questions/40822458/styled-unicode-arrows-not-showing-up-with-google-fonts-web-font */}
+            <link
+              href="https://fonts.googleapis.com/css?family=Work+Sans:400,500,600,700,800&text=%E2%86%90|%E2%86%92|%E2%86%97"
+              rel="stylesheet"
+            />
           </Helmet>
         </>
       )

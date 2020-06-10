@@ -8,6 +8,5 @@ nav_items:
   - label: Press
     url: /press
   - label: Blog
-    is_external_link: true
     url: https://blog.keep.network/
 ---

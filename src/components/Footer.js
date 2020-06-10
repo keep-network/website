@@ -10,7 +10,7 @@ import Link from "./Link"
 export const FooterTemplate = ({
   images = {},
   emailLink = {},
-  dropdowns = [],
+  navCategories = [],
   copyright = "",
   legalLinks = [],
 }) => (
@@ -25,18 +25,16 @@ export const FooterTemplate = ({
             </Button>
           </li>
         </ul>
-        {dropdowns.map((dropdown, i) => (
+        {navCategories.map((category, i) => (
           <CollapsibleList
-            key={`nav-dropdown-${i}`}
-            label={dropdown.title}
+            key={`nav-category-${i}`}
+            label={category.title}
             className={`footer-column-${i + 2}`}
           >
             <ul>
-              {dropdown.dropdown_items.map((item, j) => (
-                <li key={`nav-dropdown-item-${j}`}>
-                  <Link url={item.url} isExternal={item.is_external_link}>
-                    {item.label}
-                  </Link>
+              {category.items.map((item, j) => (
+                <li key={`nav-category-item-${j}`}>
+                  <Link url={item.url}>{item.label}</Link>
                 </li>
               ))}
             </ul>
@@ -64,7 +62,7 @@ export const FooterTemplate = ({
 FooterTemplate.propTypes = {
   images: PropTypes.object,
   emailLink: PropTypes.object,
-  dropdowns: PropTypes.array,
+  navCategories: PropTypes.array,
   copyright: PropTypes.string,
   legalLinks: PropTypes.array,
 }
@@ -88,11 +86,10 @@ export const query = graphql`
               label
               email
             }
-            nav_dropdowns {
+            nav_categories {
               title
-              dropdown_items {
+              items {
                 label
-                is_external_link
                 url
               }
             }
@@ -118,7 +115,7 @@ const Footer = () => (
         <FooterTemplate
           images={{ halfCircle }}
           emailLink={frontmatter.email_link}
-          dropdowns={frontmatter.nav_dropdowns}
+          navCategories={frontmatter.nav_categories}
           copyright={frontmatter.copyright_text}
           legalLinks={frontmatter.legal_links}
         />

@@ -2,8 +2,13 @@ backend:
   name: github
   repo: keep-network/website
   site_domain: keep.network
+  base_url: https://backend.keep.network/
+  auth_endpoint: netlify/auth
+  open_authoring: true
 
 site_url: https://keep.network
+
+publish_mode: editorial_workflow
 
 media_folder: static/images
 public_folder: /images

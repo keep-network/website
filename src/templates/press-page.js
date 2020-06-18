@@ -31,7 +31,7 @@ const PressItem = ({ title, date, source, aboveTheFold, url }) => {
               buttons={false}
             />
           </div>
-          <div className="view-arrow">View &#x2197;</div>
+          <div className="view-arrow">View ↗</div>
         </div>
       </div>
     </a>

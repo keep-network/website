@@ -2,7 +2,7 @@
 template: press-page
 path: /press
 title: Press
-subtitle: For press inquiries, please contact us at social@keep.nework.
+subtitle: For press inquiries, please contact us at <a href="mailto:social@keep.network">social@keep.nework</a>.
 media_kit_section:
   title: Do you want to write about us?
   subtitle: Find everything you might need in our media kit.

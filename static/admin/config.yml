@@ -167,7 +167,7 @@ collections:
             }
           - {label: "Path", name: "path", widget: "hidden", default: "/press"}
           - {label: "Title", name: "title", widget: "string"}
-          - {label: "Subtitle", name: "subtitle", widget: "string"}
+          - {label: "Subtitle", name: "subtitle", widget: "markdown", minimal: true}
           - label: "Media Kit Section"
             name: "media_kit_section"
             widget: "object"

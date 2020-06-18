@@ -79,7 +79,7 @@ export const PressPageTemplate = ({
       <PageSection id="title-container">
         <div className="title">
           <h1>{title}</h1>
-          <h2>{subtitle}</h2>
+          <h2 dangerouslySetInnerHTML={{ __html: subtitle }} />
         </div>
       </PageSection>
       <PageSection id="media-kit-container">

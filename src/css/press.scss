@@ -29,6 +29,11 @@
             font-weight: bold;
             line-height: 34px;
             margin: 1em 0;
+
+            a {
+                text-decoration: underline;
+                color: $accent-text-color;
+            }
         }
 
         @media (max-width: #{$bp-medium}) {

@@ -69,6 +69,7 @@ const NavScrollItem = ({
     <Element role="presentation" className={className} style={style}>
       {location.pathname === root ? (
         <ScrollLink
+          className="scroll-link"
           activeClass={activeClass}
           to={to}
           spy={spy}

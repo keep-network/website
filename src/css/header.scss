@@ -76,7 +76,7 @@ header {
                             }
 
                             &:focus,
-                            &:active,
+                            &:not(.scroll-link):active,
                             &.active.focus,
                             &:active:focus,
                             &.active,

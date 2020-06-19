@@ -206,7 +206,10 @@ footer {
     @media (min-width: #{$bp-large}) {
         padding: 120px 0 60px;
         .footer-columns {
-            .footer-column-1,
+            .footer-column-1 {
+                padding: 0 100px 30px 0;
+            }
+
             .collapsible-list {
                 padding: 0 50px 30px;
             }

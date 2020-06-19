@@ -1,0 +1,43 @@
+.blurb {
+    @media (min-width: #{$bp-medium}) {
+        padding: 40px 0;
+    }
+}
+
+.blurb-panel {
+    padding: 60px;
+    background-color: $background-med-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media (max-width: #{$bp-medium}) {
+        padding: 30px 10px;
+    }
+}
+
+.blurb-icon {
+    padding-right: 40px;
+
+    @media (max-width: #{$bp-medium}) {
+        padding-right: 20px;
+    }
+}
+
+.blurb-text {
+    color: $accent-text-color;
+    font-size: 18px;
+    font-weight: 500;
+    max-width: 420px;
+    text-align: left;
+    line-height: 22px;
+
+    @media (max-width: #{$bp-medium}) {
+        font-size: 14px;
+        line-height: 16px;
+    }
+
+    p {
+        margin: 0;
+    }
+}

@@ -1,0 +1,63 @@
+.profile {
+    text-align: center;
+    display: inline-block;
+    padding: 0 5px 20px;
+
+    .gatsby-image-wrapper {
+        border-radius: 50%;
+        margin: 0 0 4px;
+    }
+
+    h4 {
+        margin: 12px 0;
+        color: $accent-text-color;
+        font-weight: 500;
+
+        span {
+            display: block;
+            font-weight: bold;
+            margin: 0 0 6px;
+            color: $black;
+            font-weight: 700;
+        }
+    }
+
+    .social-links {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        a {
+            display: inline-block;
+            padding: 0 6px;
+
+            svg {
+                width: 24px;
+            }
+        }
+    }
+
+    @media (min-width: #{$bp-medium}) {
+        width: 25%;
+    }
+
+    @media (max-width: #{$bp-large}) {
+        margin-bottom: 50px;
+    }
+
+    @media (max-width: #{$bp-medium}) {
+        width: 33.3333%;
+
+        h4 {
+            font-size: 16px;
+
+            span {
+                font-size: 20px;
+            }
+        }
+    }
+
+    @media (max-width: #{$bp-small}) {
+        width: 50%;
+    }
+}

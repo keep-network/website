@@ -130,7 +130,7 @@ collections:
                   ],
               }
           - label: "Supporters Section"
-            name: "supperters_section"
+            name: "supporters_section"
             widget: "object"
             fields:
               - {label: "Title", name: "title", widget: "string"}

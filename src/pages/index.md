@@ -1,11 +1,11 @@
 ---
 template: home-page
 path: /
-title: Home
 hero:
   title: A privacy layer for Ethereum
-  body: >-
-    <p>A keep is an off-chain container for private data. Keeps help contracts harness the full power of the public blockchain &mdash; enabling deep interactivity with private data.</p>
+  body: <p>A keep is an off-chain container for private data. Keeps help contracts
+    harness the full power of the public blockchain &mdash; enabling deep
+    interactivity with private data.</p>
 team_section:
   title: Our Team
   team:
@@ -111,7 +111,6 @@ team_section:
       title: Developer
       image: /images/headshots/erin.jpg
       social_links:
-        - url: https://www.linkedin.com/in/erinng/
         - url: https://github.com/ironng
         - url: http://keybase.io/ironng
     - name: Laura Wallendal
@@ -171,6 +170,40 @@ partners_section:
         alt: district0x Logo
         image: /images/logos/district0x_logo.png
       url: https://district0x.io/
+supperters_section:
+  title: Our Supporters
+  supporters:
+    - name: Polychain Capital
+      url: http://polychain.capital/
+      logo:
+        image: /images/polychainlogo.png
+        alt: Polychain Capital Logo
+    - url: https://a16z.com/
+      name: Andreessen Horowitz
+      logo:
+        alt: Andreessen Horowitz Logo
+        image: /images/andreessenhorowitzlogo.png
+    - name: DHVC
+      logo:
+        alt: DHVC Logo
+        image: /images/dhvclogo.png
+      url: https://www.dh.vc/
+    - url: http://www.draper.vc/
+      name: Draper Associates
+      logo:
+        alt: Draper Associates Logo
+        image: /images/draperassociateslogo.png
+    - name: Distributed Capital Partners
+      url: https://www.distributedcapital.io/
+      logo:
+        alt: Distributed Capital Partners Logo
+        image: /images/distributedcapitalpartnerslogo.png
+    - name: Fabric Ventures
+      url: https://www.fabric.vc/
+      logo:
+        image: /images/fabricventureslogo.png
+        alt: Fabric Ventures Logo
+title: Home
 supporters_section:
   title: Our Supporters
   supporters:

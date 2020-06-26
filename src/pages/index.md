@@ -1,11 +1,11 @@
 ---
 template: home-page
 path: /
-title: Home
 hero:
   title: A privacy layer for Ethereum
-  body: >-
-    <p>A keep is an off-chain container for private data. Keeps help contracts harness the full power of the public blockchain &mdash; enabling deep interactivity with private data.</p>
+  body: <p>A keep is an off-chain container for private data. Keeps help contracts
+    harness the full power of the public blockchain &mdash; enabling deep
+    interactivity with private data.</p>
 team_section:
   title: Our Team
   team:
@@ -171,6 +171,9 @@ partners_section:
         alt: district0x Logo
         image: /images/logos/district0x_logo.png
       url: https://district0x.io/
+supperters_section:
+  title: Our Supporters
+title: Home
 supporters_section:
   title: Our Supporters
   supporters:

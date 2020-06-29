@@ -19,7 +19,7 @@ team_section:
         - url: http://keybase.io/mhluongo
     - name: Corbin Pon
       title: Developer & Ops
-      image: /images/headshots/corbin.jpg
+      image: /images/corbin-bw.png
       social_links:
         - url: https://twitter.com/CorbinPon
         - url: https://www.linkedin.com/in/corbinpon
@@ -27,7 +27,7 @@ team_section:
         - url: http://keybase.io/corbinpon
     - name: Antonio Salazar Cardozo
       title: Head of Engineering
-      image: /images/headshots/antonio.png
+      image: /images/antonio-bw.png
       social_links:
         - url: https://twitter.com/lightfiend
         - url: https://www.linkedin.com/in/lightfiend
@@ -35,65 +35,58 @@ team_section:
         - url: http://keybase.io/shadowfiend
     - name: Carolyn Reckhow
       title: Head of Business Strategy
-      image: /images/headshots/carolyn.jpg
+      image: /images/carolyn-bw.png
       social_links:
         - url: https://twitter.com/CReckhow
         - url: https://www.linkedin.com/in/carolyn-reckhow-73345a1a
         - url: https://github.com/creckhow
         - url: http://keybase.io/carolynreckhow
+    - name: Laura Wallendal
+      title: General Manager
+      image: /images/laura-bw.png
+      social_links:
+        - url: https://twitter.com/LauraWallendal
+        - url: https://www.linkedin.com/in/laurawallendal
+        - url: http://keybase.io/lwallendal
     - name: Michael Gluzman
       title: Head of Design
-      image: /images/headshots/michael.png
+      image: /images/michael-bw.png
       social_links:
         - url: https://twitter.com/gluzman
         - url: https://www.linkedin.com/in/michaelgluzman/
         - url: https://github.com/gluzman
         - url: http://keybase.io/gluzzz
-    - name: Piotr Dyraga
-      title: Tech Lead
-      image: /images/headshots/piotr.jpg
-      social_links:
-        - url: https://twitter.com/piotrdyraga?lang=en
-        - url: https://www.linkedin.com/in/piotrdyraga/
-        - url: https://github.com/pdyraga
-    - name: Promethea Raschke
-      title: Protocol Designer
-      image: /images/headshots/promethea.png
-      social_links:
-        - url: https://github.com/eth-r
     - name: Sloan Thompson
       title: Head of DevOps
-      image: /images/headshots/sloanThompson.jpg
+      image: /images/sloan-bw.png
       social_links:
         - url: https://twitter.com/SloanThompson
         - url: https://www.linkedin.com/in/sloansthompson/
         - url: https://github.com/sthompson22
         - url: http://keybase.io/fekta
-    - name: Nik Grinkevich
-      title: Developer
-      image: /images/headshots/nik.jpg
+    - name: Piotr Dyraga
+      title: Tech Lead
+      image: /images/piotr-bw.png
       social_links:
-        - url: https://twitter.com/ngrinkevich
-        - url: https://www.linkedin.com/in/nikgrinkevich
-        - url: https://github.com/ngrinkevich
-        - url: https://keybase.io/nikgrinkevich
-    - name: Jakub Nowakowski
-      title: Developer
-      image: /images/headshots/jakub.jpg
+        - url: https://twitter.com/piotrdyraga?lang=en
+        - url: https://www.linkedin.com/in/piotrdyraga/
+        - url: https://github.com/pdyraga
+    - name: Liz Shinn
+      title: Designer
+      image: /images/liz-shinn-bw.png
       social_links:
-        - url: https://twitter.com/jnowakow8
-        - url: https://www.linkedin.com/in/jnowakowski8/
-        - url: https://github.com/nkuba
-    - name: Nicholas Evans
-      title: Developer
-      image: /images/headshots/nicholas.png
+        - url: https://github.com/liz-shinn
+        - url: https://www.linkedin.com/in/lizshinndesign
+        - url: https://twitter.com/lizshinndesign
+        - url: https://keybase.io/lizshinn
+    - name: Promethea Raschke
+      title: Protocol Designer
+      image: /images/promethea-bw.png
       social_links:
-        - url: https://twitter.com/NicholasEvans14
-        - url: https://github.com/NicholasDotSol
-        - url: http://keybase.io/evansnicholaskb
+        - url: https://github.com/eth-r
     - name: Dmitry Paremski
       title: Developer
-      image: /images/headshots/dmitryParemski.jpg
+      image: /images/dmitry-bw.png
       social_links:
         - url: https://twitter.com/dmitry_paremski
         - url: https://www.linkedin.com/in/paremski/
@@ -101,18 +94,45 @@ team_section:
         - url: http://keybase.io/dparemski
     - name: Erin Ng
       title: Developer
-      image: /images/headshots/erin.jpg
+      image: /images/erin-bw.png
       social_links:
         - url: https://www.linkedin.com/in/erinng/
         - url: https://github.com/ironng
         - url: http://keybase.io/ironng
-    - name: Laura Wallendal
-      title: General Manager
-      image: /images/headshots/laura.jpg
+    - name: Jakub Nowakowski
+      title: Developer
+      image: /images/kuba-bw.png
       social_links:
-        - url: https://twitter.com/LauraWallendal
-        - url: https://www.linkedin.com/in/laurawallendal
-        - url: http://keybase.io/lwallendal
+        - url: https://twitter.com/jnowakow8
+        - url: https://www.linkedin.com/in/jnowakowski8/
+        - url: https://github.com/nkuba
+    - name: Łukasz Zimnoch
+      title: Developer
+      image: /images/lukasz-bw.png
+      social_links:
+        - url: https://github.com/lukasz-zimnoch
+        - url: http://keybase.io/lukaszzimnoch
+    - name: Nicholas Evans
+      title: Developer
+      image: /images/nicholas-bw.png
+      social_links:
+        - url: https://twitter.com/NicholasEvans14
+        - url: https://github.com/NicholasDotSol
+        - url: http://keybase.io/evansnicholaskb
+    - name: Nik Grinkevich
+      title: Developer
+      image: /images/nik-bw.png
+      social_links:
+        - url: https://twitter.com/ngrinkevich
+        - url: https://www.linkedin.com/in/nikgrinkevich
+        - url: https://github.com/ngrinkevich
+        - url: https://keybase.io/nikgrinkevich
+    - name: Rafal Czajkowski
+      title: Developer
+      image: /images/rafal-bw.png
+      social_links:
+        - url: https://github.com/r-czajkowski
+        - url: http://keybase.io/rczajkowski
 advisors_section:
   title: Our Advisors
   advisors:

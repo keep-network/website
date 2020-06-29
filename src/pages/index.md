@@ -92,13 +92,6 @@ team_section:
         - url: https://www.linkedin.com/in/paremski/
         - url: https://github.com/dimpar
         - url: http://keybase.io/dparemski
-    - name: Erin Ng
-      title: Developer
-      image: /images/erin-bw.png
-      social_links:
-        - url: https://www.linkedin.com/in/erinng/
-        - url: https://github.com/ironng
-        - url: http://keybase.io/ironng
     - name: Jakub Nowakowski
       title: Developer
       image: /images/kuba-bw.png
@@ -133,6 +126,13 @@ team_section:
       social_links:
         - url: https://github.com/r-czajkowski
         - url: http://keybase.io/rczajkowski
+    - name: Erin Ng
+      title: Developer
+      image: /images/erin-bw.png
+      social_links:
+        - url: https://www.linkedin.com/in/erinng/
+        - url: https://github.com/ironng
+        - url: http://keybase.io/ironng
 advisors_section:
   title: Our Advisors
   advisors:

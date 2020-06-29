@@ -200,7 +200,7 @@ supporters_section:
       logo:
         alt: DHVC Logo
         image: /images/logos/DHVCLogo.png
-      url: http://www.dhvc.com/
+      url: " https://www.dh.vc/ "
     - name: Draper Associates
       logo:
         alt: Draper Associates Logo

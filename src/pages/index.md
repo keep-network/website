@@ -112,14 +112,6 @@ team_section:
         - url: https://twitter.com/NicholasEvans14
         - url: https://github.com/NicholasDotSol
         - url: http://keybase.io/evansnicholaskb
-    - name: Nik Grinkevich
-      title: Developer
-      image: /images/nik-bw.png
-      social_links:
-        - url: https://twitter.com/ngrinkevich
-        - url: https://www.linkedin.com/in/nikgrinkevich
-        - url: https://github.com/ngrinkevich
-        - url: https://keybase.io/nikgrinkevich
     - name: Rafal Czajkowski
       title: Developer
       image: /images/rafal-bw.png

@@ -4,8 +4,9 @@ path: /
 title: Home
 hero:
   title: A privacy layer for Ethereum
-  body: >-
-    <p>A keep is an off-chain container for private data. Keeps help contracts harness the full power of the public blockchain &mdash; enabling deep interactivity with private data.</p>
+  body: <p>A keep is an off-chain container for private data. Keeps help contracts
+    harness the full power of the public blockchain &mdash; enabling deep
+    interactivity with private data.</p>
 team_section:
   title: Our Team
   team:
@@ -99,14 +100,6 @@ team_section:
         - url: https://www.linkedin.com/in/paremski/
         - url: https://github.com/dimpar
         - url: http://keybase.io/dparemski
-    - name: Liam Zebedee
-      title: Developer
-      image: /images/headshots/liamZebedee.jpg
-      social_links:
-        - url: https://twitter.com/liamzebedee
-        - url: https://www.linkedin.com/in/liamedwardsplayne/
-        - url: https://github.com/liamzebedee
-        - url: https://keybase.io/liamzebedee
     - name: Erin Ng
       title: Developer
       image: /images/headshots/erin.jpg

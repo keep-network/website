@@ -3,16 +3,15 @@ template: home-page
 path: /
 title: Home
 hero:
-  title: A privacy layer for Ethereum
-  body: <p>A keep is an off-chain container for private data. Keeps help contracts
-    harness the full power of the public blockchain &mdash; enabling deep
-    interactivity with private data.</p>
+  title: Private data on the public blockchain.
+  body: A keep is an off-chain container for private data. Keeps let you interact
+    with private data while taking full advantage of the public blockchain.
 team_section:
   title: Our Team
   team:
     - name: Matt Luongo
       title: Project Lead
-      image: /images/headshots/matt.jpg
+      image: /images/matt-bw.png
       social_links:
         - url: https://twitter.com/mhluongo
         - url: https://www.linkedin.com/in/mattluongo

@@ -105,6 +105,7 @@ team_section:
       social_links:
         - url: https://github.com/lukasz-zimnoch
         - url: http://keybase.io/lukaszzimnoch
+        - url: https://www.linkedin.com/in/lukasz-zimnoch/
     - name: Nicholas Evans
       title: Developer
       image: /images/nicholas-bw.png
@@ -118,6 +119,7 @@ team_section:
       social_links:
         - url: https://github.com/r-czajkowski
         - url: http://keybase.io/rczajkowski
+        - url: https://www.linkedin.com/in/r-czajkowski
     - name: Erin Ng
       title: Developer
       image: /images/erin-bw.png

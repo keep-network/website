@@ -2,4 +2,4 @@
 template: announcement
 title: Stakedrop Announcement
 ---
-Stake ETH, Earn KEEP: Staking with ETH starts soon!
+Stake ETH for tBTC, Earn KEEP. Learn how at [chat.keep.network](https://chat.keep.network)

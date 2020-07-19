@@ -178,36 +178,41 @@ partners_section:
         image: /images/logos/district0x_logo.png
       url: https://district0x.io/
 supporters_section:
-  title: Our Supporters
+  title: Our Stakers
   supporters:
+    - name: Paradigm
+      url: https://www.paradigm.xyz/
+      logo:
+        image: /images/paradigm_logo.svg
+        alt: Paradigm's logo
     - name: Polychain Capital
       logo:
         alt: Polychain Capital Logo
         image: /images/logos/polychainLogo.png
       url: http://polychain.capital/
+    - name: Fenbushi Capital
+      url: https://fenbushi.vc/
+      logo:
+        image: /images/fenbushi_logo.png
+        alt: Fenbushi Capital's logo
     - name: Andressen Horowitz
       logo:
         alt: Andressen Horowitz Logo
         image: /images/logos/andreessenHorowitzLogo.png
       url: https://a16z.com/
-    - name: DHVC
-      logo:
-        alt: DHVC Logo
-        image: /images/logos/DHVCLogo.png
-      url: " https://www.dh.vc/ "
     - name: Draper Associates
       logo:
         alt: Draper Associates Logo
         image: /images/logos/draperAssociatesLogo.png
       url: http://www.draper.vc/
-    - name: Distributed Capital Partners
-      logo:
-        alt: Distributed Capital Partners Logo
-        image: /images/logos/distributedCapitalPartnersLogo.png
-      url: https://www.distributedcapital.io/
     - name: Fabric Ventures
       logo:
         alt: Fabric Ventures Logo
         image: /images/logos/fabricVenturesLogo.png
       url: https://www.fabric.vc/
+    - name: Distributed Capital Partners
+      logo:
+        alt: Distributed Capital Partners Logo
+        image: /images/logos/distributedCapitalPartnersLogo.png
+      url: https://www.distributedcapital.io/
 ---

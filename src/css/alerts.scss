@@ -13,7 +13,6 @@
         color: $white;
         text-decoration: underline;
         display: inline-block;
-        margin-left: 8px;
 
         &[href^=http]:after {
             content: ' ↗';

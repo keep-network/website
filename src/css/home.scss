@@ -166,15 +166,43 @@
         }
     }
 
-    @media (max-width: 590px /* total width of tBTC links */) {
+    @media (max-width: #{$bp-small}) {
         padding-bottom: 35px;
 
+        h2 {
+            font-size: 40px;
+            margin-bottom: 0;
+        }
+
+        h3 {
+            font-size: 1.25rem;
+            line-height: 2rem;
+        }
+
+        a {
+            font-size: 1.25rem;
+        }
+
+        .application.tbtc {
+            background-size: 70% auto;
+            background-position: 50% top;
+
+            padding-top: 200px;
+        }
+    }
+
+    @media (max-width: 590px /* total width of tBTC links */) {
         ul {
             display: block;
             text-align: center;
 
             li {
+                display: block;
                 margin: 0 0 1.5rem;
+            }
+
+            a {
+                width: 100%;
             }
         }
     }

@@ -1,15 +1,14 @@
 const sections = {
   HOME: "home",
   DISCORD: "discord",
+  FEATURED_APPLICATION: "featured-application",
   GITHUB: "github",
   MAILING_LIST: "mailing-list",
-  LEARN: "learn",
   USES: "uses",
   DESCRIPTION: "description",
   TEAM: "team",
   DEFINITION: "definition",
   ADVISORS: "advisors",
-  PARTNERS: "partners",
   SUPPORTERS: "supporters",
 }
 

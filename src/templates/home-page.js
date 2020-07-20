@@ -23,7 +23,6 @@ export const HomePageTemplate = ({
   ajaxRequestStates = {},
   team_section: teamSection = {},
   advisors_section: advisorsSection = {},
-  partners_section: partnersSection = {},
   supporters_section: supportersSection = {},
 }) => {
   const handleSignupDiscord = ({ email }) => {
@@ -43,6 +42,48 @@ export const HomePageTemplate = ({
           </Col>
           <Col xs={12} sm={5} className="col-circles">
             <Image imageData={images.textureCircle1} />
+          </Col>
+        </Row>
+      </PageSection>
+      <PageSection id={sections.FEATURED_APPLICATION}>
+        <Row className="featured-application">
+          <Col xs={12} sm={12}>
+            <h2>Featured Application</h2>
+
+            <section className="application tbtc">
+              <h3>
+                Announcing tBTC: The first “killer app” built using the Keep
+                Network
+              </h3>
+
+              <p>
+                tBTC lets Bitcoin holders deposit and redeem BTC in DeFi without
+                centralized intermediaries
+              </p>
+
+              <ul className="links">
+                <li>
+                  <a
+                    className="primary"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    href="https://tbtc.network"
+                  >
+                    Go to tBTC Website
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    href="https://blog.keep.network/introducing-tbtc-the-safest-way-to-earn-with-your-bitcoin-fec077f171f4?"
+                  >
+                    Read blog post
+                  </a>
+                </li>
+              </ul>
+            </section>
           </Col>
         </Row>
       </PageSection>
@@ -110,41 +151,6 @@ export const HomePageTemplate = ({
             </EmailForm>
           </Col>
         </Row>
-      </PageSection>
-      <PageSection id={sections.LEARN}>
-        <div className="col">
-          <h2 className="h1">Find out how to use Keep</h2>
-        </div>
-        <div className="col">
-          <div>
-            <Icons.Book />
-            <h4>Whitepaper</h4>
-            <Button
-              href={WHITEPAPER_URL}
-              color="primary"
-              download="Keep Whitepaper"
-              rel="noopener noreferrer"
-              target="_blank"
-              size="lg"
-            >
-              Download
-            </Button>
-          </div>
-          <div>
-            <Icons.Strategy />
-            <h4>Business Primer</h4>
-            <Button
-              href="/KeepBusinessPrimer.pdf"
-              color="primary"
-              download="Keep Business Primer"
-              rel="noopener noreferrer"
-              target="_blank"
-              size="lg"
-            >
-              Download
-            </Button>
-          </div>
-        </div>
       </PageSection>
       <PageSection
         id={sections.DEFINITION}
@@ -266,19 +272,6 @@ export const HomePageTemplate = ({
           />
         ))}
       </PageSection>
-      <PageSection id={sections.PARTNERS} convex>
-        <h2>{partnersSection.title}</h2>
-        <Row>
-          {partnersSection.partners.map((partner, i) => (
-            <ImageLink
-              key={`partner-${i}`}
-              url={partner.url}
-              label={partner.name}
-              image={partner.logo}
-            />
-          ))}
-        </Row>
-      </PageSection>
       <PageSection id={sections.SUPPORTERS} convex>
         <h2>{supportersSection.title}</h2>
         <Row>
@@ -301,7 +294,6 @@ HomePageTemplate.propTypes = {
   images: PropTypes.object,
   signupMailingList: PropTypes.func,
   ajaxRequestStates: PropTypes.object,
-  partners_section: PropTypes.object,
   supporters_section: PropTypes.object,
   team_section: PropTypes.object,
   advisors_section: PropTypes.object,
@@ -378,23 +370,6 @@ export const query = graphql`
             }
             social_links {
               url
-            }
-          }
-        }
-        partners_section {
-          title
-          partners {
-            name
-            url
-            logo {
-              image {
-                childImageSharp {
-                  fluid(maxWidth: 315, quality: 100) {
-                    ...GatsbyImageSharpFluid
-                  }
-                }
-              }
-              alt
             }
           }
         }

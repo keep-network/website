@@ -40,6 +40,10 @@
         h1, p {
             width: 85%;
         }
+
+        div.body {
+            width: 85%;
+        }
     }
 
     @media (min-width: #{$bp-medium}) {
@@ -60,6 +64,146 @@
     @media (min-width: 620px) {
         .col-circles {
             align-self: flex-end;
+        }
+    }
+}
+
+.featured-application {
+    background: #fffdfc;
+
+    padding-bottom: 85px;
+    
+    h2 {
+        margin-top: 32px;
+        font-size: 4.5rem;
+        text-align: center;
+    }
+
+    h3 {
+        font-family: 'Vitesse', 'Work Sans', sans-serif;
+        font-weight: normal;
+        font-size: 2.5rem;
+        line-height: 3rem;
+
+        margin-bottom: 1.4rem;
+
+        width: 50%;
+    }
+
+    section {
+        position: relative;
+    }
+
+    .application.tbtc {
+        background: no-repeat 93%;
+        background-image: url(../images/tbtc-app.svg);
+    }
+
+    p {
+        color: $grey-60;
+        font-weight: 100;
+
+        line-height: 1.5rem;
+        margin-bottom: 2.5rem;
+
+        width: 40%;
+    }
+
+    ul, li {
+        margin: 0;
+        padding: 0;
+
+        list-style-type: none;
+        display: inline-block;
+    }
+    ul li {
+        margin-left: 1.25rem;
+
+        &:first-child {
+            margin-left: 0;
+        }
+    }
+
+    a {
+        @extend .btn, .btn-default;
+
+        font-size: 1.5rem;
+        font-variant: small-caps;
+        font-weight: 600;
+        text-transform: lowercase;
+
+        display: inline-block;
+        padding-top: 2px;
+        padding-bottom: 6px;
+    }
+
+    a.primary {
+        @extend .btn-primary;
+    }
+
+    @media (max-width: #{$bp-large}) {
+        h3 {
+            width: 45%;
+            font-size: 2rem;
+        }
+
+        .application.tbtc {
+            background-position-y: -40px;
+            background-size: 50%;
+        }
+    }
+
+    @media (max-width: #{$bp-medium}) {
+        h3, p {
+            width: 100%;
+        }
+
+        .application.tbtc {
+            background-size: 470px auto;
+            background-position: 50% -80px;
+
+            padding-top: 300px;
+        }
+    }
+
+    @media (max-width: #{$bp-small}) {
+        padding-bottom: 35px;
+
+        h2 {
+            font-size: 40px;
+            margin-bottom: 0;
+        }
+
+        h3 {
+            font-size: 1.25rem;
+            line-height: 2rem;
+        }
+
+        a {
+            font-size: 1.25rem;
+        }
+
+        .application.tbtc {
+            background-size: 70% auto;
+            background-position: 50% top;
+
+            padding-top: 200px;
+        }
+    }
+
+    @media (max-width: 590px /* total width of tBTC links */) {
+        ul {
+            display: block;
+            text-align: center;
+
+            li {
+                display: block;
+                margin: 0 0 1.5rem;
+            }
+
+            a {
+                width: 100%;
+            }
         }
     }
 }
@@ -268,115 +412,6 @@
     }
 }
 
-.learn {
-    background-color: $link-color;
-    padding: 0;
-
-    .page-section-content {
-        @media (min-width: #{$bp-medium}) {
-            &:after {
-                content: '';
-                display: block;
-                width: 50%;
-                height: 1px;
-                background-color: rgba($white, 0.5);
-                position: absolute;
-                left: 50%;
-                top: 50%;
-            }
-        }
-    }
-
-    .container-md {
-        @media (min-width: #{$bp-medium}) {
-            display: flex;
-            align-items: center;
-        }
-    }
-
-    .col {
-        @media (min-width: #{$bp-medium}) {
-            width: 50%;
-
-            &:last-of-type {
-                border-left: 1px solid rgba($white, 0.5);
-            }
-        }
-    }
-
-    h2 {
-        @media (min-width: #{$bp-extra-large}) {
-            width: 80%;
-        }
-
-        @media (min-width: #{$bp-medium}) {
-            margin: 0;
-        }
-
-        @media (max-width: #{($bp-medium - 1)}) {
-            padding: 20px 30px 0;
-        }
-
-        @media (min-width: 480px) and (max-width: 767px) {
-            text-align: center;
-        }
-    }
-
-    .col > div {
-        text-align: center;
-        padding: 75px 0;
-
-        @media (min-width: #{$bp-extra-large}) {
-            display: flex;
-            align-items: center;
-            justify-content: space-around;
-            padding: 75px 25px;
-        }
-
-        @media (max-width: #{($bp-large - 1)}) {
-            svg {
-                margin-right: 20px;
-                position: relative;
-                top: -4px;
-            }
-        }
-
-        @media (max-width: #{($bp-medium - 1)}) {
-            padding: 40px 0 50px;
-
-            &:first-of-type {
-                padding: 20px 0 50px;
-            }
-
-            &:last-of-type {
-                border-top: 1px solid rgba($white, 0.5);
-            }
-        }
-    }
-
-    h4 {
-        font-size: 25px;
-        font-weight: 600;
-        color: $white;
-
-        @media (min-width: #{$bp-extra-large}) {
-            width: 50%;
-        }
-
-        @media (max-width: #{($bp-large - 1)}) {
-            display: inline;
-        }
-    }
-
-    .btn {
-        @media (max-width: #{($bp-large - 1)}) {
-            display: block;
-            margin: 40px auto 0;
-            max-width: 177px;
-        }
-    }
-}
-
 .uses {
     @media (min-width: #{$bp-medium}) {
         padding: 0;
@@ -495,7 +530,6 @@
 
 .team,
 .advisors,
-.partners,
 .supporters {
     @media (min-width: #{$bp-medium}) {
         .row {
@@ -517,7 +551,7 @@
     }
 }
 
-.description {
+.description, .definition {
     .page-section-content {
         @media (min-width: #{$bp-medium}) {
             &:before {
@@ -535,7 +569,6 @@
     }
 }
 
-.partners,
 .supporters {
     background-color: $background-med-color;
 

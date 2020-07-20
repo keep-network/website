@@ -25,7 +25,7 @@ h3, .h3 {
 
 h1, .h1 {
     font-weight: 800;
-    font-size: 70px;
+    font-size: 50px;
     letter-spacing: -1px;
     line-height: 73px;
 }
@@ -100,9 +100,9 @@ a {
 }
 
 .btn-default {
-    background-color: $white;
     color: $link-color;
-    border-color: $white;
+    border: 1px solid $black;
+    color: $black;
 }
 
 .btn-primary {

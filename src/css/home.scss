@@ -68,6 +68,80 @@
     }
 }
 
+.featured-application {
+    background: #fffdfc;
+
+    padding-bottom: 100px;
+    
+    h2 {
+        margin-top: 32px;
+        font-size: 4.5rem;
+        text-align: center;
+    }
+
+    h3 {
+        font-family: 'Vitesse', 'Work Sans', sans-serif;
+        font-weight: normal;
+        font-size: 2.5rem;
+        line-height: 3rem;
+
+        margin-bottom: 1.4rem;
+
+        width: 50%;
+    }
+
+    section {
+        position: relative;
+    }
+
+    .application.tbtc {
+        background: no-repeat 93%;
+        background-image: url(../images/tbtc-app.svg);
+    }
+
+    p {
+        color: $grey-60;
+        font-weight: 100;
+
+        line-height: 1.5rem;
+        margin-bottom: 2.5rem;
+
+        width: 40%;
+    }
+
+    ul, li {
+        margin: 0;
+        padding: 0;
+
+        list-style-type: none;
+        display: inline-block;
+    }
+    ul li {
+        margin-left: 1.25rem;
+
+        &:first-child {
+            margin-left: 0;
+        }
+    }
+
+    a {
+        @extend .btn, .btn-default;
+
+        font-size: 1.5rem;
+        font-variant: small-caps;
+        font-weight: 600;
+        text-transform: lowercase;
+
+        display: inline-block;
+        padding-top: 2px;
+        padding-bottom: 6px;
+    }
+
+    a.primary {
+        @extend .btn-primary;
+    }
+}
+
 .discord {
     background-color: $background-med-color;
 

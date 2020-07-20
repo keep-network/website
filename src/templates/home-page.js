@@ -45,6 +45,48 @@ export const HomePageTemplate = ({
           </Col>
         </Row>
       </PageSection>
+      <PageSection id={sections.FEATURED_APPLICATION}>
+        <Row className="featured-application">
+          <Col xs={12} sm={12}>
+            <h2>Featured Application</h2>
+
+            <section className="application tbtc">
+              <h3>
+                Announcing tBTC: The first “killer app” built using the Keep
+                Network
+              </h3>
+
+              <p>
+                tBTC lets Bitcoin holders deposit and redeem BTC in DeFi without
+                centralized intermediaries
+              </p>
+
+              <ul className="links">
+                <li>
+                  <a
+                    className="primary"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    href="https://tbtc.network"
+                  >
+                    Go to tBTC Website
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    href="https://blog.keep.network/introducing-tbtc-the-safest-way-to-earn-with-your-bitcoin-fec077f171f4?"
+                  >
+                    Read blog post
+                  </a>
+                </li>
+              </ul>
+            </section>
+          </Col>
+        </Row>
+      </PageSection>
       <PageSection id={sections.DISCORD}>
         <Row className="discord-signup">
           <Col xs={12} sm={7}>

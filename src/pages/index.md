@@ -3,9 +3,9 @@ template: home-page
 path: /
 title: Home
 hero:
-  title: Private data on the public blockchain.
-  body: A keep is an off-chain container for private data. Keeps let you interact
-    with private data while taking full advantage of the public blockchain.
+  title: Privacy Without Borders.
+  body: Secure private data across public blockchains. For defi, interoperability,
+    and the future.
 team_section:
   title: Our Team
   team:

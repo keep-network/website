@@ -40,6 +40,10 @@
         h1, p {
             width: 85%;
         }
+
+        div.body {
+            width: 85%;
+        }
     }
 
     @media (min-width: #{$bp-medium}) {

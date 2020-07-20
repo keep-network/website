@@ -171,7 +171,7 @@ supporters_section:
     - name: Paradigm
       url: https://www.paradigm.xyz/
       logo:
-        image: /images/paradigm_logo.svg
+        image: /images/logos/paradigm_logo.png
         alt: Paradigm's logo
     - name: Polychain Capital
       logo:
@@ -181,7 +181,7 @@ supporters_section:
     - name: Fenbushi Capital
       url: https://fenbushi.vc/
       logo:
-        image: /images/fenbushi_logo.png
+        image: /images/logos/fenbushi_logo.png
         alt: Fenbushi Capital's logo
     - name: Andressen Horowitz
       logo:

@@ -110,41 +110,6 @@ export const HomePageTemplate = ({
           </Col>
         </Row>
       </PageSection>
-      <PageSection id={sections.LEARN}>
-        <div className="col">
-          <h2 className="h1">Find out how to use Keep</h2>
-        </div>
-        <div className="col">
-          <div>
-            <Icons.Book />
-            <h4>Whitepaper</h4>
-            <Button
-              href={WHITEPAPER_URL}
-              color="primary"
-              download="Keep Whitepaper"
-              rel="noopener noreferrer"
-              target="_blank"
-              size="lg"
-            >
-              Download
-            </Button>
-          </div>
-          <div>
-            <Icons.Strategy />
-            <h4>Business Primer</h4>
-            <Button
-              href="/KeepBusinessPrimer.pdf"
-              color="primary"
-              download="Keep Business Primer"
-              rel="noopener noreferrer"
-              target="_blank"
-              size="lg"
-            >
-              Download
-            </Button>
-          </div>
-        </div>
-      </PageSection>
       <PageSection
         id={sections.DEFINITION}
         additionalClassNames={["blurb", "blurb-desktop"]}

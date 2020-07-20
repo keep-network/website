@@ -3,7 +3,6 @@ const sections = {
   DISCORD: "discord",
   GITHUB: "github",
   MAILING_LIST: "mailing-list",
-  LEARN: "learn",
   USES: "uses",
   DESCRIPTION: "description",
   TEAM: "team",

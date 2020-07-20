@@ -411,7 +411,7 @@
     }
 }
 
-.description {
+.description, .definition {
     .page-section-content {
         @media (min-width: #{$bp-medium}) {
             &:before {

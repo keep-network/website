@@ -100,9 +100,9 @@ a {
 }
 
 .btn-default {
-    background-color: $white;
     color: $link-color;
-    border-color: $white;
+    border: 1px solid $black;
+    color: $black;
 }
 
 .btn-primary {

@@ -23,7 +23,6 @@ export const HomePageTemplate = ({
   ajaxRequestStates = {},
   team_section: teamSection = {},
   advisors_section: advisorsSection = {},
-  partners_section: partnersSection = {},
   supporters_section: supportersSection = {},
 }) => {
   const handleSignupDiscord = ({ email }) => {
@@ -266,19 +265,6 @@ export const HomePageTemplate = ({
           />
         ))}
       </PageSection>
-      <PageSection id={sections.PARTNERS} convex>
-        <h2>{partnersSection.title}</h2>
-        <Row>
-          {partnersSection.partners.map((partner, i) => (
-            <ImageLink
-              key={`partner-${i}`}
-              url={partner.url}
-              label={partner.name}
-              image={partner.logo}
-            />
-          ))}
-        </Row>
-      </PageSection>
       <PageSection id={sections.SUPPORTERS} convex>
         <h2>{supportersSection.title}</h2>
         <Row>
@@ -301,7 +287,6 @@ HomePageTemplate.propTypes = {
   images: PropTypes.object,
   signupMailingList: PropTypes.func,
   ajaxRequestStates: PropTypes.object,
-  partners_section: PropTypes.object,
   supporters_section: PropTypes.object,
   team_section: PropTypes.object,
   advisors_section: PropTypes.object,
@@ -378,23 +363,6 @@ export const query = graphql`
             }
             social_links {
               url
-            }
-          }
-        }
-        partners_section {
-          title
-          partners {
-            name
-            url
-            logo {
-              image {
-                childImageSharp {
-                  fluid(maxWidth: 315, quality: 100) {
-                    ...GatsbyImageSharpFluid
-                  }
-                }
-              }
-              alt
             }
           }
         }

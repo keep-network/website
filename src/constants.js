@@ -9,7 +9,6 @@ const sections = {
   TEAM: "team",
   DEFINITION: "definition",
   ADVISORS: "advisors",
-  PARTNERS: "partners",
   SUPPORTERS: "supporters",
 }
 

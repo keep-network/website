@@ -495,7 +495,6 @@
 
 .team,
 .advisors,
-.partners,
 .supporters {
     @media (min-width: #{$bp-medium}) {
         .row {
@@ -535,7 +534,6 @@
     }
 }
 
-.partners,
 .supporters {
     background-color: $background-med-color;
 

@@ -164,18 +164,6 @@ advisors_section:
       social_links:
         - url: https://twitter.com/licuende?lang=en
         - url: https://www.linkedin.com/in/luisivancuende/
-partners_section:
-  title: Our Partners
-  partners:
-    - name: Lendroid
-      logo:
-        alt: Lendroid Logo
-        image: /images/logos/lendroidLogo.png
-      url: https://www.lendroid.com/
-    - name: district0x
-      logo:
-        alt: district0x Logo
-        image: /images/logos/district0x_logo.png
       url: https://district0x.io/
 supporters_section:
   title: Our Stakers

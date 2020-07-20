@@ -71,7 +71,7 @@
 .featured-application {
     background: #fffdfc;
 
-    padding-bottom: 100px;
+    padding-bottom: 85px;
     
     h2 {
         margin-top: 32px;
@@ -139,6 +139,44 @@
 
     a.primary {
         @extend .btn-primary;
+    }
+
+    @media (max-width: #{$bp-large}) {
+        h3 {
+            width: 45%;
+            font-size: 2rem;
+        }
+
+        .application.tbtc {
+            background-position-y: -40px;
+            background-size: 50%;
+        }
+    }
+
+    @media (max-width: #{$bp-medium}) {
+        h3, p {
+            width: 100%;
+        }
+
+        .application.tbtc {
+            background-size: 470px auto;
+            background-position: 50% -80px;
+
+            padding-top: 300px;
+        }
+    }
+
+    @media (max-width: 590px /* total width of tBTC links */) {
+        padding-bottom: 35px;
+
+        ul {
+            display: block;
+            text-align: center;
+
+            li {
+                margin: 0 0 1.5rem;
+            }
+        }
     }
 }
 

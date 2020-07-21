@@ -66,7 +66,6 @@ export const HomePageTemplate = ({
                   <a
                     className="primary"
                     rel="noopener noreferrer"
-                    target="_blank"
                     href="https://tbtc.network"
                   >
                     Go to tBTC Website
@@ -76,7 +75,6 @@ export const HomePageTemplate = ({
                 <li>
                   <a
                     rel="noopener noreferrer"
-                    target="_blank"
                     href="https://blog.keep.network/introducing-tbtc-the-safest-way-to-earn-with-your-bitcoin-fec077f171f4?"
                   >
                     Read blog post

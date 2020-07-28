@@ -181,7 +181,7 @@ supporters_section:
     - name: Fenbushi Capital
       url: https://fenbushi.vc/
       logo:
-        image: /images/logos/fenbushi_logo.png
+        image: /images/fenbushi.png
         alt: Fenbushi Capital's logo
     - name: Andressen Horowitz
       logo:

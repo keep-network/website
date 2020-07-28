@@ -171,12 +171,12 @@ supporters_section:
     - name: Paradigm
       url: https://www.paradigm.xyz/
       logo:
-        image: /images/logos/paradigm_logo.png
+        image: /images/paradigm-logo.png
         alt: Paradigm's logo
     - name: Polychain Capital
       logo:
         alt: Polychain Capital Logo
-        image: /images/logos/polychainLogo.png
+        image: /images/polychain-capital.png
       url: http://polychain.capital/
     - name: Fenbushi Capital
       url: https://fenbushi.vc/

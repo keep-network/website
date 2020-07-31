@@ -40,7 +40,7 @@ collections:
                   widget: "image",
                   hint: "Minimum image width of 2880px required (to be
                     rendered as 1440px) to support higher resolution screens",
-                },
+                }
               - {label: "CTA", name: "cta", widget: "string", required: false}
               - {
                   label: "CTA Buttons",
@@ -52,7 +52,7 @@ collections:
                     { label: Label, name: label, widget: string },
                     { label: URL, name: url, widget: string },
                   ],
-                },
+                }
           - label: "Team Section"
             name: "team_section"
             widget: "object"

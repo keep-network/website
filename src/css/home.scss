@@ -81,7 +81,7 @@
 
     @media (min-width: #{$bp-medium}) {
         background-position: top center;
-        min-height: calc(100vh - 150px);
+        min-height: calc(100vh - 50px);
         background-size: cover;
 
         h1, .body {

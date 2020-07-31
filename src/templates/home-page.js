@@ -40,9 +40,6 @@ export const HomePageTemplate = ({
               dangerouslySetInnerHTML={{ __html: hero.body }}
             />
           </Col>
-          <Col xs={12} sm={5} className="col-circles">
-            <Image imageData={images.textureCircle1} />
-          </Col>
         </Row>
       </PageSection>
       <PageSection id={sections.FEATURED_APPLICATION}>
@@ -308,7 +305,6 @@ export const ConnectedHomePage = connect(mapStateToProps, {
 const HomePage = ({ data }) => {
   const { markdownRemark: post } = data
   const images = {
-    textureCircle1: data.textureCircle1,
     textureCircle2: data.textureCircle2,
   }
   return (
@@ -387,13 +383,6 @@ export const query = graphql`
               alt
             }
           }
-        }
-      }
-    }
-    textureCircle1: file(relativePath: { regex: "/texture-circle.png/" }) {
-      childImageSharp {
-        fluid(maxWidth: 574, quality: 100) {
-          ...GatsbyImageSharpFluid
         }
       }
     }

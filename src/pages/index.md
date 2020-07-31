@@ -9,7 +9,7 @@ hero:
   cta: Stake your claim.
   cta_buttons:
     - label: Get Email Updates
-      url: '#'
+      url: '/#mailing-list'
     - label: Join our Discord
       url: https://chat.keep.network/
 team_section:

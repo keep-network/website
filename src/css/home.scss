@@ -76,6 +76,11 @@
                 transform: translateY(-50%);
                 content: ' →';
             }
+
+            &:focus,
+            &:active {
+                padding-right: 78px;
+            }
         }
     }
 

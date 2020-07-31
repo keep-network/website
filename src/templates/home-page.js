@@ -10,6 +10,7 @@ import {
   Icons,
   Image,
   ImageLink,
+  Link,
   PageSection,
   Profile,
 } from "../components"
@@ -31,14 +32,29 @@ export const HomePageTemplate = ({
 
   return (
     <div className="main-content">
-      <PageSection id={sections.HOME}>
+      <PageSection
+        id={sections.HOME}
+        style={{
+          backgroundImage: `url(${hero.bg_image.childImageSharp.fluid.src})`,
+        }}
+      >
         <Row>
-          <Col xs={12} sm={7}>
+          <Col xs={12}>
             <h1>{hero.title}</h1>
             <div
               className="body"
               dangerouslySetInnerHTML={{ __html: hero.body }}
             />
+            {hero.cta ? <h2>{hero.cta}</h2> : ""}
+            <ul className="cta-links">
+              {hero.cta_buttons.map((btn, i) => (
+                <li key={`cta-btn-${i}`}>
+                  <Link url={btn.url} className="cta-link">
+                    {btn.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </Col>
         </Row>
       </PageSection>
@@ -332,6 +348,18 @@ export const query = graphql`
         hero {
           title
           body
+          bg_image {
+            childImageSharp {
+              fluid(maxWidth: 1440, quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+          cta
+          cta_buttons {
+            label
+            url
+          }
         }
         team_section {
           title

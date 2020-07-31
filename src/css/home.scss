@@ -28,42 +28,89 @@
 }
 
 .home {
+    background-position: top -225px center;
+    background-repeat: no-repeat;
+
     h1 {
-        margin: 40px 0 1em;
+        margin: 2.5rem 0 0.5em;
+        font-size: 2.5rem;
+        line-height: 120%;
+        letter-spacing: -1px;
     }
 
-    p {
-        color: $accent-text-color;
+    h2 {
+        text-align: center;
+        font-family: 'Vitesse', sans-serif;
+        font-weight: bold;
+        font-size: 2rem;
+        line-height: 100%;
+        letter-spacing: -1px;
+        margin: 2.5rem 0 2rem;
     }
 
-    @media (min-width: #{$bp-extra-large}) {
-        h1, p {
-            width: 85%;
+    .body {
+        color: $grey-70;
+        letter-spacing: -0.5px;
+    }
+
+    .cta-links {
+        padding: 0;
+
+        li {
+            list-style: none;
+            margin: 0 0 1em;
         }
 
-        div.body {
-            width: 85%;
+        .cta-link {
+            @extend .btn;
+            @extend .btn-primary;
+            display: block;
+            position: relative;
+            text-align: left;
+            padding-right: 78px;
+
+            &:after {
+                position: absolute;
+                right: 32px;
+                top: 50%;
+                transform: translateY(-50%);
+                content: ' →';
+            }
         }
     }
 
     @media (min-width: #{$bp-medium}) {
-        padding: 170px 0 0;
-    }
+        background-position: top center;
+        min-height: calc(100vh - 150px);
+        background-size: cover;
 
-    @media (max-width: #{($bp-medium - 1)}) {
-        padding: 40px 0 0;
-    }
-
-    @media (min-width: 768px) and (max-width: 991px) {
-        h1 {
-            font-size: 40px;
-            line-height: 42px;
+        h1, .body {
+            text-align: center;
         }
-    }
 
-    @media (min-width: 620px) {
-        .col-circles {
-            align-self: flex-end;
+        h1 {
+            font-size: 4.5rem;
+            margin: 8.75rem 0 0.25em;
+            line-height: 112%;
+        }
+
+        .body {
+            font-size: 1.5rem;
+            max-width: 66.666%;
+            margin: 0 auto;
+        }
+
+        .cta-links {
+            text-align: center;
+
+            li {
+                display: inline-block;
+                margin: 8px 16px;
+            }
+
+            .cta-link {
+                display: inline-block;
+            }
         }
     }
 }

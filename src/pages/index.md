@@ -6,7 +6,7 @@ hero:
   title: Censorship Resistance for DeFi
   body: A keep stores your data and protects it from censorship, so what you store always stays yours.
   bg_image: /images/hero-bg.jpg
-  cta: Stake your claim
+  cta: Stake your claim.
   cta_buttons:
     - label: Get Email Updates
       url: '#'

@@ -3,9 +3,15 @@ template: home-page
 path: /
 title: Home
 hero:
-  title: Privacy Without Borders.
-  body: Secure private data across public blockchains. For defi, interoperability,
-    and the future.
+  title: Censorship Resistance for DeFi
+  body: A keep stores your data and protects it from censorship, so what you store always stays yours.
+  bg_image: /images/hero-bg.jpg
+  cta: Stake your claim
+  cta_buttons:
+    - label: Get Email Updates
+      url: '#'
+    - label: Join our Discord
+      url: https://chat.keep.network/
 team_section:
   title: Our Team
   team:

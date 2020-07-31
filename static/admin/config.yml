@@ -34,6 +34,25 @@ collections:
             fields:
               - {label: "Title", name: "title", widget: "string"}
               - {label: "Body", name: "body", widget: "markdown", required: false}
+              - {
+                  label: "Background Image",
+                  name: "bg_image",
+                  widget: "image",
+                  hint: "Minimum image width of 2880px required (to be
+                    rendered as 1440px) to support higher resolution screens",
+                },
+              - {label: "CTA", name: "cta", widget: "string", required: false}
+              - {
+                  label: "CTA Buttons",
+                  name: "cta_buttons",
+                  widget: "list",
+                  allow_add: true,
+                  required: false,
+                  fields: [
+                    { label: Label, name: label, widget: string },
+                    { label: URL, name: url, widget: string },
+                  ],
+                },
           - label: "Team Section"
             name: "team_section"
             widget: "object"

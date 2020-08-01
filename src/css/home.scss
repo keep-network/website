@@ -22,8 +22,13 @@
 .home {
     background-position: top -225px center;
     background-repeat: no-repeat;
-    margin-top: -130px;
-    padding-top: 100px;
+
+    .has-alert & {
+        margin-top: -130px;
+        padding-top: 100px;
+        z-index: -1;
+    }
+
 
     h1 {
         margin: 2.5rem 0 0.5em;
@@ -79,11 +84,14 @@
     }
 
     @media (min-width: #{$bp-medium}) {
-        margin-top: -160px;
         background-position: top center;
         min-height: calc(100vh - 50px);
         background-size: cover;
-        z-index: -1;
+        padding-top: 110px;
+
+        .has-alert & {
+            margin-top: -160px;
+        }
 
         h1, .body {
             text-align: center;

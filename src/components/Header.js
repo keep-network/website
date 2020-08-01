@@ -10,7 +10,6 @@ import {
 import { graphql, Link, StaticQuery } from "gatsby"
 import PropTypes from "prop-types"
 
-import Announcement from "./Announcement"
 import NavScrollItem from "./NavScrollItem"
 import * as Icons from "./Icons"
 
@@ -56,7 +55,6 @@ export const HeaderTemplate = ({ navItems = [] }) => {
 
   return (
     <header>
-      <Announcement />
       <Navbar>
         <Container fluid="md">
           <NavScrollItem

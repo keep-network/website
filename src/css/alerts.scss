@@ -2,12 +2,19 @@
     text-align: center;
     border-radius: 0;
     border: 0;
-    background-color: $error-color;
+    background-color: transparent;
     color: $white;
-    padding: 6px;
-    margin-bottom: 0;
+    margin: 1.5em 15px;
+    padding: 0;
     @extend .light-font;
     font-size: 15px;
+
+    .body {
+        display: inline-block;
+        background-color: $error-color;
+        padding: 6px;
+        border-radius: 8px;
+    }
 
     a {
         color: $white;
@@ -23,11 +30,11 @@
         margin-bottom: 0;
     }
 
-    @media only screen and (min-width: 366px) and (max-width: 378px) {
-        padding: 8px 15px;
-    }
+    @media (min-width: #{$bp-medium}) {
+        margin: 120px auto 0;
 
-    @media only screen and (min-width: 709px) and (max-width: 757px) {
-        padding: 8px 30px;
+        .body {
+            padding: 6px 60px 6px 15px;
+        }
     }
 }

@@ -40,12 +40,16 @@ export const HomePageTemplate = ({
       >
         <Row>
           <Col xs={12}>
-            <h1>{hero.title}</h1>
+            <h1 dangerouslySetInnerHTML={{ __html: hero.title }} />
             <div
               className="body"
               dangerouslySetInnerHTML={{ __html: hero.body }}
             />
-            {hero.cta ? <h2>{hero.cta}</h2> : ""}
+            {hero.cta ? (
+              <h2 dangerouslySetInnerHTML={{ __html: hero.cta }} />
+            ) : (
+              ""
+            )}
             <ul className="cta-links">
               {hero.cta_buttons.map((btn, i) => (
                 <li key={`cta-btn-${i}`}>

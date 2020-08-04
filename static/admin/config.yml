@@ -32,7 +32,7 @@ collections:
             name: "hero"
             widget: "object"
             fields:
-              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Title", name: "title", widget: "markdown", minimal: true}
               - {label: "Body", name: "body", widget: "markdown", required: false}
               - {
                   label: "Background Image",
@@ -41,7 +41,7 @@ collections:
                   hint: "Minimum image width of 2880px required (to be
                     rendered as 1440px) to support higher resolution screens",
                 }
-              - {label: "CTA", name: "cta", widget: "string", required: false}
+              - {label: "CTA", name: "cta", widget: "markdown", required: false, minimal: true}
               - {
                   label: "CTA Buttons",
                   name: "cta_buttons",

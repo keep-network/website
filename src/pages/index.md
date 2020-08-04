@@ -3,7 +3,7 @@ template: home-page
 path: /
 title: Home
 hero:
-  title: Censorship Resistance for DeFi
+  title: <span class="no-wrap">Censorship Resistance</span> for DeFi
   body: A keep stores your data and protects it from censorship, so what you store always stays yours.
   bg_image: /images/hero-bg.jpg
   cta: Stake your claim.

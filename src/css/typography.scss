@@ -196,6 +196,10 @@ fieldset[disabled] .btn {
     }
 }
 
+.no-wrap {
+    white-space: nowrap;
+}
+
 @keyframes rotate {
     from {
         transform: rotate(0deg);

@@ -1,4 +1,7 @@
 header {
+    position: relative;
+    z-index: 3;
+
     @media (min-width: #{$bp-medium}) {
         position: fixed;
         width: 100%;

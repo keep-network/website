@@ -45,21 +45,25 @@ export const HomePageTemplate = ({
               className="body"
               dangerouslySetInnerHTML={{ __html: hero.body }}
             />
-            {hero.cta ? (
-              <h2 dangerouslySetInnerHTML={{ __html: hero.cta }} />
-            ) : (
-              ""
-            )}
-            <ul className="cta-links">
-              {hero.cta_buttons.map((btn, i) => (
-                <li key={`cta-btn-${i}`}>
-                  <Link url={btn.url} className="cta-link">
-                    {btn.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
           </Col>
+        </Row>
+        <Row className="cta-section">
+          {hero.cta ? (
+            <Col xs={12} sm={12} md={6} lg={4}>
+              <h2>{hero.cta.label}</h2>
+            </Col>
+          ) : (
+            ""
+          )}
+          <ul className="cta-links col-12 col-sm-12 col-md-6 col-lg-4">
+            {hero.cta_buttons.map((btn, i) => (
+              <li key={`cta-btn-${i}`}>
+                <Link url={btn.url} className="cta-link">
+                  {btn.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
         </Row>
       </PageSection>
       <PageSection id={sections.FEATURED_APPLICATION}>
@@ -359,7 +363,9 @@ export const query = graphql`
               }
             }
           }
-          cta
+          cta {
+            label
+          }
           cta_buttons {
             label
             url

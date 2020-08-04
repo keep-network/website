@@ -41,7 +41,28 @@ collections:
                   hint: "Minimum image width of 2880px required (to be
                     rendered as 1440px) to support higher resolution screens",
                 }
-              - {label: "CTA", name: "cta", widget: "markdown", required: false, minimal: true}
+              - label: "CTA"
+                name: "cta"
+                widget: "object"
+                required: false
+                fields:
+                  - {
+                      label: Icon,
+                      name: icon,
+                      widget: object,
+                      required: false,
+                      fields: [
+                        {
+                          label: "Image",
+                          name: "image",
+                          widget: file,
+                          media_library: { config: { multiple: false } },
+                          hint: "SVG only. SVG must have width and height attributes set in the file."
+                        },
+                        {label: "Alt", name: "alt", widget: "string"}
+                      ]
+                    }
+                  - {label: "Label", name: "label", widget: "string"}
               - {
                   label: "CTA Buttons",
                   name: "cta_buttons",

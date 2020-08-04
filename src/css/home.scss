@@ -20,13 +20,13 @@
 }
 
 .home {
-    background-position: top -225px center;
+    background-position: center;
+    background-size: cover;
     background-repeat: no-repeat;
 
     // Make bg image appear behind the alert on mobile
     padding-top: 115px;
     margin-top: -125px;
-    z-index: -1;
 
     h1 {
         margin: 2.5rem 0 0.5em;
@@ -52,8 +52,6 @@
     }
 
     .cta-links {
-        padding: 0;
-
         li {
             list-style: none;
             margin: 0 0 1em;
@@ -83,10 +81,8 @@
     }
 
     @media (min-width: #{$bp-medium}) {
-        background-position: top center;
-        min-height: calc(100vh - 50px);
-        background-size: cover;
-        padding-top: 110px;
+        background-position: center;
+        padding: 110px 0 0;
         margin-top: 0;
 
         h1, .body {
@@ -105,16 +101,17 @@
             margin: 0 auto;
         }
 
+        .cta-section {
+            margin-top: 160px;
+            justify-content: center;
+            padding: 16px 0 75px;
+        }
+
         .cta-links {
             text-align: center;
 
             li {
-                display: inline-block;
-                margin: 8px 16px;
-            }
-
-            .cta-link {
-                display: inline-block;
+                margin: 1.5rem 0;
             }
         }
     }

@@ -1,12 +1,6 @@
 .press-page {
     margin-top: 130px;
 
-    .has-alert & {
-        margin-top: -40px;
-        position: relative;
-        z-index: -1;
-    }
-
     @media (max-width: #{$bp-medium}) {
         margin-top: 0;
     }

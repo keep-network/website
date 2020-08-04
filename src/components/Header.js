@@ -10,6 +10,7 @@ import {
 import { graphql, Link, StaticQuery } from "gatsby"
 import PropTypes from "prop-types"
 
+import Announcement from "./Announcement"
 import NavScrollItem from "./NavScrollItem"
 import * as Icons from "./Icons"
 
@@ -53,6 +54,11 @@ export const HeaderTemplate = ({ navItems = [] }) => {
   const [collapsed, setCollapsed] = useState(true)
   const toggleNavbar = () => setCollapsed(!collapsed)
 
+  const [isAnnouncementVisible, setIsAnnouncementVisible] = useState(true)
+  const dismissAnnouncement = () => {
+    setIsAnnouncementVisible(false)
+  }
+
   return (
     <header>
       <Navbar>
@@ -77,6 +83,11 @@ export const HeaderTemplate = ({ navItems = [] }) => {
           </Collapse>
         </Container>
       </Navbar>
+      {isAnnouncementVisible ? (
+        <Announcement onClick={dismissAnnouncement} />
+      ) : (
+        ""
+      )}
     </header>
   )
 }

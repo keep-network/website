@@ -1,5 +1,5 @@
 .alert {
-    border-radius: 8px;
+    border-radius: 0;
     border: 0;
     background-color: $error-color;
     color: $white;
@@ -7,7 +7,6 @@
     padding: 6px 60px 6px 15px;
     @extend .light-font;
     font-size: 15px;
-    position: relative;
 
     a {
         color: $white;
@@ -24,6 +23,10 @@
         display: flex;
         align-items: center;
         justify-content: space-evenly;
+
+        img {
+            margin-right: 8px;
+        }
     }
 
     .close-btn {
@@ -44,12 +47,15 @@
     }
 
     @media (min-width: #{$bp-medium}) {
-        margin: 120px auto 0;
-        max-width: 720px;
-        text-align: center;
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        margin: 0;
+        text-align: left;
 
         p {
-            display: block;
+            white-space: nowrap;
         }
     }
 }

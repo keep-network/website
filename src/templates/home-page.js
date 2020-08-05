@@ -49,7 +49,7 @@ export const HomePageTemplate = ({
         </Row>
         <Row className="cta-section">
           {hero.cta ? (
-            <Col xs={12} sm={12} md={6} lg={4}>
+            <Col xs={12} sm={12} md={6} lg={4} className="cta">
               {hero.cta.icon ? <Image imageData={hero.cta.icon} /> : ""}
               <h2>{hero.cta.label}</h2>
             </Col>

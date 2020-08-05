@@ -8,6 +8,9 @@ hero:
   bg_image: /images/keep-bg.jpg
   cta:
     label: Stake your claim.
+    icon:
+      image: /images/svg/flag-circle.svg
+      alt: flag icon
   cta_buttons:
     - label: Get Email Updates
       url: '/#mailing-list'

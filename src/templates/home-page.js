@@ -26,10 +26,6 @@ export const HomePageTemplate = ({
   advisors_section: advisorsSection = {},
   supporters_section: supportersSection = {},
 }) => {
-  const handleSignupDiscord = ({ email }) => {
-    signupMailingList({ email, discordSignup: true })
-  }
-
   return (
     <div className="main-content">
       <PageSection
@@ -107,20 +103,17 @@ export const HomePageTemplate = ({
           </Col>
         </Row>
       </PageSection>
-      <PageSection id={sections.DISCORD}>
-        <Row className="discord-signup">
+      <PageSection id={sections.MAILING_LIST}>
+        <Row>
           <Col xs={12} sm={7}>
             <EmailForm
-              label="Discord Email"
+              label="Email"
               placeholder="you@example.com"
-              onSubmit={handleSignupDiscord}
+              onSubmit={signupMailingList}
               requestStates={ajaxRequestStates}
               request={actionTypes.SIGNUP_MAILING_LIST}
             >
-              <h3>
-                Join our community on
-                <span className="discord-logo">Discord</span>
-              </h3>
+              <h3>Join our mailing list for updates</h3>
             </EmailForm>
           </Col>
           <Col xs={12} sm={5} className="col-circles">
@@ -154,21 +147,6 @@ export const HomePageTemplate = ({
                 <Icons.ArrowRight />
               </Button>
             </h3>
-          </Col>
-        </Row>
-      </PageSection>
-      <PageSection id={sections.MAILING_LIST}>
-        <Row>
-          <Col sm={12} md={{ size: 8, offset: 2 }}>
-            <EmailForm
-              label="Email"
-              placeholder="you@example.com"
-              onSubmit={signupMailingList}
-              requestStates={ajaxRequestStates}
-              request={actionTypes.SIGNUP_MAILING_LIST}
-            >
-              <h3>Join our mailing list</h3>
-            </EmailForm>
           </Col>
         </Row>
       </PageSection>

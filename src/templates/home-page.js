@@ -50,6 +50,7 @@ export const HomePageTemplate = ({
         <Row className="cta-section">
           {hero.cta ? (
             <Col xs={12} sm={12} md={6} lg={4}>
+              {hero.cta.icon ? <Image imageData={hero.cta.icon} /> : ""}
               <h2>{hero.cta.label}</h2>
             </Col>
           ) : (
@@ -365,6 +366,12 @@ export const query = graphql`
           }
           cta {
             label
+            icon {
+              image {
+                relativePath
+              }
+              alt
+            }
           }
           cta_buttons {
             label

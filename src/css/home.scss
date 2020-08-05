@@ -52,7 +52,6 @@
 
     .body {
         color: $grey-70;
-        letter-spacing: -0.5px;
     }
 
     .cta-section {
@@ -93,6 +92,7 @@
             position: relative;
             text-align: left;
             padding-right: 78px;
+            white-space: nowrap;
 
             &:after {
                 position: absolute;
@@ -124,13 +124,13 @@
 
         h1 {
             font-size: 4rem;
-            margin: 8.75rem auto 0.25em;
+            margin: 6.875rem auto 0.25em;
             line-height: 112%;
+            letter-spacing: -2px;
         }
 
         .body {
-            font-size: 1.5rem;
-            max-width: 66.666%;
+            max-width: 50%;
             margin: 0 auto;
         }
 
@@ -166,14 +166,13 @@
 
     @media (min-width: 1000px) {
         h1 {
-            max-width: 90%;
-            font-size: 4.5rem;
+            max-width: 80%;
         }
     }
 
     @media (min-width: #{$bp-extra-large}) {
         h1 {
-            max-width: 80%;
+            max-width: 70%;
         }
 
         .cta {

@@ -333,7 +333,7 @@ const HomePage = ({ data }) => {
     textureCircle2: data.textureCircle2,
   }
   return (
-    <App>
+    <App className="app-home">
       <ConnectedHomePage {...post.frontmatter} images={images} />
     </App>
   )

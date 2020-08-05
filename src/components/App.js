@@ -7,8 +7,8 @@ import SEO from "./SEO.js"
 
 import "../css/app.scss"
 
-const App = ({ children }) => (
-  <div className="app">
+const App = ({ children, className }) => (
+  <div className={`app ${className}`}>
     <SEO />
     <Header />
     {children}
@@ -21,6 +21,7 @@ App.propTypes = {
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node,
   ]),
+  className: PropTypes.string,
 }
 
 export default App

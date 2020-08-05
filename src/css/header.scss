@@ -16,6 +16,10 @@ header {
         padding: 0;
         position: relative;
 
+        .app-home & {
+            background-color: #E2E2E2;
+        }
+
         @media (min-width: #{$bp-medium}) {
             .navbar-collapse {
                 display: block !important;

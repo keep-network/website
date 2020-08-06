@@ -330,6 +330,22 @@ CastleGate.defaultProps = {
   width: "50",
 }
 
+export const Close = ({ color = "#0A0806", size = 25 }) => (
+  <svg width={size} height={size} fill="none" viewBox="0 0 25 25">
+    <path
+      fill={color}
+      fillRule="evenodd"
+      d="M2.47 1.47a.75.75 0 011.06 0L13 10.938l9.467-9.468a.75.75 0 111.061 1.06L14.061 12l9.47 9.468a.75.75 0 01-1.061 1.061L13 13.06l-9.467 9.468a.75.75 0 01-1.061-1.06l9.467-9.47L2.47 2.53a.75.75 0 010-1.06z"
+      clipRule="evenodd"
+    ></path>
+  </svg>
+)
+
+Close.propTypes = {
+  color: PropTypes.string,
+  size: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+}
+
 export const Keep = ({ color, height, width }) => (
   <svg
     height={height}

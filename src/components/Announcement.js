@@ -3,14 +3,20 @@ import { graphql, StaticQuery } from "gatsby"
 import { Alert } from "reactstrap"
 import PropTypes from "prop-types"
 
-const AnnouncementTemplate = ({ body }) => (
+import { Close } from "./Icons"
+
+const AnnouncementTemplate = ({ body, onClick }) => (
   <Alert color="info" className="announcement">
     <div className="body" dangerouslySetInnerHTML={{ __html: body }} />
+    <button className="close-btn" onClick={onClick}>
+      <Close size={16} />
+    </button>
   </Alert>
 )
 
 AnnouncementTemplate.propTypes = {
   body: PropTypes.string,
+  onClick: PropTypes.func,
 }
 
 // Query for announcement
@@ -28,7 +34,7 @@ export const query = graphql`
   }
 `
 
-const Announcement = () => (
+const Announcement = ({ onClick }) => (
   <StaticQuery
     query={query}
     render={(data) => {
@@ -36,9 +42,13 @@ const Announcement = () => (
       if (!body) {
         return null
       }
-      return <AnnouncementTemplate body={body} />
+      return <AnnouncementTemplate body={body} onClick={onClick} />
     }}
   />
 )
+
+Announcement.propTypes = {
+  onClick: PropTypes.func,
+}
 
 export default Announcement

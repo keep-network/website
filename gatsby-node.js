@@ -44,6 +44,29 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   })
 }
 
+exports.createSchemaCustomization = ({ actions }) => {
+  const { createTypes } = actions
+  const typeDefs = `
+    type MarkdownRemark implements Node {
+      frontmatter: Frontmatter
+    }
+    type Frontmatter {
+      hero: Hero
+    }
+    type Hero {
+      cta: Cta
+    }
+    type Cta {
+      icon: Icon
+    }
+    type Icon {
+      alt: String
+      image: File @fileByRelativePath
+    }
+  `
+  createTypes(typeDefs)
+}
+
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions
   fmImagesToRelative(node) // convert image paths for gatsby images

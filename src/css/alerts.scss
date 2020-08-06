@@ -1,11 +1,10 @@
 .alert {
-    text-align: center;
     border-radius: 0;
     border: 0;
     background-color: $error-color;
     color: $white;
-    padding: 6px;
-    margin-bottom: 0;
+    margin: 1.5em 15px;
+    padding: 6px 60px 6px 15px;
     @extend .light-font;
     font-size: 15px;
 
@@ -21,13 +20,42 @@
 
     p {
         margin-bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+
+        img {
+            margin-right: 8px;
+        }
     }
 
-    @media only screen and (min-width: 366px) and (max-width: 378px) {
-        padding: 8px 15px;
+    .close-btn {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: transparent;
+        border: 0;
+        mix-blend-mode: multiply;
+        padding: 6px;
+
+        svg {
+            path {
+                fill: $error-color;
+            }
+        }
     }
 
-    @media only screen and (min-width: 709px) and (max-width: 757px) {
-        padding: 8px 30px;
+    @media (min-width: #{$bp-medium}) {
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        margin: 0;
+        text-align: left;
+
+        p {
+            white-space: nowrap;
+        }
     }
 }

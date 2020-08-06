@@ -10,6 +10,7 @@ import {
   Icons,
   Image,
   ImageLink,
+  Link,
   PageSection,
   Profile,
 } from "../components"
@@ -25,24 +26,41 @@ export const HomePageTemplate = ({
   advisors_section: advisorsSection = {},
   supporters_section: supportersSection = {},
 }) => {
-  const handleSignupDiscord = ({ email }) => {
-    signupMailingList({ email, discordSignup: true })
-  }
-
   return (
     <div className="main-content">
-      <PageSection id={sections.HOME}>
+      <PageSection
+        id={sections.HOME}
+        style={{
+          backgroundImage: `url(${hero.bg_image.childImageSharp.fluid.src})`,
+        }}
+      >
         <Row>
-          <Col xs={12} sm={7}>
-            <h1>{hero.title}</h1>
+          <Col xs={12}>
+            <h1 dangerouslySetInnerHTML={{ __html: hero.title }} />
             <div
               className="body"
               dangerouslySetInnerHTML={{ __html: hero.body }}
             />
           </Col>
-          <Col xs={12} sm={5} className="col-circles">
-            <Image imageData={images.textureCircle1} />
-          </Col>
+        </Row>
+        <Row className="cta-section">
+          {hero.cta ? (
+            <Col xs={12} sm={12} md={6} lg={4} className="cta">
+              {hero.cta.icon ? <Image imageData={hero.cta.icon} /> : ""}
+              <h2>{hero.cta.label}</h2>
+            </Col>
+          ) : (
+            ""
+          )}
+          <ul className="cta-links col-12 col-sm-12 col-md-6 col-lg-4">
+            {hero.cta_buttons.map((btn, i) => (
+              <li key={`cta-btn-${i}`}>
+                <Link url={btn.url} className="cta-link">
+                  {btn.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
         </Row>
       </PageSection>
       <PageSection id={sections.FEATURED_APPLICATION}>
@@ -85,20 +103,17 @@ export const HomePageTemplate = ({
           </Col>
         </Row>
       </PageSection>
-      <PageSection id={sections.DISCORD}>
-        <Row className="discord-signup">
+      <PageSection id={sections.MAILING_LIST}>
+        <Row>
           <Col xs={12} sm={7}>
             <EmailForm
-              label="Discord Email"
+              label="Email"
               placeholder="you@example.com"
-              onSubmit={handleSignupDiscord}
+              onSubmit={signupMailingList}
               requestStates={ajaxRequestStates}
               request={actionTypes.SIGNUP_MAILING_LIST}
             >
-              <h3>
-                Join our community on
-                <span className="discord-logo">Discord</span>
-              </h3>
+              <h3>Join our mailing list for updates</h3>
             </EmailForm>
           </Col>
           <Col xs={12} sm={5} className="col-circles">
@@ -132,21 +147,6 @@ export const HomePageTemplate = ({
                 <Icons.ArrowRight />
               </Button>
             </h3>
-          </Col>
-        </Row>
-      </PageSection>
-      <PageSection id={sections.MAILING_LIST}>
-        <Row>
-          <Col sm={12} md={{ size: 8, offset: 2 }}>
-            <EmailForm
-              label="Email"
-              placeholder="you@example.com"
-              onSubmit={signupMailingList}
-              requestStates={ajaxRequestStates}
-              request={actionTypes.SIGNUP_MAILING_LIST}
-            >
-              <h3>Join our mailing list</h3>
-            </EmailForm>
           </Col>
         </Row>
       </PageSection>
@@ -308,11 +308,10 @@ export const ConnectedHomePage = connect(mapStateToProps, {
 const HomePage = ({ data }) => {
   const { markdownRemark: post } = data
   const images = {
-    textureCircle1: data.textureCircle1,
     textureCircle2: data.textureCircle2,
   }
   return (
-    <App>
+    <App className="app-home">
       <ConnectedHomePage {...post.frontmatter} images={images} />
     </App>
   )
@@ -336,6 +335,26 @@ export const query = graphql`
         hero {
           title
           body
+          bg_image {
+            childImageSharp {
+              fluid(maxWidth: 1440, quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+          cta {
+            label
+            icon {
+              image {
+                relativePath
+              }
+              alt
+            }
+          }
+          cta_buttons {
+            label
+            url
+          }
         }
         team_section {
           title
@@ -387,13 +406,6 @@ export const query = graphql`
               alt
             }
           }
-        }
-      }
-    }
-    textureCircle1: file(relativePath: { regex: "/texture-circle.png/" }) {
-      childImageSharp {
-        fluid(maxWidth: 574, quality: 100) {
-          ...GatsbyImageSharpFluid
         }
       }
     }

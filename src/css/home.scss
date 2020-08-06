@@ -1,13 +1,5 @@
-.main-content {
-    padding-top: 51px;
-
-    @media (min-width: #{$bp-medium}) {
-        padding-top: 0;
-    }
-}
-
 .home,
-.discord {
+.mailing-list {
     .col-circles {
         text-align: center;
 
@@ -28,42 +20,165 @@
 }
 
 .home {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    // Make bg image appear behind the alert on mobile
+    padding-top: 115px;
+    margin-top: -125px;
+
+    // Gradient overlay for background image
+    &:before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 400px;
+        left: 0;
+        bottom: 0;
+
+        background: linear-gradient(180deg, rgba(239, 239, 239, 0) 0%, rgba(239, 239, 239, 0.993393) 61.33%, #EFEFEF 61.34%, #EFEFEF 61.35%, #EFEFEF 61.36%);
+        mix-blend-mode: normal;
+        opacity: 0.5;
+    }
+
     h1 {
-        margin: 40px 0 1em;
+        margin: 2.5rem 0 0.5em;
+        font-size: 1.75rem;
+        line-height: 120%;
+        letter-spacing: -1px;
+        text-align: center;
     }
 
-    p {
-        color: $accent-text-color;
+    .body {
+        color: $grey-70;
     }
 
-    @media (min-width: #{$bp-extra-large}) {
-        h1, p {
-            width: 85%;
+    .cta-section {
+        align-items: center;
+    }
+
+    .cta {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 100px 0 30px;
+
+        img {
+            margin-right: 15px;
+            width: 24px;
         }
 
-        div.body {
-            width: 85%;
+        h2 {
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.5rem;
+            line-height: 100%;
+            letter-spacing: -0.5px;
+            margin: 0;
+        }
+    }
+
+    .cta-links {
+        li {
+            list-style: none;
+            margin: 0 0 1em;
+        }
+
+        .cta-link {
+            @extend .btn;
+            @extend .btn-primary;
+            display: block;
+            position: relative;
+            text-align: left;
+            padding-right: 78px;
+            white-space: nowrap;
+
+            &:after {
+                position: absolute;
+                right: 32px;
+                top: 50%;
+                transform: translateY(-50%);
+                content: ' →';
+            }
+
+            &:focus,
+            &:active {
+                padding-right: 78px;
+            }
         }
     }
 
     @media (min-width: #{$bp-medium}) {
-        padding: 170px 0 0;
-    }
+        background-position: center;
+        padding: 110px 0 0;
+        margin-top: 0;
 
-    @media (max-width: #{($bp-medium - 1)}) {
-        padding: 40px 0 0;
-    }
+        &:before {
+            height: 325px;
+        }
 
-    @media (min-width: 768px) and (max-width: 991px) {
+        h1, .body {
+            text-align: center;
+        }
+
         h1 {
-            font-size: 40px;
-            line-height: 42px;
+            font-size: 4rem;
+            margin: 6.875rem auto 0.25em;
+            line-height: 112%;
+            letter-spacing: -2px;
+        }
+
+        .body {
+            max-width: 50%;
+            margin: 0 auto;
+        }
+
+        .cta-section {
+            margin-top: 135px;
+            justify-content: center;
+            padding: 16px 0 75px;
+        }
+
+        .cta {
+            margin: 0;
+
+            img {
+                width: auto;
+            }
+
+            h2 {
+                text-align: left;
+                font-size: 2rem;
+                line-height: 125%;
+                letter-spacing: -1px;
+            }
+        }
+
+        .cta-links {
+            text-align: center;
+
+            li {
+                margin: 1.5rem 0;
+            }
         }
     }
 
-    @media (min-width: 620px) {
-        .col-circles {
-            align-self: flex-end;
+    @media (min-width: 1000px) {
+        h1 {
+            max-width: 80%;
+        }
+    }
+
+    @media (min-width: #{$bp-extra-large}) {
+        h1 {
+            max-width: 70%;
+        }
+
+        .cta {
+            h2 {
+                max-width: 70%;
+            }
         }
     }
 }
@@ -208,30 +323,18 @@
     }
 }
 
-.discord {
-    background-color: $background-med-color;
+.mailing-list {
+    background-color: $link-color;
 
     h3 {
         display: flex;
         align-items: center;
         flex-wrap: wrap;
-        color: $accent-text-color;
         margin: 10px 0 30px;
-    }
-
-    .discord-logo {
-        display: inline-block;
-        width: 135px;
-        height: 33px;
-        text-indent: 100%;
-        white-space: nowrap;
-        overflow: hidden;
-        background-image: url(../images/Discord-Wordmark-Gold.svg);
-        background-repeat: no-repeat;
-        background-position: center;
-        margin: 0 9px;
-        position: relative;
-        bottom: -2px;
+        font-family: 'Vitesse', 'Work Sans', sans-serif;
+        font-size: 2rem;
+        line-height: 125%;
+        letter-spacing: -1px;
     }
 
     @media (min-width: #{$bp-large}) {
@@ -246,13 +349,7 @@
 
     @media (max-width: #{($bp-medium - 1)}) {
         h3 {
-            font-size: 22px;
-        }
-    }
-
-    @media (min-width: 768px) and (max-width: 991px) {
-        .discord-logo {
-            margin: 0;
+            font-size: 1.75rem;
         }
     }
 
@@ -280,14 +377,17 @@
     }
 
     @media (max-width: 619px) {
-        text-align: center;
+        padding-top: 0;
 
-        h3 {
-            justify-content: center;
+        .row {
+            flex-direction: column-reverse;
         }
 
-        .email-form .success-message {
-            font-weight: 400;
+        .email-form {
+            margin-top: 70px;
+            .success-message {
+                font-weight: 400;
+            }
         }
 
         .form-inline,
@@ -297,7 +397,7 @@
 
         .btn {
             display: block;
-            width: 177px;
+            width: 100%;
             margin: 10px auto 20px;
         }
 
@@ -310,10 +410,10 @@
                 width: 100%;
                 padding-top: 50%;
                 padding-bottom: 40px;
-                background-color: $background-light-color;
+                background-color: #fffdfc;
                 position: absolute;
                 left: 0;
-                bottom: -40px;
+                top: 0;
                 z-index: -1;
             }
 
@@ -364,50 +464,6 @@
         @media (min-width: #{$bp-medium}) {
             display: inline-block;
             margin: 0 0 0 15px;
-        }
-    }
-}
-
-.mailing-list {
-    border-top: 1px solid rgba($black, 0.5);
-    text-align: center;
-
-    h3 {
-        margin: 0 0 20px;
-    }
-
-    .form-inline {
-        width: 100%;
-    }
-
-    @media (min-width: #{$bp-medium}) {
-        .form-group {
-            min-width: 60%;
-        }
-    }
-
-    @media (min-width: 481px) {
-        .form-inline {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .form-group {
-            margin-right: 5px;
-        }
-    }
-
-    @media (max-width: #{$bp-small}) {
-        .form-inline,
-        .form-group {
-            display: block;
-        }
-
-        .btn {
-            display: block;
-            width: 177px;
-            margin: 10px auto 20px;
         }
     }
 }

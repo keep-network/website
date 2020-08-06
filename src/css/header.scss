@@ -1,4 +1,7 @@
 header {
+    position: relative;
+    z-index: 3;
+
     @media (min-width: #{$bp-medium}) {
         position: fixed;
         width: 100%;
@@ -12,6 +15,10 @@ header {
         margin: 0 auto;
         padding: 0;
         position: relative;
+
+        .app-home & {
+            background-color: #E2E2E2;
+        }
 
         @media (min-width: #{$bp-medium}) {
             .navbar-collapse {

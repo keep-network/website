@@ -5,7 +5,13 @@ import { Container } from "reactstrap"
 
 import { ArrowRight } from "./Icons"
 
-const PageSection = ({ id, additionalClassNames, children, collapsible }) => {
+const PageSection = ({
+  id,
+  additionalClassNames,
+  children,
+  collapsible,
+  style,
+}) => {
   const [isCollapsed, setIsCollapsed] = useState(collapsible ? true : false)
 
   const toggleCollapse = () => {
@@ -20,7 +26,7 @@ const PageSection = ({ id, additionalClassNames, children, collapsible }) => {
   )
 
   return (
-    <section className={classes} id={id}>
+    <section className={classes} id={id} style={style}>
       <div className="page-section-content">
         <Container fluid="md">
           {children}
@@ -46,6 +52,7 @@ PageSection.propTypes = {
     PropTypes.node,
   ]),
   collapsible: PropTypes.bool,
+  style: PropTypes.object,
 }
 
 PageSection.defaultProps = {

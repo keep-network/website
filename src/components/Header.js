@@ -54,9 +54,13 @@ export const HeaderTemplate = ({ navItems = [] }) => {
   const [collapsed, setCollapsed] = useState(true)
   const toggleNavbar = () => setCollapsed(!collapsed)
 
+  const [isAnnouncementVisible, setIsAnnouncementVisible] = useState(true)
+  const dismissAnnouncement = () => {
+    setIsAnnouncementVisible(false)
+  }
+
   return (
     <header>
-      <Announcement />
       <Navbar>
         <Container fluid="md">
           <NavScrollItem
@@ -79,6 +83,11 @@ export const HeaderTemplate = ({ navItems = [] }) => {
           </Collapse>
         </Container>
       </Navbar>
+      {isAnnouncementVisible ? (
+        <Announcement onClick={dismissAnnouncement} />
+      ) : (
+        ""
+      )}
     </header>
   )
 }

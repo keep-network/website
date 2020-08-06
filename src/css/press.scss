@@ -80,6 +80,11 @@
                 flex-direction: row;
                 align-items: baseline;
 
+                a {
+                    @extend .btn;
+                    @extend .btn-primary;
+                }
+
                 .media-kit-description {
                     display: flex;
                     align-items: flex-start;

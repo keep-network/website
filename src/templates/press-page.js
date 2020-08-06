@@ -101,7 +101,6 @@ export const PressPageTemplate = ({
               </div>
             </div>
             <a
-              className="btn btn-primary"
               href={withPrefix(
                 `/images/${mediaKitSection.media_kit.download_button.file.relativePath}`
               )}

@@ -178,8 +178,26 @@ a {
     }
 }
 
-.btn.disabled,
-.btn[disabled],
+.btn-default.disabled,
+.btn-default[disabled] {
+    border-color: $grey-20;
+    color: $grey-30;
+    cursor: not-allowed;
+
+    &:hover,
+    &:active {
+        border-color: $grey-20;
+        color: $grey-30;
+        box-shadow: none;
+
+        &:before {
+            display: none;
+        }
+    }
+}
+
+.btn-primary.disabled,
+.btn-primary[disabled],
 fieldset[disabled] .btn {
     background-color: $grey-20;
     color: $grey-30;

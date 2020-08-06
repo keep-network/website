@@ -106,24 +106,43 @@ a {
     color: $link-color;
     border: 1px solid $black;
     color: $black;
+    transition: 0.25s all ease-in;
+    position: relative;
+
+    &:before {
+        display: block;
+        content: '';
+        width: calc(100% + 2px);
+        height: 4px;
+        position: absolute;
+        bottom: -5px;
+        left: -1px;
+        background-color: transparent;
+        transition: 0.25 background-color ease-in;
+    }
+
+    &:hover,
+    &:active {
+        text-decoration: none;
+    }
+
+    &:hover {
+        &:before {
+            background-color: $black;
+        }
+    }
+
+    &:active {
+        &:before {
+            background-color: $link-color;
+        }
+    }
 }
 
 .btn-primary {
     background-color: $black;
     border-color: $black;
     color: $link-color;
-}
-
-.btn-primary-on-dark {
-    background-color: $link-color;
-    border-color: $link-color;
-    color: $black;
-}
-
-.btn-default,
-.btn-primary,
-.btn-primary[disabled],
-.btn-primary.disabled {
     transition: 0.25s all ease-in;
 
     &:hover {
@@ -143,7 +162,17 @@ a {
         color: $black;
         box-shadow: none;
     }
+}
 
+.btn-primary-on-dark {
+    background-color: $link-color;
+    border-color: $link-color;
+    color: $black;
+}
+
+.btn-default,
+.btn-primary,
+.btn-primary-on-dark {
     &:focus {
         outline: 0;
     }
@@ -160,6 +189,7 @@ fieldset[disabled] .btn {
     &:active {
         background-color: $grey-20;
         color: $grey-30;
+        box-shadow: none;
     }
 }
 

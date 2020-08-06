@@ -151,7 +151,15 @@ a {
 .btn.disabled,
 .btn[disabled],
 fieldset[disabled] .btn {
-    opacity: 0.5;
+    background-color: $grey-20;
+    color: $grey-30;
+    cursor: not-allowed;
+
+    &:hover,
+    &:active {
+        background-color: $grey-20;
+        color: $grey-30;
+    }
 }
 
 .btn-submit {

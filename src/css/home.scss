@@ -242,14 +242,7 @@
     a {
         @extend .btn, .btn-default;
 
-        font-size: 1.5rem;
-        font-variant: small-caps;
-        font-weight: 600;
-        text-transform: lowercase;
-
         display: inline-block;
-        padding-top: 2px;
-        padding-bottom: 6px;
     }
 
     a.primary {

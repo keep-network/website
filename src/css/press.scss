@@ -253,32 +253,12 @@
         }
     }
 
-    .see-all {
+    .pagination {
         margin-bottom: 50px;
 
-        .see-all-button {
-            float: right;
-            font-family: 'Work Sans', sans-serif;
-            font-weight: bold;
-            font-size: 1.5em;
-            vertical-align: middle;
-            cursor: pointer;
-            background-color: transparent;
-            border-width: 0;
-
-            svg {
-                margin-left: 5px;
-            }
-
-            &:hover {
-                color: $aqua-marine;
-
-                svg {
-                    line, path {
-                        stroke: $aqua-marine;
-                    }
-                }
-            }
+        .container-md {
+            display: flex;
+            justify-content: flex-end;
         }
     }
 }

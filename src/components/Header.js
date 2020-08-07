@@ -84,7 +84,7 @@ export const HeaderTemplate = ({ navItems = [] }) => {
         </Container>
       </Navbar>
       {isAnnouncementVisible ? (
-        <Announcement onClick={dismissAnnouncement} />
+        <Announcement onClose={dismissAnnouncement} />
       ) : (
         ""
       )}

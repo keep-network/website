@@ -1,5 +1,5 @@
 import React from "react"
-import { Container, Button } from "reactstrap"
+import { Container } from "reactstrap"
 import { graphql, StaticQuery } from "gatsby"
 import PropTypes from "prop-types"
 
@@ -20,9 +20,9 @@ export const FooterTemplate = ({
         <ul className="footer-column-1">
           <li className="keep-logo">Keep</li>
           <li>
-            <Button className="email-btn" href={`mailto:${emailLink.email}`}>
+            <button className="email-btn" href={`mailto:${emailLink.email}`}>
               {emailLink.label}
-            </Button>
+            </button>
           </li>
         </ul>
         {navCategories.map((category, i) => (

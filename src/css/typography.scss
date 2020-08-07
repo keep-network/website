@@ -168,6 +168,7 @@ a {
     background-color: $link-color;
     border-color: $link-color;
     color: $black;
+    transition: 0.25s all ease-in;
 }
 
 .btn-default,

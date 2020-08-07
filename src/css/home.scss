@@ -247,6 +247,13 @@
 
     a.primary {
         @extend .btn-primary;
+
+        &:hover,
+        &:active {
+            &:before {
+                display: none;
+            }
+        }
     }
 
     @media (max-width: #{$bp-large}) {
@@ -323,6 +330,14 @@
         font-size: 2rem;
         line-height: 125%;
         letter-spacing: -1px;
+    }
+
+    .btn-submit {
+        &:active,
+        &:focus {
+            background-color: $white;
+            color: $black;
+        }
     }
 
     @media (min-width: #{$bp-large}) {

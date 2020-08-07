@@ -83,6 +83,12 @@
                 a {
                     @extend .btn;
                     @extend .btn-primary;
+
+                    &:active,
+                    &:focus {
+                        background-color: $white;
+                        color: $black;
+                    }
                 }
 
                 .media-kit-description {
@@ -207,6 +213,17 @@
                     .view-arrow {
                         color: $black;
                         white-space: nowrap;
+                        border-bottom: 2px solid transparent;
+
+                        &:focus,
+                        &:hover {
+                            border-color: $black;
+                            outline: 0;
+                        }
+
+                        &:active {
+                            border-color: $link-color;
+                        }
                     }
                 }
 

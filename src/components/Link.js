@@ -1,9 +1,20 @@
 import React from "react"
-import { Link as GatsbyLink } from "gatsby"
+import { Link as GatsbyLink, withPrefix } from "gatsby"
 import { Link as ScrollLink } from "react-scroll"
+import { useLocation } from "@reach/router"
 import PropTypes from "prop-types"
 
 const Link = ({ url, children, ...props }) => {
+  /* eslint-disable no-var */
+  try {
+    var location = useLocation()
+  } catch (error) {
+    var location = window.location
+  }
+
+  const currentPageIsHome = location.pathname === withPrefix("/")
+
+  // Test if url is an external link
   if (/^http/.test(url)) {
     return (
       <a href={url} rel="noopener noreferrer" target="_blank" {...props}>
@@ -14,7 +25,7 @@ const Link = ({ url, children, ...props }) => {
 
   // Test if the url is a hash link on the home page
   const regex = /^\/?#/
-  if (regex.test(url)) {
+  if (currentPageIsHome && regex.test(url)) {
     return (
       <ScrollLink
         to={url.replace(regex, "")}

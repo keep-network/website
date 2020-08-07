@@ -20,6 +20,7 @@
 }
 
 .home {
+    background-image: url(../../static/images/hero-bg.jpg); // Set via cms
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -110,7 +111,6 @@
     }
 
     @media (min-width: #{$bp-medium}) {
-        background-position: center;
         padding: 110px 0 0;
         margin-top: 0;
 

@@ -28,12 +28,7 @@ export const HomePageTemplate = ({
 }) => {
   return (
     <div className="main-content">
-      <PageSection
-        id={sections.HOME}
-        style={{
-          backgroundImage: `url(${hero.bg_image.childImageSharp.fluid.src})`,
-        }}
-      >
+      <PageSection id={sections.HOME}>
         <Row>
           <Col xs={12}>
             <h1 dangerouslySetInnerHTML={{ __html: hero.title }} />
@@ -335,13 +330,6 @@ export const query = graphql`
         hero {
           title
           body
-          bg_image {
-            childImageSharp {
-              fluid(maxWidth: 1440, quality: 100) {
-                ...GatsbyImageSharpFluid
-              }
-            }
-          }
           cta {
             label
             icon {

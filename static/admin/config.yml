@@ -38,8 +38,10 @@ collections:
                   label: "Background Image",
                   name: "bg_image",
                   widget: "image",
-                  hint: "Minimum image width of 2880px required (to be
-                    rendered as 1440px) to support higher resolution screens",
+                  hint: "IMPORTANT! Image must be named \"hero-bg.jpg\" exactly
+                    (it also must be a jpg), otherwise it will not appear.
+                    Minimum image width of 2880px required (to be rendered as
+                    1440px) to support higher resolution screens.",
                 }
               - label: "CTA"
                 name: "cta"

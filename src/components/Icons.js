@@ -28,7 +28,32 @@ ArrowDown.propTypes = {
   width: PropTypes.string,
 }
 
-export const ArrowRight = ({ color, height, width }) => (
+export const ArrowRight = ({ color = "#0A0806", height = 26, width = 27 }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={width}
+    height={height}
+    fill="none"
+    viewBox="0 0 27 26"
+    aria-labelledby="arrow-right-title"
+  >
+    <title id="arrow-right-title">Right Arrow Icon</title>
+    <path
+      fill={color}
+      fillRule="evenodd"
+      d="M18.586 11.414L13 5.828 15.828 3l10.415 10.414-10.415 10.414L13 21l5.586-5.586H0v-4h18.586z"
+      clipRule="evenodd"
+    ></path>
+  </svg>
+)
+
+ArrowRight.propTypes = {
+  color: PropTypes.string,
+  height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+}
+
+export const ArrowRightLong = ({ color, height, width }) => (
   <svg
     width={width}
     height={height}
@@ -37,18 +62,18 @@ export const ArrowRight = ({ color, height, width }) => (
     aria-labelledby="arrow-right-title"
     role="img"
   >
-    <title id="arrow-right-title">Right Arrow Icon</title>
+    <title id="arrow-right-title">Long Right Arrow Icon</title>
     <path stroke={color} strokeWidth={4} d="M0 11h54M47 2l9 9-9 9" />
   </svg>
 )
 
-ArrowRight.propTypes = {
+ArrowRightLong.propTypes = {
   color: PropTypes.string,
   height: PropTypes.string,
   width: PropTypes.string,
 }
 
-ArrowRight.defaultProps = {
+ArrowRightLong.defaultProps = {
   color: "#48DBB4",
   height: "18",
   width: "56",

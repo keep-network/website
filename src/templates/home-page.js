@@ -144,7 +144,7 @@ export const HomePageTemplate = ({
                 rel="noopener noreferrer"
                 target="_blank"
               >
-                <Icons.ArrowRight />
+                <Icons.ArrowRightLong />
               </Button>
             </h3>
           </Col>

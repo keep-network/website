@@ -145,10 +145,22 @@ a {
     color: $primary-color;
     transition: 0.25s all ease-in;
 
+    svg {
+        path {
+            transition: all 0.25s ease-in;
+        }
+    }
+
     &:hover {
         background-color: $black;
         color: $white;
         text-decoration: none;
+
+        svg {
+            path {
+                stroke: $white;
+            }
+        }
     }
 
     &:focus,
@@ -161,6 +173,12 @@ a {
         border-color: $primary-color;
         color: $black;
         box-shadow: none;
+
+        svg {
+            path {
+                stroke: $black;
+            }
+        }
     }
 }
 

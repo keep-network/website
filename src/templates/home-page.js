@@ -1,6 +1,6 @@
 import React from "react"
 import { connect } from "react-redux"
-import { Button, Col, Row } from "reactstrap"
+import { Col, Row } from "reactstrap"
 import PropTypes from "prop-types"
 import { graphql } from "gatsby"
 
@@ -132,15 +132,14 @@ export const HomePageTemplate = ({
                 GitHub
               </a>
               Repository
-              <Button
+              <a
+                className="github-link"
                 href="https://github.com/keep-network"
-                color="primary"
-                size="lg"
                 rel="noopener noreferrer"
                 target="_blank"
               >
                 <Icons.ArrowRightLong />
-              </Button>
+              </a>
             </h3>
           </Col>
         </Row>

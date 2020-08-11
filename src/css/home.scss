@@ -459,7 +459,8 @@
         top: 2px;
     }
 
-    .btn {
+    .github-link {
+        @extend .btn, .btn-primary;
         display: block;
         margin: 30px auto;
         max-width: 150px;

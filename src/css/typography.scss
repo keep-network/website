@@ -238,11 +238,7 @@ fieldset[disabled] .btn {
     min-width: 124px;
     text-align: center;
     vertical-align: middle;
-
-    &:focus,
-    &:active {
-        border-style: solid;
-    }
+    border-style: solid;
 
     .spinner {
         display: inline-block;

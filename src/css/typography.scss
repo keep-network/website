@@ -132,6 +132,7 @@ a {
         }
     }
 
+    &:focus,
     &:active {
         &:before {
             background-color: $primary-color;

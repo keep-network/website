@@ -30,7 +30,7 @@ const NavItem = ({ label, url }) => {
   const regex = /^\/?#/
   if (regex.test(url)) {
     return (
-      <NavScrollItem href="/" to={url.replace(regex, "")} hashSpy={true}>
+      <NavScrollItem href={url} to={url.replace(regex, "")} hashSpy={true}>
         {label}
       </NavScrollItem>
     )

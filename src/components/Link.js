@@ -28,6 +28,7 @@ const Link = ({ url, children, ...props }) => {
   if (currentPageIsHome && regex.test(url)) {
     return (
       <ScrollLink
+        href={url}
         to={url.replace(regex, "")}
         smooth
         duration={500}

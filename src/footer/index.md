@@ -7,9 +7,9 @@ nav_categories:
   - title: Company
     items:
       - label: Team
-        url: /#team
+        url: #team
       - label: Advisors
-        url: /#advisors
+        url: #advisors
   - title: Follow
     items:
       - label: Press

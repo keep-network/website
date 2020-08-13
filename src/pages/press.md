@@ -13,9 +13,9 @@ media_kit_section:
       alt: Newspaper icon
     label: Media Kit
     contents:
-      - wordmarks
+      - logos
       - token symbol
-      - Color variations
+      - color variations
     download_button:
       label: Download
       file: /images/media/KeepMediaKit.zip

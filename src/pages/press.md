@@ -9,13 +9,13 @@ media_kit_section:
   subtitle: Find everything you might need in our media kit.
   media_kit:
     icon:
-      image: /images/svg/newspaper.svg
+      image: /images/keep_media_kit.zip
       alt: Newspaper icon
     label: Media Kit
     contents:
       - logos
       - token symbol
-      - color variations
+      - media guide
     download_button:
       label: Download
       file: /images/media/KeepMediaKit.zip

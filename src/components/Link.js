@@ -5,11 +5,11 @@ import { useLocation } from "@reach/router"
 import PropTypes from "prop-types"
 
 const Link = ({ url, children, ...props }) => {
-  /* eslint-disable no-var */
+  let location
   try {
-    var location = useLocation()
+    location = useLocation()
   } catch (error) {
-    var location = window.location
+    location = window.location
   }
 
   const currentPageIsHome = location.pathname === withPrefix("/")

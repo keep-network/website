@@ -3,8 +3,8 @@ import ClampLines from "react-clamp-lines"
 import PropTypes from "prop-types"
 import { withPrefix, graphql } from "gatsby"
 
-import { App, Image, PageSection } from "../components"
-import { ArrowRight } from "../components/Icons"
+import { App, Image } from "../components"
+import PageSection, { SeeAllButton } from "../components/PageSection"
 
 const PressItem = ({ title, date, source, aboveTheFold, url }) => {
   const [windowWidth, setWindowWidth] = useState(0)
@@ -101,7 +101,6 @@ export const PressPageTemplate = ({
               </div>
             </div>
             <a
-              className="btn btn-primary"
               href={withPrefix(
                 `/images/${mediaKitSection.media_kit.download_button.file.relativePath}`
               )}
@@ -129,10 +128,8 @@ export const PressPageTemplate = ({
         </div>
       </PageSection>
       {allPressEntries.length > 10 && pressEntries.length === 10 ? (
-        <PageSection id="see-all">
-          <button className="see-all-button" onClick={handleShowAll}>
-            See all <ArrowRight color="#000" height="22" width="59" />
-          </button>
+        <PageSection id="pagination">
+          <SeeAllButton onClick={handleShowAll} />
         </PageSection>
       ) : (
         ""

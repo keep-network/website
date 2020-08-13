@@ -1,6 +1,6 @@
 import React from "react"
 import { connect } from "react-redux"
-import { Button, Col, Row } from "reactstrap"
+import { Col, Row } from "reactstrap"
 import PropTypes from "prop-types"
 import { graphql } from "gatsby"
 
@@ -28,12 +28,7 @@ export const HomePageTemplate = ({
 }) => {
   return (
     <div className="main-content">
-      <PageSection
-        id={sections.HOME}
-        style={{
-          backgroundImage: `url(${hero.bg_image.childImageSharp.fluid.src})`,
-        }}
-      >
+      <PageSection id={sections.HOME}>
         <Row>
           <Col xs={12}>
             <h1 dangerouslySetInnerHTML={{ __html: hero.title }} />
@@ -137,15 +132,14 @@ export const HomePageTemplate = ({
                 GitHub
               </a>
               Repository
-              <Button
+              <a
+                className="github-link"
                 href="https://github.com/keep-network"
-                color="primary"
-                size="lg"
                 rel="noopener noreferrer"
                 target="_blank"
               >
-                <Icons.ArrowRight />
-              </Button>
+                <Icons.ArrowRightLong />
+              </a>
             </h3>
           </Col>
         </Row>
@@ -335,13 +329,6 @@ export const query = graphql`
         hero {
           title
           body
-          bg_image {
-            childImageSharp {
-              fluid(maxWidth: 1440, quality: 100) {
-                ...GatsbyImageSharpFluid
-              }
-            }
-          }
           cta {
             label
             icon {

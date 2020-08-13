@@ -5,6 +5,18 @@ import { Container } from "reactstrap"
 
 import { ArrowRight } from "./Icons"
 
+export const SeeAllButton = ({ collapsed = true, onClick = () => {} }) => (
+  <button className={classNames("see-all", { collapsed })} onClick={onClick}>
+    <span>{collapsed ? "See all" : "See less"}</span>
+    <ArrowRight />
+  </button>
+)
+
+SeeAllButton.propTypes = {
+  collapsed: PropTypes.bool,
+  onClick: PropTypes.func,
+}
+
 const PageSection = ({
   id,
   additionalClassNames,
@@ -31,10 +43,7 @@ const PageSection = ({
         <Container fluid="md">
           {children}
           {collapsible ? (
-            <button className="see-all" onClick={toggleCollapse}>
-              <span>{isCollapsed ? "See all" : "See less"}</span>
-              <ArrowRight />
-            </button>
+            <SeeAllButton collapsed={isCollapsed} onClick={toggleCollapse} />
           ) : (
             ""
           )}

@@ -20,6 +20,7 @@
 }
 
 .home {
+    background-image: url(../../static/images/hero-bg.jpg); // Set via cms
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -110,7 +111,6 @@
     }
 
     @media (min-width: #{$bp-medium}) {
-        background-position: center;
         padding: 110px 0 0;
         margin-top: 0;
 
@@ -242,18 +242,18 @@
     a {
         @extend .btn, .btn-default;
 
-        font-size: 1.5rem;
-        font-variant: small-caps;
-        font-weight: 600;
-        text-transform: lowercase;
-
         display: inline-block;
-        padding-top: 2px;
-        padding-bottom: 6px;
     }
 
     a.primary {
         @extend .btn-primary;
+
+        &:hover,
+        &:active {
+            &:before {
+                display: none;
+            }
+        }
     }
 
     @media (max-width: #{$bp-large}) {
@@ -293,11 +293,6 @@
             font-size: 1.25rem;
             line-height: 2rem;
         }
-
-        a {
-            font-size: 1.25rem;
-        }
-
         .application.tbtc {
             background-size: 70% auto;
             background-position: 50% top;
@@ -324,7 +319,7 @@
 }
 
 .mailing-list {
-    background-color: $link-color;
+    background-color: $primary-color;
 
     h3 {
         display: flex;
@@ -335,6 +330,14 @@
         font-size: 2rem;
         line-height: 125%;
         letter-spacing: -1px;
+    }
+
+    .btn-submit {
+        &:active,
+        &:focus {
+            background-color: $white;
+            color: $black;
+        }
     }
 
     @media (min-width: #{$bp-large}) {
@@ -456,7 +459,8 @@
         top: 2px;
     }
 
-    .btn {
+    .github-link {
+        @extend .btn, .btn-primary;
         display: block;
         margin: 30px auto;
         max-width: 150px;

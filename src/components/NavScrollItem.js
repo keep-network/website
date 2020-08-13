@@ -71,6 +71,7 @@ const NavScrollItem = ({
         <ScrollLink
           className="scroll-link"
           activeClass={activeClass}
+          href={href}
           to={to}
           spy={spy}
           hashSpy={hashSpy}

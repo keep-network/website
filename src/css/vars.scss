@@ -1,34 +1,26 @@
 // Colors
 
 $aqua-marine: #48dbb4;
-$pale-grey: #F1F1F1;
-$light-green: #c3e6dc;
-$charcoal: #293330;
-$gunmetal: #505e5b;
-$stone-grey: #E6E6E6;
 $white: #f2f2f2;
 $black: #0A0806;
 $violet: #7850CD;
-$violet-light: #B2A3DB;
 $brass: #AC6E16;
+$grey-10: #F4F4F4;
+$grey-20: #E6E6E6;
+$grey-30: #c4c4c4;
+$grey-40: #AAAAAA;
 $grey-50: #818181;
 $grey-60: #6d6d6d;
 $grey-70: #4c4c4c;
 
 $body-text-color: $black;
 $accent-text-color: $brass;
-$link-color: $aqua-marine;
-$link-active-color: $gunmetal;
-$syntax-highlight-color: $violet;
-$grey-on-light-color: $gunmetal;
+$primary-color: $aqua-marine;
+$secondary-color: $violet;
 $border-color: rgba($body-text-color, 0.25);
-$error-color: $violet;
-$error-color-light: $violet-light;
-$background-light-color: $pale-grey;
-$background-dark-color: $charcoal;
-$background-med-color: $stone-grey;
-$background-med-light-color: $light-green;
-$background-med-dark-color: $gunmetal;
+$error-color: $brass;
+$background-light-color: $grey-10;
+$background-med-color: $grey-20;
 
 // Border radius
 $border-radius: 100px;

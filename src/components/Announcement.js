@@ -5,10 +5,10 @@ import PropTypes from "prop-types"
 
 import { Close } from "./Icons"
 
-const AnnouncementTemplate = ({ body, onClick }) => (
+const AnnouncementTemplate = ({ body, onClose }) => (
   <Alert color="info" className="announcement">
     <div className="body" dangerouslySetInnerHTML={{ __html: body }} />
-    <button className="close-btn" onClick={onClick}>
+    <button className="close-btn" onClick={onClose}>
       <Close size={16} />
     </button>
   </Alert>
@@ -16,7 +16,7 @@ const AnnouncementTemplate = ({ body, onClick }) => (
 
 AnnouncementTemplate.propTypes = {
   body: PropTypes.string,
-  onClick: PropTypes.func,
+  onClose: PropTypes.func,
 }
 
 // Query for announcement
@@ -34,7 +34,7 @@ export const query = graphql`
   }
 `
 
-const Announcement = ({ onClick }) => (
+const Announcement = ({ onClose }) => (
   <StaticQuery
     query={query}
     render={(data) => {
@@ -42,13 +42,13 @@ const Announcement = ({ onClick }) => (
       if (!body) {
         return null
       }
-      return <AnnouncementTemplate body={body} onClick={onClick} />
+      return <AnnouncementTemplate body={body} onClose={onClose} />
     }}
   />
 )
 
 Announcement.propTypes = {
-  onClick: PropTypes.func,
+  onClose: PropTypes.func,
 }
 
 export default Announcement

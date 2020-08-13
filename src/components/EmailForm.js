@@ -5,7 +5,7 @@ import isEmail from "validator/lib/isEmail"
 import classNames from "classnames"
 import merge from "lodash/merge"
 
-import { ArrowRight } from "./Icons"
+import { ArrowRightLong } from "./Icons"
 import SubmitButton from "./SubmitButton"
 
 const ERRORS = {
@@ -139,7 +139,7 @@ class EmailForm extends Component {
             isLoading={requestSent && !requestSuccess}
             onClick={this.onClick}
           >
-            <ArrowRight />
+            <ArrowRightLong />
           </SubmitButton>
         </Form>
         {hasError && <small className="error-message">{errorMsg}</small>}

@@ -21,7 +21,7 @@ footer {
             list-style: none;
             padding: 5px 0;
 
-            a:not(.btn) {
+            a:not(.email-btn) {
                 color: $grey-50;
                 font-size: 21px;
                 font-weight: normal;
@@ -30,9 +30,14 @@ footer {
 
             .email-btn {
                 @extend .btn, .btn-primary-on-dark;
+                display: inline-block;
                 border: 1px solid;
                 width: 100%;
                 margin: 60px 0;
+
+                &:hover {
+                    text-decoration: none;
+                }
             }
         }
     }
@@ -156,7 +161,7 @@ footer {
                     border-color: #fff;
                     font-size: 15px;
                     font-weight: 500;
-                    padding: 6px 24px 9px;
+                    padding: 6px 36px 9px;
                     margin: 1.5em 0 0;
                     width: auto;
 

@@ -20,9 +20,9 @@ export const FooterTemplate = ({
         <ul className="footer-column-1">
           <li className="keep-logo">Keep</li>
           <li>
-            <button className="email-btn" href={`mailto:${emailLink.email}`}>
+            <a className="email-btn" href={`mailto:${emailLink.email}`}>
               {emailLink.label}
-            </button>
+            </a>
           </li>
         </ul>
         {navCategories.map((category, i) => (

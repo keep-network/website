@@ -18,7 +18,7 @@ media_kit_section:
       - media guide
     download_button:
       label: Download
-      file: /images/media/KeepMediaKit.zip
+      file: /images/keep_media_kit.zip
 press_items_section:
   title: Press Coverage
   press_items:

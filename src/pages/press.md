@@ -9,7 +9,7 @@ media_kit_section:
   subtitle: Find everything you might need in our media kit.
   media_kit:
     icon:
-      image: /images/keep_media_kit.zip
+      image: /images/svg/newspaper.svg
       alt: Newspaper icon
     label: Media Kit
     contents:

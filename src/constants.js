@@ -12,8 +12,6 @@ const sections = {
   SUPPORTERS: "supporters",
 }
 
-const WHITEPAPER_URL = "https://keep.network/whitepaper"
-
 const routes = {
   CALIFORNIA_PRIVACY: "/california-privacy-notice",
   MAIN: "/",
@@ -23,4 +21,4 @@ const routes = {
   TERMS: "/terms-of-use",
 }
 
-export { routes, sections, WHITEPAPER_URL }
+export { routes, sections }

@@ -4,15 +4,12 @@ const sections = {
   FEATURED_APPLICATION: "featured-application",
   GITHUB: "github",
   MAILING_LIST: "mailing-list",
-  USES: "uses",
   DESCRIPTION: "description",
   TEAM: "team",
   DEFINITION: "definition",
   ADVISORS: "advisors",
   SUPPORTERS: "supporters",
 }
-
-const WHITEPAPER_URL = "https://keep.network/whitepaper"
 
 const routes = {
   CALIFORNIA_PRIVACY: "/california-privacy-notice",
@@ -23,4 +20,4 @@ const routes = {
   TERMS: "/terms-of-use",
 }
 
-export { routes, sections, WHITEPAPER_URL }
+export { routes, sections }

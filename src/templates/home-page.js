@@ -14,7 +14,7 @@ import {
   PageSection,
   Profile,
 } from "../components"
-import { sections, WHITEPAPER_URL } from "../constants"
+import { sections } from "../constants"
 import { actions, actionTypes } from "../redux"
 
 export const HomePageTemplate = ({
@@ -159,66 +159,6 @@ export const HomePageTemplate = ({
             <p>
               The strongest or central tower of a castle, acting as a final
               refuge
-            </p>
-          </div>
-        </div>
-      </PageSection>
-      <PageSection id={sections.USES}>
-        <h2 className="h1">Keep Applications</h2>
-        <div className="use-case">
-          <Icons.Signing />
-          <h4>Decentralized Signing</h4>
-        </div>
-        <div className="use-case">
-          <Icons.Switch />
-          <h4>Dead Man Switch</h4>
-        </div>
-        <div className="use-case">
-          <Icons.Wallet />
-          <h4>Custodial Wallets</h4>
-        </div>
-        <div className="use-case">
-          <Icons.Cart />
-          <h4>Marketplaces for Digital Goods</h4>
-        </div>
-        <div className="use-case">
-          <Icons.BlockchainStorage />
-          <h4>Blockchain Storage Encryption</h4>
-        </div>
-        <div className="use-case">
-          <a
-            href={WHITEPAPER_URL}
-            download="Keep Whitepaper"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            <Icons.Book color="#48dbb4" />
-            <h4>Learn More in the Whitepaper</h4>
-          </a>
-        </div>
-        <div className="blurb-panel blurb-mobile">
-          <div className="blurb-icon">
-            <Icons.CastleGate />
-          </div>
-          <div className="blurb-text">
-            <p>
-              Keep: <span>(n.)</span>
-            </p>
-            <p>
-              The strongest or central tower of a castle, acting as a final
-              refuge
-            </p>
-          </div>
-        </div>
-        <div className="blurb-panel blurb-mobile">
-          <div className="blurb-icon">
-            <Icons.Axe />
-          </div>
-          <div className="blurb-text">
-            <p>
-              Keeps provide a bridge between the world of public blockchains and
-              private data. It enables a new wave of ground-up innovation for
-              blockchain developers.
             </p>
           </div>
         </div>

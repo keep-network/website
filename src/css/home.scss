@@ -187,7 +187,7 @@
     background: #fffdfc;
 
     padding-bottom: 85px;
-    
+
     h2 {
         margin-top: 32px;
         font-size: 4.5rem;
@@ -468,122 +468,6 @@
         @media (min-width: #{$bp-medium}) {
             display: inline-block;
             margin: 0 0 0 15px;
-        }
-    }
-}
-
-.uses {
-    @media (min-width: #{$bp-medium}) {
-        padding: 0;
-    }
-
-    h2 {
-        @media (min-width: #{$bp-medium}) {
-            text-align: center;
-        }
-
-        @media (max-width: #{($bp-medium - 1)}) {
-            margin-bottom: 50px;
-        }
-    }
-
-    .use-case {
-        text-align: center;
-        display: inline-block;
-        border-bottom: 1px solid rgba($black, 0.5);
-
-        h4 {
-            width: 85%;
-            margin: 20px auto;
-        }
-
-        a {
-            color: $black;
-        }
-
-        @media (min-width: #{$bp-medium}) {
-            width: 33%;
-            padding: 70px 0;
-
-            &:first-of-type {
-                padding: 30px 0 70px;
-            }
-
-            &:nth-child(3n+3) {
-                border-left: 1px solid rgba($black, 0.5);
-                border-right: 1px solid rgba($black, 0.5);
-            }
-
-            &:nth-child(5),
-            &:nth-child(6),
-            &:nth-child(7) {
-                border-bottom: 0;
-            }
-        }
-
-        @media (max-width: #{($bp-medium - 1)}) {
-            width: 50%;
-            padding: 40px 0;
-
-            &:nth-child(6),
-            &:nth-child(7) {
-                border-bottom: 0;
-            }
-        }
-
-        @media (max-width: #{($bp-small - 1)}) {
-            h4 {
-                font-size: 18px;
-            }
-        }
-    }
-
-    .page-section-content {
-        @media (max-width: #{($bp-medium - 1)}) {
-            &:before {
-                content: '';
-                display: block;
-                position: absolute;
-                top: 100px;
-                left: 50%;
-                width: 1px;
-                height: 90%;
-                background-color: rgba($black, 0.5);
-            }
-        }
-
-        @media (min-width: #{$bp-medium}) {
-            &:after {
-                content: '';
-                display: block;
-                position: absolute;
-                bottom: -10px;
-                left: 0;
-                width: 100%;
-                height: 10px;
-
-                background-image: url(../images/wall-pattern.png);
-                background-repeat: repeat-x;
-                background-size: cover;
-
-                @include devicePixelRatio2 {
-                    background-image: url(../images/wall-pattern@2x.png);
-                }
-                @include devicePixelRatio3 {
-                    background-image: url(../images/wall-pattern@3x.png);
-                }
-            }
-        }
-    }
-
-    .blurb-mobile {
-        display: flex;
-        position: relative;
-        z-index: 1;
-        margin-top: 35px;
-
-        @media (min-width: #{$bp-medium}) {
-            display: none;
         }
     }
 }

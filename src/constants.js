@@ -4,7 +4,6 @@ const sections = {
   FEATURED_APPLICATION: "featured-application",
   GITHUB: "github",
   MAILING_LIST: "mailing-list",
-  USES: "uses",
   DESCRIPTION: "description",
   TEAM: "team",
   DEFINITION: "definition",

@@ -73,4 +73,11 @@ press_items_section:
         financial world with ownership certainty, and the top things hindering
         blockchain.
       url: https://www.youtube.com/watch?v=PfwJODGY6yQ
+    - date: "2020-03-04T17:35:23.187Z"
+      title: "Reflections of a Monetary Maximalist: My Crypto Thesis"
+      source: Thesis
+      url: https://thesis.co/reflections-of-a-monetary-maximalist
+      excerpt: Keep CEO Matt Luongo shares his crypto thesis and his “monetary
+        maximalism”— the result of a decade spent evolving and growing alongside
+        the cryptocurrency movement.
 ---

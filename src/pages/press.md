@@ -95,4 +95,12 @@ press_items_section:
       excerpt: The Keep Protocol has raised over $7 million for its Ethereum privacy
         layer solution. Keep is supporting tBTC, a project to build a Bitcoin
         token on the Ethereum network.
+    - date: "2020-04-02T16:00:00.000Z"
+      url: https://www.bloomberg.com/news/articles/2020-04-02/bitcoin-s-ethereum-rivalry-could-be-assuaged-with-tbtc-bridge
+      source: Bloomberg
+      title: Bitcoin’s Ethereum Rivalry Could Be Assuaged With tBTC Bridge
+      excerpt: For almost as long as there have been digital currencies, a rivalry has
+        existed between Bitcoin and Ethereum. Now, a project called tBTC is
+        seeking to forge a truce between the two by allowing Bitcoin owners
+        access to the financial applications that run on Ethereum.
 ---

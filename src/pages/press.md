@@ -22,6 +22,14 @@ media_kit_section:
 press_items_section:
   title: Press Coverage
   press_items:
+    - date: "2020-07-28T03:50:00.000Z"
+      url: https://www.ibtimes.com/how-millennial-finance-will-make-legacy-banking-system-irrelevant-3017842
+      excerpt: Millennials are often looked to as bellwethers of contemporary society.
+        Not since the baby boomers has a generation been so widely analyzed –
+        and criticized – as a harbinger of things to come. Among this
+        generation’s targets for disruption, finance looms large.
+      source: IBTimes
+      title: How Millennial Finance Will Make The Legacy Banking System Irrelevant
     - title: Announcing tBTC with James Prestwich and Matt Luongo of Cross-Chain Group
       date: "2019-08-21T00:00:00.000Z"
       source: Wyre Talks Podcast

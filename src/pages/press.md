@@ -22,20 +22,6 @@ media_kit_section:
 press_items_section:
   title: Press Coverage
   press_items:
-    - title: These Bitcoin Users Want DAI and DeFi – Here’s How They Plan to Get It
-      date: "2019-08-16T00:00:00.000Z"
-      source: Coindesk
-      excerpt: Leigh Cuen covers Cross-Chain Group’s first-ever Cross-Chain Summit for
-        blockchain interoperability in San Francisco, highlighting the Group’s
-        announcement of tBTC.
-      url: https://www.coindesk.com/these-bitcoin-users-want-dai-and-defi-heres-how-they-plan-to-get-it
-    - title: Messari adds 11 new Disclosures Registry participants, surpassing 50
-        members
-      date: "2019-08-20T00:00:00.000Z"
-      source: Messari
-      excerpt: Keep has joined the Messari Disclosures Registry as 11 new crypto
-        projects are added. Read Coindesk’s coverage.
-      url: https://messari.io/article/announcement-messari-adds-11-new-disclosures-registry-participants-surpassing-50-members
     - title: Announcing tBTC with James Prestwich and Matt Luongo of Cross-Chain Group
       date: "2019-08-21T00:00:00.000Z"
       source: Wyre Talks Podcast
@@ -43,6 +29,20 @@ press_items_section:
         hosts Louis Aboud Hogben and Tom Scaria to discuss Bitcoin for DeFi; how
         tBTC facilitates interoperability and brings Bitcoin to other chains.
       url: https://wyre-talks.simplecast.com/episodes/ep-47-announcing-tbtc-with-james-prestwich-and-matt-luongo-of-cross-chain-group-tHcZr3jW
+    - title: Messari adds 11 new Disclosures Registry participants, surpassing 50
+        members
+      date: "2019-08-20T00:00:00.000Z"
+      source: Messari
+      excerpt: Keep has joined the Messari Disclosures Registry as 11 new crypto
+        projects are added. Read Coindesk’s coverage.
+      url: https://messari.io/article/announcement-messari-adds-11-new-disclosures-registry-participants-surpassing-50-members
+    - title: These Bitcoin Users Want DAI and DeFi – Here’s How They Plan to Get It
+      date: "2019-08-16T00:00:00.000Z"
+      source: Coindesk
+      excerpt: Leigh Cuen covers Cross-Chain Group’s first-ever Cross-Chain Summit for
+        blockchain interoperability in San Francisco, highlighting the Group’s
+        announcement of tBTC.
+      url: https://www.coindesk.com/these-bitcoin-users-want-dai-and-defi-heres-how-they-plan-to-get-it
     - title: Episode 041 - Matt Luongo (Keep)
       date: "2019-06-17T00:00:00.000Z"
       source: Baselayer Podcast

@@ -85,15 +85,6 @@ press_items_section:
       excerpt: Matt Luongo and James Prestwich hosted a workshop at the conference to
         discuss future economic interoperability between Ethereum and Zcash.
       url: https://blog.keep.network/keep-network-june-roundup-db063f305ad9
-    - title: Speaking at CognitionX Conference in London
-      date: "2019-06-09T00:00:00.000Z"
-      source: Keep Blog
-      excerpt: Ecosystem Growth & Innovation Lead Jarrell James joined a panel at CogX
-        discussing adoption challenges, inherently bad actors with centralized
-        companies, secure multi-party computation & real-life, tangible use
-        cases, how data is stored and shared from a centralized corporate
-        perspective and more.
-      url: https://blog.keep.network/keep-network-june-roundup-db063f305ad9
     - title: Keep developers present network component libp2p to IPFS
       date: "2019-05-06T00:00:00.000Z"
       source: IPFS Youtube Channel

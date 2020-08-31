@@ -49,42 +49,6 @@ press_items_section:
       excerpt: David invited Keep Project Lead, Matt Luongo, to join the podcast and
         discuss privacy, interoperability, and the blockchain space as a whole.
       url: https://podcasts.apple.com/us/podcast/base-layer-episode-041-matt-luongo-keep/id1445373535?i=1000441792480
-    - title: Privacy and Scaling EIPs accepted for Ethereum Hard Fork
-      date: "2019-09-04T00:00:00.000Z"
-      source: Keep Blog
-      excerpt: With community partners, Keep Network brings privacy-preserving
-        technology to the EVM with EIPs 152 and 1108.
-      url: https://blog.keep.network/privacy-and-scaling-focused-eips-accepted-for-ethereum-istanbul-hard-fork-1a75fe0c4e4a
-    - title: What’s Needed Now in Interoperability Infrastructure
-      date: "2019-08-30T00:00:00.000Z"
-      source: Keep Blog
-      excerpt: A look back at the first Cross-Chain Summit and DeFi BTC.
-      url: https://blog.keep.network/whats-needed-now-in-interoperability-infrastructure-e968405bbc5c
-    - title: Bridging Bitcoin and Ethereum
-      date: "2019-08-28T00:00:00.000Z"
-      source: Keep Blog
-      excerpt: Announcing tBTC, the first DApp built on the Keep Network.
-      url: https://blog.keep.network/bridging-bitcoin-and-ethereum-b2f9923630a7
-    - title: Keep collaborates with Electric Coin Co., Ethereum Foundation, & Iqlusion
-        to bring interoperability to Zcash
-      date: "2019-08-13T00:00:00.000Z"
-      source: Keep Blog
-      excerpt: Together, they are funding the addition of FlyClient proofs in Zcash.
-      url: https://blog.keep.network/july-roundup-1a1d71e22575
-    - title: Summa and Keep Partner on Cross-Chain Working Group
-      date: "2019-08-01T00:00:00.000Z"
-      source: Keep Blog
-      excerpt: Laura Wallendal shares Keep’s partnership with Summa to form the
-        Cross-Chain Group, a working group and industry resource for
-        technologies, projects, and efforts at the forefront of blockchain
-        interoperability.
-      url: https://blog.keep.network/blockchain-interoperability-working-group-keep-summa-30eb8071f865
-    - title: "Zcon Workshop: “Toward Cross-Chain Interoperability with Zcash”"
-      date: "2019-06-23T00:00:00.000Z"
-      source: Keep Blog
-      excerpt: Matt Luongo and James Prestwich hosted a workshop at the conference to
-        discuss future economic interoperability between Ethereum and Zcash.
-      url: https://blog.keep.network/keep-network-june-roundup-db063f305ad9
     - title: Keep developers present network component libp2p to IPFS
       date: "2019-05-06T00:00:00.000Z"
       source: IPFS Youtube Channel

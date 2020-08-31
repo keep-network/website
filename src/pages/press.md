@@ -38,6 +38,21 @@ press_items_section:
       excerpt: Matt Luongo, CEO of Thesis, the parent company of Fold and Keep,
         describes the just-launched tBTC, his plan for a censorship-resistant
         Bitcoin-Ethereum bridge.
+    - date: "2020-04-02T16:38:19.751Z"
+      url: https://decrypt.co/24336/bitcoin-to-ethereum-bridge-raises-7-7-million-in-token-sale
+      source: Decrypt
+      title: Bitcoin to Ethereum bridge raises $7.7 million in token sale
+      excerpt: The Keep Protocol has raised over $7 million for its Ethereum privacy
+        layer solution. Keep is supporting tBTC, a project to build a Bitcoin
+        token on the Ethereum network.
+    - date: "2020-04-02T16:00:00.000Z"
+      url: https://www.bloomberg.com/news/articles/2020-04-02/bitcoin-s-ethereum-rivalry-could-be-assuaged-with-tbtc-bridge
+      source: Bloomberg
+      title: Bitcoin’s Ethereum Rivalry Could Be Assuaged With tBTC Bridge
+      excerpt: For almost as long as there have been digital currencies, a rivalry has
+        existed between Bitcoin and Ethereum. Now, a project called tBTC is
+        seeking to forge a truce between the two by allowing Bitcoin owners
+        access to the financial applications that run on Ethereum.
     - date: "2020-03-04T17:35:23.187Z"
       title: "Reflections of a Monetary Maximalist: My Crypto Thesis"
       source: Thesis
@@ -88,19 +103,4 @@ press_items_section:
         financial world with ownership certainty, and the top things hindering
         blockchain.
       url: https://www.youtube.com/watch?v=PfwJODGY6yQ
-    - date: "2020-04-02T16:38:19.751Z"
-      url: https://decrypt.co/24336/bitcoin-to-ethereum-bridge-raises-7-7-million-in-token-sale
-      source: Decrypt
-      title: Bitcoin to Ethereum bridge raises $7.7 million in token sale
-      excerpt: The Keep Protocol has raised over $7 million for its Ethereum privacy
-        layer solution. Keep is supporting tBTC, a project to build a Bitcoin
-        token on the Ethereum network.
-    - date: "2020-04-02T16:00:00.000Z"
-      url: https://www.bloomberg.com/news/articles/2020-04-02/bitcoin-s-ethereum-rivalry-could-be-assuaged-with-tbtc-bridge
-      source: Bloomberg
-      title: Bitcoin’s Ethereum Rivalry Could Be Assuaged With tBTC Bridge
-      excerpt: For almost as long as there have been digital currencies, a rivalry has
-        existed between Bitcoin and Ethereum. Now, a project called tBTC is
-        seeking to forge a truce between the two by allowing Bitcoin owners
-        access to the financial applications that run on Ethereum.
 ---

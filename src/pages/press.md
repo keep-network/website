@@ -22,6 +22,21 @@ media_kit_section:
 press_items_section:
   title: Press Coverage
   press_items:
+    - date: "2020-04-28T16:36:44.400Z"
+      url: https://unchainedpodcast.com/tbtc-what-happens-when-the-most-liquid-crypto-asset-hits-defi/
+      source: Unchained Podcast
+      title: "Keep CEO on Unchained Podcast – tBTC: What Happens When the Most Liquid
+        Crypto Asset Hits DeFi?"
+      excerpt: Matt Luongo, CEO of Thesis, the parent company of Fold and Keep,
+        describes the just-launched tBTC, his plan for a censorship-resistant
+        Bitcoin-Ethereum bridge.
+    - date: "2020-03-04T17:35:23.187Z"
+      title: "Reflections of a Monetary Maximalist: My Crypto Thesis"
+      source: Thesis
+      url: https://thesis.co/reflections-of-a-monetary-maximalist
+      excerpt: Keep CEO Matt Luongo shares his crypto thesis and his “monetary
+        maximalism”— the result of a decade spent evolving and growing alongside
+        the cryptocurrency movement.
     - date: "2020-07-28T03:50:00.000Z"
       url: https://www.ibtimes.com/how-millennial-finance-will-make-legacy-banking-system-irrelevant-3017842
       excerpt: Millennials are often looked to as bellwethers of contemporary society.
@@ -73,11 +88,4 @@ press_items_section:
         financial world with ownership certainty, and the top things hindering
         blockchain.
       url: https://www.youtube.com/watch?v=PfwJODGY6yQ
-    - date: "2020-03-04T17:35:23.187Z"
-      title: "Reflections of a Monetary Maximalist: My Crypto Thesis"
-      source: Thesis
-      url: https://thesis.co/reflections-of-a-monetary-maximalist
-      excerpt: Keep CEO Matt Luongo shares his crypto thesis and his “monetary
-        maximalism”— the result of a decade spent evolving and growing alongside
-        the cryptocurrency movement.
 ---

@@ -41,7 +41,7 @@ press_items_section:
     - date: "2020-04-02T16:38:19.751Z"
       url: https://decrypt.co/24336/bitcoin-to-ethereum-bridge-raises-7-7-million-in-token-sale
       source: Decrypt
-      title: Bitcoin to Ethereum bridge raises $7.7 million in token sale
+      title: Bitcoin to Ethereum bridge raises $7.7 Million in Token Sale
       excerpt: The Keep Protocol has raised over $7 million for its Ethereum privacy
         layer solution. Keep is supporting tBTC, a project to build a Bitcoin
         token on the Ethereum network.

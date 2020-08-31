@@ -22,6 +22,14 @@ media_kit_section:
 press_items_section:
   title: Press Coverage
   press_items:
+    - date: "2020-07-28T03:50:00.000Z"
+      url: https://www.ibtimes.com/how-millennial-finance-will-make-legacy-banking-system-irrelevant-3017842
+      excerpt: Millennials are often looked to as bellwethers of contemporary society.
+        Not since the baby boomers has a generation been so widely analyzed –
+        and criticized – as a harbinger of things to come. Among this
+        generation’s targets for disruption, finance looms large.
+      source: IBTimes
+      title: How Millennial Finance Will Make The Legacy Banking System Irrelevant
     - date: "2020-04-28T16:36:44.400Z"
       url: https://unchainedpodcast.com/tbtc-what-happens-when-the-most-liquid-crypto-asset-hits-defi/
       source: Unchained Podcast
@@ -37,14 +45,6 @@ press_items_section:
       excerpt: Keep CEO Matt Luongo shares his crypto thesis and his “monetary
         maximalism”— the result of a decade spent evolving and growing alongside
         the cryptocurrency movement.
-    - date: "2020-07-28T03:50:00.000Z"
-      url: https://www.ibtimes.com/how-millennial-finance-will-make-legacy-banking-system-irrelevant-3017842
-      excerpt: Millennials are often looked to as bellwethers of contemporary society.
-        Not since the baby boomers has a generation been so widely analyzed –
-        and criticized – as a harbinger of things to come. Among this
-        generation’s targets for disruption, finance looms large.
-      source: IBTimes
-      title: How Millennial Finance Will Make The Legacy Banking System Irrelevant
     - title: Announcing tBTC with James Prestwich and Matt Luongo of Cross-Chain Group
       date: "2019-08-21T00:00:00.000Z"
       source: Wyre Talks Podcast
@@ -88,4 +88,11 @@ press_items_section:
         financial world with ownership certainty, and the top things hindering
         blockchain.
       url: https://www.youtube.com/watch?v=PfwJODGY6yQ
+    - date: "2020-04-02T16:38:19.751Z"
+      url: https://decrypt.co/24336/bitcoin-to-ethereum-bridge-raises-7-7-million-in-token-sale
+      source: Decrypt
+      title: Bitcoin to Ethereum bridge raises $7.7 million in token sale
+      excerpt: The Keep Protocol has raised over $7 million for its Ethereum privacy
+        layer solution. Keep is supporting tBTC, a project to build a Bitcoin
+        token on the Ethereum network.
 ---

@@ -22,20 +22,44 @@ media_kit_section:
 press_items_section:
   title: Press Coverage
   press_items:
-    - title: These Bitcoin Users Want DAI and DeFi – Here’s How They Plan to Get It
-      date: "2019-08-16T00:00:00.000Z"
-      source: Coindesk
-      excerpt: Leigh Cuen covers Cross-Chain Group’s first-ever Cross-Chain Summit for
-        blockchain interoperability in San Francisco, highlighting the Group’s
-        announcement of tBTC.
-      url: https://www.coindesk.com/these-bitcoin-users-want-dai-and-defi-heres-how-they-plan-to-get-it
-    - title: Messari adds 11 new Disclosures Registry participants, surpassing 50
-        members
-      date: "2019-08-20T00:00:00.000Z"
-      source: Messari
-      excerpt: Keep has joined the Messari Disclosures Registry as 11 new crypto
-        projects are added. Read Coindesk’s coverage.
-      url: https://messari.io/article/announcement-messari-adds-11-new-disclosures-registry-participants-surpassing-50-members
+    - date: "2020-07-28T03:50:00.000Z"
+      url: https://www.ibtimes.com/how-millennial-finance-will-make-legacy-banking-system-irrelevant-3017842
+      excerpt: Millennials are often looked to as bellwethers of contemporary society.
+        Not since the baby boomers has a generation been so widely analyzed –
+        and criticized – as a harbinger of things to come. Among this
+        generation’s targets for disruption, finance looms large.
+      source: IBTimes
+      title: How Millennial Finance Will Make The Legacy Banking System Irrelevant
+    - date: "2020-04-28T16:36:44.400Z"
+      url: https://unchainedpodcast.com/tbtc-what-happens-when-the-most-liquid-crypto-asset-hits-defi/
+      source: Unchained Podcast
+      title: "Keep CEO on Unchained Podcast – tBTC: What Happens When the Most Liquid
+        Crypto Asset Hits DeFi?"
+      excerpt: Matt Luongo, CEO of Thesis, the parent company of Fold and Keep,
+        describes the just-launched tBTC, his plan for a censorship-resistant
+        Bitcoin-Ethereum bridge.
+    - date: "2020-04-02T16:38:19.751Z"
+      url: https://decrypt.co/24336/bitcoin-to-ethereum-bridge-raises-7-7-million-in-token-sale
+      source: Decrypt
+      title: Bitcoin to Ethereum bridge raises $7.7 Million in Token Sale
+      excerpt: The Keep Protocol has raised over $7 million for its Ethereum privacy
+        layer solution. Keep is supporting tBTC, a project to build a Bitcoin
+        token on the Ethereum network.
+    - date: "2020-04-02T16:00:00.000Z"
+      url: https://www.bloomberg.com/news/articles/2020-04-02/bitcoin-s-ethereum-rivalry-could-be-assuaged-with-tbtc-bridge
+      source: Bloomberg
+      title: Bitcoin’s Ethereum Rivalry Could Be Assuaged With tBTC Bridge
+      excerpt: For almost as long as there have been digital currencies, a rivalry has
+        existed between Bitcoin and Ethereum. Now, a project called tBTC is
+        seeking to forge a truce between the two by allowing Bitcoin owners
+        access to the financial applications that run on Ethereum.
+    - date: "2020-03-04T17:35:23.187Z"
+      title: "Reflections of a Monetary Maximalist: My Crypto Thesis"
+      source: Thesis
+      url: https://thesis.co/reflections-of-a-monetary-maximalist
+      excerpt: Keep CEO Matt Luongo shares his crypto thesis and his “monetary
+        maximalism”— the result of a decade spent evolving and growing alongside
+        the cryptocurrency movement.
     - title: Announcing tBTC with James Prestwich and Matt Luongo of Cross-Chain Group
       date: "2019-08-21T00:00:00.000Z"
       source: Wyre Talks Podcast
@@ -43,57 +67,26 @@ press_items_section:
         hosts Louis Aboud Hogben and Tom Scaria to discuss Bitcoin for DeFi; how
         tBTC facilitates interoperability and brings Bitcoin to other chains.
       url: https://wyre-talks.simplecast.com/episodes/ep-47-announcing-tbtc-with-james-prestwich-and-matt-luongo-of-cross-chain-group-tHcZr3jW
+    - title: Messari adds 11 new Disclosures Registry participants, surpassing 50
+        members
+      date: "2019-08-20T00:00:00.000Z"
+      source: Messari
+      excerpt: Keep has joined the Messari Disclosures Registry as 11 new crypto
+        projects are added. Read Coindesk’s coverage.
+      url: https://messari.io/article/announcement-messari-adds-11-new-disclosures-registry-participants-surpassing-50-members
+    - title: These Bitcoin Users Want DAI and DeFi – Here’s How They Plan to Get It
+      date: "2019-08-16T00:00:00.000Z"
+      source: Coindesk
+      excerpt: Leigh Cuen covers Cross-Chain Group’s first-ever Cross-Chain Summit for
+        blockchain interoperability in San Francisco, highlighting the Group’s
+        announcement of tBTC.
+      url: https://www.coindesk.com/these-bitcoin-users-want-dai-and-defi-heres-how-they-plan-to-get-it
     - title: Episode 041 - Matt Luongo (Keep)
       date: "2019-06-17T00:00:00.000Z"
       source: Baselayer Podcast
       excerpt: David invited Keep Project Lead, Matt Luongo, to join the podcast and
         discuss privacy, interoperability, and the blockchain space as a whole.
       url: https://podcasts.apple.com/us/podcast/base-layer-episode-041-matt-luongo-keep/id1445373535?i=1000441792480
-    - title: Privacy and Scaling EIPs accepted for Ethereum Hard Fork
-      date: "2019-09-04T00:00:00.000Z"
-      source: Keep Blog
-      excerpt: With community partners, Keep Network brings privacy-preserving
-        technology to the EVM with EIPs 152 and 1108.
-      url: https://blog.keep.network/privacy-and-scaling-focused-eips-accepted-for-ethereum-istanbul-hard-fork-1a75fe0c4e4a
-    - title: What’s Needed Now in Interoperability Infrastructure
-      date: "2019-08-30T00:00:00.000Z"
-      source: Keep Blog
-      excerpt: A look back at the first Cross-Chain Summit and DeFi BTC.
-      url: https://blog.keep.network/whats-needed-now-in-interoperability-infrastructure-e968405bbc5c
-    - title: Bridging Bitcoin and Ethereum
-      date: "2019-08-28T00:00:00.000Z"
-      source: Keep Blog
-      excerpt: Announcing tBTC, the first DApp built on the Keep Network.
-      url: https://blog.keep.network/bridging-bitcoin-and-ethereum-b2f9923630a7
-    - title: Keep collaborates with Electric Coin Co., Ethereum Foundation, & Iqlusion
-        to bring interoperability to Zcash
-      date: "2019-08-13T00:00:00.000Z"
-      source: Keep Blog
-      excerpt: Together, they are funding the addition of FlyClient proofs in Zcash.
-      url: https://blog.keep.network/july-roundup-1a1d71e22575
-    - title: Summa and Keep Partner on Cross-Chain Working Group
-      date: "2019-08-01T00:00:00.000Z"
-      source: Keep Blog
-      excerpt: Laura Wallendal shares Keep’s partnership with Summa to form the
-        Cross-Chain Group, a working group and industry resource for
-        technologies, projects, and efforts at the forefront of blockchain
-        interoperability.
-      url: https://blog.keep.network/blockchain-interoperability-working-group-keep-summa-30eb8071f865
-    - title: "Zcon Workshop: “Toward Cross-Chain Interoperability with Zcash”"
-      date: "2019-06-23T00:00:00.000Z"
-      source: Keep Blog
-      excerpt: Matt Luongo and James Prestwich hosted a workshop at the conference to
-        discuss future economic interoperability between Ethereum and Zcash.
-      url: https://blog.keep.network/keep-network-june-roundup-db063f305ad9
-    - title: Speaking at CognitionX Conference in London
-      date: "2019-06-09T00:00:00.000Z"
-      source: Keep Blog
-      excerpt: Ecosystem Growth & Innovation Lead Jarrell James joined a panel at CogX
-        discussing adoption challenges, inherently bad actors with centralized
-        companies, secure multi-party computation & real-life, tangible use
-        cases, how data is stored and shared from a centralized corporate
-        perspective and more.
-      url: https://blog.keep.network/keep-network-june-roundup-db063f305ad9
     - title: Keep developers present network component libp2p to IPFS
       date: "2019-05-06T00:00:00.000Z"
       source: IPFS Youtube Channel

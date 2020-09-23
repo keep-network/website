@@ -22,6 +22,19 @@ media_kit_section:
 press_items_section:
   title: Press Coverage
   press_items:
+    - date: "2020-09-22T19:25:00.000Z"
+      title: Bitcoin-on-Ethereum Token tBTC Relaunches Following Buggy Debut in May
+      source: Coindesk
+      excerpt: A decentralized way to copy bitcoin (BTC) over to Ethereum relaunches
+        today. Called tBTC, the Thesis-built protocol was first announced in
+        April, and is now ready for a fresh start.
+      url: https://www.coindesk.com/thesis-bitcoin-token-tbtc-relaunches-following-buggy-debut
+    - date: "2020-09-22T13:00:00.000Z"
+      title: Bitcoin-Backed Ethereum Token tBTC Launches—for the Second Time
+      source: Decrypt
+      excerpt: Thesis CEO Matt Luongo says the launch of tBTC is an opportunity to
+        unite two disparate tribes, and galvanize an emerging DeFi market.
+      url: https://decrypt.co/42533/bitcoin-backed-ethereum-token-tbtc-launches-for-the-second-time
     - date: "2020-07-28T03:50:00.000Z"
       url: https://www.ibtimes.com/how-millennial-finance-will-make-legacy-banking-system-irrelevant-3017842
       excerpt: Millennials are often looked to as bellwethers of contemporary society.

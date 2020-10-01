@@ -1,11 +1,11 @@
 ---
 template: legal-page
 path: /privacy-policy
-title: Privacy Policy
+title: Privacy & Policy
 date: "Effective and last modified: January 1, 2020"
 intro: >-
   <p>
-    At Keep SECZ, we respect your privacy and are committed to protecting it. This notice covers all personal information collected in the use of this website, as well as any other websites, applications, or connected products on which it is posted. If in any case our privacy practices differ from those explained in this policy, we will let you know you at the time we ask for or collect your information.
+  At Keep <u> <b> SECZ </b> < /u>, we respect your privacy and are committed to protecting it. This notice covers all personal information collected in the use of this website, as well as any other websites, applications, or connected products on which it is posted. If in any case our privacy practices differ from those explained in this policy, we will let you know you at the time we ask for or collect your information.
   </p>
   <p>
     Some pages on our websites may contain links to third-party websites. We do not endorse and have no control over the privacy practices or content of such websites. We recommend you carefully read the privacy policy of each site you visit – including ours.
@@ -13,26 +13,28 @@ intro: >-
   <p>
     If you are a resident of California, please refer to this document:
   </p>
+  <b>
   <a href="/california-privacy-notice" rel="noopener noreferrer" target="_blank" class="btn btn-lg btn-primary">California Privacy Policy</a>
+  </b>
 ---
 ## 1\. Table of Contents
 
 We cover a lot of ground in this privacy policy. Use the links below to navigate to later sections of the privacy policy of interest to you.
 
 <ul class="table-of-contents">
-  <li><a href="#Controller">The Controller</a></li>
-  <li><a href="#WhatInfoWeCollect">What information we collect about you</a></li>
-  <li><a href="#ChildrensOnlinePrivacy">Children's Online Privacy</a></li>
-  <li><a href="#HowWeCollectInfo">How we collect personal information about you</a></li>
-  <li><a href="#CookiesAndAutoDataCollection">Cookies and automatic data collection technologies</a></li>
-  <li><a href="#HowWeUseYourInfo">How we use your personal information</a></li>
-  <li><a href="#DisclosureOfYourInfo">Disclosure of Your Information</a></li>
-  <li><a href="#ThirdPartyContent">Third Party Content</a></li>
-  <li><a href="#YourRightsAndChoices">Your Rights and Choices</a></li>
-  <li><a href="#DataSecurity">Data Security</a></li>
-  <li><a href="#YourCaliforniaPrivacyRights">Your California Privacy Rights</a></li>
-  <li><a href="#ChangesToOurPrivacyPolicy">Changes to Our Privacy Policy</a></li>
-  <li><a href="#ContactUs">Contact Us</a></li>
+  <li><b><a href="#Controller">The Controller</a><b/></li>
+  <li><b><a href="#WhatInfoWeCollect">What information we collect about you</a><b/></li>
+  <li><b><a href="#ChildrensOnlinePrivacy">Children's Online Privacy</a><b/></li>
+  <li><b><a href="#HowWeCollectInfo">How we collect personal information about you</a><b/></li>
+  <li><b><a href="#CookiesAndAutoDataCollection">Cookies and automatic data collection technologies</a><b/></li>
+  <li><b><a href="#HowWeUseYourInfo">How we use your personal information</a><b/></li>
+  <li><b><a href="#DisclosureOfYourInfo">Disclosure of Your Information</a><b/></li>
+  <li><b><a href="#ThirdPartyContent">Third Party Content</a><b/></li>
+  <li><b><a href="#YourRightsAndChoices">Your Rights and Choices</a><b/></li>
+  <li><b><a href="#DataSecurity">Data Security</a><b/></li>
+  <li><b><a href="#YourCaliforniaPrivacyRights">Your California Privacy Rights</a><b/></li>
+  <li><b><a href="#ChangesToOurPrivacyPolicy">Changes to Our Privacy Policy</a><b/></li>
+  <li><b><a href="#ContactUs"><U>Contact Us</u></a><b/></li>
 </ul>
 
 ## 2. Controller <a id="Controller"></a>

@@ -339,7 +339,7 @@ collections:
                   [
                     { label: "Label", name: "label", widget: "string" },
                     {
-                      label: "URL",
+                      label: "URL", an amazing project
                       name: "url",
                       widget: "string",
                       hint: "Use a relative URL (e.g. /press or #team) if the link is an internal link.",

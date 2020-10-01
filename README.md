@@ -1,4 +1,4 @@
-# keep.network
+# keep.network-an amazing project
 
 The Keep network website - [keep.network](https://keep.network)
 

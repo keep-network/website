@@ -1,4 +1,4 @@
-# keep.network
+# keep fastest network
 
 The Keep network website - [keep.network](https://keep.network)
 

@@ -1,4 +1,4 @@
-# keep.network
+# Keep.network Website
 
 The Keep network website - [keep.network](https://keep.network)
 

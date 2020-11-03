@@ -9,7 +9,7 @@ export const LegalPageTemplate = ({ className, title, date, intro, body }) => (
     <div className="container">
       <div className="heading">
         <h1>{title}</h1>
-        <p class="date">{date}</p>
+        <p className="date">{date}</p>
         {intro ? (
           <div className="intro" dangerouslySetInnerHTML={{ __html: intro }} />
         ) : (

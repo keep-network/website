@@ -4,13 +4,13 @@ path: /playing-for-keeps-terms
 title: Playing for Keeps Terms of Use
 date: Last Updated April 12, 2020
 ---
-# Rules & Rewards
+## Rules & Rewards
 
 Keep is committed to helping you succeed on this program and to building a robust decentralized network. To this end, they've set up a [Discord server](https://discord.gg/wYezN7v) that anyone can join, and [technical documentation](https://docs.keep.network/run-random-beacon.html) to help you run Keep's random beacon client and start staking on testnet.
 
-## **Reward Guidelines**
+### **Reward Guidelines**
 
-## Current Game of Keeps
+### Current Game of Keeps
 
 The current game of Keeps begins on April 15th.
 

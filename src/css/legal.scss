@@ -5,17 +5,16 @@
         color: $secondary-color;
         text-decoration: none;
     }
-
+  
     .heading {
         h2 {
-            color: $accent-text-color;
-            font-family: 'Vitesse', 'Work Sans', sans-serif;
-            font-size: 20px;
+            font-family: 'Work Sans', sans-serif;
+            font-size: 32px;
             font-weight: bold;
-            line-height: 34px;
-            margin: 0.5em 0;
+            line-height: 40px;
+            letter-spacing: -1px;
+            margin: 0;
         }
-
         p:first-of-type {
             margin-top: 3.5em;
         }
@@ -27,20 +26,43 @@
 
     .body {
         background-color: #fff;
-        padding: 1px 15px 30px;
-        margin: 30px auto 40px;
+        padding: 30px 15px;
+        margin: 20px auto 40px;
 
         h1 {
             font-size: 30px;
         }
 
         h2 {
-            font-size: 26px;
-            font-weight: 500;
-            line-height: 1.2;
+            font-family: 'Work Sans', sans-serif;
+            font-size: 32px;
+            font-weight: bold;
+            line-height: 40px;
             letter-spacing: -1px;
-            margin: 1em 0;
+            margin: 2rem 0;
+            &:first-child {
+                margin: 0 0 2rem;
+            }
         }
+
+        h3 {
+            font-family: 'Work Sans', sans-serif;
+            font-size: 24px;
+            font-weight: bold;
+            line-height: 30px;
+            letter-spacing: -.5px;
+            margin: 2rem 0;
+        }
+
+        h4 {
+            font-family: 'Work Sans', sans-serif;
+            font-size: 16px;
+            font-weight: bold;
+            line-height: 25px;
+            letter-spacing: -.5px;
+            margin: 1rem 0;
+        }
+
 
         table {
             width: 100%;
@@ -74,16 +96,10 @@
 
     @media (min-width: #{$bp-medium}) {
         margin-top: 160px;
-        .heading {
-            h2 {
-                font-size: 26px;
-                margin: 1em 0;
-            }
-        }
-
+        
         .body {
-            padding: 20px 60px 60px;
-            margin: 70px auto;
+            padding: 60px;
+            margin: 30px auto;
         }
     }
 

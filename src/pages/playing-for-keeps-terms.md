@@ -8,9 +8,8 @@ date: Last Updated April 12, 2020
 
 Keep is committed to helping you succeed on this program and to building a robust decentralized network. To this end, they've set up a [Discord server](https://discord.gg/wYezN7v) that anyone can join, and [technical documentation](https://docs.keep.network/run-random-beacon.html) to help you run Keep's random beacon client and start staking on testnet.
 
-### **Reward Guidelines**
 
-### Current Game of Keeps
+## Current Game of Keeps
 
 The current game of Keeps begins on April 15th.
 
@@ -80,7 +79,7 @@ If you have a great idea, something that you feel is close to exploitation, or i
 
 ## Other Notes
 
-## Safe Harbor
+### Safe Harbor
 
 If conducting vulnerability research against this program, we consider this research to be:
 
@@ -91,13 +90,13 @@ If conducting vulnerability research against this program, we consider this rese
 
 If at any time you have concerns or are uncertain whether your security research is consistent with this policy, please submit a report through one of our Official Channels before going any further.
 
-## Any submissions to the Game of Keeps requires explicit permission to disclose the results of a submission.
+**Any submissions to the Game of Keeps requires explicit permission to disclose the results of a submission.**
 
-# Standard Disclosure Terms
+### Standard Disclosure Terms
 
 This web page represents a legal document with terms and conditions applicable to all individuals who have registered to participate in a Keep reward program. In addition, the terms and conditions contained in our [Terms of Use](/terms-of-use) (along with these Standard Disclosure Terms, collectively, the "Researcher Terms and Conditions") are incorporated by reference into these Standard Disclosure Terms. Upon obtaining a user name with Keep, you are referred to as a "Researcher" and you are bound by and are obligated to comply with the Researcher Terms and Conditions.
 
-## The Submission Process
+### The Submission Process
 
 If you believe you have discovered a vulnerability, please create a submission for the appropriate program through the Keep platform. Each program has a set of guidelines called the Program Brief. The program brief is maintained by the Program Owner. Terms specified in the program brief supersede these terms.
 
@@ -107,7 +106,7 @@ Each submission is evaluated by the Program Owner on the basis of first-to-find.
 
 You will qualify for a reward if you were the first person to alert the Program Owner to a previously unknown issue AND the issue triggers a code or configuration change.
 
-## STANDARD PROGRAM RULES
+### Standard Program Rules
 
 We are committed to protecting the interests of Security Researchers. The more closely your behavior follows these rules, the more we'll be able to protect you if a difficult situation escalates.
 
@@ -126,11 +125,11 @@ Rules can vary for each program. Please carefully read the program brief for spe
 
 You must be at least 18 years old or have reached the age of majority in your jurisdiction of primary residence and citizenship to be eligible to receive any monetary compensation as a Researcher. Additional applicable eligibility requirements are stated in the [Terms of Use](/terms-of-use). Exceptions with respect to a minor's participation in Bug Bashes may be considered on a case-by-case basis as between Keep and the applicable minor's guardian(s).
 
-## USERNAMES AND PASSWORDS
+### Usernames and Passwords
 
 You will need to set up a Keep Discord account and user name in order to participate in Play for Keeps. You may not use a third party's account without permission. When you are setting up your account, you must give us accurate and complete information. This means that you cannot set up an account using a name or contact information that does not apply to you, and you must provide accurate and current information on all registration forms that are part of the Website. You may only set up one account. You have complete responsibility for your account and everything that happens on your account. This means you need to be careful with your password. If you find out that someone is using your account without your permission, you must let us know immediately. You may not transfer your account to someone else. We are not liable for any damages or losses caused by someone using your account without your permission. However, if we (or anyone else) suffer any damage due to the unauthorized use of your account, you may be liable. Keep may deny the use of certain user names or require certain user names be changed at Keep's sole discretion and/or to comply with end customers' requirements. User names with offensive or discriminatory words are prohibited.
 
-## Official Support Channels and Private Communication
+### Official Support Channels and Private Communication
 
 During the course of each program, the Keep team may communicate updates via:
 

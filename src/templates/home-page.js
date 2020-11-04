@@ -65,7 +65,13 @@ export const HomePageTemplate = ({
             <section className="dashboard-cta d-lg-flex align-items-end">
             <div className="w-lg-40 content order-2 text-center text-lg-left">
                 <h2 className="mt-0 mb-4">Stake KEEP to support the network and earn rewards.</h2>
-                <a href="https://dashboard.keep.network" target="new" className="btn btn-primary d-md-inline-block">View token dashboard</a>
+                <a 
+                  href="https://dashboard.keep.network" 
+                  target="new" 
+                  className="btn btn-primary d-md-inline-block"
+                >
+                  View token dashboard
+                </a>
               </div>
               <div className="w-lg-55 image order-1"></div>
               

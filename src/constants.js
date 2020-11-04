@@ -1,6 +1,7 @@
 const sections = {
   HOME: "home",
   DISCORD: "discord",
+  TOKEN_DASHBOARD: "token-dashboard",
   FEATURED_APPLICATION: "featured-application",
   GITHUB: "github",
   MAILING_LIST: "mailing-list",

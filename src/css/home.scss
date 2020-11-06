@@ -182,7 +182,42 @@
         }
     }
 }
+.token-dashboard {
+    padding: 30px 0 0;  
+    @media (max-width: 991px) {                        
+        .container-md {
+            padding: 0;
+        }
+    }
+    .image {
+        background: url('../images/img_token-dashboard.png') no-repeat left bottom;
+        background-size: contain;
+        min-height: 300px;
+        @media (max-width: 991px) {
+            background-position: center bottom;            
+        }
+    }
 
+    .content {
+        padding: 70px 0 100px;
+
+        @media (max-width: 991px) {
+            padding: 0 0 50px;
+        }
+        h2 {
+            font-size: 32px;
+            line-height: 40px;
+
+            @media (max-width: 991px) {
+                font-size: 28px;
+                line-height: 36px;
+            }
+        }
+        
+    }
+    
+
+}
 .featured-application {
     background: #fffdfc;
 

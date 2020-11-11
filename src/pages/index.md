@@ -3,7 +3,7 @@ template: home-page
 path: /
 title: Home
 hero:
-  title: Builders of tBTC
+  title: Builders of tBTC.
   body: Keep technology is what sets tBTC apart as the only decentralized solution
     for Bitcoin on Ethereum.
   bg_image: /images/keep-bg.jpg

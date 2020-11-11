@@ -3,8 +3,9 @@ template: home-page
 path: /
 title: Home
 hero:
-  title: <span class="no-wrap">Censorship Resistance</span> for DeFi
-  body: A keep stores your data and protects it from censorship, so what you store always stays yours.
+  title: Builders of tBTC
+  body: Keep technology is what sets tBTC apart as the only decentralized solution
+    for Bitcoin on Ethereum.
   bg_image: /images/keep-bg.jpg
   cta:
     label: Stake your claim.
@@ -12,8 +13,8 @@ hero:
       image: /images/svg/flag-circle.svg
       alt: flag icon
   cta_buttons:
-    - label: Get Email Updates
-      url: '/#mailing-list'
+    - label: Start staking
+      url: https://dashboard.keep.network/
     - label: Join our Discord
       url: https://chat.keep.network/
 team_section:

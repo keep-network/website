@@ -8,12 +8,12 @@ hero:
     for Bitcoin on Ethereum.
   bg_image: /images/keep-bg.jpg
   cta:
-    label: Stake your claim.
+    label: Stake your KEEP and earn.
     icon:
       image: /images/svg/flag-circle.svg
       alt: flag icon
   cta_buttons:
-    - label: Stake Your KEEP
+    - label: Stake KEEP
       url: https://dashboard.keep.network/
     - label: Join our Discord
       url: https://chat.keep.network/

@@ -13,7 +13,7 @@ hero:
       image: /images/svg/flag-circle.svg
       alt: flag icon
   cta_buttons:
-    - label: Start staking
+    - label: Stake Your KEEP
       url: https://dashboard.keep.network/
     - label: Join our Discord
       url: https://chat.keep.network/

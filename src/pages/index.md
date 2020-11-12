@@ -3,7 +3,7 @@ template: home-page
 path: /
 title: Home
 hero:
-  title: Builders of tBTC.
+  title: Builders of tBTC, the safe way to earn with your BTC.
   body: Keep technology sets tBTC apart as the only decentralized solution for
     Bitcoin on Ethereum.
   bg_image: /images/keep-bg.jpg

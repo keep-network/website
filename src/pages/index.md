@@ -4,11 +4,11 @@ path: /
 title: Home
 hero:
   title: Builders of tBTC.
-  body: Keep technology is what sets tBTC apart as the only decentralized solution
-    for Bitcoin on Ethereum.
+  body: Keep technology sets tBTC apart as the only decentralized solution for
+    Bitcoin on Ethereum.
   bg_image: /images/keep-bg.jpg
   cta:
-    label: Stake your KEEP and earn.
+    label: Stake your KEEP to earn.
     icon:
       image: /images/svg/flag-circle.svg
       alt: flag icon

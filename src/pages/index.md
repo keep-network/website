@@ -8,7 +8,7 @@ hero:
     Bitcoin on Ethereum.
   bg_image: /images/keep-bg.jpg
   cta:
-    label: Stake your KEEP to earn.
+    label: Start staking to earn.
     icon:
       image: /images/svg/flag-circle.svg
       alt: flag icon

@@ -8,12 +8,12 @@ hero:
     Bitcoin on Ethereum.
   bg_image: /images/keep-bg.jpg
   cta:
-    label: Start staking to earn.
+    label: Start staking to earn rewards.
     icon:
       image: /images/svg/flag-circle.svg
       alt: flag icon
   cta_buttons:
-    - label: Stake KEEP
+    - label: Start Staking
       url: https://dashboard.keep.network/
     - label: Join our Discord
       url: https://chat.keep.network/

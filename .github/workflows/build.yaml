@@ -30,7 +30,12 @@ jobs:
     - if: github.event_name == 'push'
       run: npm run build --if-present
     - if: github.event_name == 'pull_request'
-      run: npm run build:prefixed
+      run: |
+        npm run build:prefixed
+        # Set up security.txt and .well-known/security.txt.
+        mkdir public/.well-known
+        cp security.txt public/security.txt
+        cp security.txt public/.well-known/security.txt
       env:
         GATSBY_BRANCH: ${{ github.head_ref }}
     # A push event is a master merge; deploy to primary bucket.

@@ -1,0 +1,21 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+Contact: mailto:security@thesis.co
+Encryption: https://keybase.io/shadowfiend/pgp_keys.asc
+Encryption: https://keybase.io/mhluongo/pgp_keys.asc
+Encryption: https://keybase.io/piotrd/pgp_keys.asc
+Acknowledgments: https://keep.network/disclosed-vulnerabilities
+Preferred-Languages: en, es, fr
+Canonical: https://keep.network/.well-known/security.txt
+Policy: https://github.com/keep-network/keep-core/tree/master/SECURITY.adoc
+-----BEGIN PGP SIGNATURE-----
+
+wsBcBAEBCAAQBQJf9czRCRCv8ib0prZHlwAAT8UIAC0lo68Zkk+HGKhoPYvxwSDa
+ngJ4vFNlPqsb2bhpU7YKigt3bIYUcUa/AD05dJRTDmtDWWP+YyDnX3D6KkuG6dmW
+bLL0HnWtQAkgkJt/B8hzLyMA1bCUQOU9xsIEALj/nvh6+wBH2tQ/GcNfwYEQ+jfB
+jUEZ9DVYe2wLYS01JLOk2zpu1P2KW2m8mu/9bDNBMjTjjUixHtd0YXxYjIYcrUpb
+M37p3tDq5BjVn1oI/eU8nLBYBFFNtEH0WQKJ3/0cT8k7GfyvpTaGXS5enJWKWxPK
+aBCe+1ib9kOhdHZ+OKvWDoXxBxPVSncG9vsEJhEjrEDLynTYXJ72cQpy/1SWlj0=
+=b9bx
+-----END PGP SIGNATURE-----

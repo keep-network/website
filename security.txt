@@ -1,0 +1,21 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+Contact: mailto:security@keep.network
+Encryption: https://keybase.io/shadowfiend/pgp_keys.asc
+Encryption: https://keybase.io/mhluongo/pgp_keys.asc
+Encryption: https://keybase.io/piotrd/pgp_keys.asc
+Acknowledgments: https://keep.network/disclosed-vulnerabilities
+Preferred-Languages: en, es, fr
+Canonical: https://keep.network/.well-known/security.txt
+Policy: https://github.com/keep-network/keep-core/tree/master/SECURITY.adoc
+-----BEGIN PGP SIGNATURE-----
+
+wsBcBAEBCAAQBQJf+JEvCRCv8ib0prZHlwAAt4AIAImIEKpyGLPOlvXY02EvD3Wo
+WvPFhkn+TfCA5pjii3zNa23RBS7aOC9IIE86zOSUHe/SxdLlFIXRWvPEyFDQ7u1P
+lRsi388Tl7cOAyhsRKwGTD865BXT5VRfFa1Pbuk9f87NS1846zCyOqMf7gip/3cA
+ruoDVLAeZGaMlazWUFXt5PaW+MC86CKW7nGrml/RKkun3XfaNi4UnDckTEJWbZeQ
+W4LMps5m9ma56w3E42pWinbr8SwdtYLmgeE4LeChErdZ9KUdVJSQ2wYEa6LDTNw6
+4qVvHKeajzTf7Be9SZF88P8OSx42zn/KlYlnO1yJFXAE6z9KqhEJCy2PFtKTLGo=
+=1aIf
+-----END PGP SIGNATURE-----

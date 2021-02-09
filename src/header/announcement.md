@@ -1,5 +1,5 @@
 ---
 template: announcement
-title: Stakedrop Announcement
+title: Hiring Announcement
 ---
-![tBTC](/images/tbtc-stack.svg) <span>Stake ETH for tBTC, and earn KEEP. Learn how at [chat.keep.network](https://chat.keep.network)</span>
+Keep is hiring a Senior Product Designer! "[Apply now](https://angel.co/l/2uspS8)"

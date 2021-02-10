@@ -28,7 +28,7 @@ nav_categories:
         url: https://discordapp.com/invite/wYezN7v
       - label: GitHub
         url: https://github.com/keep-network/
-copyright_text: <p>A Thesis<sup>*</sup> Build</p><p>© 2020 Keep SEZC. All Rights Reserved.</p>
+copyright_text: <p>A Thesis<sup>*</sup> Build</p><p>© 2021 Keep SEZC. All Rights Reserved.</p>
 legal_links:
   - label: Privacy Policy
     url: /privacy-policy

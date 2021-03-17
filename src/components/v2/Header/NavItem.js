@@ -1,5 +1,6 @@
 import React from "react"
 import { NavLink } from "reactstrap"
+import { Link } from "gatsby"
 import NavScrollItem from "./NavScrollItem"
 
 function NavItem(props) {
@@ -25,6 +26,19 @@ function NavItem(props) {
       </NavScrollItem>
     )
   }
+
+  return (
+    <li className="nav-item">
+      <Link to={url} activeClassName="active">
+        {label}
+      </Link>
+    </li>
+  )
+}
+
+NavItem.propTypes = {
+  label: PropTypes.string,
+  url: PropTypes.string,
 }
 
 export default NavItem

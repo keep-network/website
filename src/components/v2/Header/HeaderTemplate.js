@@ -4,7 +4,7 @@ import * as Icons from "../Icons"
 import NavScrollItem from "./NavScrollItem"
 import PropTypes from "prop-types"
 import Announcement from "../../Announcement"
-import NavItem from "./NavItem"
+import NavItem from "../Nav/NavItem"
 
 const HeaderTemplate = ({ navItems = [] }) => {
   const [collapsed, setCollapsed] = useState(true)

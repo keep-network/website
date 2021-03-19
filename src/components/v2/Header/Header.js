@@ -3,7 +3,7 @@ import { graphql, StaticQuery } from "gatsby"
 import HeaderTemplate from "./HeaderTemplate"
 
 export const query = graphql`
-  query Header {
+  query Header2 {
     allMarkdownRemark(
       filter: { frontmatter: { template: { eq: "header-nav" } } }
     ) {

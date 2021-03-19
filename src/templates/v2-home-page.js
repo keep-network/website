@@ -22,6 +22,7 @@ function HomePage(props) {
   return (
     <>
       <Header />
+      <Overlay />
     </>
   )
 }

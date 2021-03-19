@@ -17,6 +17,7 @@ collections:
   - name: "pages"
     label: "Pages"
     files:
+      - file: "src/page/v2/index.md"
       - file: "src/pages/index.md"
         label: "Home"
         name: "home"

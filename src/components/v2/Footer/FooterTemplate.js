@@ -52,7 +52,6 @@ export const FooterTemplate = ({
           ))}
         </ul>
       </div>
-      <Image className="half-circle" imageData={images.halfCircle} />
     </Container>
   </footer>
 )
@@ -64,3 +63,5 @@ FooterTemplate.propTypes = {
   copyright: PropTypes.string,
   legalLinks: PropTypes.array,
 }
+
+export default FooterTemplate

@@ -24,6 +24,7 @@ function HomePage(props) {
     <>
       <Header />
       <Overlay />
+      <Footer />
     </>
   )
 }

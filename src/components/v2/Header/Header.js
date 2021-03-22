@@ -5,7 +5,7 @@ import HeaderTemplate from "./HeaderTemplate"
 export const query = graphql`
   query Header2 {
     allMarkdownRemark(
-      filter: { frontmatter: { template: { eq: "header-nav-v2" } } }
+      filter: { frontmatter: { template: { eq: "header-nav" } } }
     ) {
       edges {
         node {

@@ -1,13 +1,13 @@
 import React from "react"
 // import { graphql } from "gatsby"
 import Header from "../components/v2/Header"
-import Overlay from "../components/v2/Overlay"
+// import Overlay from "../components/v2/Overlay"
 
 export function HomePageTemplate(props) {
   return (
     <>
-      <Header />
-      <Overlay />
+      {/* <Header /> */}
+      {/* <Overlay /> */}
     </>
   )
 }
@@ -22,7 +22,7 @@ function HomePage(props) {
   return (
     <>
       <Header />
-      <Overlay />
+      {/* <Overlay /> */}
     </>
   )
 }

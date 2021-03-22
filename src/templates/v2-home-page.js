@@ -1,7 +1,8 @@
 import React from "react"
 // import { graphql } from "gatsby"
 import Header from "../components/v2/Header"
-// import Overlay from "../components/v2/Overlay"
+import Footer from "../components/v2/Footer"
+import Overlay from "../components/v2/Overlay"
 
 export function HomePageTemplate(props) {
   return (
@@ -22,7 +23,7 @@ function HomePage(props) {
   return (
     <>
       <Header />
-      {/* <Overlay /> */}
+      <Overlay />
     </>
   )
 }

@@ -1,0 +1,21 @@
+.btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 24px 40px;
+
+  width: 194px;
+  height: 67px;
+  left: 377px;
+  top: 714px;
+
+  &-state {
+    &--primary {
+      color: $black;
+    }
+    &--secondary {
+      color: $white;
+    }
+  }
+}

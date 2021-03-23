@@ -16,6 +16,9 @@
 @import 'press';
 @import 'legal';
 
+// v2 styles
+@import './v2/app.scss';
+
 body {
     background-color: $background-light-color;
 }

@@ -1,0 +1,243 @@
+footer {
+  position: relative;
+  padding: 0 0 130px;
+  background-color: $black;
+  color: $white;
+
+  .footer-columns {
+    display: flex;
+    flex-direction: column;
+
+    .footer-column-1 {
+      padding: 0 15px;
+      margin: 0;
+      flex: 0 0 100%;
+      order: 99;
+      display: flex;
+      flex-direction: column-reverse;
+    }
+
+    li {
+      list-style: none;
+      padding: 5px 0;
+
+      a:not(.email-btn) {
+        color: $grey-50;
+        font-size: 21px;
+        font-weight: normal;
+        cursor: pointer;
+      }
+
+      .email-btn {
+        @extend .btn, .btn-primary-on-dark;
+        display: inline-block;
+        border: 1px solid;
+        width: 100%;
+        margin: 60px 0;
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  .keep-logo {
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    background-image: url(../images/Keep-wordmark-white.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .collapsible-list {
+    padding: 30px 30px 10px;
+    border-bottom: 1px solid rgba($grey-60, 0.5);
+    margin-left: -15px;
+    margin-right: -15px;
+
+    .collapsible-list-label .btn {
+      width: 100%;
+      background-color: transparent;
+      text-transform: uppercase;
+      margin-bottom: 1.15rem;
+      padding: 0;
+      line-height: 1.45;
+      letter-spacing: 0.08em;
+
+      span {
+        color: #fff;
+        font-family: $body-font-family;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 15px;
+        font-variant: small-caps;
+      }
+
+      svg {
+        path {
+          fill: $grey-50;
+        }
+      }
+    }
+
+    ul {
+      padding: 0;
+    }
+  }
+
+  .footer-bottom {
+    text-align: center;
+    color: $grey-50;
+    font-size: 14px;
+    margin-top: 1rem;
+
+    p:first-of-type {
+      margin-bottom: 0;
+    }
+
+    ul {
+      padding: 0;
+      li {
+        list-style: none;
+        display: inline-block;
+        margin: 0 12px;
+
+        a {
+          color: $grey-50;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  span {
+    font-size: 14px;
+    font-weight: 700;
+    color: #4c4c4c;
+  }
+
+  .half-circle {
+    // override gatsby-image inline style
+    position: absolute !important;
+    width: 100px;
+    height: 200px;
+    transform-origin: bottom left;
+    transform: rotate(-270deg) translateY(50%);
+    left: 50%;
+    bottom: 100px;
+
+    [aria-hidden] {
+      padding-bottom: 0 !important;
+    }
+  }
+
+  @media (min-width: #{$bp-medium}) {
+    padding: 120px 0 240px;
+
+    .footer-columns {
+      flex-direction: row;
+
+      .footer-column-1 {
+        flex: 0 0 auto;
+        order: 0;
+        display: inline-block;
+        width: auto;
+        max-width: 30%;
+        padding: 0 30px 30px;
+      }
+
+      li {
+        padding: 0;
+
+        a:not(.btn) {
+          line-height: 1.45;
+        }
+
+        .email-btn {
+          background-color: $black;
+          color: #fff;
+          border-color: #fff;
+          font-size: 15px;
+          font-weight: 500;
+          padding: 6px 36px 9px;
+          margin: 1.5em 0 0;
+          width: auto;
+
+          &:hover {
+            background-color: $white;
+            color: $black;
+          }
+
+          &:active {
+            border-color: $primary-color;
+            background-color: $primary-color;
+            color: $black;
+          }
+        }
+      }
+    }
+
+    // Desktop uses a different logo than mobile
+    .keep-logo {
+      height: 65px;
+      background-image: url(../images/Keep-logo-circle.svg);
+      background-position: top left;
+      background-size: contain;
+    }
+
+    .collapsible-list {
+      padding: 0 30px 30px;
+      border-bottom: 0;
+      margin: 0;
+
+      .collapsible-list-label .btn {
+        cursor: default;
+        width: auto;
+
+        span {
+          font-variant: normal;
+          font-size: 13px;
+        }
+
+        svg {
+          display: none;
+        }
+      }
+      .collapse {
+        display: block;
+      }
+    }
+
+    .footer-bottom {
+      margin-top: 40px;
+    }
+
+    .half-circle {
+      width: 200px;
+      height: 400px;
+      bottom: 200px;
+    }
+  }
+
+  @media (min-width: #{$bp-large}) {
+    padding: 120px 0 60px;
+    .footer-columns {
+      .footer-column-1 {
+        padding: 0 100px 30px 0;
+      }
+
+      .collapsible-list {
+        padding: 0 50px 30px;
+      }
+    }
+
+    .half-circle {
+      left: auto;
+      right: 0;
+      bottom: 50%;
+      transform: translateY(50%);
+    }
+  }
+}

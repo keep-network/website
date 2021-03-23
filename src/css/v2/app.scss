@@ -1,0 +1,15 @@
+@import '~bootstrap-css-only/css/bootstrap.min.css';
+
+@import 'header';
+@import 'footer';
+
+body {
+    background-color: $background-light-color;
+}
+
+.app {
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+

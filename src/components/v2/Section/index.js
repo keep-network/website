@@ -2,9 +2,13 @@ import React from "react"
 import PropTypes from "prop-types"
 
 function Section(props) {
-  const { children } = props
+  const { classNames, children } = props
 
-  return <section className="container">{children}</section>
+  return (
+    <section className={classNames}>
+      <div className="container">{children}</div>
+    </section>
+  )
 }
 
 Section.propTypes = {
@@ -12,6 +16,7 @@ Section.propTypes = {
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node,
   ]),
+  classNames: PropTypes.array,
 }
 
 export default Section

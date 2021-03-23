@@ -12,10 +12,11 @@
 
   &-state {
     &--primary {
-      color: $black;
+      background-color: $black;
+      color: #48DBB4;
     }
     &--secondary {
-      color: $white;
+      background-color: $white;
     }
   }
 }

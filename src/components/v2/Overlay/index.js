@@ -1,73 +1,24 @@
-import React, { useState } from "react"
+import React from "react"
 import PropTypes from "prop-types"
-import classNames from "classnames"
-import { Container } from "reactstrap"
 
-import { ArrowRight } from "../../Icons"
-
-export const SeeAllButton = ({ collapsed = true, onClick = () => {} }) => (
-  <button className={classNames("see-all", { collapsed })} onClick={onClick}>
-    <span>{collapsed ? "See all" : "See less"}</span>
-    <ArrowRight />
-  </button>
-)
-
-SeeAllButton.propTypes = {
-  collapsed: PropTypes.bool,
-  onClick: PropTypes.func,
-}
-
-const PageSection = ({
-  id,
-  additionalClassNames,
-  children,
-  collapsible,
-  style,
-}) => {
-  const [isCollapsed, setIsCollapsed] = useState(collapsible ? true : false)
-
-  const toggleCollapse = () => {
-    setIsCollapsed(!isCollapsed)
-  }
-
-  const classes = classNames(
-    "page-section",
-    { collapsible: collapsible, collapsed: isCollapsed },
-    id,
-    additionalClassNames
-  )
-
+function Overlay(props) {
   return (
-    <section className={classes} id={id} style={style}>
-      <div className="page-section-content">
-        <Container fluid="md">
-          {children}
-          {collapsible ? (
-            <SeeAllButton collapsed={isCollapsed} onClick={toggleCollapse} />
-          ) : (
-            ""
-          )}
-        </Container>
+    <div className="overlay">
+      <h1>
+        Stake on EStake on Ethereum’s first private computer and earn up to 200%
+        APY.
+      </h1>
+      <h4>
+        Staking with Keep is the best way to back a truly decentralized network
+        and the future of DeFi.
+      </h4>
+      <div className="button-group">
+        
       </div>
-    </section>
+    </div>
   )
 }
 
-PageSection.propTypes = {
-  id: PropTypes.string,
-  additionalClassNames: PropTypes.array,
-  children: PropTypes.oneOfType([
-    PropTypes.arrayOf(PropTypes.node),
-    PropTypes.node,
-  ]),
-  collapsible: PropTypes.bool,
-  style: PropTypes.object,
-}
+Overlay.propTypes = {}
 
-PageSection.defaultProps = {
-  id: "",
-  additionalClassNames: [],
-  collapsible: false,
-}
-
-export default PageSection
+export default Overlay

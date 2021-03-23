@@ -6,9 +6,9 @@ function Content(props) {
 
   return (
     <div className="section-container">
-      <h2>{title}</h2>
-      <h3>{subtitle}</h3>
-      <p>{text}</p>
+      <h1 className="section-title">{title}</h1>
+      <h3 className="section-subtitle">{subtitle}</h3>
+      <h4 className="section-text">{text}</h4>
     </div>
   )
 }

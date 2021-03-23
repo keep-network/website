@@ -1,0 +1,28 @@
+.section {
+  &-container {
+    width: 578px;
+  }
+  &-title {
+    font-size: 56px;
+    font-weight: 800;
+    font-style: normal;
+    line-height: 64px;
+    letter-spacing: -1%;
+    color: $black;
+  }
+  &-subtitle {
+    font-weight: 500;
+    font-style: normal;
+    font-size: 40px;
+    line-height: 50px;
+    letter-spacing: -1%;
+    color: $black;
+  }
+  &-text {
+    font-weight: 500;
+    font-style: normal;
+    font-size: 28px;
+    line-height: 40px;
+    color: $grey-70;
+  }
+}

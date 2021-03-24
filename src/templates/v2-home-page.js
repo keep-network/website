@@ -3,15 +3,7 @@ import React from "react"
 import Header from "../components/v2/Header"
 import Footer from "../components/v2/Footer"
 import Overlay from "../components/v2/Overlay"
-
-export function HomePageTemplate(props) {
-  return (
-    <>
-      {/* <Header /> */}
-      {/* <Overlay /> */}
-    </>
-  )
-}
+import Carousel from "../components/v2/Carousel"
 
 // export const query = graphql`
 //   query HomePage($id: String1) {
@@ -25,6 +17,7 @@ function HomePage(props) {
       <Header />
       <Overlay />
       <Footer />
+      <Carousel />
     </>
   )
 }

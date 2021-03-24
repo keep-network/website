@@ -6,7 +6,7 @@ import Footer from "../components/v2/Footer"
 import Overlay from "../components/v2/Overlay"
 import Ticker from "../components/v2/Ticker"
 
-// TODO:
+// TODO: #339 - will uncomment in next PR
 //
 // import Carousel from "../components/v2/Carousel"
 // import Grid from "../components/v2/Grid"

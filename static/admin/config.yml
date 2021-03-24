@@ -17,6 +17,7 @@ collections:
   - name: "pages"
     label: "Pages"
     files:
+      # TODO: #339 - will uncomment in next PR
       # - file: "src/pages/v2/index.md"
       # - file: "src/pages/v2/nav.md"
       - file: "src/pages/index.md"

@@ -1,12 +1,14 @@
 import React from "react"
 import PropTypes from "prop-types"
-
+import { Container } from "reactstrap"
 function Section(props) {
   const { classNames, children } = props
 
   return (
     <section className={classNames}>
-      <div className="container">{children}</div>
+      <Container fluid="md" className="container">
+        {children}
+      </Container>
     </section>
   )
 }

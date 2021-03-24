@@ -6,20 +6,18 @@ import Button from "../Button"
 function Overlay(props) {
   return (
     <div className="overlay">
-      <Section>
-        <div className="overlay-content">
-          <h1>
-            Stake on EStake on Ethereum’s first private computer and earn up to 200% APY.
-          </h1>
-          <h4>
-            Staking with Keep is the best way to back a truly decentralized network and the future of DeFi.
-          </h4>
-          <div className="button-group">
-            <Button label="ABOUT KEEP" type="primary" />
-            <Button label="BUTTON" type="secondary" />
-          </div>
+      <div className="overlay-content">
+        <h1>
+          Stake on Ethereum’s first private computer and earn up to 200% APY.
+        </h1>
+        <h4>
+          Staking with Keep is the best way to back a truly decentralized network and the future of DeFi.
+        </h4>
+        <div className="button-group">
+          <Button label="ABOUT KEEP" type="primary" />
+          <Button label="BUTTON" type="secondary" />
         </div>
-      </Section>
+      </div>
     </div>
   )
 }

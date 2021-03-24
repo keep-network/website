@@ -138,6 +138,7 @@ footer {
 
     .footer-columns {
       flex-direction: row;
+      justify-content: space-around;
 
       .footer-column-1 {
         flex: 0 0 auto;

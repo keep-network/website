@@ -1,3 +1,44 @@
 .overlay {
-  width: 872px;
+  background-image: url(../images/v2/overlay-bg.png);
+  background-color: #EFEFEF;
+  background-blend-mode: color-burn;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: contain;
+
+  width: 100%;
+  height: 1046px;
+  
+  h1 {
+    font-family: Work Sans;
+    color: $black;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 66px;
+    line-height: 74px;
+    width: 800px;
+    letter-spacing: -0.01em;
+    margin: 32px 0;
+  }
+
+  h4 {
+    color: $grey-70;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 28px;
+    line-height: 40px;
+    width: 480px;
+    margin: 32px 0;
+  }
+
+  &-content {
+    padding: 268px 377px;
+  }
+}
+
+.button-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
 }

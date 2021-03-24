@@ -1,6 +1,7 @@
 import React from "react"
 import { NavLink } from "reactstrap"
 import { Link } from "gatsby"
+import PropTypes from "prop-types"
 import NavScrollItem from "./NavScrollItem"
 
 function NavItem(props) {

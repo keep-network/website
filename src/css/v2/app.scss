@@ -1,0 +1,19 @@
+@import '~bootstrap-css-only/css/bootstrap.min.css';
+
+@import 'header';
+@import 'footer';
+@import 'overlay';
+@import 'section';
+@import 'carousel';
+@import 'button';
+
+body {
+    background-color: $background-light-color;
+}
+
+.app {
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+

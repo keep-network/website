@@ -4,6 +4,9 @@ import PropTypes from "prop-types"
 import Header from "../components/v2/Header"
 import Footer from "../components/v2/Footer"
 import Overlay from "../components/v2/Overlay"
+
+// TODO:
+//
 // import Carousel from "../components/v2/Carousel"
 // import Grid from "../components/v2/Grid"
 // import { Col, Row } from "reactstrap"

@@ -9,7 +9,7 @@ function Card(props) {
   return (
     <div className="card">
       <div className="card card-row">
-        <Icon src={icon} />
+        {/* <Icon src={icon} /> */}
         <h4>{description}</h4>
       </div>
       <div className="card card-row">

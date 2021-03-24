@@ -6,6 +6,7 @@
 @import 'section';
 @import 'carousel';
 @import 'button';
+@import 'tick';
 
 body {
     background-color: $background-light-color;
@@ -15,5 +16,3 @@ body {
     overflow: hidden;
     margin: 0 auto;
 }
-
-

@@ -4,6 +4,7 @@ import PropTypes from "prop-types"
 import Header from "../components/v2/Header"
 import Footer from "../components/v2/Footer"
 import Overlay from "../components/v2/Overlay"
+import Ticker from "../components/v2/Ticker"
 
 // TODO:
 //
@@ -76,11 +77,19 @@ function HomePage(props) {
 }
 */
 
+const tickerItems = [
+  "60.2% APY · KEEP/TBTC POOL",
+  "14% APY · KEEP POOL",
+  "79.3% APY · TBTC/SADDLE POOL",
+  "20.2% APY · KEEP/TBTC POOL",
+]
+
 function HomePage(props) {
   return (
     <>
       <Header />
       <Overlay />
+      <Ticker items={tickerItems} />
       <Footer />
     </>
   )

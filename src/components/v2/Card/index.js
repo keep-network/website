@@ -1,6 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
-import Icon from "../Icon"
+// import Icon from "../Icon"
 import Button from "../Button"
 
 function Card(props) {

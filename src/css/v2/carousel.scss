@@ -15,6 +15,13 @@
     background-position: right;
     background-size: 473px 1242px;
   }
+
+  &-bg-3 {
+    background-image: url(../images/v2/carousel-bg-3.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 100%;
+  }
 }
 
 .right {
@@ -24,7 +31,7 @@
 }
 
 .bg {
-  &-dark {
+  &-gray {
     background-color: #C0C0C0;
   }
 }

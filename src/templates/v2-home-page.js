@@ -6,13 +6,16 @@ import Footer from "../components/v2/Footer"
 import Overlay from "../components/v2/Overlay"
 import Ticker from "../components/v2/Ticker"
 import Carousel from "../components/v2/Carousel"
+import LogoWall from "../components/v2/LogoWall"
+import { Col, Row } from "reactstrap"
 
 // TODO: #339 - will uncomment in next PR
 //
 // import Carousel from "../components/v2/Carousel"
 // import Grid from "../components/v2/Grid"
 // import { Col, Row } from "reactstrap"
-// import { PageSection } from "../components"
+import { sections } from "../../constants"
+import { PageSection, ImageLink } from "../components"
 
 /*
 export const query = graphql`
@@ -41,7 +44,7 @@ export const query = graphql`
     }
   }
 `
-*/
+
 
 /*
 function HomePage(props) {
@@ -99,6 +102,21 @@ const carousel2 = {
     "Keep is the only protocol that is truly decentralized. “Keeps” are off-chain containers that allow contracts to use private data without exposing the data to the public blockchain.",
 }
 
+const carousel3 = {
+  title: "The Keep solution",
+  subtitle: "Security without compromise.",
+  text:
+    "The Keep network stores data with the highest level of encryption. Keep and tBTC have been audited by the strongest firms in the ecosystem.",
+}
+
+const logoItems = [
+  "../images/v2/logo-1.png",
+  // "../images/v2/logo-2.png",
+  // "../images/v2/logo-3.png",
+  // "../images/v2/logo-3.png",
+  // "../images/v2/logo-5.png",
+]
+
 function HomePage(props) {
   return (
     <>
@@ -117,6 +135,26 @@ function HomePage(props) {
         subtitle={carousel2.subtitle}
         text={carousel2.text}
       />
+      <Carousel
+        classNames="carousel-bg-3"
+        title={carousel3.title}
+        subtitle={carousel3.subtitle}
+        text={carousel3.text}
+      />
+      {/* <LogoWall items={logoItems} /> */}
+      <PageSection id={sections.SUPPORTERS} convex>
+        <h2>{supportersSection.title}</h2>
+        <Row>
+          {supportersSection.supporters.map((supporter, i) => (
+            <ImageLink
+              key={`supporter-${i}`}
+              url={supporter.url}
+              label={supporter.name}
+              image={supporter.logo}
+            />
+          ))}
+        </Row>
+      </PageSection>
       <Footer />
     </>
   )
@@ -133,3 +171,88 @@ HomePage.propTypes = {
 }
 
 export default HomePage
+
+export const query = graphql`
+  query HomePageV2($id: String!) {
+    markdownRemark(id: { eq: $id }) {
+      id
+      frontmatter {
+        hero {
+          title
+          body
+          cta {
+            label
+            icon {
+              image {
+                relativePath
+              }
+              alt
+            }
+          }
+          cta_buttons {
+            label
+            url
+          }
+        }
+        team_section {
+          title
+          team {
+            name
+            title
+            image {
+              childImageSharp {
+                fluid(maxWidth: 274, quality: 100) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+            social_links {
+              url
+            }
+          }
+        }
+        advisors_section {
+          title
+          advisors {
+            name
+            title
+            image {
+              childImageSharp {
+                fluid(maxWidth: 274, quality: 100) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+            social_links {
+              url
+            }
+          }
+        }
+        supporters_section {
+          title
+          supporters {
+            name
+            url
+            logo {
+              image {
+                childImageSharp {
+                  fluid(maxWidth: 300, quality: 100) {
+                    ...GatsbyImageSharpFluid
+                  }
+                }
+              }
+              alt
+            }
+          }
+        }
+      }
+    }
+    textureCircle2: file(relativePath: { regex: "/texture-circle-2.png/" }) {
+      childImageSharp {
+        fluid(maxWidth: 604, quality: 100) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`

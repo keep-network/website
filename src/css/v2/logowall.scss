@@ -4,8 +4,17 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+  background: #91E9D2;
 }
 
 .logo {
+  display: inline-block;
   margin: 10px 20px;
+  width: 168px;
+  height: 72px;
+  img {
+    max-width: 100%;
+    max-height: 100vh;
+    margin: auto;
+  }
 }

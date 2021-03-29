@@ -2,7 +2,6 @@ import React from "react"
 import { Container } from "reactstrap"
 import { graphql, StaticQuery } from "gatsby"
 import PropTypes from "prop-types"
-
 import CollapsibleList from "./CollapsibleList"
 import Image from "./Image"
 import Link from "./Link"

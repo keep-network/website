@@ -3,7 +3,11 @@ import PropTypes from "prop-types"
 
 function Logo(props) {
   const { item } = props
-  return <img className="logo" src={require(item)} alt="" />
+  return (
+    <div className="logo">
+      <img src={item} alt="" />
+    </div>
+  )
 }
 
 Logo.propTypes = {

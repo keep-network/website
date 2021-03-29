@@ -14,7 +14,7 @@ import { Col, Row } from "reactstrap"
 // import Carousel from "../components/v2/Carousel"
 // import Grid from "../components/v2/Grid"
 // import { Col, Row } from "reactstrap"
-import { sections } from "../../constants"
+import { sections } from "../constants"
 import { PageSection, ImageLink } from "../components"
 
 /*
@@ -110,11 +110,11 @@ const carousel3 = {
 }
 
 const logoItems = [
-  "../images/v2/logo-1.png",
-  // "../images/v2/logo-2.png",
-  // "../images/v2/logo-3.png",
-  // "../images/v2/logo-3.png",
-  // "../images/v2/logo-5.png",
+  require("../images/v2/logo-1.png"),
+  require("../images/v2/logo-2.png"),
+  require("../images/v2/logo-3.png"),
+  require("../images/v2/logo-3.png"),
+  require("../images/v2/logo-5.png"),
 ]
 
 function HomePage(props) {
@@ -141,8 +141,8 @@ function HomePage(props) {
         subtitle={carousel3.subtitle}
         text={carousel3.text}
       />
-      {/* <LogoWall items={logoItems} /> */}
-      <PageSection id={sections.SUPPORTERS} convex>
+      <LogoWall items={logoItems} />
+      {/* <PageSection id={sections.SUPPORTERS} convex>
         <h2>{supportersSection.title}</h2>
         <Row>
           {supportersSection.supporters.map((supporter, i) => (
@@ -154,7 +154,7 @@ function HomePage(props) {
             />
           ))}
         </Row>
-      </PageSection>
+      </PageSection> */}
       <Footer />
     </>
   )

@@ -7,6 +7,8 @@ import Overlay from "../components/v2/Overlay"
 import Ticker from "../components/v2/Ticker"
 import Carousel from "../components/v2/Carousel"
 import LogoWall from "../components/v2/LogoWall"
+import Blog from "../components/v2/Blog"
+import Banner from "../components/v2/Banner"
 import { Col, Row } from "reactstrap"
 
 // TODO: #339 - will uncomment in next PR
@@ -117,6 +119,36 @@ const logoItems = [
   require("../images/v2/logo-5.png"),
 ]
 
+const blogItems = [
+  {
+    image: require("../images/v2/grid.png"),
+    title: "Headline",
+    subtitle: "news outlet",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit cursus sed feugiat iaculis dictumst.",
+    date: "September, 16 2020",
+    label: "READ MORE",
+  },
+  {
+    image: require("../images/v2/grid.png"),
+    title: "Headline",
+    subtitle: "news outlet",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit cursus sed feugiat iaculis dictumst.",
+    date: "September, 16 2020",
+    label: "READ MORE",
+  },
+]
+
+const bannerItems = [
+  require("../images/v2/logo-6.png"),
+  require("../images/v2/logo-7.png"),
+  require("../images/v2/logo-8.png"),
+  require("../images/v2/logo-9.png"),
+  require("../images/v2/logo-10.png"),
+  require("../images/v2/logo-11.png"),
+]
+
 function HomePage(props) {
   return (
     <>
@@ -124,16 +156,16 @@ function HomePage(props) {
       <Overlay />
       <Ticker items={tickerItems} />
       <Carousel
-        classNames="carousel-bg-1"
-        title={carousel1.title}
-        subtitle={carousel1.subtitle}
-        text={carousel1.text}
-      />
-      <Carousel
         classNames="carousel-bg-2"
         title={carousel2.title}
         subtitle={carousel2.subtitle}
         text={carousel2.text}
+      />
+      <Carousel
+        classNames="carousel-bg-1"
+        title={carousel1.title}
+        subtitle={carousel1.subtitle}
+        text={carousel1.text}
       />
       <Carousel
         classNames="carousel-bg-3"
@@ -142,6 +174,11 @@ function HomePage(props) {
         text={carousel3.text}
       />
       <LogoWall items={logoItems} />
+      <Blog title="Latest from the Keep Blog" items={blogItems} />
+      <Banner
+        title="Keep is backed by the strongest VCs in the world."
+        items={bannerItems}
+      />
       {/* <PageSection id={sections.SUPPORTERS} convex>
         <h2>{supportersSection.title}</h2>
         <Row>

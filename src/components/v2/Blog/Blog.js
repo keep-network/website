@@ -14,10 +14,8 @@ function Blog(props) {
           items.map((item, index) => (
             <BlogCard key={`blog-card-${index}`} item={item} />
           ))}
-        <div>
-          <a className="" href="#">
-            Read more articles
-          </a>
+        <div className="blog-footer">
+          <a href="#">Read more articles</a>
         </div>
       </Container>
     </div>

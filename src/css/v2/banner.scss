@@ -1,3 +1,36 @@
 .banner {
   width: 100%;
+  display: flex;
+  flex-direction: row;
+
+  &-title {
+    width: 480px;
+    height: 192px;
+
+    flex: 1;
+    /* H1 */
+    font-family: Work Sans;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 56px;
+    line-height: 64px;
+    /* or 114% */
+
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.01em;
+
+    /* $color-black */
+
+    color: #0A0806;    
+  }
+
+  &-content {
+    flex: 1;
+  }
+
+  &-card {
+    width: 284px;
+    height: 88px;
+  }
 }

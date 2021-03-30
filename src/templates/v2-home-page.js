@@ -9,6 +9,8 @@ import Carousel from "../components/v2/Carousel"
 import LogoWall from "../components/v2/LogoWall"
 import Blog from "../components/v2/Blog"
 import Banner from "../components/v2/Banner"
+import Grid from "../components/v2/Grid"
+import Contact from "../components/v2/Contact"
 import { Col, Row } from "reactstrap"
 
 // TODO: #339 - will uncomment in next PR
@@ -144,9 +146,9 @@ const bannerItems = [
   require("../images/v2/logo-6.png"),
   require("../images/v2/logo-7.png"),
   require("../images/v2/logo-8.png"),
-  // require("../images/v2/logo-9.png"),
-  // require("../images/v2/logo-10.png"),
-  // require("../images/v2/logo-11.png"),
+  require("../images/v2/logo-9.png"),
+  require("../images/v2/logo-10.png"),
+  require("../images/v2/logo-11.png"),
 ]
 
 function HomePage(props) {
@@ -156,13 +158,13 @@ function HomePage(props) {
       <Overlay />
       <Ticker items={tickerItems} />
       <Carousel
-        classNames="carousel-bg-2"
+        classNames="carousel-bg-1"
         title={carousel2.title}
         subtitle={carousel2.subtitle}
         text={carousel2.text}
       />
       <Carousel
-        classNames="carousel-bg-1"
+        classNames="carousel-bg-2"
         title={carousel1.title}
         subtitle={carousel1.subtitle}
         text={carousel1.text}
@@ -175,10 +177,12 @@ function HomePage(props) {
       />
       <LogoWall items={logoItems} />
       <Blog title="Latest from the Keep Blog" items={blogItems} />
+      <Grid />
       <Banner
         title="Keep is backed by the strongest VCs in the world."
         images={bannerItems}
       />
+      <Contact title="Keep in touch" />
       {/* <PageSection id={sections.SUPPORTERS} convex>
         <h2>{supportersSection.title}</h2>
         <Row>

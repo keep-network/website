@@ -5,15 +5,17 @@
   &-bg-1 {
     background-image: url(../images/v2/carousel-bg-1.png);
     background-repeat: no-repeat;
-    background-position: left;
-    // background-size: 700px 700px;
+    background-position: right;
+    background-size: 473px 1242px;
+    background-color: #E6E6E6;
   }
 
   &-bg-2 {
     background-image: url(../images/v2/carousel-bg-2.png);
     background-repeat: no-repeat;
-    background-position: right;
-    background-size: 473px 1242px;
+    background-position: left;
+    // background-size: 700px 700px;
+    background-color: #F4F4F4;
   }
 
   &-bg-3 {

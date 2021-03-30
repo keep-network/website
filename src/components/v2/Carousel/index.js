@@ -18,7 +18,7 @@ function Carousel(props) {
 }
 
 Carousel.propTypes = {
-  classNames: PropTypes.array,
+  classNames: PropTypes.string,
   title: PropTypes.string,
   subtitle: PropTypes.string,
   text: PropTypes.string,

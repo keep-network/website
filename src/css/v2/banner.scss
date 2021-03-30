@@ -2,12 +2,25 @@
   width: 100%;
   display: flex;
   flex-direction: row;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: #F4F4F4;
+
+  &-container {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  &-header {
+    width: 50%;
+  }
 
   &-title {
     width: 480px;
     height: 192px;
 
-    flex: 1;
     /* H1 */
     font-family: Work Sans;
     font-style: normal;
@@ -22,15 +35,24 @@
 
     /* $color-black */
 
-    color: #0A0806;    
+    color: #0A0806;
   }
 
   &-content {
-    flex: 1;
+    width: 50%;
   }
 
   &-card {
-    width: 284px;
+    width: 50%;
     height: 88px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &-image {
+      max-width: 100%;
+      max-height: 100vh;
+      margin: auto;
+    }
   }
 }

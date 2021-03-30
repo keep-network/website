@@ -6,13 +6,13 @@ function BannerCard(props) {
 
   return (
     <div className="banner-card">
-      <img src={image} alt="" />
+      <img className="banner-card-image" src={image} alt="" />
     </div>
   )
 }
 
 BannerCard.propTypes = {
-  image: PropTypes.object,
+  image: PropTypes.string,
 }
 
 export default BannerCard

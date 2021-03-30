@@ -4,16 +4,20 @@ import PropTypes from "prop-types"
 import BannerCard from "./BannerCard"
 
 function Banner(props) {
-  const { title, items } = props
+  const { title, images } = props
 
   return (
     <div className="banner">
       <Container>
-        <h3 className="banner-title">{title}</h3>
-        <div className="banner-content">
-          {items.map((item, index) => (
-            <BannerCard key={`banner-card-${index}`} item={item} />
-          ))}
+        <div className="banner-container">
+          <div className="banner-header">
+            <h3 className="banner-title">{title}</h3>
+          </div>
+          <div className="banner-content">
+            {images.map((image, index) => (
+              <BannerCard key={`banner-card-${index}`} image={image} />
+            ))}
+          </div>
         </div>
       </Container>
     </div>
@@ -22,7 +26,7 @@ function Banner(props) {
 
 Banner.propTypes = {
   title: PropTypes.string,
-  items: PropTypes.oneOfType([
+  images: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node,
   ]),

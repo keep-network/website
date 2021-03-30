@@ -11,7 +11,7 @@ function Logo(props) {
 }
 
 Logo.propTypes = {
-  item: PropTypes.object,
+  item: PropTypes.string,
 }
 
 export default Logo

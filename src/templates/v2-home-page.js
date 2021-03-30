@@ -144,9 +144,9 @@ const bannerItems = [
   require("../images/v2/logo-6.png"),
   require("../images/v2/logo-7.png"),
   require("../images/v2/logo-8.png"),
-  require("../images/v2/logo-9.png"),
-  require("../images/v2/logo-10.png"),
-  require("../images/v2/logo-11.png"),
+  // require("../images/v2/logo-9.png"),
+  // require("../images/v2/logo-10.png"),
+  // require("../images/v2/logo-11.png"),
 ]
 
 function HomePage(props) {
@@ -177,7 +177,7 @@ function HomePage(props) {
       <Blog title="Latest from the Keep Blog" items={blogItems} />
       <Banner
         title="Keep is backed by the strongest VCs in the world."
-        items={bannerItems}
+        images={bannerItems}
       />
       {/* <PageSection id={sections.SUPPORTERS} convex>
         <h2>{supportersSection.title}</h2>

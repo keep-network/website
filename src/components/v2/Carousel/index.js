@@ -9,7 +9,7 @@ function Carousel(props) {
   return (
     <section className={classNames}>
       <div className="carousel">
-        <Container fluid="md">
+        <Container>
           <Content title={title} subtitle={subtitle} text={text} />
         </Container>
       </div>

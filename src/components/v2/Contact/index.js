@@ -1,5 +1,5 @@
 import React from "react"
-import { Container, Button } from "reactstrap"
+import { Container } from "reactstrap"
 import PropTypes from "prop-types"
 
 function Contact(props) {
@@ -14,8 +14,9 @@ function Contact(props) {
         <div className="contact-content">
           <h4>Get the Keep Newsletter</h4>
           <h5>Sign up for our newsletter and never miss an update.</h5>
-          <input className="email" />
-          <Button />
+          <form className="form-group">
+            <input className="contact-email" placeholder="you@example.com" />
+          </form>
         </div>
       </Container>
     </div>

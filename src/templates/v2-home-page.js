@@ -11,15 +11,14 @@ import Blog from "../components/v2/Blog"
 import Banner from "../components/v2/Banner"
 import Grid from "../components/v2/Grid"
 import Contact from "../components/v2/Contact"
-import { Col, Row } from "reactstrap"
 
 // TODO: #339 - will uncomment in next PR
 //
 // import Carousel from "../components/v2/Carousel"
 // import Grid from "../components/v2/Grid"
 // import { Col, Row } from "reactstrap"
-import { sections } from "../constants"
-import { PageSection, ImageLink } from "../components"
+// import { sections } from "../constants"
+// import { PageSection, ImageLink } from "../components"
 
 /*
 export const query = graphql`

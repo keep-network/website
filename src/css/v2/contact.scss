@@ -2,6 +2,7 @@
   width: 100%;
   padding-top: 60px;
   padding-bottom: 60px;
+  background-color: white;
   
   &-header {
     width: 100%;
@@ -11,15 +12,46 @@
       font-weight: 800;
       font-size: 56px;
       line-height: 64px;
-      /* identical to box height, or 114% */
-
       display: flex;
       align-items: center;
       letter-spacing: -0.01em;
-
-      /* $color-black */
+      padding-top: 76px;
+      padding-bottom: 76px;
 
       color: #0A0806;
     }
+  }
+
+  &-content {
+    h4 {
+      font-family: Work Sans;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 28px;
+      line-height: 40px;
+      color: #0A0806;
+      margin: 10px 0;
+    }
+
+    h5 {
+      font-family: Work Sans;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 22px;
+      line-height: 32px;
+      color: #818181 !important;
+    }
+  }
+
+  &-email {
+    background: #FFFFFF;
+    border: 1px solid #0A0806;
+    box-sizing: border-box;
+    border-radius: 8px;
+    outline: none;
+    width: 70%;
+    margin: 10px 40px;
+    margin-left: 0;
+    padding: 10px;
   }
 }

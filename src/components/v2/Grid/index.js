@@ -9,17 +9,18 @@ function Grid(props) {
   return (
     <div className="page-grid">
       <Container fluid="md">
-        {cards.map((card, index) => {
-          const { icon, description, label } = card
-          return (
-            <Card
-              key={`card-${index}`}
-              icon={icon}
-              description={description}
-              label={label}
-            />
-          )
-        })}
+        {cards &&
+          cards.map((card, index) => {
+            const { icon, description, label } = card
+            return (
+              <Card
+                key={`card-${index}`}
+                icon={icon}
+                description={description}
+                label={label}
+              />
+            )
+          })}
       </Container>
     </div>
   )

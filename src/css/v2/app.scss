@@ -6,6 +6,11 @@
 @import 'section';
 @import 'carousel';
 @import 'button';
+@import 'tick';
+@import 'logowall';
+@import 'banner';
+@import 'blog';
+@import 'contact';
 
 body {
     background-color: $background-light-color;
@@ -15,5 +20,3 @@ body {
     overflow: hidden;
     margin: 0 auto;
 }
-
-

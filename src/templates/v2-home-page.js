@@ -120,6 +120,29 @@ const logoItems = [
   require("../images/v2/logo-5.png"),
 ]
 
+const gridItems = [
+  {
+    image: require("../images/v2/grid-icon-1.svg"),
+    title: "How the Keep Network works",
+    label: "ABOUT KEEP",
+  },
+  {
+    image: require("../images/v2/grid-icon-2.svg"),
+    title: "Manage stake and rewards",
+    label: "GET KEEP",
+  },
+  {
+    image: require("../images/v2/grid-icon-3.svg"),
+    title: "Staking your KEEP tokens",
+    label: "SHAKE KEEP",
+  },
+  {
+    image: require("../images/v2/grid-icon-4.svg"),
+    title: "Manage stake and rewards",
+    label: "LAUNCH DAPP",
+  },
+]
+
 const blogItems = [
   {
     image: require("../images/v2/grid.png"),
@@ -138,6 +161,23 @@ const blogItems = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit cursus sed feugiat iaculis dictumst.",
     date: "September, 16 2020",
     label: "READ MORE",
+  },
+]
+
+const contactItems = [
+  {
+    image: require("../images/v2/contact-icon-1.svg"),
+    title: "Read the Keep blog",
+    subtitle:
+      "Get the latest updates on the blog. Read about the Keep network, tBTC, partnerships, and more.",
+    label: "READ BLOG",
+  },
+  {
+    image: require("../images/v2/contact-icon-2.svg"),
+    title: "Join the community",
+    subtitle:
+      "Connect with the Discord community, ask questions, and get in on the ground level for the future of DeFi.",
+    label: "JOIN DISCORD",
   },
 ]
 
@@ -176,12 +216,16 @@ function HomePage(props) {
       />
       <LogoWall items={logoItems} />
       <Blog title="Latest from the Keep Blog" items={blogItems} />
-      <Grid />
+      <Grid
+        title="Learn how to stake on the Keep network"
+        subtitle="Stake on the Keep network to earn rewards and secure the network."
+        items={gridItems}
+      />
       <Banner
         title="Keep is backed by the strongest VCs in the world."
         images={bannerItems}
       />
-      <Contact title="Keep in touch" />
+      <Contact title="Keep in touch" items={contactItems} />
       {/* <PageSection id={sections.SUPPORTERS} convex>
         <h2>{supportersSection.title}</h2>
         <Row>

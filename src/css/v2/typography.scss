@@ -1,0 +1,298 @@
+@import 'vitesse-font';
+
+$body-font-family: 'Work Sans', sans-serif;
+
+body {
+    font-family: $body-font-family;
+    font-weight: 500;
+    font-size: 16px;
+    color: $body-text-color;
+    line-height: 1.44;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    @media (min-width: #{$bp-medium}) {
+        line-height: 1.79;
+    }
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+h1, .h1 {
+    font-weight: 800;
+    font-size: 50px;
+    letter-spacing: -1px;
+    line-height: 73px;
+}
+
+h2, .h2 {
+    font-weight: 800;
+    font-size: 50px;
+}
+
+h3, .h3 {
+    font-weight: 600;
+    font-size: 30px;
+}
+
+h4, .h4 {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+h2, .h2,
+h3, .h3,
+h4, .h4 {
+    line-height: 1.38;
+}
+
+small, .small {
+    font-size: 14px;
+    line-height: 1.38;
+}
+
+@media (max-width: #{$bp-medium}) {
+    h1, .h1,
+    h2, .h2,
+    h3, .h3 {
+        font-size: 30px;
+        line-height: 1.33;
+    }
+
+    h2, .h2 {
+        margin-bottom: 50px;
+    }
+}
+
+p {
+    margin: 0 0 1.4em;
+}
+
+a {
+    color: $primary-color;
+}
+
+.light-font {
+    font-weight: 400;
+}
+
+.small-title {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.btn {
+    padding: 12px 35px 16px;
+    border-radius: 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    line-height: 120%;
+    font-variant: small-caps;
+    text-transform: lowercase;
+    cursor: pointer;
+
+    svg {
+        vertical-align: middle;
+    }
+}
+
+.btn-default {
+    color: $primary-color;
+    border: 1px solid $black;
+    color: $black;
+    transition: 0.25s all ease-in;
+    position: relative;
+
+    &:before {
+        display: block;
+        content: '';
+        width: calc(100% + 2px);
+        height: 4px;
+        position: absolute;
+        bottom: -5px;
+        left: -1px;
+        background-color: transparent;
+        transition: 0.25 background-color ease-in;
+    }
+
+    &:hover,
+    &:active {
+        text-decoration: none;
+    }
+
+    &:hover {
+        &:before {
+            background-color: $black;
+        }
+    }
+
+    &:focus,
+    &:active {
+        &:before {
+            background-color: $primary-color;
+        }
+    }
+}
+
+.btn-primary {
+    background-color: $black;
+    border-color: $black;
+    color: $primary-color;
+    transition: 0.25s all ease-in;
+
+    svg {
+        path {
+            transition: all 0.25s ease-in;
+        }
+    }
+
+    &:hover {
+        background-color: $black;
+        color: $white;
+        text-decoration: none;
+
+        svg {
+            path {
+                stroke: $white;
+            }
+        }
+    }
+
+    &:focus,
+    &:active,
+    &.active.focus,
+    &:active:focus,
+    &.active,
+    &.focus {
+        background-color: $primary-color;
+        border-color: $primary-color;
+        color: $black;
+        box-shadow: none;
+
+        svg {
+            path {
+                stroke: $black;
+            }
+        }
+    }
+}
+
+.btn-primary-on-dark {
+    background-color: $primary-color;
+    border-color: $primary-color;
+    color: $black;
+    transition: 0.25s all ease-in;
+}
+
+.btn-default,
+.btn-primary,
+.btn-primary-on-dark {
+    &:focus {
+        outline: 0;
+    }
+}
+
+.btn-default.disabled,
+.btn-default[disabled] {
+    border-color: $grey-20;
+    color: $grey-30;
+    cursor: not-allowed;
+
+    &:hover,
+    &:active {
+        border-color: $grey-20;
+        color: $grey-30;
+        box-shadow: none;
+
+        &:before {
+            display: none;
+        }
+    }
+}
+
+.btn-primary.disabled,
+.btn-primary[disabled],
+fieldset[disabled] .btn {
+    background-color: $grey-20;
+    color: $grey-30;
+    cursor: not-allowed;
+
+    &:hover,
+    &:active {
+        background-color: $grey-20;
+        color: $grey-30;
+        box-shadow: none;
+    }
+}
+
+.btn-submit {
+    @extend .btn;
+    @extend .btn-primary;
+    line-height: 100%;
+    min-width: 124px;
+    text-align: center;
+    vertical-align: middle;
+    border-style: solid;
+
+    .spinner {
+        display: inline-block;
+        position: relative;
+        top: 2px;
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        background: linear-gradient(to right, $white 10%, $grey-30 42%);
+        position: relative;
+        animation: rotate 1.4s linear infinite;
+        transform: translateZ(0);
+
+        &:before {
+            content: '';
+            width: 50%;
+            height: 50%;
+            background: $grey-30;
+            border-radius: 100% 0 0 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        &:after {
+            background: $grey-20;
+            width: 75%;
+            height: 75%;
+            border-radius: 50%;
+            content: '';
+            margin: auto;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+        }
+    }
+
+    &[disabled] {
+        border-color: $grey-20;
+        border-style: solid;
+    }
+}
+
+.no-wrap {
+    white-space: nowrap;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

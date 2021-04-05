@@ -1,0 +1,134 @@
+$sizes: (xs: 0px, sm: 576px, md: 768px, lg: 992px, xl: 1200px);
+$sizes-max: (xs: 575px, sm: 767px, md: 991px, lg: 1199px);
+
+@each $key, $size in $sizes {
+  @media (min-width: $size) {
+    $class: -#{$key};
+    @if $key == xs {
+      $class: '';
+    }
+    .position#{$class}-static {
+      position: static !important;
+    }
+    .position#{$class}-relative {
+      position: relative !important;
+    }
+    .position#{$class}-absolute {
+      position: absolute !important;
+    }
+    .position#{$class}-fixed {
+      position: fixed !important;
+    }
+    
+    .t#{$class}-#{0} {
+      top: 0 !important;
+    }
+
+    .b#{$class}-#{0} {
+      bottom: 0 !important;
+    }
+
+    .l#{$class}-#{0} {
+      left: 0 !important;
+    }
+
+    .r#{$class}-#{0} {
+      right: 0 !important;
+    }
+
+    .border#{$class}-x {
+      border-left: 1px solid #ddd !important;
+      border-right: 1px solid #ddd !important;
+    }
+    .border#{$class}-y {
+      border-top: 1px solid #ddd !important;
+      border-bottom: 1px solid #ddd !important;
+    }
+
+    .border#{$class}-t {
+      border-top: 1px solid #ddd !important;
+    }
+    .border#{$class}-b {
+      border-bottom: 1px solid #ddd !important;
+    }
+    .border#{$class}-r {
+      border-right: 1px solid #ddd !important;
+    }
+    .border#{$class}-l {
+      border-left: 1px solid #ddd !important;
+    }
+    .border#{$class} {
+      border: 1px solid #ddd !important;
+    }
+
+
+    @for $i from 1 through 20 {
+      .z#{$class}-#{$i*5} {  
+        z-index: $i*5 !important;
+      }
+
+      .w#{$class}-#{$i*5} {  
+        width: $i*5% !important;
+      }
+
+      .h#{$class}-#{$i*5} {  
+        height: $i*5% !important;
+      }
+
+      .l#{$class}-#{$i*5} {  
+        left: $i*5% !important;
+      }
+      .r#{$class}-#{$i*5} {  
+        right: $i*5% !important;
+      }
+      .t#{$class}-#{$i*5} {  
+        top: $i*5% !important;
+      }
+      .b#{$class}-#{$i*5} {  
+        bottom: $i*5% !important;
+      }
+
+
+
+      .l#{$class}-n-#{$i*5} {  
+        left: $i*-5% !important;
+      }
+      .r#{$class}-n-#{$i*5} {  
+        right: $i*-5% !important;
+      }
+      .t#{$class}-n-#{$i*5} {  
+        top: $i*-5% !important;
+      }
+      .b#{$class}-n-#{$i*5} {  
+        bottom: $i*-5% !important;
+      }
+      
+    }
+    .w#{$class}-#{33} {
+      width: 33.33% !important;
+    }
+    
+    .w#{$class}-#{66} {
+      width: 66.67% !important;
+    }
+
+    .h#{$class}-#{33} {
+      height: 33.33% !important;
+    }
+    .h#{$class}-#{66} {
+      height: 66.67% !important;
+    }
+
+    
+    .w#{$class}-auto {
+      height: auto !important;
+    }
+    .h#{$class}-auto {
+      height: auto !important;
+    }
+  }
+}
+
+.clearfix {
+  clear: both;
+}

@@ -10,11 +10,12 @@
   height: 67px;
 
   border-radius: 8px;
+  outline: none;
   
   &-state {
     &--primary {
       background-color: $black;
-      color: #48DBB4;
+      color: $primary-color;
     }
     &--secondary {
       background-color: $white;

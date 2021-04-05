@@ -5,15 +5,16 @@ import PropTypes from "prop-types"
 import Button from "../Button"
 
 function Card(props) {
-  const { description, label } = props
+  const { image, title, label } = props
 
   return (
-    <div className="card">
-      <div className="card card-row">
+    <div className="grid-card">
+      <div className="grid-card">
         {/* [TODO: #339 - will uncomment in next PR] <Icon src={icon} /> */}
-        <h4>{description}</h4>
+        <img src={image} alt="" />
+        <h4>{title}</h4>
       </div>
-      <div className="card card-row">
+      <div className="grid-card">
         <Button label={label} type="secondary" />
       </div>
     </div>
@@ -21,8 +22,8 @@ function Card(props) {
 }
 
 Card.propTypes = {
-  icon: PropTypes.string,
-  description: PropTypes.string,
+  image: PropTypes.string,
+  title: PropTypes.string,
   label: PropTypes.string,
 }
 

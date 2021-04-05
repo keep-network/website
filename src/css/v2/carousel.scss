@@ -7,7 +7,7 @@
     background-repeat: no-repeat;
     background-position: right;
     background-size: 473px 1242px;
-    background-color: #E6E6E6;
+    background-color: $grey-20;
   }
 
   &-bg-2 {
@@ -15,7 +15,7 @@
     background-repeat: no-repeat;
     background-position: left;
     // background-size: 700px 700px;
-    background-color: #F4F4F4;
+    background-color: $grey-10;
   }
 
   &-bg-3 {
@@ -34,6 +34,6 @@
 
 .bg {
   &-gray {
-    background-color: #C0C0C0;
+    background-color: $grey-30;
   }
 }

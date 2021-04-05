@@ -214,13 +214,13 @@ function HomePage(props) {
         subtitle={carousel3.subtitle}
         text={carousel3.text}
       />
-      <LogoWall items={logoItems} />
-      <Blog title="Latest from the Keep Blog" items={blogItems} />
       <Grid
         title="Learn how to stake on the Keep network"
         subtitle="Stake on the Keep network to earn rewards and secure the network."
         items={gridItems}
       />
+      <LogoWall items={logoItems} />
+      <Blog title="Latest from the Keep Blog" items={blogItems} />
       <Banner
         title="Keep is backed by the strongest VCs in the world."
         images={bannerItems}

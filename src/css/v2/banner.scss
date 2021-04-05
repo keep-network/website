@@ -4,7 +4,7 @@
   flex-direction: row;
   padding-top: 60px;
   padding-bottom: 60px;
-  background-color: #F4F4F4;
+  background-color: $grey-10;
 
   &-container {
     width: 100%;
@@ -34,8 +34,7 @@
     letter-spacing: -0.01em;
 
     /* $color-black */
-
-    color: #0A0806;
+    color: $black;
   }
 
   &-content {

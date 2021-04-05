@@ -35,7 +35,7 @@
       font-weight: 500;
       font-size: 28px;
       line-height: 40px;
-      color: #0A0806;
+      color: $black;
     }
 
     h5 {
@@ -48,15 +48,15 @@
   }
 
   &-subtitle {
-    color: #4C4C4C;
+    color: $grey-70;
   }
 
   &-description {
-    color: #4C4C4C;
+    color: $grey-70;
   }
 
   &-date {
-    color: #6D6D6D;
+    color: $grey-60;
   }
 
   &-footer {
@@ -66,7 +66,7 @@
     padding-top: 80px;
     padding-bottom: 80px;
     a {
-      color: #7850CD;
+      color: $secondary-color;
       font-size: 28px;
     }
   }

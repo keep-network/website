@@ -11,6 +11,11 @@
 @import 'banner';
 @import 'blog';
 @import 'contact';
+@import 'grid';
+
+@import 'utilities';
+@import 'typography';
+@import 'vars';
 
 body {
     background-color: $background-light-color;

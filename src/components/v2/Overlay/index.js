@@ -15,8 +15,8 @@ function Overlay(props) {
           network and the future of DeFi.
         </h4>
         <div className="button-group">
-          <Button label="ABOUT KEEP" type="primary" />
-          <Button label="BUTTON" type="secondary" />
+          <Button label="ABOUT KEEP" className="btn2-primary" />
+          <Button label="START STAKING" className="btn2-secondary" />
         </div>
       </div>
     </div>

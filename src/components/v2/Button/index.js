@@ -2,18 +2,18 @@ import React from "react"
 import PropTypes from "prop-types"
 
 function Button(props) {
-  const { label, type } = props
+  const { className, label } = props
 
   return (
-    <button className={`btn2 btn2-state--${type}`}>
+    <button className={`${className} btn2`}>
       <p>{label}</p>
     </button>
   )
 }
 
 Button.propTypes = {
+  className: PropTypes.string,
   label: PropTypes.string,
-  type: PropTypes.string,
 }
 
 export default Button

@@ -1,7 +1,7 @@
 .overlay {
   background-image: url(../images/v2/overlay-bg.png);
   background-color: #EFEFEF;
-  background-blend-mode: color-burn;
+  background-blend-mode: overlay;
   background-repeat: no-repeat;
   background-position: top;
   background-size: cover;
@@ -10,13 +10,12 @@
   height: auto;
   
   h1 {
-    font-family: Work Sans;
     color: $black;
     font-weight: 800;
     font-style: normal;
     font-size: 66px;
     line-height: 74px;
-    width: 800px;
+    width: 820px;
     letter-spacing: -0.01em;
     margin: 32px 0;
   }
@@ -27,7 +26,7 @@
     font-style: normal;
     font-size: 28px;
     line-height: 40px;
-    width: 480px;
+    width: 440px;
     margin: 32px 0;
   }
 

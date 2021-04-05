@@ -168,14 +168,14 @@ const contactItems = [
   {
     image: require("../images/v2/contact-icon-1.svg"),
     title: "Read the Keep blog",
-    subtitle:
+    description:
       "Get the latest updates on the blog. Read about the Keep network, tBTC, partnerships, and more.",
     label: "READ BLOG",
   },
   {
     image: require("../images/v2/contact-icon-2.svg"),
     title: "Join the community",
-    subtitle:
+    description:
       "Connect with the Discord community, ask questions, and get in on the ground level for the future of DeFi.",
     label: "JOIN DISCORD",
   },

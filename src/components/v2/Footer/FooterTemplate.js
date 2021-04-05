@@ -16,11 +16,6 @@ export const FooterTemplate = ({
       <div className="footer-columns">
         <ul className="footer-column-1">
           <li className="keep-logo">Keep</li>
-          <li>
-            <a className="email-btn" href={`mailto:${emailLink.email}`}>
-              {emailLink.label}
-            </a>
-          </li>
         </ul>
         {navCategories.map((category, i) => (
           <CollapsibleList

@@ -207,12 +207,14 @@ function HomePage(props) {
         title={carousel1.title}
         subtitle={carousel1.subtitle}
         text={carousel1.text}
+        right
       />
       <Carousel
         classNames="carousel-bg-3"
         title={carousel3.title}
         subtitle={carousel3.subtitle}
         text={carousel3.text}
+        right
       />
       <Grid
         title="Learn how to stake on the Keep network"

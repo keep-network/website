@@ -2,12 +2,14 @@
   width: 100%;
   height: 152px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
   background: #91E9D2;
 }
 
 .logo {
+  flex: 40%;
   display: inline-block;
   margin: 10px 20px;
   width: 168px;

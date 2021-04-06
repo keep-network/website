@@ -4,6 +4,10 @@ footer {
   background-color: $black;
   color: $white;
 
+  &-categories {
+    display: flex;
+  }
+
   .footer-columns {
     display: flex;
     flex-direction: column;

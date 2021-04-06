@@ -30,6 +30,12 @@ header {
     }
 
     .nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &-item {
+        width: 120px;
+      }
       @media (max-width: #{$bp-medium - 1}) {
         flex-direction: column;
         margin: 7.5px -15px;
@@ -53,7 +59,8 @@ header {
           }
 
           @media (min-width: #{$bp-medium}) {
-            width: 168px;
+            width: 100%;
+            // width: 168px;
             padding: 34px 15px;
 
             &:not([href^="http"]) {

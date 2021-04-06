@@ -18,7 +18,7 @@ const HeaderTemplate = ({ navItems = [] }) => {
   return (
     <header>
       <Navbar>
-        <Container fluid="md">
+        <Container fluid="md" className="header">
           <NavScrollItem
             element="div"
             className="brand"
@@ -35,6 +35,22 @@ const HeaderTemplate = ({ navItems = [] }) => {
               {navItems.map((item, i) => (
                 <NavItem key={`nav-item-${i}`} {...item} />
               ))}
+              <li className="nav-item">
+                <a
+                  href="https://discordapp.com/invite/wYezN7v"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Icons.Discord />
+                </a>
+              </li>
+              <a
+                href="#"
+                className="btn2 btn2-primary nav-item"
+                rel="noopener noreferrer"
+              >
+                Launch
+              </a>
             </Nav>
           </Collapse>
         </Container>

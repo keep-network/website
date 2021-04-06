@@ -6,7 +6,6 @@ import Link from "../../Link"
 
 export const FooterTemplate = ({
   images = {},
-  emailLink = {},
   navCategories = [],
   copyright = "",
   legalLinks = [],
@@ -52,7 +51,6 @@ export const FooterTemplate = ({
 
 FooterTemplate.propTypes = {
   images: PropTypes.object,
-  emailLink: PropTypes.object,
   navCategories: PropTypes.array,
   copyright: PropTypes.string,
   legalLinks: PropTypes.array,

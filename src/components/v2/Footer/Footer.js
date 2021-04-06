@@ -17,10 +17,6 @@ export const query = graphql`
       edges {
         node {
           frontmatter {
-            email_link {
-              label
-              email
-            }
             nav_categories {
               title
               items {
@@ -49,7 +45,6 @@ const Footer = () => (
       return (
         <FooterTemplate
           images={{ halfCircle }}
-          emailLink={frontmatter.email_link}
           navCategories={frontmatter.nav_categories}
           copyright={frontmatter.copyright_text}
           legalLinks={frontmatter.legal_links}

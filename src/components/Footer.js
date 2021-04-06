@@ -8,7 +8,6 @@ import Link from "./Link"
 
 export const FooterTemplate = ({
   images = {},
-  emailLink = {},
   navCategories = [],
   copyright = "",
   legalLinks = [],
@@ -18,11 +17,6 @@ export const FooterTemplate = ({
       <div className="footer-columns">
         <ul className="footer-column-1">
           <li className="keep-logo">Keep</li>
-          <li>
-            <a className="email-btn" href={`mailto:${emailLink.email}`}>
-              {emailLink.label}
-            </a>
-          </li>
         </ul>
         {navCategories.map((category, i) => (
           <CollapsibleList
@@ -60,7 +54,6 @@ export const FooterTemplate = ({
 
 FooterTemplate.propTypes = {
   images: PropTypes.object,
-  emailLink: PropTypes.object,
   navCategories: PropTypes.array,
   copyright: PropTypes.string,
   legalLinks: PropTypes.array,
@@ -81,10 +74,6 @@ export const query = graphql`
       edges {
         node {
           frontmatter {
-            email_link {
-              label
-              email
-            }
             nav_categories {
               title
               items {
@@ -113,7 +102,6 @@ const Footer = () => (
       return (
         <FooterTemplate
           images={{ halfCircle }}
-          emailLink={frontmatter.email_link}
           navCategories={frontmatter.nav_categories}
           copyright={frontmatter.copyright_text}
           legalLinks={frontmatter.legal_links}

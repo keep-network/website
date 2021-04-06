@@ -1,15 +1,18 @@
 ---
 template: footer-nav
-email_link:
-  label: Email Us
-  email: work@keep.network
 nav_categories:
   - title: Company
     items:
+      - label: Info
+        url: /info
+      - label: Press
+        url: /press
       - label: Team
-        url: /#team
-      - label: Advisors
-        url: /#advisors
+        url: /team
+      - label: FAQ
+        url: /faq
+      - label: Audits
+        url: /audits
   - title: Follow
     items:
       - label: Press
@@ -24,10 +27,14 @@ nav_categories:
         url: https://blog.keep.network/
   - title: Community
     items:
+      - label: Build
+        url: /build
       - label: Discord
         url: https://discordapp.com/invite/wYezN7v
       - label: GitHub
         url: https://github.com/keep-network/
+      - label: Governance
+        url: https://discordapp.com/invite/wYezN7v
 copyright_text: <p>A Thesis<sup>*</sup> Build</p><p>© 2021 Keep SEZC. All Rights Reserved.</p>
 legal_links:
   - label: Privacy Policy

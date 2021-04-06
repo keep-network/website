@@ -32,9 +32,28 @@
   &-card {
     flex: 40%;
     padding: 40px;
-    margin: 20px 0px;
+    margin: 20px 40px 20px 0px;
     background: $white;
     box-shadow: 0px 24px 38px rgba(8, 5, 3, 0.03), 0px 9px 46px rgba(8, 5, 3, 0.02), 0px 11px 15px rgba(8, 5, 3, 0.06);
     border-radius: 8px;
+
+    &-header {
+      display: flex;
+      margin-bottom: 40px;
+
+      h4 {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 28px;
+        line-height: 40px;
+        margin-left: 40px;        
+        width: 200px;
+        color: $black;
+      }
+    }
+
+    &-footer {
+      margin-top: 40px;
+    }
   }
 }

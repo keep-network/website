@@ -70,4 +70,10 @@
     width: 300px;
     margin-bottom: 32px;
   }
+
+  &-form-group {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
 }

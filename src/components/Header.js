@@ -2,6 +2,10 @@ import React, { useState } from "react"
 import {
   Container,
   Collapse,
+  Dropdown,
+  DropdownItem,
+  DropdownToggle,
+  DropdownMenu,
   Nav,
   Navbar,
   NavbarToggler,
@@ -14,15 +18,37 @@ import Announcement from "./Announcement"
 import NavScrollItem from "./NavScrollItem"
 import * as Icons from "./Icons"
 
-const NavItem = ({ label, url }) => {
-  // Test if url is an external link
-  if (/^http/.test(url)) {
+const NavItem = ({ label, url, subitems }) => {
+  const [dropdownOpen, setDropdownOpen] = useState(false)
+  const toggle = () => setDropdownOpen(!dropdownOpen)
+
+  // Test if dropdown menu
+  if (!url && subitems && subitems.length > 0) {
     return (
-      <li className="nav-item">
-        <NavLink href={url} rel="noopener noreferrer" target="_blank">
-          {label}
-        </NavLink>
-      </li>
+      <Dropdown nav isOpen={dropdownOpen} toggle={toggle}>
+        <DropdownToggle nav>{label}</DropdownToggle>
+        <DropdownMenu>
+          {subitems.map((item, i) => (
+            <DropdownItem key={`dropdown-item-${i}`}>
+              <li className="nav-item">
+                {/^http/.test(item.url) ? ( // Test if url is an external link
+                  <NavLink
+                    href={item.url}
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    {item.label}
+                  </NavLink>
+                ) : (
+                  <Link to={item.url} activeClassName="active">
+                    {item.label}
+                  </Link>
+                )}
+              </li>
+            </DropdownItem>
+          ))}
+        </DropdownMenu>
+      </Dropdown>
     )
   }
 
@@ -48,6 +74,7 @@ const NavItem = ({ label, url }) => {
 NavItem.propTypes = {
   label: PropTypes.string,
   url: PropTypes.string,
+  subitems: PropTypes.array,
 }
 
 export const HeaderTemplate = ({ navItems = [] }) => {
@@ -80,6 +107,22 @@ export const HeaderTemplate = ({ navItems = [] }) => {
                 <NavItem key={`nav-item-${i}`} {...item} />
               ))}
             </Nav>
+            <ul className="external_btn">
+              <li>
+                <a
+                  href="https://discordapp.com/invite/wYezN7v"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Icons.Discord />
+                </a>
+              </li>
+              <li>
+                <a href="#" className="primary" rel="noopener noreferrer">
+                  Launch
+                </a>
+              </li>
+            </ul>
           </Collapse>
         </Container>
       </Navbar>
@@ -107,6 +150,10 @@ export const query = graphql`
             nav_items {
               label
               url
+              subitems {
+                label
+                url
+              }
             }
           }
         }

@@ -28,6 +28,16 @@
     background-blend-mode: multiply;
     background-position-x: 293px;
   }
+
+  &-bg-build-1 {
+    background-image: url(../images/v2/carousel-bg-build-1.svg);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 40% 40%;
+    background-color: rgba(244, 244, 244, 0.8);
+    background-blend-mode: multiply;
+    // background-position-x: 293px;
+  }
 }
 
 .right {

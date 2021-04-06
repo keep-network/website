@@ -9,13 +9,12 @@ function Card(props) {
 
   return (
     <div className="grid-card">
-      <div className="grid-card">
-        {/* [TODO: #339 - will uncomment in next PR] <Icon src={icon} /> */}
+      <div className="grid-card-header">
         <img src={image} alt="" />
         <h4>{title}</h4>
       </div>
-      <div className="grid-card">
-        <Button label={label} type="secondary" />
+      <div className="grid-card-footer">
+        <Button label={label} className="btn2-secondary btn2-full-width" />
       </div>
     </div>
   )

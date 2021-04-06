@@ -2,7 +2,7 @@ import React from "react"
 import { Container } from "reactstrap"
 import PropTypes from "prop-types"
 import Card from "./Card"
-
+import Button from "../Button"
 function Contact(props) {
   const { title, items } = props
 
@@ -15,8 +15,9 @@ function Contact(props) {
         <div className="contact-content">
           <h4>Get the Keep Newsletter</h4>
           <h5>Sign up for our newsletter and never miss an update.</h5>
-          <form className="form-group">
-            <input className="contact-email" placeholder="you@example.com" />
+          <form className="contact-form-group">
+            <input className="contact-email" placeholder="captain@marvel.io" />
+            <Button className="btn2-primary" />
           </form>
           <div className="contact-cards">
             {items &&

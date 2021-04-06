@@ -2,12 +2,11 @@
   width: 100%;
   padding-top: 60px;
   padding-bottom: 60px;
-  background-color: $white;
+  background-color: white;
   
   &-header {
     width: 100%;
-    h1 {
-      font-family: Work Sans;
+    h1 {      
       font-style: normal;
       font-weight: 800;
       font-size: 56px;
@@ -17,24 +16,20 @@
       letter-spacing: -0.01em;
       padding-top: 76px;
       padding-bottom: 76px;
-
       color: $black;
     }
   }
 
   &-content {
-    h4 {
-      font-family: Work Sans;
+    h4 {      
       font-style: normal;
       font-weight: 500;
       font-size: 28px;
       line-height: 40px;
       color: $black;
-      margin: 10px 0;
     }
 
-    h5 {
-      font-family: Work Sans;
+    h5 {      
       font-style: normal;
       font-weight: normal;
       font-size: 22px;
@@ -49,9 +44,36 @@
     box-sizing: border-box;
     border-radius: 8px;
     outline: none;
-    width: 70%;
+    width: 80%;
     margin: 10px 40px;
     margin-left: 0;
     padding: 10px;
+  }
+
+  &-cards {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 152px;
+  }
+
+  &-card {
+    flex: 50%;
+    display: flex;
+    &-content {
+      margin-left: 56px;
+    }
+  }
+
+  &-description {
+    width: 300px;
+    margin-bottom: 32px;
+  }
+
+  &-form-group {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
   }
 }

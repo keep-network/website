@@ -10,11 +10,12 @@ header {
   }
 
   .navbar {
-    background-color: $background-light-color;
+    background-color: #ffffff00;
     border-bottom: 0.25px solid $border-color;
     margin: 0 auto;
     padding: 0;
     position: relative;
+    border: none;
 
     .app-home & {
       background-color: #e2e2e2;

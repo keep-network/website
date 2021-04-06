@@ -16,7 +16,7 @@ function BlogCard(props) {
         <h5 className="blog-subtitle">{subtitle}</h5>
         <p className="blog-desscription">{description}</p>
         <p className="blog-date">{date}</p>
-        <Button label={label} type="primary" />
+        <Button label={label} className="btn2-primary" />
       </div>
     </div>
   )

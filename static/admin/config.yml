@@ -18,8 +18,6 @@ collections:
     label: "Pages"
     files:
       # TODO: #339 - will uncomment in next PR
-      # - file: "src/pages/v2/index.md"
-      # - file: "src/pages/v2/nav.md"
       - file: "src/pages/index.md"
         label: "Home"
         name: "home"
@@ -56,29 +54,6 @@ collections:
                     Minimum image width of 2880px required (to be rendered as
                     1440px) to support higher resolution screens.',
                 }
-              - label: "CTA"
-                name: "cta"
-                widget: "object"
-                required: false
-                fields:
-                  - {
-                      label: Icon,
-                      name: icon,
-                      widget: object,
-                      required: false,
-                      fields:
-                        [
-                          {
-                            label: "Image",
-                            name: "image",
-                            widget: file,
-                            media_library: { config: { multiple: false } },
-                            hint: "SVG only. SVG must have width and height attributes set in the file.",
-                          },
-                          { label: "Alt", name: "alt", widget: "string" },
-                        ],
-                    }
-                  - { label: "Label", name: "label", widget: "string" }
               - {
                   label: "CTA Buttons",
                   name: "cta_buttons",
@@ -102,18 +77,17 @@ collections:
           - label: "Feature Carousel"
             name: "feature_carousel"
             widget: "list"
-            allow_add: true,
-            fields: [
-              { label: "Title", name: "title", widget: "string" }
-              { label: "Body", name: "body", widget: "string" }
-              {
-                label: "Background Image",
-                name: "bg_image",
-                widget: "image",
-                hint: "Minimum image width of 528px required (to be
-                  rendered as 274px) to support higher resolution screens",
-              },
-            ]
+            allow_add: true
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Body", name: "body", widget: "string" }
+              - {
+                  label: "Background Image",
+                  name: "bg_image",
+                  widget: "image",
+                  hint: "Minimum image width of 528px required (to be
+                    rendered as 274px) to support higher resolution screens",
+                }
           - label: "Team Section"
             name: "team_section"
             widget: "object"

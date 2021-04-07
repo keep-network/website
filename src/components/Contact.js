@@ -4,7 +4,7 @@ import PropTypes from "prop-types"
 import Button from "./Button"
 import EmailForm from "./EmailForm"
 import Image from "./Image"
-import { actions, actionTypes } from "../redux"
+import { actionTypes } from "../redux"
 
 const Card = ({ icon, title, body, link }) => {
   return (

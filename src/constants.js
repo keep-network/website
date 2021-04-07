@@ -16,7 +16,7 @@ const sections = {
     SUMMARY_GRID: "summary-grid",
     MINILOGO_GRID: "minilogo-grid",
     KEEP_BLOG: "keep-blog",
-    BANNER: "banner",
+    EXCHANGES: "exchanges",
     LOGO_WALL: "logo-wall",
     CONTACT: "contact",
   },

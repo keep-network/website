@@ -99,6 +99,21 @@ collections:
                   required: false,
                   fields: [{ label: Label, name: label, widget: string }],
                 }
+          - label: "Feature Carousel"
+            name: "feature_carousel"
+            widget: "list"
+            allow_add: true,
+            fields: [
+              { label: "Title", name: "title", widget: "string" }
+              { label: "Body", name: "body", widget: "string" }
+              {
+                label: "Background Image",
+                name: "bg_image",
+                widget: "image",
+                hint: "Minimum image width of 528px required (to be
+                  rendered as 274px) to support higher resolution screens",
+              },
+            ]
           - label: "Team Section"
             name: "team_section"
             widget: "object"

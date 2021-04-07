@@ -1,0 +1,7 @@
+a.button {
+  @extend .btn;
+}
+
+a.button-primary {
+  @extend .btn-primary;
+}

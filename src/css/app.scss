@@ -1,28 +1,27 @@
-@import '~bootstrap-css-only/css/bootstrap.min.css';
+@import "~bootstrap-css-only/css/bootstrap.min.css";
 
-@import 'utilities';
-@import 'vars';
-@import 'mixins';
-@import 'typography';
-@import 'forms';
-@import 'header';
-@import 'profile';
-@import 'page-section';
-@import 'alerts';
-@import 'collapsible-list';
-@import 'footer';
-@import 'blurb';
-@import 'home';
-@import 'press';
-@import 'legal';
+@import "utilities";
+@import "vars";
+@import "mixins";
+@import "typography";
+@import "forms";
+@import "button";
+@import "header";
+@import "profile";
+@import "page-section";
+@import "alerts";
+@import "collapsible-list";
+@import "footer";
+@import "blurb";
+@import "home";
+@import "press";
+@import "legal";
 
 body {
-    background-color: $background-light-color;
+  background-color: $background-light-color;
 }
 
 .app {
-    overflow: hidden;
-    margin: 0 auto;
+  overflow: hidden;
+  margin: 0 auto;
 }
-
-

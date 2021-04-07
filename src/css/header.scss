@@ -1,262 +1,263 @@
 header {
-    position: relative;
-    z-index: 3;
+  position: relative;
+  z-index: 3;
 
-    @media (min-width: #{$bp-medium}) {
-        position: fixed;
-        width: 100%;
-        text-align: center;
-        z-index: 1000;
+  @media (min-width: #{$bp-medium}) {
+    position: fixed;
+    width: 100%;
+    text-align: center;
+    z-index: 1000;
+  }
+
+  .navbar {
+    background-color: $background-light-color;
+    border-bottom: 0.25px solid $border-color;
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+
+    .app-home & {
+      background-color: #e2e2e2;
     }
 
-    .navbar {
-        background-color: $background-light-color;
-        border-bottom: 0.25px solid $border-color;
-        margin: 0 auto;
-        padding: 0;
+    @media (min-width: #{$bp-medium}) {
+      .navbar-collapse {
+        display: flex !important;
+        flex-basis: auto;
+        flex-grow: unset;
+      }
+    }
+
+    .nav {
+      @media (max-width: #{$bp-medium - 1}) {
+        flex-direction: column;
+        margin: 7.5px -15px;
+      }
+
+      > li > a,
+      > li > div > button > li > a {
+        display: block;
+        font-weight: 400;
+        font-size: 13px;
+        letter-spacing: 0.08em;
+        color: $body-text-color;
+        line-height: 20px;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: color, font-weight 0.25s ease-in;
         position: relative;
 
-        .app-home & {
-            background-color: #E2E2E2;
+        &[href^="http"]:after {
+          content: " ↗";
+        }
+
+        &[href="#"]:after {
+          content: " ↓";
         }
 
         @media (min-width: #{$bp-medium}) {
-            .navbar-collapse {
-                display: flex !important;
-                flex-basis: auto;
-                flex-grow: unset;
-            }
-        }
-
-        .nav {
-            @media (max-width: #{$bp-medium - 1}) {
-                flex-direction: column;
-                margin: 7.5px -15px;
-            }
-
-            > li > a, > li > div > button > li > a {
-                display: block;
-                font-weight: 400;
-                font-size: 13px;
-                letter-spacing: 0.08em;
-                color: $body-text-color;
-                line-height: 20px;
-                text-transform: uppercase;
-                cursor: pointer;
-                transition: color, font-weight 0.25s ease-in;
-                position: relative;
-
-                &[href^=http]:after {
-                    content: ' ↗';
-                }
-
-                &[href='#']:after {
-                    content: ' ↓';
-                }
-
-                @media (min-width: #{$bp-medium}) {
-                    width: 100px;
-                    padding: 16px 15px;
-                    &:not([href^=http]) {
-                        &:hover,
-                        &:focus,
-                        &:active,
-                        &.active.focus,
-                        &:active:focus,
-                        &.active,
-                        &.focus {
-                            text-decoration: none;
-
-                            &:before {
-                                display: block;
-                                content: '';
-                                width: 100%;
-                                height: 3px;
-                                position: absolute;
-                                bottom: 0;
-                                left: 0;
-                            }
-                        }
-
-                        &:hover {
-                            &:before {
-                                background-color: $black;
-                            }
-                        }
-
-                        &:focus,
-                        &:not(.scroll-link):active,
-                        &.active.focus,
-                        &:active:focus,
-                        &.active,
-                        &.focus {
-                            font-weight: 700;
-
-                            &:before {
-                                background-color: $primary-color;
-                            }
-                        }
-                    }
-                }
-
-                @media (max-width: #{$bp-medium}) {
-                    padding: 15px 15px 15px 30px;
-
-                    &:not([href^=http]) {
-                        &:hover,
-                        &:focus,
-                        &:active,
-                        &.active.focus,
-                        &:active:focus,
-                        &.active,
-                        &.focus {
-                            &:before {
-                                display: block;
-                                content: '';
-                                width: 20px;
-                                height: 10px;
-                                position: absolute;
-                                top: 19px;
-                                left: 0;
-                            }
-                        }
-
-                        &:hover {
-                            &:before {
-                                background-color: $black;
-                            }
-                        }
-
-                        &:focus,
-                        &:active,
-                        &.active.focus,
-                        &:active:focus,
-                        &.active,
-                        &.focus {
-                            font-weight: 700;
-
-                            &:before {
-                                background-color: $primary-color;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-
-        .external_btn {
-            margin: 0;
-            padding: 0;
-            li {
-                margin: 0;
-                padding: 0;
-    
-                list-style-type: none;
-                display: inline-block;
-                margin-left: 1.25rem;
-    
-                &:first-child {
-                    margin-left: 0;
-                }
-            }
-    
-            a.primary {
-                @extend .btn, .btn-default, .btn-primary;
-                
-                padding: 0px 15px 5px !important;
-
-                &:hover,
-                &:active {
-                    &:before {
-                        display: none;
-                    }
-                }
-            }
-        }
-
-        .brand {
-            background-repeat: no-repeat;
-            background-size: 100%;
-            margin: 15px;
-            padding: 0;
-            color: transparent;
-            cursor: pointer;
-            height: auto;
-            line-height: 0.85;
-
-            svg {
-                height: 30px;
-                width: 117px;
-            }
-
-            &:hover,
-            &:active,
-            &:focus {
-                color: transparent;
-            }
-
-            @media (min-width: #{$bp-medium}) {
-                margin: 0;
-
-                svg {
-                    height: 25.63px;
-                    width: 100px;
-                    margin: 12px 40px 12px 0;
-                }
-            }
-
-            @media (min-width: #{$bp-medium}) and (max-width: #{$bp-large}){
-                svg {
-                    margin: 12px 30px;
-                }
-            }
-
-            @media (max-width: #{$bp-medium - 1}) {
-                margin: 17px 15px;
-            }
-        }
-
-        .navbar-toggler {
-            width: 38px;
-            height: 38px;
-            margin: 14px 15px;
-            border: 2px solid $black;
-            border-radius: 50%;
-            padding: 10px 7px;
-            position: relative;
-
-            span,
-            span:before,
-            span:after {
-                display: block;
-                background-color: $black;
-                width: 20px;
-                height: 2px;
-            }
-
-            span:before,
-            span:after {
-                content: '';
-                position: absolute;
-            }
-
-            span:before {
-                top: 10px;
-            }
-
-            span:after {
-                bottom: 10px;
-            }
-
+          width: 100px;
+          padding: 16px 15px;
+          &:not([href^="http"]) {
             &:hover,
             &:focus,
-            &:active {
-                background-color: transparent;
+            &:active,
+            &.active.focus,
+            &:active:focus,
+            &.active,
+            &.focus {
+              text-decoration: none;
+
+              &:before {
+                display: block;
+                content: "";
+                width: 100%;
+                height: 3px;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+              }
             }
 
-            @media (min-width: #{$bp-medium}) {
-                display: none;
+            &:hover {
+              &:before {
+                background-color: $black;
+              }
             }
+
+            &:focus,
+            &:not(.scroll-link):active,
+            &.active.focus,
+            &:active:focus,
+            &.active,
+            &.focus {
+              font-weight: 700;
+
+              &:before {
+                background-color: $primary-color;
+              }
+            }
+          }
         }
+
+        @media (max-width: #{$bp-medium}) {
+          padding: 15px 15px 15px 30px;
+
+          &:not([href^="http"]) {
+            &:hover,
+            &:focus,
+            &:active,
+            &.active.focus,
+            &:active:focus,
+            &.active,
+            &.focus {
+              &:before {
+                display: block;
+                content: "";
+                width: 20px;
+                height: 10px;
+                position: absolute;
+                top: 19px;
+                left: 0;
+              }
+            }
+
+            &:hover {
+              &:before {
+                background-color: $black;
+              }
+            }
+
+            &:focus,
+            &:active,
+            &.active.focus,
+            &:active:focus,
+            &.active,
+            &.focus {
+              font-weight: 700;
+
+              &:before {
+                background-color: $primary-color;
+              }
+            }
+          }
+        }
+      }
     }
+
+    .external_btn {
+      margin: 0;
+      padding: 0;
+      li {
+        margin: 0;
+        padding: 0;
+
+        list-style-type: none;
+        display: inline-block;
+        margin-left: 1.25rem;
+
+        &:first-child {
+          margin-left: 0;
+        }
+      }
+
+      a.primary {
+        @extend .btn, .btn-default, .btn-primary;
+
+        padding: 0px 15px 5px !important;
+
+        &:hover,
+        &:active {
+          &:before {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .brand {
+      background-repeat: no-repeat;
+      background-size: 100%;
+      margin: 15px;
+      padding: 0;
+      color: transparent;
+      cursor: pointer;
+      height: auto;
+      line-height: 0.85;
+
+      svg {
+        height: 30px;
+        width: 117px;
+      }
+
+      &:hover,
+      &:active,
+      &:focus {
+        color: transparent;
+      }
+
+      @media (min-width: #{$bp-medium}) {
+        margin: 0;
+
+        svg {
+          height: 25.63px;
+          width: 100px;
+          margin: 12px 40px 12px 0;
+        }
+      }
+
+      @media (min-width: #{$bp-medium}) and (max-width: #{$bp-large}) {
+        svg {
+          margin: 12px 30px;
+        }
+      }
+
+      @media (max-width: #{$bp-medium - 1}) {
+        margin: 17px 15px;
+      }
+    }
+
+    .navbar-toggler {
+      width: 38px;
+      height: 38px;
+      margin: 14px 15px;
+      border: 2px solid $black;
+      border-radius: 50%;
+      padding: 10px 7px;
+      position: relative;
+
+      span,
+      span:before,
+      span:after {
+        display: block;
+        background-color: $black;
+        width: 20px;
+        height: 2px;
+      }
+
+      span:before,
+      span:after {
+        content: "";
+        position: absolute;
+      }
+
+      span:before {
+        top: 10px;
+      }
+
+      span:after {
+        bottom: 10px;
+      }
+
+      &:hover,
+      &:focus,
+      &:active {
+        background-color: transparent;
+      }
+
+      @media (min-width: #{$bp-medium}) {
+        display: none;
+      }
+    }
+  }
 }

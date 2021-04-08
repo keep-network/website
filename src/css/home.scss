@@ -161,6 +161,13 @@
   }
 }
 .feature-carousel {
+  .carousel-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   .carousel-item {
     max-height: 980px;
 
@@ -280,7 +287,6 @@
 
     a {
       color: $black;
-      display: block;
       text-decoration: none;
       position: relative;
       text-align: center;

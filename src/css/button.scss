@@ -7,13 +7,14 @@ a.button-primary {
 }
 
 a.button {
+  @extend .btn;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   margin: 4px 4px 4px 0px;
 
-  width: 192px;
+  width: 210px;
   height: 48px;
 
   border-radius: 8px;

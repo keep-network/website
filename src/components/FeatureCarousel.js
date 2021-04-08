@@ -40,8 +40,10 @@ const FeatureCarousel = ({ items }) => {
         className={item.class}
       >
         <Image imageData={item.image} />
-        <div className="callout">The Keep Solution</div>
-        <CarouselCaption captionText={item.body} captionHeader={item.title} />
+        <div className="carousel-content">
+          <div className="callout">The Keep Solution</div>
+          <CarouselCaption captionText={item.body} captionHeader={item.title} />
+        </div>
       </CarouselItem>
     )
   })

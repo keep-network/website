@@ -22,9 +22,9 @@ const sections = {
   },
   build: {
     HOME: "home-build",
-    FEATURE_CARD: "build-feature-card",
-    COMMUNITY_SHOWCASE: "community-showcase",
-    SUMMARY_GRID: "build-summary-grid",
+    LIBRARY: "build-library",
+    COMMUNITY: "build-community",
+    SECURE: "build-secure",
     CONTACT: "contact",
   },
   stake: {

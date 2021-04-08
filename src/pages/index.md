@@ -5,6 +5,7 @@ title: Home
 hero:
   title: Stake on Ethereum’s first private computer and earn up to 200% APY.
   body: Staking with Keep is the best way to back a truly decentralized network and the future of DeFi.
+  bg_video: images/home/keep-castle-clouds.mp4
   bg_image: /images/keep-bg.jpg
   cta_buttons:
     - label: About Keep

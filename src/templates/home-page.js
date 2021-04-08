@@ -58,10 +58,7 @@ export const HomePageTemplate = ({
       <PageSection id={sections.home.HOME}>
         <div className="home-video-bg">
           <video autoPlay muted loop>
-            <source
-              src="/images/home/keep-castle-clouds.mp4"
-              type="video/mp4"
-            />
+            <source src={hero.bg_video} type="video/mp4" />
           </video>
           <div className="home-video-bg-overlay" />
         </div>
@@ -219,6 +216,7 @@ export const query = graphql`
         hero {
           title
           body
+          bg_video
           cta_buttons {
             label
             url

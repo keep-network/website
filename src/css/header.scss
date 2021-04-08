@@ -34,7 +34,7 @@ header {
       justify-content: center;
       align-items: center;
       &-item {
-        width: 120px;
+        width: 90px;
       }
       
       @media (max-width: #{$bp-medium - 1}) {
@@ -45,11 +45,11 @@ header {
       > li > a,
       > li > div > button > li > a {
         display: block;
-        font-weight: 400;
-        font-size: 13px;
-        letter-spacing: 0.08em;
+        font-weight: 600;
+        font-size: 14px;
+        letter-spacing: 0.06em;
         color: $body-text-color;
-        line-height: 20px;
+        line-height: 16px;
         text-transform: uppercase;
         cursor: pointer;
         transition: color, font-weight 0.25s ease-in;

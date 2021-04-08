@@ -2,9 +2,13 @@ import React from "react"
 import PropTypes from "prop-types"
 
 const SubmitButton = ({ isLoading, onClick, children }) => (
-  <button className="btn-submit" disabled={isLoading} onClick={onClick}>
+  <a
+    className="button button-sm btn-submit"
+    disabled={isLoading}
+    onClick={onClick}
+  >
     {isLoading ? <div className="spinner" /> : children || "Submit"}
-  </button>
+  </a>
 )
 
 SubmitButton.propTypes = {

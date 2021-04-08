@@ -6,7 +6,7 @@ a.button-primary {
   @extend .btn-primary;
 }
 
-.btn {
+a.button {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -42,5 +42,10 @@ a.button-primary {
 
   &-full-width {
     width: 100%;
+  }
+
+  &-sm {
+    width: 120px;
+    height: 54px;
   }
 }

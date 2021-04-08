@@ -905,6 +905,13 @@
     margin-bottom: 32px;
   }
 
+  .form-group-input {
+    background: #FFFFFF;
+    box-sizing: border-box;
+    border-radius: 8px !important;
+    height: 54px;
+  }
+
   @media (min-width: #{$bp-large}) {
     .form-inline {
       min-width: 475px;

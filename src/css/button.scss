@@ -1,13 +1,5 @@
 a.button {
   @extend .btn;
-}
-
-a.button-primary {
-  @extend .btn-primary;
-}
-
-a.button {
-  @extend .btn;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -33,6 +25,7 @@ a.button {
   }
 
   &-primary {
+    @extend .btn-primary;
     background-color: $black;
     color: $primary-color;
   }

@@ -1,7 +1,45 @@
 a.button {
   @extend .btn;
-}
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 4px 4px 4px 0px;
 
-a.button-primary {
-  @extend .btn-primary;
+  width: 210px;
+  height: 48px;
+
+  border-radius: 8px;
+  outline: none;
+  
+  p {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 19px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+    margin: auto;
+  }
+
+  &-primary {
+    @extend .btn-primary;
+    background-color: $black;
+    color: $primary-color;
+  }
+
+  &-secondary {
+    background-color: $white;
+  }
+
+  &-full-width {
+    width: 100%;
+  }
+
+  &-sm {
+    width: 120px;
+    height: 54px;
+  }
 }

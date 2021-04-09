@@ -108,7 +108,7 @@ export const HeaderTemplate = ({ navItems = [] }) => {
               ))}
             </Nav>
             <ul className="external_btn">
-              <li>
+              <li className="nav-item">
                 <a
                   href="https://discordapp.com/invite/wYezN7v"
                   target="_blank"
@@ -117,8 +117,12 @@ export const HeaderTemplate = ({ navItems = [] }) => {
                   <Icons.Discord />
                 </a>
               </li>
-              <li>
-                <a href="#" className="primary" rel="noopener noreferrer">
+              <li className="nav-item">
+                <a
+                  href="#"
+                  className="button button-primary nav-item"
+                  rel="noopener noreferrer"
+                >
                   Launch
                 </a>
               </li>

@@ -11,7 +11,7 @@ const Card = ({ name, title, icon, url }) => {
         <h4>{title}</h4>
       </div>
       <div className="summary-grid-card-footer">
-        <Button url={url} label={name} className="button" />
+        <Button url={url} label={name} className="button button-full-width" />
       </div>
     </div>
   )

@@ -81,9 +81,8 @@
     }
 
     .cta-link {
-      @extend .btn;
+      @extend .button;
       color: $black;
-      display: block;
       text-decoration: none;
       position: relative;
       white-space: nowrap;
@@ -162,6 +161,13 @@
   }
 }
 .feature-carousel {
+  .carousel-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   .carousel-item {
     max-height: 980px;
 
@@ -281,7 +287,6 @@
 
     a {
       color: $black;
-      display: block;
       text-decoration: none;
       position: relative;
       text-align: center;
@@ -904,6 +909,13 @@
   &-description {
     width: 300px;
     margin-bottom: 32px;
+  }
+
+  .form-group-input {
+    background: #FFFFFF;
+    box-sizing: border-box;
+    border-radius: 8px !important;
+    height: 54px;
   }
 
   @media (min-width: #{$bp-large}) {

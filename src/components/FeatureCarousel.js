@@ -7,6 +7,7 @@ import {
   CarouselIndicators,
   CarouselCaption,
 } from "reactstrap"
+import classnames from "classnames"
 
 import Image from "./Image"
 
@@ -37,11 +38,13 @@ const FeatureCarousel = ({ items }) => {
         onExiting={() => setAnimating(false)}
         onExited={() => setAnimating(false)}
         key={`carousel-${i}`}
-        className={item.class}
+        className={classnames(item.class, "carousel-content")}
       >
         <Image imageData={item.image} />
-        <div className="callout">The Keep Solution</div>
-        <CarouselCaption captionText={item.body} captionHeader={item.title} />
+        <div className="carousel-content">
+          <div className="callout">The Keep Solution</div>
+          <CarouselCaption captionText={item.body} captionHeader={item.title} />
+        </div>
       </CarouselItem>
     )
   })

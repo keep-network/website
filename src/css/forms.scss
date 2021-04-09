@@ -63,6 +63,7 @@
 }
 
 .email-form {
+    @extend .button;
     position: relative;
     transition: 0.25s all ease-in;
 

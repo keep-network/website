@@ -12,12 +12,13 @@ header {
   .navbar {
     background-color: $background-light-color;
     border-bottom: 0.25px solid $border-color;
-    margin: 0 auto;
+    margin: 54px auto;
     padding: 0;
     position: relative;
+    border: none;
 
     .app-home & {
-      background-color: #e2e2e2;
+      background-color: #ffffff00;
     }
 
     @media (min-width: #{$bp-medium}) {
@@ -29,6 +30,13 @@ header {
     }
 
     .nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &-item {
+        width: 90px;
+      }
+      
       @media (max-width: #{$bp-medium - 1}) {
         flex-direction: column;
         margin: 7.5px -15px;
@@ -37,11 +45,11 @@ header {
       > li > a,
       > li > div > button > li > a {
         display: block;
-        font-weight: 400;
-        font-size: 13px;
-        letter-spacing: 0.08em;
+        font-weight: 600;
+        font-size: 14px;
+        letter-spacing: 0.06em;
         color: $body-text-color;
-        line-height: 20px;
+        line-height: 16px;
         text-transform: uppercase;
         cursor: pointer;
         transition: color, font-weight 0.25s ease-in;

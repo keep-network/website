@@ -18,21 +18,23 @@ export const FooterTemplate = ({
         <ul className="footer-column-1">
           <li className="keep-logo">Keep</li>
         </ul>
-        {navCategories.map((category, i) => (
-          <CollapsibleList
-            key={`nav-category-${i}`}
-            label={category.title}
-            className={`footer-column-${i + 2}`}
-          >
-            <ul>
-              {category.items.map((item, j) => (
-                <li key={`nav-category-item-${j}`}>
-                  <Link url={item.url}>{item.label}</Link>
-                </li>
-              ))}
-            </ul>
-          </CollapsibleList>
-        ))}
+        <div className="footer-categories">
+          {navCategories.map((category, i) => (
+            <CollapsibleList
+              key={`nav-category-${i}`}
+              label={category.title}
+              className={`footer-column-${i + 2}`}
+            >
+              <ul>
+                {category.items.map((item, j) => (
+                  <li key={`nav-category-item-${j}`}>
+                    <Link url={item.url}>{item.label}</Link>
+                  </li>
+                ))}
+              </ul>
+            </CollapsibleList>
+          ))}
+        </div>
       </div>
       <div className="footer-bottom">
         <div

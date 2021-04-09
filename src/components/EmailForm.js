@@ -128,6 +128,7 @@ class EmailForm extends Component {
           <FormGroup>
             <Label style={{ display: "none" }}>{label}</Label>
             <Input
+              className="form-group-input"
               type="email"
               value={email}
               placeholder={placeholder}

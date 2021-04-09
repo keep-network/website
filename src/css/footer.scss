@@ -4,6 +4,10 @@ footer {
   background-color: $black;
   color: $white;
 
+  .footer-categories {
+    display: flex;
+  }
+
   .footer-columns {
     display: flex;
     flex-direction: column;
@@ -43,6 +47,7 @@ footer {
   }
 
   .keep-logo {
+    width: 88px;
     text-indent: 100%;
     white-space: nowrap;
     overflow: hidden;
@@ -67,7 +72,7 @@ footer {
       letter-spacing: 0.08em;
 
       span {
-        color: #fff;
+        color: $white;
         font-family: $body-font-family;
         font-style: normal;
         font-weight: normal;
@@ -138,6 +143,7 @@ footer {
 
     .footer-columns {
       flex-direction: row;
+      justify-content: space-around;
 
       .footer-column-1 {
         flex: 0 0 auto;

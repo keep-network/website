@@ -29,11 +29,11 @@ const sections = {
   },
   stake: {
     HOME: "home-stake",
-    FEATURE_CARD: "stake-feature-card",
-    SUMMARY_GRID: "stake- summary-grid",
+    WHY: "why",
+    RECOMMENDED: "recommended",
     BANNER_BUSINESS_TEAM: "banner-business-team",
-    BLOG_POST: "blog-post",
-    BANNER: "banner",
+    TECH_GUIDE: "tech-guide",
+    EXCHANGES: "exchanges",
   },
   faq: {
     HOME: "home-faq",

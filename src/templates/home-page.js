@@ -20,34 +20,13 @@ import {
 import { sections } from "../constants"
 import { actions } from "../redux"
 
-const blogItems = [
-  {
-    image: "/images/home/keep-blog.png",
-    title: "Headline",
-    subtitle: "news outlet",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit cursus sed feugiat iaculis dictumst.",
-    date: "September, 16 2020",
-    label: "READ MORE",
-  },
-  {
-    image: "/images/home/keep-blog.png",
-    title: "Headline",
-    subtitle: "news outlet",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit cursus sed feugiat iaculis dictumst.",
-    date: "September, 16 2020",
-    label: "READ MORE",
-  },
-]
-
 export const HomePageTemplate = ({
   hero = {},
   carousel = [],
   summary_grid: summaryGrid = {},
   minilogo_grid: minilogoGrid = [],
+  blogs = {},
   exchanges = {},
-  images = {},
   signupMailingList = () => {},
   ajaxRequestStates = {},
   logo_wall: logoWall = {},
@@ -110,7 +89,7 @@ export const HomePageTemplate = ({
       <PageSection id={sections.home.KEEP_BLOG}>
         <Row>
           <Col xs={12} sm={12}>
-            <KeepBlog blogs={blogItems} />
+            <KeepBlog {...blogs} isMore={true} />
           </Col>
         </Row>
       </PageSection>
@@ -170,8 +149,8 @@ HomePageTemplate.propTypes = {
   carousel: PropTypes.array,
   summary_grid: PropTypes.object,
   minilogo_grid: PropTypes.array,
+  blogs: PropTypes.object,
   exchanges: PropTypes.object,
-  images: PropTypes.object,
   signupMailingList: PropTypes.func,
   ajaxRequestStates: PropTypes.object,
   logo_wall: PropTypes.object,
@@ -188,12 +167,9 @@ export const ConnectedHomePage = connect(mapStateToProps, {
 
 const HomePage = ({ data }) => {
   const { markdownRemark: post } = data
-  const images = {
-    textureCircle2: data.textureCircle2,
-  }
   return (
     <App className="app-home">
-      <ConnectedHomePage {...post.frontmatter} images={images} />
+      <ConnectedHomePage {...post.frontmatter} />
     </App>
   )
 }
@@ -201,8 +177,6 @@ const HomePage = ({ data }) => {
 HomePage.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.object,
-    textureCircle1: PropTypes.object,
-    textureCircle2: PropTypes.object,
   }),
 }
 
@@ -260,6 +234,22 @@ export const query = graphql`
             alt
           }
         }
+        blogs {
+          title
+          cards {
+            icon {
+              image {
+                relativePath
+              }
+              alt
+            }
+            title
+            source
+            excerpt
+            date
+            url
+          }
+        }
         exchanges {
           title
           links {
@@ -308,13 +298,6 @@ export const query = graphql`
               url
             }
           }
-        }
-      }
-    }
-    textureCircle2: file(relativePath: { regex: "/texture-circle-2.png/" }) {
-      childImageSharp {
-        fluid(maxWidth: 604, quality: 100) {
-          ...GatsbyImageSharpFluid
         }
       }
     }

@@ -922,24 +922,77 @@ collections:
             }
           - { label: "Path", name: "path", widget: "hidden", default: "/press" }
           - { label: "Title", name: "title", widget: "string" }
-          - {
-              label: "Subtitle",
-              name: "subtitle",
-              widget: "markdown",
-              minimal: true,
-            }
-          - label: "Media Kit Section"
-            name: "media_kit_section"
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - {
+                  label: "Title",
+                  name: "title",
+                  widget: "markdown",
+                  minimal: true,
+                }
+              - {
+                  label: "Body",
+                  name: "body",
+                  widget: "markdown",
+                  required: false,
+                }
+              - {
+                  label: "CTA Buttons",
+                  name: "cta_buttons",
+                  widget: "list",
+                  allow_add: true,
+                  required: false,
+                  fields:
+                    [
+                      { label: Label, name: label, widget: string },
+                      { label: URL, name: url, widget: string },
+                    ],
+                }
+          - label: "Minilogo Grid"
+            name: "minilogo_grid"
+            widget: "list"
+            allow_add: true
+            fields:
+              - {
+                  label: Icon,
+                  name: icon,
+                  widget: object,
+                  fields:
+                    [
+                      {
+                        label: "Image",
+                        name: "image",
+                        widget: file,
+                        media_library: { config: { multiple: false } },
+                        hint: "Image width of 168px and 72px required (to be
+                          rendered as 168 x 72) to support higher resolution screens",
+                      },
+                      { label: "Alt", name: "alt", widget: "string" },
+                    ],
+                }
+          - label: "News"
+            name: "news"
             widget: "object"
             fields:
               - { label: "Title", name: "title", widget: "string" }
-              - { label: "Subtitle", name: "subtitle", widget: "string" }
-              - label: "Media Kit"
-                name: "media_kit"
-                widget: "object"
+              - { label: "Body", name: "body", widget: "string" }
+              - label: "Blogs"
+                name: "cards"
+                widget: "list"
+                allow_add: true
                 fields:
-                  - { label: "Label", name: "label", widget: "string" }
-                  - { label: "Contents", name: "contents", widget: "list" }
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Source", name: "source", widget: "string" }
+                  - {
+                      label: "Excerpt",
+                      name: "excerpt",
+                      widget: "markdown",
+                      minimal: true,
+                    }
+                  - { label: "Date", name: "date", widget: "datetime" }
+                  - { label: "Url", name: "url", widget: "string" }
                   - {
                       label: Icon,
                       name: icon,
@@ -951,23 +1004,12 @@ collections:
                             name: "image",
                             widget: file,
                             media_library: { config: { multiple: false } },
-                            hint: "SVG only. SVG must have width and height attributes set in the file.",
+                            hint: "Image width of 168px and 72px required (to be
+                              rendered as 168 x 72) to support higher resolution screens",
                           },
                           { label: "Alt", name: "alt", widget: "string" },
                         ],
                     }
-                  - label: "Download Button"
-                    name: "download_button"
-                    widget: "object"
-                    fields:
-                      - { label: "Label", name: "label", widget: "string" }
-                      - {
-                          label: File,
-                          name: file,
-                          widget: file,
-                          media_library: { config: { multiple: false } },
-                          hint: "Media Kit Zip file",
-                        }
           - label: "Press Items Section"
             name: "press_items_section"
             widget: "object"

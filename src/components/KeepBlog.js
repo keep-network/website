@@ -1,50 +1,55 @@
 import React from "react"
 import PropTypes from "prop-types"
 import Button from "./Button"
+import Image from "./Image"
 
-const BlogCard = ({ image, title, subtitle, description, date, label }) => {
+const BlogCard = ({ title, source, excerpt, date, icon, url }) => {
   return (
     <div className="keep-blog-card">
       <div className="keep-blog-image">
-        <img src={image} alt="" />
+        <Image imageData={icon} />
       </div>
       <div className="keep-blog-content">
         <h4 className="keep-blog-title">{title}</h4>
-        <h5 className="keep-blog-subtitle">{subtitle}</h5>
-        <p className="keep-blog-desscription">{description}</p>
+        <h5 className="keep-blog-subtitle">{source}</h5>
+        <p className="keep-blog-desscription">{excerpt}</p>
         <p className="keep-blog-date">{date}</p>
-        <Button label={label} className="button-primary" />
+        <Button label="Read More" url={url} className="button-primary" />
       </div>
     </div>
   )
 }
 
 BlogCard.propTypes = {
-  item: PropTypes.object,
-  image: PropTypes.string,
-  src: PropTypes.string,
   title: PropTypes.string,
-  subtitle: PropTypes.string,
-  description: PropTypes.string,
+  source: PropTypes.string,
+  excerpt: PropTypes.string,
   date: PropTypes.string,
-  label: PropTypes.string,
+  icon: PropTypes.object,
+  url: PropTypes.string,
 }
 
-const KeepBlog = ({ blogs }) => {
+const KeepBlog = ({ title, body, cards, isMore = false }) => {
   return (
     <div>
-      <h2>Latest from the Keep Blog</h2>
-      {blogs &&
-        blogs.map((blog, i) => <BlogCard key={`blog-card-${i}`} {...blog} />)}
-      <div className="keep-blog-footer">
-        <a href="#">Read more articles</a>
-      </div>
+      <h2>{title}</h2>
+      {body && <p>{body}</p>}
+      {cards &&
+        cards.map((blog, i) => <BlogCard key={`blog-card-${i}`} {...blog} />)}
+      {isMore && (
+        <div className="keep-blog-footer">
+          <a href="#">Read more articles</a>
+        </div>
+      )}
     </div>
   )
 }
 
 KeepBlog.propTypes = {
-  blogs: PropTypes.array,
+  title: PropTypes.string,
+  body: PropTypes.string,
+  cards: PropTypes.array,
+  isMore: PropTypes.bool,
 }
 
 export default KeepBlog

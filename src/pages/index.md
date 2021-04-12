@@ -74,6 +74,25 @@ minilogo_grid:
   - icon:
       image: /images/logos/decrypt.png
       alt: Decrypt
+blogs:
+  title: Latest from the Keep Blog
+  cards:
+    - title: Headline
+      source: News Outlet
+      excerpt: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit cursus sed feugiat iaculis dictumst.
+      date: "2020-09-22T13:00:00.000Z"
+      icon:
+        image: /images/home/keep-blog.png
+        alt: Forbes
+      url: https://www.coindesk.com/thesis-bitcoin-token-tbtc-relaunches-following-buggy-debut
+    - title: Headline
+      source: News Outlet
+      excerpt: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit cursus sed feugiat iaculis dictumst.
+      date: "2020-09-22T13:00:00.000Z"
+      icon:
+        image: /images/home/keep-blog.png
+        alt: Forbes
+      url: https://www.coindesk.com/thesis-bitcoin-token-tbtc-relaunches-following-buggy-debut
 exchanges:
   title: Keep is listed on the following exchanges
   links:

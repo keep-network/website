@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react"
 import ClampLines from "react-clamp-lines"
+import { Col, Row } from "reactstrap"
 import PropTypes from "prop-types"
-import { withPrefix, graphql } from "gatsby"
+import { graphql } from "gatsby"
 
-import { App, Image } from "../components"
+import { App, MiniLogoWall, KeepBlog, Link } from "../components"
 import PageSection, { SeeAllButton } from "../components/PageSection"
+import { sections } from "../constants"
 
 const PressItem = ({ title, date, source, aboveTheFold, url }) => {
   const [windowWidth, setWindowWidth] = useState(0)
@@ -47,9 +49,9 @@ PressItem.propTypes = {
 }
 
 export const PressPageTemplate = ({
-  title,
-  subtitle,
-  media_kit_section: mediaKitSection,
+  hero,
+  minilogo_grid: minilogoGrid,
+  news: news,
   press_items_section: pressItemsSection,
 }) => {
   const { press_items: pressItems } = pressItemsSection
@@ -76,43 +78,38 @@ export const PressPageTemplate = ({
 
   return (
     <div className="press-page">
-      <PageSection id="title-container">
+      <PageSection id={sections.press.HOME}>
         <div className="title">
-          <h1>{title}</h1>
-          <h2 dangerouslySetInnerHTML={{ __html: subtitle }} />
+          <h1>{hero.title}</h1>
+          <h2 dangerouslySetInnerHTML={{ __html: hero.body }} />
         </div>
+        <Row className="cta-section">
+          <ul className="cta-links col-12 col-sm-12 col-md-6 col-lg-4">
+            {hero.cta_buttons.map((btn, i) => (
+              <li key={`cta-btn-${i}`}>
+                <Link url={btn.url} className="cta-link">
+                  {btn.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </Row>
       </PageSection>
-      <PageSection id="media-kit-container">
-        <div className="media-kit">
-          <div className="media-kit-left">
-            <h2>{mediaKitSection.title}</h2>
-            <h3>{mediaKitSection.subtitle}</h3>
-          </div>
-          <div className="media-kit-right">
-            <div className="media-kit-description">
-              <Image imageData={mediaKitSection.media_kit.icon} />
-              <div className="media-kit-text">
-                <div className="label">{mediaKitSection.media_kit.label}</div>
-                <ul className="contents">
-                  {mediaKitSection.media_kit.contents.map((item, i) => (
-                    <li key={`media-kit-content-item-${i}`}>{item}</li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-            <a
-              href={withPrefix(
-                `/images/${mediaKitSection.media_kit.download_button.file.relativePath}`
-              )}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {mediaKitSection.media_kit.download_button.label}
-            </a>
-          </div>
-        </div>
+      <PageSection id={sections.press.MINILOGO_GRID}>
+        <Row>
+          <Col xs={12} sm={12}>
+            <MiniLogoWall logos={minilogoGrid} />
+          </Col>
+        </Row>
       </PageSection>
-      <PageSection id="press-items-container">
+      <PageSection id={sections.press.NEWS}>
+        <Row>
+          <Col xs={12} sm={12}>
+            <KeepBlog {...news} />
+          </Col>
+        </Row>
+      </PageSection>
+      <PageSection id={sections.press.LATEST_POST}>
         <div className="press-items">
           <h2>{pressItemsSection.title}</h2>
           {pressEntries.map((entry) => (
@@ -139,9 +136,9 @@ export const PressPageTemplate = ({
 }
 
 PressPageTemplate.propTypes = {
-  title: PropTypes.string,
-  subtitle: PropTypes.string,
-  media_kit_section: PropTypes.object,
+  hero: PropTypes.object,
+  minilogo_grid: PropTypes.array,
+  news: PropTypes.object,
   press_items_section: PropTypes.object,
 }
 
@@ -168,25 +165,37 @@ export const query = graphql`
       id
       frontmatter {
         title
-        subtitle
-        media_kit_section {
+        hero {
           title
-          subtitle
-          media_kit {
+          body
+          cta_buttons {
+            label
+            url
+          }
+        }
+        minilogo_grid {
+          icon {
+            image {
+              relativePath
+            }
+            alt
+          }
+        }
+        news {
+          title
+          body
+          cards {
             icon {
               image {
                 relativePath
               }
               alt
             }
-            label
-            contents
-            download_button {
-              label
-              file {
-                relativePath
-              }
-            }
+            title
+            source
+            excerpt
+            date
+            url
           }
         }
         press_items_section {

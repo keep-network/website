@@ -259,7 +259,7 @@ collections:
               label: "Template",
               name: "template",
               widget: "hidden",
-              default: "home-page",
+              default: "build-page",
             }
           - { label: "Path", name: "path", widget: "hidden", default: "/build" }
           - label: "Hero"
@@ -466,9 +466,9 @@ collections:
               label: "Template",
               name: "template",
               widget: "hidden",
-              default: "home-page",
+              default: "stake-page",
             }
-          - { label: "Path", name: "path", widget: "hidden", default: "/build" }
+          - { label: "Path", name: "path", widget: "hidden", default: "/stake" }
           - label: "Hero"
             name: "hero"
             widget: "object"
@@ -671,6 +671,78 @@ collections:
                           ],
                       },
                       { label: "Url", name: "url", widget: "string" },
+                    ],
+                }
+      - file: "src/pages/faq.md"
+        label: "FAQ"
+        name: "faq"
+        fields:
+          - {
+              label: "Template",
+              name: "template",
+              widget: "hidden",
+              default: "faq-page",
+            }
+          - { label: "Path", name: "path", widget: "hidden", default: "/faq" }
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - {
+                  label: "Title",
+                  name: "title",
+                  widget: "markdown",
+                  minimal: true,
+                }
+          - label: "Questions"
+            name: "questions"
+            widget: "list"
+            allow_add: true
+            fields:
+              - { label: "Question", name: "question", widget: "string" }
+              - { label: "Answer", name: "answer", widget: "string" }
+          - label: "Contact"
+            name: "contact"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Header", name: "header", widget: "string" }
+              - { label: "Description", name: "description", widget: "string" }
+              - {
+                  label: "Cards",
+                  name: "cards",
+                  widget: "list",
+                  allow_add: true,
+                  fields:
+                    [
+                      { label: "Title", name: "title", widget: "string" },
+                      { label: "Body", name: "body", widget: "string" },
+                      {
+                        label: Icon,
+                        name: icon,
+                        widget: object,
+                        fields:
+                          [
+                            {
+                              label: "Image",
+                              name: "image",
+                              widget: file,
+                              media_library: { config: { multiple: false } },
+                              hint: "SVG only. SVG must have width and height attributes set in the file.",
+                            },
+                            { label: "Alt", name: "alt", widget: "string" },
+                          ],
+                      },
+                      {
+                        label: Link,
+                        name: link,
+                        widget: object,
+                        fields:
+                          [
+                            { label: "Name", name: "name", widget: "string" },
+                            { label: "Url", name: "url", widget: "string" },
+                          ],
+                      },
                     ],
                 }
       - file: "src/pages/team.md"

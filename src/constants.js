@@ -43,7 +43,7 @@ const sections = {
   press: {
     HOME: "home-press",
     MINILOGO_GRID: "press-minilogo-grid",
-    KEEP_BLOG: "keep-blog",
+    NEWS: "news",
     LATEST_POST: "latest-post",
   },
   team: {

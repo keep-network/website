@@ -18,7 +18,7 @@ nav_items:
     url: ""
     subitems:
       - label: Team
-        url: "#team"
+        url: "/team"
       - label: Info
         url: "/info"
 ---

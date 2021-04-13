@@ -42,11 +42,13 @@ const Profile = ({ name, image, title, socials = [] }) => (
       <span>{name}</span>
       {title && title}
     </h4>
-    <div className="social-links">
-      {socials.map((link, i) => (
-        <SocialLink key={`social-link-${i}}`} url={link.url} />
-      ))}
-    </div>
+    {socials && (
+      <div className="social-links">
+        {socials.map((link, i) => (
+          <SocialLink key={`social-link-${i}}`} url={link.url} />
+        ))}
+      </div>
+    )}
   </div>
 )
 

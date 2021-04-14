@@ -38,13 +38,11 @@ const FeatureCarousel = ({ items }) => {
         onExiting={() => setAnimating(false)}
         onExited={() => setAnimating(false)}
         key={`carousel-${i}`}
-        className={classnames(item.class, "carousel-content")}
+        className={item.class}
       >
         <Image imageData={item.image} />
-        <div className="carousel-content">
-          <div className="callout">The Keep Solution</div>
-          <CarouselCaption captionText={item.body} captionHeader={item.title} />
-        </div>
+        <div className="callout">The Keep Solution</div>
+        <CarouselCaption captionText={item.body} captionHeader={item.title} />
       </CarouselItem>
     )
   })

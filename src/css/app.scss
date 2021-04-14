@@ -8,6 +8,7 @@
 @import "button";
 @import "header";
 @import "profile";
+@import "feature-card";
 @import "page-section";
 @import "alerts";
 @import "collapsible-list";
@@ -16,11 +17,12 @@
 @import "home";
 @import "build";
 @import "press";
+@import "info";
 @import "legal";
 @import "faq";
 
 body {
-  background-color: $background-light-color;
+  //  background-color: $background-light-color;
 }
 
 .app {

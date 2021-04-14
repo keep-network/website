@@ -120,7 +120,7 @@ export const HeaderTemplate = ({ navItems = [] }) => {
               <li className="nav-item">
                 <a
                   href="#"
-                  className="button button-primary nav-item"
+                  className="btn btn-primary btn-small nav-item"
                   rel="noopener noreferrer"
                 >
                   Launch

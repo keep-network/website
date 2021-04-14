@@ -1,18 +1,17 @@
 import React from "react"
 import { connect } from "react-redux"
-import {
-  Col,
-  Row,
-  Card,
-  CardImg,
-  CardText,
-  CardBody,
-  CardTitle,
-} from "reactstrap"
+import { Col, Row } from "reactstrap"
 import PropTypes from "prop-types"
 import { graphql } from "gatsby"
 
-import { App, Image, PageSection, Contact, Button } from "../components"
+import {
+  App,
+  Image,
+  PageSection,
+  Contact,
+  Button,
+  FeatureCard,
+} from "../components"
 import { sections } from "../constants"
 import { actions } from "../redux"
 
@@ -64,17 +63,11 @@ export const InfoPageTemplate = ({
         <Row className="info-feature-card-section">
           {solution.cards.map((card, i) => (
             <Col key={`card-${i}`} xs={12} md={4}>
-              <Card>
-                <CardImg
-                  top
-                  src={`/images/${card.icon.image.relativePath}`}
-                  alt={card.icon.alt}
-                />
-                <CardBody>
-                  <CardTitle tag="h5">{card.title}</CardTitle>
-                  <CardText>{card.body}</CardText>
-                </CardBody>
-              </Card>
+              <FeatureCard
+                title={card.title}
+                icon={`/images/${card.icon.image.relativePath}`}
+                text={card.body}
+              />
             </Col>
           ))}
         </Row>
@@ -100,17 +93,11 @@ export const InfoPageTemplate = ({
             </div>
           </Col>
           <Col xs={12} md={6}>
-            <Card>
-              <CardImg
-                top
-                width="100%"
-                src={`/images/${tbtcShowcase.article.image.relativePath}`}
-                alt="tBTC"
-              />
-              <CardBody>
-                <CardText>{tbtcShowcase.article.body}</CardText>
-              </CardBody>
-            </Card>
+            <FeatureCard
+              image={`/images/${tbtcShowcase.article.image.relativePath}`}
+              title={tbtcShowcase.article.body}
+              bodyClass="text-left"
+            />
           </Col>
         </Row>
       </PageSection>
@@ -127,18 +114,13 @@ export const InfoPageTemplate = ({
         <Row className="info-secure-card-section">
           {secure.cards.map((card, i) => (
             <Col key={`card-${i}`} xs={12} md={4}>
-              <Card>
-                <CardImg
-                  top
-                  src={`/images/${card.icon.image.relativePath}`}
-                  alt={card.icon.alt}
-                />
-                <CardBody>
-                  <CardTitle tag="h5">{card.title}</CardTitle>
-                  <CardText>{card.body}</CardText>
-                  <Button {...card.button} className="btn-default" />
-                </CardBody>
-              </Card>
+              <FeatureCard
+                icon={`/images/${card.icon.image.relativePath}`}
+                title={card.title}
+                text={card.body}
+                button={card.button}
+                btnClass="btn-default"
+              />
             </Col>
           ))}
         </Row>

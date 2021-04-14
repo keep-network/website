@@ -5,13 +5,14 @@ a.button {
   justify-content: center;
   align-items: center;
   margin: 4px 4px 4px 0px;
+  text-decoration: none;
 
   width: 210px;
   height: 48px;
 
   border-radius: 8px;
   outline: none;
-  
+
   p {
     font-style: normal;
     font-weight: 800;
@@ -32,6 +33,11 @@ a.button {
 
   &-secondary {
     background-color: $white;
+  }
+
+  &-default {
+    color: $black;
+    border: 2px solid $black;
   }
 
   &-full-width {

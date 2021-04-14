@@ -28,7 +28,7 @@ solution:
         image: /images/svg/ic-private.svg
         alt: Private
 tbtc_showcase:
-  title: Our Stakers
+  title: Built on Keep
   body: tBTC is the first “killer app” to be built on top of the Keep network.
   button:
     label: Check It Out

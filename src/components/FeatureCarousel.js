@@ -7,7 +7,6 @@ import {
   CarouselIndicators,
   CarouselCaption,
 } from "reactstrap"
-import classnames from "classnames"
 
 import Image from "./Image"
 

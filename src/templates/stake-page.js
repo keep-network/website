@@ -5,6 +5,8 @@ import PropTypes from "prop-types"
 import { graphql } from "gatsby"
 
 import { App, Image, Link, PageSection } from "../components"
+import StakeCard from "../components/WhyStakeCard"
+import RecommendedCard from "../components/RecommendedCard";
 import { sections } from "../constants"
 
 export const StakePageTemplate = ({
@@ -21,74 +23,55 @@ export const StakePageTemplate = ({
     <div className="main-content">
       <PageSection id={sections.stake.HOME}>
         <Row>
-          <Col xs={12}>
-            <h1 dangerouslySetInnerHTML={{ __html: hero.title }} />
+          <Col className="test-stake" xs={12} md={7}>
+            <h1 className="hero-title" dangerouslySetInnerHTML={{ __html: hero.title }} />
             <div
-              className="body"
+              className="body hero-body"
               dangerouslySetInnerHTML={{ __html: hero.body }}
             />
-          </Col>
-        </Row>
-        <Row className="cta-section">
-          <ul className="cta-links col-12 col-sm-12 col-md-6 col-lg-4">
             {hero.cta_buttons.map((btn, i) => (
-              <li key={`cta-btn-${i}`}>
-                <Link url={btn.url} className="cta-link">
+                <Link key={`cta-btn-${i}`} url={btn.url} className="cta-link cta-btn">
                   {btn.label}
                 </Link>
-              </li>
             ))}
-            <li>
-              <Image imageData={images.overview} />
-            </li>
-          </ul>
+          </Col>
+          <Col></Col>
         </Row>
       </PageSection>
-      <PageSection id={sections.stake.why}>
+      <PageSection id={sections.stake.WHY}>
         <Row>
           <Col xs={12}>
-            <h1 dangerouslySetInnerHTML={{ __html: why.title }} />
+            <h1 className="whyStakeMsg" dangerouslySetInnerHTML={{ __html: why.title }} />
           </Col>
         </Row>
         <Row className="why-card-section">
           {why.cards.map((card, i) => (
-            <Col key={`card-${i}`}>
-              <Image imageData={card.icon} />
-              <h3>{card.title}</h3>
-              <p>{card.body}</p>
-            </Col>
+            <StakeCard key={`card-${i}`} icon={card.icon} title={card.title} body={card.body} />
           ))}
         </Row>
       </PageSection>
-      <PageSection id={sections.stake.recommended}>
+      <PageSection id={sections.stake.RECOMMENDED}>
         <Row>
           <Col xs={12}>
-            <h1 dangerouslySetInnerHTML={{ __html: recommended.title }} />
+            <h1 className="recommendedMsg" dangerouslySetInnerHTML={{ __html: recommended.title }} />
             <div
-              className="body"
+              className="body recommended-body"
               dangerouslySetInnerHTML={{ __html: recommended.body }}
             />
           </Col>
         </Row>
         <Row className="recommended-card-section">
           {recommended.cards.map((card, i) => (
-            <Col xs={12} md={4} key={`card-${i}`}>
-              <Image imageData={card.icon} />
-              <h3>{card.title}</h3>
-              <p>{card.body}</p>
-              <Link url={card.button.url} className="button">
-                {card.button.label}
-              </Link>
-            </Col>
+            <RecommendedCard key={`card-${i}`} icon={card.icon} title={card.title} body={card.body} button={card.button} />
           ))}
         </Row>
       </PageSection>
       <PageSection id={sections.stake.BANNER_BUSINESS_TEAM}>
         <Row>
           <Col xs={12}>
-            <h1 dangerouslySetInnerHTML={{ __html: banner.body }} />
+            <h1 className="bannerBizTeamMsg text-center" dangerouslySetInnerHTML={{ __html: banner.body }} />
             <div>
-              <Link url={banner.button.url} className="button-primary">
+              <Link url={banner.button.url} className="button-primary contact-btn">
                 {banner.button.label}
               </Link>
             </div>
@@ -101,11 +84,11 @@ export const StakePageTemplate = ({
             <Image imageData={images.techUserGuide} />
           </Col>
           <Col xs={12} md={6}>
-            <div>{techGuide.intro}</div>
-            <h3>{techGuide.title}</h3>
-            <p>{techGuide.body}</p>
+            <div className="d-md-block d-none">{techGuide.intro}</div>
+            <h3 className="tech-guide-title mt-0">{techGuide.title}</h3>
+            <p className="tech-guide-body mt-5">{techGuide.body}</p>
             <div>
-              <Link url={techGuide.button.url} className="button">
+              <Link url={techGuide.button.url} className="button recCardButton">
                 {techGuide.button.label}
               </Link>
             </div>

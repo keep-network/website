@@ -17,7 +17,7 @@ export const FaqPageTemplate = ({
   plusIcon = {},
 }) => {
   return (
-    <div className="main-content">
+    <div className="main-content faq">
       <PageSection id={sections.faq.HOME}>
         <Row>
           <Col xs={12}>
@@ -29,11 +29,9 @@ export const FaqPageTemplate = ({
         <Row className="questions-section">
           <Col xs={12} sm={12}>
             {questions.map((item, i) => (
-              <div key={`question-${i}`}>
-                <p>
-                  {item.question}
-                  <Image imageData={plusIcon} />
-                </p>
+              <div key={`question-${i}`} className="faq-question">
+                <p>{item.question}</p>
+                <Image imageData={plusIcon} />
               </div>
             ))}
           </Col>

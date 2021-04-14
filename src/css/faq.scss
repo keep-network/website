@@ -1,0 +1,28 @@
+.faq {
+  .home-faq {
+    background-color: $white;
+  }
+
+  .questions {
+    background-color: $grey-10;
+  }
+
+  &-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 0;
+    border-bottom: 1px solid $black;
+
+    p {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 28px;
+      line-height: 40px;
+      display: flex;
+      align-items: center;
+      color: $black;
+      margin: 0;
+    }
+  }
+}

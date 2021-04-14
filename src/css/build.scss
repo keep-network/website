@@ -1,4 +1,4 @@
-.build {
+.build-content {
 
   .home-build {    
     background-color: $white;
@@ -56,7 +56,7 @@
     background-color: $grey-10;  
   }
 
-  &-grid {
+  .grid {
     background-color: $grey-70;
   
     &-header {

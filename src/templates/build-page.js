@@ -18,7 +18,7 @@ export const BuildPageTemplate = ({
   ajaxRequestStates = {},
 }) => {
   return (
-    <div className="main-content build">
+    <div className="build-content">
       <PageSection id={sections.build.HOME}>
         <Row>
           <h1 dangerouslySetInnerHTML={{ __html: hero.title }} />
@@ -37,16 +37,14 @@ export const BuildPageTemplate = ({
               </ul>
             </Col>
             <Col xs={6} sm={6} className="banner-image">
-              <img
-                src={require("../../static/images/svg/build-banner-bg-1.svg")}
-              />
+              <Image imageData={{ image: hero.image, alt: "build" }} />
             </Col>
           </Row>
         </Row>
       </PageSection>
       <PageSection id={sections.build.LIBRARY}>
         <Row>
-          <Col xs={12} className="build-grid-header">
+          <Col xs={12} className="grid-header">
             <h2
               className="title"
               dangerouslySetInnerHTML={{ __html: library.title }}
@@ -59,7 +57,7 @@ export const BuildPageTemplate = ({
         </Row>
         <Row>
           {library.cards.map((card, i) => (
-            <Col key={`card-${i}`} className="build-grid-card">
+            <Col key={`card-${i}`} className="grid-card">
               <Image imageData={card.icon} />
               <h3>{card.title}</h3>
               <p>{card.body}</p>
@@ -133,7 +131,7 @@ export const BuildPageTemplate = ({
       </PageSection>
       <PageSection id={sections.build.SECURE}>
         <Row>
-          <Col xs={12} className="build-grid-header">
+          <Col xs={12} className="grid-header">
             <h2
               className="title"
               dangerouslySetInnerHTML={{ __html: secure.title }}
@@ -146,7 +144,7 @@ export const BuildPageTemplate = ({
         </Row>
         <Row>
           {secure.cards.map((card, i) => (
-            <Col key={`card-${i}`} className="build-grid-card">
+            <Col key={`card-${i}`} className="grid-card">
               <Image imageData={card.icon} />
               <h3>{card.title}</h3>
               <p>{card.body}</p>

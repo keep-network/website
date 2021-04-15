@@ -1,6 +1,5 @@
 import App from "./App"
 import Announcement from "./Announcement"
-import Collapse from "./Collapse"
 import CollapsibleList from "./CollapsibleList"
 import EmailForm from "./EmailForm"
 import Footer from "./Footer"
@@ -23,7 +22,6 @@ import Contact from "./Contact"
 export {
   App,
   Announcement,
-  Collapse,
   CollapsibleList,
   EmailForm,
   Footer,

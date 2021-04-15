@@ -6,7 +6,7 @@ const Button = ({ className, label, url, onClick }) => {
   return (
     <a
       href={url}
-      className={classNames(["button", className])}
+      className={classNames(["btn", className])}
       onClick={(e) => onClick(e)}
     >
       {label}

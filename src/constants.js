@@ -58,7 +58,7 @@ const sections = {
     FEATURE: "feature",
     FEATURE_CARD: "info-feature-card",
     TBTC_SHOWCASE: "tbtc-showcase",
-    SUMMARY_GRID: "info-summary-grid",
+    SECURE: "info-secure",
     CONTACT: "contact",
   },
 }

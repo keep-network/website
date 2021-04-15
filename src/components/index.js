@@ -5,6 +5,8 @@ import EmailForm from "./EmailForm"
 import Footer from "./Footer"
 import Header from "./Header"
 import * as Icons from "./Icons"
+import Button from "./Button"
+import FeatureCard from "./FeatureCard"
 import Image from "./Image"
 import ImageLink from "./ImageLink"
 import Link from "./Link"
@@ -27,6 +29,8 @@ export {
   Footer,
   Header,
   Icons,
+  Button,
+  FeatureCard,
   Image,
   ImageLink,
   Link,

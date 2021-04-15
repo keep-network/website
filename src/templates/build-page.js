@@ -18,46 +18,53 @@ export const BuildPageTemplate = ({
   ajaxRequestStates = {},
 }) => {
   return (
-    <div className="main-content">
+    <div className="build-content">
       <PageSection id={sections.build.HOME}>
         <Row>
-          <Col xs={12}>
-            <h1 dangerouslySetInnerHTML={{ __html: hero.title }} />
-            <div
-              className="body"
-              dangerouslySetInnerHTML={{ __html: hero.body }}
-            />
-          </Col>
-        </Row>
-        <Row className="cta-section">
-          <ul className="cta-links col-12 col-sm-12 col-md-6 col-lg-4">
-            {hero.cta_buttons.map((btn, i) => (
-              <li key={`cta-btn-${i}`}>
-                <Link url={btn.url} className="cta-link">
-                  {btn.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
+          <h1 dangerouslySetInnerHTML={{ __html: hero.title }} />
+          <Row>
+            <Col xs={6} sm={6}>
+              <img src={require("../../static/images/svg/green-rect.svg")} />
+              <h3 dangerouslySetInnerHTML={{ __html: hero.body }} />
+              <ul className="cta-links col-12 col-sm-12 col-md-6 col-lg-4">
+                {hero.cta_buttons.map((btn, i) => (
+                  <li key={`cta-btn-${i}`}>
+                    <Link url={btn.url} className="cta-link">
+                      {btn.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </Col>
+            <Col xs={6} sm={6} className="banner-image">
+              <Image imageData={{ image: hero.image, alt: "build" }} />
+            </Col>
+          </Row>
         </Row>
       </PageSection>
       <PageSection id={sections.build.LIBRARY}>
         <Row>
-          <Col xs={12}>
-            <h1 dangerouslySetInnerHTML={{ __html: library.title }} />
-            <div
-              className="body"
+          <Col xs={12} className="grid-header">
+            <h2
+              className="title"
+              dangerouslySetInnerHTML={{ __html: library.title }}
+            />
+            <h3
+              className="subtitle"
               dangerouslySetInnerHTML={{ __html: library.body }}
             />
           </Col>
         </Row>
-        <Row className="build-library-card-section">
+        <Row>
           {library.cards.map((card, i) => (
-            <Col key={`card-${i}`}>
+            <Col key={`card-${i}`} className="grid-card">
               <Image imageData={card.icon} />
               <h3>{card.title}</h3>
               <p>{card.body}</p>
-              <Link url={card.button.url} className="button">
+              <Link
+                url={card.button.url}
+                className="button button-secondary button-full-width"
+              >
                 {card.button.label}
               </Link>
             </Col>
@@ -66,43 +73,85 @@ export const BuildPageTemplate = ({
       </PageSection>
       <PageSection id={sections.build.COMMUNITY}>
         <Row>
-          <Col xs={12}>
-            <h1 dangerouslySetInnerHTML={{ __html: community.title }} />
-            <div
-              className="body"
-              dangerouslySetInnerHTML={{ __html: community.body }}
-            />
-          </Col>
-        </Row>
-        <Row className="build-community-card-section">
-          {community.cards.map((card, i) => (
-            <Col key={`card-${i}`}>
-              <Image imageData={card.icon} />
-              <h3>{card.title}</h3>
-              <Link url={card.button.url} className="button">
-                {card.button.label}
-              </Link>
+          <Col xs={6}>
+            <Col className="build-community-header" xs={12}>
+              <h1
+                dangerouslySetInnerHTML={{ __html: community.title }}
+                className="title"
+              />
+              <h2
+                className="body subtitle"
+                dangerouslySetInnerHTML={{ __html: community.body }}
+              />
             </Col>
-          ))}
+            {community.cards
+              .filter((_, index) => index % 2 !== 0)
+              .map((card, i) => (
+                <Col
+                  key={`community-card-odd-${i}`}
+                  xs={12}
+                  className="build-community-card"
+                >
+                  <Image imageData={card.icon} className="full-width" />
+                  <div className="build-community-card-footer">
+                    <h3>{card.title}</h3>
+                    <Link
+                      url={card.button.url}
+                      className="button button-primary button-full-width"
+                    >
+                      {card.button.label}
+                    </Link>
+                  </div>
+                </Col>
+              ))}
+          </Col>
+          <Col xs={6}>
+            {community.cards
+              .filter((_, index) => index % 2 === 0)
+              .map((card, i) => (
+                <Col
+                  key={`community-card-even-${i}`}
+                  xs={12}
+                  className="build-community-card"
+                >
+                  <Image imageData={card.icon} className="full-width" />
+                  <div className="build-community-card-footer">
+                    <h3>{card.title}</h3>
+                    <Link
+                      url={card.button.url}
+                      className="button button-primary button-full-width"
+                    >
+                      {card.button.label}
+                    </Link>
+                  </div>
+                </Col>
+              ))}
+          </Col>
         </Row>
       </PageSection>
       <PageSection id={sections.build.SECURE}>
         <Row>
-          <Col xs={12}>
-            <h1 dangerouslySetInnerHTML={{ __html: secure.title }} />
-            <div
-              className="body"
+          <Col xs={12} className="grid-header">
+            <h2
+              className="title"
+              dangerouslySetInnerHTML={{ __html: secure.title }}
+            />
+            <h3
+              className="subtitle"
               dangerouslySetInnerHTML={{ __html: secure.body }}
             />
           </Col>
         </Row>
-        <Row className="build-secure-card-section">
+        <Row>
           {secure.cards.map((card, i) => (
-            <Col key={`card-${i}`}>
+            <Col key={`card-${i}`} className="grid-card">
               <Image imageData={card.icon} />
               <h3>{card.title}</h3>
               <p>{card.body}</p>
-              <Link url={card.button.url} className="button">
+              <Link
+                url={card.button.url}
+                className="button button-secondary button-full-width"
+              >
                 {card.button.label}
               </Link>
             </Col>

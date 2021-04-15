@@ -1,6 +1,6 @@
-import React from "react"
+import React, { useState } from "react"
 import { connect } from "react-redux"
-import { Col, Row } from "reactstrap"
+import { Col, Row, Collapse } from "reactstrap"
 import PropTypes from "prop-types"
 import { graphql } from "gatsby"
 
@@ -16,8 +16,10 @@ export const FaqPageTemplate = ({
   ajaxRequestStates = {},
   plusIcon = {},
 }) => {
+  const [expandedId, setExpandedId] = useState(-1)
+
   return (
-    <div className="main-content faq">
+    <div className="faq-content">
       <PageSection id={sections.faq.HOME}>
         <Row>
           <Col xs={12}>
@@ -28,10 +30,21 @@ export const FaqPageTemplate = ({
       <PageSection id={sections.faq.QUESTIONS}>
         <Row className="questions-section">
           <Col xs={12} sm={12}>
-            {questions.map((item, i) => (
-              <div key={`question-${i}`} className="faq-question">
-                <p>{item.question}</p>
-                <Image imageData={plusIcon} />
+            {questions.map((item, index) => (
+              <div key={`question-${index}`} className="faq-section">
+                <div
+                  className="faq-question"
+                  onClick={() => {
+                    if (expandedId !== -1) setExpandedId(-1)
+                    else setExpandedId(index)
+                  }}
+                >
+                  <p>{item.question}</p>
+                  <Image imageData={plusIcon} />
+                </div>
+                <Collapse isOpen={expandedId === index} className="faq-answer">
+                  {item.answer}
+                </Collapse>
               </div>
             ))}
           </Col>

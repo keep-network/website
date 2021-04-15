@@ -20,7 +20,7 @@ export const StakePageTemplate = ({
 }) => {
   console.log("tech:", images)
   return (
-    <div className="main-content">
+    <div className="stake-content">
       <PageSection id={sections.stake.HOME}>
         <Row>
           <Col className="test-stake" xs={12} md={7}>

@@ -53,8 +53,11 @@
   }
 
   // Make bg image appear behind the alert on mobile
-  padding-top: 115px;
-  margin-top: -125px;
+  padding-top: 72px;
+
+  @media (min-width: #{$bp-medium}) {
+    padding-top: 150px;
+  }
 
   // Gradient overlay for background image
   &:before {
@@ -309,7 +312,7 @@
     border-radius: 8px;
 
     .three {
-      flex:0%;
+      flex: 0%;
     }
 
     &-header {

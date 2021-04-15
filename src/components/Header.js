@@ -88,11 +88,11 @@ export const HeaderTemplate = ({ navItems = [] }) => {
 
   return (
     <header>
-      <Navbar>
+      <Navbar className={collapsed ? "collapsed" : ""}>
         <Container fluid="md">
           <NavScrollItem
             element="div"
-            className="brand"
+            className={collapsed ? "brand" : "brand expanded"}
             activeClass="active"
             href="/"
             to="home"
@@ -100,7 +100,10 @@ export const HeaderTemplate = ({ navItems = [] }) => {
             <Icons.Keep height="61px" width="235px" />
           </NavScrollItem>
           {/* Mobile nav hamburger button */}
-          <NavbarToggler onClick={toggleNavbar} />
+          <NavbarToggler
+            className={collapsed ? "collapsed" : ""}
+            onClick={toggleNavbar}
+          />
           <Collapse isOpen={!collapsed} navbar>
             <Nav>
               {navItems.map((item, i) => (
@@ -112,10 +115,17 @@ export const HeaderTemplate = ({ navItems = [] }) => {
                 <a
                   href="https://discordapp.com/invite/wYezN7v"
                   target="_blank"
+                  className="discord"
                   rel="noopener noreferrer"
                 >
                   <Icons.Discord />
                 </a>
+                <div className="hint">
+                  <Icons.Dashboard />
+                  <span>
+                    The staking dapp works best for a Desktop experience.
+                  </span>
+                </div>
               </li>
               <li className="nav-item">
                 <a

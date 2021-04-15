@@ -3,8 +3,6 @@ import { Button, Collapse } from "reactstrap"
 import PropTypes from "prop-types"
 import classNames from "classnames"
 
-import { ArrowDown } from "./Icons"
-
 const CollapsibleList = ({ label, children, className = "" }) => {
   const [isOpen, setIsOpen] = useState(false)
   const toggleOpen = () => setIsOpen(!isOpen)
@@ -15,7 +13,7 @@ const CollapsibleList = ({ label, children, className = "" }) => {
     >
       <div className="collapsible-list-label">
         <Button onClick={toggleOpen}>
-          <span>{label}</span> <ArrowDown />
+          <span>{label}</span>
         </Button>
       </div>
       <Collapse isOpen={isOpen}>{children}</Collapse>

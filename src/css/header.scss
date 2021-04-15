@@ -1,27 +1,22 @@
 header {
-  position: relative;
-  z-index: 3;
-
-  @media (min-width: #{$bp-medium}) {
-    position: fixed;
-    width: 100%;
-    text-align: center;
-    z-index: 1000;
-  }
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
 
   .navbar {
-    background-color: $background-light-color;
+    background-color: $grey-20;
     border-bottom: 0.25px solid $border-color;
-    margin: 54px auto;
     padding: 0;
     position: relative;
     border: none;
 
-    .app-home & {
-      background-color: #ffffff00;
+    &.collapsed {
+      background-color: transparent;
     }
 
     @media (min-width: #{$bp-medium}) {
+      margin: 54px auto;
+      background-color: transparent;
       .navbar-collapse {
         display: flex !important;
         flex-basis: auto;
@@ -33,39 +28,105 @@ header {
       display: flex;
       justify-content: center;
       align-items: center;
+
       &-item {
-        width: 90px;
+        margin-left: 0;
+
+        @media (min-width: #{$bp-medium}) {
+          margin-left: 2px;
+        }
+
+        @media (min-width: #{$bp-large}) {
+          margin-left: 10px;
+        }
       }
-      
+
       @media (max-width: #{$bp-medium - 1}) {
         flex-direction: column;
-        margin: 7.5px -15px;
+        margin: 0 -15px;
+
+        a {
+          text-decoration: none;
+        }
+
+        &-item {
+          width: 100%;
+          border-top: 0.5px solid $grey-40;
+        }
+
+        .dropdown > .nav-link::after {
+          position: absolute;
+          right: 45px;
+          content: "";
+          display: inline-block;
+          width: 12px;
+          height: 12px;
+          border-right: 0.2em solid black;
+          border-top: 0.2em solid black;
+          transform: rotate(135deg);
+          margin-right: 0.5em;
+          margin-left: 1em;
+        }
+
+        .dropdown.show {
+          > .nav-link::after {
+            transform: rotate(-45deg);
+            top: 32px;
+          }
+
+          .dropdown-menu {
+            position: relative !important;
+            float: none;
+            padding: 0;
+            margin: 0;
+            background-color: transparent;
+            border: none;
+            transform: none !important;
+
+            button {
+              padding: 0;
+
+              &:hover {
+                background-color: transparent;
+              }
+              &:last-child {
+                margin-bottom: 15px;
+              }
+            }
+
+            .nav-item {
+              border-top: none;
+
+              a {
+                color: $grey-50;
+                padding: 10px 45px;
+              }
+            }
+          }
+        }
       }
 
       > li > a,
       > li > div > button > li > a {
+        @extend .label;
         display: block;
-        font-weight: 600;
-        font-size: 14px;
-        letter-spacing: 0.06em;
         color: $body-text-color;
-        line-height: 16px;
         text-transform: uppercase;
         cursor: pointer;
         transition: color, font-weight 0.25s ease-in;
         position: relative;
 
-        &[href^="http"]:after {
-          content: " ↗";
-        }
-
-        &[href="#"]:after {
-          content: " ↓";
-        }
-
         @media (min-width: #{$bp-medium}) {
-          width: 100px;
-          padding: 16px 15px;
+          padding: 13px 15px;
+
+          &[href^="http"]:after {
+            content: " ↗";
+          }
+
+          &[href="#"]:after {
+            content: " ↓";
+          }
+
           &:not([href^="http"]) {
             &:hover,
             &:focus,
@@ -79,17 +140,17 @@ header {
               &:before {
                 display: block;
                 content: "";
-                width: 100%;
+                width: 60%;
                 height: 3px;
                 position: absolute;
                 bottom: 0;
-                left: 0;
+                left: 15px;
               }
             }
 
             &:hover {
               &:before {
-                background-color: $black;
+                background-color: $primary-color;
               }
             }
 
@@ -108,8 +169,8 @@ header {
           }
         }
 
-        @media (max-width: #{$bp-medium}) {
-          padding: 15px 15px 15px 30px;
+        @media (max-width: #{$bp-medium - 1}) {
+          padding: 28px 45px;
 
           &:not([href^="http"]) {
             &:hover,
@@ -125,14 +186,14 @@ header {
                 width: 20px;
                 height: 10px;
                 position: absolute;
-                top: 19px;
+                top: 45%;
                 left: 0;
               }
             }
 
             &:hover {
               &:before {
-                background-color: $black;
+                background-color: $primary-color;
               }
             }
 
@@ -155,30 +216,83 @@ header {
 
     .external_btn {
       margin: 0;
-      padding: 0;
+
       li {
         margin: 0;
-        padding: 0;
 
         list-style-type: none;
         display: inline-block;
-        margin-left: 1.25rem;
 
         &:first-child {
           margin-left: 0;
         }
       }
 
-      a.primary {
-        @extend .btn, .btn-default, .btn-primary;
+      .discord {
+        display: block;
+      }
 
-        padding: 0px 15px 5px !important;
+      .hint {
+        display: none;
+      }
 
-        &:hover,
-        &:active {
-          &:before {
-            display: none;
+      .nav-item {
+        border: none;
+      }
+
+      @media (min-width: #{$bp-medium}) {
+        padding-left: 12px;
+        li {
+          margin: 0 0 0 32px;
+        }
+      }
+
+      @media (min-width: #{$bp-large}) {
+        margin-left: 10px;
+        li {
+          margin: 0 0 0 30px;
+        }
+      }
+
+      @media (max-width: #{$bp-medium - 1}) {
+        margin: 0 -15px;
+        padding: 78px 16px 18px;
+        border-top: 0.5px solid $grey-40;
+
+        .discord {
+          display: none;
+        }
+
+        .hint {
+          display: flex;
+          align-items: center;
+          padding: 10px;
+          margin-bottom: 22px;
+
+          svg {
+            min-width: 54px;
           }
+
+          span {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+            letter-spacing: 0em;
+            color: $grey-70;
+            margin-left: 22px;
+          }
+        }
+
+        .btn {
+          font-size: 16px;
+          font-weight: 800;
+          line-height: 19px;
+          letter-spacing: 0.08em;
+          padding: 16px 40px;
+        }
+
+        .btn::after {
+          content: " DAPP";
         }
       }
     }
@@ -186,7 +300,7 @@ header {
     .brand {
       background-repeat: no-repeat;
       background-size: 100%;
-      margin: 15px;
+      margin: 24px 6px;
       padding: 0;
       color: transparent;
       cursor: pointer;
@@ -194,8 +308,8 @@ header {
       line-height: 0.85;
 
       svg {
-        height: 30px;
-        width: 117px;
+        height: 24.69px;
+        width: 96px;
       }
 
       &:hover,
@@ -208,31 +322,38 @@ header {
         margin: 0;
 
         svg {
-          height: 25.63px;
-          width: 100px;
-          margin: 12px 40px 12px 0;
+          height: 22.56px;
+          width: 88px;
+          // margin: 12px 40px 12px 0;
         }
       }
 
       @media (min-width: #{$bp-medium}) and (max-width: #{$bp-large}) {
         svg {
-          margin: 12px 30px;
+          // margin: 12px 30px;
         }
       }
 
       @media (max-width: #{$bp-medium - 1}) {
-        margin: 17px 15px;
+        // margin: 17px 15px;
+        &.expanded {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          line-height: 0.85;
+        }
       }
     }
 
     .navbar-toggler {
       width: 38px;
       height: 38px;
-      margin: 14px 15px;
-      border: 2px solid $black;
-      border-radius: 50%;
+      margin: 18px 8px;
       padding: 10px 7px;
-      position: relative;
+      position: absolute;
+      top: 0;
+      right: 0;
+      outline: none;
 
       span,
       span:before,
@@ -261,6 +382,35 @@ header {
       &:focus,
       &:active {
         background-color: transparent;
+      }
+
+      span {
+        transition: all 0.2s;
+      }
+      span::before {
+        transform: rotate(45deg);
+        transform-origin: 10% 10%;
+        width: 25px;
+      }
+      span {
+        height: 0;
+      }
+      span::after {
+        transform: rotate(-45deg);
+        transform-origin: 10% 90%;
+        width: 25px;
+      }
+
+      &.collapsed span::before {
+        transform: rotate(0);
+        width: 20px;
+      }
+      &.collapsed span {
+        height: 2px;
+      }
+      &.collapsed span::after {
+        transform: rotate(0);
+        width: 20px;
       }
 
       @media (min-width: #{$bp-medium}) {

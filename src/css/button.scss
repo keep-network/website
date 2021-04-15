@@ -6,6 +6,7 @@
   text-transform: uppercase;
   border: 2px solid transparent;
   text-decoration: none;
+  outline: none;
   transition: 0.25s all ease-in;
 
   svg {
@@ -19,6 +20,7 @@
     background-color: $black;
     color: $white;
     text-decoration: none;
+    outline: none;
 
     svg {
       path {
@@ -37,6 +39,7 @@
     border-color: $primary-color;
     color: $black;
     box-shadow: none;
+    outline: none;
 
     svg {
       path {

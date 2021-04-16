@@ -19,8 +19,10 @@ export const TeamPageTemplate = ({
       <PageSection id={sections.team.HOME}>
         <Row>
           <Col xs={12}>
-            <h1 dangerouslySetInnerHTML={{ __html: title }} />
-            <img src={require("../../static/images/svg/green-rect.svg")} />
+            <h1
+              className="h1-underline"
+              dangerouslySetInnerHTML={{ __html: title }}
+            />
           </Col>
         </Row>
       </PageSection>

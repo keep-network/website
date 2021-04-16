@@ -31,10 +31,11 @@ const PressItem = ({ title, date, source, aboveTheFold, url }) => {
               buttons={false}
             />
           </div>
-          <div className="view-arrow">View ↗</div>
+        <div className="view-button d-flex justify-content-center align-items-center">Read Post</div>
         </div>
         <div className="date date-large">{date}</div>
         <div className="date date-mobile">{date}</div>
+        <div className="view-button-mobile d-none">Read Post</div>
       </div>
     </a>
   )
@@ -77,7 +78,7 @@ export const PressPageTemplate = ({
   }
 
   return (
-    <div className="press-page">
+    <div className="press-content">
       <PageSection id={sections.press.HOME}>
         <div className="title">
           <h1 className="hero-title">{hero.title}</h1>
@@ -98,14 +99,23 @@ export const PressPageTemplate = ({
       </PageSection>
       <PageSection id={sections.press.NEWS}>
         <Row>
-          <Col xs={12} sm={12}>
+          <Col sm={12}>
             <KeepBlog {...news} />
           </Col>
         </Row>
       </PageSection>
       <PageSection id={sections.press.LATEST_POST}>
         <div className="press-items">
-          <h2>{pressItemsSection.title}</h2>
+          <Row>
+            <Col md={8}>
+              <h2 className="press-items-title">{pressItemsSection.title}</h2>
+            </Col>
+            <Col className="d-flex justify-content-end mt-3" md={4}>
+              <Link className="year-filter">2018</Link>
+              <Link className="year-filter">2019</Link>
+              <Link className="year-filter">2020</Link>
+            </Col>
+          </Row>
           {pressEntries.map((entry) => (
             <PressItem
               title={entry.title}

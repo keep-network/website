@@ -27,6 +27,9 @@
   background-size: cover;
   background-repeat: no-repeat;
 
+  padding: 72px 0 0;
+  min-height: 100vh;
+
   &-video-bg {
     position: absolute;
     left: 0;
@@ -52,127 +55,73 @@
     }
   }
 
-  // Make bg image appear behind the alert on mobile
-  padding-top: 72px;
-
-  @media (min-width: #{$bp-medium}) {
-    padding-top: 150px;
-  }
-
-  // Gradient overlay for background image
-  &:before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 400px;
-    left: 0;
-    bottom: 0;
-
-    background: linear-gradient(
-      180deg,
-      rgba(239, 239, 239, 0) 0%,
-      rgba(239, 239, 239, 0.993393) 61.33%,
-      #efefef 61.34%,
-      #efefef 61.35%,
-      #efefef 61.36%
-    );
-    mix-blend-mode: normal;
-    opacity: 0.5;
-  }
-
-  h1 {
-    margin: 2.5rem 0 0.5em;
-    font-weight: 800;
-    font-size: 36px;
-    line-height: 44px;
-    letter-spacing: -0.015em;
-    color: $black;
-  }
-
-  h3 {
-    width: 50%;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 40px;
-    line-height: 50px;
-    display: flex;
-    align-items: center;
-    letter-spacing: -0.005em;
-    color: $grey-70;
-  }
-
   .body {
     color: $grey-70;
   }
 
+  .cta-links {
+    li {
+      list-style: none;
+      margin: 0 0 1em;
+
+      &:first-child {
+        .cta-link {
+          @extend .btn-primary;
+        }
+      }
+    }
+  }
+
+  .ticker {
+    background-color: $mint-30;
+    position: absolute !important;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+    &-container {
+      height: 81px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    &-content {
+      @extend .h5;
+      padding: 20px 10px;
+      margin: 0 40px;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+  }
+
   @media (min-width: #{$bp-medium}) {
-    padding: 110px 0 0;
-    margin-top: 0;
-
-    &:before {
-      height: 325px;
-    }
-
-    h1 {
-      margin: 6.875rem 0 0.75em;
-      max-width: 872px;
-      font-size: 66px;
-      line-height: 74px;
-      letter-spacing: -0.01em;
-    }
+    padding: 150px 0 0;
 
     .body {
       max-width: 480px;
-      font-weight: 500;
-      font-size: 28px;
-      line-height: 40px;
+      margin: 55px 0 10px;
     }
 
     .cta-section {
       margin-top: 40px;
-      padding: 0 0 168px;
     }
 
     .cta-links {
       li {
         display: inline-block;
-        *display: inline;
 
         &:first-child {
           margin-right: 1.5rem;
         }
       }
     }
-  }
-}
-.ticker {
-  background-color: $mint-30;
-  &-container {
-    height: 81px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  &-content {
-    padding: 20px 10px;
-    margin: 0 40px;
-    span {
-      color: $black;
-      font-family: Work Sans;
-      font-style: normal;
-      font-weight: 800;
-      font-size: 16px;
-      line-height: 19px;
-      /* identical to box height */
 
-      display: flex;
-      align-items: center;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      text-align: center;
+    .ticker-content {
+      margin: 0 140px;
     }
   }
 }
+
 .feature-carousel {
   .carousel-content {
     width: 100%;
@@ -245,53 +194,11 @@
   }
 }
 
-.cta-links {
-  margin: 0;
-  padding: 0;
-
-  li {
-    list-style: none;
-    margin: 0 0 1em;
-
-    &:first-child {
-      .cta-link {
-        @extend .btn-primary;
-      }
-    }
-  }
-
-  .cta-link {
-    @extend .button;
-    color: $black;
-    text-decoration: none;
-    position: relative;
-    white-space: nowrap;
-    border: 2px solid $black;
-    box-sizing: border-box;
-    border-radius: 8px;
-  }
-}
-
 .summary-grid {
   background-color: $grey-70;
 
   &-header {
-    width: 100%;
-    h2 {
-      font-weight: 800;
-      font-size: 50px;
-      line-height: 56px;
-      color: $white;
-    }
-    h3 {
-      font-weight: 500;
-      font-size: 40px;
-      line-height: 50px;
-      display: flex;
-      align-items: center;
-      letter-spacing: -0.005em;
-      color: $white;
-    }
+    color: $white;
   }
 
   &-content {
@@ -303,8 +210,9 @@
   }
 
   &-card {
+    position: relative;
     flex: 40%;
-    padding: 40px;
+    padding: 48px;
     margin: 20px 40px 20px 0px;
     background: $white;
     box-shadow: 0px 24px 38px rgba(8, 5, 3, 0.03),
@@ -315,34 +223,52 @@
       flex: 0%;
     }
 
+    .number {
+      @extend .h5;
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 32px;
+      width: 32px;
+      left: 16px;
+      top: 16px;
+      border-radius: 100px;
+      background-color: $grey-20;
+    }
+
     &-header {
       display: flex;
       margin-bottom: 40px;
 
       h4 {
-        font-style: normal;
-        font-weight: 500;
-        font-size: 28px;
-        line-height: 40px;
-        margin-left: 40px;
-        width: 270px;
-        color: $black;
+        margin-left: 50px;
       }
     }
+  }
 
-    a {
-      color: $black;
-      text-decoration: none;
-      position: relative;
-      text-align: center;
-      white-space: nowrap;
-      border: 2px solid $black;
-      box-sizing: border-box;
-      border-radius: 8px !important;
-    }
+  @media (max-width: #{$bp-medium - 1}) {
+    &-card {
+      padding: 24px;
 
-    &-footer {
-      margin-top: 40px;
+      &-header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin-bottom: 25px;
+
+        h4 {
+          margin-left: 0;
+        }
+
+        img {
+          width: 104px;
+          margin-top: 24px;
+          margin-bottom: 40px;
+        }
+      }
     }
   }
 }
@@ -781,14 +707,7 @@
   background-color: white;
 
   .description {
-    font-size: 16px;
-    line-height: 24px;
     color: $grey-50;
-
-    @media (min-width: #{$bp-medium}) {
-      font-size: 22px;
-      line-height: 32px;
-    }
   }
 
   .contact-icon-sm {
@@ -849,9 +768,6 @@
   }
 
   @media (max-width: #{($bp-medium - 1)}) {
-    h3 {
-      font-size: 1.75rem;
-    }
     .email-form {
       padding: 16px;
       box-shadow: 0px 6px 18px 2px rgba(8, 5, 3, 0.1);
@@ -866,11 +782,6 @@
     &-card {
       box-shadow: 0px 6px 18px 2px rgba(8, 5, 3, 0.1);
       border-radius: 10px;
-    }
-    a.button {
-      text-align: center;
-      font-size: 16px;
-      line-height: 19px;
     }
     .description {
       margin-top: 24px;

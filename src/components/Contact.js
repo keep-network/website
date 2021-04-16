@@ -17,14 +17,10 @@ const Card = ({ icon, title, body, link }) => {
           <div className="contact-icon-xs">
             <Image imageData={icon} />
           </div>
-          <h3>{title}</h3>
+          <h4>{title}</h4>
         </div>
         <p className="description">{body}</p>
-        <Button
-          className="button button-primary"
-          label={link.name}
-          url={link.url}
-        />
+        <Button className="btn-primary" label={link.name} url={link.url} />
       </div>
     </div>
   )
@@ -47,7 +43,7 @@ const Contact = ({
 }) => {
   return (
     <>
-      <h2>{title}</h2>
+      <h1>{title}</h1>
       <EmailForm
         label="Email"
         placeholder="captain@marvel.io"
@@ -55,7 +51,7 @@ const Contact = ({
         requestStates={ajaxRequestStates}
         request={actionTypes.SIGNUP_MAILING_LIST}
       >
-        <h3>{header}</h3>
+        <h4>{header}</h4>
         <p className="description">{description}</p>
       </EmailForm>
       <div className="contact-cards">

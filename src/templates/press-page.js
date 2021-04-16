@@ -20,10 +20,8 @@ const PressItem = ({ title, date, source, aboveTheFold, url }) => {
       <div className="press-item">
         <div className="top">
           <div className="article-title">{title}</div>
-          <div className="date date-large">{date}</div>
         </div>
         <div className="source source-large">{source}</div>
-        <div className="date date-mobile">{date}</div>
         <div className="bottom">
           <div className="above-the-fold">
             <ClampLines
@@ -35,6 +33,8 @@ const PressItem = ({ title, date, source, aboveTheFold, url }) => {
           </div>
           <div className="view-arrow">View ↗</div>
         </div>
+        <div className="date date-large">{date}</div>
+        <div className="date date-mobile">{date}</div>
       </div>
     </a>
   )
@@ -80,20 +80,14 @@ export const PressPageTemplate = ({
     <div className="press-page">
       <PageSection id={sections.press.HOME}>
         <div className="title">
-          <h1>{hero.title}</h1>
-          <h2 dangerouslySetInnerHTML={{ __html: hero.body }} />
+          <h1 className="hero-title">{hero.title}</h1>
+          <h2 className="hero-body" dangerouslySetInnerHTML={{ __html: hero.body }} />
         </div>
-        <Row className="cta-section">
-          <ul className="cta-links col-12 col-sm-12 col-md-6 col-lg-4">
-            {hero.cta_buttons.map((btn, i) => (
-              <li key={`cta-btn-${i}`}>
-                <Link url={btn.url} className="cta-link">
-                  {btn.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </Row>
+        {hero.cta_buttons.map((btn, i) => (
+          <Link key={`cta-btn-${i}`} url={btn.url} className="cta-link cta-btn">
+            {btn.label}
+          </Link>
+        ))}
       </PageSection>
       <PageSection id={sections.press.MINILOGO_GRID}>
         <Row>

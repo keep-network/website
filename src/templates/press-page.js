@@ -31,7 +31,9 @@ const PressItem = ({ title, date, source, aboveTheFold, url }) => {
               buttons={false}
             />
           </div>
-        <div className="view-button d-flex justify-content-center align-items-center">Read Post</div>
+          <div className="view-button d-flex justify-content-center align-items-center">
+            Read Post
+          </div>
         </div>
         <div className="date date-large">{date}</div>
         <div className="date date-mobile">{date}</div>
@@ -82,7 +84,10 @@ export const PressPageTemplate = ({
       <PageSection id={sections.press.HOME}>
         <div className="title">
           <h1 className="hero-title">{hero.title}</h1>
-          <h2 className="hero-body" dangerouslySetInnerHTML={{ __html: hero.body }} />
+          <h2
+            className="hero-body"
+            dangerouslySetInnerHTML={{ __html: hero.body }}
+          />
         </div>
         {hero.cta_buttons.map((btn, i) => (
           <Link key={`cta-btn-${i}`} url={btn.url} className="cta-link cta-btn">

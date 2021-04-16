@@ -3,6 +3,10 @@ header {
   width: 100%;
   z-index: 1000;
 
+  &.stick {
+    background-color: $grey-20;
+  }
+
   .navbar {
     background-color: $grey-20;
     border-bottom: 0.25px solid $border-color;
@@ -328,14 +332,7 @@ header {
         }
       }
 
-      @media (min-width: #{$bp-medium}) and (max-width: #{$bp-large}) {
-        svg {
-          // margin: 12px 30px;
-        }
-      }
-
       @media (max-width: #{$bp-medium - 1}) {
-        // margin: 17px 15px;
         &.expanded {
           width: 100%;
           display: flex;

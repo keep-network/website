@@ -79,7 +79,17 @@ NavItem.propTypes = {
 
 export const HeaderTemplate = ({ navItems = [] }) => {
   const [collapsed, setCollapsed] = useState(true)
+  const [isSticky, setIsSticky] = useState(false)
   const toggleNavbar = () => setCollapsed(!collapsed)
+  const handleScrolling = () => {
+    if (window.scrollY >= 80) {
+      setIsSticky(true)
+    } else {
+      setIsSticky(false)
+    }
+  }
+
+  window.addEventListener("scroll", handleScrolling)
 
   const [isAnnouncementVisible, setIsAnnouncementVisible] = useState(true)
   const dismissAnnouncement = () => {
@@ -87,7 +97,7 @@ export const HeaderTemplate = ({ navItems = [] }) => {
   }
 
   return (
-    <header>
+    <header className={isSticky ? "stick" : ""}>
       <Navbar className={collapsed ? "collapsed" : ""}>
         <Container fluid="md">
           <NavScrollItem

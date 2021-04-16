@@ -42,31 +42,24 @@ export const HomePageTemplate = ({
           <div className="home-video-bg-overlay" />
         </div>
         <Row>
-          <Col xs={12}>
-            <h1 dangerouslySetInnerHTML={{ __html: hero.title }} />
-            <div
-              className="body"
-              dangerouslySetInnerHTML={{ __html: hero.body }}
-            />
+          <Col xs={12} lg={10} md={10}>
+            <h1>{hero.title}</h1>
+            <h4 className="body">{hero.body}</h4>
           </Col>
         </Row>
         <Row className="cta-section">
           <ul className="cta-links col-sm-12">
             {hero.cta_buttons.map((btn, i) => (
               <li key={`cta-btn-${i}`}>
-                <Link url={btn.url} className="cta-link">
+                <Link url={btn.url} className="cta-link btn btn-default">
                   {btn.label}
                 </Link>
               </li>
             ))}
           </ul>
         </Row>
+        <Ticker items={hero.tickers} />
       </PageSection>
-      <Row>
-        <Col>
-          <Ticker items={hero.tickers} />
-        </Col>
-      </Row>
       <Row className="feature-carousel">
         <Col>
           <FeatureCarousel items={carousel} />

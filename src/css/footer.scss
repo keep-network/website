@@ -99,7 +99,6 @@ footer {
     &.open {
       span::after {
         transform: rotate(-45deg);
-        top: 32px;
       }
     }
   }

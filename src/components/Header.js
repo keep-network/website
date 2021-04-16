@@ -18,6 +18,9 @@ import Announcement from "./Announcement"
 import NavScrollItem from "./NavScrollItem"
 import * as Icons from "./Icons"
 
+// Check if window is defined (so if in the browser or in node.js).
+const isBrowser = typeof window !== "undefined"
+
 const NavItem = ({ label, url, subitems }) => {
   const [dropdownOpen, setDropdownOpen] = useState(false)
   const toggle = () => setDropdownOpen(!dropdownOpen)
@@ -80,6 +83,7 @@ NavItem.propTypes = {
 export const HeaderTemplate = ({ navItems = [] }) => {
   const [collapsed, setCollapsed] = useState(true)
   const [isSticky, setIsSticky] = useState(false)
+
   const toggleNavbar = () => setCollapsed(!collapsed)
   const handleScrolling = () => {
     if (window.scrollY >= 80) {
@@ -89,7 +93,9 @@ export const HeaderTemplate = ({ navItems = [] }) => {
     }
   }
 
-  window.addEventListener("scroll", handleScrolling)
+  if (isBrowser) {
+    window.addEventListener("scroll", handleScrolling)
+  }
 
   const [isAnnouncementVisible, setIsAnnouncementVisible] = useState(true)
   const dismissAnnouncement = () => {

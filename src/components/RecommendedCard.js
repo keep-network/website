@@ -1,5 +1,7 @@
 import React from "react"
 import { Col } from "reactstrap"
+import PropTypes from "prop-types"
+
 import { Image, Link } from "../components"
 
 const RecommendedCard = ({ icon, button, title, body }) => {

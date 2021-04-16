@@ -9,12 +9,17 @@ import { actionTypes } from "../redux"
 const Card = ({ icon, title, body, link }) => {
   return (
     <div className="contact-card">
-      <div className="contact-icon">
+      <div className="contact-icon-sm">
         <Image imageData={icon} />
       </div>
       <div className="contact-card-content">
-        <h4 className="contact-title">{title}</h4>
-        <h5 className="contact-description">{body}</h5>
+        <div className="contact-card-title">
+          <div className="contact-icon-xs">
+            <Image imageData={icon} />
+          </div>
+          <h3>{title}</h3>
+        </div>
+        <p className="description">{body}</p>
         <Button
           className="button button-primary"
           label={link.name}
@@ -41,17 +46,17 @@ const Contact = ({
   ajaxRequestStates,
 }) => {
   return (
-    <div>
+    <>
+      <h2>{title}</h2>
       <EmailForm
         label="Email"
-        placeholder="you@example.com"
+        placeholder="captain@marvel.io"
         onSubmit={signupMailingList}
         requestStates={ajaxRequestStates}
         request={actionTypes.SIGNUP_MAILING_LIST}
       >
-        <h3>{title}</h3>
-        <h4>{header}</h4>
-        <p>{description}</p>
+        <h3>{header}</h3>
+        <p className="description">{description}</p>
       </EmailForm>
       <div className="contact-cards">
         {cards &&
@@ -59,7 +64,7 @@ const Contact = ({
             <Card key={`contact-card-${index}`} {...card} />
           ))}
       </div>
-    </div>
+    </>
   )
 }
 

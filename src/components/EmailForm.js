@@ -141,6 +141,7 @@ class EmailForm extends Component {
             onClick={this.onClick}
           >
             <ArrowRightLong />
+            <span className="button-text">Subscribe</span>
           </SubmitButton>
         </Form>
         {hasError && <small className="error-message">{errorMsg}</small>}

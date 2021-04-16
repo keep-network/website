@@ -4,7 +4,7 @@ import { Col, Row } from "reactstrap"
 import PropTypes from "prop-types"
 import { graphql } from "gatsby"
 
-import { App, PageSection, Image, Contact } from "../components"
+import { App, PageSection, Contact, CollapsibleList } from "../components"
 import { sections } from "../constants"
 import { actions } from "../redux"
 
@@ -15,23 +15,32 @@ export const FaqPageTemplate = ({
   signupMailingList = () => {},
   ajaxRequestStates = {},
   plusIcon = {},
+  closeIcon = {},
 }) => {
   return (
-    <div className="main-content faq">
+    <div className="faq-content">
       <PageSection id={sections.faq.HOME}>
         <Row>
           <Col xs={12}>
-            <h1 dangerouslySetInnerHTML={{ __html: hero.title }} />
+            <h1
+              className="h1-underline"
+              dangerouslySetInnerHTML={{ __html: hero.title }}
+            />
           </Col>
         </Row>
       </PageSection>
       <PageSection id={sections.faq.QUESTIONS}>
         <Row className="questions-section">
           <Col xs={12} sm={12}>
-            {questions.map((item, i) => (
-              <div key={`question-${i}`} className="faq-question">
-                <p>{item.question}</p>
-                <Image imageData={plusIcon} />
+            {questions.map((item, index) => (
+              <div key={`question-${index}`} className="faq-section">
+                <CollapsibleList
+                  label={item.question}
+                  plusIcon={plusIcon}
+                  closeIcon={closeIcon}
+                >
+                  <div className="faq-answer">{item.answer}</div>
+                </CollapsibleList>
               </div>
             ))}
           </Col>
@@ -59,6 +68,7 @@ FaqPageTemplate.propTypes = {
   signupMailingList: PropTypes.func,
   ajaxRequestStates: PropTypes.object,
   plusIcon: PropTypes.object,
+  closeIcon: PropTypes.object,
 }
 
 const mapStateToProps = (state) => ({
@@ -70,11 +80,14 @@ export const ConnectedFaqPage = connect(mapStateToProps, {
 })(FaqPageTemplate)
 
 const FaqPage = ({ data }) => {
-  const { markdownRemark: post, plusIcon } = data
-  console.log("icon:", plusIcon)
+  const { markdownRemark: post, plusIcon, closeIcon } = data
   return (
     <App className="app-home">
-      <ConnectedFaqPage {...post.frontmatter} plusIcon={{ image: plusIcon }} />
+      <ConnectedFaqPage
+        {...post.frontmatter}
+        plusIcon={{ image: plusIcon }}
+        closeIcon={{ image: closeIcon }}
+      />
     </App>
   )
 }
@@ -83,6 +96,7 @@ FaqPage.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.object,
     plusIcon: PropTypes.object,
+    closeIcon: PropTypes.object,
   }),
 }
 
@@ -122,6 +136,9 @@ export const query = graphql`
       }
     }
     plusIcon: file(relativePath: { regex: "/ic-plus.png/" }) {
+      relativePath
+    }
+    closeIcon: file(relativePath: { regex: "/svg/ic-close.svg/" }) {
       relativePath
     }
   }

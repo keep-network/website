@@ -6,7 +6,7 @@ import { graphql } from "gatsby"
 
 import { App, Image, Link, PageSection } from "../components"
 import StakeCard from "../components/WhyStakeCard"
-import RecommendedCard from "../components/RecommendedCard";
+import RecommendedCard from "../components/RecommendedCard"
 import { sections } from "../constants"
 
 export const StakePageTemplate = ({
@@ -24,15 +24,22 @@ export const StakePageTemplate = ({
       <PageSection id={sections.stake.HOME}>
         <Row>
           <Col xs={12} md={7}>
-            <h1 className="hero-title" dangerouslySetInnerHTML={{ __html: hero.title }} />
+            <h1
+              className="hero-title"
+              dangerouslySetInnerHTML={{ __html: hero.title }}
+            />
             <div
               className="hero-body"
               dangerouslySetInnerHTML={{ __html: hero.body }}
             />
             {hero.cta_buttons.map((btn, i) => (
-                <Link key={`cta-btn-${i}`} url={btn.url} className="cta-link cta-btn">
-                  {btn.label}
-                </Link>
+              <Link
+                key={`cta-btn-${i}`}
+                url={btn.url}
+                className="cta-link cta-btn"
+              >
+                {btn.label}
+              </Link>
             ))}
           </Col>
           <Col></Col>
@@ -41,19 +48,30 @@ export const StakePageTemplate = ({
       <PageSection id={sections.stake.WHY}>
         <Row>
           <Col xs={12}>
-            <h1 className="whyStakeMsg" dangerouslySetInnerHTML={{ __html: why.title }} />
+            <h1
+              className="whyStakeMsg"
+              dangerouslySetInnerHTML={{ __html: why.title }}
+            />
           </Col>
         </Row>
         <Row className="why-card-section">
           {why.cards.map((card, i) => (
-            <StakeCard key={`card-${i}`} icon={card.icon} title={card.title} body={card.body} />
+            <StakeCard
+              key={`card-${i}`}
+              icon={card.icon}
+              title={card.title}
+              body={card.body}
+            />
           ))}
         </Row>
       </PageSection>
       <PageSection id={sections.stake.RECOMMENDED}>
         <Row>
           <Col xs={12}>
-            <h1 className="recommendedMsg" dangerouslySetInnerHTML={{ __html: recommended.title }} />
+            <h1
+              className="recommendedMsg"
+              dangerouslySetInnerHTML={{ __html: recommended.title }}
+            />
             <div
               className="recommended-body"
               dangerouslySetInnerHTML={{ __html: recommended.body }}
@@ -62,14 +80,23 @@ export const StakePageTemplate = ({
         </Row>
         <Row className="recommended-card-section">
           {recommended.cards.map((card, i) => (
-            <RecommendedCard key={`card-${i}`} icon={card.icon} title={card.title} body={card.body} button={card.button} />
+            <RecommendedCard
+              key={`card-${i}`}
+              icon={card.icon}
+              title={card.title}
+              body={card.body}
+              button={card.button}
+            />
           ))}
         </Row>
       </PageSection>
       <PageSection id={sections.stake.BANNER_BUSINESS_TEAM}>
         <Row>
           <Col xs={12}>
-            <h1 className="bannerBizTeamMsg text-center" dangerouslySetInnerHTML={{ __html: banner.body }} />
+            <h1
+              className="bannerBizTeamMsg text-center"
+              dangerouslySetInnerHTML={{ __html: banner.body }}
+            />
             <div className="contact-section">
               <Link url={banner.button.url} className="btn btn-primary">
                 {banner.button.label}

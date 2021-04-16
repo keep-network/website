@@ -23,7 +23,10 @@ export const FaqPageTemplate = ({
       <PageSection id={sections.faq.HOME}>
         <Row>
           <Col xs={12}>
-            <h1 dangerouslySetInnerHTML={{ __html: hero.title }} />
+            <h1
+              className="h1-underline"
+              dangerouslySetInnerHTML={{ __html: hero.title }}
+            />
           </Col>
         </Row>
       </PageSection>

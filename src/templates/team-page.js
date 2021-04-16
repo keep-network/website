@@ -15,20 +15,29 @@ export const TeamPageTemplate = ({
   advisors_section: advisorsSection = {},
 }) => {
   return (
-    <div className="main-content">
+    <div className="team-content">
       <PageSection id={sections.team.HOME}>
         <Row>
           <Col xs={12}>
-            <h1 dangerouslySetInnerHTML={{ __html: title }} />
+            <h1
+              className="h1-underline"
+              dangerouslySetInnerHTML={{ __html: title }}
+            />
           </Col>
         </Row>
       </PageSection>
       <PageSection id={sections.team.CEO_INFO}>
         <Row>
           <Col xs={12} md={6}>
-            <h2 dangerouslySetInnerHTML={{ __html: hero.name }} />
-            <h5 dangerouslySetInnerHTML={{ __html: hero.title }} />
-            <p>{hero.body}</p>
+            <h2
+              className="title"
+              dangerouslySetInnerHTML={{ __html: hero.name }}
+            />
+            <h5
+              className="subtitle"
+              dangerouslySetInnerHTML={{ __html: hero.title }}
+            />
+            <p className="text">{hero.body}</p>
           </Col>
           <Col xs={12} md={6}>
             <Image imageData={{ image: hero.image, alt: hero.name }} />
@@ -63,23 +72,31 @@ export const TeamPageTemplate = ({
               }}
             />
           </Col>
-          <Col xs={12} md={6}>
-            <h2 dangerouslySetInnerHTML={{ __html: teamSection.hp.name }} />
-            <h5 dangerouslySetInnerHTML={{ __html: teamSection.hp.title }} />
-            <p>{hero.body}</p>
+          <Col xs={12} md={6} className="profile-big">
+            <h2
+              className="team-gallery-title"
+              dangerouslySetInnerHTML={{ __html: teamSection.hp.name }}
+            />
+            <h5
+              className="team-gallery-subtitle"
+              dangerouslySetInnerHTML={{ __html: teamSection.hp.title }}
+            />
+            <p className="team-gallery-text">{hero.body}</p>
           </Col>
         </Row>
-        {teamSection.team.map((member, i) => (
-          <Profile
-            key={`team-member-${i}`}
-            name={member.name}
-            title={member.title}
-            image={member.image}
-            socials={member.social_links}
-          />
-        ))}
+        <Row className="profiles">
+          {teamSection.team.map((member, i) => (
+            <Profile
+              key={`team-member-${i}`}
+              name={member.name}
+              title={member.title}
+              image={member.image}
+              socials={member.social_links}
+            />
+          ))}
+        </Row>
       </PageSection>
-      <PageSection id={sections.team.ADVISOR_GALLERY} collapsible>
+      <PageSection id={sections.team.ADVISOR_GALLERY}>
         <h2>{advisorsSection.title}</h2>
         {advisorsSection.advisors.map((advisor, i) => (
           <Profile

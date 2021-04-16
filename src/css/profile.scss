@@ -1,25 +1,46 @@
 .profile {
     text-align: center;
-    display: inline-block;
-    padding: 0 5px 20px;
+    display: inline-table;
+    justify-content: center;
+    align-items: center;
+    margin-right: 25px;
+    min-height: 400px;
+
+    &-photo {
+        img {
+            width: 280px;
+            height: 280px;
+        }
+    }
 
     .gatsby-image-wrapper {
-        border-radius: 50%;
         margin: 0 0 4px;
     }
 
     h4 {
         margin: 12px 0;
-        color: $accent-text-color;
+        color: $black;
         font-weight: 500;
+        text-align: left;
+        font-weight: normal;
+        font-size: 22px;
+        line-height: 32px;
+        display: flex;
+        align-items: center;
+        color: #0A0806;
+    }
 
-        span {
-            display: block;
-            font-weight: bold;
-            margin: 0 0 6px;
-            color: $black;
-            font-weight: 700;
-        }
+    h5 {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 16px;
+        display: flex;
+        align-items: center;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        text-align: left;
+        color: $grey-60;
     }
 
     .social-links {
@@ -38,7 +59,7 @@
     }
 
     @media (min-width: #{$bp-medium}) {
-        width: 25%;
+        width: 22.5%;
     }
 
     @media (max-width: #{$bp-large}) {

@@ -23,10 +23,10 @@ export const StakePageTemplate = ({
     <div className="stake-content">
       <PageSection id={sections.stake.HOME}>
         <Row>
-          <Col className="test-stake" xs={12} md={7}>
+          <Col xs={12} md={7}>
             <h1 className="hero-title" dangerouslySetInnerHTML={{ __html: hero.title }} />
             <div
-              className="body hero-body"
+              className="hero-body"
               dangerouslySetInnerHTML={{ __html: hero.body }}
             />
             {hero.cta_buttons.map((btn, i) => (
@@ -55,7 +55,7 @@ export const StakePageTemplate = ({
           <Col xs={12}>
             <h1 className="recommendedMsg" dangerouslySetInnerHTML={{ __html: recommended.title }} />
             <div
-              className="body recommended-body"
+              className="recommended-body"
               dangerouslySetInnerHTML={{ __html: recommended.body }}
             />
           </Col>
@@ -70,8 +70,8 @@ export const StakePageTemplate = ({
         <Row>
           <Col xs={12}>
             <h1 className="bannerBizTeamMsg text-center" dangerouslySetInnerHTML={{ __html: banner.body }} />
-            <div>
-              <Link url={banner.button.url} className="button-primary contact-btn">
+            <div className="contact-section">
+              <Link url={banner.button.url} className="btn btn-primary">
                 {banner.button.label}
               </Link>
             </div>

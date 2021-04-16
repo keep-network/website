@@ -216,25 +216,10 @@
               font-weight: 500;
           }
       }
-    
-      .contact-btn  {
-        display: flex;
-        justify-content: center;
-        position: absolute;
-        padding: 16px 40px;
-        margin: 40px 420px;
-        width: 270px;
-        background: $black;
-        border-radius: 8px;
-        &:hover {
-            text-decoration: none;
-            color: $white;
-            transition: all 0.5s ease;
-        }
-        @media (max-width: #{$bp-medium}) {
-            margin: 40px 15px;
-            width: 90%;
-        }
+
+      .contact-section  {
+          display: flex;
+          justify-content: center;
       }
     
       .tech-guide   {

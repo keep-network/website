@@ -119,6 +119,7 @@ export const PressPageTemplate = ({
               <Link className="year-filter">2018</Link>
               <Link className="year-filter">2019</Link>
               <Link className="year-filter">2020</Link>
+              <Link className="year-filter">2021</Link>
             </Col>
           </Row>
           {pressEntries.map((entry) => (

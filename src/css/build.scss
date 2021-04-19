@@ -2,26 +2,6 @@
 
   .home-build {    
     background-color: $white;
-    h1 {
-      margin: 2.5rem 0 0.5em;
-      font-weight: 800;
-      font-size: 66px;
-      line-height: 74px;
-      letter-spacing: -0.015em;
-      color: $black;
-    }
-
-    h3 {
-      font-style: normal;
-      font-weight: 500;
-      font-size: 36px;
-      line-height: 50px;
-      display: flex;
-      align-items: center;
-      letter-spacing: -0.005em;
-      color: $grey-70;
-      padding: 30px 0;
-    }
 
     .banner-image {
       display: flex;

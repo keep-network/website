@@ -1,16 +1,7 @@
     .press-content {
-    margin-top: 130px;
     background-color: $white;
 
-    @media (max-width: #{$bp-medium}) {
-        margin-top: 0;
-    }
     
-    // Overload PageSection rule
-    section {
-        padding: 0;
-    }
-
     h2  {
         margin-bottom: 0px;
     }

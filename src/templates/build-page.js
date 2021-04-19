@@ -20,27 +20,24 @@ export const BuildPageTemplate = ({
   return (
     <div className="build-content">
       <PageSection id={sections.build.HOME}>
-        <Row>
-          <h1 dangerouslySetInnerHTML={{ __html: hero.title }} />
-          <Row>
-            <Col xs={6} sm={6}>
-              <img src={require("../../static/images/svg/green-rect.svg")} />
-              <h3 dangerouslySetInnerHTML={{ __html: hero.body }} />
-              <ul className="cta-links col-12 col-sm-12 col-md-6 col-lg-4">
-                {hero.cta_buttons.map((btn, i) => (
-                  <li key={`cta-btn-${i}`}>
-                    <Link url={btn.url} className="cta-link">
-                      {btn.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </Col>
-            <Col xs={6} sm={6} className="banner-image">
-              <Image imageData={{ image: hero.image, alt: "build" }} />
-            </Col>
-          </Row>
-        </Row>
+          <h1 className="h1-underline" dangerouslySetInnerHTML={{ __html: hero.title }} />
+            <Row>
+              <Col xs={6} sm={6}>
+                <h3 dangerouslySetInnerHTML={{ __html: hero.body }} />
+                <ul className="cta-links col-12 col-sm-12 col-md-6 col-lg-4">
+                  {hero.cta_buttons.map((btn, i) => (
+                    <li key={`cta-btn-${i}`}>
+                      <Link url={btn.url} className="cta-link">
+                        {btn.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </Col>
+              <Col xs={6} sm={6} className="banner-image">
+                <Image imageData={{ image: hero.image, alt: "build" }} />
+              </Col>
+            </Row>
       </PageSection>
       <PageSection id={sections.build.LIBRARY}>
         <Row>

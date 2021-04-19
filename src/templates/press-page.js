@@ -83,7 +83,7 @@ export const PressPageTemplate = ({
     <div className="press-content">
       <PageSection id={sections.press.HOME}>
         <div className="title">
-          <h1 className="hero-title">{hero.title}</h1>
+          <h1 className="h1-underline">{hero.title}</h1>
           <h2
             className="hero-body"
             dangerouslySetInnerHTML={{ __html: hero.body }}

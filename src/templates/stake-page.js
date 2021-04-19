@@ -24,8 +24,7 @@ export const StakePageTemplate = ({
       <PageSection id={sections.stake.HOME}>
         <Row>
           <Col xs={12} md={7}>
-            <h1
-              className="hero-title"
+            <h1 className="h1-underline"
               dangerouslySetInnerHTML={{ __html: hero.title }}
             />
             <div

@@ -6,6 +6,10 @@
   transition: max-height 0.25s ease-in;
   max-height: none;
 
+  &:first-child {
+    margin-top: 48px;
+  }
+
   .page-section-content {
     width: 100%;
     position: relative;

@@ -10,7 +10,13 @@
   },
   "rules": {
     // Fixes eslint no-invalid-this error for fat arrow class methods
-    "no-invalid-this": 0
+    "no-invalid-this": 0,
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "auto"
+      }
+    ]
   },
   "settings": {
     "react": {

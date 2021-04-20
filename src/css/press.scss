@@ -318,6 +318,33 @@
 
             &:last-of-type {
                 border-bottom: 0;
+
+                &::after    {
+                    content: "";
+                    height: 6px;
+                    width: 15%;
+                    background-color: $mint-40;
+                    position: absolute;
+                    right: 33px;
+                    bottom: 63px;
+
+                    @media (max-width: #{$bp-small}) {
+                        width: 12%;
+                        bottom: 3px;
+                    }
+
+                    @media (min-width: #{$bp-small}) and (max-width: #{$bp-medium}) {
+                        width: 10%;
+                        bottom: 3px;
+                    }
+
+                    @media (min-width: #{$bp-medium}) and (max-width: #{$bp-large}) {
+                        width: 24%;
+                    }
+                    @media (min-width: #{$bp-large}) and (max-width: #{$bp-extra-large}) {
+                        width: 18%;
+                    }
+                }
             }
 
             .press-item {

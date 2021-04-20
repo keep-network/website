@@ -39,7 +39,10 @@ export const FaqPageTemplate = ({
                   plusIcon={plusIcon}
                   closeIcon={closeIcon}
                 >
-                  <div className="faq-answer" dangerouslySetInnerHTML={{ __html: item.answer }} />
+                  <div
+                    className="faq-answer"
+                    dangerouslySetInnerHTML={{ __html: item.answer }}
+                  />
                 </CollapsibleList>
               </div>
             ))}

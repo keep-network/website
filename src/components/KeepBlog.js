@@ -1,20 +1,26 @@
 import React from "react"
 import PropTypes from "prop-types"
+import { Row, Col } from "reactstrap"
+
 import Button from "./Button"
 import Image from "./Image"
 
 const BlogCard = ({ title, source, excerpt, date, icon, url }) => {
   return (
     <div className="keep-blog-card">
-      <div className="keep-blog-image">
+      <div className="keep-blog-card-image">
         <Image imageData={icon} />
       </div>
-      <div className="keep-blog-content">
-        <h4 className="keep-blog-title">{title}</h4>
-        <h5 className="keep-blog-subtitle">{source}</h5>
-        <p className="keep-blog-desscription">{excerpt}</p>
-        <p className="keep-blog-date">{date}</p>
-        <Button label="Read More" url={url} className="button-primary" />
+      <div className="keep-blog-card-content">
+        <div>
+          <h4 className="keep-blog-card-title">{title}</h4>
+          <label className="keep-blog-card-subtitle">{source}</label>
+          <p className="keep-blog-card-description">{excerpt}</p>
+          <p className="caption keep-blog-card-date">{date}</p>
+        </div>
+        <div>
+          <Button label="Read More" url={url} className="btn-primary" />
+        </div>
       </div>
     </div>
   )
@@ -31,17 +37,22 @@ BlogCard.propTypes = {
 
 const KeepBlog = ({ title, body, cards, isMore = false }) => {
   return (
-    <div>
-      <h2>{title}</h2>
-      {body && <p>{body}</p>}
-      {cards &&
-        cards.map((blog, i) => <BlogCard key={`blog-card-${i}`} {...blog} />)}
-      {isMore && (
-        <div className="keep-blog-footer">
-          <a href="#">Read more articles</a>
+    <Row>
+      <Col xs={12}>
+        <h2>{title}</h2>
+        <div className="keep-blog-content">
+          {cards &&
+            cards.map((blog, i) => (
+              <BlogCard key={`blog-card-${i}`} {...blog} />
+            ))}
         </div>
-      )}
-    </div>
+        {isMore && (
+          <div className="keep-blog-footer">
+            <a href="#">Read more articles</a>
+          </div>
+        )}
+      </Col>
+    </Row>
   )
 }
 

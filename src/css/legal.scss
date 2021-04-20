@@ -1,129 +1,125 @@
 .legal-page {
-    margin-top: 100px;
+  margin-top: 100px;
 
-    a:not(.btn) {
-        color: $secondary-color;
-        text-decoration: none;
+  a:not(.btn) {
+    color: $secondary-color;
+    text-decoration: none;
+  }
+
+  h1 {
+    font-size: 48px;
+    line-height: 52px;
+    letter-spacing: -2px;
+    font-weight: 800;
+  }
+
+  h2 {
+    font-family: "Work Sans", sans-serif;
+    font-size: 32px;
+    line-height: 40px;
+    font-weight: 700;
+    letter-spacing: -1px;
+    margin: 3rem 0 1rem;
+    &:first-child {
+      margin: 0 0 2rem;
     }
+  }
 
-    h1 {
-        font-size: 48px;
-        line-height: 52px;
-        letter-spacing: -2px;
-        font-weight: 800;
-    }
+  h3 {
+    font-family: "Work Sans", sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 30px;
+    letter-spacing: -0.5px;
+    margin: 2rem 0 1.5rem;
+  }
 
-    h2 {
-        font-family: 'Work Sans', sans-serif;
-        font-size: 32px;
-        line-height: 40px;
-        font-weight: 700;
-        letter-spacing: -1px;
-        margin: 3rem 0 1rem;
-        &:first-child {
-            margin: 0 0 2rem;
-        }
-    }
+  h4 {
+    font-family: "Work Sans", sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 25px;
+    letter-spacing: -0.5px;
+    margin: 1rem 0;
+  }
 
+  .heading {
     h3 {
-        font-family: 'Work Sans', sans-serif;
-        font-size: 24px;
-        font-weight: 500;
-        line-height: 30px;
-        letter-spacing: -.5px;
-        margin: 2rem 0 1.5rem;
+      margin: 0;
     }
 
-    h4 {
-        font-family: 'Work Sans', sans-serif;
-        font-size: 16px;
-        font-weight: bold;
-        line-height: 25px;
-        letter-spacing: -.5px;
-        margin: 1rem 0;
+    .date {
+      font-family: "Work Sans", sans-serif;
+      font-size: 24px;
+      line-height: 32px;
+      font-weight: 500;
+      letter-spacing: -0.5px;
+      color: #4c4c4c;
     }
 
-  
-    .heading {
-        h3 {
-            margin: 0;
-        }
-
-        .date {
-            font-family: 'Work Sans', sans-serif;
-            font-size: 24px;
-            line-height: 32px;
-            font-weight: 500;
-            letter-spacing: -.5px;
-            color: #4c4c4c;
-        }
-
-        .btn {
-            margin-bottom: 3em;
-        }
+    .btn {
+      margin-bottom: 3em;
     }
-    
+  }
+
+  .body {
+    background-color: #fff;
+    padding: 30px 15px;
+    margin: 20px auto 40px;
+
+    table {
+      width: 100%;
+      border-spacing: 0;
+      border-collapse: collapse;
+      margin-bottom: 2rem;
+
+      th,
+      td {
+        border: 1px solid $black;
+        padding: 1em;
+        vertical-align: top;
+        border-collapse: collapse;
+      }
+
+      th {
+        text-align: left;
+      }
+    }
+  }
+
+  .table-of-contents {
+    li {
+      list-style: none;
+    }
+
+    a {
+      text-decoration: underline;
+    }
+  }
+
+  @media (min-width: #{$bp-medium}) {
+    margin-top: 160px;
 
     .body {
-        background-color: #fff;
-        padding: 30px 15px;
-        margin: 20px auto 40px;
-
-        
-
-        table {
-            width: 100%;
-            border-spacing: 0;
-            border-collapse: collapse;
-            margin-bottom: 2rem;
-    
-            th,
-            td {
-                border: 1px solid $black;
-                padding: 1em;
-                vertical-align: top;
-                border-collapse: collapse;
-            }
-    
-            th {
-                text-align: left;
-            }
-        }
+      padding: 60px;
+      margin: 30px auto;
     }
+  }
 
-    .table-of-contents {
-        li {
-            list-style: none;
-        }
-
-        a {
-            text-decoration: underline;
-        }
+  @media (min-width: #{$bp-large}) {
+    margin-top: 200px;
+    .body {
+      margin: 70px auto 180px;
     }
+  }
 
-    @media (min-width: #{$bp-medium}) {
-        margin-top: 160px;
-        
-        .body {
-            padding: 60px;
-            margin: 30px auto;
-        }
+  @media (max-width: #{$bp-medium}) {
+    .body {
+      table {
+        table-layout: fixed;
+        overflow-wrap: break-word;
+        font-size: 10px;
+      }
     }
-
-    @media (min-width: #{$bp-large}) {
-        margin-top: 200px;
-        .body {
-            margin: 70px auto 180px;
-        }
-    }
-
-    @media (max-width: #{$bp-medium}) {
-        .body {
-            table {
-                table-layout: fixed;
-                overflow-wrap: break-word;
-                font-size: 10px;
-            }
-        }
-    }
+  }
 }

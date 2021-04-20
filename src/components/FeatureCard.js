@@ -8,6 +8,7 @@ import {
   CardTitle,
   CardSubtitle,
 } from "reactstrap"
+import { withPrefix } from "gatsby"
 
 import Button from "./Button"
 
@@ -26,7 +27,7 @@ const FeatureCard = ({
     <Card className={className}>
       <CardImg
         top
-        src={image || icon}
+        src={withPrefix(image || icon)}
         alt={title}
         className={icon ? "card-icon" : "card-image"}
       />

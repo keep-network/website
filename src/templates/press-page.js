@@ -116,7 +116,6 @@ export const PressPageTemplate = ({
               <h2 className="press-items-title">{pressItemsSection.title}</h2>
             </Col>
             <Col className="d-flex justify-content-end mt-3" md={4}>
-              <Link className="year-filter">2018</Link>
               <Link className="year-filter">2019</Link>
               <Link className="year-filter">2020</Link>
               <Link className="year-filter">2021</Link>

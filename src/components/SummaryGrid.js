@@ -1,5 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
+import { Row, Col } from "reactstrap"
 import Button from "./Button"
 import Image from "./Image"
 
@@ -28,18 +29,20 @@ Card.propTypes = {
 
 const SummaryGrid = ({ title, body, cards }) => {
   return (
-    <div>
-      <div className="summary-grid-header">
-        <h2>{title}</h2>
-        <h3>{body}</h3>
-      </div>
-      <div className="summary-grid-content">
-        {cards &&
-          cards.map((card, index) => {
-            return <Card key={`card-${index}`} {...card} index={index + 1} />
-          })}
-      </div>
-    </div>
+    <Row>
+      <Col xs={12}>
+        <div className="summary-grid-header">
+          <h2>{title}</h2>
+          <h3>{body}</h3>
+        </div>
+        <div className="summary-grid-content">
+          {cards &&
+            cards.map((card, index) => {
+              return <Card key={`card-${index}`} {...card} index={index + 1} />
+            })}
+        </div>
+      </Col>
+    </Row>
   )
 }
 

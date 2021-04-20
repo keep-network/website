@@ -1,0 +1,45 @@
+.minilogo-grid {
+  width: 100%;
+  background: #91e9d2;
+  padding: 0;
+  align-items: center;
+
+  .minilogo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    &-item-text {
+      @extend .h5;
+      display: flex;
+      align-items: center;
+      margin: 24px 0;
+    }
+
+    &-item {
+      margin: 40px 0;
+      width: 168px;
+      height: 72px;
+
+      img {
+        max-width: 100%;
+        margin: auto;
+      }
+    }
+
+    @media (max-width: #{$bp-large - 1}) {
+      padding: 6px 6px 34px;
+      justify-content: space-around;
+
+      &-item-text {
+        width: 100%;
+        justify-content: center;
+        margin: 21px 0;
+      }
+      &-item {
+        margin: 3px 0;
+      }
+    }
+  }
+}

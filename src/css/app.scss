@@ -14,6 +14,10 @@
 @import "collapsible-list";
 @import "footer";
 @import "blurb";
+@import "summary-grid";
+@import "minilogo-grid";
+@import "keep-blog";
+@import "contact";
 @import "home";
 @import "build";
 @import "press";
@@ -24,7 +28,7 @@
 @import "team";
 
 body {
-  background-color: $background-light-color;
+  background-color: $white;
 }
 
 .app {

@@ -66,35 +66,23 @@ export const HomePageTemplate = ({
         </Col>
       </Row>
       <PageSection id={sections.home.SUMMARY_GRID}>
-        <Row>
-          <Col xs={12} sm={12}>
-            <SummaryGrid {...summaryGrid} />
-          </Col>
-        </Row>
+        <SummaryGrid {...summaryGrid} />
       </PageSection>
       <PageSection id={sections.home.MINILOGO_GRID}>
-        <Row>
-          <Col xs={12} sm={12}>
-            <MiniLogoWall logos={minilogoGrid} />
-          </Col>
-        </Row>
+        <MiniLogoWall logos={minilogoGrid} />
       </PageSection>
       <PageSection id={sections.home.KEEP_BLOG}>
-        <Row>
-          <Col xs={12} sm={12}>
-            <KeepBlog {...blogs} isMore={true} />
-          </Col>
-        </Row>
+        <KeepBlog {...blogs} isMore={true} />
       </PageSection>
       <PageSection id={sections.home.EXCHANGES}>
-        <Row className="exchanges">
+        <Row>
           <Col xs={12} sm={12}>
             <div className="text-center">
-              <h2>{exchanges.title}:</h2>
+              <h3>{exchanges.title}:</h3>
               <div className="links">
                 {exchanges.links.map((item, i) => (
                   <div key={`exchange-${i}`}>
-                    <a href={item.url} target="new" className="btn">
+                    <a href={item.url} target="new">
                       <Image imageData={item.icon} />
                       <span>{item.name}</span>
                     </a>
@@ -106,8 +94,11 @@ export const HomePageTemplate = ({
         </Row>
       </PageSection>
       <PageSection id={sections.home.LOGO_WALL} convex>
-        <section className="d-lg-flex">
-          <div className="w-lg-50 image order-2">
+        <section className="d-md-flex">
+          <div className="w-md-50">
+            <h1>{logoWall.title}</h1>
+          </div>
+          <div className="w-md-50 image">
             {logoWall.supporters.map((supporter, i) => (
               <ImageLink
                 key={`supporter-${i}`}
@@ -116,9 +107,6 @@ export const HomePageTemplate = ({
                 image={supporter.logo}
               />
             ))}
-          </div>
-          <div className="w-lg-50 order-1">
-            <h2>{logoWall.title}</h2>
           </div>
         </section>
       </PageSection>

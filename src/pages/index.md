@@ -60,9 +60,6 @@ summary_grid:
       url: https://dashboard.keep.network/
 minilogo_grid:
   - icon:
-      image: /images/logos/featuredIn.png
-      alt: Featured In
-  - icon:
       image: /images/logos/bloomberg.png
       alt: Bloomberg
   - icon:

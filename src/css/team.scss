@@ -1,122 +1,79 @@
 .team-content {
-  background-color: $white;
   .ceo-info {
-    h2 {
-      margin: 4px 0;
+    h3 {
+      margin: 8px 0 48px;
     }
 
-    h5 {
-      margin: 4px 0;
+    .body {
+      color: $grey-70;
     }
 
-    p {
-      margin: 45px 0;
+    @media (max-width: #{$bp-medium - 1}) {
+      h3 {
+        margin: 8px 0 28px;
+      }
     }
   }
 
   .team-banner {
     background-color: $grey-20;
-    h5 {
-      font-family: Work Sans;
-      font-style: normal;
-      font-weight: 800;
-      font-size: 16px;
-      line-height: 19px;
-      display: flex;
-      align-items: center;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
+
+    .blurb-text {
       color: $black;
     }
 
-    p {
-      font-style: normal;
-      font-weight: normal;
-      font-size: 22px;
-      line-height: 32px;
-      display: flex;
-      align-items: center;
-      color: $black;
+    h5 {
+      text-transform: uppercase;
+      margin-bottom: 24px;
     }
 
     svg {
       width: 120px;
       height: 120px;
     }
+    @media (max-width: #{$bp-medium - 1}) {
+      .blurb-panel {
+        flex-direction: column;
+      }
+      .blurb-text {
+        text-align: center;
+      }
+
+      h5 {
+        margin: 20px 0;
+      }
+    }
   }
 
   .team-gallery {
+    h2 {
+      margin-bottom: 60px;
+    }
     &-title {
-      font-style: normal;
-      font-weight: 500;
-      font-size: 40px;
-      line-height: 50px;display: flex;
-      align-items: center;
-      letter-spacing: -0.005em;
-      color: $black;
-      margin: 4px 0;
+      margin-top: 4px;
     }
+
     &-subtitle {
-      font-family: Work Sans;
-      font-style: normal;
-      font-weight: 500;
-      font-size: 28px;
-      line-height: 40px;
-      display: flex;
-      align-items: center;
-      color: $black;
-      margin: 4px 0;
+      margin: 4px 0 32px;
     }
-    &-text {
-      font-family: Work Sans;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 22px;
-      line-height: 32px;
-      color: $black;
-      margin: 28px 0;
+    @media (max-width: #{$bp-medium - 1}) {
+      h2 {
+        margin-bottom: 38px;
+      }
+      &-title {
+        margin: 32px 0 0;
+      }
+      &-subtitle {
+        margin: 0 0 15px;
+      }
     }
   }
 
   .profiles {
-    margin: 40px 0;
-    padding: 0;
+    margin-top: 40px;
   }
 
   .advisor-gallery {
     background-color: $grey-10;
-  }
-
-  .title {
-    font-style: normal;
-    font-weight: 800;
-    font-size: 50px;
-    line-height: 56px;
-    display: flex;
-    align-items: center;
-    letter-spacing: -0.015em;
-    color: $black;
-  }
-
-  .subtitle {
-    font-style: normal;
-    font-weight: 500;
-    font-size: 40px;
-    line-height: 50px;
-    display: flex;
-    align-items: center;
-    letter-spacing: -0.005em;
-    color: $black;
-  }
-
-  .text {
-    font-family: Work Sans;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 28px;
-    line-height: 40px;
-    display: flex;
-    align-items: center;
-    color: #4C4C4C;
   }
 }

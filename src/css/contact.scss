@@ -30,12 +30,19 @@
   &-card {
     flex: 50%;
     display: flex;
+    margin-bottom: 24px;
+    padding: 16px;
     &-content {
       margin-left: 0px;
       max-width: 100%;
+      .description {
+        display: -webkit-box;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+      }
     }
-    margin-bottom: 24px;
-    padding: 16px;
   }
 
   &-card-title {
@@ -110,7 +117,7 @@
       box-shadow: 0px 6px 18px 2px rgba(8, 5, 3, 0.1);
       border-radius: 10px;
 
-      a.button {
+      a.btn {
         svg {
           display: none;
         }

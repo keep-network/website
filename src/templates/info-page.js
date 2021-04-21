@@ -31,7 +31,7 @@ export const InfoPageTemplate = ({
         <h1 className="h1-underline">{hero.title}</h1>
         <Row>
           <Col xs={12} md={7} className="body">
-            <p dangerouslySetInnerHTML={{ __html: hero.body }} />
+            <h3 dangerouslySetInnerHTML={{ __html: hero.body }} />
           </Col>
           <Col xs={12} md={5} className="lock">
             <Image imageData={{ image: hero.image, alt: hero.title }} />
@@ -43,7 +43,7 @@ export const InfoPageTemplate = ({
           <Col xs={12} sm={5}></Col>
           <Col xs={12} sm={7}>
             <h2>{feature.title}</h2>
-            <div
+            <h4
               className="body"
               dangerouslySetInnerHTML={{ __html: feature.body }}
             />
@@ -54,7 +54,7 @@ export const InfoPageTemplate = ({
         <Row>
           <Col xs={12}>
             <h2 dangerouslySetInnerHTML={{ __html: solution.title }} />
-            <div
+            <h3
               className="body"
               dangerouslySetInnerHTML={{ __html: solution.body }}
             />
@@ -76,7 +76,7 @@ export const InfoPageTemplate = ({
         <h2>{tbtcShowcase.title}</h2>
         <Row>
           <Col xs={12} md={6}>
-            <div
+            <h3
               className="body"
               dangerouslySetInnerHTML={{ __html: tbtcShowcase.body }}
             />
@@ -105,7 +105,7 @@ export const InfoPageTemplate = ({
         <Row>
           <Col xs={12}>
             <h2 dangerouslySetInnerHTML={{ __html: secure.title }} />
-            <div
+            <h3
               className="body"
               dangerouslySetInnerHTML={{ __html: secure.body }}
             />
@@ -113,7 +113,7 @@ export const InfoPageTemplate = ({
         </Row>
         <Row className="info-secure-card-section">
           {secure.cards.map((card, i) => (
-            <Col key={`card-${i}`} xs={12} md={4}>
+            <Col key={`card-${i}`} xs={12} md={6} lg={4}>
               <FeatureCard
                 icon={`/images/${card.icon.image.relativePath}`}
                 title={card.title}

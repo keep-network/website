@@ -1,128 +1,106 @@
 .build-content {
+  .home-build {
+    h3 {
+      color: $grey-70;
+      margin: 52px 0 32px;
+    }
 
-  .home-build {    
-    background-color: $white;
+    .cta-links {
+      padding: 0;
+
+      li {
+        list-style: none;
+        margin: 0 0 1em;
+      }
+    }
 
     .banner-image {
       display: flex;
       justify-content: center;
       align-items: center;
-  
+
       img {
         width: 400px;
       }
     }
-  }
 
-  .title {
-    font-weight: 800;
-    font-size: 50px;
-    line-height: 56px;
-    color: $black;
-    margin: 12px 0;
-  }
-  .subtitle {
-    font-weight: 500;
-    font-size: 40px;
-    line-height: 50px;
-    display: flex;
-    align-items: center;
-    letter-spacing: -0.005em;
-    color: $grey-60;
-    margin: 12px 0 42px;
-  }
-
-  &-library {
-    background-color: $grey-10;  
-  }
-
-  .grid {
-    background-color: $grey-70;
-  
-    &-header {
-      width: 100%;        
-    }
-  
-    &-content {
-      width: 100%;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: center;
-    }
-  
-    &-card {
-      padding: 40px;
-      margin: 20px 40px 20px 0px;
-      background: $white;
-      box-shadow: 0px 24px 38px rgba(8, 5, 3, 0.03),
-        0px 9px 46px rgba(8, 5, 3, 0.02), 0px 11px 15px rgba(8, 5, 3, 0.06);
-      border-radius: 8px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-
+    @media (min-width: #{$bp-medium}) {
       h3 {
-        font-style: normal;
-        font-weight: 500;
-        font-size: 26px;
-        line-height: 40px;
-        text-align: center;
-        color: $black;
+        margin: 65px 0 46px;
       }
 
-      p {
-        font-style: normal;
-        font-weight: normal;
-        font-size: 15px;
-        line-height: 24px;
-        text-align: center;
-        margin: 20px 0px;
+      .cta-links {
+        li {
+          display: inline-block;
+        }
       }
-      
-      a {
-        color: $black;
-        text-decoration: none;
-        position: relative;
-        text-align: center;
-        white-space: nowrap;
-        border: 2px solid $black;
-        box-sizing: border-box;
-        border-radius: 8px !important;
-        margin: 20px 0;
-      }    
+    }
+
+    @media (max-width: #{$bp-medium - 1}) {
+      .cta-links > li > a {
+        width: 100%;
+      }
     }
   }
-  
+
+  .build-library {
+    background-color: $grey-10;
+
+    h3 {
+      color: $grey-60;
+      margin: 14px 0 72px;
+    }
+
+    @media (min-width: #{$bp-medium}) {
+      h3 {
+        margin: 14px 0 86px;
+      }
+    }
+  }
+
   .build-community {
     background-color: $grey-70;
 
-    &-header {
-      h1, h2 {
-        color: $white;
-      }
+    h2,
+    h3 {
+      color: $white;
     }
 
-    &-card {
-      background: #FFFFFF;
-      box-shadow: 0px 6px 18px 2px rgba(8, 5, 3, 0.1);
-      border-radius: 8px;
-      background-color: $white;
-      padding: 0;
-      margin: 48px 0;
+    h3 {
+      margin: 28px 0 54px;
+    }
 
-      &-footer {
-        padding: 40px 48px;
+    .card {
+      margin-bottom: 24px;
+    }
 
-        h3 {
-          margin: 32px 0;
-          font-style: normal;
-          font-weight: 500;
-          font-size: 28px;
-          line-height: 40px;
-          color: $black;
-        }
+    @media (min-width: #{$bp-medium}) {
+      h3 {
+        margin: 24px 0 122px;
+      }
+
+      .card {
+        margin-bottom: 94px;
+      }
+    }
+  }
+
+  .build-secure {
+    background-color: $grey-20;
+
+    h3 {
+      color: $grey-70;
+      margin: 22px 0 32px;
+    }
+
+    .card-title {
+      white-space: nowrap;
+      overflow: hidden;
+    }
+
+    @media (min-width: #{$bp-medium}) {
+      h3 {
+        margin: 16px 0 84px;
       }
     }
   }

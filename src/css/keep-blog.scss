@@ -1,6 +1,4 @@
 .keep-blog {
-  background-color: $white;
-
   h2 {
     margin-top: 0;
   }
@@ -14,8 +12,7 @@
     display: flex;
     flex-direction: row;
     border-radius: 8px;
-    box-shadow: 0px 24px 38px rgba(8, 5, 3, 0.03),
-      0px 9px 46px rgba(8, 5, 3, 0.02), 0px 11px 15px rgba(8, 5, 3, 0.06);
+    box-shadow: 0px 24px 38px rgba(8, 5, 3, 0.03), 0px 9px 46px rgba(8, 5, 3, 0.02), 0px 11px 15px rgba(8, 5, 3, 0.06);
     margin: 40px 0;
 
     &-image {
@@ -43,7 +40,6 @@
       overflow: hidden;
       -webkit-line-clamp: 2;
       -webkit-box-orient: vertical;
-      overflow: hidden;
       color: $grey-70;
       margin: 12px 0;
     }

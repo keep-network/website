@@ -1,6 +1,5 @@
-.collapsible-list {    
+.collapsible-list {
     .collapsible-list-label {
-        cursor: pointer;
         .btn {
             display: flex;
             align-items: center;
@@ -11,7 +10,6 @@
 
     &.open {
         .collapsible-list-label {
-            cursor: pointer;
             svg {
                 transform: rotate(180deg);
             }

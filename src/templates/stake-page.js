@@ -4,9 +4,7 @@ import { Col, Row } from "reactstrap"
 import PropTypes from "prop-types"
 import { graphql } from "gatsby"
 
-import { App, Image, Link, PageSection } from "../components"
-import StakeCard from "../components/WhyStakeCard"
-import RecommendedCard from "../components/RecommendedCard"
+import { App, Image, Link, PageSection, FeatureCard } from "../components"
 import { sections } from "../constants"
 
 export const StakePageTemplate = ({
@@ -28,15 +26,15 @@ export const StakePageTemplate = ({
               className="h1-underline"
               dangerouslySetInnerHTML={{ __html: hero.title }}
             />
-            <div
-              className="hero-body"
+            <h3
+              className="body"
               dangerouslySetInnerHTML={{ __html: hero.body }}
             />
             {hero.cta_buttons.map((btn, i) => (
               <Link
                 key={`cta-btn-${i}`}
                 url={btn.url}
-                className="cta-link cta-btn"
+                className="cta-link btn btn-primary"
               >
                 {btn.label}
               </Link>
@@ -48,55 +46,49 @@ export const StakePageTemplate = ({
       <PageSection id={sections.stake.WHY}>
         <Row>
           <Col xs={12}>
-            <h1
-              className="whyStakeMsg"
-              dangerouslySetInnerHTML={{ __html: why.title }}
-            />
+            <h2 dangerouslySetInnerHTML={{ __html: why.title }} />
           </Col>
         </Row>
         <Row className="why-card-section">
           {why.cards.map((card, i) => (
-            <StakeCard
-              key={`card-${i}`}
-              icon={card.icon}
-              title={card.title}
-              body={card.body}
-            />
+            <Col key={`card-${i}`} xs={12} md={6} lg={4}>
+              <FeatureCard
+                icon={`/images/${card.icon.image.relativePath}`}
+                title={card.title}
+                text={card.body}
+              />
+            </Col>
           ))}
         </Row>
       </PageSection>
       <PageSection id={sections.stake.RECOMMENDED}>
         <Row>
           <Col xs={12}>
-            <h1
-              className="recommendedMsg"
-              dangerouslySetInnerHTML={{ __html: recommended.title }}
-            />
-            <div
-              className="recommended-body"
+            <h2 dangerouslySetInnerHTML={{ __html: recommended.title }} />
+            <h3
+              className="body"
               dangerouslySetInnerHTML={{ __html: recommended.body }}
             />
           </Col>
         </Row>
         <Row className="recommended-card-section">
           {recommended.cards.map((card, i) => (
-            <RecommendedCard
-              key={`card-${i}`}
-              icon={card.icon}
-              title={card.title}
-              body={card.body}
-              button={card.button}
-            />
+            <Col key={`card-${i}`} xs={12} md={6} lg={4}>
+              <FeatureCard
+                icon={`/images/${card.icon.image.relativePath}`}
+                title={card.title}
+                text={card.body}
+                button={card.button}
+                btnClass="btn-default"
+              />
+            </Col>
           ))}
         </Row>
       </PageSection>
       <PageSection id={sections.stake.BANNER_BUSINESS_TEAM}>
         <Row>
           <Col xs={12}>
-            <h1
-              className="bannerBizTeamMsg text-center"
-              dangerouslySetInnerHTML={{ __html: banner.body }}
-            />
+            <h3 dangerouslySetInnerHTML={{ __html: banner.body }} />
             <div className="contact-section">
               <Link url={banner.button.url} className="btn btn-primary">
                 {banner.button.label}
@@ -111,11 +103,11 @@ export const StakePageTemplate = ({
             <Image imageData={images.techUserGuide} />
           </Col>
           <Col xs={12} md={6}>
-            <div className="d-md-block d-none">{techGuide.intro}</div>
-            <h3 className="tech-guide-title mt-0">{techGuide.title}</h3>
-            <p className="tech-guide-body mt-5">{techGuide.body}</p>
+            <div className="tech-guide-intro">{techGuide.intro}</div>
+            <h3 className="tech-guide-title">{techGuide.title}</h3>
+            <h4 className="tech-guide-body">{techGuide.body}</h4>
             <div>
-              <Link url={techGuide.button.url} className="button recCardButton">
+              <Link url={techGuide.button.url} className="btn btn-default">
                 {techGuide.button.label}
               </Link>
             </div>
@@ -123,14 +115,14 @@ export const StakePageTemplate = ({
         </Row>
       </PageSection>
       <PageSection id={sections.stake.EXCHANGES}>
-        <Row className="exchanges">
+        <Row>
           <Col xs={12} sm={12}>
             <div className="text-center">
-              <h2>{exchanges.title}:</h2>
+              <h3>{exchanges.title}:</h3>
               <div className="links">
                 {exchanges.links.map((item, i) => (
                   <div key={`exchange-${i}`}>
-                    <a href={item.url} target="new" className="btn">
+                    <a href={item.url} target="new">
                       <Image imageData={item.icon} />
                       <span>{item.name}</span>
                     </a>

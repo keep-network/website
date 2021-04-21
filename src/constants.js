@@ -1,15 +1,4 @@
 const sections = {
-  HOME: "home",
-  DISCORD: "discord",
-  TOKEN_DASHBOARD: "token-dashboard",
-  FEATURED_APPLICATION: "featured-application",
-  GITHUB: "github",
-  MAILING_LIST: "mailing-list",
-  DESCRIPTION: "description",
-  TEAM: "team",
-  DEFINITION: "definition",
-  ADVISORS: "advisors",
-  SUPPORTERS: "supporters",
   home: {
     HOME: "home",
     FEATURE_CAROUSEL: "feature-carousel",
@@ -42,8 +31,8 @@ const sections = {
   },
   press: {
     HOME: "home-press",
-    MINILOGO_GRID: "press-minilogo-grid",
-    NEWS: "news",
+    MINILOGO_GRID: "minilogo-grid",
+    NEWS: "keep-blog",
     LATEST_POST: "latest-post",
   },
   team: {

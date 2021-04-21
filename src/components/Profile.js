@@ -38,8 +38,8 @@ SocialLink.propTypes = {
 const Profile = ({ name, image, title, socials = [] }) => (
   <div className="profile">
     <Image imageData={{ image, alt: name }} className="profile-photo" />
-    <h4>{name}</h4>
-    <h5>{title && title}</h5>
+    <p>{name}</p>
+    <label>{title && title}</label>
     {socials && (
       <div className="social-links">
         {socials.map((link, i) => (

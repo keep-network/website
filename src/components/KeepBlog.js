@@ -40,6 +40,7 @@ const KeepBlog = ({ title, body, cards, isMore = false }) => {
     <Row>
       <Col xs={12}>
         <h2>{title}</h2>
+        {body && <h3>{body}</h3>}
         <div className="keep-blog-content">
           {cards &&
             cards.map((blog, i) => (

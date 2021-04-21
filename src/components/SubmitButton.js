@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 
 const SubmitButton = ({ isLoading, onClick, children }) => (
   <a
-    className="button button-sm btn-submit"
+    className="btn button-sm btn-submit"
     disabled={isLoading}
     onClick={onClick}
   >

@@ -4,7 +4,14 @@ import { Col, Row } from "reactstrap"
 import PropTypes from "prop-types"
 import { graphql } from "gatsby"
 
-import { App, Link, PageSection, Image, Contact } from "../components"
+import {
+  App,
+  Link,
+  PageSection,
+  Image,
+  Contact,
+  FeatureCard,
+} from "../components"
 import { sections } from "../constants"
 import { actions } from "../redux"
 
@@ -25,19 +32,19 @@ export const BuildPageTemplate = ({
           dangerouslySetInnerHTML={{ __html: hero.title }}
         />
         <Row>
-          <Col xs={6} sm={6}>
+          <Col xs={12} md={7}>
             <h3 dangerouslySetInnerHTML={{ __html: hero.body }} />
-            <ul className="cta-links col-12 col-sm-12 col-md-6 col-lg-4">
+            <ul className="cta-links">
               {hero.cta_buttons.map((btn, i) => (
                 <li key={`cta-btn-${i}`}>
-                  <Link url={btn.url} className="cta-link">
+                  <Link url={btn.url} className="btn btn-primary cta-link">
                     {btn.label}
                   </Link>
                 </li>
               ))}
             </ul>
           </Col>
-          <Col xs={6} sm={6} className="banner-image">
+          <Col xs={12} md={5} className="banner-image">
             <Image imageData={{ image: hero.image, alt: "build" }} />
           </Col>
         </Row>
@@ -45,85 +52,57 @@ export const BuildPageTemplate = ({
       <PageSection id={sections.build.LIBRARY}>
         <Row>
           <Col xs={12} className="grid-header">
-            <h2
-              className="title"
-              dangerouslySetInnerHTML={{ __html: library.title }}
-            />
-            <h3
-              className="subtitle"
-              dangerouslySetInnerHTML={{ __html: library.body }}
-            />
+            <h2 dangerouslySetInnerHTML={{ __html: library.title }} />
+            <h3 dangerouslySetInnerHTML={{ __html: library.body }} />
           </Col>
         </Row>
         <Row>
           {library.cards.map((card, i) => (
-            <Col key={`card-${i}`} className="grid-card">
-              <Image imageData={card.icon} />
-              <h3>{card.title}</h3>
-              <p>{card.body}</p>
-              <Link
-                url={card.button.url}
-                className="button button-secondary button-full-width"
-              >
-                {card.button.label}
-              </Link>
+            <Col key={`card-${i}`} xs={12} md={6} lg={4}>
+              <FeatureCard
+                icon={`/images/${card.icon.image.relativePath}`}
+                title={card.title}
+                text={card.body}
+                button={card.button}
+                btnClass="btn-default"
+              />
             </Col>
           ))}
         </Row>
       </PageSection>
       <PageSection id={sections.build.COMMUNITY}>
         <Row>
-          <Col xs={6}>
-            <Col className="build-community-header" xs={12}>
-              <h1
-                dangerouslySetInnerHTML={{ __html: community.title }}
-                className="title"
-              />
-              <h2
-                className="body subtitle"
-                dangerouslySetInnerHTML={{ __html: community.body }}
-              />
+          <Col xs={12} md={6}>
+            <Col xs={12}>
+              <h2 dangerouslySetInnerHTML={{ __html: community.title }} />
+              <h3 dangerouslySetInnerHTML={{ __html: community.body }} />
             </Col>
             {community.cards
               .filter((_, index) => index % 2 !== 0)
               .map((card, i) => (
-                <Col
-                  key={`community-card-odd-${i}`}
-                  xs={12}
-                  className="build-community-card"
-                >
-                  <Image imageData={card.icon} className="full-width" />
-                  <div className="build-community-card-footer">
-                    <h3>{card.title}</h3>
-                    <Link
-                      url={card.button.url}
-                      className="button button-primary button-full-width"
-                    >
-                      {card.button.label}
-                    </Link>
-                  </div>
+                <Col key={`community-card-odd-${i}`} xs={12}>
+                  <FeatureCard
+                    image={`/images/${card.icon.image.relativePath}`}
+                    title={card.title}
+                    button={card.button}
+                    bodyClass="text-left"
+                    btnClass="btn-primary"
+                  />
                 </Col>
               ))}
           </Col>
-          <Col xs={6}>
+          <Col xs={12} md={6}>
             {community.cards
               .filter((_, index) => index % 2 === 0)
               .map((card, i) => (
-                <Col
-                  key={`community-card-even-${i}`}
-                  xs={12}
-                  className="build-community-card"
-                >
-                  <Image imageData={card.icon} className="full-width" />
-                  <div className="build-community-card-footer">
-                    <h3>{card.title}</h3>
-                    <Link
-                      url={card.button.url}
-                      className="button button-primary button-full-width"
-                    >
-                      {card.button.label}
-                    </Link>
-                  </div>
+                <Col key={`community-card-even-${i}`} xs={12}>
+                  <FeatureCard
+                    image={`/images/${card.icon.image.relativePath}`}
+                    title={card.title}
+                    button={card.button}
+                    bodyClass="text-left"
+                    btnClass="btn-primary"
+                  />
                 </Col>
               ))}
           </Col>
@@ -131,29 +110,21 @@ export const BuildPageTemplate = ({
       </PageSection>
       <PageSection id={sections.build.SECURE}>
         <Row>
-          <Col xs={12} className="grid-header">
-            <h2
-              className="title"
-              dangerouslySetInnerHTML={{ __html: secure.title }}
-            />
-            <h3
-              className="subtitle"
-              dangerouslySetInnerHTML={{ __html: secure.body }}
-            />
+          <Col xs={12}>
+            <h2 dangerouslySetInnerHTML={{ __html: secure.title }} />
+            <h3 dangerouslySetInnerHTML={{ __html: secure.body }} />
           </Col>
         </Row>
         <Row>
           {secure.cards.map((card, i) => (
-            <Col key={`card-${i}`} className="grid-card">
-              <Image imageData={card.icon} />
-              <h3>{card.title}</h3>
-              <p>{card.body}</p>
-              <Link
-                url={card.button.url}
-                className="button button-secondary button-full-width"
-              >
-                {card.button.label}
-              </Link>
+            <Col key={`card-${i}`} xs={12} md={6} lg={4}>
+              <FeatureCard
+                icon={`/images/${card.icon.image.relativePath}`}
+                title={card.title}
+                text={card.body}
+                button={card.button}
+                btnClass="btn-default"
+              />
             </Col>
           ))}
         </Row>

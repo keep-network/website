@@ -16,13 +16,11 @@ const PressItem = ({ title, date, source, aboveTheFold, url }) => {
   }, [])
 
   return (
-    <a href={url} target="_blank" rel="noopener noreferrer">
-      <div className="press-item">
+    <div className="press-item">
+      <div className="press-item-content">
         <div className="top">
-          <div className="article-title">{title}</div>
-        </div>
-        <div className="source source-large">{source}</div>
-        <div className="bottom">
+          <h4 className="article-title">{title}</h4>
+          <label className="source source-large">{source}</label>
           <div className="above-the-fold">
             <ClampLines
               text={aboveTheFold}
@@ -31,15 +29,20 @@ const PressItem = ({ title, date, source, aboveTheFold, url }) => {
               buttons={false}
             />
           </div>
-          <div className="view-button d-flex justify-content-center align-items-center">
-            Read Post
-          </div>
+          <div className="date">{date}</div>
         </div>
-        <div className="date date-large">{date}</div>
-        <div className="date date-mobile">{date}</div>
-        <div className="view-button-mobile d-none">Read Post</div>
+        <div className="view-post">
+          <Link
+            url={url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-default"
+          >
+            Read Post
+          </Link>
+        </div>
       </div>
-    </a>
+    </div>
   )
 }
 
@@ -82,64 +85,62 @@ export const PressPageTemplate = ({
   return (
     <div className="press-content">
       <PageSection id={sections.press.HOME}>
-        <div className="title">
+        <div>
           <h1 className="h1-underline">{hero.title}</h1>
-          <h2
-            className="hero-body"
+          <h3
+            className="body"
             dangerouslySetInnerHTML={{ __html: hero.body }}
           />
         </div>
         {hero.cta_buttons.map((btn, i) => (
-          <Link key={`cta-btn-${i}`} url={btn.url} className="cta-link cta-btn">
+          <Link
+            key={`cta-btn-${i}`}
+            url={btn.url}
+            className="cta-link btn btn-primary"
+          >
             {btn.label}
           </Link>
         ))}
       </PageSection>
       <PageSection id={sections.press.MINILOGO_GRID}>
-        <Row>
-          <Col xs={12} sm={12}>
-            <MiniLogoWall logos={minilogoGrid} />
-          </Col>
-        </Row>
+        <MiniLogoWall logos={minilogoGrid} />
       </PageSection>
       <PageSection id={sections.press.NEWS}>
-        <Row>
-          <Col sm={12}>
-            <KeepBlog {...news} />
-          </Col>
-        </Row>
+        <KeepBlog {...news} />
       </PageSection>
       <PageSection id={sections.press.LATEST_POST}>
-        <div className="press-items">
-          <Row>
-            <Col md={8}>
-              <h2 className="press-items-title">{pressItemsSection.title}</h2>
-            </Col>
-            <Col className="d-flex justify-content-end mt-3" md={4}>
-              <Link className="year-filter">2019</Link>
-              <Link className="year-filter">2020</Link>
-              <Link className="year-filter">2021</Link>
-            </Col>
-          </Row>
-          {pressEntries.map((entry) => (
-            <PressItem
-              title={entry.title}
-              date={entry.date}
-              source={entry.source}
-              aboveTheFold={entry.excerpt}
-              url={entry.url}
-              key={entry.url}
-            />
-          ))}
-        </div>
+        <Row className="title-section">
+          <Col xs={12} md={8}>
+            <h3>{pressItemsSection.title}</h3>
+          </Col>
+          <Col className="year-filter" xs={12} md={4}>
+            <Link className="year-filter-item">2019</Link>
+            <Link className="year-filter-item">2020</Link>
+            <Link className="year-filter-item">2021</Link>
+          </Col>
+        </Row>
+        <Row className="press-items">
+          <Col>
+            {pressEntries.map((entry) => (
+              <PressItem
+                title={entry.title}
+                date={entry.date}
+                source={entry.source}
+                aboveTheFold={entry.excerpt}
+                url={entry.url}
+                key={entry.url}
+              />
+            ))}
+          </Col>
+        </Row>
+        {allPressEntries.length > 10 && pressEntries.length === 10 ? (
+          <div className="pagination">
+            <SeeAllButton onClick={handleShowAll} />
+          </div>
+        ) : (
+          ""
+        )}
       </PageSection>
-      {allPressEntries.length > 10 && pressEntries.length === 10 ? (
-        <PageSection id="pagination">
-          <SeeAllButton onClick={handleShowAll} />
-        </PageSection>
-      ) : (
-        ""
-      )}
     </div>
   )
 }

@@ -29,25 +29,16 @@ export const TeamPageTemplate = ({
       <PageSection id={sections.team.CEO_INFO}>
         <Row>
           <Col xs={12} md={6}>
-            <h2
-              className="title"
-              dangerouslySetInnerHTML={{ __html: hero.name }}
-            />
-            <h5
-              className="subtitle"
-              dangerouslySetInnerHTML={{ __html: hero.title }}
-            />
-            <p className="text">{hero.body}</p>
+            <h2 dangerouslySetInnerHTML={{ __html: hero.name }} />
+            <h3 dangerouslySetInnerHTML={{ __html: hero.title }} />
+            <h4 className="body">{hero.body}</h4>
           </Col>
           <Col xs={12} md={6}>
             <Image imageData={{ image: hero.image, alt: hero.name }} />
           </Col>
         </Row>
       </PageSection>
-      <PageSection
-        id={sections.team.BANNER}
-        additionalClassNames={["blurb", "blurb-desktop"]}
-      >
+      <PageSection id={sections.team.BANNER} additionalClassNames={["blurb"]}>
         <div className="blurb-panel">
           <div className="blurb-icon">
             <Icons.CastleGate />
@@ -73,11 +64,11 @@ export const TeamPageTemplate = ({
             />
           </Col>
           <Col xs={12} md={6} className="profile-big">
-            <h2
+            <h3
               className="team-gallery-title"
               dangerouslySetInnerHTML={{ __html: teamSection.hp.name }}
             />
-            <h5
+            <h4
               className="team-gallery-subtitle"
               dangerouslySetInnerHTML={{ __html: teamSection.hp.title }}
             />
@@ -86,27 +77,31 @@ export const TeamPageTemplate = ({
         </Row>
         <Row className="profiles">
           {teamSection.team.map((member, i) => (
-            <Profile
-              key={`team-member-${i}`}
-              name={member.name}
-              title={member.title}
-              image={member.image}
-              socials={member.social_links}
-            />
+            <Col key={`team-member-${i}`} xs={6} md={4} lg={3}>
+              <Profile
+                name={member.name}
+                title={member.title}
+                image={member.image}
+                socials={member.social_links}
+              />
+            </Col>
           ))}
         </Row>
       </PageSection>
       <PageSection id={sections.team.ADVISOR_GALLERY}>
         <h2>{advisorsSection.title}</h2>
-        {advisorsSection.advisors.map((advisor, i) => (
-          <Profile
-            key={`advisor-${i}`}
-            name={advisor.name}
-            title={advisor.title}
-            image={advisor.image}
-            socials={advisor.social_links}
-          />
-        ))}
+        <Row className="profiles">
+          {advisorsSection.advisors.map((advisor, i) => (
+            <Col key={`advisor-${i}`} xs={6} md={4} lg={3}>
+              <Profile
+                name={advisor.name}
+                title={advisor.title}
+                image={advisor.image}
+                socials={advisor.social_links}
+              />
+            </Col>
+          ))}
+        </Row>
       </PageSection>
     </div>
   )

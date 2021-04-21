@@ -1,37 +1,9 @@
 .info-content {
-
-  .body {
-    font-weight: 500;
-    letter-spacing: -0.005em;
-    font-size: 30px;
-    line-height: 38px;
-    color: $grey-70;
-    display: flex;
-    align-items: center;
-
-    @media (min-width: #{$bp-medium}) {
-      font-size: 40px;
-      line-height: 50px;
-    }
-  }
-
   .home-info {
-    background-color: $white;
-
-    h1::after {
-      content: " ";
-      border-bottom-style: solid;
-      border-bottom-width: 6px;
-      width: 83px;
-      margin-top: 10px;
-      border-color: $primary-color;
-      display: block;
-
-      @media (min-width: #{$bp-medium}) {
-        border-bottom-width: 12px;
-        width: 88px;
-        margin-top: 20px;
-      }
+    .body {
+      color: $grey-70;
+      display: flex;
+      align-items: center;
     }
 
     .lock {
@@ -59,14 +31,11 @@
     .body {
       display: flex;
       flex-direction: column;
-      font-size: 16px;
-      line-height: 24px;
       color: $grey-70;
+      margin-top: 40px;
 
       @media (min-width: #{$bp-medium}) {
-        font-weight: 500;
-        font-size: 28px;
-        line-height: 40px;
+        margin-top: 64px;
       }
     }
 
@@ -112,6 +81,10 @@
       }
     }
 
+    .body {
+      color: $grey-70;
+    }
+
     &-section {
       margin-top: 53px;
 
@@ -122,14 +95,13 @@
   }
 
   .tbtc-showcase {
-    background-color: $white;
-
     h2 {
       margin-bottom: 18px;
     }
 
     .body {
       margin-bottom: 24px;
+      color: $grey-60;
     }
 
     a.button {
@@ -219,11 +191,16 @@
       }
     }
 
+    .body {
+      color: $grey-70;
+    }
+
     &-card-section {
       margin-top: 53px;
 
-      a.button {
-        width: 100%;
+      .card-title {
+        white-space: nowrap;
+        overflow: hidden;
       }
 
       @media (min-width: #{$bp-medium}) {

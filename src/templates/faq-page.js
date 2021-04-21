@@ -15,7 +15,6 @@ export const FaqPageTemplate = ({
   signupMailingList = () => {},
   ajaxRequestStates = {},
   plusIcon = {},
-  closeIcon = {},
 }) => {
   return (
     <div className="faq-content">
@@ -34,15 +33,10 @@ export const FaqPageTemplate = ({
           <Col xs={12} sm={12}>
             {questions.map((item, index) => (
               <div key={`question-${index}`} className="faq-section">
-                <CollapsibleList
-                  label={item.question}
-                  plusIcon={plusIcon}
-                  closeIcon={closeIcon}
-                >
-                  <div
-                    className="faq-answer"
-                    dangerouslySetInnerHTML={{ __html: item.answer }}
-                  />
+                <CollapsibleList label={item.question} plusIcon={plusIcon}>
+                  <div className="faq-answer">
+                    <p dangerouslySetInnerHTML={{ __html: item.answer }} />
+                  </div>
                 </CollapsibleList>
               </div>
             ))}
@@ -71,7 +65,6 @@ FaqPageTemplate.propTypes = {
   signupMailingList: PropTypes.func,
   ajaxRequestStates: PropTypes.object,
   plusIcon: PropTypes.object,
-  closeIcon: PropTypes.object,
 }
 
 const mapStateToProps = (state) => ({
@@ -139,9 +132,6 @@ export const query = graphql`
       }
     }
     plusIcon: file(relativePath: { regex: "/ic-plus.png/" }) {
-      relativePath
-    }
-    closeIcon: file(relativePath: { regex: "/svg/ic-close.svg/" }) {
       relativePath
     }
   }

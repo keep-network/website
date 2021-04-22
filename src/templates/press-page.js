@@ -135,13 +135,34 @@ export const PressPageTemplate = ({
             <h3>{pressItemsSection.title}</h3>
           </Col>
           <Col className="year-filter" xs={12} md={4}>
-            <button onClick={() => setYear(2019)} className="year-filter-item">
+            <button
+              onClick={() => setYear(2019)}
+              className={
+                year === 2019
+                  ? "year-filter-item is-active"
+                  : "year-filter-item"
+              }
+            >
               2019
             </button>
-            <button onClick={() => setYear(2020)} className="year-filter-item">
+            <button
+              onClick={() => setYear(2020)}
+              className={
+                year === 2020
+                  ? "year-filter-item is-active"
+                  : "year-filter-item"
+              }
+            >
               2020
             </button>
-            <button onClick={() => setYear(2021)} className="year-filter-item">
+            <button
+              onClick={() => setYear(2021)}
+              className={
+                year === 2021
+                  ? "year-filter-item is-active"
+                  : "year-filter-item"
+              }
+            >
               2021
             </button>
           </Col>

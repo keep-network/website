@@ -39,7 +39,7 @@
                     margin-left: 0;
                 }
 
-                &:focus, &:active {
+                &.is-active {
                     color: $black;
                     margin-right: 0;
                     border-bottom: 4px solid $primary-color;

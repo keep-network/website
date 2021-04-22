@@ -165,7 +165,7 @@ export const PressPageTemplate = ({
             <SeeAllButton onClick={handleShowAll} />
           </div>
         ) : (
-          "No posts to show"
+          "No posts available"
         )}
       </PageSection>
     </div>

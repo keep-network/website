@@ -63,6 +63,27 @@ export const PressPageTemplate = ({
   const { press_items: pressItems } = pressItemsSection
   const [allPressEntries, setAllPressEntries] = useState([])
   const [pressEntries, setPressEntries] = useState([])
+  const [year, setYear] = useState(null)
+
+  const entries2019 = allPressEntries.filter((entry) =>
+    entry.date.includes("2019")
+  )
+  const entries2020 = allPressEntries.filter((entry) =>
+    entry.date.includes("2020")
+  )
+  const entries2021 = allPressEntries.filter((entry) =>
+    entry.date.includes("2021")
+  )
+
+  useEffect(() => {
+    year === 2019
+      ? setPressEntries(entries2019)
+      : year === 2020
+      ? setPressEntries(entries2020)
+      : year === 2021 && entries2021
+      ? setPressEntries(entries2021)
+      : pressEntries
+  }, [year])
 
   useEffect(() => {
     const dateOptions = { year: "numeric", month: "long", day: "numeric" }
@@ -114,9 +135,15 @@ export const PressPageTemplate = ({
             <h3>{pressItemsSection.title}</h3>
           </Col>
           <Col className="year-filter" xs={12} md={4}>
-            <Link className="year-filter-item">2019</Link>
-            <Link className="year-filter-item">2020</Link>
-            <Link className="year-filter-item">2021</Link>
+            <button onClick={() => setYear(2019)} className="year-filter-item">
+              2019
+            </button>
+            <button onClick={() => setYear(2020)} className="year-filter-item">
+              2020
+            </button>
+            <button onClick={() => setYear(2021)} className="year-filter-item">
+              2021
+            </button>
           </Col>
         </Row>
         <Row className="press-items">
@@ -133,12 +160,12 @@ export const PressPageTemplate = ({
             ))}
           </Col>
         </Row>
-        {allPressEntries.length > 10 && pressEntries.length === 10 ? (
+        {allPressEntries.length > 10 && pressEntries.length ? (
           <div className="pagination">
             <SeeAllButton onClick={handleShowAll} />
           </div>
         ) : (
-          ""
+          "No posts available"
         )}
       </PageSection>
     </div>

@@ -31,12 +31,15 @@
                 color: $grey-20;
                 margin: 0 20px;
                 text-decoration: none;
+                border: none;
+                background-color: transparent;
+                outline: none;
 
                 &:first-child {
                     margin-left: 0;
                 }
 
-                &:last-child {
+                &:focus, &:active {
                     color: $black;
                     margin-right: 0;
                     border-bottom: 4px solid $primary-color;

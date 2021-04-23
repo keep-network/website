@@ -11,7 +11,6 @@ import {
   Link,
   PageSection,
   Ticker,
-  FeatureCarousel,
   SummaryGrid,
   MiniLogoWall,
   KeepBlog,
@@ -75,7 +74,7 @@ export const HomePageTemplate = ({
       </Row>
       <Row className="parallax-img-2">
         <Col md={5}>
-            <div className="ellipsesImg" />
+          <div className="ellipsesImg" />
         </Col>
         <Col md={5}>
           <div className="parallax-div-2">
@@ -87,9 +86,7 @@ export const HomePageTemplate = ({
       </Row>
       <Row className="parallax-img-3">
         <Col md={5} className="m-0 p-0">
-          <div className="parallax-div-3-left">
-
-          </div>
+          <div className="parallax-div-3-left" />
         </Col>
         <Col md={5} className="m-0 p-0">
           <div className="parallax-div-3 ml-5">

@@ -60,11 +60,6 @@ export const HomePageTemplate = ({
         </Row>
         <Ticker items={hero.tickers} />
       </PageSection>
-      {/* <Row className="feature-carousel">
-        <Col>
-          <FeatureCarousel items={carousel} />
-        </Col>
-      </Row> */}
       <Row className="parallax-img-1">
         <div className="verticalRectangle" />
         <div className="greyCircleGrid" />

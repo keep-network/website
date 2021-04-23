@@ -60,9 +60,48 @@ export const HomePageTemplate = ({
         </Row>
         <Ticker items={hero.tickers} />
       </PageSection>
-      <Row className="feature-carousel">
+      {/* <Row className="feature-carousel">
         <Col>
           <FeatureCarousel items={carousel} />
+        </Col>
+      </Row> */}
+      <Row className="parallax-img-1">
+        <div className="verticalRectangle" />
+        <div className="greyCircleGrid" />
+        <div className="greenCircle" />
+        <div className="ellipseCircle" />
+        <Col md={6}>
+          <div>
+            <div className="callout">The Keep Solution</div>
+            <h3>{carousel[0].title}</h3>
+            <h4>{carousel[0].body}</h4>
+          </div>
+        </Col>
+      </Row>
+      <Row className="parallax-img-2">
+        <Col md={5}>
+            <div className="ellipsesImg" />
+        </Col>
+        <Col md={5}>
+          <div className="parallax-div-2">
+            <div className="callout">The Keep Solution</div>
+            <h3>{carousel[1].title}</h3>
+            <h4>{carousel[1].body}</h4>
+          </div>
+        </Col>
+      </Row>
+      <Row className="parallax-img-3">
+        <Col md={5} className="m-0 p-0">
+          <div className="parallax-div-3-left">
+
+          </div>
+        </Col>
+        <Col md={5} className="m-0 p-0">
+          <div className="parallax-div-3 ml-5">
+            <div className="callout">The Keep Solution</div>
+            <h3>{carousel[2].title}</h3>
+            <h4>{carousel[2].body}</h4>
+          </div>
         </Col>
       </Row>
       <PageSection id={sections.home.SUMMARY_GRID}>

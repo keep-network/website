@@ -138,6 +138,213 @@
     }
   }
 
+  .parallax-img-1 {
+    background-color: $grey-20;
+    height: 1004px;
+    position: relative;
+
+    .callout {
+      position: absolute;
+      width: 184px;
+      left: 137px;
+      top: 170px;
+      z-index: 10;
+      padding: 4px 12px;
+      background: $primary-color;
+      border-radius: 100px;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 16px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: $black;
+    }
+
+    h3 {
+      position: absolute;
+      top: 200px;
+      left: 137px;
+    }
+
+    h4  {
+      color: $grey-70;
+      position: absolute;
+      left: 137px;
+      top: 320px;
+      margin-top: 30px;
+    }
+
+    @media (max-width: #{$bp-small}) {
+      .callout {
+        position: absolute;
+        width: 184px;
+        left: 40px;
+        top: 250px;
+        margin-top: 40px;
+      }
+
+      h3 {
+        position: absolute;
+        top: 280px;
+        left: 40px;
+        font-size: 18px;
+        margin-top: 50px;
+        line-height: 30px;
+      }
+
+      h4  {
+        color: $grey-70;
+        position: absolute;
+        left: 40px;
+        top: 320px;
+        margin-top: 70px;
+        font-size: 16px;
+        margin-right: 20px;
+        line-height: 30px;
+      }
+    }
+  }
+
+  .parallax-img-2 {
+    background-color: $grey-10;
+    height: 1004px;
+    position: relative;
+
+    .callout {
+      width: 184px;
+      z-index: 10;
+      padding: 4px 12px;
+      background: $primary-color;
+      border-radius: 100px;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 16px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: $black;
+    }
+
+    .parallax-div-2 {
+      margin-top: 344px;
+    }
+
+    .ellipsesImg  {
+      background-image: url(../images//ellipsesimagebig.svg);
+      background-repeat: no-repeat;
+      width: 640px;
+      height: 640px;
+      position: absolute;
+      top: 182px;
+      left: -121px;
+      
+      &::after  {
+        content: "";
+        position: absolute;
+        width: 170.06px;
+        height: 170.97px;
+        left: 327px;
+        top: 143px;
+        mix-blend-mode: multiply;
+        border: 8px solid $mint-40;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  .parallax-img-3 {
+    background-color: $white;
+    background-image: url(../images/sphere.svg);
+    background-repeat: no-repeat;
+    background-position: right;
+    height: 1004px;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+      content: "";
+      width: 1004px;
+      height: 1004px;
+      background-image: url(../images//circlewaves.svg);
+      position: absolute;
+      top: 0;
+      left: 100px;
+    }
+
+    &::after  {
+      content: "";
+      position: absolute;
+      width: 171.3px;
+      height: 172.22px;
+      left: 438.29px;
+      top: 405px;
+      mix-blend-mode: multiply;
+      border-radius: 50%;
+      border: 10px solid $mint-40;
+    }
+
+    .callout {
+      width: 184px;
+      z-index: 10;
+      padding: 4px 12px;
+      background: $primary-color;
+      border-radius: 100px;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 16px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: $black;
+    }
+
+    .parallax-div-3 {
+      margin-top: 344px;
+    }
+  }
+
+  .verticalRectangle  {
+    background-image: url(../images//Blockchain.svg);
+    mix-blend-mode: overlay;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    right: 47px;
+    width: 473px;
+    height: 768px;
+  }
+
+  .ellipseCircle  {
+    position: absolute;
+    width: 473px;
+    height: 473px;
+    top: 531.57px;
+    right: 47px;
+    border-radius: 50%;
+    background-image: url(../images/ellipsecircle.svg);
+
+    &::after  {
+      content: "";
+      height: 473px;
+      width: 100%;
+      top: 50%;
+      position: absolute;
+      border-radius: 50%;
+      background-color: $black;
+      mix-blend-mode: soft-light;
+    }
+  }
+
+  .greenCircle  {
+    position: absolute;
+    width: 178px;
+    height: 178px;
+    right: 342px;
+    top: 51px;
+    mix-blend-mode: normal;
+    border: 8px solid $mint-40;
+    border-radius: 50%;
+  }
+
   .feature-carousel {
     .carousel-content {
       width: 100%;

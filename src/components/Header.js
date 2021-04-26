@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 import {
   Container,
   Collapse,
@@ -17,9 +17,6 @@ import PropTypes from "prop-types"
 import Announcement from "./Announcement"
 import NavScrollItem from "./NavScrollItem"
 import * as Icons from "./Icons"
-
-// Check if window is defined (so if in the browser or in node.js).
-const isBrowser = typeof window !== "undefined"
 
 const NavItem = ({ label, url, subitems }) => {
   const [dropdownOpen, setDropdownOpen] = useState(false)
@@ -82,20 +79,36 @@ NavItem.propTypes = {
 
 export const HeaderTemplate = ({ navItems = [] }) => {
   const [collapsed, setCollapsed] = useState(true)
-  const [isSticky, setIsSticky] = useState(false)
+  const [isShrunk, setShrunk] = useState(false)
 
   const toggleNavbar = () => setCollapsed(!collapsed)
-  const handleScrolling = () => {
-    if (window.scrollY >= 80) {
-      setIsSticky(true)
-    } else {
-      setIsSticky(false)
-    }
-  }
 
-  if (isBrowser) {
-    window.addEventListener("scroll", handleScrolling)
-  }
+  useEffect(() => {
+    const onScroll = () => {
+      setShrunk((isShrunk) => {
+        if (
+          !isShrunk &&
+          (document.body.scrollTop > 50 ||
+            document.documentElement.scrollTop > 50)
+        ) {
+          return true
+        }
+
+        if (
+          isShrunk &&
+          document.body.scrollTop < 4 &&
+          document.documentElement.scrollTop < 4
+        ) {
+          return false
+        }
+
+        return isShrunk
+      })
+    }
+
+    window.addEventListener("scroll", onScroll)
+    return () => window.removeEventListener("scroll", onScroll)
+  }, [])
 
   const [isAnnouncementVisible, setIsAnnouncementVisible] = useState(true)
   const dismissAnnouncement = () => {
@@ -103,7 +116,7 @@ export const HeaderTemplate = ({ navItems = [] }) => {
   }
 
   return (
-    <header className={isSticky ? "stick" : ""}>
+    <header className={isShrunk ? "stick" : ""}>
       <Navbar className={collapsed ? "collapsed" : ""}>
         <Container fluid="md">
           <NavScrollItem

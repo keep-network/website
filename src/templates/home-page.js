@@ -64,89 +64,135 @@ export const HomePageTemplate = ({
         </Row>
         <Ticker items={hero.tickers} />
       </PageSection>
-      <Row className="parallax-img-1">
-        <div
-          data-aos="fade-right"
-          data-aos-duration="1000"
-          className="verticalRectangle"
-        />
-        <div className="greyCircleGrid" />
-        <div
-          data-aos="fade-down"
-          data-aos-duration="1000"
-          className="greenCircle"
-        />
-        <div
-          data-aos="fade-down-right"
-          data-aos-duration="1000"
-          className="ellipseCircle"
-        />
-        <Col md={6}>
-          <div>
+      <PageSection
+        id={sections.home.KEEP_SOLUTION}
+        additionalClassNames="parallax-1"
+      >
+        <Row>
+          <Col
+            xs={12}
+            md={7}
+            className={`${sections.home.KEEP_SOLUTION}-content`}
+          >
+            <div>
+              <label
+                data-aos="fade-down"
+                data-duration-aos="1000"
+                className="callout"
+              >
+                The Keep Solution
+              </label>
+              <h3 data-aos="fade-right" data-aos-duration="1000">
+                {carousel[0].title}
+              </h3>
+              <h4 data-aos="fade-left" data-aos-duration="1000">
+                {carousel[0].body}
+              </h4>
+            </div>
+          </Col>
+          <Col xs={12} md={4} className="offset-md-1">
+            <div
+              data-aos="flip-right"
+              data-aos-duration="1000"
+              className="verticalRectangle"
+            />
             <div
               data-aos="fade-down"
-              data-duration-aos="1000"
-              className="callout"
-            >
-              The Keep Solution
-            </div>
-            <h3 data-aos="fade-right" data-aos-duration="1000">
-              {carousel[0].title}
-            </h3>
-            <h4 data-aos="fade-left" data-aos-duration="1000">
-              {carousel[0].body}
-            </h4>
-          </div>
-        </Col>
-      </Row>
-      <Row className="parallax-img-2">
-        <Col md={5}>
-          <div
-            data-aos="zoom-in-right"
-            data-aos-duration="1000"
-            className="ellipsesImg"
-          />
-        </Col>
-        <Col md={5}>
-          <div className="parallax-div-2">
+              data-aos-duration="1000"
+              className="greenCircle"
+            />
             <div
-              data-aos="fade-down"
-              data-duration-aos="1000"
-              className="callout"
-            >
-              The Keep Solution
-            </div>
-            <h3 data-aos="fade-right" data-aos-duration="1000">
-              {carousel[1].title}
-            </h3>
-            <h4 data-aos="fade-left" data-aos-duration="1000">
-              {carousel[1].body}
-            </h4>
-          </div>
-        </Col>
-      </Row>
-      <Row className="parallax-img-3">
-        <Col md={5} className="m-0 p-0">
-          <div className="parallax-div-3-left" />
-        </Col>
-        <Col md={5} className="m-0 p-0">
-          <div className="parallax-div-3 ml-5">
+              data-aos="fade-down-right"
+              data-aos-duration="1000"
+              className="ellipseCircle"
+            />
+          </Col>
+        </Row>
+      </PageSection>
+      <PageSection
+        id={sections.home.KEEP_SOLUTION}
+        additionalClassNames="parallax-2"
+      >
+        <Row data-aos="zoom-in" data-aos-duration="1000">
+          <Col xs={12} md={4}>
             <div
-              data-aos="fade-down"
-              data-duration-aos="1000"
-              className="callout"
-            >
-              The Keep Solution
+              data-aos="zoom-in-right"
+              data-aos-duration="1000"
+              className="ellipsesImg"
+            />
+            <div
+              data-aos="flip-left"
+              data-aos-duration="1000"
+              className="greenCircle"
+            />
+          </Col>
+          <Col
+            xs={12}
+            md={7}
+            className={`${sections.home.KEEP_SOLUTION}-content offset-md-1`}
+          >
+            <div>
+              <label
+                data-aos="flip-right"
+                data-aos-duration="1000"
+                className="callout"
+              >
+                The Keep Solution
+              </label>
+              <h3 data-aos="flip-right" data-aos-duration="1000">
+                {carousel[1].title}
+              </h3>
+              <h4 data-aos="fade-up-right" data-aos-duration="1000">
+                {carousel[1].body}
+              </h4>
             </div>
-            <h3 data-aos="fade-right" data-aos-duration="1000">
-              {carousel[2].title}
-            </h3>
-            <h4 data-aos="fade-left" data-aos-duration="1000">
-              {carousel[2].body}
-            </h4>
-          </div>
-        </Col>
-      </Row>
+          </Col>
+        </Row>
+      </PageSection>
+      <PageSection
+        id={sections.home.KEEP_SOLUTION}
+        additionalClassNames="parallax-3"
+      >
+        <Row data-aos="zoom-out" data-aos-duration="1000">
+          <Col
+            xs={12}
+            md={4}
+            className={`${sections.home.KEEP_SOLUTION}-shape`}
+          >
+            <div
+              data-aos="fade-right"
+              data-aos-duration="1000"
+              className="circlewaves"
+            />
+            <div
+              data-aos="flip-left"
+              data-aos-duration="1000"
+              className="greenCircle"
+            />
+          </Col>
+          <Col
+            xs={12}
+            md={7}
+            className={`${sections.home.KEEP_SOLUTION}-content offset-md-1`}
+          >
+            <div>
+              <label
+                data-aos="fade-down"
+                data-duration-aos="1000"
+                className="callout"
+              >
+                The Keep Solution
+              </label>
+              <h3 data-aos="fade-left" data-duration-aos="1000">
+                {carousel[2].title}
+              </h3>
+              <h4 data-aos="fade-up" data-duration-aos="1000">
+                {carousel[2].body}
+              </h4>
+            </div>
+          </Col>
+        </Row>
+      </PageSection>
       <PageSection id={sections.home.SUMMARY_GRID}>
         <SummaryGrid {...summaryGrid} />
       </PageSection>

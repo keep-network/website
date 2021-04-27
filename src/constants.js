@@ -1,7 +1,7 @@
 const sections = {
   home: {
     HOME: "home",
-    FEATURE_CAROUSEL: "feature-carousel",
+    KEEP_SOLUTION: "keep-solution",
     SUMMARY_GRID: "summary-grid",
     MINILOGO_GRID: "minilogo-grid",
     KEEP_BLOG: "keep-blog",

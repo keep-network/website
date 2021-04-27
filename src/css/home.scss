@@ -329,8 +329,8 @@
       top: 50%;
       position: absolute;
       border-radius: 50%;
-      background-color: $black;
-      mix-blend-mode: soft-light;
+      background-color: rgba(10, 8, 6, 0.1);
+      mix-blend-mode: normal;
     }
   }
 

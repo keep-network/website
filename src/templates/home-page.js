@@ -66,7 +66,7 @@ export const HomePageTemplate = ({
       </PageSection>
       <Row className="parallax-img-1">
         <div
-          data-aos="flip-right"
+          data-aos="fade-right"
           data-aos-duration="1000"
           className="verticalRectangle"
         />
@@ -99,11 +99,7 @@ export const HomePageTemplate = ({
           </div>
         </Col>
       </Row>
-      <Row
-        data-aos="zoom-in"
-        data-aos-duration="1000"
-        className="parallax-img-2"
-      >
+      <Row className="parallax-img-2">
         <Col md={5}>
           <div
             data-aos="zoom-in-right"
@@ -114,32 +110,24 @@ export const HomePageTemplate = ({
         <Col md={5}>
           <div className="parallax-div-2">
             <div
-              data-aos="flip-right"
-              data-aos-duration="1000"
+              data-aos="fade-down"
+              data-duration-aos="1000"
               className="callout"
             >
               The Keep Solution
             </div>
-            <h3 data-aos="flip-right" data-aos-duration="1000">
+            <h3 data-aos="fade-right" data-aos-duration="1000">
               {carousel[1].title}
             </h3>
-            <h4 data-aos="fade-up-right" data-aos-duration="1000">
+            <h4 data-aos="fade-left" data-aos-duration="1000">
               {carousel[1].body}
             </h4>
           </div>
         </Col>
       </Row>
-      <Row
-        data-aos="zoom-out"
-        data-aos-duration="1000"
-        className="parallax-img-3"
-      >
+      <Row className="parallax-img-3">
         <Col md={5} className="m-0 p-0">
-          <div
-            data-aos="flip-left"
-            data-aos-duration="1000"
-            className="parallax-div-3-left"
-          />
+          <div className="parallax-div-3-left" />
         </Col>
         <Col md={5} className="m-0 p-0">
           <div className="parallax-div-3 ml-5">
@@ -150,10 +138,10 @@ export const HomePageTemplate = ({
             >
               The Keep Solution
             </div>
-            <h3 data-aos="fade-left" data-duration-aos="1000">
+            <h3 data-aos="fade-right" data-aos-duration="1000">
               {carousel[2].title}
             </h3>
-            <h4 data-aos="fade-up" data-duration-aos="1000">
+            <h4 data-aos="fade-left" data-aos-duration="1000">
               {carousel[2].body}
             </h4>
           </div>

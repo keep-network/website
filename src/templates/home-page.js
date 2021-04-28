@@ -34,7 +34,7 @@ export const HomePageTemplate = ({
   contact = {},
 }) => {
   useEffect(() => {
-    Aos.init({once: true})
+    Aos.init({ once: true })
   }, [])
   return (
     <div className="main-content">

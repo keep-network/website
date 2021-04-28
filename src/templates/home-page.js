@@ -92,7 +92,7 @@ export const HomePageTemplate = ({
           </Col>
           <Col xs={12} md={4} className="offset-md-1">
             <div
-              data-aos="flip-right"
+              data-aos="fade-left"
               data-aos-duration="1000"
               className="verticalRectangle"
             />
@@ -121,7 +121,7 @@ export const HomePageTemplate = ({
               className="ellipsesImg"
             />
             <div
-              data-aos="flip-left"
+              data-aos="fade-left"
               data-aos-duration="1000"
               className="greenCircle"
             />
@@ -133,16 +133,16 @@ export const HomePageTemplate = ({
           >
             <div>
               <label
-                data-aos="flip-right"
-                data-aos-duration="1000"
+                data-aos="fade-down"
+                data-duration-aos="1000"
                 className="callout"
               >
                 The Keep Solution
               </label>
-              <h3 data-aos="flip-right" data-aos-duration="1000">
+              <h3 data-aos="fade-right" data-aos-duration="1000">
                 {carousel[1].title}
               </h3>
-              <h4 data-aos="fade-up-right" data-aos-duration="1000">
+              <h4 data-aos="fade-left" data-aos-duration="1000">
                 {carousel[1].body}
               </h4>
             </div>
@@ -165,7 +165,7 @@ export const HomePageTemplate = ({
               className="circlewaves"
             />
             <div
-              data-aos="flip-left"
+              data-aos="fade-left"
               data-aos-duration="1000"
               className="greenCircle"
             />
@@ -183,10 +183,10 @@ export const HomePageTemplate = ({
               >
                 The Keep Solution
               </label>
-              <h3 data-aos="fade-left" data-duration-aos="1000">
+              <h3 data-aos="fade-right" data-aos-duration="1000">
                 {carousel[2].title}
               </h3>
-              <h4 data-aos="fade-up" data-duration-aos="1000">
+              <h4 data-aos="fade-left" data-aos-duration="1000">
                 {carousel[2].body}
               </h4>
             </div>

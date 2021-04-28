@@ -164,6 +164,10 @@
       }
     }
 
+    .page-section-content {
+      z-index: auto;
+    }
+
     .verticalRectangle {
       background-image: url(../images/Blockchain.svg);
       mix-blend-mode: overlay;
@@ -193,7 +197,7 @@
         position: absolute;
         border-radius: 50%;
         background-color: $black;
-        mix-blend-mode: soft-light;
+        opacity: 0.1;
       }
     }
 
@@ -248,7 +252,7 @@
       }
 
       .greenCircle {
-        right: 0;
+        left: 58%;
         top: 405px;
       }
     }

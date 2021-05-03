@@ -1,6 +1,34 @@
+
 .main-content {
+  --gc-width: 25vw;
+  --gc-border: 5px solid;
+  --row-content-height: 95vw;
+
+  --circle-width: 130vw;
+
+
+  @media (min-width: #{$bp-large}) {
+    --row-content-height: 75vw;
+    --circle-width: 100vw;
+
+  }
+  @media (min-width: #{$bp-extra-large}) {
+    --row-content-height: 65vw;
+  }
+  @media (min-width: #{$bp-medium}) {
+    --gc-width: 10vw;
+    --gc-border: 8px solid;
+
+  }
+
+  @media (min-width: #{$max-page-width +1}) {
+    --row-content-height: 1004px;
+  }
+
   .home {
-    background-image: url(../../static/images/hero-bg.jpg); // Set via cms
+
+
+    background-image: url(../../static/images/hero-bg.jpg);
     background-position: center;
     background-color: rgba($grey-10, 0.8);
     background-blend-mode: overlay;
@@ -23,6 +51,7 @@
         width: 100%;
         height: 100%;
       }
+
       &-overlay {
         position: absolute;
         width: 100%;
@@ -76,6 +105,7 @@
         justify-content: center;
         align-items: center;
       }
+
       &-content {
         @extend .h5;
         padding: 20px 10px;
@@ -139,16 +169,22 @@
   }
 
   .keep-solution {
+
+
     padding: 0;
     background-color: $grey-20;
-    height: 1004px;
     position: relative;
     overflow: hidden;
 
+
+    .row--content {
+      min-height: var(--row-content-height);
+    }
+
     &-content {
-      margin-top: 344px;
+      align-self: center;
+
       .callout {
-        // position: absolute;
         z-index: 10;
         padding: 4px 12px;
         background: $primary-color;
@@ -164,98 +200,330 @@
       }
     }
 
+    .page-section-content {
+      z-index: auto;
+    }
+
     .verticalRectangle {
-      background-image: url(../images/Blockchain.svg);
-      mix-blend-mode: overlay;
+
+      --cwidth: 70vw;
+
+      @media (max-width: #{376px}) {
+        --cwidth: 100vw;
+        padding-top: calc((var(--cwidth) / 1.5));
+      }
+
       margin: 0;
-      padding: 0;
-      position: absolute;
       top: 0;
       left: 0;
-      width: 473px;
-      height: 768px;
+      width: 100%;
+
+      @media (min-width: #{$max-page-width +1}) {
+        width: 31vw;
+      }
+
+      background-color: #E6E6E6;
+      padding: var(--cwidth) 0 0;
+
+      @media (min-width: #{$bp-medium}) {
+        min-height: var(--row-content-height);
+        position: absolute;
+        padding-top: 0;
+      }
+
+
+      &::after {
+        top: 0;
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 112vw;
+
+        @media (min-width: #{$bp-medium}) {
+          height: calc((var(--row-content-height) - 12vw));
+        }
+        background: #eeeeee;
+        background-image: url(../images/Blockchain2.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: top center;
+      }
+
+
     }
 
     .ellipseCircle {
-      position: absolute;
-      width: 473px;
-      height: 473px;
-      top: 531.57px;
+
+      position: relative;
+      max-width: var(--cwidth);
+      margin: 0 auto;
+      height: var(--cwidth);
+
+      @media (min-width: #{$bp-medium}) {
+        position: absolute;
+        margin-top: 0;
+        max-width: none;
+        padding-bottom: 100%;
+        height: 0;
+      }
+
+      z-index: 1;
+      width: 100%;
+      bottom: 0;
       left: 0;
       border-radius: 50%;
       background-image: url(../images/ellipsecircle.svg);
+      background-size: cover;
 
       &::after {
         content: "";
-        height: 473px;
         width: 100%;
-        top: 50%;
+        height: var(--cwidth);
+
+        margin-top: 50%;
+        margin-bottom: 0;
         position: absolute;
         border-radius: 50%;
-        background-color: rgba(10, 8, 6, 0.1);
-        mix-blend-mode: normal;
+        background-color: $black;
+        opacity: 0.1 !important;
+        mix-blend-mode: soft-light !important;
+
+        @media (min-width: #{$bp-medium}) {
+
+          height: 100%;
+
+        }
       }
     }
 
     .greenCircle {
       position: absolute;
-      width: 178px;
-      height: 178px;
+      width: var(--gc-width);
+      height: var(--gc-width);
       mix-blend-mode: normal;
-      border: 8px solid $mint-40;
+      border: var(--gc-border);
       border-radius: 50%;
+      border-color: $mint-40 !important;
+
+
     }
 
+
     .ellipsesImg {
-      background-image: url(../images//ellipsesimagebig.svg);
-      background-repeat: no-repeat;
-      width: 640px;
-      height: 640px;
-      position: absolute;
-      top: 182px;
-      right: 0;
+
+      width: 100vw;
+      height: 100%;
+      margin-left: -15px;
+
+      @media (min-width: #{$bp-medium}) {
+        position: absolute;
+        margin-left: 0;
+        left: 8vw;
+
+      }
+
+      &--item {
+
+        background-image: url(../images/ellipsesimagebig.svg);
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 91vw;
+        background-size: 91%;
+        background-position: top center;
+        margin-bottom: 9vw;
+
+
+        @media (min-width: #{$bp-medium}) {
+
+          width: 30vw;
+          height: 42vw;
+          position: absolute;
+          top: 50%;
+          transform: translate3d(-100px, -50%, 0);
+          max-width: 770px;
+          background-size: cover;
+          background-position: right center;
+
+          &.aos-animate {
+            transform: translateY(-50%) !important;
+          }
+        }
+        @media (min-width: #{$bp-extra-large}) {
+          width: 32vw;
+          height: 32vw;
+        }
+      }
     }
 
     &.parallax-1 {
+      @media (max-width: #{$bp-medium - 1}) {
+        .offset-md-1.col-12.col-md-4 {
+          padding: 0;
+        }
+      }
+
       .greenCircle {
         left: 0;
         top: 51px;
+        max-width: 178px;
+        max-height: 178px;
+        --gc-width: 28vw;
+        @media (max-width: #{$bp-medium}) {
+          top: 0px!important;
+        }
+        @media (max-width: #{$max-page-width}) {
+          top: 34px;
+          max-width: 150px;
+          max-height: 150px;
+          --gc-width: 25vw;
+          border: 7px solid;
+        }
+        @media (max-width: #{$bp-extra-large}) {
+          top: 31px;
+          max-width: 125px;
+          max-height: 125px;
+          --gc-width: 25vw;
+          border: 5px solid;
+        }
+        @media (max-width: #{$bp-large}) {
+          top: 16px;
+          max-width: 100px;
+          max-height: 100px;
+          --gc-width: 25vw;
+          border: 5px solid;
+        }
       }
     }
 
     &.parallax-2 {
       background-color: $grey-10;
+
+
       .greenCircle {
-        right: 137px;
-        top: 47%;
+        position: absolute;
+        mix-blend-mode: normal;
+        border-radius: 50%;
+        width: var(--gc-width);
+        height: var(--gc-width);
+        border: var(--gc-border);
+        left: 51vw;
+        top: 20vw !important;
+
+        @media (min-width: #{$bp-medium}) {
+          left: auto;
+          right: 9vw;
+          top: 8.9vw !important;
+          width: 12vw;
+          height: 12vw;
+          border-width: 6px;
+        }
+
+        @media (min-width: #{$bp-extra-large}) {
+          right: 6.4vw;
+          top: 6.5vw !important;
+          width: 10vw;
+          height: 10vw;
+          border-width: 7px;
+        }
+
+
+      }
+
+      .row--content {
+        @media (max-width: #{$bp-medium - 1}) {
+          > div:first-child {
+            padding: 0;
+          }
+        }
+      }
+
+      .keep-solution-content {
+        order: -1;
+
+        @media (min-width: #{$bp-medium}) {
+          order: initial;
+        }
       }
     }
 
     &.parallax-3 {
       background-color: $white;
-      background-image: url(../images/sphere.svg);
-      background-repeat: no-repeat;
-      background-size: contain;
-      background-position: right;
+
+      @media (max-width: #{$bp-medium - 1}) {
+        .container-md {
+          padding: 0;
+        }
+        .row--content {
+          margin-top: -30vw;
+          background: #fff;
+          padding: 0 15px;
+        }
+        .paraTextMargin  {
+          margin-top: 115px;
+          margin-bottom: -100px;
+        }
+      }
+
 
       .circlewaves {
-        width: 1004px;
-        height: 1004px;
-        background-image: url(../images//circlewaves.svg);
+        width: 104vw;
+        height: 100vh;
+        background: url(../images//circlewaves.svg) no-repeat;
+        background-size: contain;
         position: absolute;
         top: 0;
         left: 0;
       }
 
+      .sphere {
+        &--image {
+          position: absolute;
+          width: 100vw;
+          height: 100vh;
+          overflow: hidden;
+          pointer-events: none;
+
+          img {
+            position: absolute;
+            width: 100vw;
+            height: 101vh;
+          }
+        }
+
+        &--bg {
+          position: absolute;
+          width: 100vw;
+          height: 101vh;
+          left: 20vw;
+          background-image: url(../images/sphere.svg);
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: right;
+        }
+      }
+
       .greenCircle {
-        right: 0;
-        top: 405px;
+        &.aos-animate {
+          transform: translate(0, -50%) !important;
+
+        }
+
+        left: 15vw;
+        top: 50%;
+        z-index: 1;
+        transform: translate(100px, -50%);
       }
     }
 
+
     @media (max-width: #{$bp-medium - 1}) {
+
+
       &-content {
+
         margin-top: 88px;
+        margin-bottom: 107px;
+
         h3 {
           margin-top: 35px;
         }
@@ -319,4 +587,85 @@
       }
     }
   }
+
+  .parallax-2, .parallax-3 {
+    .container-md {
+
+      @media (max-width: #{$bp-medium - 1}) {
+        display: flex;
+        flex-direction: column-reverse;
+      }
+    }
+  }
+
+  .o-section {
+
+    width: 100vw;
+    height: 100vw;
+    transform-origin: center;
+    transform: rotate(90deg);
+    margin-top: 92px;
+    overflow: hidden;
+    @media (min-width: #{$bp-medium}) {
+      overflow: initial;
+      margin-top: 0;
+      position: absolute;
+      width: 100vw;
+      height: 100%;
+      left: 8vw;
+      transform: none;
+    }
+
+
+    .make--ring-style {
+      position: absolute;
+      border-radius: var(--circle-width);
+      width: 160vw;
+      height: calc((var(--circle-width) * 1.2));
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .o-circle {
+      position: absolute;
+      width: 100%;
+      top: 0;
+      bottom: 0;
+
+      &__left, &__right {
+        @extend .make--ring-style;
+      }
+
+      &__left {
+        height: calc((var(--circle-width) * 1.1));
+        background: url("../images/w-image.jpg") no-repeat center;
+        background-size: cover;
+        transform: translate3d(-100px, -50%, 0);
+
+        &.aos-animate {
+          transform: translateY(-50%) !important;
+        }
+
+        &:after {
+          content: "";
+          @extend .make--ring-style;
+          left: 6vw;
+          background: #ffffff;
+          z-index: 0;
+          height: var(--circle-width);
+        }
+      }
+
+      &__right {
+        --right-space: 1.3;
+        left: 15vw;
+        height: calc((var(--circle-width) / 1.2));
+        background-image: url("../images/sphere2.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 160vw;
+      }
+    }
+  }
+
 }

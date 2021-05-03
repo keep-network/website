@@ -34,7 +34,7 @@ export const HomePageTemplate = ({
   contact = {},
 }) => {
   useEffect(() => {
-    Aos.init({})
+    Aos.init({ once: true })
   }, [])
   return (
     <div className="main-content">
@@ -68,7 +68,7 @@ export const HomePageTemplate = ({
         id={sections.home.KEEP_SOLUTION}
         additionalClassNames="parallax-1"
       >
-        <Row>
+        <Row className="row--content">
           <Col
             xs={12}
             md={7}
@@ -92,19 +92,20 @@ export const HomePageTemplate = ({
           </Col>
           <Col xs={12} md={4} className="offset-md-1">
             <div
-              data-aos="fade-right"
+              data-aos="fade-left"
               data-aos-duration="1000"
               className="verticalRectangle"
-            />
+            >
+              <div
+                data-aos="fade-down-right"
+                data-aos-duration="1000"
+                className="ellipseCircle"
+              />
+            </div>
             <div
               data-aos="fade-down"
               data-aos-duration="1000"
               className="greenCircle"
-            />
-            <div
-              data-aos="fade-down-right"
-              data-aos-duration="1000"
-              className="ellipseCircle"
             />
           </Col>
         </Row>
@@ -113,19 +114,25 @@ export const HomePageTemplate = ({
         id={sections.home.KEEP_SOLUTION}
         additionalClassNames="parallax-2"
       >
-        <Row>
-          <Col xs={12} md={4}>
-            <div
-              data-aos="zoom-in-right"
-              data-aos-duration="1000"
-              className="ellipsesImg"
-            />
+        <div className="ellipsesImg">
+          <div
+            className="ellipsesImg--item"
+            data-aos="zoom-in-right"
+            data-aos-duration="1000"
+          >
             <div
               data-aos="fade-left"
               data-aos-duration="1000"
               className="greenCircle"
             />
-          </Col>
+          </div>
+        </div>
+        <Row
+          className="row--content"
+          data-aos="zoom-in"
+          data-aos-duration="1000"
+        >
+          <Col xs={12} md={4} />
           <Col
             xs={12}
             md={7}
@@ -134,7 +141,7 @@ export const HomePageTemplate = ({
             <div>
               <label
                 data-aos="fade-down"
-                data-aos-duration="1000"
+                data-duration-aos="1000"
                 className="callout"
               >
                 The Keep Solution
@@ -153,29 +160,37 @@ export const HomePageTemplate = ({
         id={sections.home.KEEP_SOLUTION}
         additionalClassNames="parallax-3"
       >
-        <Row>
-          <Col
-            xs={12}
-            md={4}
-            className={`${sections.home.KEEP_SOLUTION}-shape`}
-          >
-            <div
-              data-aos="fade-right"
-              data-aos-duration="1000"
-              className="circlewaves"
-            />
+        <div className="o-section">
+          <div className="o-circle">
             <div
               data-aos="fade-left"
               data-aos-duration="1000"
               className="greenCircle"
             />
-          </Col>
+            <div
+              data-aos="fade-right"
+              data-aos-duration="1000"
+              className="o-circle__left"
+            />
+            <div className="o-circle__right" />
+          </div>
+        </div>
+        <Row
+          className="row--content"
+          data-aos="zoom-out"
+          data-aos-duration="1000"
+        >
+          <Col
+            xs={12}
+            md={4}
+            className={`${sections.home.KEEP_SOLUTION}-shape`}
+          />
           <Col
             xs={12}
             md={7}
             className={`${sections.home.KEEP_SOLUTION}-content offset-md-1`}
           >
-            <div>
+            <div className="paraTextMargin">
               <label
                 data-aos="fade-down"
                 data-duration-aos="1000"

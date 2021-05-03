@@ -1,0 +1,12 @@
+<svg viewBox="0 0 293.02 1176.75" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+            <style>.cls-1{fill:none;}.cls-2{clip-path:url(#clip-path);}</style>
+            <clipPath id="clip-path">
+                <path class="cls-1"
+                      d="M79.57,585.72A911.35,911.35,0,0,1,291.58,0H190.67C70.77,164.3,0,366.75,0,585.72s70.76,421.42,190.67,585.72H291.58A911.35,911.35,0,0,1,79.57,585.72Z"/>
+            </clipPath>
+        </defs>
+        <g class="cls-2">
+            <image width="250" height="1004" transform="scale(1.17)" xlink:href="images/home/cw.png"/>
+        </g>
+    </svg>

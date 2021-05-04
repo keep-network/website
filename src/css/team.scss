@@ -1,5 +1,7 @@
 .team-content {
   .ceo-info {
+    padding-top: 0px;
+    
     h3 {
       margin: 8px 0 48px;
     }
@@ -16,7 +18,11 @@
   }
 
   .team-banner {
-    background-color: $grey-20;
+    background: url(/images/features/btn-team-banner.png);
+    background-color: $grey-10;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right;
 
     .blurb-text {
       color: $black;
@@ -34,6 +40,7 @@
     @media (max-width: #{$bp-medium - 1}) {
       .blurb-panel {
         flex-direction: column;
+        background-color: transparent!important;
       }
       .blurb-text {
         text-align: center;

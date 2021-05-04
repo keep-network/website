@@ -3,8 +3,8 @@ template: build-page
 path: /build
 title: Build
 hero:
-  title: Build
-  body: Build with Keep and join our passionate community. Browse our library of resources and community built tools below.
+  title: Join
+  body: Join our passionate community. Browse our library of resources and community built tools below.
   image: /images/build.png
   cta_buttons:
     - label: Join Our Discord
@@ -13,11 +13,11 @@ library:
   title: Library of Keep resources
   body: Resources for building on Keep
   cards:
-    - title: Technical Docs
-      body: Technical guide for getting started with the network.
+    - title: User Docs
+      body: User guide for getting started with the network.
       button:
         label: Read Docs
-        url: https://dashboard.keep.network/
+        url: https://staking.keep.network/
       icon:
         image: /images/svg/ic-tech-doc.svg
         alt: Technical Docs
@@ -25,7 +25,7 @@ library:
       body: Contribute to our open source codebase on GitHub.
       button:
         label: View Codebase
-        url: https://dashboard.keep.network/
+        url: https://github.com/keep-network
       icon:
         image: /images/svg/ic-github.svg
         alt: Github
@@ -33,7 +33,7 @@ library:
       body: Colors, type, and components to build with Keep styles.
       button:
         label: View Figma
-        url: https://dashboard.keep.network/
+        url: https://www.figma.com/file/d4aYxb92nfaaL4tFJKKjol/Keep-Community-Design-System
       icon:
         image: /images/svg/ic-design-system.svg
         alt: Design System
@@ -41,27 +41,27 @@ community:
   title: Community built
   body: Libraries, dashboards, and tools made by and for the Keep community.
   cards:
-    - title: Keep Stats
-      icon:
-        image: /images/features/keep-stats.png
-        alt: Keep Stats
-      button:
-        label: Check it out
-        url: https://dashboard.keep.network/
     - title: All the Keeps
       icon:
         image: /images/features/all-the-keeps.png
         alt: All the Keeps
       button:
         label: Check it out
-        url: https://dashboard.keep.network/
+        url: https://allthekeeps.com/
+    - title: Keep Stats
+      icon:
+        image: /images/features/keep-stats.png
+        alt: Keep Stats
+      button:
+        label: Check it out
+        url: https://keepstats.org/
     - title: Keep Tools
       icon:
         image: /images/features/keep-tools.png
         alt: Keep Tools
       button:
         label: Check it out
-        url: https://dashboard.keep.network/
+        url: https://keeptools.org/
 secure:
   title: Securely built network
   body: Join the community with the confidence that Keep has been audited by the strongest firms in the ecosystem.

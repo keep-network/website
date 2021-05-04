@@ -82,7 +82,7 @@ export const PressPageTemplate = ({
       ? setPressEntries(entries2020)
       : year === 2021 && entries2021
       ? setPressEntries(entries2021)
-      : pressEntries
+      : setPressEntries(allPressEntries)
   }, [year])
 
   useEffect(() => {
@@ -100,7 +100,13 @@ export const PressPageTemplate = ({
   }, [pressItems])
 
   const handleShowAll = () => {
-    setPressEntries(allPressEntries)
+    year === 2019
+      ? setPressEntries(entries2019)
+      : year === 2020
+      ? setPressEntries(entries2020)
+      : year === 2021 && entries2021
+      ? setPressEntries(entries2021)
+      : setPressEntries(allPressEntries)
   }
 
   return (
@@ -164,6 +170,16 @@ export const PressPageTemplate = ({
               }
             >
               2021
+            </button>
+            <button
+              onClick={() => setYear(null)}
+              className={
+                year === null
+                  ? "year-filter-item is-active"
+                  : "year-filter-item"
+              }
+            >
+              ALL
             </button>
           </Col>
         </Row>

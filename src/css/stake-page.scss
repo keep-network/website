@@ -57,7 +57,10 @@
     }
 
     .banner-business-team {
-        background-color: $grey-20;
+        background: url(/images/features/rockwall.png), $grey-20;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-blend-mode: soft-light, normal;
         text-align: center;
 
         h3 {

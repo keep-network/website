@@ -72,7 +72,7 @@ export const TeamPageTemplate = ({
               className="team-gallery-subtitle"
               dangerouslySetInnerHTML={{ __html: teamSection.hp.title }}
             />
-            <p className="team-gallery-text">{hero.body}</p>
+            <p className="team-gallery-text">{teamSection.hp.body}</p>
           </Col>
         </Row>
         <Row className="profiles">

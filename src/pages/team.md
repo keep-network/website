@@ -34,7 +34,7 @@ team_section:
       title: Tech Lead
       image: /images/piotr-bw.png
     - name: Liz Shinn
-      title: Desig Lead
+      title: Design Lead
       image: /images/liz-shinn-bw.png
     - name: Will Rhodes
       title: Community Manager Lead

@@ -1,5 +1,4 @@
 .profile {
-  text-align: center;
   justify-content: center;
   align-items: center;
   margin-bottom: 40px;
@@ -13,14 +12,16 @@
 
   p {
     margin-bottom: 0;
+    color: $grey-60;
   }
 
   label {
     text-transform: uppercase;
+    color: $grey-60;
   }
 
   .gatsby-image-wrapper {
-    margin: 0 0 4px;
+    margin: 0 0 25px;
   }
 
   .social-links {

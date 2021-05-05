@@ -40,7 +40,6 @@
     @media (max-width: #{$bp-medium - 1}) {
       .blurb-panel {
         flex-direction: column;
-        background-color: transparent!important;
       }
       .blurb-text {
         text-align: center;

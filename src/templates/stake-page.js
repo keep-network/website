@@ -2,7 +2,7 @@ import React from "react"
 import { connect } from "react-redux"
 import { Col, Row } from "reactstrap"
 import PropTypes from "prop-types"
-import { graphql } from "gatsby"
+import { graphql, withPrefix } from "gatsby"
 
 import { App, Image, Link, PageSection, FeatureCard } from "../components"
 import { sections } from "../constants"
@@ -19,7 +19,14 @@ export const StakePageTemplate = ({
   console.log("tech:", images)
   return (
     <div className="stake-content">
-      <PageSection id={sections.stake.HOME}>
+      <PageSection
+        id={sections.stake.HOME}
+        style={{
+          backgroundImage: `url(${withPrefix(
+            "/images/features/stake-overview.png"
+          )})`,
+        }}
+      >
         <Row>
           <Col xs={12} md={7}>
             <h1

@@ -4,7 +4,7 @@ path: /info
 hero:
   title: Info
   body: Keep is the privacy-focused infrastructure behind tBTC, the only truly decentralized solution for Bitcoin on Ethereum.
-  image: /images/features/lock.png
+  image: /images/features/newlock.png
 feature:
   title: Keep brings privacy to dapps
   body: <p>Keep secures private data on public blockchains with “keeps.” Keeps are off-chain containers that allow contracts to manage and use private data without exposing the data itself to the public blockchain.</p><p>In the tBTC solution, the private keys to the bitcoin are stored in keeps, where they cannot be exposed to the public Ethereum blockchain. Keeps are also distributed across validators, ensuring data remains not only private, but decentralized as well.</p>

@@ -2,7 +2,7 @@ import React from "react"
 import { connect } from "react-redux"
 import { Col, Row } from "reactstrap"
 import PropTypes from "prop-types"
-import { graphql } from "gatsby"
+import { graphql, withPrefix } from "gatsby"
 
 import { App, Icons, Image, PageSection, Profile } from "../components"
 import { sections } from "../constants"
@@ -38,7 +38,15 @@ export const TeamPageTemplate = ({
           </Col>
         </Row>
       </PageSection>
-      <PageSection id={sections.team.BANNER} additionalClassNames={["blurb"]}>
+      <PageSection
+        id={sections.team.BANNER}
+        additionalClassNames={["blurb"]}
+        style={{
+          backgroundImage: `url(${withPrefix(
+            "/images/features/btn-team-banner.png"
+          )})`,
+        }}
+      >
         <div className="blurb-panel">
           <div className="blurb-icon">
             <Icons.CastleGate />

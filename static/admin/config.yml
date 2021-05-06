@@ -144,6 +144,47 @@ collections:
                       { label: "Alt", name: "alt", widget: "string" },
                     ],
                 }
+          - label: "Latest Blog"
+            name: "blogs"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - {
+                  label: "Blogs",
+                  name: "cards",
+                  widget: "list",
+                  allow_add: true,
+                  fields:
+                    [
+                      { label: "Title", name: "title", widget: "string" },
+                      { label: "Source", name: "source", widget: "string" },
+                      { label: "Excerpt", name: "excerpt", widget: "markdown" },
+                      {
+                        label: "Date & Time",
+                        name: "date",
+                        widget: "datetime",
+                      },
+                      {
+                        label: Icon,
+                        name: icon,
+                        widget: object,
+                        fields:
+                          [
+                            {
+                              label: "Image",
+                              name: "image",
+                              widget: file,
+                              media_library: { config: { multiple: false } },
+                              hint:
+                                "Image width of 168px and 168px required (to be
+                                rendered as 168 x 168) to support higher resolution screens",
+                            },
+                            { label: "Alt", name: "alt", widget: "string" },
+                          ],
+                      },
+                      { label: "Url", name: "url", widget: "string" },
+                    ],
+                }
           - label: "Exchanges"
             name: "exchanges"
             widget: "object"
@@ -857,38 +898,42 @@ collections:
             fields:
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Body", name: "body", widget: "string" }
-              - label: "Blogs"
-                name: "cards"
-                widget: "list"
-                allow_add: true
-                fields:
-                  - { label: "Title", name: "title", widget: "string" }
-                  - { label: "Source", name: "source", widget: "string" }
-                  - {
-                      label: "Excerpt",
-                      name: "excerpt",
-                      widget: "markdown",
-                      minimal: true,
-                    }
-                  - { label: "Date", name: "date", widget: "datetime" }
-                  - { label: "Url", name: "url", widget: "string" }
-                  - {
-                      label: Icon,
-                      name: icon,
-                      widget: object,
-                      fields:
-                        [
-                          {
-                            label: "Image",
-                            name: "image",
-                            widget: file,
-                            media_library: { config: { multiple: false } },
-                            hint: "Image width of 168px and 72px required (to be
-                              rendered as 168 x 72) to support higher resolution screens",
-                          },
-                          { label: "Alt", name: "alt", widget: "string" },
-                        ],
-                    }
+              - {
+                  label: "Blogs",
+                  name: "cards",
+                  widget: "list",
+                  allow_add: true,
+                  fields:
+                    [
+                      { label: "Title", name: "title", widget: "string" },
+                      { label: "Source", name: "source", widget: "string" },
+                      { label: "Excerpt", name: "excerpt", widget: "markdown" },
+                      {
+                        label: "Date & Time",
+                        name: "date",
+                        widget: "datetime",
+                      },
+                      {
+                        label: Icon,
+                        name: icon,
+                        widget: object,
+                        fields:
+                          [
+                            {
+                              label: "Image",
+                              name: "image",
+                              widget: file,
+                              media_library: { config: { multiple: false } },
+                              hint:
+                                "Image width of 168px and 72px required (to be
+                                rendered as 168 x 168) to support higher resolution screens",
+                            },
+                            { label: "Alt", name: "alt", widget: "string" },
+                          ],
+                      },
+                      { label: "Url", name: "url", widget: "string" },
+                    ],
+                }
           - label: "Press Items Section"
             name: "press_items_section"
             widget: "object"

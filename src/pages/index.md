@@ -74,16 +74,16 @@ minilogo_grid:
 blogs:
   title: Latest from the Keep Blog
   cards:
-    - title: Headline
-      source: News Outlet
+    - title: Announcing tBTC with James Prestwich and Matt Luongo of Cross-Chain Group
+      source: Wyre Talks Podcast
       excerpt: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit cursus sed feugiat iaculis dictumst.
       date: "2020-09-22T13:00:00.000Z"
       icon:
         image: /images/home/keep-blog.png
         alt: Forbes
       url: https://www.coindesk.com/thesis-bitcoin-token-tbtc-relaunches-following-buggy-debut
-    - title: Headline
-      source: News Outlet
+    - title: Bitcoin’s Ethereum Rivalry Could Be Assuaged With tBTC Bridge
+      source: Bloomberg
       excerpt: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit cursus sed feugiat iaculis dictumst.
       date: "2020-09-22T13:00:00.000Z"
       icon:

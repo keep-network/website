@@ -27,16 +27,16 @@ news:
   title: In the News
   body: Featured Coverage
   cards:
-    - title: Headline
-      source: News Outlet
+    - title: How Millennial Finance Will Make The Legacy Banking System Irrelevant
+      source: IBTimes
       excerpt: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit cursus sed feugiat iaculis dictumst.
       date: "2020-09-22T13:00:00.000Z"
       icon:
         image: /images/home/keep-blog.png
         alt: Forbes
       url: https://www.coindesk.com/thesis-bitcoin-token-tbtc-relaunches-following-buggy-debut
-    - title: Headline
-      source: News Outlet
+    - title: Bitcoin-Backed Ethereum Token tBTC Launches—for the Second Time
+      source: Decrypt
       excerpt: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit cursus sed feugiat iaculis dictumst.
       date: "2020-09-22T13:00:00.000Z"
       icon:

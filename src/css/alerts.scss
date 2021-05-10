@@ -44,14 +44,16 @@
 
     @media (min-width: #{$bp-medium}) {
         position: absolute;
-        top: 100%;
+        top: 0;
         left: 50%;
+        width: 100%;
         transform: translateX(-50%);
         margin: 0;
-        text-align: left;
+        text-align: center;
 
         p {
             white-space: nowrap;
+            font-size: 14px;
         }
     }
 }

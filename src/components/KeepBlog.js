@@ -49,7 +49,7 @@ const KeepBlog = ({ title, body, cards, isMore = false }) => {
         </div>
         {isMore && (
           <div className="keep-blog-footer">
-            <a href="#">Read more articles</a>
+            <a href="https://blog.keep.network/">Read more articles</a>
           </div>
         )}
       </Col>

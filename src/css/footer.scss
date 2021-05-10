@@ -29,7 +29,6 @@ footer {
       a:not(.email-btn) {
         color: $grey-50;
         @extend .h4;
-        text-decoration: none;
         cursor: pointer;
       }
 

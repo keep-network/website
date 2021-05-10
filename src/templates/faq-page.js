@@ -16,6 +16,7 @@ export const FaqPageTemplate = ({
   ajaxRequestStates = {},
   plusIcon = {},
 }) => {
+  console.log("PlusIC", plusIcon)
   return (
     <div className="faq-content">
       <PageSection id={sections.faq.HOME}>

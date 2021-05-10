@@ -34,7 +34,7 @@ recommended:
       body: viktor@bisontrails.co
       button:
         label: Get Started
-        url: https://dashboard.keep.network/
+        url: viktor@bisontrails.co
       icon:
         image: /images/svg/ic-bison-trails.svg
         alt: Bison Trails
@@ -42,7 +42,7 @@ recommended:
       body: konstantin@blockdaemon.com
       button:
         label: Get Started
-        url: https://dashboard.keep.network/
+        url: konstanin@blockdaemon.com
       icon:
         image: /images/svg/ic-blockdaemon.svg
         alt: Blockdaemon
@@ -50,7 +50,7 @@ recommended:
       body: hello@boar.network
       button:
         label: Get Started
-        url: https://dashboard.keep.network/
+        url: hello@boar.network
       icon:
         image: /images/svg/ic-boar-network.svg
         alt: Boar Network
@@ -58,7 +58,7 @@ recommended:
       body: yannick@figment.io
       button:
         label: Get Started
-        url: https://dashboard.keep.network/
+        url: yannick@figment.io
       icon:
         image: /images/svg/ic-figment.svg
         alt: Figment
@@ -66,7 +66,7 @@ recommended:
       body: eduardo@lowfeevalidation.com
       button:
         label: Get Started
-        url: https://dashboard.keep.network/
+        url: eduardo@lowfeevalidation.com
       icon:
         image: /images/svg/ic-low-fee-validation.svg
         alt: Low Fee Validation
@@ -74,7 +74,7 @@ recommended:
       body: togilvie@staked.us
       button:
         label: Get Started
-        url: https://dashboard.keep.network/
+        url: togilvie@staked.us
       icon:
         image: /images/svg/ic-staked.svg
         alt: Staked
@@ -97,15 +97,15 @@ exchanges:
       icon:
         image: /images/svg/uniswap.svg
         alt: Uniswap
-      url: https://dashboard.keep.network/
+      url: https://uniswap.org/
     - name: Balancer
       icon:
         image: /images/svg/balancer.svg
         alt: Balancer
-      url: https://dashboard.keep.network/
+      url: https://balancer.finance/
     - name: Kraken
       icon:
         image: /images/svg/kraken.svg
         alt: Kraken
-      url: https://dashboard.keep.network/
+      url: https://www.kraken.com/
 ---

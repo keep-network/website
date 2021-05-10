@@ -35,7 +35,7 @@ const FeatureCard = ({
         <CardTitle tag="h5">{title}</CardTitle>
         {subtitle && <CardSubtitle tag="h5">{subtitle}</CardSubtitle>}
         {text && <CardText>{text}</CardText>}
-        {button && <Button {...button} className={btnClass} />}
+        {button && <Button {...button} className={btnClass} onClick={e => {}} />}
       </CardBody>
     </Card>
   )

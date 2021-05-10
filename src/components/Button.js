@@ -3,9 +3,12 @@ import classNames from "classnames"
 import PropTypes from "prop-types"
 
 const Button = ({ className, label, url, onClick }) => {
+    
+  const isEmail = /^([A-Za-z0-9_\-.+])+@([A-Za-z0-9_\-.])+\.([A-Za-z]{2,})$/.test(url);
+
   return (
     <a
-      href={url}
+      href={isEmail ? `mailto:${url}` : url}
       className={classNames(["btn", className])}
       onClick={(e) => onClick(e)}
     >

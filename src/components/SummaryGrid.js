@@ -6,14 +6,19 @@ import Image from "./Image"
 
 const Card = ({ index, name, title, icon, url }) => {
   return (
-    <div className="summary-grid-card">
+    <div className="summary-grid-card d-flex justify-content-between">
       <div className="number">{index}</div>
       <div className="summary-grid-card-header">
         <Image imageData={icon} />
         <h4>{title}</h4>
       </div>
       <div className="summary-grid-card-footer">
-        <Button url={url} label={name} className="btn-default full-width" />
+        <Button
+          onClick={(e) => {}}
+          url={url}
+          label={name}
+          className="btn-default full-width"
+        />
       </div>
     </div>
   )
@@ -29,8 +34,8 @@ Card.propTypes = {
 
 const SummaryGrid = ({ title, body, cards }) => {
   return (
-    <Row>
-      <Col xs={12}>
+    <Row className="d=flex justify-content-center">
+      <Col xs={11}>
         <div className="summary-grid-header">
           <h2>{title}</h2>
           <h3>{body}</h3>

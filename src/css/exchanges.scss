@@ -1,6 +1,6 @@
 .exchanges {
-  background-color: $grey-30;
   padding: 132px 0;
+  background-size: cover;
 
   h3 {
     margin: 0;
@@ -15,7 +15,6 @@
     a {
       @extend .h4;
       color: $secondary-color;
-      text-decoration: none;
 
       img {
         margin-right: 20px;

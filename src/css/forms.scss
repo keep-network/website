@@ -69,7 +69,7 @@
     padding: 16px;
     margin-left: 5px!important;
 
-    @media (max-width: #{$bp-medium}) {
+    @media (max-width: #{$bp-medium - 1}) {
       margin-left: 0px!important;
     }
     svg {

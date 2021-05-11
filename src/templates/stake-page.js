@@ -92,7 +92,12 @@ export const StakePageTemplate = ({
           ))}
         </Row>
       </PageSection>
-      <PageSection id={sections.stake.BANNER_BUSINESS_TEAM} style={{ backgroundImage: `url(${withPrefix("images/features/rockwall.png")})` }}>
+      <PageSection
+        id={sections.stake.BANNER_BUSINESS_TEAM}
+        style={{
+          backgroundImage: `url(${withPrefix("images/features/rockwall.png")})`,
+        }}
+      >
         <Row>
           <Col xs={12}>
             <h3 dangerouslySetInnerHTML={{ __html: banner.body }} />
@@ -121,7 +126,14 @@ export const StakePageTemplate = ({
           </Col>
         </Row>
       </PageSection>
-      <PageSection id={sections.stake.EXCHANGES} style={{ backgroundImage: `url(${withPrefix("/images/features/exchangesbanner.png")})` }}>
+      <PageSection
+        id={sections.stake.EXCHANGES}
+        style={{
+          backgroundImage: `url(${withPrefix(
+            "/images/features/exchangesbanner.png"
+          )})`,
+        }}
+      >
         <Row>
           <Col xs={12} sm={12}>
             <div className="text-center">

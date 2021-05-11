@@ -22,6 +22,10 @@
     min-height: 856px;
     background: $grey-10;
 
+    @media (max-width: #{$bp-medium - 1}) {
+      padding-bottom: 0px;
+    }
+
     @media (min-width: #{$bp-medium}) {
       min-height: 1115px;
       display: flex;
@@ -46,16 +50,19 @@
       height: 1115px;
       margin-right: auto;
       margin-left: -20px;
+      background-image: url(../images/info-grid.png);
       background-size: cover;
-      opacity: 0.1;
+      opacity: 0.05;
 
-      
-      @media (max-width: #{$bp-medium}) {
-        max-width: 100%;
-        margin-left: 0px;
-        transform: rotate(90deg);
-        left: -18%;
-        background-position-y: center;
+      @media (max-width: #{$bp-medium - 1}) {
+          background-image: url(../images/info-grid-mobile.png);
+          max-width: 100%;
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: bottom;
+          margin-left: 15%;
+          height: 400px;
+          opacity: 0.05;
       }
     };
 

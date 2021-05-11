@@ -56,7 +56,7 @@
     }
 
     .banner-business-team {
-        background: url(/images/features/rockwall.png), $grey-20;
+        background-color: $grey-20;
         background-repeat: no-repeat;
         background-size: cover;
         background-blend-mode: soft-light, normal;
@@ -97,5 +97,9 @@
                 width: 100%;
             }
         }
+    }
+
+    .exchanges  {
+        background-size: cover;
     }
 }

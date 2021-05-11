@@ -1,7 +1,7 @@
 ---
 template: header-nav
 nav_items:
-  - label: Build
+  - label: Join
     url: "/build"
   - label: Stake
     url: "/stake"

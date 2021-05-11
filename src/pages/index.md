@@ -8,15 +8,13 @@ hero:
   bg_video: images/home/keep-castle-clouds.mp4
   bg_image: /images/keep-bg.jpg
   cta_buttons:
-    - label: About Keep
-      url: https://dashboard.keep.network/
     - label: Start Staking
       url: https://dashboard.keep.network/
+    - label: Join Community
+      url: /build
   tickers:
-    - label: 60.2% APY · KEEP/TBTC POOL
     - label: 14% APY · KEEP POOL
     - label: 79.3% APY · TBTC/SADDLE POOL
-    - label: 20.2% APY · KEEP/TBTC POOL
 carousel:
   - title: Privacy-focused infrastructure for the public blockchain.
     body: The Keep network allows private data to be used on public protocols without sacrificing confidentiality.
@@ -39,19 +37,19 @@ summary_grid:
       icon:
         image: /images/svg/grid-icon-1.svg
         alt: About Keep
-      url: https://dashboard.keep.network/
+      url: /info
     - name: Get Keep
-      title: Manage stake and rewards
+      title: Where to get KEEP tokens
       icon:
         image: /images/svg/grid-icon-2.svg
         alt: Get Keep
-      url: https://dashboard.keep.network/
+      url: "/#exchanges"
     - name: Stake Keep
       title: Staking your KEEP tokens
       icon:
         image: /images/svg/grid-icon-3.svg
         alt: Stake Keep
-      url: https://dashboard.keep.network/
+      url: /stake
     - name: Launch Dapp
       title: Manage stake and rewards
       icon:
@@ -62,15 +60,19 @@ minilogo_grid:
   - icon:
       image: /images/logos/bloomberg.png
       alt: Bloomberg
+      url: https://www.bloomberg.com/
   - icon:
       image: /images/logos/forbes.png
       alt: Forbes
+      url: https://www.forbes.com/
   - icon:
       image: /images/logos/coindesk.png
       alt: Coindesk
+      url: https://www.coindesk.com/
   - icon:
       image: /images/logos/decrypt.png
       alt: Decrypt
+      url: https://decrypt.co/
 blogs:
   title: Latest from the Keep Blog
   cards:
@@ -97,17 +99,17 @@ exchanges:
       icon:
         image: /images/svg/uniswap.svg
         alt: Uniswap
-      url: https://dashboard.keep.network/
+      url: https://uniswap.org/
     - name: Balancer
       icon:
         image: /images/svg/balancer.svg
         alt: Balancer
-      url: https://dashboard.keep.network/
+      url: https://balancer.finance/
     - name: Kraken
       icon:
         image: /images/svg/kraken.svg
         alt: Kraken
-      url: https://dashboard.keep.network/
+      url: https://www.kraken.com/
 logo_wall:
   title: Keep is backed by the best VCs in the world.
   supporters:
@@ -158,7 +160,7 @@ contact:
         alt: Read the Keep blog
       link:
         name: Read Blog
-        url: https://www.fabric.vc/
+        url: https://blog.keep.network/
     - title: Join the community
       body: Connect with the Discord community, ask questions, and get in on the ground level for the future of DeFi.
       icon:
@@ -166,5 +168,5 @@ contact:
         alt: Join the community
       link:
         name: Join Discord
-        url: https://www.fabric.vc/
+        url: https://discordapp.com/invite/wYezN7v
 ---

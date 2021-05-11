@@ -25,7 +25,13 @@ const NavItem = ({ label, url, subitems }) => {
   // Test if dropdown menu
   if (!url && subitems && subitems.length > 0) {
     return (
-      <Dropdown nav isOpen={dropdownOpen} toggle={toggle}>
+      <Dropdown
+        nav
+        isOpen={dropdownOpen}
+        toggle={toggle}
+        onMouseEnter={toggle}
+        onMouseLeave={toggle}
+      >
         <DropdownToggle nav>{label}</DropdownToggle>
         <DropdownMenu>
           {subitems.map((item, i) => (

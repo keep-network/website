@@ -22,13 +22,13 @@
     min-height: 856px;
     background: $grey-10;
 
-    // @media (min-width: #{$bp-medium}) {
-    //   min-height: 1115px;
-    //   display: flex;
-    //   align-items: center;
-    //   padding-top: 0px;
-    //   padding-bottom: 0px;
-    // }
+    @media (min-width: #{$bp-medium}) {
+      min-height: 1115px;
+      display: flex;
+      align-items: center;
+      padding-top: 0px;
+      padding-bottom: 0px;
+    }
 
     .body {
       display: flex;
@@ -41,71 +41,38 @@
       }
     }
 
-    // .gridImgColumn  {
-    //   max-width: 381px;
-    //   height: 1115px;
-    //   margin-right: auto;
-    //   margin-left: -20px;
-    //   // background-image: url(/images/features/info-grid.png);
-    //   background-size: cover;
-    //   opacity: 0.1;
+    .gridImgColumn  {
+      max-width: 381px;
+      height: 1115px;
+      margin-right: auto;
+      margin-left: -20px;
+      background-size: cover;
+      opacity: 0.1;
 
       
-    //   @media (max-width: #{$bp-medium}) {
-    //     max-width: 100%;
-    //     margin-left: 0px;
-    //     transform: rotate(90deg);
-    //     left: -18%;
-    //     background-position-y: center;
-    //   }
-    // };
-
-    // .privacyColumn  {
-    //   align-self: center;
-
-    //   @media (max-width: #{$bp-large}) {
-    //     padding-left: 45px;
-    //     h2  {
-    //       font-size: 45px;
-    //       line-height: 50px;
-    //     }
-    //     p {
-    //       font-size: 18px;
-    //       line-height: 30px;
-    //     }
-    //   }
-    // }
-
-    &:before {
-      content: "";
-      position: absolute;
-      left: 0;
-      right: 0;
-      top: 0;
-      bottom: 0;
-      min-width: 856px;
-      background-image: url(/images/features/info-grid.png);
-      background-repeat: no-repeat;
-      background-position: left bottom;
-      background-size: 275px;
-      transform: rotate(-90deg);
-
-      @media (min-width: #{$bp-medium}) {
-        background-size: 381px;
-        background-position: left;
-        background-position-x: 38px;
-        transform: rotate(0deg);
+      @media (max-width: #{$bp-medium}) {
+        max-width: 100%;
+        margin-left: 0px;
+        transform: rotate(90deg);
+        left: -18%;
+        background-position-y: center;
       }
-    }
+    };
 
-    &:after {
-      content: "";
-      position: absolute;
-      left: 0;
-      right: 0;
-      top: 0;
-      bottom: 0;
-      background: rgba($grey-10, 0.96);
+    .privacyColumn  {
+      align-self: center;
+
+      @media (max-width: #{$bp-large}) {
+        padding-left: 45px;
+        h2  {
+          font-size: 45px;
+          line-height: 50px;
+        }
+        p {
+          font-size: 18px;
+          line-height: 30px;
+        }
+      }
     }
   }
 

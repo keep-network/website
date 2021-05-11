@@ -41,16 +41,16 @@ export const InfoPageTemplate = ({
       <PageSection id={sections.info.FEATURE}>
         <Row className="mr-0">
           <Col xs={12} md={5} 
-          // className="gridImgColumn"
-          //   style={{
-          //     backgroundImage: `url(${withPrefix(
-          //       "/images/features/info-grid.png"
-          //     )})`,
-          //   }}
+          className="gridImgColumn"
+            style={{
+              backgroundImage: `url(${withPrefix(
+                "/images/features/info-grid.png"
+              )})`,
+            }}
           >
           </Col>
           <Col xs={12} md={7} 
-          // className="privacyColumn order-first order-md-last"
+          className="privacyColumn order-first order-md-last"
           >
             <h2>{feature.title}</h2>
             <h4

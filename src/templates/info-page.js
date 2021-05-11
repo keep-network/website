@@ -2,7 +2,7 @@ import React from "react"
 import { connect } from "react-redux"
 import { Col, Row } from "reactstrap"
 import PropTypes from "prop-types"
-import { graphql } from "gatsby"
+import { graphql, withPrefix } from "gatsby"
 
 import {
   App,
@@ -39,9 +39,19 @@ export const InfoPageTemplate = ({
         </Row>
       </PageSection>
       <PageSection id={sections.info.FEATURE}>
-        <Row>
-          <Col xs={12} sm={5}></Col>
-          <Col xs={12} sm={7}>
+        <Row className="mr-0">
+          <Col xs={12} md={5} 
+          // className="gridImgColumn"
+          //   style={{
+          //     backgroundImage: `url(${withPrefix(
+          //       "/images/features/info-grid.png"
+          //     )})`,
+          //   }}
+          >
+          </Col>
+          <Col xs={12} md={7} 
+          // className="privacyColumn order-first order-md-last"
+          >
             <h2>{feature.title}</h2>
             <h4
               className="body"

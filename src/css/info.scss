@@ -22,11 +22,13 @@
     min-height: 856px;
     background: $grey-10;
 
-    @media (min-width: #{$bp-medium}) {
-      min-height: 1115px;
-      display: flex;
-      align-items: center;
-    }
+    // @media (min-width: #{$bp-medium}) {
+    //   min-height: 1115px;
+    //   display: flex;
+    //   align-items: center;
+    //   padding-top: 0px;
+    //   padding-bottom: 0px;
+    // }
 
     .body {
       display: flex;
@@ -38,6 +40,41 @@
         margin-top: 64px;
       }
     }
+
+    // .gridImgColumn  {
+    //   max-width: 381px;
+    //   height: 1115px;
+    //   margin-right: auto;
+    //   margin-left: -20px;
+    //   // background-image: url(/images/features/info-grid.png);
+    //   background-size: cover;
+    //   opacity: 0.1;
+
+      
+    //   @media (max-width: #{$bp-medium}) {
+    //     max-width: 100%;
+    //     margin-left: 0px;
+    //     transform: rotate(90deg);
+    //     left: -18%;
+    //     background-position-y: center;
+    //   }
+    // };
+
+    // .privacyColumn  {
+    //   align-self: center;
+
+    //   @media (max-width: #{$bp-large}) {
+    //     padding-left: 45px;
+    //     h2  {
+    //       font-size: 45px;
+    //       line-height: 50px;
+    //     }
+    //     p {
+    //       font-size: 18px;
+    //       line-height: 30px;
+    //     }
+    //   }
+    // }
 
     &:before {
       content: "";

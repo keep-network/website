@@ -81,7 +81,8 @@ export const StakePageTemplate = ({
         <Row className="recommended-card-section">
           {recommended.cards.map((card, i) => (
             <Col key={`card-${i}`} xs={12} md={6} lg={4}>
-              <FeatureCard className="px-4"
+              <FeatureCard
+                className="px-4"
                 icon={`/images/${card.icon.image.relativePath}`}
                 title={card.title}
                 text={card.body}

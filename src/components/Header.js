@@ -123,6 +123,11 @@ export const HeaderTemplate = ({ navItems = [] }) => {
 
   return (
     <header className={isShrunk ? "stick" : ""}>
+      {isAnnouncementVisible ? (
+        <Announcement onClose={dismissAnnouncement} />
+      ) : (
+        ""
+      )}
       <Navbar className={collapsed ? "collapsed" : ""}>
         <Container fluid="md">
           <NavScrollItem
@@ -175,11 +180,6 @@ export const HeaderTemplate = ({ navItems = [] }) => {
           </Collapse>
         </Container>
       </Navbar>
-      {isAnnouncementVisible ? (
-        <Announcement onClose={dismissAnnouncement} />
-      ) : (
-        ""
-      )}
     </header>
   )
 }

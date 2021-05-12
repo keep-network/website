@@ -1,7 +1,7 @@
 .team-content {
   .ceo-info {
     padding-top: 0px;
-    
+
     h3 {
       margin: 8px 0 48px;
     }
@@ -75,7 +75,11 @@
   }
 
   .profiles {
-    margin-top: 40px;
+    margin-top: 90px;
+
+    @media (max-width: #{$bp-medium - 1}) {
+      margin-top: 40px;
+    }
   }
 
   .advisor-gallery {

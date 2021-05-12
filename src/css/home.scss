@@ -76,12 +76,6 @@
         li {
           list-style: none;
           margin: 0 0 1em;
-
-          &:first-child {
-            .cta-link {
-              @extend .btn-primary;
-            }
-          }
         }
       }
     }
@@ -344,7 +338,7 @@
         max-width: 178px;
         max-height: 178px;
         --gc-width: 28vw;
-        @media (max-width: #{$bp-medium}) {
+        @media (max-width: #{$bp-medium - 1}) {
           top: 0px !important;
         }
         @media (max-width: #{$max-page-width}) {
@@ -486,6 +480,85 @@
       }
     }
 
+    &.parallax-2,
+    &.parallax-3 {
+      .container-md {
+        @media (max-width: #{$bp-medium - 1}) {
+          display: flex;
+          flex-direction: column-reverse;
+        }
+      }
+    }
+
+    .o-section {
+      width: 100vw;
+      height: 100vw;
+      transform-origin: center;
+      transform: rotate(90deg);
+      margin-top: 92px;
+      overflow: hidden;
+      @media (min-width: #{$bp-medium}) {
+        overflow: initial;
+        margin-top: 0;
+        position: absolute;
+        width: 100vw;
+        height: 100%;
+        left: 8vw;
+        transform: none;
+      }
+
+      .make--ring-style {
+        position: absolute;
+        border-radius: var(--circle-width);
+        width: 160vw;
+        height: calc((var(--circle-width) * 1.2));
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      .o-circle {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        bottom: 0;
+
+        &__left,
+        &__right {
+          @extend .make--ring-style;
+        }
+
+        &__left {
+          height: calc((var(--circle-width) * 1.1));
+          background: url("../images/w-image.jpg") no-repeat center;
+          background-size: cover;
+          transform: translate3d(-100px, -50%, 0);
+
+          &.aos-animate {
+            transform: translateY(-50%) !important;
+          }
+
+          &:after {
+            content: "";
+            @extend .make--ring-style;
+            left: 6vw;
+            background: #ffffff;
+            z-index: 0;
+            height: var(--circle-width);
+          }
+        }
+
+        &__right {
+          --right-space: 1.3;
+          left: 15vw;
+          height: calc((var(--circle-width) / 1.2));
+          background-image: url("../images/sphere2.svg");
+          background-repeat: no-repeat;
+          background-size: contain;
+          width: 160vw;
+        }
+      }
+    }
+
     @media (max-width: #{$bp-medium - 1}) {
       &-content {
         margin-top: 88px;
@@ -551,85 +624,6 @@
             padding: 30px;
           }
         }
-      }
-    }
-  }
-
-  .parallax-2,
-  .parallax-3 {
-    .container-md {
-      @media (max-width: #{$bp-medium - 1}) {
-        display: flex;
-        flex-direction: column-reverse;
-      }
-    }
-  }
-
-  .o-section {
-    width: 100vw;
-    height: 100vw;
-    transform-origin: center;
-    transform: rotate(90deg);
-    margin-top: 92px;
-    overflow: hidden;
-    @media (min-width: #{$bp-medium}) {
-      overflow: initial;
-      margin-top: 0;
-      position: absolute;
-      width: 100vw;
-      height: 100%;
-      left: 8vw;
-      transform: none;
-    }
-
-    .make--ring-style {
-      position: absolute;
-      border-radius: var(--circle-width);
-      width: 160vw;
-      height: calc((var(--circle-width) * 1.2));
-      top: 50%;
-      transform: translateY(-50%);
-    }
-
-    .o-circle {
-      position: absolute;
-      width: 100%;
-      top: 0;
-      bottom: 0;
-
-      &__left,
-      &__right {
-        @extend .make--ring-style;
-      }
-
-      &__left {
-        height: calc((var(--circle-width) * 1.1));
-        background: url("../images/w-image.jpg") no-repeat center;
-        background-size: cover;
-        transform: translate3d(-100px, -50%, 0);
-
-        &.aos-animate {
-          transform: translateY(-50%) !important;
-        }
-
-        &:after {
-          content: "";
-          @extend .make--ring-style;
-          left: 6vw;
-          background: #ffffff;
-          z-index: 0;
-          height: var(--circle-width);
-        }
-      }
-
-      &__right {
-        --right-space: 1.3;
-        left: 15vw;
-        height: calc((var(--circle-width) / 1.2));
-        background-image: url("../images/sphere2.svg");
-        background-repeat: no-repeat;
-        background-size: contain;
-        width: 160vw;
       }
     }
   }

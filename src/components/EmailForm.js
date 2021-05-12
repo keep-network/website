@@ -125,7 +125,7 @@ class EmailForm extends Component {
             e.preventDefault()
           }}
         >
-          <FormGroup>
+          <FormGroup className="col-md-12 px-0 pr-xs-2">
             <Label style={{ display: "none" }}>{label}</Label>
             <Input
               className="form-group-input"

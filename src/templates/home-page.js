@@ -2,7 +2,7 @@ import React, { useEffect } from "react"
 import { connect } from "react-redux"
 import { Col, Row } from "reactstrap"
 import PropTypes from "prop-types"
-import { graphql } from "gatsby"
+import { graphql, withPrefix } from "gatsby"
 import Aos from "aos"
 import "aos/dist/aos.css"
 
@@ -217,7 +217,14 @@ export const HomePageTemplate = ({
       <PageSection id={sections.home.KEEP_BLOG}>
         <KeepBlog {...blogs} isMore={true} />
       </PageSection>
-      <PageSection id={sections.home.EXCHANGES}>
+      <PageSection
+        id={sections.home.EXCHANGES}
+        style={{
+          backgroundImage: `url(${withPrefix(
+            "/images/features/exchangesbanner.png"
+          )})`,
+        }}
+      >
         <Row>
           <Col xs={12} sm={12}>
             <div className="text-center">
@@ -356,6 +363,7 @@ export const query = graphql`
               relativePath
             }
             alt
+            url
           }
         }
         blogs {

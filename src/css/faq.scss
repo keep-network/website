@@ -45,6 +45,10 @@
         color: $grey-70;
         max-width: 70%;
         padding-top: 40px;
+
+        a:hover {
+          color: $mint-40;
+        }
       }
 
       @media (max-width: #{$bp-medium - 1}) {

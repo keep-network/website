@@ -66,6 +66,12 @@
   transition: 0.25s all ease-in;
 
   .btn-submit {
+    padding: 16px;
+    margin-left: 5px!important;
+
+    @media (max-width: #{$bp-medium - 1}) {
+      margin-left: 0px!important;
+    }
     svg {
       path {
         transition: all 0.25s ease-in;

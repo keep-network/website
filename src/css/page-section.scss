@@ -60,7 +60,7 @@
       }
     }
 
-    @media (max-width: #{$bp-medium}) {
+    @media (max-width: #{$bp-medium - 1}) {
       max-height: 700px;
 
       .profile {
@@ -74,7 +74,7 @@
       }
     }
 
-    @media (max-width: #{$bp-small}) {
+    @media (max-width: #{$bp-small - 1}) {
       max-height: 600px;
 
       .profile {

@@ -25,7 +25,7 @@
     }
   }
 
-  @media (max-width: #{$bp-medium}) {
+  @media (max-width: #{$bp-medium - 1}) {
     padding: 60px 0 0;
 
     .links {

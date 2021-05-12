@@ -55,7 +55,10 @@ export const HomePageTemplate = ({
           <ul className="cta-links col-sm-12">
             {hero.cta_buttons.map((btn, i) => (
               <li key={`cta-btn-${i}`}>
-                <Link url={btn.url} className="cta-link btn btn-default">
+                <Link
+                  url={btn.url}
+                  className={`btn ${i === 0 ? "btn-primary" : "btn-default"}`}
+                >
                   {btn.label}
                 </Link>
               </li>

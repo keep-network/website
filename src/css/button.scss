@@ -61,6 +61,28 @@
   border-color: $black;
   color: $primary-color;
   transition: 0.25s all ease-in;
+  &:hover {
+    border-color: $black;
+  }
+
+  &:focus,
+  &:active,
+  &.active.focus,
+  &:active:focus,
+  &.active,
+  &.focus {
+    background-color: $primary-color;
+    border-color: $primary-color;
+    color: $black;
+    box-shadow: none;
+    outline: none;
+
+    svg {
+      path {
+        stroke: $black;
+      }
+    }
+  }
 }
 
 .btn-small {

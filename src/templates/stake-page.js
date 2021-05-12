@@ -58,7 +58,7 @@ export const StakePageTemplate = ({
         </Row>
         <Row className="why-card-section">
           {why.cards.map((card, i) => (
-            <Col key={`card-${i}`} xs={12} md={6} lg={4}>
+            <Col key={`card-${i}`} xs={12} md={4}>
               <FeatureCard
                 icon={`/images/${card.icon.image.relativePath}`}
                 title={card.title}
@@ -78,7 +78,7 @@ export const StakePageTemplate = ({
             />
           </Col>
         </Row>
-        <Row className="recommended-card-section">
+        <Row>
           {recommended.cards.map((card, i) => (
             <Col key={`card-${i}`} xs={12} md={6} lg={4}>
               <FeatureCard

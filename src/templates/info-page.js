@@ -113,7 +113,7 @@ export const InfoPageTemplate = ({
         </Row>
         <Row className="info-secure-card-section">
           {secure.cards.map((card, i) => (
-            <Col key={`card-${i}`} xs={12} md={6} lg={4}>
+            <Col key={`card-${i}`} xs={12} md={4}>
               <FeatureCard
                 icon={`/images/${card.icon.image.relativePath}`}
                 title={card.title}

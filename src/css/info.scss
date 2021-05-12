@@ -88,6 +88,15 @@
     &-section {
       margin-top: 53px;
 
+      @media (max-width: #{$bp-large}) {
+        .card-title {
+          font-size: 24px;
+        }
+        .card-text  {
+          font-size: 15px;
+        }
+      }
+
       @media (min-width: #{$bp-medium}) {
         margin-top: 86px;
       }
@@ -205,6 +214,20 @@
 
       @media (min-width: #{$bp-medium}) {
         margin-top: 86px;
+      }
+
+      @media (max-width: #{$bp-large}) {
+        .card-icon  {
+          height: 90px;
+        }
+        .card-title {
+          white-space: normal;
+          font-size: 22px;
+        }
+        .btn  {
+          padding: 14px 24px;
+          font-size: 14px;
+        }
       }
     }
   }

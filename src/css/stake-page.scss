@@ -40,6 +40,17 @@
                 min-height: 356px;
             }
         }
+        @media (max-width: #{$bp-large}) {
+            .card   {
+                min-height: 335px;
+                &-icon  {
+                    height: 95px;
+                }
+                &-title {
+                    font-size: 22px;
+                }
+            }
+        }
     }
 
     .recommended {
@@ -51,6 +62,17 @@
         @media (max-width: #{$bp-medium - 1}) {
             .body {
                 margin: 16px 0 70px;
+            }
+        }
+        .card   {
+            @media (max-width: #{$bp-extra-large}) {
+                min-height: 367px;
+                &-icon  {
+                    padding: 15px;
+                }
+                &-title {
+                    font-size: 26px;
+                }
             }
         }
     }
@@ -95,6 +117,25 @@
             }
             .btn {
                 width: 100%;
+            }
+        }
+        @media (max-width: #{$bp-large}) {
+            &-intro {
+                margin-bottom: 10px;
+            }
+            &-title {
+                margin-bottom: 10px;
+            }
+            &-body  {
+                margin-bottom: 20px;
+            }
+            h3  {
+                font-size: 30px;
+                margin-top: 0px;
+            }
+            h4  {
+                font-size: 20px;
+                font-weight: 300;
             }
         }
     }

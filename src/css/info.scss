@@ -69,16 +69,8 @@
     .privacyColumn  {
       align-self: center;
 
-      @media (max-width: #{$bp-large}) {
+      @media (max-width: #{$bp-large - 1}) {
         padding-left: 45px;
-        h2  {
-          font-size: 45px;
-          line-height: 50px;
-        }
-        p {
-          font-size: 18px;
-          line-height: 30px;
-        }
       }
     }
   }

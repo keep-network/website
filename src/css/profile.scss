@@ -1,7 +1,6 @@
 .profile {
   justify-content: center;
   align-items: center;
-  margin-bottom: 70px;
 
   &-photo {
     img {
@@ -37,9 +36,5 @@
         width: 24px;
       }
     }
-  }
-
-  @media (max-width: #{$bp-medium - 1}) {
-    margin-bottom: 40px;
   }
 }

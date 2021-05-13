@@ -30,8 +30,9 @@ header {
       box-shadow: 1px 1px 10px $grey-40;
     }
 
-    .dropdown-item:active, .dropdown-item:focus {
-      background-color: $grey-10!important;
+    .dropdown-item:active,
+    .dropdown-item:focus {
+      background-color: $grey-10 !important;
     }
 
     .nav {
@@ -146,6 +147,16 @@ header {
             &.active,
             &.focus {
               text-decoration: none;
+
+              &:before {
+                display: block;
+                content: "";
+                width: 60%;
+                height: 3px;
+                position: absolute;
+                bottom: 0;
+                left: 15px;
+              }
             }
 
             &:hover {
@@ -208,6 +219,23 @@ header {
               &:before {
                 background-color: $primary-color;
               }
+            }
+          }
+        }
+      }
+      .dropdown-item {
+        a {
+          &:hover,
+          &:focus,
+          &:active,
+          &.active.focus,
+          &:active:focus,
+          &.active,
+          &.focus {
+            text-decoration: none;
+
+            &:before {
+              display: none !important;
             }
           }
         }

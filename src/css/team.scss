@@ -51,6 +51,8 @@
   }
 
   .team-gallery {
+    padding-bottom: 70px;
+
     h2 {
       margin-bottom: 60px;
     }
@@ -62,6 +64,7 @@
       margin: 4px 0 32px;
     }
     @media (max-width: #{$bp-medium - 1}) {
+      padding-bottom: 0;
       h2 {
         margin-bottom: 38px;
       }
@@ -76,13 +79,25 @@
 
   .profiles {
     margin-top: 90px;
+    > div {
+      margin-bottom: 70px;
+    }
 
     @media (max-width: #{$bp-medium - 1}) {
       margin-top: 40px;
+
+      > div {
+        margin-bottom: 56px;
+      }
     }
   }
 
   .advisor-gallery {
     background-color: $grey-10;
+    padding-bottom: 70px;
+
+    @media (max-width: #{$bp-medium - 1}) {
+      padding-bottom: 0;
+    }
   }
 }

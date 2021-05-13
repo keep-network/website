@@ -45,7 +45,7 @@
       }
     }
 
-    .gridImgColumn  {
+    .gridImgColumn {
       max-width: 381px;
       height: 1115px;
       margin-right: auto;
@@ -55,18 +55,18 @@
       opacity: 0.05;
 
       @media (max-width: #{$bp-medium - 1}) {
-          background-image: url(../images/info-grid-mobile.png);
-          max-width: 100%;
-          background-size: contain;
-          background-repeat: no-repeat;
-          background-position: bottom;
-          margin-left: 15%;
-          height: 400px;
-          opacity: 0.05;
+        background-image: url(../images/info-grid-mobile.png);
+        max-width: 100%;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: bottom;
+        margin-left: 15%;
+        height: 400px;
+        opacity: 0.05;
       }
-    };
+    }
 
-    .privacyColumn  {
+    .privacyColumn {
       align-self: center;
 
       @media (max-width: #{$bp-large - 1}) {
@@ -91,11 +91,11 @@
     &-section {
       margin-top: 53px;
 
-      @media (max-width: #{$bp-large}) {
+      @media (min-width: #{$bp-medium}) and (max-width: #{$bp-large - 1}) {
         .card-title {
           font-size: 24px;
         }
-        .card-text  {
+        .card-text {
           font-size: 15px;
         }
       }
@@ -219,15 +219,15 @@
         margin-top: 86px;
       }
 
-      @media (max-width: #{$bp-large}) {
-        .card-icon  {
+      @media (min-width: #{$bp-medium}) and (max-width: #{$bp-large - 1}) {
+        .card-icon {
           height: 90px;
         }
         .card-title {
           white-space: normal;
           font-size: 22px;
         }
-        .btn  {
+        .btn {
           padding: 14px 24px;
           font-size: 14px;
         }

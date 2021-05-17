@@ -30,7 +30,7 @@
     background-repeat: no-repeat;
 
     padding: 72px 0 0;
-    min-height: 100vh;
+    min-height: 900px;
     margin-top: 0;
 
     &-video-bg {
@@ -105,7 +105,7 @@
 
     @media (min-width: #{$bp-medium}) {
       padding: 150px 0 0;
-
+      min-height: 1000px;
       &-video-bg {
         top: -150px;
       }
@@ -529,8 +529,7 @@
 
         &__left {
           height: calc((var(--circle-width) * 1.1));
-          background: url("../images/w-image.jpg") no-repeat center;
-          background-size: cover;
+          background: url("../images/w-image.svg") no-repeat left;
           transform: translate3d(-100px, -50%, 0);
 
           &.aos-animate {

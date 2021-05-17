@@ -169,7 +169,7 @@ export const HeaderTemplate = ({ navItems = [] }) => {
               </li>
               <li className="nav-item">
                 <a
-                  href="#"
+                  href="https://dashboard.keep.network/"
                   className="btn btn-primary btn-small nav-item"
                   rel="noopener noreferrer"
                 >

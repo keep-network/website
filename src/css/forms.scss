@@ -19,7 +19,10 @@
       font-size: 1rem;
       font-weight: 400;
       line-height: 1.25rem;
-      @include placeholder(#b4b4b4);
+      color: $black;
+      &::placeholder {
+        color: $grey-30;
+      }
     }
   }
 
@@ -54,7 +57,7 @@
         border-color: $error-color;
 
         &:focus {
-          border-color: transparent;
+          border-color: $black;
         }
       }
     }

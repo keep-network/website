@@ -46,7 +46,7 @@ const Contact = ({
       <h1>{title}</h1>
       <EmailForm
         label="Email"
-        placeholder="captain@marvel.io"
+        placeholder="Enter email address"
         onSubmit={signupMailingList}
         requestStates={ajaxRequestStates}
         request={actionTypes.SIGNUP_MAILING_LIST}

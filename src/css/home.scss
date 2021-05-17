@@ -72,20 +72,10 @@
       margin-top: 64px;
       margin-bottom: 72px;
 
-      ul {
-        margin-bottom: 11rem;
-      }
-
       .cta-links {
         li {
           list-style: none;
           margin: 0 0 1em;
-        }
-      }
-
-      @media (max-width: #{$bp-medium}) {
-        ul {
-          margin-bottom: 5rem;
         }
       }
     }
@@ -115,7 +105,7 @@
 
     @media (min-width: #{$bp-medium}) {
       padding: 150px 0 0;
-
+      min-height: 1000px;
       &-video-bg {
         top: -150px;
       }

@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 import { Row, Col } from "reactstrap"
 
 import Button from "./Button"
+import Link from "./Link"
 import Image from "./Image"
 
 const BlogCard = ({ title, source, excerpt, date, icon, url }) => {
@@ -49,7 +50,7 @@ const KeepBlog = ({ title, body, cards, isMore = false }) => {
         </div>
         {isMore && (
           <div className="keep-blog-footer">
-            <a href="https://blog.keep.network/">Read more articles</a>
+            <Link url="https://blog.keep.network/">Read more articles</Link>
           </div>
         )}
       </Col>

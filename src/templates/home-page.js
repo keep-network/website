@@ -235,10 +235,10 @@ export const HomePageTemplate = ({
               <div className="links">
                 {exchanges.links.map((item, i) => (
                   <div key={`exchange-${i}`}>
-                    <a href={item.url} target="new">
+                    <Link url={item.url}>
                       <Image imageData={item.icon} />
                       <span>{item.name}</span>
-                    </a>
+                    </Link>
                   </div>
                 ))}
               </div>

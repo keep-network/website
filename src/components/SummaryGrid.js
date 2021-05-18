@@ -13,12 +13,7 @@ const Card = ({ index, name, title, icon, url }) => {
         <h4>{title}</h4>
       </div>
       <div className="summary-grid-card-footer">
-        <Button
-          onClick={(e) => {}}
-          url={url}
-          label={name}
-          className="btn-default full-width"
-        />
+        <Button url={url} label={name} className="btn-default full-width" />
       </div>
     </div>
   )

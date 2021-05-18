@@ -16,7 +16,6 @@ export const StakePageTemplate = ({
   tech_guide: techGuide = {},
   exchanges = {},
 }) => {
-  console.log("tech:", images)
   return (
     <div className="stake-content">
       <PageSection
@@ -82,7 +81,6 @@ export const StakePageTemplate = ({
           {recommended.cards.map((card, i) => (
             <Col key={`card-${i}`} xs={12} md={6} lg={4}>
               <FeatureCard
-                className="px-4"
                 icon={`/images/${card.icon.image.relativePath}`}
                 title={card.title}
                 text={card.body}
@@ -112,9 +110,10 @@ export const StakePageTemplate = ({
       </PageSection>
       <PageSection id={sections.stake.TECH_GUIDE}>
         <Row>
-          <Col xs={12} md={6}>
+          <Col xs={12} md={5}>
             <Image imageData={images.techUserGuide} />
           </Col>
+          <Col md={1}></Col>
           <Col xs={12} md={6}>
             <div className="tech-guide-intro">{techGuide.intro}</div>
             <h3 className="tech-guide-title">{techGuide.title}</h3>
@@ -142,10 +141,10 @@ export const StakePageTemplate = ({
               <div className="links">
                 {exchanges.links.map((item, i) => (
                   <div key={`exchange-${i}`}>
-                    <a href={item.url} target="new">
+                    <Link url={item.url}>
                       <Image imageData={item.icon} />
                       <span>{item.name}</span>
-                    </a>
+                    </Link>
                   </div>
                 ))}
               </div>

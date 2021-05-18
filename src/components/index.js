@@ -15,7 +15,6 @@ import PageSection from "./PageSection"
 import Profile from "./Profile"
 import SubmitButton from "./SubmitButton"
 import Ticker from "./Ticker"
-import FeatureCarousel from "./FeatureCarousel"
 import SummaryGrid from "./SummaryGrid"
 import MiniLogoWall from "./MiniLogoWall"
 import KeepBlog from "./KeepBlog"
@@ -39,7 +38,6 @@ export {
   Profile,
   SubmitButton,
   Ticker,
-  FeatureCarousel,
   SummaryGrid,
   MiniLogoWall,
   KeepBlog,

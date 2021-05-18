@@ -1,6 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import Image from "./Image"
+import Link from "./Link"
 import { GithubSocial, Keybase, LinkedIn, Twitter } from "./Icons"
 
 const getIcon = (url) => {
@@ -22,9 +23,9 @@ const SocialLink = ({ url }) => {
 
   if (!!icon) {
     return (
-      <a href={url} target="_blank" rel="noopener noreferrer">
+      <Link href={url} target="_blank" rel="noopener noreferrer">
         {icon}
-      </a>
+      </Link>
     )
   }
 

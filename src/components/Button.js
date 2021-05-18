@@ -1,20 +1,17 @@
 import React from "react"
 import classNames from "classnames"
 import PropTypes from "prop-types"
+import Link from "./Link"
 
 const Button = ({ className, label, url, onClick }) => {
-  const isEmail = /^([A-Za-z0-9_\-.+])+@([A-Za-z0-9_\-.])+\.([A-Za-z]{2,})$/.test(
-    url
-  )
-
-  return (
-    <a
-      href={isEmail ? `mailto:${url}` : url}
-      className={classNames(["btn", className])}
-      onClick={(e) => onClick(e)}
-    >
+  return url ? (
+    <Link url={url} className={classNames(["btn", className])}>
       {label}
-    </a>
+    </Link>
+  ) : (
+    <button className={classNames(["btn", className])} onClick={onClick}>
+      {label}
+    </button>
   )
 }
 
@@ -23,6 +20,13 @@ Button.propTypes = {
   label: PropTypes.string,
   url: PropTypes.string,
   onClick: PropTypes.func,
+}
+
+Button.defaultProps = {
+  className: "",
+  label: "",
+  url: "",
+  onClick: null,
 }
 
 export default Button

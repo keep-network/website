@@ -14,6 +14,15 @@ const Link = ({ url, children, ...props }) => {
 
   const currentPageIsHome = location.pathname === withPrefix("/")
 
+  // Test if url is an email address
+  if (/^([A-Za-z0-9_\-.+])+@([A-Za-z0-9_\-.])+\.([A-Za-z]{2,})$/.test(url)) {
+    return (
+      <a href={`mailto:${url}`} {...props}>
+        {children}
+      </a>
+    )
+  }
+
   // Test if url is an external link
   if (/^http/.test(url)) {
     return (

@@ -11,11 +11,12 @@ import {
   NavbarToggler,
   NavLink,
 } from "reactstrap"
-import { graphql, Link, StaticQuery } from "gatsby"
+import { graphql, StaticQuery } from "gatsby"
 import PropTypes from "prop-types"
 
 import Announcement from "./Announcement"
 import NavScrollItem from "./NavScrollItem"
+import Link from "./Link"
 import * as Icons from "./Icons"
 
 const NavItem = ({ label, url, subitems }) => {
@@ -46,7 +47,7 @@ const NavItem = ({ label, url, subitems }) => {
                     {item.label}
                   </NavLink>
                 ) : (
-                  <Link to={item.url} activeClassName="active">
+                  <Link url={item.url} activeClassName="active">
                     {item.label}
                   </Link>
                 )}
@@ -70,7 +71,7 @@ const NavItem = ({ label, url, subitems }) => {
 
   return (
     <li className="nav-item">
-      <Link to={url} activeClassName="active">
+      <Link url={url} activeClassName="active">
         {label}
       </Link>
     </li>
@@ -152,14 +153,14 @@ export const HeaderTemplate = ({ navItems = [] }) => {
             </Nav>
             <ul className="external_btn">
               <li className="nav-item">
-                <a
-                  href="https://discordapp.com/invite/wYezN7v"
+                <Link
+                  url="https://discordapp.com/invite/wYezN7v"
                   target="_blank"
                   className="discord"
                   rel="noopener noreferrer"
                 >
                   <Icons.Discord />
-                </a>
+                </Link>
                 <div className="hint">
                   <Icons.Dashboard />
                   <span>
@@ -168,13 +169,13 @@ export const HeaderTemplate = ({ navItems = [] }) => {
                 </div>
               </li>
               <li className="nav-item">
-                <a
-                  href="https://dashboard.keep.network/"
+                <Link
+                  url="https://dashboard.keep.network/"
                   className="btn btn-primary btn-small nav-item"
                   rel="noopener noreferrer"
                 >
                   Launch
-                </a>
+                </Link>
               </li>
             </ul>
           </Collapse>

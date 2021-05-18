@@ -9,7 +9,7 @@ hero:
   body: For press inquiries, please contact us at <a href="mailto:social@keep.network">social@keep.network</a>.
   cta_buttons:
     - label: Send Email
-      url: mailto:social@keep.network
+      url: social@keep.network
 minilogo_grid:
   - icon:
       image: /images/logos/bloomberg.png

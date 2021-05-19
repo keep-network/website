@@ -53,7 +53,7 @@ secure:
       body: February 2020
       button:
         label: Read Audit
-        url: https://dashboard.keep.network/
+        url: https://consensys.net/diligence/audits/2020/02/thesis-tbtc-and-keep
       icon:
         image: /images/svg/ic-secure-built.svg
         alt: Consensys Audit
@@ -61,7 +61,7 @@ secure:
       body: June 2020
       button:
         label: Read Audit
-        url: https://dashboard.keep.network/
+        url: https://github.com/trailofbits/publications/blob/db9414def9f575465a47fef5489eb54d9c543eb5/reviews/thesis-summary.pdf
       icon:
         image: /images/svg/ic-secure-built.svg
         alt: Trail of Bits Audit
@@ -69,7 +69,7 @@ secure:
       body: May 2020
       button:
         label: Read Audit
-        url: https://dashboard.keep.network/
+        url: https://srgi.me/resources/reports/tbtc_audit.pdf
       icon:
         image: /images/svg/ic-secure-built.svg
         alt: Sergi Delgado Audit

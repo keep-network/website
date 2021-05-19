@@ -82,14 +82,14 @@ banner:
   body: If you plan to stake more than $1MM USD in KEEP, connect with our business development team
   button:
     label: Connect with us
-    url: https://dashboard.keep.network/
+    url: social@keep.network
 tech_guide:
   intro: Technical User Guide
   title: How to set up and run your own Keep node
   body: If you live and breathe the technical specifications of Bash and validator software, consider setting up your own node. View the requirements here.
   button:
     label: View Guide
-    url: https://dashboard.keep.network/
+    url: https://docs.keep.network/run-random-beacon.html
 exchanges:
   title: Keep is listed on the following exchanges
   links:

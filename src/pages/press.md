@@ -32,7 +32,7 @@ news:
       excerpt: The second iteration of tBTC is expected to require stakers to only lock up Keep rather than both Keep and ETH, alongside introducing changes to its wallet-generation mechanism. The protocol allows users to tokenize their Bitcoin for use on the Ethereum network.
       date: "4/12/2021"
       icon:
-        image: /images/home/keep-blog.png
+        image: /images/blog/cointelegraph.png
         alt: Cointelegraph
       url: https://cointelegraph.com/news/keep-network-unveils-v2-specs-for-tbtc-protocol
     - title: "‘Keanu’ Explained: What It Means to Merge Two Ethereum Projects"
@@ -40,7 +40,7 @@ news:
       excerpt: "Two encryption projects, Keep and NuCypher, both running on the Ethereum blockchain, have begun discussing what they are calling a “hard merge,” codename: Keanu. Crucially, this would be a merger of their protocols’ functions and communities, not of their companies."
       date: "3/11/2021"
       icon:
-        image: /images/home/keep-blog.png
+        image: /images/blog/coindesk-blog.png
         alt: CoinDesk
       url: https://www.coindesk.com/keanu-explained-nucypher-keep-merger-ethereum
     - title: Keep Network, NuCypher teams pitch protocol merger on the Ethereum blockchain
@@ -48,7 +48,7 @@ news:
       excerpt: Development teams for Keep Protocol and NuCypher are proposing an on-chain merger in a network first for Ethereum.
       date: "3/8/2021"
       icon:
-        image: /images/home/keep-blog.png
+        image: /images/blog/the-block.png
         alt: The Block
       url: https://www.theblockcrypto.com/post/97634/keep-protocol-nucypher-ethereum-merger
 press_items_section:

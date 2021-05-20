@@ -197,12 +197,14 @@ export const PressPageTemplate = ({
             ))}
           </Col>
         </Row>
-        {allPressEntries.length > 10 && pressEntries.length ? (
+        {pressEntries.length === 0 ? (
+          "No posts available"
+        ) : pressEntries.length > 10 ? (
           <div className="pagination">
             <SeeAllButton onClick={handleShowAll} />
           </div>
         ) : (
-          "No posts available"
+          <></>
         )}
       </PageSection>
     </div>

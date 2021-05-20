@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React, { useEffect, useMemo, useState } from "react"
 import ClampLines from "react-clamp-lines"
 import { Col, Row } from "reactstrap"
 import PropTypes from "prop-types"
@@ -62,28 +62,9 @@ export const PressPageTemplate = ({
 }) => {
   const { press_items: pressItems } = pressItemsSection
   const [allPressEntries, setAllPressEntries] = useState([])
-  const [pressEntries, setPressEntries] = useState([])
   const [year, setYear] = useState(null)
-
-  const entries2019 = allPressEntries.filter((entry) =>
-    entry.date.includes("2019")
-  )
-  const entries2020 = allPressEntries.filter((entry) =>
-    entry.date.includes("2020")
-  )
-  const entries2021 = allPressEntries.filter((entry) =>
-    entry.date.includes("2021")
-  )
-
-  useEffect(() => {
-    year === 2019
-      ? setPressEntries(entries2019)
-      : year === 2020
-      ? setPressEntries(entries2020)
-      : year === 2021 && entries2021
-      ? setPressEntries(entries2021)
-      : setPressEntries(allPressEntries)
-  }, [year])
+  const [entrySize, setEntrySize] = useState(0)
+  const [isShowAll, setShowAll] = useState(false)
 
   useEffect(() => {
     const dateOptions = { year: "numeric", month: "long", day: "numeric" }
@@ -96,18 +77,19 @@ export const PressPageTemplate = ({
         date: new Date(item.date).toLocaleDateString("en-US", dateOptions),
       }))
     setAllPressEntries(sortedAndFormatted)
-    setPressEntries(sortedAndFormatted.slice(0, 10))
   }, [pressItems])
 
-  const handleShowAll = () => {
-    year === 2019
-      ? setPressEntries(entries2019)
-      : year === 2020
-      ? setPressEntries(entries2020)
-      : year === 2021 && entries2021
-      ? setPressEntries(entries2021)
-      : setPressEntries(allPressEntries)
-  }
+  const pressEntries = useMemo(() => {
+    const entires = year
+      ? allPressEntries.filter((entry) => entry.date.includes(year))
+      : [...allPressEntries]
+    setEntrySize(entires.length)
+    if (isShowAll) {
+      return entires
+    } else {
+      return entires.slice(0, 10)
+    }
+  }, [allPressEntries, year, isShowAll])
 
   return (
     <div className="press-content">
@@ -197,12 +179,17 @@ export const PressPageTemplate = ({
             ))}
           </Col>
         </Row>
-        {allPressEntries.length > 10 && pressEntries.length ? (
+        {entrySize === 0 ? (
+          "No posts available"
+        ) : entrySize > 10 ? (
           <div className="pagination">
-            <SeeAllButton onClick={handleShowAll} />
+            <SeeAllButton
+              collapsed={!isShowAll}
+              onClick={() => setShowAll(!isShowAll)}
+            />
           </div>
         ) : (
-          "No posts available"
+          <></>
         )}
       </PageSection>
     </div>

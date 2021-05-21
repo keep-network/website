@@ -2,16 +2,28 @@ import axios from "axios"
 import BigNumber from "bignumber.js"
 
 export class BaseExchangeService {
+  /**
+   * Returns the Uniswap pair data base on the the exchange data.
+   *
+   * @param {string} pairId Uniswap pair id- address of the `UniswapV2Pair`
+   * contract.
+   * @return {Object} Uniswap pair data.
+   */
   getUniswapPairData = async (pairId) => {
     return await this._getUniswapPairData(pairId)
   }
 
+  /**
+   * Returns the current KEEP token price in USD based on the exchange data.
+   *
+   * @return {BigNumber} KEEP token price in USD.
+   */
   getKeepTokenPriceInUSD = async () => {
     return await this._getKeepTokenPriceInUSD()
   }
 
   /**
-   * Returns the current BTC price in USD based on the TBTC/ETH Uniswap pool.
+   * Returns the current BTC price in USD based on the exchange data.
    *
    * @return {BigNumber} BTC price in USD.
    */
@@ -65,7 +77,8 @@ export class UniswapExchangeService extends BaseExchangeService {
   }
 
   /**
-   * Returns the current KEEP token price in USD based on the Uniswap pool.
+   * Returns the current KEEP token price in USD based on the KEEP/ETH Uniswap
+   * v2 pool.
    *
    * @return {BigNumber} KEEP token price in USD.
    */
@@ -76,7 +89,7 @@ export class UniswapExchangeService extends BaseExchangeService {
   }
 
   /**
-   * Returns the current BTC price in USD based on the TBTC/ETH Uniswap pool.
+   * Returns the current BTC price in USD based on the TBTC/ETH Uniswap v2 pool.
    *
    * @return {BigNumber} BTC price in USD.
    */

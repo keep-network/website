@@ -107,12 +107,12 @@ exchanges:
       icon:
         image: /images/svg/uniswap.svg
         alt: Uniswap
-      url: https://uniswap.org/
+      url: https://app.uniswap.org/#/swap?inputCurrency=ETH&outputCurrency=0x85eee30c52b0b379b046fb0f85f4f3dc3009afec
     - name: Balancer
       icon:
         image: /images/svg/balancer.svg
         alt: Balancer
-      url: https://balancer.finance/
+      url: https://app.balancer.fi/#/trade/ether/0x85eee30c52b0b379b046fb0f85f4f3dc3009afec
     - name: Kraken
       icon:
         image: /images/svg/kraken.svg

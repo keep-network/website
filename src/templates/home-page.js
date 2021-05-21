@@ -38,7 +38,11 @@ export const HomePageTemplate = ({
     Aos.init({ once: true })
   }, [])
 
-  const [liquidityRewardsAPYs, isFetching, error] = useLiquidityRewardsAPY()
+  const [liquidityRewardsAPYs, isFetching] = useLiquidityRewardsAPY()
+  const highestAPY =
+    liquidityRewardsAPYs.length > 0
+      ? `${liquidityRewardsAPYs[0].value}% APY.`
+      : "loading..."
 
   return (
     <div className="main-content">
@@ -51,7 +55,7 @@ export const HomePageTemplate = ({
         </div>
         <Row>
           <Col xs={12} lg={10} md={10}>
-            <h1>{hero.title}</h1>
+            <h1>{`${hero.title} ${highestAPY}`}</h1>
             <h4 className="body">{hero.body}</h4>
           </Col>
         </Row>
@@ -69,7 +73,7 @@ export const HomePageTemplate = ({
             ))}
           </ul>
         </Row>
-        {liquidityRewardsAPYs.length > 0 && (
+        {!isFetching && (
           <Ticker
             items={liquidityRewardsAPYs.map((_) => ({
               label: `${_.value}% APY · ${_.pool} POOL`,

@@ -3,11 +3,18 @@ template: info-page
 path: /info
 hero:
   title: Info
-  body: Keep is the privacy-focused infrastructure behind tBTC, the only truly decentralized solution for Bitcoin on Ethereum.
+  body: Keep is the privacy-focused infrastructure behind tBTC, the only truly
+    decentralized solution for Bitcoin on Ethereum.
   image: /images/features/lock.png
 feature:
   title: Keep brings privacy to dapps
-  body: <p>Keep secures private data on public blockchains with “keeps.” Keeps are off-chain containers that allow contracts to manage and use private data without exposing the data itself to the public blockchain.</p><p>In the tBTC solution, the private keys to the bitcoin are stored in keeps, where they cannot be exposed to the public Ethereum blockchain. Keeps are also distributed across validators, ensuring data remains not only private, but decentralized as well.</p>
+  body: <p>Keep secures private data on public blockchains with “keeps.” Keeps are
+    off-chain containers that allow contracts to manage and use private data
+    without exposing the data itself to the public blockchain.</p><p>In the tBTC
+    solution, the private keys to the bitcoin are stored in keeps, where they
+    cannot be exposed to the public Ethereum blockchain. Keeps are also
+    distributed across validators, ensuring data remains not only private, but
+    decentralized as well.</p>
 solution:
   title: The Keep solution
   body: Keep is Ethereum’s first private computer.
@@ -18,12 +25,14 @@ solution:
         image: /images/svg/ic-decentralized.svg
         alt: Decentralized
     - title: Secure
-      body: The Keep Network and tBTC have been fully audited for security and a safe user experience.
+      body: The Keep Network and tBTC have been fully audited for security and a safe
+        user experience.
       icon:
         image: /images/svg/ic-secure.svg
         alt: Secure
     - title: Private
-      body: The private data in keeps are stored and secured using the highest level of encryption.
+      body: The private data in keeps are stored and secured using the highest level
+        of encryption.
       icon:
         image: /images/svg/ic-private.svg
         alt: Private
@@ -32,7 +41,7 @@ tbtc_showcase:
   body: tBTC is the first “killer app” to be built on top of the Keep network.
   button:
     label: Check It Out
-    url: https://fenbushi.vc/
+    url: http://tbtc.network/
   features:
     - name: 1 BTC = 1 TBTC
       icon:
@@ -79,7 +88,8 @@ contact:
   description: Sign up for our newsletter and never miss an update.
   cards:
     - title: Read the Keep blog
-      body: Get the latest updates on the blog. Read about the Keep network, tBTC, partnerships, and more.
+      body: Get the latest updates on the blog. Read about the Keep network, tBTC,
+        partnerships, and more.
       icon:
         image: /images/svg/contact-icon-1.svg
         alt: Read the Keep blog
@@ -87,7 +97,8 @@ contact:
         name: Read Blog
         url: https://www.fabric.vc/
     - title: Join the community
-      body: Connect with the Discord community, ask questions, and get in on the ground level for the future of DeFi.
+      body: Connect with the Discord community, ask questions, and get in on the
+        ground level for the future of DeFi.
       icon:
         image: /images/svg/contact-icon-2.svg
         alt: Join the community

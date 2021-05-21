@@ -15,7 +15,7 @@ const WEEK_IN_SECONDS = 604800 // 7 days in seconds
 
 const NETWORK = 1
 const INFURA_RPC_URL =
-  "https://mainnet.infura.io/v3/c80e8ccdcc4c4a809bce4fc165310617"
+  "https://mainnet.infura.io/v3/b5ebe659c75d4096aa2a8ba40b22f438"
 
 export class LiquidityRewards {
   /**

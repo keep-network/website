@@ -74,7 +74,7 @@ minilogo_grid:
       alt: Decrypt
       url: https://decrypt.co/
 blogs:
-  title: Latest from the Keep Blog
+  title: Featured Coverage
   cards:
     - title: Keep Network unveils v2 specs for tBTC protocol
       source: Cointelegraph

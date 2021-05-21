@@ -20,6 +20,7 @@ import {
 } from "../components"
 import { sections } from "../constants"
 import { actions } from "../redux"
+import useLiquidityRewardsAPY from "../hooks/useLiquidityRewardsAPY"
 
 export const HomePageTemplate = ({
   hero = {},
@@ -36,6 +37,13 @@ export const HomePageTemplate = ({
   useEffect(() => {
     Aos.init({ once: true })
   }, [])
+
+  const [liquidityRewardsAPYs, isFetching] = useLiquidityRewardsAPY()
+  const highestAPY =
+    liquidityRewardsAPYs.length > 0
+      ? `${liquidityRewardsAPYs[0].value}% APY.`
+      : "loading..."
+
   return (
     <div className="main-content">
       <PageSection id={sections.home.HOME}>
@@ -47,7 +55,7 @@ export const HomePageTemplate = ({
         </div>
         <Row>
           <Col xs={12} lg={10} md={10}>
-            <h1>{hero.title}</h1>
+            <h1>{`${hero.title} ${highestAPY}`}</h1>
             <h4 className="body">{hero.body}</h4>
           </Col>
         </Row>
@@ -65,7 +73,13 @@ export const HomePageTemplate = ({
             ))}
           </ul>
         </Row>
-        <Ticker items={hero.tickers} />
+        {!isFetching && (
+          <Ticker
+            items={liquidityRewardsAPYs.map((_) => ({
+              label: `${_.value}% APY · ${_.pool} POOL`,
+            }))}
+          />
+        )}
       </PageSection>
       <PageSection
         id={sections.home.KEEP_SOLUTION}

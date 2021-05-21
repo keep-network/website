@@ -5,14 +5,18 @@ title: Team
 hero:
   name: Matt Luongo
   title: Thesis Founder, CEO
-  body: Matt Luongo is a serial entrepreneur who joined the cryptocurrency space in 2014. He's currently the CEO of Thesis, the crypto venture production studio behind Keep.
+  body: Matt Luongo is a serial entrepreneur who joined the cryptocurrency space
+    in 2014. He's currently the CEO of Thesis, the crypto venture production
+    studio behind Keep.
   image: /images/matt-bw.png
 team_section:
   title: Keep Team
   hp:
     name: Doug von Kohorn
     title: Head of Product
-    body: Doug has been an entrepreneur and operator for over a decade, and most recently served as CEO of the ConsenSys oracle company, Rhombus, which was subsequently acquired.
+    body: Doug has been an entrepreneur and operator for over a decade, and most
+      recently served as CEO of the ConsenSys oracle company, Rhombus, which was
+      subsequently acquired.
     image: /images/doug-bw.png
   team:
     - name: Laura Wallendal
@@ -66,7 +70,7 @@ team_section:
     - name: Rafal Czajkowski
       title: Engineer
       image: /images/rafal-bw.png
-    - name: Tomasz Sloban
+    - name: Tomasz Słaboń
       title: Engineer
       image: /images/tomasz-bw.png
 advisors_section:

@@ -17,7 +17,7 @@ const NETWORK = 1
 const INFURA_RPC_URL =
   "https://mainnet.infura.io/v3/c80e8ccdcc4c4a809bce4fc165310617"
 
-class LiquidityRewards {
+export class LiquidityRewards {
   /**
    * @param {Contract} _contract Ethers contract instance.
    * @param {BaseExchangeService} _exchangeService The exchange service.

@@ -1,4 +1,4 @@
-import { Contract, providers } from "ethers"
+import { Contract } from "ethers"
 import BigNumber from "bignumber.js"
 
 import {

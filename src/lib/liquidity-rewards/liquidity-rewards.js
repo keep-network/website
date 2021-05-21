@@ -149,6 +149,7 @@ export class LiquidityRewardsKeepVault extends LiquidityRewards {
   }
 
   _rewardPoolPerWeek = async () => {
+    // eslint-disable-next-line new-cap
     const tokensLockedEventFilter = this.contract.filters.TokensLocked()
 
     const tokensLockedEvents = (

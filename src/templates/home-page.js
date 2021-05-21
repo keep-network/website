@@ -20,6 +20,7 @@ import {
 } from "../components"
 import { sections } from "../constants"
 import { actions } from "../redux"
+import useLiquidityRewardsAPY from "../hooks/useLiquidityRewardsAPY"
 
 export const HomePageTemplate = ({
   hero = {},
@@ -36,6 +37,9 @@ export const HomePageTemplate = ({
   useEffect(() => {
     Aos.init({ once: true })
   }, [])
+
+  const [liquidityRewardsAPYs, isFetching, error] = useLiquidityRewardsAPY()
+
   return (
     <div className="main-content">
       <PageSection id={sections.home.HOME}>
@@ -65,7 +69,13 @@ export const HomePageTemplate = ({
             ))}
           </ul>
         </Row>
-        <Ticker items={hero.tickers} />
+        {liquidityRewardsAPYs.length > 0 && (
+          <Ticker
+            items={liquidityRewardsAPYs.map((_) => ({
+              label: `${_.value}% APY · ${_.pool} POOL`,
+            }))}
+          />
+        )}
       </PageSection>
       <PageSection
         id={sections.home.KEEP_SOLUTION}

@@ -17,6 +17,7 @@ collections:
   - name: "pages"
     label: "Pages"
     files:
+      # TODO: #339 - will uncomment in next PR
       - file: "src/pages/index.md"
         label: "Home"
         name: "home"
@@ -32,145 +33,803 @@ collections:
             name: "hero"
             widget: "object"
             fields:
-              - {label: "Title", name: "title", widget: "markdown", minimal: true}
-              - {label: "Body", name: "body", widget: "markdown", required: false}
+              - {
+                  label: "Title",
+                  name: "title",
+                  widget: "markdown",
+                  minimal: true,
+                }
+              - {
+                  label: "Body",
+                  name: "body",
+                  widget: "markdown",
+                  required: false,
+                }
               - {
                   label: "Background Image",
                   name: "bg_image",
                   widget: "image",
-                  hint: "IMPORTANT! Image must be named \"hero-bg.jpg\" exactly
+                  hint: 'IMPORTANT! Image must be named "hero-bg.jpg" exactly
                     (it also must be a jpg), otherwise it will not appear.
                     Minimum image width of 2880px required (to be rendered as
-                    1440px) to support higher resolution screens.",
+                    1440px) to support higher resolution screens.',
                 }
-              - label: "CTA"
-                name: "cta"
-                widget: "object"
-                required: false
-                fields:
-                  - {
-                      label: Icon,
-                      name: icon,
-                      widget: object,
-                      required: false,
-                      fields: [
-                        {
-                          label: "Image",
-                          name: "image",
-                          widget: file,
-                          media_library: { config: { multiple: false } },
-                          hint: "SVG only. SVG must have width and height attributes set in the file."
-                        },
-                        {label: "Alt", name: "alt", widget: "string"}
-                      ]
-                    }
-                  - {label: "Label", name: "label", widget: "string"}
               - {
                   label: "CTA Buttons",
                   name: "cta_buttons",
                   widget: "list",
                   allow_add: true,
                   required: false,
-                  fields: [
-                    { label: Label, name: label, widget: string },
-                    { label: URL, name: url, widget: string },
-                  ],
+                  fields:
+                    [
+                      { label: Label, name: label, widget: string },
+                      { label: URL, name: url, widget: string },
+                    ],
                 }
-          - label: "Team Section"
-            name: "team_section"
+              - {
+                  label: "Tickers",
+                  name: "tickers",
+                  widget: "list",
+                  allow_add: true,
+                  required: false,
+                  fields: [{ label: Label, name: label, widget: string }],
+                }
+          - label: "Feature Carousel"
+            name: "carousel"
+            widget: "list"
+            allow_add: true
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Body", name: "body", widget: "string" }
+              - {
+                  label: "Background Image",
+                  name: "bg_image",
+                  widget: "image",
+                  hint: "Minimum image width of 528px required (to be
+                    rendered as 274px) to support higher resolution screens",
+                }
+              - { label: "Class Name", name: "class", widget: "string" }
+          - label: "Summary Grid"
+            name: "summary_grid"
             widget: "object"
             fields:
-              - {label: "Title", name: "title", widget: "string"}
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Body", name: "body", widget: "string" }
               - {
-                  label: "Team",
-                  name: "team",
+                  label: "Cards",
+                  name: "cards",
                   widget: "list",
                   allow_add: true,
                   fields:
                     [
-                      {label: "Name", name: "name", widget: "string"},
-                      {label: "Title", name: "title", widget: "string"},
+                      { label: "Name", name: "name", widget: "string" },
+                      { label: "Title", name: "title", widget: "string" },
                       {
-                        label: "Profile Image",
-                        name: "image",
-                        widget: "image",
-                        hint: "Minimum image width of 528px required (to be
-                          rendered as 274px) to support higher resolution screens",
+                        label: Icon,
+                        name: icon,
+                        widget: object,
+                        fields:
+                          [
+                            {
+                              label: "Image",
+                              name: "image",
+                              widget: file,
+                              media_library: { config: { multiple: false } },
+                              hint: "SVG only. SVG must have width and height attributes set in the file.",
+                            },
+                            { label: "Alt", name: "alt", widget: "string" },
+                          ],
                       },
-                      {
-                        label: "Social Links",
-                        name: "social_links",
-                        widget: "list",
-                        allow_add: true,
-                        required: false,
-                        hint: "Only Twitter, LinkedIn, GitHub or Keybase social links will be displayed",
-                        fields: [{ label: URL, name: url, widget: string }],
-                      },
-                    ]
+                    ],
                 }
-          - label: "Advisors Section"
-            name: "advisors_section"
+          - label: "Minilogo Grid"
+            name: "minilogo_grid"
+            widget: "list"
+            allow_add: true
+            fields:
+              - {
+                  label: Icon,
+                  name: icon,
+                  widget: object,
+                  fields:
+                    [
+                      {
+                        label: "Image",
+                        name: "image",
+                        widget: file,
+                        media_library: { config: { multiple: false } },
+                        hint: "Image width of 168px and 72px required (to be
+                          rendered as 168 x 72) to support higher resolution screens",
+                      },
+                      { label: "Alt", name: "alt", widget: "string" },
+                    ],
+                }
+          - label: "Latest Blog"
+            name: "blogs"
             widget: "object"
             fields:
-              - {label: "Title", name: "title", widget: "string"}
+              - { label: "Title", name: "title", widget: "string" }
               - {
-                  label: "Advisors",
-                  name: "advisors",
+                  label: "Blogs",
+                  name: "cards",
                   widget: "list",
                   allow_add: true,
                   fields:
                     [
-                      {label: "Name", name: "name", widget: "string"},
-                      {label: "Title", name: "title", widget: "string"},
+                      { label: "Title", name: "title", widget: "string" },
+                      { label: "Source", name: "source", widget: "string" },
+                      { label: "Excerpt", name: "excerpt", widget: "markdown" },
                       {
-                        label: "Profile Image",
-                        name: "image",
-                        widget: "image",
-                        hint: "Minimum image width of 528px required (to be
-                          rendered as 274px) to support higher resolution screens",
+                        label: "Date & Time",
+                        name: "date",
+                        widget: "datetime",
                       },
                       {
-                        label: "Social Links",
-                        name: "social_links",
-                        widget: "list",
-                        allow_add: true,
-                        required: false,
-                        hint: "Only Twitter, LinkedIn, GitHub or Keybase social links will be displayed",
-                        fields: [{ label: URL, name: url, widget: string }],
+                        label: Icon,
+                        name: icon,
+                        widget: object,
+                        fields:
+                          [
+                            {
+                              label: "Image",
+                              name: "image",
+                              widget: file,
+                              media_library: { config: { multiple: false } },
+                              hint:
+                                "Image width of 168px and 168px required (to be
+                                rendered as 168 x 168) to support higher resolution screens",
+                            },
+                            { label: "Alt", name: "alt", widget: "string" },
+                          ],
                       },
-                    ]
+                      { label: "Url", name: "url", widget: "string" },
+                    ],
                 }
-          - label: "Supporters Section"
-            name: "supporters_section"
+          - label: "Exchanges"
+            name: "exchanges"
             widget: "object"
             fields:
-              - {label: "Title", name: "title", widget: "string"}
+              - { label: "Title", name: "title", widget: "string" }
               - {
-                label: "Supporters",
-                name: "supporters",
-                widget: "list",
-                allow_add: true,
-                fields:
-                  [
-                    {label: "Name", name: "name", widget: "string"},
-                    {label: "URL", name: "url", widget: "string"},
-                    {
-                      label: Logo,
-                      name: logo,
-                      widget: object,
-                      fields:
-                        [
-                          {
-                            label: Image,
-                            name: image,
-                            widget: image,
-                            hint: "Image should be at least the 2x resolution size",
-                          },
-                          { label: Alt, name: alt, widget: string },
-                        ],
-                    }
-                  ],
-              }
+                  label: "Links",
+                  name: "links",
+                  widget: "list",
+                  allow_add: true,
+                  fields:
+                    [
+                      { label: "Name", name: "name", widget: "string" },
+                      {
+                        label: Icon,
+                        name: icon,
+                        widget: object,
+                        fields:
+                          [
+                            {
+                              label: "Image",
+                              name: "image",
+                              widget: file,
+                              media_library: { config: { multiple: false } },
+                              hint: "SVG only. SVG must have width and height attributes set in the file.",
+                            },
+                            { label: "Alt", name: "alt", widget: "string" },
+                          ],
+                      },
+                      { label: "Url", name: "url", widget: "string" },
+                    ],
+                }
+          - label: "Logo Wall"
+            name: "logo_wall"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - {
+                  label: "Supporters",
+                  name: "supporters",
+                  widget: "list",
+                  allow_add: true,
+                  fields:
+                    [
+                      { label: "Name", name: "name", widget: "string" },
+                      { label: "URL", name: "url", widget: "string" },
+                      {
+                        label: Logo,
+                        name: logo,
+                        widget: object,
+                        fields:
+                          [
+                            {
+                              label: Image,
+                              name: image,
+                              widget: image,
+                              hint: "Image should be at least the 2x resolution size",
+                            },
+                            { label: Alt, name: alt, widget: string },
+                          ],
+                      },
+                    ],
+                }
+          - label: "Contact"
+            name: "contact"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Header", name: "header", widget: "string" }
+              - { label: "Description", name: "description", widget: "string" }
+              - {
+                  label: "Cards",
+                  name: "cards",
+                  widget: "list",
+                  allow_add: true,
+                  fields:
+                    [
+                      { label: "Title", name: "title", widget: "string" },
+                      { label: "Body", name: "body", widget: "string" },
+                      {
+                        label: Icon,
+                        name: icon,
+                        widget: object,
+                        fields:
+                          [
+                            {
+                              label: "Image",
+                              name: "image",
+                              widget: file,
+                              media_library: { config: { multiple: false } },
+                              hint: "SVG only. SVG must have width and height attributes set in the file.",
+                            },
+                            { label: "Alt", name: "alt", widget: "string" },
+                          ],
+                      },
+                      {
+                        label: Link,
+                        name: link,
+                        widget: object,
+                        fields:
+                          [
+                            { label: "Name", name: "name", widget: "string" },
+                            { label: "Url", name: "url", widget: "string" },
+                          ],
+                      },
+                    ],
+                }
+      - file: "src/pages/build.md"
+        label: "Build"
+        name: "build"
+        fields:
+          - {
+              label: "Template",
+              name: "template",
+              widget: "hidden",
+              default: "build-page",
+            }
+          - { label: "Path", name: "path", widget: "hidden", default: "/build" }
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - {
+                  label: "Title",
+                  name: "title",
+                  widget: "markdown",
+                  minimal: true,
+                }
+              - {
+                  label: "Body",
+                  name: "body",
+                  widget: "markdown",
+                  required: false,
+                }
+              - {
+                  label: "Widget Image",
+                  name: "image",
+                  widget: "image",
+                  hint: "Minimum image width of 440px required (to be
+                    rendered as 274px) to support higher resolution screens",
+                }
+              - {
+                  label: "CTA Buttons",
+                  name: "cta_buttons",
+                  widget: "list",
+                  allow_add: true,
+                  required: false,
+                  fields:
+                    [
+                      { label: Label, name: label, widget: string },
+                      { label: URL, name: url, widget: string },
+                    ],
+                }
+          - label: "Library"
+            name: "library"
+            widget: "object"
+            fields:
+              - {
+                  label: "Title",
+                  name: "title",
+                  widget: "markdown",
+                  minimal: true,
+                }
+              - {
+                  label: "Body",
+                  name: "body",
+                  widget: "markdown",
+                  required: false,
+                }
+              - {
+                  label: "Cards",
+                  name: "cards",
+                  widget: "list",
+                  allow_add: true,
+                  required: false,
+                  fields:
+                    [
+                      { label: Title, name: title, widget: string },
+                      { label: Body, name: body, widget: string },
+                      {
+                        label: Button,
+                        name: button,
+                        widget: object,
+                        fields:
+                          [
+                            { label: Label, name: label, widget: string },
+                            { label: URL, name: url, widget: string },
+                          ],
+                      },
+                      {
+                        label: Icon,
+                        name: icon,
+                        widget: object,
+                        fields:
+                          [
+                            {
+                              label: "Image",
+                              name: "image",
+                              widget: file,
+                              media_library: { config: { multiple: false } },
+                              hint: "SVG only. SVG must have width and height attributes set in the file.",
+                            },
+                            { label: "Alt", name: "alt", widget: "string" },
+                          ],
+                      },
+                    ],
+                }
+          - label: "Community"
+            name: "community"
+            widget: "object"
+            fields:
+              - {
+                  label: "Title",
+                  name: "title",
+                  widget: "markdown",
+                  minimal: true,
+                }
+              - {
+                  label: "Body",
+                  name: "body",
+                  widget: "markdown",
+                  required: false,
+                }
+              - {
+                  label: "Cards",
+                  name: "cards",
+                  widget: "list",
+                  allow_add: true,
+                  required: false,
+                  fields:
+                    [
+                      { label: Title, name: title, widget: string },
+                      {
+                        label: Button,
+                        name: button,
+                        widget: object,
+                        fields:
+                          [
+                            { label: Label, name: label, widget: string },
+                            { label: URL, name: url, widget: string },
+                          ],
+                      },
+                      {
+                        label: Icon,
+                        name: icon,
+                        widget: object,
+                        fields:
+                          [
+                            {
+                              label: "Image",
+                              name: "image",
+                              widget: file,
+                              media_library: { config: { multiple: false } },
+                              hint: "PNG only. PNG must have width and height attributes set in the file.",
+                            },
+                            { label: "Alt", name: "alt", widget: "string" },
+                          ],
+                      },
+                    ],
+                }
+          - label: "Secure"
+            name: "secure"
+            widget: "object"
+            fields:
+              - {
+                  label: "Title",
+                  name: "title",
+                  widget: "markdown",
+                  minimal: true,
+                }
+              - {
+                  label: "Body",
+                  name: "body",
+                  widget: "markdown",
+                  required: false,
+                }
+              - {
+                  label: "Cards",
+                  name: "cards",
+                  widget: "list",
+                  allow_add: true,
+                  required: false,
+                  fields:
+                    [
+                      { label: Title, name: title, widget: string },
+                      { label: Body, name: body, widget: string },
+                      {
+                        label: Button,
+                        name: button,
+                        widget: object,
+                        fields:
+                          [
+                            { label: Label, name: label, widget: string },
+                            { label: URL, name: url, widget: string },
+                          ],
+                      },
+                      {
+                        label: Icon,
+                        name: icon,
+                        widget: object,
+                        fields:
+                          [
+                            {
+                              label: "Image",
+                              name: "image",
+                              widget: file,
+                              media_library: { config: { multiple: false } },
+                              hint: "SVG only. SVG must have width and height attributes set in the file.",
+                            },
+                            { label: "Alt", name: "alt", widget: "string" },
+                          ],
+                      },
+                    ],
+                }
+          - label: "Contact"
+            name: "contact"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Header", name: "header", widget: "string" }
+              - { label: "Description", name: "description", widget: "string" }
+              - {
+                  label: "Cards",
+                  name: "cards",
+                  widget: "list",
+                  allow_add: true,
+                  fields:
+                    [
+                      { label: "Title", name: "title", widget: "string" },
+                      { label: "Body", name: "body", widget: "string" },
+                      {
+                        label: Icon,
+                        name: icon,
+                        widget: object,
+                        fields:
+                          [
+                            {
+                              label: "Image",
+                              name: "image",
+                              widget: file,
+                              media_library: { config: { multiple: false } },
+                              hint: "SVG only. SVG must have width and height attributes set in the file.",
+                            },
+                            { label: "Alt", name: "alt", widget: "string" },
+                          ],
+                      },
+                      {
+                        label: Link,
+                        name: link,
+                        widget: object,
+                        fields:
+                          [
+                            { label: "Name", name: "name", widget: "string" },
+                            { label: "Url", name: "url", widget: "string" },
+                          ],
+                      },
+                    ],
+                }
+      - file: "src/pages/stake.md"
+        label: "Stake"
+        name: "stake"
+        fields:
+          - {
+              label: "Template",
+              name: "template",
+              widget: "hidden",
+              default: "stake-page",
+            }
+          - { label: "Path", name: "path", widget: "hidden", default: "/stake" }
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - {
+                  label: "Title",
+                  name: "title",
+                  widget: "markdown",
+                  minimal: true,
+                }
+              - {
+                  label: "Body",
+                  name: "body",
+                  widget: "markdown",
+                  required: false,
+                }
+              - {
+                  label: "CTA Buttons",
+                  name: "cta_buttons",
+                  widget: "list",
+                  allow_add: true,
+                  required: false,
+                  fields:
+                    [
+                      { label: Label, name: label, widget: string },
+                      { label: URL, name: url, widget: string },
+                    ],
+                }
+          - label: "Why"
+            name: "why"
+            widget: "object"
+            fields:
+              - {
+                  label: "Title",
+                  name: "title",
+                  widget: "markdown",
+                  minimal: true,
+                }
+              - {
+                  label: "Cards",
+                  name: "cards",
+                  widget: "list",
+                  allow_add: true,
+                  required: false,
+                  fields:
+                    [
+                      { label: Title, name: title, widget: string },
+                      { label: Body, name: body, widget: string },
+                      {
+                        label: Icon,
+                        name: icon,
+                        widget: object,
+                        fields:
+                          [
+                            {
+                              label: "Image",
+                              name: "image",
+                              widget: file,
+                              media_library: { config: { multiple: false } },
+                              hint: "SVG only. SVG must have width and height attributes set in the file.",
+                            },
+                            { label: "Alt", name: "alt", widget: "string" },
+                          ],
+                      },
+                    ],
+                }
+          - label: "Recommended"
+            name: "recommended"
+            widget: "object"
+            fields:
+              - {
+                  label: "Title",
+                  name: "title",
+                  widget: "markdown",
+                  minimal: true,
+                }
+              - {
+                  label: "Body",
+                  name: "body",
+                  widget: "markdown",
+                  required: false,
+                }
+              - {
+                  label: "Cards",
+                  name: "cards",
+                  widget: "list",
+                  allow_add: true,
+                  required: false,
+                  fields:
+                    [
+                      { label: Title, name: title, widget: string },
+                      { label: Body, name: body, widget: string },
+                      {
+                        label: Button,
+                        name: button,
+                        widget: object,
+                        fields:
+                          [
+                            { label: Label, name: label, widget: string },
+                            { label: URL, name: url, widget: string },
+                          ],
+                      },
+                      {
+                        label: Icon,
+                        name: icon,
+                        widget: object,
+                        fields:
+                          [
+                            {
+                              label: "Image",
+                              name: "image",
+                              widget: file,
+                              media_library: { config: { multiple: false } },
+                              hint: "PNG only. PNG must have width and height attributes set in the file.",
+                            },
+                            { label: "Alt", name: "alt", widget: "string" },
+                          ],
+                      },
+                    ],
+                }
+          - label: "Banner"
+            name: "banner"
+            widget: "object"
+            fields:
+              - {
+                  label: "Body",
+                  name: "body",
+                  widget: "markdown",
+                  required: false,
+                }
+              - {
+                  label: Button,
+                  name: button,
+                  widget: object,
+                  fields:
+                    [
+                      { label: Label, name: label, widget: string },
+                      { label: URL, name: url, widget: string },
+                    ],
+                }
+          - label: "Tech Guide"
+            name: "tech_guide"
+            widget: "object"
+            fields:
+              - {
+                  label: "Intro",
+                  name: "intro",
+                  widget: "markdown",
+                  required: true,
+                }
+              - {
+                  label: "Title",
+                  name: "title",
+                  widget: "markdown",
+                  required: true,
+                }
+              - {
+                  label: "Body",
+                  name: "body",
+                  widget: "markdown",
+                  required: true,
+                }
+              - {
+                  label: Button,
+                  name: button,
+                  widget: object,
+                  fields:
+                    [
+                      { label: Label, name: label, widget: string },
+                      { label: URL, name: url, widget: string },
+                    ],
+                }
+          - label: "Exchanges"
+            name: "exchanges"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - {
+                  label: "Links",
+                  name: "links",
+                  widget: "list",
+                  allow_add: true,
+                  fields:
+                    [
+                      { label: "Name", name: "name", widget: "string" },
+                      {
+                        label: Icon,
+                        name: icon,
+                        widget: object,
+                        fields:
+                          [
+                            {
+                              label: "Image",
+                              name: "image",
+                              widget: file,
+                              media_library: { config: { multiple: false } },
+                              hint: "SVG only. SVG must have width and height attributes set in the file.",
+                            },
+                            { label: "Alt", name: "alt", widget: "string" },
+                          ],
+                      },
+                      { label: "Url", name: "url", widget: "string" },
+                    ],
+                }
+      - file: "src/pages/faq.md"
+        label: "FAQ"
+        name: "faq"
+        fields:
+          - {
+              label: "Template",
+              name: "template",
+              widget: "hidden",
+              default: "faq-page",
+            }
+          - { label: "Path", name: "path", widget: "hidden", default: "/faq" }
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - {
+                  label: "Title",
+                  name: "title",
+                  widget: "markdown",
+                  minimal: true,
+                }
+          - label: "Questions"
+            name: "questions"
+            widget: "list"
+            allow_add: true
+            fields:
+              - { label: "Question", name: "question", widget: "string" }
+              - { label: "Answer", name: "answer", widget: "string" }
+          - label: "Contact"
+            name: "contact"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Header", name: "header", widget: "string" }
+              - { label: "Description", name: "description", widget: "string" }
+              - {
+                  label: "Cards",
+                  name: "cards",
+                  widget: "list",
+                  allow_add: true,
+                  fields:
+                    [
+                      { label: "Title", name: "title", widget: "string" },
+                      { label: "Body", name: "body", widget: "string" },
+                      {
+                        label: Icon,
+                        name: icon,
+                        widget: object,
+                        fields:
+                          [
+                            {
+                              label: "Image",
+                              name: "image",
+                              widget: file,
+                              media_library: { config: { multiple: false } },
+                              hint: "SVG only. SVG must have width and height attributes set in the file.",
+                            },
+                            { label: "Alt", name: "alt", widget: "string" },
+                          ],
+                      },
+                      {
+                        label: Link,
+                        name: link,
+                        widget: object,
+                        fields:
+                          [
+                            { label: "Name", name: "name", widget: "string" },
+                            { label: "Url", name: "url", widget: "string" },
+                          ],
+                      },
+                    ],
+                }
       - file: "src/pages/press.md"
         label: "Press"
         name: "press"
@@ -181,103 +840,614 @@ collections:
               widget: "hidden",
               default: "press-page",
             }
-          - {label: "Path", name: "path", widget: "hidden", default: "/press"}
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Subtitle", name: "subtitle", widget: "markdown", minimal: true}
-          - label: "Media Kit Section"
-            name: "media_kit_section"
+          - { label: "Path", name: "path", widget: "hidden", default: "/press" }
+          - { label: "Title", name: "title", widget: "string" }
+          - label: "Hero"
+            name: "hero"
             widget: "object"
             fields:
-              - {label: "Title", name: "title", widget: "string"}
-              - {label: "Subtitle", name: "subtitle", widget: "string"}
-              - label: "Media Kit"
-                name: "media_kit"
-                widget: "object"
-                fields:
-                  - {label: "Label", name: "label", widget: "string"}
-                  - {label: "Contents", name: "contents", widget: "list"}
-                  - {
-                      label: Icon,
-                      name: icon,
-                      widget: object,
-                      fields: [
-                        {
-                          label: "Image",
-                          name: "image",
-                          widget: file,
-                          media_library: { config: { multiple: false } },
-                          hint: "SVG only. SVG must have width and height attributes set in the file."
-                        },
-                        {label: "Alt", name: "alt", widget: "string"}
-                      ]
-                    }
-                  - label: "Download Button"
-                    name: "download_button"
-                    widget: "object"
-                    fields:
-                      - {label: "Label", name: "label", widget: "string"}
-                      - {
-                        label: File,
-                        name: file,
+              - {
+                  label: "Title",
+                  name: "title",
+                  widget: "markdown",
+                  minimal: true,
+                }
+              - {
+                  label: "Body",
+                  name: "body",
+                  widget: "markdown",
+                  required: false,
+                }
+              - {
+                  label: "CTA Buttons",
+                  name: "cta_buttons",
+                  widget: "list",
+                  allow_add: true,
+                  required: false,
+                  fields:
+                    [
+                      { label: Label, name: label, widget: string },
+                      { label: URL, name: url, widget: string },
+                    ],
+                }
+          - label: "Minilogo Grid"
+            name: "minilogo_grid"
+            widget: "list"
+            allow_add: true
+            fields:
+              - {
+                  label: Icon,
+                  name: icon,
+                  widget: object,
+                  fields:
+                    [
+                      {
+                        label: "Image",
+                        name: "image",
                         widget: file,
                         media_library: { config: { multiple: false } },
-                        hint: "Media Kit Zip file"
-                      }
+                        hint: "Image width of 168px and 72px required (to be
+                          rendered as 168 x 72) to support higher resolution screens",
+                      },
+                      { label: "Alt", name: "alt", widget: "string" },
+                    ],
+                }
+          - label: "News"
+            name: "news"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Body", name: "body", widget: "string" }
+              - {
+                  label: "Blogs",
+                  name: "cards",
+                  widget: "list",
+                  allow_add: true,
+                  fields:
+                    [
+                      { label: "Title", name: "title", widget: "string" },
+                      { label: "Source", name: "source", widget: "string" },
+                      { label: "Excerpt", name: "excerpt", widget: "markdown" },
+                      {
+                        label: "Date & Time",
+                        name: "date",
+                        widget: "datetime",
+                      },
+                      {
+                        label: Icon,
+                        name: icon,
+                        widget: object,
+                        fields:
+                          [
+                            {
+                              label: "Image",
+                              name: "image",
+                              widget: file,
+                              media_library: { config: { multiple: false } },
+                              hint:
+                                "Image width of 168px and 72px required (to be
+                                rendered as 168 x 168) to support higher resolution screens",
+                            },
+                            { label: "Alt", name: "alt", widget: "string" },
+                          ],
+                      },
+                      { label: "Url", name: "url", widget: "string" },
+                    ],
+                }
           - label: "Press Items Section"
             name: "press_items_section"
             widget: "object"
             fields:
-              - {label: "Title", name: "title", widget: "string"}
+              - { label: "Title", name: "title", widget: "string" }
               - label: "Press Items"
                 name: "press_items"
                 widget: "list"
                 allow_add: true
                 fields:
-                  - {label: "Title", name: "title", widget: "string"}
-                  - {label: "Date", name: "date", widget: "datetime"}
-                  - {label: "Source", name: "source", widget: "string"}
-                  - {label: "Excerpt", name: "excerpt", widget: "markdown", minimal: true}
-                  - {label: "URL", name: "url", widget: "string"}
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Date", name: "date", widget: "datetime" }
+                  - { label: "Source", name: "source", widget: "string" }
+                  - {
+                      label: "Excerpt",
+                      name: "excerpt",
+                      widget: "markdown",
+                      minimal: true,
+                    }
+                  - { label: "URL", name: "url", widget: "string" }
+      - file: "src/pages/team.md"
+        label: "Team"
+        name: "team"
+        fields:
+          - {
+              label: "Template",
+              name: "template",
+              widget: "hidden",
+              default: "home-page",
+            }
+          - { label: "Path", name: "path", widget: "hidden", default: "/" }
+          - { label: "Title", name: "title", widget: "markdown", minimal: true }
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - {
+                  label: "Name",
+                  name: "name",
+                  widget: "markdown",
+                  minimal: true,
+                }
+              - {
+                  label: "title",
+                  name: "title",
+                  widget: "markdown",
+                  minimal: true,
+                }
+              - {
+                  label: "Body",
+                  name: "body",
+                  widget: "markdown",
+                  required: false,
+                }
+              - {
+                  label: "Profile Photo",
+                  name: "image",
+                  widget: "image",
+                  hint: "Minimum image width of 528px required (to be
+                    rendered as 274px) to support higher resolution screens",
+                }
+          - label: "Team Section"
+            name: "team_section"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - label: "Head of Product"
+                name: "hp"
+                widget: "object"
+                fields:
+                  - {
+                      label: "Name",
+                      name: "name",
+                      widget: "markdown",
+                      minimal: true,
+                    }
+                  - {
+                      label: "title",
+                      name: "title",
+                      widget: "markdown",
+                      minimal: true,
+                    }
+                  - {
+                      label: "Body",
+                      name: "body",
+                      widget: "markdown",
+                      required: false,
+                    }
+                  - {
+                      label: "Profile Photo",
+                      name: "image",
+                      widget: "image",
+                      hint: "Minimum image width of 528px required (to be
+                        rendered as 274px) to support higher resolution screens",
+                    }
+              - {
+                  label: "Team",
+                  name: "team",
+                  widget: "list",
+                  allow_add: true,
+                  fields:
+                    [
+                      { label: "Name", name: "name", widget: "string" },
+                      { label: "Title", name: "title", widget: "string" },
+                      {
+                        label: "Profile Image",
+                        name: "image",
+                        widget: "image",
+                        hint: "Minimum image width of 528px required (to be
+                          rendered as 274px) to support higher resolution screens",
+                      },
+                      {
+                        label: "Social Links",
+                        name: "social_links",
+                        widget: "list",
+                        allow_add: true,
+                        required: false,
+                        hint: "Only Twitter, LinkedIn, GitHub or Keybase social links will be displayed",
+                        fields: [{ label: URL, name: url, widget: string }],
+                      },
+                    ],
+                }
+          - label: "Advisors Section"
+            name: "advisors_section"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - {
+                  label: "Advisors",
+                  name: "advisors",
+                  widget: "list",
+                  allow_add: true,
+                  fields:
+                    [
+                      { label: "Name", name: "name", widget: "string" },
+                      { label: "Title", name: "title", widget: "string" },
+                      {
+                        label: "Profile Image",
+                        name: "image",
+                        widget: "image",
+                        hint: "Minimum image width of 528px required (to be
+                          rendered as 274px) to support higher resolution screens",
+                      },
+                      {
+                        label: "Social Links",
+                        name: "social_links",
+                        widget: "list",
+                        allow_add: true,
+                        required: false,
+                        hint: "Only Twitter, LinkedIn, GitHub or Keybase social links will be displayed",
+                        fields: [{ label: URL, name: url, widget: string }],
+                      },
+                    ],
+                }
+      - file: "src/pages/info.md"
+        label: "Info"
+        name: "info"
+        fields:
+          - {
+              label: "Template",
+              name: "template",
+              widget: "hidden",
+              default: "build-page",
+            }
+          - { label: "Path", name: "path", widget: "hidden", default: "/build" }
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - {
+                  label: "Title",
+                  name: "title",
+                  widget: "markdown",
+                  minimal: true,
+                }
+              - {
+                  label: "Body",
+                  name: "body",
+                  widget: "markdown",
+                  required: false,
+                }
+              - {
+                  label: "Widget Image",
+                  name: "image",
+                  widget: "image",
+                  hint: "Minimum image width of 440px required (to be
+                    rendered as 274px) to support higher resolution screens",
+                }
+          - label: "Feature"
+            name: "feature"
+            widget: "object"
+            fields:
+              - {
+                  label: "Title",
+                  name: "title",
+                  widget: "markdown",
+                  minimal: true,
+                }
+              - {
+                  label: "Body",
+                  name: "body",
+                  widget: "string",
+                  required: false,
+                }
+          - label: "Solution"
+            name: "solution"
+            widget: "object"
+            fields:
+              - {
+                  label: "Title",
+                  name: "title",
+                  widget: "markdown",
+                  minimal: true,
+                }
+              - {
+                  label: "Body",
+                  name: "body",
+                  widget: "markdown",
+                  required: false,
+                }
+              - {
+                  label: "Cards",
+                  name: "cards",
+                  widget: "list",
+                  allow_add: true,
+                  required: false,
+                  fields:
+                    [
+                      { label: Title, name: title, widget: string },
+                      { label: Body, name: body, widget: string },
+                      {
+                        label: Icon,
+                        name: icon,
+                        widget: object,
+                        fields:
+                          [
+                            {
+                              label: "Image",
+                              name: "image",
+                              widget: file,
+                              media_library: { config: { multiple: false } },
+                              hint: "SVG only. SVG must have width and height attributes set in the file.",
+                            },
+                            { label: "Alt", name: "alt", widget: "string" },
+                          ],
+                      },
+                    ],
+                }
+          - label: "TBTC Showcase"
+            name: "tbtc_showcase"
+            widget: "object"
+            fields:
+              - {
+                  label: "Title",
+                  name: "title",
+                  widget: "markdown",
+                  minimal: true,
+                }
+              - {
+                  label: "Body",
+                  name: "body",
+                  widget: "markdown",
+                  required: false,
+                }
+              - {
+                  label: Button,
+                  name: button,
+                  widget: object,
+                  fields:
+                    [
+                      { label: Label, name: label, widget: string },
+                      { label: URL, name: url, widget: string },
+                    ],
+                }
+              - {
+                  label: "Features",
+                  name: "features",
+                  widget: "list",
+                  allow_add: true,
+                  required: false,
+                  fields:
+                    [
+                      { label: Name, name: name, widget: string },
+                      {
+                        label: Icon,
+                        name: icon,
+                        widget: object,
+                        fields:
+                          [
+                            {
+                              label: "Image",
+                              name: "image",
+                              widget: file,
+                              media_library: { config: { multiple: false } },
+                              hint: "SVG only. SVG must have width and height attributes set in the file.",
+                            },
+                            { label: "Alt", name: "alt", widget: "string" },
+                          ],
+                      },
+                    ],
+                }
+              - {
+                  label: Article,
+                  name: article,
+                  widget: object,
+                  fields:
+                    [
+                      { label: Body, name: body, widget: string },
+                      {
+                        label: "Image",
+                        name: "image",
+                        widget: file,
+                        media_library: { config: { multiple: false } },
+                      },
+                    ],
+                }
+          - label: "Secure"
+            name: "secure"
+            widget: "object"
+            fields:
+              - {
+                  label: "Title",
+                  name: "title",
+                  widget: "markdown",
+                  minimal: true,
+                }
+              - {
+                  label: "Body",
+                  name: "body",
+                  widget: "markdown",
+                  required: false,
+                }
+              - {
+                  label: "Cards",
+                  name: "cards",
+                  widget: "list",
+                  allow_add: true,
+                  required: false,
+                  fields:
+                    [
+                      { label: Title, name: title, widget: string },
+                      { label: Body, name: body, widget: string },
+                      {
+                        label: Button,
+                        name: button,
+                        widget: object,
+                        fields:
+                          [
+                            { label: Label, name: label, widget: string },
+                            { label: URL, name: url, widget: string },
+                          ],
+                      },
+                      {
+                        label: Icon,
+                        name: icon,
+                        widget: object,
+                        fields:
+                          [
+                            {
+                              label: "Image",
+                              name: "image",
+                              widget: file,
+                              media_library: { config: { multiple: false } },
+                              hint: "SVG only. SVG must have width and height attributes set in the file.",
+                            },
+                            { label: "Alt", name: "alt", widget: "string" },
+                          ],
+                      },
+                    ],
+                }
+          - label: "Contact"
+            name: "contact"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Header", name: "header", widget: "string" }
+              - { label: "Description", name: "description", widget: "string" }
+              - {
+                  label: "Cards",
+                  name: "cards",
+                  widget: "list",
+                  allow_add: true,
+                  fields:
+                    [
+                      { label: "Title", name: "title", widget: "string" },
+                      { label: "Body", name: "body", widget: "string" },
+                      {
+                        label: Icon,
+                        name: icon,
+                        widget: object,
+                        fields:
+                          [
+                            {
+                              label: "Image",
+                              name: "image",
+                              widget: file,
+                              media_library: { config: { multiple: false } },
+                              hint: "SVG only. SVG must have width and height attributes set in the file.",
+                            },
+                            { label: "Alt", name: "alt", widget: "string" },
+                          ],
+                      },
+                      {
+                        label: Link,
+                        name: link,
+                        widget: object,
+                        fields:
+                          [
+                            { label: "Name", name: "name", widget: "string" },
+                            { label: "Url", name: "url", widget: "string" },
+                          ],
+                      },
+                    ],
+                }
       - file: "src/pages/privacy-policy.md"
         label: "Privacy Policy"
         name: "privacy_policy"
         fields:
-          - {label: "Template Key", name: "template", widget: "hidden", default: "legal-page"}
-          - {label: "Path", name: "path", widget: "hidden", default: "/privacy-policy"}
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Date Heading", name: "date", widget: "string"}
-          - {label: "Introduction", name: "intro", widget: "markdown", required: false}
-          - {label: "Body", name: "body", widget: "markdown"}
+          - {
+              label: "Template Key",
+              name: "template",
+              widget: "hidden",
+              default: "legal-page",
+            }
+          - {
+              label: "Path",
+              name: "path",
+              widget: "hidden",
+              default: "/privacy-policy",
+            }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Date Heading", name: "date", widget: "string" }
+          - {
+              label: "Introduction",
+              name: "intro",
+              widget: "markdown",
+              required: false,
+            }
+          - { label: "Body", name: "body", widget: "markdown" }
       - file: "src/pages/california-privacy-notice.md"
         label: "California Privacy Notice"
         name: "california_privacy_notice"
         fields:
-          - {label: "Template Key", name: "template", widget: "hidden", default: "legal-page"}
-          - {label: "Path", name: "path", widget: "hidden", default: "/california-privacy-notice"}
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Date Heading", name: "date", widget: "string"}
-          - {label: "Introduction", name: "intro", widget: "markdown", required: false}
-          - {label: "Body", name: "body", widget: "markdown"}
+          - {
+              label: "Template Key",
+              name: "template",
+              widget: "hidden",
+              default: "legal-page",
+            }
+          - {
+              label: "Path",
+              name: "path",
+              widget: "hidden",
+              default: "/california-privacy-notice",
+            }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Date Heading", name: "date", widget: "string" }
+          - {
+              label: "Introduction",
+              name: "intro",
+              widget: "markdown",
+              required: false,
+            }
+          - { label: "Body", name: "body", widget: "markdown" }
       - file: "src/pages/terms-of-use.md"
         label: "Terms of Use"
         name: "terms_of_use"
         fields:
-          - {label: "Template Key", name: "template", widget: "hidden", default: "legal-page"}
-          - {label: "Path", name: "path", widget: "hidden", default: "/terms-of-use"}
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Date Heading", name: "date", widget: "string"}
-          - {label: "Introduction", name: "intro", widget: "markdown", required: false}
-          - {label: "Body", name: "body", widget: "markdown"}
+          - {
+              label: "Template Key",
+              name: "template",
+              widget: "hidden",
+              default: "legal-page",
+            }
+          - {
+              label: "Path",
+              name: "path",
+              widget: "hidden",
+              default: "/terms-of-use",
+            }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Date Heading", name: "date", widget: "string" }
+          - {
+              label: "Introduction",
+              name: "intro",
+              widget: "markdown",
+              required: false,
+            }
+          - { label: "Body", name: "body", widget: "markdown" }
       - file: "src/pages/playing-for-keeps-terms.md"
         label: "Playing for Keeps Terms"
         name: "playing_for_keeps_terms"
         fields:
-          - {label: "Template Key", name: "template", widget: "hidden", default: "legal-page"}
-          - {label: "Path", name: "path", widget: "hidden", default: "/terms-of-use"}
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Date Heading", name: "date", widget: "string"}
-          - {label: "Introduction", name: "intro", widget: "markdown", required: false}
-          - {label: "Body", name: "body", widget: "markdown"}
+          - {
+              label: "Template Key",
+              name: "template",
+              widget: "hidden",
+              default: "legal-page",
+            }
+          - {
+              label: "Path",
+              name: "path",
+              widget: "hidden",
+              default: "/terms-of-use",
+            }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Date Heading", name: "date", widget: "string" }
+          - {
+              label: "Introduction",
+              name: "intro",
+              widget: "markdown",
+              required: false,
+            }
+          - { label: "Body", name: "body", widget: "markdown" }
 
   - name: "header"
     label: "Header"
@@ -286,30 +1456,62 @@ collections:
         label: "Announcement Banner"
         name: "announcement"
         fields:
-          - {label: "Template Key", name: "template", widget: "hidden", default: "announcement"}
-          - {label: "Title", name: "title", widget: "string", required: false}
-          - {label: "Body", name: "body", widget: "markdown", required: false, minimal: true}
+          - {
+              label: "Template Key",
+              name: "template",
+              widget: "hidden",
+              default: "announcement",
+            }
+          - { label: "Title", name: "title", widget: "string", required: false }
+          - {
+              label: "Body",
+              name: "body",
+              widget: "markdown",
+              required: false,
+              minimal: true,
+            }
       - file: "src/header/nav.md"
         label: "Nav"
         name: "header_nav"
         fields:
-          - {label: "Template Key", name: "template", widget: "hidden", default: "header-nav"}
           - {
-            label: "Nav Items",
-            name: "nav_items",
-            widget: "list",
-            allow_add: true,
-            fields:
-              [
-                { label: "Label", name: "label", widget: "string" },
-                {
-                  label: "URL",
-                  name: "url",
-                  widget: "string",
-                  hint: "Use a relative URL (e.g. /press or #team) if the link is an internal link.",
-                },
-              ],
-          }
+              label: "Template Key",
+              name: "template",
+              widget: "hidden",
+              default: "header-nav",
+            }
+          - {
+              label: "Nav Items",
+              name: "nav_items",
+              widget: "list",
+              allow_add: true,
+              fields:
+                [
+                  { label: "Label", name: "label", widget: "string" },
+                  {
+                    label: "URL",
+                    name: "url",
+                    widget: "string",
+                    hint: "Use a relative URL (e.g. /press or #team) if the link is an internal link.",
+                  },
+                  {
+                    label: "Sub Items",
+                    name: "subitems",
+                    widget: "list",
+                    allow_add: true,
+                    fields:
+                      [
+                        { label: "Label", name: "label", widget: "string" },
+                        {
+                          label: "URL",
+                          name: "url",
+                          widget: "string",
+                          hint: "Use a relative URL (e.g. /press or #team) if the link is an internal link.",
+                        },
+                      ],
+                  },
+                ],
+            }
   - name: "footer"
     label: "Footer"
     files:
@@ -317,42 +1519,52 @@ collections:
         label: "Footer Nav"
         name: "footer_nav"
         fields:
-          - {label: "Template Key", name: "template", widget: "hidden", default: "footer-nav"}
+          - {
+              label: "Template Key",
+              name: "template",
+              widget: "hidden",
+              default: "footer-nav",
+            }
           - label: "Email Link"
             name: "email_link"
             widget: "object"
             fields:
-              - {label: "Label", name: "label", widget: "string"}
-              - {label: "Email Address", name: "email", widget: "string"}
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "Email Address", name: "email", widget: "string" }
           - label: "Nav Categories"
             name: "nav_categories"
             widget: "list"
             allow_add: true
             fields:
-              - {label: "Title", name: "title", widget: "string"}
+              - { label: "Title", name: "title", widget: "string" }
               - {
-                label: "Items",
-                name: "items",
-                widget: "list",
-                allow_add: true,
-                fields:
-                  [
-                    { label: "Label", name: "label", widget: "string" },
-                    {
-                      label: "URL",
-                      name: "url",
-                      widget: "string",
-                      hint: "Use a relative URL (e.g. /press or #team) if the link is an internal link.",
-                    },
-                  ]
+                  label: "Items",
+                  name: "items",
+                  widget: "list",
+                  allow_add: true,
+                  fields:
+                    [
+                      { label: "Label", name: "label", widget: "string" },
+                      {
+                        label: "URL",
+                        name: "url",
+                        widget: "string",
+                        hint: "Use a relative URL (e.g. /press or #team) if the link is an internal link.",
+                      },
+                    ],
                 }
-          - {label: "Copyright Text", name: "copyright_text", widget: "markdown", minimal: true}
+          - {
+              label: "Copyright Text",
+              name: "copyright_text",
+              widget: "markdown",
+              minimal: true,
+            }
           - label: "Legal Links"
             name: "legal_links"
             widget: "list"
             allow_add: true
             fields:
-              - {label: "Label", name: "label", widget: "string"}
+              - { label: "Label", name: "label", widget: "string" }
               - {
                   label: "External Link",
                   name: "is_external_link",

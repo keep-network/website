@@ -1,6 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import Image from "./Image"
+import Link from "./Link"
 import { GithubSocial, Keybase, LinkedIn, Twitter } from "./Icons"
 
 const getIcon = (url) => {
@@ -22,9 +23,9 @@ const SocialLink = ({ url }) => {
 
   if (!!icon) {
     return (
-      <a href={url} target="_blank" rel="noopener noreferrer">
+      <Link href={url} target="_blank" rel="noopener noreferrer">
         {icon}
-      </a>
+      </Link>
     )
   }
 
@@ -37,16 +38,16 @@ SocialLink.propTypes = {
 
 const Profile = ({ name, image, title, socials = [] }) => (
   <div className="profile">
-    <Image imageData={{ image, alt: name }} />
-    <h4>
-      <span>{name}</span>
-      {title && title}
-    </h4>
-    <div className="social-links">
-      {socials.map((link, i) => (
-        <SocialLink key={`social-link-${i}}`} url={link.url} />
-      ))}
-    </div>
+    <Image imageData={{ image, alt: name }} className="profile-photo" />
+    <p>{name}</p>
+    <label>{title && title}</label>
+    {socials && (
+      <div className="social-links">
+        {socials.map((link, i) => (
+          <SocialLink key={`social-link-${i}}`} url={link.url} />
+        ))}
+      </div>
+    )}
   </div>
 )
 

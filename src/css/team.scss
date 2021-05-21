@@ -1,0 +1,103 @@
+.team-content {
+  .ceo-info {
+    padding-top: 0px;
+
+    h3 {
+      margin: 8px 0 48px;
+    }
+
+    .body {
+      color: $grey-70;
+    }
+
+    @media (max-width: #{$bp-medium - 1}) {
+      h3 {
+        margin: 8px 0 28px;
+      }
+    }
+  }
+
+  .team-banner {
+    background-color: $grey-10;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right;
+
+    .blurb-text {
+      color: $black;
+    }
+
+    h5 {
+      text-transform: uppercase;
+      margin-bottom: 24px;
+    }
+
+    svg {
+      width: 120px;
+      height: 120px;
+    }
+    @media (max-width: #{$bp-medium - 1}) {
+      .blurb-panel {
+        flex-direction: column;
+      }
+      .blurb-text {
+        text-align: center;
+      }
+
+      h5 {
+        margin: 20px 0;
+      }
+    }
+  }
+
+  .team-gallery {
+    padding-bottom: 70px;
+
+    h2 {
+      margin-bottom: 60px;
+    }
+    &-title {
+      margin-top: 4px;
+    }
+
+    &-subtitle {
+      margin: 4px 0 32px;
+    }
+    @media (max-width: #{$bp-medium - 1}) {
+      padding-bottom: 0;
+      h2 {
+        margin-bottom: 38px;
+      }
+      &-title {
+        margin: 32px 0 0;
+      }
+      &-subtitle {
+        margin: 0 0 15px;
+      }
+    }
+  }
+
+  .profiles {
+    margin-top: 90px;
+    > div {
+      margin-bottom: 70px;
+    }
+
+    @media (max-width: #{$bp-medium - 1}) {
+      margin-top: 40px;
+
+      > div {
+        margin-bottom: 56px;
+      }
+    }
+  }
+
+  .advisor-gallery {
+    background-color: $grey-10;
+    padding-bottom: 70px;
+
+    @media (max-width: #{$bp-medium - 1}) {
+      padding-bottom: 0;
+    }
+  }
+}

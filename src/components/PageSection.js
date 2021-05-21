@@ -55,7 +55,10 @@ const PageSection = ({
 
 PageSection.propTypes = {
   id: PropTypes.string,
-  additionalClassNames: PropTypes.array,
+  additionalClassNames: PropTypes.oneOfType([
+    PropTypes.array,
+    PropTypes.string,
+  ]),
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node,

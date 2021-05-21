@@ -1,10 +1,12 @@
-import React, { useEffect, useState } from "react"
+import React, { useEffect, useMemo, useState } from "react"
 import ClampLines from "react-clamp-lines"
+import { Col, Row } from "reactstrap"
 import PropTypes from "prop-types"
-import { withPrefix, graphql } from "gatsby"
+import { graphql } from "gatsby"
 
-import { App, Image } from "../components"
+import { App, MiniLogoWall, KeepBlog, Link } from "../components"
 import PageSection, { SeeAllButton } from "../components/PageSection"
+import { sections } from "../constants"
 
 const PressItem = ({ title, date, source, aboveTheFold, url }) => {
   const [windowWidth, setWindowWidth] = useState(0)
@@ -14,15 +16,11 @@ const PressItem = ({ title, date, source, aboveTheFold, url }) => {
   }, [])
 
   return (
-    <a href={url} target="_blank" rel="noopener noreferrer">
-      <div className="press-item">
+    <div className="press-item">
+      <div className="press-item-content">
         <div className="top">
-          <div className="article-title">{title}</div>
-          <div className="date date-large">{date}</div>
-        </div>
-        <div className="source source-large">{source}</div>
-        <div className="date date-mobile">{date}</div>
-        <div className="bottom">
+          <h4 className="article-title">{title}</h4>
+          <label className="source source-large">{source}</label>
           <div className="above-the-fold">
             <ClampLines
               text={aboveTheFold}
@@ -31,10 +29,20 @@ const PressItem = ({ title, date, source, aboveTheFold, url }) => {
               buttons={false}
             />
           </div>
-          <div className="view-arrow">View ↗</div>
+          <div className="date">{date}</div>
+        </div>
+        <div className="view-post">
+          <Link
+            url={url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-default"
+          >
+            Read Post
+          </Link>
         </div>
       </div>
-    </a>
+    </div>
   )
 }
 
@@ -47,14 +55,16 @@ PressItem.propTypes = {
 }
 
 export const PressPageTemplate = ({
-  title,
-  subtitle,
-  media_kit_section: mediaKitSection,
+  hero,
+  minilogo_grid: minilogoGrid,
+  news: news,
   press_items_section: pressItemsSection,
 }) => {
   const { press_items: pressItems } = pressItemsSection
   const [allPressEntries, setAllPressEntries] = useState([])
-  const [pressEntries, setPressEntries] = useState([])
+  const [year, setYear] = useState(null)
+  const [entrySize, setEntrySize] = useState(0)
+  const [isShowAll, setShowAll] = useState(false)
 
   useEffect(() => {
     const dateOptions = { year: "numeric", month: "long", day: "numeric" }
@@ -67,81 +77,129 @@ export const PressPageTemplate = ({
         date: new Date(item.date).toLocaleDateString("en-US", dateOptions),
       }))
     setAllPressEntries(sortedAndFormatted)
-    setPressEntries(sortedAndFormatted.slice(0, 10))
   }, [pressItems])
 
-  const handleShowAll = () => {
-    setPressEntries(allPressEntries)
-  }
+  const pressEntries = useMemo(() => {
+    const entires = year
+      ? allPressEntries.filter((entry) => entry.date.includes(year))
+      : [...allPressEntries]
+    setEntrySize(entires.length)
+    if (isShowAll) {
+      return entires
+    } else {
+      return entires.slice(0, 10)
+    }
+  }, [allPressEntries, year, isShowAll])
 
   return (
-    <div className="press-page">
-      <PageSection id="title-container">
-        <div className="title">
-          <h1>{title}</h1>
-          <h2 dangerouslySetInnerHTML={{ __html: subtitle }} />
+    <div className="press-content">
+      <PageSection id={sections.press.HOME}>
+        <div>
+          <h1 className="h1-underline">{hero.title}</h1>
+          <h3
+            className="body"
+            dangerouslySetInnerHTML={{ __html: hero.body }}
+          />
         </div>
+        {hero.cta_buttons.map((btn, i) => (
+          <Link
+            key={`cta-btn-${i}`}
+            url={btn.url}
+            className="cta-link btn btn-primary"
+          >
+            {btn.label}
+          </Link>
+        ))}
       </PageSection>
-      <PageSection id="media-kit-container">
-        <div className="media-kit">
-          <div className="media-kit-left">
-            <h2>{mediaKitSection.title}</h2>
-            <h3>{mediaKitSection.subtitle}</h3>
-          </div>
-          <div className="media-kit-right">
-            <div className="media-kit-description">
-              <Image imageData={mediaKitSection.media_kit.icon} />
-              <div className="media-kit-text">
-                <div className="label">{mediaKitSection.media_kit.label}</div>
-                <ul className="contents">
-                  {mediaKitSection.media_kit.contents.map((item, i) => (
-                    <li key={`media-kit-content-item-${i}`}>{item}</li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-            <a
-              href={withPrefix(
-                `/images/${mediaKitSection.media_kit.download_button.file.relativePath}`
-              )}
-              target="_blank"
-              rel="noopener noreferrer"
+      <PageSection id={sections.press.MINILOGO_GRID}>
+        <MiniLogoWall logos={minilogoGrid} />
+      </PageSection>
+      <PageSection id={sections.press.NEWS}>
+        <KeepBlog {...news} />
+      </PageSection>
+      <PageSection id={sections.press.LATEST_POST}>
+        <Row className="title-section">
+          <Col xs={12} md={8}>
+            <h3>{pressItemsSection.title}</h3>
+          </Col>
+          <Col className="year-filter" xs={12} md={4}>
+            <button
+              onClick={() => setYear(2019)}
+              className={
+                year === 2019
+                  ? "year-filter-item is-active"
+                  : "year-filter-item"
+              }
             >
-              {mediaKitSection.media_kit.download_button.label}
-            </a>
-          </div>
-        </div>
-      </PageSection>
-      <PageSection id="press-items-container">
-        <div className="press-items">
-          <h2>{pressItemsSection.title}</h2>
-          {pressEntries.map((entry) => (
-            <PressItem
-              title={entry.title}
-              date={entry.date}
-              source={entry.source}
-              aboveTheFold={entry.excerpt}
-              url={entry.url}
-              key={entry.url}
+              2019
+            </button>
+            <button
+              onClick={() => setYear(2020)}
+              className={
+                year === 2020
+                  ? "year-filter-item is-active"
+                  : "year-filter-item"
+              }
+            >
+              2020
+            </button>
+            <button
+              onClick={() => setYear(2021)}
+              className={
+                year === 2021
+                  ? "year-filter-item is-active"
+                  : "year-filter-item"
+              }
+            >
+              2021
+            </button>
+            <button
+              onClick={() => setYear(null)}
+              className={
+                year === null
+                  ? "year-filter-item is-active"
+                  : "year-filter-item"
+              }
+            >
+              ALL
+            </button>
+          </Col>
+        </Row>
+        <Row className="press-items">
+          <Col>
+            {pressEntries.map((entry) => (
+              <PressItem
+                title={entry.title}
+                date={entry.date}
+                source={entry.source}
+                aboveTheFold={entry.excerpt}
+                url={entry.url}
+                key={entry.url}
+              />
+            ))}
+          </Col>
+        </Row>
+        {entrySize === 0 ? (
+          "No posts available"
+        ) : entrySize > 10 ? (
+          <div className="pagination">
+            <SeeAllButton
+              collapsed={!isShowAll}
+              onClick={() => setShowAll(!isShowAll)}
             />
-          ))}
-        </div>
+          </div>
+        ) : (
+          <></>
+        )}
       </PageSection>
-      {allPressEntries.length > 10 && pressEntries.length === 10 ? (
-        <PageSection id="pagination">
-          <SeeAllButton onClick={handleShowAll} />
-        </PageSection>
-      ) : (
-        ""
-      )}
     </div>
   )
 }
 
 PressPageTemplate.propTypes = {
-  title: PropTypes.string,
-  subtitle: PropTypes.string,
-  media_kit_section: PropTypes.object,
+  hero: PropTypes.object,
+  minilogo_grid: PropTypes.array,
+  news: PropTypes.object,
   press_items_section: PropTypes.object,
 }
 
@@ -168,25 +226,37 @@ export const query = graphql`
       id
       frontmatter {
         title
-        subtitle
-        media_kit_section {
+        hero {
           title
-          subtitle
-          media_kit {
+          body
+          cta_buttons {
+            label
+            url
+          }
+        }
+        minilogo_grid {
+          icon {
+            image {
+              relativePath
+            }
+            alt
+          }
+        }
+        news {
+          title
+          body
+          cards {
             icon {
               image {
                 relativePath
               }
               alt
             }
-            label
-            contents
-            download_button {
-              label
-              file {
-                relativePath
-              }
-            }
+            title
+            source
+            excerpt
+            date
+            url
           }
         }
         press_items_section {

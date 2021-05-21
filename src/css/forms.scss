@@ -1,118 +1,126 @@
 .form-inline {
-    display: inline-block;
-    margin: 0 0 0;
-    position: relative;
-    transition: 0.25s all ease-in;
+  display: inline-block;
+  margin: 0 0 0;
+  position: relative;
+  transition: 0.25s all ease-in;
 
+  input {
+    padding: 17px;
+    height: auto;
+    box-shadow: none;
+    outline: 0;
 
-    input {
-        padding: 17px;
-        height: auto;
-        box-shadow: none;
-        outline: 0;
-
-        &.form-control {
-            border: 1px solid $black;
-            border-radius: 0;
-            box-shadow: none;
-            display: inline-block;
-            width: 100%;
-            font-size: 1rem;
-            font-weight: 400;
-            line-height: 1.25rem;
-            @include placeholder(#b4b4b4);
-        }
+    &.form-control {
+      border: 1px solid $black;
+      border-radius: 0;
+      box-shadow: none;
+      display: inline-block;
+      width: 100%;
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1.25rem;
+      color: $black;
+      &::placeholder {
+        color: $grey-30;
+      }
     }
+  }
 
-    .form-group {
-        display: inline-block;
-        margin-bottom: 0;
+  .form-group {
+    display: inline-block;
+    margin-bottom: 0;
 
-        &.has-success {
-            .form-control {
-                &:focus {
-                    border-color: transparent;
-                    box-shadow: none;
-                }
-            }
+    &.has-success {
+      .form-control {
+        &:focus {
+          border-color: transparent;
+          box-shadow: none;
         }
-
-        &.has-error {
-            .form-control {
-                &:focus {
-                    border-color: transparent;
-                    box-shadow: none;
-                }
-            }
-        }
+      }
     }
 
     &.has-error {
+      .form-control {
+        &:focus {
+          border-color: transparent;
+          box-shadow: none;
+        }
+      }
+    }
+  }
+
+  &.has-error {
+    border-color: $error-color;
+
+    .form-group {
+      .form-control {
         border-color: $error-color;
 
-        .form-group {
-            .form-control {
-                border-color: $error-color;
-
-                &:focus {
-                    border-color: transparent;
-                }
-            }
+        &:focus {
+          border-color: $black;
         }
+      }
     }
+  }
 }
 
 .email-form {
-    position: relative;
-    transition: 0.25s all ease-in;
+  position: relative;
+  transition: 0.25s all ease-in;
 
-    .btn-submit {
-        svg {
-            path {
-                transition: all 0.25s ease-in;
-            }
-        }
+  .btn-submit {
+    padding: 16px;
+    margin-left: 5px !important;
 
-        &:hover {
-            svg {
-                path {
-                    stroke: $white;
-                }
-            }
-        }
-
-        &:focus,
-        &:active,
-        &.active.focus,
-        &:active:focus,
-        &.active,
-        &.focus {
-             svg {
-                path {
-                    stroke: $black;
-                }
-            }
-        }
+    @media (max-width: #{$bp-medium - 1}) {
+      margin-left: 0px !important;
+    }
+    svg {
+      path {
+        transition: all 0.25s ease-in;
+      }
     }
 
-    .success-message {
-        @extend .h3;
-        color: $accent-text-color;
-
-        @media (max-width: #{$bp-medium}) {
-            font-size: 22px;
+    &:hover {
+      svg {
+        path {
+          stroke: $white;
         }
+      }
     }
 
-    .error-message {
-        color: $error-color;
-        display: block;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        font-weight: 500;
-        font-size: 0.75rem;
-        line-height: 150%;
-        margin-top: 5px;
+    &:focus,
+    &:active,
+    &.active.focus,
+    &:active:focus,
+    &.active,
+    &.focus {
+      svg {
+        path {
+          stroke: $black;
+        }
+      }
     }
+  }
+
+  .success-message {
+    @extend .h3;
+    color: $accent-text-color;
+
+    @media (max-width: #{$bp-medium - 1}) {
+      font-size: 22px;
+    }
+  }
+
+  .error-message {
+    color: $error-color;
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    font-weight: 500;
+    font-size: 0.75rem;
+    line-height: 150%;
+    margin-top: 5px;
+  }
 }

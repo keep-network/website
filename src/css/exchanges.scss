@@ -1,0 +1,58 @@
+.exchanges {
+  padding: 132px 0;
+  background-size: cover;
+
+  h3 {
+    margin: 0;
+  }
+
+  .links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 56px;
+
+    a {
+      @extend .h4;
+      color: $secondary-color;
+
+      img {
+        margin-right: 20px;
+      }
+      &:after {
+        content: " ↗";
+      }
+    }
+  }
+
+  @media (max-width: #{$bp-medium - 1}) {
+    padding: 60px 0 0;
+
+    .links {
+      flex-direction: column;
+      justify-content: center;
+
+      > div {
+        padding: 30px 0;
+        border-bottom: 1px solid black;
+        width: 100%;
+
+        img {
+          margin-right: 72px;
+        }
+
+        a > span {
+          width: 118px;
+        }
+
+        &:last-child {
+          border: none;
+
+          a::after {
+            padding-right: 15px;
+          }
+        }
+      }
+    }
+  }
+}

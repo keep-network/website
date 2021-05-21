@@ -1,240 +1,451 @@
 header {
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+
+  .navbar {
+    background-color: $grey-20;
+    border-bottom: 0.25px solid $border-color;
+    padding: 0;
     position: relative;
-    z-index: 3;
+    border: none;
+    transition: all 0.2s;
+
+    &.collapsed {
+      background-color: transparent;
+    }
 
     @media (min-width: #{$bp-medium}) {
-        position: fixed;
-        width: 100%;
-        text-align: center;
-        z-index: 1000;
+      margin: 54px auto;
+      background-color: transparent;
+      .navbar-collapse {
+        display: flex !important;
+        flex-basis: auto;
+        flex-grow: unset;
+      }
     }
 
-    .navbar {
-        background-color: $background-light-color;
-        border-bottom: 0.25px solid $border-color;
-        margin: 0 auto;
-        padding: 0;
-        position: relative;
+    .dropdown-menu {
+      border: none;
+      box-shadow: 1px 1px 10px $grey-40;
+    }
 
-        .app-home & {
-            background-color: #E2E2E2;
-        }
+    .dropdown-item:active,
+    .dropdown-item:focus {
+      background-color: $grey-10 !important;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &-item {
+        margin-left: 0;
 
         @media (min-width: #{$bp-medium}) {
-            .navbar-collapse {
-                display: block !important;
-                flex-basis: auto;
-                flex-grow: unset;
-            }
+          margin-left: 2px;
         }
 
-        .nav {
-            @media (max-width: #{$bp-medium - 1}) {
-                flex-direction: column;
-                margin: 7.5px -15px;
-            }
+        @media (min-width: #{$bp-large}) {
+          margin-left: 10px;
+        }
+      }
 
-            > li {
-                > a {
-                    display: block;
-                    font-weight: 400;
-                    font-size: 13px;
-                    letter-spacing: 0.08em;
-                    color: $body-text-color;
-                    line-height: 20px;
-                    text-transform: uppercase;
-                    cursor: pointer;
-                    transition: color, font-weight 0.25s ease-in;
-                    position: relative;
+      @media (max-width: #{$bp-medium - 1}) {
+        flex-direction: column;
+        margin: 0 -15px;
 
-                    &[href^=http]:after {
-                        content: ' ↗';
-                    }
-
-                    @media (min-width: #{$bp-medium}) {
-                        width: 168px;
-                        padding: 34px 15px;
-
-                        &:not([href^=http]) {
-                            &:hover,
-                            &:focus,
-                            &:active,
-                            &.active.focus,
-                            &:active:focus,
-                            &.active,
-                            &.focus {
-                                text-decoration: none;
-
-                                &:before {
-                                    display: block;
-                                    content: '';
-                                    width: 100%;
-                                    height: 3px;
-                                    position: absolute;
-                                    bottom: 0;
-                                    left: 0;
-                                }
-                            }
-
-                            &:hover {
-                                &:before {
-                                    background-color: $black;
-                                }
-                            }
-
-                            &:focus,
-                            &:not(.scroll-link):active,
-                            &.active.focus,
-                            &:active:focus,
-                            &.active,
-                            &.focus {
-                                font-weight: 700;
-
-                                &:before {
-                                    background-color: $primary-color;
-                                }
-                            }
-                        }
-                    }
-
-                    @media (min-width: #{$bp-large}) and (max-width: #{$bp-extra-large}) {
-                        width: 140px;
-                    }
-
-                    @media (min-width: #{$bp-medium}) and (max-width: #{$bp-large - 1}) {
-                        width: 102px;
-                        font-size: 12px;
-                    }
-
-                    @media (max-width: #{$bp-medium}) {
-                        padding: 15px 15px 15px 30px;
-
-                        &:not([href^=http]) {
-                            &:hover,
-                            &:focus,
-                            &:active,
-                            &.active.focus,
-                            &:active:focus,
-                            &.active,
-                            &.focus {
-                                &:before {
-                                    display: block;
-                                    content: '';
-                                    width: 20px;
-                                    height: 10px;
-                                    position: absolute;
-                                    top: 19px;
-                                    left: 0;
-                                }
-                            }
-
-                            &:hover {
-                                &:before {
-                                    background-color: $black;
-                                }
-                            }
-
-                            &:focus,
-                            &:active,
-                            &.active.focus,
-                            &:active:focus,
-                            &.active,
-                            &.focus {
-                                font-weight: 700;
-
-                                &:before {
-                                    background-color: $primary-color;
-                                }
-                            }
-                        }
-                    }
-                }
-            }
+        a {
+          text-decoration: none;
         }
 
-        .brand {
-            background-repeat: no-repeat;
-            background-size: 100%;
-            margin: 15px;
+        &-item {
+          width: 100%;
+          border-top: 0.5px solid $grey-40;
+        }
+
+        .dropdown > .nav-link::after {
+          position: absolute;
+          right: 45px;
+          content: "";
+          display: inline-block;
+          width: 12px;
+          height: 12px;
+          border-right: 0.2em solid black;
+          border-top: 0.2em solid black;
+          transform: rotate(135deg);
+          margin-right: 0.5em;
+          margin-left: 1em;
+        }
+
+        .dropdown.show {
+          > .nav-link::after {
+            transform: rotate(-45deg);
+            top: 32px;
+          }
+
+          .dropdown-menu {
+            position: relative !important;
+            float: none;
             padding: 0;
-            color: transparent;
-            cursor: pointer;
-            height: auto;
-            line-height: 0.85;
+            margin: 0;
+            background-color: transparent;
+            border: none;
+            transform: none !important;
 
-            svg {
-                height: 30px;
-                width: 117px;
+            button {
+              padding: 0;
+
+              &:hover {
+                background-color: transparent;
+              }
+              &:last-child {
+                margin-bottom: 15px;
+              }
             }
 
-            &:hover,
-            &:active,
-            &:focus {
-                color: transparent;
-            }
+            .nav-item {
+              border-top: none;
 
-            @media (min-width: #{$bp-medium}) {
-                margin: 0;
-
-                svg {
-                    height: 25.63px;
-                    width: 100px;
-                    margin: 12px 40px 12px 0;
-                }
+              a {
+                color: $grey-50;
+                padding: 10px 45px;
+              }
             }
-
-            @media (min-width: #{$bp-medium}) and (max-width: #{$bp-large}){
-                svg {
-                    margin: 12px 30px;
-                }
-            }
-
-            @media (max-width: #{$bp-medium - 1}) {
-                margin: 17px 15px;
-            }
+          }
         }
+      }
 
-        .navbar-toggler {
-            width: 38px;
-            height: 38px;
-            margin: 14px 15px;
-            border: 2px solid $black;
-            border-radius: 50%;
-            padding: 10px 7px;
-            position: relative;
+      > li > a,
+      > li > div > button > li > a {
+        @extend .label;
+        display: block;
+        color: $body-text-color;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: color, font-weight 0.25s ease-in;
+        position: relative;
 
-            span,
-            span:before,
-            span:after {
-                display: block;
-                background-color: $black;
-                width: 20px;
-                height: 2px;
-            }
+        @media (min-width: #{$bp-medium}) {
+          padding: 13px 15px;
 
-            span:before,
-            span:after {
-                content: '';
-                position: absolute;
-            }
+          &[href^="http"]:after {
+            content: " ↗";
+          }
 
-            span:before {
-                top: 10px;
-            }
+          &[href="#"]:after {
+            content: " ↓";
+          }
 
-            span:after {
-                bottom: 10px;
-            }
-
+          &:not([href^="http"]) {
             &:hover,
             &:focus,
-            &:active {
-                background-color: transparent;
+            &:active,
+            &.active.focus,
+            &:active:focus,
+            &.active,
+            &.focus {
+              text-decoration: none;
+
+              &:before {
+                display: block;
+                content: "";
+                width: 60%;
+                height: 3px;
+                position: absolute;
+                bottom: 0;
+                left: 15px;
+              }
             }
 
-            @media (min-width: #{$bp-medium}) {
-                display: none;
+            &:hover {
+              &:before {
+                background-color: $primary-color;
+              }
             }
+
+            &:focus,
+            &:not(.scroll-link):active,
+            &.active.focus,
+            &:active:focus,
+            &.active,
+            &.focus {
+              font-weight: 700;
+
+              &:before {
+                background-color: $primary-color;
+              }
+            }
+          }
         }
+
+        @media (max-width: #{$bp-medium - 1}) {
+          padding: 28px 45px;
+
+          &:not([href^="http"]) {
+            &:hover,
+            &:focus,
+            &:active,
+            &.active.focus,
+            &:active:focus,
+            &.active,
+            &.focus {
+              &:before {
+                display: block;
+                content: "";
+                width: 20px;
+                height: 10px;
+                position: absolute;
+                top: 45%;
+                left: 0;
+              }
+            }
+
+            &:hover {
+              &:before {
+                background-color: $primary-color;
+              }
+            }
+
+            &:focus,
+            &:active,
+            &.active.focus,
+            &:active:focus,
+            &.active,
+            &.focus {
+              font-weight: 700;
+
+              &:before {
+                background-color: $primary-color;
+              }
+            }
+          }
+        }
+      }
+      .dropdown-item {
+        a {
+          &:hover,
+          &:focus,
+          &:active,
+          &.active.focus,
+          &:active:focus,
+          &.active,
+          &.focus {
+            text-decoration: none;
+
+            &:before {
+              display: none !important;
+            }
+          }
+        }
+      }
     }
+
+    .external_btn {
+      margin: 0;
+
+      li {
+        margin: 0;
+
+        list-style-type: none;
+        display: inline-block;
+
+        &:first-child {
+          margin-left: 0;
+        }
+      }
+
+      .discord {
+        display: block;
+      }
+
+      .hint {
+        display: none;
+      }
+
+      .nav-item {
+        border: none;
+      }
+
+      @media (min-width: #{$bp-medium}) {
+        padding-left: 12px;
+        li {
+          margin: 0 0 0 32px;
+        }
+      }
+
+      @media (min-width: #{$bp-large}) {
+        margin-left: 10px;
+        li {
+          margin: 0 0 0 30px;
+        }
+      }
+
+      @media (max-width: #{$bp-medium - 1}) {
+        margin: 0 -15px;
+        padding: 78px 16px 18px;
+        border-top: 0.5px solid $grey-40;
+
+        .discord {
+          display: none;
+        }
+
+        .hint {
+          display: flex;
+          align-items: center;
+          padding: 10px;
+          margin-bottom: 22px;
+
+          svg {
+            min-width: 54px;
+          }
+
+          span {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+            letter-spacing: 0em;
+            color: $grey-70;
+            margin-left: 22px;
+          }
+        }
+
+        .btn {
+          font-size: 16px;
+          font-weight: 800;
+          line-height: 19px;
+          letter-spacing: 0.08em;
+          padding: 16px 40px;
+        }
+
+        .btn::after {
+          content: " DAPP";
+        }
+      }
+    }
+
+    .brand {
+      background-repeat: no-repeat;
+      background-size: 100%;
+      margin: 24px 6px;
+      padding: 0;
+      color: transparent;
+      cursor: pointer;
+      height: auto;
+      line-height: 0.85;
+
+      svg {
+        height: 24.69px;
+        width: 96px;
+      }
+
+      &:hover,
+      &:active,
+      &:focus {
+        color: transparent;
+      }
+
+      @media (min-width: #{$bp-medium}) {
+        margin: 0;
+
+        svg {
+          height: 22.56px;
+          width: 88px;
+        }
+      }
+
+      @media (max-width: #{$bp-medium - 1}) {
+        &.expanded {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          line-height: 0.85;
+        }
+      }
+    }
+
+    .navbar-toggler {
+      width: 38px;
+      height: 38px;
+      margin: 18px 8px;
+      padding: 10px 7px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      outline: none;
+
+      span,
+      span:before,
+      span:after {
+        display: block;
+        background-color: $black;
+        width: 20px;
+        height: 2px;
+      }
+
+      span:before,
+      span:after {
+        content: "";
+        position: absolute;
+      }
+
+      span:before {
+        top: 10px;
+      }
+
+      span:after {
+        bottom: 10px;
+      }
+
+      &:hover,
+      &:focus,
+      &:active {
+        background-color: transparent;
+      }
+
+      span {
+        transition: all 0.2s;
+      }
+      span::before {
+        transform: rotate(45deg);
+        transform-origin: 10% 10%;
+        width: 25px;
+      }
+      span {
+        height: 0;
+      }
+      span::after {
+        transform: rotate(-45deg);
+        transform-origin: 10% 90%;
+        width: 25px;
+      }
+
+      &.collapsed span::before {
+        transform: rotate(0);
+        width: 20px;
+      }
+      &.collapsed span {
+        height: 2px;
+      }
+      &.collapsed span::after {
+        transform: rotate(0);
+        width: 20px;
+      }
+
+      @media (min-width: #{$bp-medium}) {
+        display: none;
+      }
+    }
+  }
+
+  &.stick {
+    background-color: $grey-20;
+
+    .navbar {
+      @media (min-width: #{$bp-medium}) {
+        margin: 12px 0;
+      }
+    }
+  }
 }

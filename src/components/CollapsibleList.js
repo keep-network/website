@@ -1,11 +1,10 @@
 import React, { useState } from "react"
 import { Button, Collapse } from "reactstrap"
+import { Image } from "../components"
 import PropTypes from "prop-types"
 import classNames from "classnames"
 
-import { ArrowDown } from "./Icons"
-
-const CollapsibleList = ({ label, children, className = "" }) => {
+const CollapsibleList = ({ label, children, className = "", plusIcon }) => {
   const [isOpen, setIsOpen] = useState(false)
   const toggleOpen = () => setIsOpen(!isOpen)
 
@@ -15,7 +14,8 @@ const CollapsibleList = ({ label, children, className = "" }) => {
     >
       <div className="collapsible-list-label">
         <Button onClick={toggleOpen}>
-          <span>{label}</span> <ArrowDown />
+          <span>{label}</span>
+          {plusIcon && <Image imageData={plusIcon} className="icon" />}
         </Button>
       </div>
       <Collapse isOpen={isOpen}>{children}</Collapse>
@@ -30,6 +30,7 @@ CollapsibleList.propTypes = {
     PropTypes.node,
   ]),
   className: PropTypes.string,
+  plusIcon: PropTypes.object,
 }
 
 export default CollapsibleList

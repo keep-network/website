@@ -1,0 +1,102 @@
+.summary-grid {
+  background-color: $grey-70;
+
+  &-header {
+    color: $white;
+  }
+
+  &-content {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 85px;
+  }
+
+  &-card {
+    flex-direction: column;
+    position: relative;
+    padding: 48px;
+    width: 46%;
+    max-width: 536px;
+    margin-bottom: 60px;
+    background: $white;
+    box-shadow: 0px 24px 38px rgba(8, 5, 3, 0.03),
+      0px 9px 46px rgba(8, 5, 3, 0.02), 0px 11px 15px rgba(8, 5, 3, 0.06);
+    border-radius: 8px;
+
+    .number {
+      @extend .h5;
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 32px;
+      width: 32px;
+      left: 16px;
+      top: 16px;
+      border-radius: 100px;
+      background-color: $grey-20;
+    }
+
+    &-header {
+      display: flex;
+      margin-bottom: 40px;
+
+      @media (min-width: #{$bp-large}) {
+        margin-left: 20px;
+        h4  {
+          font-size: 21px!important;
+          margin-left: 24px!important;
+        }
+      }
+
+      @media (min-width: #{$bp-extra-large}) {
+        margin-left: 27px;
+        h4  {
+          font-size: 24px!important;
+          margin-left: 50px!important
+        }
+      }
+
+      h4 {
+        @extend .h4;
+        margin-left: 50px;
+      }
+    }
+  }
+
+  @media (min-width: #{$bp-large}) and (max-width: #{$bp-extra-large - 1}) {
+    h4 {
+      font-size: 26px;
+    }
+  }
+
+  @media (max-width: #{$bp-large - 1}) {
+    &-card {
+      padding: 24px;
+      width: 100%;
+      max-width: 100%;
+      margin-bottom: 15px;
+
+      &-header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin-bottom: 25px;
+
+        h4 {
+          margin-left: 0;
+        }
+
+        img {
+          width: 104px;
+          margin-top: 24px;
+          margin-bottom: 40px;
+        }
+      }
+    }
+  }
+}

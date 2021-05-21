@@ -125,9 +125,10 @@ class EmailForm extends Component {
             e.preventDefault()
           }}
         >
-          <FormGroup>
+          <FormGroup className="col-md-12 px-0 pr-xs-2">
             <Label style={{ display: "none" }}>{label}</Label>
             <Input
+              className="form-group-input"
               type="email"
               value={email}
               placeholder={placeholder}
@@ -140,6 +141,7 @@ class EmailForm extends Component {
             onClick={this.onClick}
           >
             <ArrowRightLong />
+            <span className="button-text">Subscribe</span>
           </SubmitButton>
         </Form>
         {hasError && <small className="error-message">{errorMsg}</small>}

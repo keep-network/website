@@ -1,241 +1,291 @@
-import React from "react"
+import React, { useEffect } from "react"
 import { connect } from "react-redux"
 import { Col, Row } from "reactstrap"
 import PropTypes from "prop-types"
-import { graphql } from "gatsby"
+import { graphql, withPrefix } from "gatsby"
+import Aos from "aos"
+import "aos/dist/aos.css"
 
 import {
   App,
-  EmailForm,
-  Icons,
   Image,
   ImageLink,
   Link,
   PageSection,
-  Profile,
+  Ticker,
+  SummaryGrid,
+  MiniLogoWall,
+  KeepBlog,
+  Contact,
 } from "../components"
 import { sections } from "../constants"
-import { actions, actionTypes } from "../redux"
+import { actions } from "../redux"
+import useLiquidityRewardsAPY from "../hooks/useLiquidityRewardsAPY"
 
 export const HomePageTemplate = ({
   hero = {},
-  images = {},
+  carousel = [],
+  summary_grid: summaryGrid = {},
+  minilogo_grid: minilogoGrid = [],
+  blogs = {},
+  exchanges = {},
   signupMailingList = () => {},
   ajaxRequestStates = {},
-  team_section: teamSection = {},
-  advisors_section: advisorsSection = {},
-  supporters_section: supportersSection = {},
+  logo_wall: logoWall = {},
+  contact = {},
 }) => {
+  useEffect(() => {
+    Aos.init({ once: true })
+  }, [])
+
+  const [liquidityRewardsAPYs, isFetching] = useLiquidityRewardsAPY()
+  const highestAPY =
+    liquidityRewardsAPYs.length > 0
+      ? `${liquidityRewardsAPYs[0].value}% APY.`
+      : "loading..."
+
   return (
     <div className="main-content">
-      <PageSection id={sections.HOME}>
+      <PageSection id={sections.home.HOME}>
+        <div className="home-video-bg">
+          <video autoPlay muted loop>
+            <source src={hero.bg_video} type="video/mp4" />
+          </video>
+          <div className="home-video-bg-overlay" />
+        </div>
         <Row>
-          <Col xs={12}>
-            <h1 dangerouslySetInnerHTML={{ __html: hero.title }} />
-            <div
-              className="body"
-              dangerouslySetInnerHTML={{ __html: hero.body }}
-            />
+          <Col xs={12} lg={10} md={10}>
+            <h1>{`${hero.title} ${highestAPY}`}</h1>
+            <h4 className="body">{hero.body}</h4>
           </Col>
         </Row>
         <Row className="cta-section">
-          {hero.cta ? (
-            <Col xs={12} sm={12} md={6} lg={4} className="cta">
-              {hero.cta.icon ? <Image imageData={hero.cta.icon} /> : ""}
-              <h2>{hero.cta.label}</h2>
-            </Col>
-          ) : (
-            ""
-          )}
-          <ul className="cta-links col-12 col-sm-12 col-md-6 col-lg-4">
+          <ul className="cta-links col-sm-12">
             {hero.cta_buttons.map((btn, i) => (
               <li key={`cta-btn-${i}`}>
-                <Link url={btn.url} className="cta-link">
+                <Link
+                  url={btn.url}
+                  className={`btn ${i === 0 ? "btn-primary" : "btn-default"}`}
+                >
                   {btn.label}
                 </Link>
               </li>
             ))}
           </ul>
         </Row>
+        {!isFetching && (
+          <Ticker
+            items={liquidityRewardsAPYs.map((_) => ({
+              label: `${_.value}% APY · ${_.pool} POOL`,
+            }))}
+          />
+        )}
       </PageSection>
-      <PageSection id={sections.TOKEN_DASHBOARD}>
-        <Row className="token-dashboard">
-          <Col xs={12} sm={12}>
-            <section className="dashboard-cta d-lg-flex align-items-end">
-              <div className="w-lg-40 content order-2 text-center text-lg-left">
-                <h2 className="mt-0 mb-4">
-                  Stake KEEP to operate the network and earn rewards.
-                </h2>
-                <a
-                  href="https://dashboard.keep.network"
-                  target="new"
-                  className="btn btn-primary d-md-inline-block"
-                >
-                  View token dashboard
-                </a>
-              </div>
-              <div className="w-lg-55 image order-1">&nbsp;</div>
-            </section>
-          </Col>
-        </Row>
-      </PageSection>
-      <PageSection id={sections.FEATURED_APPLICATION}>
-        <Row className="featured-application">
-          <Col xs={12} sm={12}>
-            <h2>Featured Application</h2>
-
-            <section className="application tbtc">
-              <h3>
-                Announcing tBTC: The first “killer app” built using the Keep
-                Network
-              </h3>
-
-              <p>
-                tBTC lets Bitcoin holders deposit and redeem BTC in DeFi without
-                centralized intermediaries
-              </p>
-
-              <ul className="links">
-                <li>
-                  <a
-                    className="primary"
-                    rel="noopener noreferrer"
-                    href="https://tbtc.network"
-                  >
-                    Go to tBTC Website
-                  </a>
-                </li>
-
-                <li>
-                  <a
-                    rel="noopener noreferrer"
-                    href="https://blog.keep.network/introducing-tbtc-the-safest-way-to-earn-with-your-bitcoin-fec077f171f4?"
-                  >
-                    Read blog post
-                  </a>
-                </li>
-              </ul>
-            </section>
-          </Col>
-        </Row>
-      </PageSection>
-      <PageSection id={sections.MAILING_LIST}>
-        <Row>
-          <Col xs={12} sm={7}>
-            <EmailForm
-              label="Email"
-              placeholder="you@example.com"
-              onSubmit={signupMailingList}
-              requestStates={ajaxRequestStates}
-              request={actionTypes.SIGNUP_MAILING_LIST}
-            >
-              <h3>Join our mailing list for updates</h3>
-            </EmailForm>
-          </Col>
-          <Col xs={12} sm={5} className="col-circles">
+      <PageSection
+        id={sections.home.KEEP_SOLUTION}
+        additionalClassNames="parallax-1"
+      >
+        <Row className="row--content">
+          <Col
+            xs={12}
+            md={7}
+            className={`${sections.home.KEEP_SOLUTION}-content`}
+          >
             <div>
-              <Image imageData={images.textureCircle2} />
+              <label
+                data-aos="fade-down"
+                data-duration-aos="1000"
+                className="callout"
+              >
+                The Keep Solution
+              </label>
+              <h3 data-aos="fade-right" data-aos-duration="1000">
+                {carousel[0].title}
+              </h3>
+              <h4 data-aos="fade-left" data-aos-duration="1000">
+                {carousel[0].body}
+              </h4>
+            </div>
+          </Col>
+          <Col xs={12} md={4} className="offset-md-1">
+            <div
+              data-aos="fade-left"
+              data-aos-duration="1000"
+              className="verticalRectangle"
+            >
+              <div
+                data-aos="fade-down-right"
+                data-aos-duration="1000"
+                className="ellipseCircle"
+              />
+            </div>
+            <div
+              data-aos="fade-down"
+              data-aos-duration="1000"
+              className="greenCircle"
+            />
+          </Col>
+        </Row>
+      </PageSection>
+      <PageSection
+        id={sections.home.KEEP_SOLUTION}
+        additionalClassNames="parallax-2"
+      >
+        <div className="ellipsesImg">
+          <div
+            className="ellipsesImg--item"
+            data-aos="zoom-in-right"
+            data-aos-duration="1000"
+          >
+            <div
+              data-aos="fade-left"
+              data-aos-duration="1000"
+              className="greenCircle"
+            />
+          </div>
+        </div>
+        <Row
+          className="row--content"
+          data-aos="zoom-in"
+          data-aos-duration="1000"
+        >
+          <Col xs={12} md={4} />
+          <Col
+            xs={12}
+            md={7}
+            className={`${sections.home.KEEP_SOLUTION}-content offset-md-1`}
+          >
+            <div>
+              <label
+                data-aos="fade-down"
+                data-duration-aos="1000"
+                className="callout"
+              >
+                The Keep Solution
+              </label>
+              <h3 data-aos="fade-right" data-aos-duration="1000">
+                {carousel[1].title}
+              </h3>
+              <h4 data-aos="fade-left" data-aos-duration="1000">
+                {carousel[1].body}
+              </h4>
             </div>
           </Col>
         </Row>
       </PageSection>
-      <PageSection id={sections.GITHUB}>
-        <Row>
-          <Col xs={12} md={12}>
-            <h3>
-              View the
-              <a
-                className="github-logo"
-                href="https://github.com/keep-network"
-                rel="noopener noreferrer"
-                target="_blank"
+      <PageSection
+        id={sections.home.KEEP_SOLUTION}
+        additionalClassNames="parallax-3"
+      >
+        <div className="o-section">
+          <div className="o-circle">
+            <div
+              data-aos="fade-left"
+              data-aos-duration="1000"
+              className="greenCircle"
+            />
+            <div
+              data-aos="fade-right"
+              data-aos-duration="1000"
+              className="o-circle__left"
+            />
+            <div className="o-circle__right" />
+          </div>
+        </div>
+        <Row
+          className="row--content"
+          data-aos="zoom-out"
+          data-aos-duration="1000"
+        >
+          <Col
+            xs={12}
+            md={4}
+            className={`${sections.home.KEEP_SOLUTION}-shape`}
+          />
+          <Col
+            xs={12}
+            md={7}
+            className={`${sections.home.KEEP_SOLUTION}-content offset-md-1`}
+          >
+            <div className="paraTextMargin">
+              <label
+                data-aos="fade-down"
+                data-duration-aos="1000"
+                className="callout"
               >
-                GitHub
-              </a>
-              Repository
-              <a
-                className="github-link"
-                href="https://github.com/keep-network"
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                <Icons.ArrowRightLong />
-              </a>
-            </h3>
+                The Keep Solution
+              </label>
+              <h3 data-aos="fade-right" data-aos-duration="1000">
+                {carousel[2].title}
+              </h3>
+              <h4 data-aos="fade-left" data-aos-duration="1000">
+                {carousel[2].body}
+              </h4>
+            </div>
           </Col>
         </Row>
       </PageSection>
-      <PageSection
-        id={sections.DEFINITION}
-        additionalClassNames={["blurb", "blurb-desktop"]}
-      >
-        <div className="blurb-panel">
-          <div className="blurb-icon">
-            <Icons.CastleGate />
-          </div>
-          <div className="blurb-text">
-            <p>
-              Keep: <span>(n.)</span>
-            </p>
-            <p>
-              The strongest or central tower of a castle, acting as a final
-              refuge
-            </p>
-          </div>
-        </div>
+      <PageSection id={sections.home.SUMMARY_GRID}>
+        <SummaryGrid {...summaryGrid} />
       </PageSection>
-      <PageSection id={sections.TEAM} collapsible>
-        <h2>{teamSection.title}</h2>
-        {teamSection.team.map((member, i) => (
-          <Profile
-            key={`team-member-${i}`}
-            name={member.name}
-            title={member.title}
-            image={member.image}
-            socials={member.social_links}
-          />
-        ))}
+      <PageSection id={sections.home.MINILOGO_GRID}>
+        <MiniLogoWall logos={minilogoGrid} />
+      </PageSection>
+      <PageSection id={sections.home.KEEP_BLOG}>
+        <KeepBlog {...blogs} isMore={true} />
       </PageSection>
       <PageSection
-        id={sections.DESCRIPTION}
-        additionalClassNames={["blurb", "blurb-desktop"]}
+        id={sections.home.EXCHANGES}
+        style={{
+          backgroundImage: `url(${withPrefix(
+            "/images/features/exchangesbanner.png"
+          )})`,
+        }}
       >
-        <div className="blurb-panel">
-          <div className="blurb-icon">
-            <Icons.Axe />
-          </div>
-          <div className="blurb-text">
-            <p>
-              Keeps provide a bridge between the world of public blockchains and
-              private data. It enables a new wave of ground-up innovation for
-              blockchain developers.
-            </p>
-          </div>
-        </div>
-      </PageSection>
-      <PageSection id={sections.ADVISORS} collapsible>
-        <h2>{advisorsSection.title}</h2>
-        {advisorsSection.advisors.map((advisor, i) => (
-          <Profile
-            key={`advisor-${i}`}
-            name={advisor.name}
-            title={advisor.title}
-            image={advisor.image}
-            socials={advisor.social_links}
-          />
-        ))}
-      </PageSection>
-      <PageSection id={sections.SUPPORTERS} convex>
-        <h2>{supportersSection.title}</h2>
         <Row>
-          {supportersSection.supporters.map((supporter, i) => (
-            <ImageLink
-              key={`supporter-${i}`}
-              url={supporter.url}
-              label={supporter.name}
-              image={supporter.logo}
+          <Col xs={12} sm={12}>
+            <div className="text-center">
+              <h3>{exchanges.title}:</h3>
+              <div className="links">
+                {exchanges.links.map((item, i) => (
+                  <div key={`exchange-${i}`}>
+                    <Link url={item.url}>
+                      <Image imageData={item.icon} />
+                      <span>{item.name}</span>
+                    </Link>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </Col>
+        </Row>
+      </PageSection>
+      <PageSection id={sections.home.LOGO_WALL} convex>
+        <section className="d-md-flex">
+          <div className="w-md-50">
+            <h1>{logoWall.title}</h1>
+          </div>
+          <div className="w-md-50 image">
+            {logoWall.supporters.map((supporter, i) => (
+              <ImageLink
+                key={`supporter-${i}`}
+                url={supporter.url}
+                label={supporter.name}
+                image={supporter.logo}
+              />
+            ))}
+          </div>
+        </section>
+      </PageSection>
+      <PageSection id={sections.home.CONTACT}>
+        <Row>
+          <Col xs={12} sm={12}>
+            <Contact
+              {...contact}
+              signupMailingList={signupMailingList}
+              requestStates={ajaxRequestStates}
             />
-          ))}
+          </Col>
         </Row>
       </PageSection>
     </div>
@@ -244,12 +294,15 @@ export const HomePageTemplate = ({
 
 HomePageTemplate.propTypes = {
   hero: PropTypes.object,
-  images: PropTypes.object,
+  carousel: PropTypes.array,
+  summary_grid: PropTypes.object,
+  minilogo_grid: PropTypes.array,
+  blogs: PropTypes.object,
+  exchanges: PropTypes.object,
   signupMailingList: PropTypes.func,
   ajaxRequestStates: PropTypes.object,
-  supporters_section: PropTypes.object,
-  team_section: PropTypes.object,
-  advisors_section: PropTypes.object,
+  logo_wall: PropTypes.object,
+  contact: PropTypes.object,
 }
 
 const mapStateToProps = (state) => ({
@@ -262,12 +315,9 @@ export const ConnectedHomePage = connect(mapStateToProps, {
 
 const HomePage = ({ data }) => {
   const { markdownRemark: post } = data
-  const images = {
-    textureCircle2: data.textureCircle2,
-  }
   return (
     <App className="app-home">
-      <ConnectedHomePage {...post.frontmatter} images={images} />
+      <ConnectedHomePage {...post.frontmatter} />
     </App>
   )
 }
@@ -275,8 +325,6 @@ const HomePage = ({ data }) => {
 HomePage.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.object,
-    textureCircle1: PropTypes.object,
-    textureCircle2: PropTypes.object,
   }),
 }
 
@@ -290,55 +338,81 @@ export const query = graphql`
         hero {
           title
           body
-          cta {
+          bg_video
+          cta_buttons {
             label
+            url
+          }
+          tickers {
+            label
+          }
+        }
+        carousel {
+          title
+          body
+          image {
+            childImageSharp {
+              fluid(maxWidth: 274, quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+          class
+        }
+        summary_grid {
+          title
+          body
+          cards {
+            name
+            title
             icon {
               image {
                 relativePath
               }
               alt
             }
-          }
-          cta_buttons {
-            label
             url
           }
         }
-        team_section {
-          title
-          team {
-            name
-            title
+        minilogo_grid {
+          icon {
             image {
-              childImageSharp {
-                fluid(maxWidth: 274, quality: 100) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
+              relativePath
             }
-            social_links {
-              url
-            }
+            alt
+            url
           }
         }
-        advisors_section {
+        blogs {
           title
-          advisors {
-            name
-            title
-            image {
-              childImageSharp {
-                fluid(maxWidth: 274, quality: 100) {
-                  ...GatsbyImageSharpFluid
-                }
+          cards {
+            icon {
+              image {
+                relativePath
               }
+              alt
             }
-            social_links {
-              url
-            }
+            title
+            source
+            excerpt
+            date
+            url
           }
         }
-        supporters_section {
+        exchanges {
+          title
+          links {
+            name
+            icon {
+              image {
+                relativePath
+              }
+              alt
+            }
+            url
+          }
+        }
+        logo_wall {
           title
           supporters {
             name
@@ -355,12 +429,24 @@ export const query = graphql`
             }
           }
         }
-      }
-    }
-    textureCircle2: file(relativePath: { regex: "/texture-circle-2.png/" }) {
-      childImageSharp {
-        fluid(maxWidth: 604, quality: 100) {
-          ...GatsbyImageSharpFluid
+        contact {
+          title
+          header
+          description
+          cards {
+            title
+            body
+            icon {
+              image {
+                relativePath
+              }
+              alt
+            }
+            link {
+              name
+              url
+            }
+          }
         }
       }
     }

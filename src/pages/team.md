@@ -37,6 +37,9 @@ team_section:
     - name: Piotr Dyraga
       title: Tech Lead
       image: /images/piotr-bw.png
+    - name: Sasha Tanase
+      title: Senior Product Designer
+      image: /images/sasha-bw.png
     - name: Liz Shinn
       title: Design Lead
       image: /images/liz-shinn-bw.png

@@ -47,13 +47,14 @@ tbtc_showcase:
       icon:
         image: /images/svg/ic-btc-tbtc.svg
         alt: 1 BTC = 1 TBTC
-    - name: Decentralized
+    - name: DECENTRALIZED
       icon:
         image: /images/svg/ic-tbtc-tokens.svg
         alt: TBTC Tokens
   article:
     image: /images/features/tbtc-article.png
-    body: tBTC is the safe way to earn with your Bitcoin.
+    body: tBTC is the safe way to earn with your Bitcoin. Deposit and redeem BTC in
+      DeFi without intermediaries.
 secure:
   title: Securing Keep
   body: Keep and tBTC have been audited by the strongest firms in the ecosystem.

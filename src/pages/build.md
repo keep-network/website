@@ -4,14 +4,15 @@ path: /build
 title: Build
 hero:
   title: Join
-  body: Join our passionate community. Browse our library of resources and community built tools below.
+  body: Join our passionate community. Browse our library of resources and
+    community-built tools below.
   image: /images/build.png
   cta_buttons:
     - label: Join Our Discord
       url: https://dashboard.keep.network/
 library:
-  title: Library of Keep resources
-  body: Resources for building on Keep
+  title: Keep resources
+  body: Learn more about building, designing, and staking on the Keep network.
   cards:
     - title: User Docs
       body: User guide for getting started with the network.
@@ -21,7 +22,7 @@ library:
       icon:
         image: /images/svg/ic-tech-doc.svg
         alt: Technical Docs
-    - title: Github
+    - title: Github Repo
       body: Contribute to our open source codebase on GitHub.
       button:
         label: View Codebase
@@ -29,7 +30,7 @@ library:
       icon:
         image: /images/svg/ic-github.svg
         alt: Github
-    - title: Design System
+    - title: Figma Design System
       body: Colors, type, and components to build with Keep styles.
       button:
         label: View Figma
@@ -38,7 +39,7 @@ library:
         image: /images/svg/ic-design-system.svg
         alt: Design System
 community:
-  title: Community built
+  title: Community tools
   body: Libraries, dashboards, and tools made by and for the Keep community.
   cards:
     - title: All the Keeps
@@ -64,7 +65,7 @@ community:
         url: https://keeptools.org/
 secure:
   title: Securely built network
-  body: Join the community with the confidence that Keep has been audited by the strongest firms in the ecosystem.
+  body: Keep has been audited by the strongest firms in the ecosystem.
   cards:
     - title: Consensys Audit
       body: February 2020
@@ -96,7 +97,8 @@ contact:
   description: Sign up for our newsletter and never miss an update.
   cards:
     - title: Read the Keep blog
-      body: Get the latest updates on the blog. Read about the Keep network, tBTC, partnerships, and more.
+      body: Get the latest updates on the blog. Read about the Keep network, tBTC,
+        partnerships, and more.
       icon:
         image: /images/svg/contact-icon-1.svg
         alt: Read the Keep blog
@@ -104,7 +106,8 @@ contact:
         name: Read Blog
         url: https://www.fabric.vc/
     - title: Join the community
-      body: Connect with the Discord community, ask questions, and get in on the ground level for the future of DeFi.
+      body: Connect with the Discord community, ask questions, and get in on the
+        ground level for the future of DeFi.
       icon:
         image: /images/svg/contact-icon-2.svg
         alt: Join the community

@@ -1,10 +1,9 @@
 ---
 template: stake-page
 path: /stake
-title: Stake
 hero:
   title: Stake
-  body: Earn up to 200% APY staking on the Keep network.
+  body: Earn your keep by staking on the Keep network.
   cta_buttons:
     - label: Launch Dashboard
       url: https://dashboard.keep.network/
@@ -27,8 +26,9 @@ why:
         image: /images/svg/ic-user-friendly.svg
         alt: User Friendly
 recommended:
-  title: Recommended staking providers
-  body: If you’re new to staking, we recommend working with one of our staking providers.
+  title: Staking providers
+  body: If you’re new to staking, we recommend working with one of our staking
+    providers.
   cards:
     - title: Bison Trails
       body: viktor@bisontrails.co
@@ -79,16 +79,18 @@ recommended:
         image: /images/svg/ic-staked.svg
         alt: Staked
 banner:
-  body: If you plan to stake more than $1MM USD in KEEP, connect with our business development team
+  body: If you plan to stake more than $1MM USD in KEEP, connect with our business
+    development team.
   button:
     label: Connect with us
     url: social@keep.network
 tech_guide:
-  intro: Technical User Guide
+  intro: Technical Documentation
   title: How to set up and run your own Keep node
-  body: If you live and breathe the technical specifications of Bash and validator software, consider setting up your own node. View the requirements here.
+  body: If you live and breathe the technical specifications of Bash and validator
+    software, consider setting up your own node. View the requirements here.
   button:
-    label: View Guide
+    label: View Docs
     url: https://docs.keep.network/run-random-beacon.html
 exchanges:
   title: Keep is listed on the following exchanges
@@ -108,4 +110,5 @@ exchanges:
         image: /images/svg/kraken.svg
         alt: Kraken
       url: https://www.kraken.com/
+title: Stake
 ---

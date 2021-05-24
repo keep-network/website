@@ -12,7 +12,6 @@
   p {
     margin-bottom: 0;
     color: $grey-60;
-    font-size: 13px;
     line-height: 20px;
   }
 
@@ -42,15 +41,7 @@
 
   @media (min-width: #{$bp-medium}) {
     p {
-      font-size: 16px;
-      line-height: 24px;
-    }
-  }
-
-  @media (min-width: #{$bp-extra-large}) {
-    p {
-      font-size: 20px;
-      line-height: 32px;
+      line-height: 28px;
     }
   }
 }

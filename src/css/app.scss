@@ -35,4 +35,29 @@ body {
 .app {
   overflow: hidden;
   margin: 0 auto;
+
+  .page-section:first-child {
+    transition: all 0.3s;
+    padding: 150px 0 0;
+  }
+
+  @media (max-height: #{$bp-medium - 1}) {
+    .page-section:first-child {
+      padding: 72px 0 0;
+    }
+
+    .home {
+      min-height: 900px;
+    }
+
+    &.announcement {
+      .page-section:first-child {
+        padding: 150px 0 0;
+      }
+
+      .home {
+        min-height: 975px;
+      }
+    }
+  }
 }

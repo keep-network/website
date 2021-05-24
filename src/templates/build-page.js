@@ -26,7 +26,7 @@ export const BuildPageTemplate = ({
 }) => {
   return (
     <div className="build-content">
-      <PageSection id={sections.build.HOME}>
+      <PageSection id={sections.build.HOME} additionalClassNames="pb-5">
         <h1
           className="h1-underline"
           dangerouslySetInnerHTML={{ __html: hero.title }}

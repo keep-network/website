@@ -84,7 +84,11 @@ NavItem.propTypes = {
   subitems: PropTypes.array,
 }
 
-export const HeaderTemplate = ({ navItems = [] }) => {
+export const HeaderTemplate = ({
+  navItems = [],
+  isAnnouncementVisible,
+  dismissAnnouncement,
+}) => {
   const [collapsed, setCollapsed] = useState(true)
   const [isShrunk, setShrunk] = useState(false)
 
@@ -116,11 +120,6 @@ export const HeaderTemplate = ({ navItems = [] }) => {
     window.addEventListener("scroll", onScroll)
     return () => window.removeEventListener("scroll", onScroll)
   }, [])
-
-  const [isAnnouncementVisible, setIsAnnouncementVisible] = useState(true)
-  const dismissAnnouncement = () => {
-    setIsAnnouncementVisible(false)
-  }
 
   return (
     <header className={isShrunk ? "stick" : ""}>
@@ -187,6 +186,8 @@ export const HeaderTemplate = ({ navItems = [] }) => {
 
 HeaderTemplate.propTypes = {
   navItems: PropTypes.array,
+  isAnnouncementVisible: PropTypes.bool,
+  dismissAnnouncement: PropTypes.func,
 }
 
 export const query = graphql`
@@ -212,15 +213,26 @@ export const query = graphql`
   }
 `
 
-const Header = () => (
+const Header = ({ isAnnouncementVisible, dismissAnnouncement }) => (
   <StaticQuery
     query={query}
     render={(data) => {
       const navItems =
         data.allMarkdownRemark.edges[0].node.frontmatter.nav_items
-      return <HeaderTemplate navItems={navItems} />
+      return (
+        <HeaderTemplate
+          navItems={navItems}
+          isAnnouncementVisible={isAnnouncementVisible}
+          dismissAnnouncement={dismissAnnouncement}
+        />
+      )
     }}
   />
 )
+
+Header.propTypes = {
+  isAnnouncementVisible: PropTypes.bool,
+  dismissAnnouncement: PropTypes.func,
+}
 
 export default Header

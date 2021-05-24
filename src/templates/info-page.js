@@ -27,7 +27,7 @@ export const InfoPageTemplate = ({
 }) => {
   return (
     <div className="info-content">
-      <PageSection id={sections.info.HOME}>
+      <PageSection id={sections.info.HOME} additionalClassNames="pb-5">
         <h1 className="h1-underline">{hero.title}</h1>
         <Row>
           <Col xs={12} md={7} className="body">

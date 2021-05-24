@@ -16,7 +16,7 @@ export const TeamPageTemplate = ({
 }) => {
   return (
     <div className="team-content">
-      <PageSection id={sections.team.HOME}>
+      <PageSection id={sections.team.HOME} additionalClassNames="pb-5">
         <Row>
           <Col xs={12}>
             <h1

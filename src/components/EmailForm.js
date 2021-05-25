@@ -32,8 +32,8 @@ class EmailForm extends Component {
     }
   }
 
-  static getDerivedStateFromProps(nextProps, newState) {
-    const { requestStates, request } = nextProps
+  static getDerivedStateFromProps(nextProps, prevState) {
+    const { requestStates, request, onSuccess } = nextProps
 
     if (requestStates.currentRequest === request) {
       if (requestStates[request].error) {
@@ -43,31 +43,23 @@ class EmailForm extends Component {
           errorMsg: ERRORS.SERVER,
         }
       } else {
-        return this.onRequestSuccess()
+        if (onSuccess) {
+          onSuccess()
+        }
+
+        return {
+          hasError: false,
+          requestSent: true,
+          requestSuccess: true,
+        }
       }
     }
+
+    return prevState
   }
 
   onChange = (e) => {
     this.setState(merge({}, this.getInitialState(), { email: e.target.value }))
-  }
-
-  onRequestSuccess() {
-    const { resetOnSuccess, onSuccess } = this.props
-
-    onSuccess()
-
-    if (resetOnSuccess) {
-      window.setTimeout(() => {
-        this.setState(this.getInitialState())
-      }, RESET_DELAY)
-    }
-
-    return {
-      hasError: false,
-      requestSent: true,
-      requestSuccess: true,
-    }
   }
 
   onClick = (e) => {
@@ -146,6 +138,14 @@ class EmailForm extends Component {
   }
 
   renderSuccessMessage() {
+    const { resetOnSuccess } = this.props
+
+    if (resetOnSuccess) {
+      window.setTimeout(() => {
+        this.setState(this.getInitialState())
+      }, RESET_DELAY)
+    }
+
     return (
       <div className="success-message">
         {this.props.successMessage ||

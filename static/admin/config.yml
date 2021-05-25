@@ -36,7 +36,7 @@ collections:
               - {
                   label: "Title",
                   name: "title",
-                  widget: "markdown",
+                  widget: "string",
                   minimal: true,
                 }
               - {
@@ -49,6 +49,7 @@ collections:
                   label: "Background Image",
                   name: "bg_image",
                   widget: "image",
+                  required: false,
                   hint: 'IMPORTANT! Image must be named "hero-bg.jpg" exactly
                     (it also must be a jpg), otherwise it will not appear.
                     Minimum image width of 2880px required (to be rendered as
@@ -81,14 +82,6 @@ collections:
             fields:
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Body", name: "body", widget: "string" }
-              - {
-                  label: "Background Image",
-                  name: "bg_image",
-                  widget: "image",
-                  hint: "Minimum image width of 528px required (to be
-                    rendered as 274px) to support higher resolution screens",
-                }
-              - { label: "Class Name", name: "class", widget: "string" }
           - label: "Summary Grid"
             name: "summary_grid"
             widget: "object"
@@ -114,6 +107,7 @@ collections:
                               label: "Image",
                               name: "image",
                               widget: file,
+                              required: false,
                               media_library: { config: { multiple: false } },
                               hint: "SVG only. SVG must have width and height attributes set in the file.",
                             },
@@ -137,6 +131,7 @@ collections:
                         label: "Image",
                         name: "image",
                         widget: file,
+                        required: false,
                         media_library: { config: { multiple: false } },
                         hint: "Image width of 168px and 72px required (to be
                           rendered as 168 x 72) to support higher resolution screens",
@@ -174,6 +169,7 @@ collections:
                               label: "Image",
                               name: "image",
                               widget: file,
+                              required: false,
                               media_library: { config: { multiple: false } },
                               hint:
                                 "Image width of 168px and 168px required (to be
@@ -208,6 +204,7 @@ collections:
                               label: "Image",
                               name: "image",
                               widget: file,
+                              required: false,
                               media_library: { config: { multiple: false } },
                               hint: "SVG only. SVG must have width and height attributes set in the file.",
                             },
@@ -241,6 +238,8 @@ collections:
                               label: Image,
                               name: image,
                               widget: image,
+                              required: false,
+                              media_library: { config: { multiple: false } },
                               hint: "Image should be at least the 2x resolution size",
                             },
                             { label: Alt, name: alt, widget: string },
@@ -274,6 +273,7 @@ collections:
                               label: "Image",
                               name: "image",
                               widget: file,
+                              required: false,
                               media_library: { config: { multiple: false } },
                               hint: "SVG only. SVG must have width and height attributes set in the file.",
                             },
@@ -292,15 +292,15 @@ collections:
                       },
                     ],
                 }
-      - file: "src/pages/build.md"
-        label: "Build"
-        name: "build"
+      - file: "src/pages/join.md"
+        label: "Join"
+        name: "join"
         fields:
           - {
               label: "Template",
               name: "template",
               widget: "hidden",
-              default: "build-page",
+              default: "join-page",
             }
           - { label: "Path", name: "path", widget: "hidden", default: "/build" }
           - label: "Hero"
@@ -323,6 +323,8 @@ collections:
                   label: "Widget Image",
                   name: "image",
                   widget: "image",
+                  required: false,
+                  media_library: { config: { multiple: false } },
                   hint: "Minimum image width of 440px required (to be
                     rendered as 274px) to support higher resolution screens",
                 }
@@ -384,6 +386,7 @@ collections:
                               label: "Image",
                               name: "image",
                               widget: file,
+                              required: false,
                               media_library: { config: { multiple: false } },
                               hint: "SVG only. SVG must have width and height attributes set in the file.",
                             },
@@ -437,6 +440,7 @@ collections:
                               label: "Image",
                               name: "image",
                               widget: file,
+                              required: false,
                               media_library: { config: { multiple: false } },
                               hint: "PNG only. PNG must have width and height attributes set in the file.",
                             },
@@ -491,6 +495,7 @@ collections:
                               label: "Image",
                               name: "image",
                               widget: file,
+                              required: false,
                               media_library: { config: { multiple: false } },
                               hint: "SVG only. SVG must have width and height attributes set in the file.",
                             },
@@ -525,6 +530,7 @@ collections:
                               label: "Image",
                               name: "image",
                               widget: file,
+                              required: false,
                               media_library: { config: { multiple: false } },
                               hint: "SVG only. SVG must have width and height attributes set in the file.",
                             },
@@ -612,6 +618,7 @@ collections:
                               label: "Image",
                               name: "image",
                               widget: file,
+                              required: false,
                               media_library: { config: { multiple: false } },
                               hint: "SVG only. SVG must have width and height attributes set in the file.",
                             },
@@ -666,6 +673,7 @@ collections:
                               label: "Image",
                               name: "image",
                               widget: file,
+                              required: false,
                               media_library: { config: { multiple: false } },
                               hint: "PNG only. PNG must have width and height attributes set in the file.",
                             },
@@ -698,24 +706,9 @@ collections:
             name: "tech_guide"
             widget: "object"
             fields:
-              - {
-                  label: "Intro",
-                  name: "intro",
-                  widget: "markdown",
-                  required: true,
-                }
-              - {
-                  label: "Title",
-                  name: "title",
-                  widget: "markdown",
-                  required: true,
-                }
-              - {
-                  label: "Body",
-                  name: "body",
-                  widget: "markdown",
-                  required: true,
-                }
+              - { label: "Intro", name: "intro", widget: "markdown" }
+              - { label: "Title", name: "title", widget: "markdown" }
+              - { label: "Body", name: "body", widget: "markdown" }
               - {
                   label: Button,
                   name: button,
@@ -749,6 +742,7 @@ collections:
                               label: "Image",
                               name: "image",
                               widget: file,
+                              required: false,
                               media_library: { config: { multiple: false } },
                               hint: "SVG only. SVG must have width and height attributes set in the file.",
                             },
@@ -812,6 +806,7 @@ collections:
                               label: "Image",
                               name: "image",
                               widget: file,
+                              required: false,
                               media_library: { config: { multiple: false } },
                               hint: "SVG only. SVG must have width and height attributes set in the file.",
                             },
@@ -885,6 +880,7 @@ collections:
                         label: "Image",
                         name: "image",
                         widget: file,
+                        required: false,
                         media_library: { config: { multiple: false } },
                         hint: "Image width of 168px and 72px required (to be
                           rendered as 168 x 72) to support higher resolution screens",
@@ -923,6 +919,7 @@ collections:
                               label: "Image",
                               name: "image",
                               widget: file,
+                              required: false,
                               media_library: { config: { multiple: false } },
                               hint:
                                 "Image width of 168px and 72px required (to be
@@ -992,6 +989,8 @@ collections:
                   label: "Profile Photo",
                   name: "image",
                   widget: "image",
+                  required: false,
+                  media_library: { config: { multiple: false } },
                   hint: "Minimum image width of 528px required (to be
                     rendered as 274px) to support higher resolution screens",
                 }
@@ -1026,6 +1025,8 @@ collections:
                       label: "Profile Photo",
                       name: "image",
                       widget: "image",
+                      required: false,
+                      media_library: { config: { multiple: false } },
                       hint: "Minimum image width of 528px required (to be
                         rendered as 274px) to support higher resolution screens",
                     }
@@ -1042,6 +1043,8 @@ collections:
                         label: "Profile Image",
                         name: "image",
                         widget: "image",
+                        required: false,
+                        media_library: { config: { multiple: false } },
                         hint: "Minimum image width of 528px required (to be
                           rendered as 274px) to support higher resolution screens",
                       },
@@ -1074,6 +1077,8 @@ collections:
                         label: "Profile Image",
                         name: "image",
                         widget: "image",
+                        required: false,
+                        media_library: { config: { multiple: false } },
                         hint: "Minimum image width of 528px required (to be
                           rendered as 274px) to support higher resolution screens",
                       },
@@ -1119,6 +1124,8 @@ collections:
                   label: "Widget Image",
                   name: "image",
                   widget: "image",
+                  required: false,
+                  media_library: { config: { multiple: false } },
                   hint: "Minimum image width of 440px required (to be
                     rendered as 274px) to support higher resolution screens",
                 }
@@ -1174,6 +1181,7 @@ collections:
                               label: "Image",
                               name: "image",
                               widget: file,
+                              required: false,
                               media_library: { config: { multiple: false } },
                               hint: "SVG only. SVG must have width and height attributes set in the file.",
                             },
@@ -1227,6 +1235,7 @@ collections:
                               label: "Image",
                               name: "image",
                               widget: file,
+                              required: false,
                               media_library: { config: { multiple: false } },
                               hint: "SVG only. SVG must have width and height attributes set in the file.",
                             },
@@ -1246,6 +1255,7 @@ collections:
                         label: "Image",
                         name: "image",
                         widget: file,
+                        required: false,
                         media_library: { config: { multiple: false } },
                       },
                     ],
@@ -1296,6 +1306,7 @@ collections:
                               label: "Image",
                               name: "image",
                               widget: file,
+                              required: false,
                               media_library: { config: { multiple: false } },
                               hint: "SVG only. SVG must have width and height attributes set in the file.",
                             },
@@ -1330,6 +1341,7 @@ collections:
                               label: "Image",
                               name: "image",
                               widget: file,
+                              required: false,
                               media_library: { config: { multiple: false } },
                               hint: "SVG only. SVG must have width and height attributes set in the file.",
                             },

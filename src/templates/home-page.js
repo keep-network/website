@@ -350,14 +350,6 @@ export const query = graphql`
         carousel {
           title
           body
-          image {
-            childImageSharp {
-              fluid(maxWidth: 274, quality: 100) {
-                ...GatsbyImageSharpFluid
-              }
-            }
-          }
-          class
         }
         summary_grid {
           title

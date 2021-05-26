@@ -240,6 +240,7 @@ export const query = graphql`
               relativePath
             }
             alt
+            url
           }
         }
         news {

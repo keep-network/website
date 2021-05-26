@@ -1504,6 +1504,7 @@ collections:
                     label: "URL",
                     name: "url",
                     widget: "string",
+                    required: false,
                     hint: "Use a relative URL (e.g. /press or #team) if the link is an internal link.",
                   },
                   {
@@ -1537,12 +1538,6 @@ collections:
               widget: "hidden",
               default: "footer-nav",
             }
-          - label: "Email Link"
-            name: "email_link"
-            widget: "object"
-            fields:
-              - { label: "Label", name: "label", widget: "string" }
-              - { label: "Email Address", name: "email", widget: "string" }
           - label: "Nav Categories"
             name: "nav_categories"
             widget: "list"

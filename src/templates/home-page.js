@@ -21,6 +21,7 @@ import {
 import { sections } from "../constants"
 import { actions } from "../redux"
 import useLiquidityRewardsAPY from "../hooks/useLiquidityRewardsAPY"
+import LoadingBlocks from "../components/LoadingBlocks"
 
 export const HomePageTemplate = ({
   hero = {},
@@ -44,6 +45,15 @@ export const HomePageTemplate = ({
       ? `${liquidityRewardsAPYs[0].value}% APY.`
       : "loading..."
 
+  const renderHighestAPY = () => {
+    return <LoadingBlocks numberOfBlocks={3} />
+    // return liquidityRewardsAPYs.length > 0 ? (
+    //   222
+    // ) : (
+    //   <LoadingBlocks numberOfBlocks={3} />
+    // )
+  }
+
   return (
     <div className="main-content">
       <PageSection id={sections.home.HOME}>
@@ -55,8 +65,13 @@ export const HomePageTemplate = ({
         </div>
         <Row>
           <Col xs={12} lg={10} md={10}>
-            <h1>{`${hero.title} ${highestAPY}`}</h1>
+            <h1>
+              <span>{`${hero.title} `}</span>
+              {renderHighestAPY()}
+              <span>{`% APY.`}</span>
+            </h1>
             <h4 className="body">{hero.body}</h4>
+            <LoadingBlocks />
           </Col>
         </Row>
         <Row className="cta-section">

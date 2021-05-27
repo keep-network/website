@@ -1,0 +1,152 @@
+$base-color: #C4C4C4;
+$shine-color: #000;
+$animation-duration: 1s;
+
+$firstKeyframeFor1Block: floor(100%/2);
+$firstKeyframeFor2Blocks: floor(floor(100%/2)/2);
+$firstKeyframeFor3Blocks: floor(floor(100%/3)/2);
+
+@mixin background-gradient {
+  background-color: #fff;
+  background-size: 600px;
+}
+
+@mixin keyframesFor1Block {
+  @keyframes one-block-shine-block1 {
+    0% {
+      background-color: #d1d1d1;
+    }
+
+    #{$firstKeyframeFor1Block} {
+      background-color: #C4C4C4;
+    }
+
+    #{$firstKeyframeFor1Block*2}, 100% {
+      background-color: #d1d1d1;
+    }
+  }
+}
+
+@mixin keyframesFor2Blocks {
+  @keyframes two-blocks-shine-block1 {
+    0% {
+      background-color: #d1d1d1;
+    }
+
+    #{$firstKeyframeFor2Blocks} {
+      background-color: #C4C4C4;
+    }
+
+    #{$firstKeyframeFor2Blocks*2}, 100% {
+      background-color: #d1d1d1;
+    }
+  }
+
+  @keyframes two-blocks-shine-block2 {
+    0%, #{$firstKeyframeFor2Blocks} {
+      background-color: #d1d1d1;
+    }
+
+    #{$firstKeyframeFor2Blocks*2} {
+      background-color: #C4C4C4;
+    }
+
+    #{($firstKeyframeFor2Blocks*2)+$firstKeyframeFor2Blocks}, 100% {
+      background-color: #d1d1d1;
+    }
+  }
+}
+
+@mixin keyframesFor3Blocks {
+  @keyframes three-blocks-shine-block1 {
+    0% {
+      background-color: #d1d1d1;
+    }
+
+    #{$firstKeyframeFor3Blocks} {
+      background-color: #C4C4C4;
+    }
+
+    #{$firstKeyframeFor3Blocks*2}, 100% {
+      background-color: #d1d1d1;
+    }
+  }
+
+  @keyframes three-blocks-shine-block2 {
+    0%, #{$firstKeyframeFor3Blocks} {
+      background-color: #d1d1d1;
+    }
+
+    #{$firstKeyframeFor3Blocks*2} {
+      background-color: #C4C4C4;
+    }
+
+    #{($firstKeyframeFor3Blocks*2)+$firstKeyframeFor3Blocks}, 100% {
+      background-color: #d1d1d1;
+    }
+  }
+
+  @keyframes three-blocks-shine-block3 {
+    0%, #{$firstKeyframeFor3Blocks*2} {
+      background-color: #d1d1d1;
+    }
+
+    #{($firstKeyframeFor3Blocks*2)+$firstKeyframeFor3Blocks} {
+      background-color: #C4C4C4;
+    }
+
+
+    #{($firstKeyframeFor3Blocks*2)+(2*$firstKeyframeFor3Blocks)}, 100% {
+      background-color: #d1d1d1;
+    }
+  }
+}
+@include keyframesFor1Block;
+@include keyframesFor2Blocks;
+@include keyframesFor3Blocks;
+
+.loading-block-container {
+  display: inline-flex;
+
+  &.blocks-animation1 {
+    .block1 {
+      animation: one-block-shine-block1 $animation-duration infinite ease-out;
+    }
+  }
+
+  &.blocks-animation2 {
+    .block1 {
+      animation: two-blocks-shine-block1 $animation-duration infinite ease-out;
+    }
+
+    .block2 {
+      animation: two-blocks-shine-block2 $animation-duration infinite ease-out;
+    }
+  }
+
+  &.blocks-animation3 {
+    .block1 {
+      animation: three-blocks-shine-block1 $animation-duration infinite ease-out;
+    }
+
+    .block2 {
+      animation: three-blocks-shine-block2 $animation-duration infinite ease-out;
+    }
+
+    .block3 {
+      animation: three-blocks-shine-block3 $animation-duration infinite ease-out;
+    }
+  }
+
+  .block {
+    float: left;
+    width: 50px;
+    height: 50px;
+    background-color: #ccc;
+    border-radius: 25%;
+    margin: 5px;
+    align-self: center;
+    @include background-gradient;
+  }
+
+}

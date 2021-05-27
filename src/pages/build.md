@@ -9,7 +9,7 @@ hero:
   image: /images/build.png
   cta_buttons:
     - label: Join Our Discord
-      url: https://dashboard.keep.network/
+      url: https://discord.com/invite/wYezN7v
 library:
   title: Keep resources
   body: Learn more about building, designing, and staking on the Keep network.

@@ -1,10 +1,10 @@
 $base-color: #C4C4C4;
 $shine-color: #000;
-$animation-duration: 1s;
+$animation-duration: 2s;
 
-$firstKeyframeFor1Block: floor(100%/2);
-$firstKeyframeFor2Blocks: floor(floor(100%/2)/2);
-$firstKeyframeFor3Blocks: floor(floor(100%/3)/2);
+$firstKeyframeFor1Block: floor(100%/2); // 50%
+$firstKeyframeFor2Blocks: floor(floor(100%/2)/2); //25%
+$firstKeyframeFor3Blocks: floor(floor(100%/3)/2); // 16%
 
 @mixin background-gradient {
   background-color: #fff;
@@ -101,40 +101,90 @@ $firstKeyframeFor3Blocks: floor(floor(100%/3)/2);
     }
   }
 }
-@include keyframesFor1Block;
-@include keyframesFor2Blocks;
-@include keyframesFor3Blocks;
+
+@mixin keyframesForLoadingBlocks($numberOfBlocks) {
+  $firstKeyframeValue: floor(floor(100%/$numberOfBlocks)/2);
+  $firstKeyframeValueForCurrentBlock: floor(floor(100/$numberOfBlocks)/2);
+  $firstKeyframeValueForCurrentBlockInPercent: #{$firstKeyframeValueForCurrentBlock} + '%';
+
+  @keyframes blocks_#{$numberOfBlocks}-shine_block1 {
+    0% {
+      background-color: #d1d1d1;
+    }
+
+    #{$firstKeyframeValue} {
+      background-color: #C4C4C4;
+    }
+
+    #{$firstKeyframeValue*2}, 100% {
+      background-color: #d1d1d1;
+    }
+  }
+
+  @if $numberOfBlocks > 1 {
+    @for $i from 2 through $numberOfBlocks {
+      @if $i == 3 and $numberOfBlocks == 3 {
+      }
+      @keyframes blocks_#{$numberOfBlocks}-shine_block#{$i} {
+        0%, #{$firstKeyframeValue} {
+          background-color: #d1d1d1;
+        }
+
+        #{$firstKeyframeValue*2} {
+          background-color: #C4C4C4;
+        }
+
+        #{$firstKeyframeValue*3}, 100% {
+          background-color: #d1d1d1;
+        }
+      }
+      $firstKeyframeValueForCurrentBlock: #{$firstKeyframeValueForCurrentBlock}+#{$firstKeyframeValue}
+    }
+  }
+
+
+
+}
+
+@warn 'tell me you see this warning bro';
+//@include keyframesFor1Block;
+//@include keyframesFor2Blocks;
+//@include keyframesFor3Blocks;
+
+@include keyframesForLoadingBlocks(1);
+@include keyframesForLoadingBlocks(2);
+@include keyframesForLoadingBlocks(3);
 
 .loading-block-container {
   display: inline-flex;
 
   &.blocks-animation1 {
     .block1 {
-      animation: one-block-shine-block1 $animation-duration infinite ease-out;
+      animation: blocks_1-shine_block1 $animation-duration infinite ease-out;
     }
   }
 
   &.blocks-animation2 {
     .block1 {
-      animation: two-blocks-shine-block1 $animation-duration infinite ease-out;
+      animation: blocks_2-shine_block1 $animation-duration infinite ease-out;
     }
 
     .block2 {
-      animation: two-blocks-shine-block2 $animation-duration infinite ease-out;
+      animation: blocks_2-shine_block2 $animation-duration infinite ease-out;
     }
   }
 
   &.blocks-animation3 {
     .block1 {
-      animation: three-blocks-shine-block1 $animation-duration infinite ease-out;
+      animation: blocks_3-shine_block1 $animation-duration infinite ease-out;
     }
 
     .block2 {
-      animation: three-blocks-shine-block2 $animation-duration infinite ease-out;
+      animation: blocks_3-shine_block2 $animation-duration infinite ease-out;
     }
 
     .block3 {
-      animation: three-blocks-shine-block3 $animation-duration infinite ease-out;
+      animation: blocks_3-shine_block3 $animation-duration infinite ease-out;
     }
   }
 

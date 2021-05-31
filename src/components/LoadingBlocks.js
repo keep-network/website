@@ -33,6 +33,9 @@ const LoadingBlocks = ({ numberOfBlocks = 3, animationDurationInSec = 1 }) => {
 }
 
 LoadingBlocks.propTypes = {
+  // @dev when adding more possible values to the numberOfBlocks please make
+  // sure to also include the keyframesForLoadingBlocks mixin with given value
+  // as an argument in loading-blocks.scss
   numberOfBlocks: PropTypes.oneOf([1, 2, 3]),
   animationDurationInSec: PropTypes.number,
 }

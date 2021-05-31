@@ -1,105 +1,10 @@
 $base-color: #C4C4C4;
 $shine-color: #000;
-$animation-duration: 2s;
-
-$firstKeyframeFor1Block: floor(100%/2); // 50%
-$firstKeyframeFor2Blocks: floor(floor(100%/2)/2); //25%
-$firstKeyframeFor3Blocks: floor(floor(100%/3)/2); // 16%
+$animation-duration: 1s;
 
 @mixin background-gradient {
   background-color: #fff;
   background-size: 600px;
-}
-
-@mixin keyframesFor1Block {
-  @keyframes one-block-shine-block1 {
-    0% {
-      background-color: #d1d1d1;
-    }
-
-    #{$firstKeyframeFor1Block} {
-      background-color: #C4C4C4;
-    }
-
-    #{$firstKeyframeFor1Block*2}, 100% {
-      background-color: #d1d1d1;
-    }
-  }
-}
-
-@mixin keyframesFor2Blocks {
-  @keyframes two-blocks-shine-block1 {
-    0% {
-      background-color: #d1d1d1;
-    }
-
-    #{$firstKeyframeFor2Blocks} {
-      background-color: #C4C4C4;
-    }
-
-    #{$firstKeyframeFor2Blocks*2}, 100% {
-      background-color: #d1d1d1;
-    }
-  }
-
-  @keyframes two-blocks-shine-block2 {
-    0%, #{$firstKeyframeFor2Blocks} {
-      background-color: #d1d1d1;
-    }
-
-    #{$firstKeyframeFor2Blocks*2} {
-      background-color: #C4C4C4;
-    }
-
-    #{($firstKeyframeFor2Blocks*2)+$firstKeyframeFor2Blocks}, 100% {
-      background-color: #d1d1d1;
-    }
-  }
-}
-
-@mixin keyframesFor3Blocks {
-  @keyframes three-blocks-shine-block1 {
-    0% {
-      background-color: #d1d1d1;
-    }
-
-    #{$firstKeyframeFor3Blocks} {
-      background-color: #C4C4C4;
-    }
-
-    #{$firstKeyframeFor3Blocks*2}, 100% {
-      background-color: #d1d1d1;
-    }
-  }
-
-  @keyframes three-blocks-shine-block2 {
-    0%, #{$firstKeyframeFor3Blocks} {
-      background-color: #d1d1d1;
-    }
-
-    #{$firstKeyframeFor3Blocks*2} {
-      background-color: #C4C4C4;
-    }
-
-    #{($firstKeyframeFor3Blocks*2)+$firstKeyframeFor3Blocks}, 100% {
-      background-color: #d1d1d1;
-    }
-  }
-
-  @keyframes three-blocks-shine-block3 {
-    0%, #{$firstKeyframeFor3Blocks*2} {
-      background-color: #d1d1d1;
-    }
-
-    #{($firstKeyframeFor3Blocks*2)+$firstKeyframeFor3Blocks} {
-      background-color: #C4C4C4;
-    }
-
-
-    #{($firstKeyframeFor3Blocks*2)+(2*$firstKeyframeFor3Blocks)}, 100% {
-      background-color: #d1d1d1;
-    }
-  }
 }
 
 @mixin keyframesForLoadingBlocks($numberOfBlocks) {
@@ -123,33 +28,25 @@ $firstKeyframeFor3Blocks: floor(floor(100%/3)/2); // 16%
 
   @if $numberOfBlocks > 1 {
     @for $i from 2 through $numberOfBlocks {
-      @if $i == 3 and $numberOfBlocks == 3 {
-      }
       @keyframes blocks_#{$numberOfBlocks}-shine_block#{$i} {
-        0%, #{$firstKeyframeValue} {
+        0%, #{$firstKeyframeValue+$firstKeyframeValue*($i - 2)} {
           background-color: #d1d1d1;
         }
 
-        #{$firstKeyframeValue*2} {
+        #{$firstKeyframeValue+$firstKeyframeValue*($i - 1)} {
           background-color: #C4C4C4;
         }
 
-        #{$firstKeyframeValue*3}, 100% {
+        #{$firstKeyframeValue+$firstKeyframeValue*$i}, 100% {
           background-color: #d1d1d1;
         }
       }
-      $firstKeyframeValueForCurrentBlock: #{$firstKeyframeValueForCurrentBlock}+#{$firstKeyframeValue}
     }
   }
 
 
 
 }
-
-@warn 'tell me you see this warning bro';
-//@include keyframesFor1Block;
-//@include keyframesFor2Blocks;
-//@include keyframesFor3Blocks;
 
 @include keyframesForLoadingBlocks(1);
 @include keyframesForLoadingBlocks(2);

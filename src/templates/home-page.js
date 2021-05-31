@@ -22,6 +22,7 @@ import { sections } from "../constants"
 import { actions } from "../redux"
 import useLiquidityRewardsAPY from "../hooks/useLiquidityRewardsAPY"
 import LoadingBlocks from "../components/LoadingBlocks"
+import SlideInAnimation from "../components/SlideInAnimation"
 
 export const HomePageTemplate = ({
   hero = {},
@@ -40,18 +41,19 @@ export const HomePageTemplate = ({
   }, [])
 
   const [liquidityRewardsAPYs, isFetching] = useLiquidityRewardsAPY()
-  const highestAPY =
-    liquidityRewardsAPYs.length > 0
-      ? `${liquidityRewardsAPYs[0].value}% APY.`
-      : "loading..."
 
   const renderHighestAPY = () => {
-    return <LoadingBlocks numberOfBlocks={3} animationDurationInSec={1}/>
-    // return liquidityRewardsAPYs.length > 0 ? (
-    //   222
-    // ) : (
-    //   <LoadingBlocks numberOfBlocks={3} />
-    // )
+    return liquidityRewardsAPYs.length > 0 ? (
+      liquidityRewardsAPYs[0].value.toString().length > 10 ? (
+        Math.floor(liquidityRewardsAPYs[0].value).toString()
+      ) : (
+        <SlideInAnimation durationInSec={1}>
+          {Math.floor(liquidityRewardsAPYs[0].value).toString()}
+        </SlideInAnimation>
+      )
+    ) : (
+      <LoadingBlocks numberOfBlocks={3} animationDurationInSec={1} />
+    )
   }
 
   return (

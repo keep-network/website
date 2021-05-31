@@ -1,5 +1,5 @@
 import React from "react"
-import PropTypes from "prop-types";
+import PropTypes from "prop-types"
 
 const SlideInAnimation = ({ durationInSec = 1, children }) => {
   const chars = children.split("")

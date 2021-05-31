@@ -13,6 +13,7 @@ const SlideInAnimation = ({ durationInSec = 1, children }) => {
       animationIterationCount: 1,
       animationFillMode: "forwards",
       position: "relative",
+      margin: "0 1px",
     }
   }
 

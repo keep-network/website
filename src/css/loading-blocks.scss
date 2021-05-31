@@ -54,11 +54,11 @@ $animation-duration: 1s;
 
   .block {
     float: left;
-    width: 50px;
+    width: 35px;
     height: 50px;
     background-color: #ccc;
     border-radius: 25%;
-    margin: 5px;
+    margin: 2px;
     align-self: center;
     @include background-gradient;
   }

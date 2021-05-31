@@ -73,7 +73,6 @@ export const HomePageTemplate = ({
               <span>{`% APY.`}</span>
             </h1>
             <h4 className="body">{hero.body}</h4>
-            <LoadingBlocks />
           </Col>
         </Row>
         <Row className="cta-section">

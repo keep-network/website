@@ -46,7 +46,7 @@ export const HomePageTemplate = ({
       : "loading..."
 
   const renderHighestAPY = () => {
-    return <LoadingBlocks numberOfBlocks={3} />
+    return <LoadingBlocks numberOfBlocks={3} animationDurationInSec={1}/>
     // return liquidityRewardsAPYs.length > 0 ? (
     //   222
     // ) : (

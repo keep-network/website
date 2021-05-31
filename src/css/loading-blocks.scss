@@ -55,36 +55,6 @@ $animation-duration: 1s;
 .loading-block-container {
   display: inline-flex;
 
-  &.blocks-animation1 {
-    .block1 {
-      animation: blocks_1-shine_block1 $animation-duration infinite ease-out;
-    }
-  }
-
-  &.blocks-animation2 {
-    .block1 {
-      animation: blocks_2-shine_block1 $animation-duration infinite ease-out;
-    }
-
-    .block2 {
-      animation: blocks_2-shine_block2 $animation-duration infinite ease-out;
-    }
-  }
-
-  &.blocks-animation3 {
-    .block1 {
-      animation: blocks_3-shine_block1 $animation-duration infinite ease-out;
-    }
-
-    .block2 {
-      animation: blocks_3-shine_block2 $animation-duration infinite ease-out;
-    }
-
-    .block3 {
-      animation: blocks_3-shine_block3 $animation-duration infinite ease-out;
-    }
-  }
-
   .block {
     float: left;
     width: 50px;

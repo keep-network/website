@@ -28,16 +28,10 @@
   }
 }
 
-@include keyframesForTextLoader(1);
-@include keyframesForTextLoader(2);
-@include keyframesForTextLoader(3);
-@include keyframesForTextLoader(4);
-@include keyframesForTextLoader(5);
-@include keyframesForTextLoader(6);
-@include keyframesForTextLoader(7);
-@include keyframesForTextLoader(8);
-@include keyframesForTextLoader(9);
-@include keyframesForTextLoader(10);
+$maxNumberOfCharacters: 10;
+@for $i from 1 through $maxNumberOfCharacters {
+  @include keyframesForTextLoader($i);
+}
 
 .text-loader-container {
   display: inline-block;

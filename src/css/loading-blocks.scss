@@ -45,9 +45,10 @@ $animation-duration: 1s;
   }
 }
 
-@include keyframesForLoadingBlocks(1);
-@include keyframesForLoadingBlocks(2);
-@include keyframesForLoadingBlocks(3);
+$maxNumberOfBlocks: 3;
+@for $i from 1 through $maxNumberOfBlocks {
+  @include keyframesForLoadingBlocks($i);
+}
 
 .loading-block-container {
   display: inline-flex;

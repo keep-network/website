@@ -17,25 +17,21 @@ const SlideInAnimation = ({ durationInSec = 1, children }) => {
     }
   }
 
-  const renderCharacters = (chars) => {
-    return (
-      <span className={"text-loader-container"}>
-        {chars.map((char, i) => {
-          return (
-            <span
-              className={`character${i + 1}`}
-              key={`text-loader-${i}`}
-              style={renderStyleForCharacter(i + 1)}
-            >
-              {char}
-            </span>
-          )
-        })}
-      </span>
-    )
-  }
-
-  return renderCharacters(chars)
+  return (
+    <span className={"text-loader-container"}>
+      {chars.map((char, i) => {
+        return (
+          <span
+            className={`character${i + 1}`}
+            key={`text-loader-${i}`}
+            style={renderStyleForCharacter(i + 1)}
+          >
+            {char}
+          </span>
+        )
+      })}
+    </span>
+  )
 }
 
 SlideInAnimation.propTypes = {

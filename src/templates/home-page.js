@@ -43,16 +43,14 @@ export const HomePageTemplate = ({
   const [liquidityRewardsAPYs, isFetching] = useLiquidityRewardsAPY()
 
   const renderHighestAPY = () => {
-    return liquidityRewardsAPYs.length > 0 ? (
-      liquidityRewardsAPYs[0].value.toString().length > 10 ? (
-        Math.floor(liquidityRewardsAPYs[0].value).toString()
-      ) : (
-        <SlideInAnimation durationInSec={1}>
-          {Math.floor(liquidityRewardsAPYs[0].value).toString()}
-        </SlideInAnimation>
-      )
-    ) : (
-      <LoadingBlocks numberOfBlocks={3} animationDurationInSec={1} />
+    if (liquidityRewardsAPYs.length === 0) {
+      return <LoadingBlocks numberOfBlocks={3} animationDurationInSec={1} />
+    }
+
+    return (
+      <SlideInAnimation durationInSec={1}>
+        {Math.floor(liquidityRewardsAPYs[0].value).toString()}
+      </SlideInAnimation>
     )
   }
 

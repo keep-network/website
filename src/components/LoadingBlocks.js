@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 
 const LoadingBlocks = ({ numberOfBlocks = 3, animationDurationInSec = 1 }) => {
   const renderStyleForBlock = (currentBlockNumber) => {
-    const duration = animationDurationInSec.toString() + "s"
+    const duration = `${animationDurationInSec}s`
     return {
       animation: `blocks_${numberOfBlocks}-shine_block${currentBlockNumber} ${duration} infinite ease-out`,
     }

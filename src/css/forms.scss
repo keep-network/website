@@ -104,12 +104,8 @@
   }
 
   .success-message {
-    @extend .h3;
-    color: $accent-text-color;
-
-    @media (max-width: #{$bp-medium - 1}) {
-      font-size: 22px;
-    }
+    @extend .h4;
+    color: $mint-60;
   }
 
   .error-message {
@@ -122,5 +118,11 @@
     font-size: 0.75rem;
     line-height: 150%;
     margin-top: 5px;
+  }
+
+  @media (max-width: #{$bp-medium - 1}) {
+    .error-message {
+      position: relative;
+    }
   }
 }

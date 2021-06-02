@@ -18,7 +18,7 @@ export const FaqPageTemplate = ({
 }) => {
   return (
     <div className="faq-content">
-      <PageSection id={sections.faq.HOME}>
+      <PageSection id={sections.faq.HOME} additionalClassNames="pb-5">
         <Row>
           <Col xs={12}>
             <h1

@@ -29,7 +29,6 @@
     background-size: cover;
     background-repeat: no-repeat;
 
-    padding: 72px 0 0;
     min-height: 900px;
     margin-top: 0;
 
@@ -104,7 +103,6 @@
     }
 
     @media (min-width: #{$bp-medium}) {
-      padding: 150px 0 0;
       min-height: 1000px;
       &-video-bg {
         top: -150px;

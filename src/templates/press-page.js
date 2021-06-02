@@ -93,7 +93,7 @@ export const PressPageTemplate = ({
 
   return (
     <div className="press-content">
-      <PageSection id={sections.press.HOME}>
+      <PageSection id={sections.press.HOME} additionalClassNames="pb-5">
         <div>
           <h1 className="h1-underline">{hero.title}</h1>
           <h3

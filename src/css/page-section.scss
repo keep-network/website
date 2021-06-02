@@ -6,13 +6,6 @@
   transition: max-height 0.25s ease-in;
   max-height: none;
 
-  &:first-child {
-    margin-top: 48px;
-    @media (min-height: #{$bp-medium}) {
-      margin-top: 100px;
-    }
-  }
-
   .page-section-content {
     width: 100%;
     position: relative;
@@ -20,7 +13,7 @@
   }
 
   @media (min-width: #{$bp-medium}) {
-    padding: 154px 0;
+    padding: 150px 0;
   }
 
   &.collapsible {

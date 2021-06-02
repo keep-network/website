@@ -58,6 +58,15 @@
           max-width: 85%;
           padding-top: 20px;
         }
+
+        .collapsible-list {
+          .collapsible-list-label .btn {
+            img {
+              width: 32px;
+              height: 32px;
+            }
+          }
+        }
       }
     }
   }

@@ -32,43 +32,34 @@ class EmailForm extends Component {
     }
   }
 
-  // eslint-disable-next-line camelcase
-  UNSAFE_componentWillReceiveProps(nextProps) {
-    const { requestStates, request } = nextProps
+  static getDerivedStateFromProps(nextProps, prevState) {
+    const { requestStates, request, onSuccess } = nextProps
 
     if (requestStates.currentRequest === request) {
       if (requestStates[request].error) {
-        this.setState({
+        return {
           hasError: true,
           requestSent: false,
           errorMsg: ERRORS.SERVER,
-        })
+        }
       } else {
-        this.onRequestSuccess()
+        if (onSuccess) {
+          onSuccess()
+        }
+
+        return {
+          hasError: false,
+          requestSent: true,
+          requestSuccess: true,
+        }
       }
     }
+
+    return prevState
   }
 
   onChange = (e) => {
     this.setState(merge({}, this.getInitialState(), { email: e.target.value }))
-  }
-
-  onRequestSuccess() {
-    const { resetOnSuccess, onSuccess } = this.props
-
-    this.setState({
-      hasError: false,
-      requestSent: true,
-      requestSuccess: true,
-    })
-
-    onSuccess()
-
-    if (resetOnSuccess) {
-      window.setTimeout(() => {
-        this.setState(this.getInitialState())
-      }, RESET_DELAY)
-    }
   }
 
   onClick = (e) => {
@@ -100,7 +91,7 @@ class EmailForm extends Component {
   }
 
   renderForm() {
-    const { label, showSuccessMessage, placeholder, children } = this.props
+    const { label, showSuccessMessage, placeholder } = this.props
     const {
       email,
       hasError,
@@ -116,53 +107,60 @@ class EmailForm extends Component {
     }
 
     return (
-      <div>
-        {children}
-        <Form
-          inline
-          className={classNames(classes)}
-          onSubmit={(e) => {
-            e.preventDefault()
-          }}
-        >
-          <FormGroup className="col-md-12 px-0 pr-xs-2">
-            <Label style={{ display: "none" }}>{label}</Label>
-            <Input
-              className="form-group-input"
-              type="email"
-              value={email}
-              placeholder={placeholder}
-              onChange={this.onChange}
-              onKeyUp={this.onKeyUp}
-            />
-          </FormGroup>{" "}
-          <SubmitButton
-            isLoading={requestSent && !requestSuccess}
-            onClick={this.onClick}
-          >
-            <ArrowRightLong />
-            <span className="button-text">Subscribe</span>
-          </SubmitButton>
-        </Form>
+      <Form
+        inline
+        className={classNames(classes)}
+        onSubmit={(e) => {
+          e.preventDefault()
+        }}
+      >
+        <FormGroup className="col-md-12 px-0 pr-xs-2">
+          <Label style={{ display: "none" }}>{label}</Label>
+          <Input
+            className="form-group-input"
+            type="email"
+            value={email}
+            placeholder={placeholder}
+            onChange={this.onChange}
+            onKeyUp={this.onKeyUp}
+          />
+        </FormGroup>{" "}
         {hasError && <small className="error-message">{errorMsg}</small>}
-      </div>
+        <SubmitButton
+          isLoading={requestSent && !requestSuccess}
+          onClick={this.onClick}
+        >
+          <ArrowRightLong />
+          <span className="button-text">Subscribe</span>
+        </SubmitButton>
+      </Form>
     )
   }
 
   renderSuccessMessage() {
+    const { resetOnSuccess } = this.props
+
+    if (resetOnSuccess) {
+      window.setTimeout(() => {
+        this.setState(this.getInitialState())
+      }, RESET_DELAY)
+    }
+
     return (
       <div className="success-message">
-        {this.props.successMessage || "Thanks for joining!"}
+        {this.props.successMessage ||
+          "🎉 You’re in! Thanks for signing up for the Keep newsletter."}
       </div>
     )
   }
 
   render() {
-    const { showSuccessMessage } = this.props
+    const { showSuccessMessage, children } = this.props
     const { requestSuccess } = this.state
 
     return (
       <div className="email-form">
+        {children}
         {requestSuccess || showSuccessMessage
           ? this.renderSuccessMessage()
           : this.renderForm()}

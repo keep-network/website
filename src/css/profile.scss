@@ -12,6 +12,7 @@
   p {
     margin-bottom: 0;
     color: $grey-60;
+    line-height: 20px;
   }
 
   label {
@@ -35,6 +36,12 @@
       svg {
         width: 24px;
       }
+    }
+  }
+
+  @media (min-width: #{$bp-medium}) {
+    p {
+      line-height: 28px;
     }
   }
 }

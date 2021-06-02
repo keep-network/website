@@ -9,25 +9,19 @@ const LoadingBlocks = ({ numberOfBlocks = 3, animationDurationInSec = 1 }) => {
     }
   }
 
-  const renderBlocks = () => {
-    const blocks = []
-    for (let i = 1; i < numberOfBlocks + 1; i++) {
-      blocks.push(
-        <div
-          className={`block block${i}`}
-          key={`loading_block_${i}`}
-          style={renderStyleForBlock(i)}
-        />
-      )
-    }
-    return blocks
-  }
-
   return (
     <div
       className={`loading-block-container blocks-animation${numberOfBlocks}`}
     >
-      {renderBlocks()}
+      {Array(numberOfBlocks)
+        .fill(0)
+        .map((_, i) => (
+          <div
+            className={`block block${i + 1}`}
+            key={`loading_block_${i + 1}`}
+            style={renderStyleForBlock(i + 1)}
+          />
+        ))}
     </div>
   )
 }

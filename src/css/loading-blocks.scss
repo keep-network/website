@@ -1,9 +1,5 @@
-$base-color: #C4C4C4;
-$shine-color: #000;
-$animation-duration: 1s;
-
 @mixin background-gradient {
-  background-color: #fff;
+  background-color: $white;
   background-size: 600px;
 }
 
@@ -14,15 +10,15 @@ $animation-duration: 1s;
 
   @keyframes blocks_#{$numberOfBlocks}-shine_block1 {
     0% {
-      background-color: #d1d1d1;
+      background-color: $grey-25;
     }
 
     #{$firstKeyframeValue} {
-      background-color: #C4C4C4;
+      background-color: $grey-30;
     }
 
     #{$firstKeyframeValue*2}, 100% {
-      background-color: #d1d1d1;
+      background-color: $grey-25;
     }
   }
 
@@ -30,15 +26,15 @@ $animation-duration: 1s;
     @for $i from 2 through $numberOfBlocks {
       @keyframes blocks_#{$numberOfBlocks}-shine_block#{$i} {
         0%, #{$firstKeyframeValue+$firstKeyframeValue*($i - 2)} {
-          background-color: #d1d1d1;
+          background-color: $grey-25;
         }
 
         #{$firstKeyframeValue+$firstKeyframeValue*($i - 1)} {
-          background-color: #C4C4C4;
+          background-color: $grey-30;
         }
 
         #{$firstKeyframeValue+$firstKeyframeValue*$i}, 100% {
-          background-color: #d1d1d1;
+          background-color: $grey-25;
         }
       }
     }
@@ -56,7 +52,7 @@ $maxNumberOfBlocks: 3;
   .block {
     width: 35px;
     height: 50px;
-    background-color: #ccc;
+    background-color: $grey-25;
     border-radius: 25%;
     margin: 2px;
     align-self: center;

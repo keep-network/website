@@ -39,7 +39,7 @@ const Contact = ({
   description,
   cards,
   signupMailingList,
-  ajaxRequestStates,
+  requestStates,
 }) => {
   return (
     <>
@@ -48,7 +48,7 @@ const Contact = ({
         label="Email"
         placeholder="Enter email address"
         onSubmit={signupMailingList}
-        requestStates={ajaxRequestStates}
+        requestStates={requestStates}
         request={actionTypes.SIGNUP_MAILING_LIST}
       >
         <h4>{header}</h4>
@@ -70,7 +70,7 @@ Contact.propTypes = {
   description: PropTypes.string,
   cards: PropTypes.array,
   signupMailingList: PropTypes.func,
-  ajaxRequestStates: PropTypes.object,
+  requestStates: PropTypes.object,
 }
 
 export default Contact

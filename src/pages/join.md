@@ -9,7 +9,7 @@ hero:
   image: /images/build.png
   cta_buttons:
     - label: Join Our Discord
-      url: https://dashboard.keep.network/
+      url: https://discord.com/invite/wYezN7v
 library:
   title: Keep resources
   body: Learn more about building, designing, and staking on the Keep network.
@@ -105,7 +105,7 @@ contact:
         alt: Read the Keep blog
       link:
         name: Read Blog
-        url: https://www.fabric.vc/
+        url: https://blog.keep.network/
     - title: Join the community
       body: Connect with the Discord community, ask questions, and get in on the
         ground level for the future of DeFi.
@@ -114,5 +114,5 @@ contact:
         alt: Join the community
       link:
         name: Join Discord
-        url: https://www.fabric.vc/
+        url: https://discord.com/invite/wYezN7v
 ---

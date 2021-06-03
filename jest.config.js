@@ -6,4 +6,7 @@
 module.exports = {
   testEnvironment: "node",
   testRegex: "(src/__tests__/.*|(\\.|/)(test|spec))\\.[jt]sx?$",
+  transform: {
+    "\\.js$": ["babel-jest", { configFile: "./babel-jest.config.js" }],
+  },
 }

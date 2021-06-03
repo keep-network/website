@@ -122,11 +122,7 @@ export class LiquidityRewardsSaddle extends LiquidityRewardsUniswap {
    * @param {string} totalSupply
    */
   _totalSupplyInUSD = async (totalSupply) => {
-    const wrappedTokenContract = new Contract(
-      await this._getWrappedTokenAddress(),
-      ["function totalSupply() view returns (uint256)"],
-      new providers.JsonRpcProvider(INFURA_RPC_URL, NETWORK)
-    )
+    const wrappedTokenContract = await this._getWrappedTokenContract()
     const wrappedTokenTotalSupply = (
       await wrappedTokenContract.totalSupply()
     ).toString()
@@ -140,6 +136,18 @@ export class LiquidityRewardsSaddle extends LiquidityRewardsUniswap {
     return new BigNumber(totalSupply)
       .multipliedBy(wrappedTokenPoolInUSD)
       .div(wrappedTokenTotalSupply)
+  }
+
+  /**
+   * @return {Contract} The Ethers contract instance of the wrapped token
+   */
+  _getWrappedTokenContract = async () => {
+    const contractAddress = await this._getWrappedTokenAddress()
+    return new Contract(
+      contractAddress,
+      ["function totalSupply() view returns (uint256)"],
+      new providers.JsonRpcProvider(INFURA_RPC_URL, NETWORK)
+    )
   }
 }
 

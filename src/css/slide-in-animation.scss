@@ -1,0 +1,40 @@
+@mixin keyframesForTextLoader($numberOfCharacters) {
+  $firstKeyframeValue: floor(floor(100%/$numberOfCharacters));
+  $addedValue: floor($firstKeyframeValue/4);
+
+  @keyframes characters_#{$numberOfCharacters}-move_character#{$numberOfCharacters} {
+    0% {
+      top: -60px;
+    }
+
+    #{$firstKeyframeValue}, 100% {
+      top: 0;
+    }
+  }
+
+  @if $numberOfCharacters > 1 {
+    $multiplier: 1;
+    @for $i from $numberOfCharacters - 1 through 1 {
+      @keyframes characters_#{$numberOfCharacters}-move_character#{$i} {
+        0%, #{$addedValue*($numberOfCharacters - $i)} {
+          top: -60px;
+        }
+
+        #{$firstKeyframeValue+$addedValue*($numberOfCharacters - $i)}, 100% {
+          top: 0;
+        }
+      }
+    }
+  }
+}
+
+$maxNumberOfCharacters: 10;
+@for $i from 1 through $maxNumberOfCharacters {
+  @include keyframesForTextLoader($i);
+}
+
+.text-loader-container {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: top;
+}

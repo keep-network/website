@@ -2,7 +2,7 @@
 template: header-nav
 nav_items:
   - label: Join
-    url: "/build"
+    url: "/join"
   - label: Stake
     url: "/stake"
   - label: Faq

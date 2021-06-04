@@ -6,7 +6,7 @@ hero:
   title: Stake on Ethereum’s first private computer and earn up to
   body: Staking with Keep is the best way to back a truly decentralized network and the future of DeFi.
   bg_video: images/home/keep-castle-clouds.mp4
-  bg_image: /images/keep-bg.jpg
+  bg_image: /images/hero-bg.jpg
   cta_buttons:
     - label: Start Staking
       url: https://dashboard.keep.network/
@@ -18,16 +18,10 @@ hero:
 carousel:
   - title: Privacy-focused infrastructure for the public blockchain.
     body: The Keep network allows private data to be used on public protocols without sacrificing confidentiality.
-    image: /images/carousel-bg-1.png
-    class: carousel-infra
   - title: True decentralization.
     body: Keep is the only protocol that is truly decentralized. “Keeps” are off-chain containers that allow contracts to use private data without exposing the data to the public blockchain.
-    image: /images/carousel-bg-2.png
-    class: carousel-decent
   - title: Security without compromise.
     body: The Keep network stores data with the highest level of encryption. Keep and tBTC have been audited by the strongest firms in the ecosystem.
-    image: /images/carousel-bg-3.png
-    class: carousel-secure
 summary_grid:
   title: Learn how to stake on the Keep network
   body: Stake on the Keep network to earn rewards and secure the network.

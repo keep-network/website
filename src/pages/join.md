@@ -1,7 +1,7 @@
 ---
-template: build-page
-path: /build
-title: Build
+template: join-page
+path: /join
+title: Join
 hero:
   title: Join
   body: Join our passionate community. Browse our library of resources and
@@ -97,7 +97,8 @@ contact:
   description: Sign up for our newsletter and never miss an update.
   cards:
     - title: Read the Keep blog
-      body: Get the latest updates on the blog. Read about the Keep network, tBTC,
+      body:
+        Get the latest updates on the blog. Read about the Keep network, tBTC,
         partnerships, and more.
       icon:
         image: /images/svg/contact-icon-1.svg

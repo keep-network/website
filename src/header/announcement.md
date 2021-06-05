@@ -1,5 +1,5 @@
 ---
 template: announcement
-title: Hard Merge Announcement
+title: Keep x NuCypher Upgrade Vote
 ---
-On-chain network hard merge between Keep and NuCypher. [Read the Keep Improvement Proposal and VOTE!](https://forum.keep.network/t/proposal-keep-and-nucypher-hard-merge/74)
+Keep and NuCypher network upgrade signal now live in both communities. [Stakers vote here!](https://snapshot.org/#/keepstakers.eth/proposal/QmV9o1AiZSVZ5fdKJXYmGTcnYQodP8h1gWt9EEMaNFXsDs)

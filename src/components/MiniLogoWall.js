@@ -2,6 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import { Row, Col } from "reactstrap"
 import Image from "./Image"
+import Link from "./Link"
 
 const MiniLogoWall = ({ logos }) => {
   return (
@@ -10,9 +11,13 @@ const MiniLogoWall = ({ logos }) => {
         <div className="minilogo-item-text">FEATURED IN</div>
         {logos &&
           logos.map((logo, i) => (
-            <div className="minilogo-item" key={`logo-${i}`}>
+            <Link
+              url={logo.icon.url}
+              className="minilogo-item"
+              key={`logo-${i}`}
+            >
               <Image imageData={logo.icon} />
-            </div>
+            </Link>
           ))}
       </Col>
     </Row>

@@ -12,7 +12,7 @@ nav_categories:
       - label: FAQ
         url: /faq
       - label: Audits
-        url: /audits
+        url: /info#info-secure
   - title: Follow
     items:
       - label: Press

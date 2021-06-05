@@ -14,15 +14,19 @@ minilogo_grid:
   - icon:
       image: /images/logos/bloomberg.png
       alt: Bloomberg
+      url: https://www.bloomberg.com/
   - icon:
       image: /images/logos/forbes.png
       alt: Forbes
+      url: https://www.forbes.com/
   - icon:
       image: /images/logos/coindesk.png
       alt: Coindesk
+      url: https://www.coindesk.com/
   - icon:
       image: /images/logos/decrypt.png
       alt: Decrypt
+      url: https://decrypt.co/
 news:
   title: In the News
   body: Featured Coverage

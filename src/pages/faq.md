@@ -41,13 +41,13 @@ questions:
       href="https://staking.keep.network/about-staking/staking-minimums">this
       section</a> of the staking user guide.
   - question: What is the difference between “staking” and “stakedrop”?
-    answer: Staking refers to the most complete way to stake on the Keep network.
-      There are two variations of staking. You can stake with a minimum of KEEP
-      tokens, or you can stake both the minimum KEEP and bond a desired amount
-      of ETH in order to support the Keep network. By both staking KEEP and
-      bonding ETH, stakers maximize their KEEP and ETH rewards. <br><br>
-      Stakedrop just refers to any period of time during which KEEP rewards are
-      available to stakers under a certain set of conditions.
+    answer: <b>Staking</b> refers to two variations of staking on the Keep network.
+      You can stake with a minimum of KEEP tokens, or you can stake both the
+      minimum KEEP and bond a desired amount of ETH in order to support the Keep
+      network. By both staking KEEP and bonding ETH, stakers maximize their KEEP
+      and ETH rewards. <br><br> <b>Stakedrop</b> refers to any period of time
+      during which KEEP rewards are available to stakers under a certain set of
+      conditions.
   - question: What are the rewards of staking?
     answer: Stakers are rewarded in both ETH and KEEP for staking on the Keep
       network, relative to how much KEEP they stake and ETH they bond. Rewards

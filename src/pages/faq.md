@@ -13,26 +13,24 @@ questions:
       more about Keep.</a>
   - question: How does a keep work?
     answer: Keeps are core to the Keep network’s value proposition. The Keep network
-      uses “private enclaves” known as keeps to securely encrypt and store
-      private data. Off-chain keeps will be protected using secure multiparty
+      uses private enclaves known as "keeps" to securely encrypt and store
+      private data. Off-chain keeps are protected using secure multiparty
       computation (sMPC), generating, securing, storing, encrypting and
       transmitting data across many individuals.
   - question: What is a KEEP token?
-    answer: The Keep Network's native token is KEEP. It powers the network and
-      undergirds all the apps that are and will be built on it.
+    answer: The Keep Network's native token is KEEP.
   - question: Is Keep live?
     answer: Yes! Keep is live.
   - question: How do I get KEEP tokens?
-    answer: There are two ways to get KEEP tokens. You can buy tokens on an
-      exchange. KEEP is available on Uniswap, Balancer, and Kraken. You can
-      contribute to liquidity pools on Uniswap and earn KEEP as a reward.
+    answer: You can buy KEEP tokens on an exchange. KEEP is available on Uniswap,
+      Balancer, and Kraken. You can also contribute to liquidity pools and earn
+      KEEP as a reward.
   - question: How do I stake KEEP tokens?
-    answer: You can stake KEEP tokens through the Keep staking dashboard. Stakers
+    answer: You can stake KEEP tokens through the <a
+      href="https://dashboard.keep.network/">Keep staking dashboard.</a> Stakers
       are able to operate a node themselves or delegate their KEEP to a staking
-      provider. Visit the staking dashboard at <a
-      href="https://dashboard.keep.network">dashboard.keep.network</a> to get
-      started, or learn more about staking at <a
-      href="https://staking.keep.network">staking.keep.network.</a>
+      provider. Learn more in the <a href="https://staking.keep.network">staking
+      user guide.</a>
   - question: Is there a minimum staking amount?
     answer: There is a minimum staking amount to stake on the Keep network as an
       independent node operator or with a staking provider. The minimum stake

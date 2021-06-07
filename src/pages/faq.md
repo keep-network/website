@@ -36,7 +36,8 @@ questions:
       independent node operator or with a staking provider. The minimum stake
       reduces over time on a set calendar. To learn about your options to earn
       KEEP even if you don’t have the minimum KEEP stake available, check out <a
-      href="https://staking.keep.network/about-staking/staking-minimums">staking.keep.network/about-staking/staking-minimums</a>
+      href="https://staking.keep.network/about-staking/staking-minimums">this
+      section</a> of the staking user guide.
   - question: What is the difference between “staking” and “stakedrop”?
     answer: Staking refers to the most complete way to stake on the Keep network.
       There are two variations of staking. You can stake with a minimum of KEEP

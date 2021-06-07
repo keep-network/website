@@ -3,32 +3,30 @@ template: footer-nav
 nav_categories:
   - title: Company
     items:
+      - label: FAQ
+        url: /faq
       - label: Info
         url: /info
       - label: Press
         url: /press
       - label: Team
         url: /team
-      - label: FAQ
-        url: /faq
       - label: Audits
         url: /info#info-secure
   - title: Follow
     items:
-      - label: Press
-        url: /press
+      - label: Blog
+        url: https://blog.keep.network/
       - label: Twitter
         url: https://twitter.com/keep_project
       - label: Telegram
         url: https://t.me/KeepNetworkOfficial/
       - label: Reddit
         url: https://www.reddit.com/r/KeepNetwork/
-      - label: Blog
-        url: https://blog.keep.network/
   - title: Community
     items:
-      - label: Build
-        url: /build
+      - label: Join
+        url: /join
       - label: Discord
         url: https://discordapp.com/invite/wYezN7v
       - label: GitHub

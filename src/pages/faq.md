@@ -46,18 +46,19 @@ questions:
       bonding ETH, stakers maximize their KEEP and ETH rewards. <br><br>
       Stakedrop just refers to any period of time during which KEEP rewards are
       available to stakers under a certain set of conditions.
-  - question: What are the risks of staking?
-    answer: Slashing in the Keep and tBTC systems is not designed to be punitive,
-      and is rather to protect the security of the network from malicious
-      behaviors. <br><br><a
-      href="https://staking.keep.network/about-staking/staking-risks">Learn more
-      at staking.keep.network/about-staking/staking-risks</a>
   - question: What are the rewards of staking?
     answer: Stakers are rewarded in both ETH and KEEP for staking on the Keep
       network, relative to how much KEEP they stake and ETH they bond. Rewards
-      right now can be up to 200% APY for Keep stakers. <br><br><a
-      href="https://staking.keep.network/about-staking/staking-economics">Learn
-      more at staking.keep.network/about-staking/staking-economics</a>
+      right now can be up to 200% APY for Keep stakers. <br><br> Learn more in
+      <a
+      href="https://staking.keep.network/about-staking/staking-economics">this
+      section</a> of the staking user guide.
+  - question: What are the risks of staking?
+    answer: Slashing in the Keep and tBTC systems is not designed to be punitive,
+      and is rather to protect the security of the network from malicious
+      behaviors. <br><br> Learn more in <a
+      href="https://staking.keep.network/about-staking/staking-risks">this
+      section</a> of the staking user guide.
 contact:
   title: Keep in touch
   header: Get the Keep Newsletter

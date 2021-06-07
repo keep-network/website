@@ -29,8 +29,10 @@ questions:
     answer: You can stake KEEP tokens through the <a
       href="https://dashboard.keep.network/">Keep staking dashboard.</a> Stakers
       are able to operate a node themselves or delegate their KEEP to a staking
-      provider. Learn more in the <a href="https://staking.keep.network">staking
-      user guide.</a>
+      provider. View <a href="https://keep.network/stake/">this section</a> for
+      a list of our recommended staking providers. For a detailed guide to
+      staking, head to the <a href="https://staking.keep.network">staking user
+      guide.</a>
   - question: Is there a minimum staking amount?
     answer: There is a minimum staking amount to stake on the Keep network as an
       independent node operator or with a staking provider. The minimum stake

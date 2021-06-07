@@ -2,23 +2,25 @@
 template: header-nav
 nav_items:
   - label: Join
-    url: "/join"
+    url: /join
   - label: Stake
-    url: "/stake"
+    url: /stake
   - label: Faq
-    url: "/faq"
+    url: /faq
   - label: News
     url: ""
     subitems:
       - label: Press
-        url: "/press"
+        url: /press
       - label: Blog
         url: https://blog.keep.network/
   - label: About
     url: ""
     subitems:
       - label: Team
-        url: "/team"
+        url: /team
       - label: Info
-        url: "/info"
+        url: /info
+      - label: Audits
+        url: /info#info-secure
 ---

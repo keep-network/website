@@ -28,7 +28,8 @@ carousel:
       and tBTC have been audited by the strongest firms in the ecosystem.
 summary_grid:
   title: How to stake
-  body: Stake on the Keep network to earn rewards and secure the network.
+  body: Learn more about staking on the Keep network to earn rewards and secure
+    the network.
   cards:
     - name: About Keep
       title: How the Keep Network works

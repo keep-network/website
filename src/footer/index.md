@@ -34,7 +34,7 @@ nav_categories:
       - label: GitHub
         url: https://github.com/keep-network/
       - label: Governance
-        url: https://discordapp.com/invite/wYezN7v
+        url: https://forum.keep.network/
 copyright_text: <p>A Thesis<sup>*</sup> Build</p><p>© 2021 Keep SEZC. All Rights Reserved.</p>
 legal_links:
   - label: Privacy Policy

@@ -108,7 +108,7 @@ blogs:
         alt: The Block
       url: https://www.theblockcrypto.com/post/97634/keep-protocol-nucypher-ethereum-merger
 exchanges:
-  title: Keep is listed on the following exchanges
+  title: "Keep is listed on the following exchanges:"
   links:
     - name: Uniswap
       icon:

@@ -27,7 +27,7 @@ carousel:
     body: The Keep network stores data with the highest level of encryption. Keep
       and tBTC have been audited by the strongest firms in the ecosystem.
 summary_grid:
-  title: Learn how to stake on the Keep network
+  title: How to stake
   body: Stake on the Keep network to earn rewards and secure the network.
   cards:
     - name: About Keep

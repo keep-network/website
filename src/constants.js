@@ -19,6 +19,7 @@ const sections = {
   stake: {
     HOME: "home-stake",
     WHY: "why",
+    STAKING_OPTIONS: "staking-options",
     RECOMMENDED: "recommended",
     BANNER_BUSINESS_TEAM: "banner-business-team",
     TECH_GUIDE: "tech-guide",

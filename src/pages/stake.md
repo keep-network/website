@@ -34,16 +34,25 @@ stake_options:
       button:
         label: Liquidity Pools
         url: liquidity-pools-url
+      icon:
+        image: /images/svg/ic-liquidity-pools.svg
+        alt: Liquidity Pools
     - title: KEEP Pool
       body: No minimum KEEP amount needed to lock your KEEP and start earning rewards.
       button:
         label: Keep Pool
         url: keep-pool-url
+      icon:
+        image: /images/svg/ic-keep-pool.svg
+        alt: Liquidity Pools
     - title: Stake KEEP
-      body: Stake KEEP and eanr rewards. Minimum KEEP amount required
+      body: Stake KEEP and earn rewards. Minimum KEEP amount required
       button:
         label: Stake Keep
         url: learn-more-url
+      icon:
+        image: /images/svg/ic-stake-keep.svg
+        alt: Liquidity Pools
 recommended:
   title: Staking providers
   body: If you’re new to staking, we recommend working with one of our staking

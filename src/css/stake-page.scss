@@ -53,6 +53,17 @@
     }
   }
 
+  .stake-options {
+    .stake-options-section {
+      .stake-options__card {
+        flex-direction: row;
+      }
+      .card-icon {
+        width: 30%;
+      }
+    }
+  }
+
   .recommended {
     background-color: $grey-30;
 

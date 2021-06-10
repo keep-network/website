@@ -4,13 +4,21 @@ import { Col, Row } from "reactstrap"
 import PropTypes from "prop-types"
 import { graphql, withPrefix } from "gatsby"
 
-import { App, Image, Link, PageSection, FeatureCard } from "../components"
+import {
+  App,
+  Image,
+  Link,
+  PageSection,
+  FeatureCard,
+  Button,
+} from "../components"
 import { sections } from "../constants"
 
 export const StakePageTemplate = ({
   hero = {},
   images = {},
   why = {},
+  stake_options = {},
   recommended = {},
   banner = {},
   tech_guide: techGuide = {},
@@ -66,6 +74,33 @@ export const StakePageTemplate = ({
             </Col>
           ))}
         </Row>
+      </PageSection>
+      <PageSection id={sections.stake.STAKE_OPTIONS}>
+        <Row>
+          <Col xs={12}>
+            <h2 dangerouslySetInnerHTML={{ __html: stake_options.title }} />
+            <h3
+              className="body"
+              dangerouslySetInnerHTML={{ __html: stake_options.body }}
+            />
+          </Col>
+        </Row>
+        <div className={"stake-options-section"}>
+          {stake_options.cards.map((card, i) => (
+            <FeatureCard
+              icon={`/images/${card.icon.image.relativePath}`}
+              title={card.title}
+              text={card.body}
+              key={`card-${i}`}
+              className={"stake-options__card"}
+            >
+              <div>
+                <Button label={"Test1"} />
+                <Button {...card.button} />
+              </div>
+            </FeatureCard>
+          ))}
+        </div>
       </PageSection>
       <PageSection id={sections.stake.RECOMMENDED}>
         <Row>
@@ -160,6 +195,7 @@ StakePageTemplate.propTypes = {
   hero: PropTypes.object,
   images: PropTypes.object,
   why: PropTypes.object,
+  stake_options: PropTypes.object,
   recommended: PropTypes.object,
   banner: PropTypes.object,
   tech_guide: PropTypes.object,
@@ -214,6 +250,24 @@ export const query = graphql`
           cards {
             title
             body
+            icon {
+              image {
+                relativePath
+              }
+              alt
+            }
+          }
+        }
+        stake_options {
+          title
+          body
+          cards {
+            title
+            body
+            button {
+              label
+              url
+            }
             icon {
               image {
                 relativePath

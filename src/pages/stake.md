@@ -31,25 +31,31 @@ stake_options:
   cards:
     - title: Liquidity Pools
       body: Provide liquidity to one of our liquidity pools to start earning rewards.
-      button:
-        label: Liquidity Pools
-        url: liquidity-pools-url
+      buttons:
+        - label: Liquidity Pools
+          url: liquidity-pools-url
+        - label: Learn More
+          url: learn-more-url
       icon:
         image: /images/svg/ic-liquidity-pools.svg
         alt: Liquidity Pools
     - title: KEEP Pool
       body: No minimum KEEP amount needed to lock your KEEP and start earning rewards.
-      button:
-        label: Keep Pool
-        url: keep-pool-url
+      buttons:
+        - label: Keep Pool
+          url: keep-pool-url
+        - label: Learn More
+          url: learn-more-url
       icon:
         image: /images/svg/ic-keep-pool.svg
         alt: Liquidity Pools
     - title: Stake KEEP
       body: Stake KEEP and earn rewards. Minimum KEEP amount required
-      button:
-        label: Stake Keep
-        url: learn-more-url
+      buttons:
+        - label: Stake Keep
+          url: stake-keep-url
+        - label: Learn More
+          url: learn-more-url
       icon:
         image: /images/svg/ic-stake-keep.svg
         alt: Liquidity Pools

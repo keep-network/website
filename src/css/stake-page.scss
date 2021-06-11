@@ -54,12 +54,56 @@
   }
 
   .stake-options {
+    background-color: $mint-30;
     .stake-options-section {
+      margin: 3rem 0;
       .stake-options__card {
         flex-direction: row;
+        text-align: left;
       }
       .card-icon {
         width: 30%;
+      }
+      .card-body {
+        align-items: flex-start;
+        .buttons-container {
+          .btn {
+            margin-right: 20px;
+          }
+        }
+      }
+
+      @media (max-width: $bp-large) {
+        .card-body {
+          .buttons-container {
+            text-align: center;
+            .btn {
+              margin: 5px;
+              width: 18rem;
+            }
+          }
+        }
+      }
+
+      @media (max-width: $bp-medium) {
+        .stake-options__card {
+          flex-direction: column;
+        }
+
+        .card-body {
+          .buttons-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            align-self: center;
+            text-align: center;
+
+            .btn {
+              margin: 5px;
+              width: 18rem;
+            }
+          }
+        }
       }
     }
   }

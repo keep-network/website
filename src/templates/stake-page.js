@@ -94,9 +94,13 @@ export const StakePageTemplate = ({
               key={`card-${i}`}
               className={"stake-options__card"}
             >
-              <div>
-                <Button label={"Test1"} />
-                <Button {...card.button} />
+              <div className={"buttons-container"}>
+                {card.buttons[0] && (
+                  <Button {...card.buttons[0]} className={"btn btn-primary"} />
+                )}
+                {card.buttons[1] && (
+                  <Button {...card.buttons[1]} className={"btn btn-default"} />
+                )}
               </div>
             </FeatureCard>
           ))}
@@ -264,7 +268,7 @@ export const query = graphql`
           cards {
             title
             body
-            button {
+            buttons {
               label
               url
             }

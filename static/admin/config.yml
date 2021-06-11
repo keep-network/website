@@ -654,9 +654,11 @@ collections:
                     { label: Title, name: title, widget: string },
                     { label: Body, name: body, widget: string },
                     {
-                      label: Button,
-                      name: button,
-                      widget: object,
+                      label: "Buttons",
+                      name: "buttons",
+                      widget: "list",
+                      allow_add: false,
+                      required: false,
                       fields:
                         [
                           { label: Label, name: label, widget: string },

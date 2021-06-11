@@ -18,7 +18,7 @@ export const StakePageTemplate = ({
   hero = {},
   images = {},
   why = {},
-  stake_options = {},
+  stake_options: StakeOptions = {},
   recommended = {},
   banner = {},
   tech_guide: techGuide = {},
@@ -78,15 +78,15 @@ export const StakePageTemplate = ({
       <PageSection id={sections.stake.STAKE_OPTIONS}>
         <Row>
           <Col xs={12}>
-            <h2 dangerouslySetInnerHTML={{ __html: stake_options.title }} />
+            <h2 dangerouslySetInnerHTML={{ __html: StakeOptions.title }} />
             <h3
               className="body"
-              dangerouslySetInnerHTML={{ __html: stake_options.body }}
+              dangerouslySetInnerHTML={{ __html: StakeOptions.body }}
             />
           </Col>
         </Row>
         <div className={"stake-options-section"}>
-          {stake_options.cards.map((card, i) => (
+          {StakeOptions.cards.map((card, i) => (
             <FeatureCard
               icon={`/images/${card.icon.image.relativePath}`}
               title={card.title}

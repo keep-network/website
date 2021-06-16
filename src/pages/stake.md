@@ -25,6 +25,19 @@ why:
       icon:
         image: /images/svg/ic-user-friendly.svg
         alt: User Friendly
+governance_forum:
+  title: Governance Forum
+  body: Read the latest community proposals and cast your vote
+  cards:
+    - title: "Proposal: Migrate the KEEP/ETH Pool 2 from Uniswap to Sushiswap"
+      date: "2021-04-12T19:25:00.000Z"
+      link: "https://forum.keep.network/t/proposal-migrate-the-keep-eth-pool-2-from-uniswap-to-sushiswap/280"
+    - title: "Proposal: Keep and NuCypher Hard Merge"
+      date: "2021-04-12T19:25:00.000Z"
+      link: "https://forum.keep.network/t/proposal-keep-and-nucypher-hard-merge/74/2"
+    - title: T6 Token Proposal
+      date: "2021-04-12T19:25:00.000Z"
+      link: "https://forum.keep.network/t/t6-token-proposal/238"
 recommended:
   title: Staking providers
   body: If you’re new to staking, we recommend working with one of our staking

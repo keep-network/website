@@ -11,6 +11,7 @@ export const StakePageTemplate = ({
   hero = {},
   images = {},
   why = {},
+  governance_forum: GovernanceForum = {},
   recommended = {},
   banner = {},
   tech_guide: techGuide = {},
@@ -160,6 +161,7 @@ StakePageTemplate.propTypes = {
   hero: PropTypes.object,
   images: PropTypes.object,
   why: PropTypes.object,
+  governance_forum: PropTypes.object,
   recommended: PropTypes.object,
   banner: PropTypes.object,
   tech_guide: PropTypes.object,
@@ -220,6 +222,15 @@ export const query = graphql`
               }
               alt
             }
+          }
+        }
+        governance_forum {
+          title
+          body
+          cards {
+            title
+            date
+            link
           }
         }
         recommended {

@@ -479,7 +479,33 @@ collections:
                         name: "date",
                         widget: "datetime",
                       },
-                      { label: Link, name: link, widget: string },
+                      {
+                        label: Button,
+                        name: button,
+                        widget: object,
+                        fields:
+                          [
+                            { label: Label, name: label, widget: string },
+                            { label: URL, name: url, widget: string },
+                          ],
+                      },
+                      {
+                        label: Icon,
+                        name: icon,
+                        widget: object,
+                        fields:
+                          [
+                            {
+                              label: "Image",
+                              name: "image",
+                              widget: file,
+                              required: false,
+                              media_library: { config: { multiple: false } },
+                              hint: "SVG only. SVG must have width and height attributes set in the file.",
+                            },
+                            { label: "Alt", name: "alt", widget: "string" },
+                          ],
+                      },
                     ],
                 }
           - label: "Secure"

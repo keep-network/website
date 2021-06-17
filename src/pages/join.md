@@ -67,15 +67,30 @@ governance_forum:
   title: Governance Forum
   body: Read the latest community proposals and cast your vote
   cards:
-    - title: "Proposal: Migrate the KEEP/ETH Pool 2 from Uniswap to Sushiswap"
-      date: "2021-04-12T19:25:00.000Z"
-      link: "https://forum.keep.network/t/proposal-migrate-the-keep-eth-pool-2-from-uniswap-to-sushiswap/280"
     - title: "Proposal: Keep and NuCypher Hard Merge"
-      date: "2021-04-12T19:25:00.000Z"
-      link: "https://forum.keep.network/t/proposal-keep-and-nucypher-hard-merge/74/2"
+      date: "2021-03-08T19:25:00.000Z"
+      button:
+        label: Vote now
+        url: "https://forum.keep.network/t/proposal-keep-and-nucypher-hard-merge/74"
+      icon:
+        image: /images/svg/ic-document.svg
+        alt: image
     - title: T6 Token Proposal
-      date: "2021-04-12T19:25:00.000Z"
-      link: "https://forum.keep.network/t/t6-token-proposal/238"
+      date: "2021-05-11T19:25:00.000Z"
+      button:
+        label: Vote now
+        url: "https://forum.keep.network/t/t6-token-proposal/238"
+      icon:
+        image: /images/svg/ic-document.svg
+        alt: image
+    - title: "Proposal: Migrate the KEEP/ETH Pool 2 from Uniswap to Sushiswap"
+      date: "2021-06-05T19:25:00.000Z"
+      button:
+        label: Vote now
+        url: "https://forum.keep.network/t/proposal-migrate-the-keep-eth-pool-2-from-uniswap-to-sushiswap/280"
+      icon:
+        image: /images/svg/ic-document.svg
+        alt: image
 secure:
   title: Securely built network
   body: Keep has been audited by the strongest firms in the ecosystem.

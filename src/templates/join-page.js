@@ -14,18 +14,19 @@ import {
 } from "../components"
 import { sections } from "../constants"
 import { actions } from "../redux"
+import * as moment from "moment";
+import { truncate } from "../utils";
 
 export const BuildPageTemplate = ({
   hero = {},
   library = {},
   community = {},
-  governance_forum: GovernanceForum = {},
+  governance_forum: governanceForum = {},
   secure = {},
   contact = {},
   signupMailingList = () => {},
   ajaxRequestStates = {},
 }) => {
-  console.log('governance_forum', GovernanceForum)
   return (
     <div className="build-content">
       <PageSection id={sections.build.HOME} additionalClassNames="pb-5">
@@ -108,6 +109,28 @@ export const BuildPageTemplate = ({
                 </Col>
               ))}
           </Col>
+        </Row>
+      </PageSection>
+      <PageSection id={sections.build.GOVERNANCE_FORUM}>
+        <Row>
+          <Col xs={12}>
+            <h2 dangerouslySetInnerHTML={{ __html: governanceForum.title }} />
+            <h3 dangerouslySetInnerHTML={{ __html: governanceForum.body }} />
+          </Col>
+        </Row>
+        <Row>
+          {governanceForum.cards.map((card, i) => (
+            <Col key={`card-${i}`} xs={12} md={6} lg={4}>
+              <FeatureCard
+                icon={`/images/${card.icon.image.relativePath}`}
+                title={truncate(card.title, 40)}
+                text={moment(card.date).format("MMMM D, YYYY")}
+                button={card.button}
+                btnClass="btn-default"
+                className={"governance-feature-card"}
+              />
+            </Col>
+          ))}
         </Row>
       </PageSection>
       <PageSection id={sections.build.SECURE}>
@@ -239,7 +262,16 @@ export const query = graphql`
           cards {
             title
             date
-            link
+            button {
+              label
+              url
+            }
+            icon {
+              image {
+                relativePath
+              }
+              alt
+            }
           }
         }
         secure {

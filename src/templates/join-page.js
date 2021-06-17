@@ -19,11 +19,13 @@ export const BuildPageTemplate = ({
   hero = {},
   library = {},
   community = {},
+  governance_forum: GovernanceForum = {},
   secure = {},
   contact = {},
   signupMailingList = () => {},
   ajaxRequestStates = {},
 }) => {
+  console.log('governance_forum', GovernanceForum)
   return (
     <div className="build-content">
       <PageSection id={sections.build.HOME} additionalClassNames="pb-5">
@@ -148,6 +150,7 @@ BuildPageTemplate.propTypes = {
   hero: PropTypes.object,
   library: PropTypes.object,
   community: PropTypes.object,
+  governance_forum: PropTypes.object,
   secure: PropTypes.object,
   contact: PropTypes.object,
   signupMailingList: PropTypes.func,
@@ -228,6 +231,15 @@ export const query = graphql`
               label
               url
             }
+          }
+        }
+        governance_forum {
+          title
+          body
+          cards {
+            title
+            date
+            link
           }
         }
         secure {

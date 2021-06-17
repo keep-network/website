@@ -13,6 +13,7 @@ const sections = {
     HOME: "home-build",
     LIBRARY: "build-library",
     COMMUNITY: "build-community",
+    GOVERNANCE_FORUM: "governance-forum",
     SECURE: "build-secure",
     CONTACT: "contact",
   },

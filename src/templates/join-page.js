@@ -14,8 +14,7 @@ import {
 } from "../components"
 import { sections } from "../constants"
 import { actions } from "../redux"
-import * as moment from "moment";
-import { truncate } from "../utils";
+import GovernanceForum from "../components/GovernanceForum";
 
 export const BuildPageTemplate = ({
   hero = {},
@@ -112,26 +111,7 @@ export const BuildPageTemplate = ({
         </Row>
       </PageSection>
       <PageSection id={sections.build.GOVERNANCE_FORUM}>
-        <Row>
-          <Col xs={12}>
-            <h2 dangerouslySetInnerHTML={{ __html: governanceForum.title }} />
-            <h3 dangerouslySetInnerHTML={{ __html: governanceForum.body }} />
-          </Col>
-        </Row>
-        <Row>
-          {governanceForum.cards.map((card, i) => (
-            <Col key={`card-${i}`} xs={12} md={6} lg={4}>
-              <FeatureCard
-                icon={`/images/${card.icon.image.relativePath}`}
-                title={truncate(card.title, 40)}
-                text={moment(card.date).format("MMMM D, YYYY")}
-                button={card.button}
-                btnClass="btn-default"
-                className={"governance-feature-card"}
-              />
-            </Col>
-          ))}
-        </Row>
+        <GovernanceForum {...governanceForum} />
       </PageSection>
       <PageSection id={sections.build.SECURE}>
         <Row>

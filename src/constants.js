@@ -4,6 +4,7 @@ const sections = {
     KEEP_SOLUTION: "keep-solution",
     SUMMARY_GRID: "summary-grid",
     MINILOGO_GRID: "minilogo-grid",
+    GOVERNANCE_FORUM: "governance-forum",
     KEEP_BLOG: "keep-blog",
     EXCHANGES: "exchanges",
     LOGO_WALL: "logo-wall",

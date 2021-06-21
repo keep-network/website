@@ -57,3 +57,24 @@
         @content;
     }
 }
+
+@mixin governanceForumSection {
+  .governance-forum {
+    background-color: $grey-10;
+
+    h3 {
+      color: $grey-60;
+      margin: 14px 0 72px;
+    }
+
+    @media (min-width: #{$bp-medium}) {
+      h3 {
+        margin: 14px 0 86px;
+      }
+    }
+
+    .governance-feature-card {
+      height: 500px;
+    }
+  }
+}

@@ -14,7 +14,7 @@ import {
 } from "../components"
 import { sections } from "../constants"
 import { actions } from "../redux"
-import GovernanceForum from "../components/GovernanceForum";
+import GovernanceForum from "../components/GovernanceForum"
 
 export const BuildPageTemplate = ({
   hero = {},

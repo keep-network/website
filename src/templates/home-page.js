@@ -17,7 +17,7 @@ import {
   MiniLogoWall,
   KeepBlog,
   Contact,
-} from "../components";
+} from "../components"
 import { sections } from "../constants"
 import { actions } from "../redux"
 import useLiquidityRewardsAPY from "../hooks/useLiquidityRewardsAPY"

@@ -23,12 +23,14 @@ import { actions } from "../redux"
 import useLiquidityRewardsAPY from "../hooks/useLiquidityRewardsAPY"
 import LoadingBlocks from "../components/LoadingBlocks"
 import SlideInAnimation from "../components/SlideInAnimation"
+import GovernanceForum from "../components/GovernanceForum"
 
 export const HomePageTemplate = ({
   hero = {},
   carousel = [],
   summary_grid: summaryGrid = {},
   minilogo_grid: minilogoGrid = [],
+  governance_forum: governanceForum = {},
   blogs = {},
   exchanges = {},
   signupMailingList = () => {},
@@ -245,6 +247,9 @@ export const HomePageTemplate = ({
       <PageSection id={sections.home.MINILOGO_GRID}>
         <MiniLogoWall logos={minilogoGrid} />
       </PageSection>
+      <PageSection id={sections.home.GOVERNANCE_FORUM}>
+        <GovernanceForum {...governanceForum} />
+      </PageSection>
       <PageSection id={sections.home.KEEP_BLOG}>
         <KeepBlog {...blogs} isMore={true} />
       </PageSection>
@@ -317,6 +322,7 @@ HomePageTemplate.propTypes = {
   ajaxRequestStates: PropTypes.object,
   logo_wall: PropTypes.object,
   contact: PropTypes.object,
+  governance_forum: PropTypes.object,
 }
 
 const mapStateToProps = (state) => ({
@@ -387,6 +393,24 @@ export const query = graphql`
             }
             alt
             url
+          }
+        }
+        governance_forum {
+          title
+          body
+          cards {
+            title
+            date
+            button {
+              label
+              url
+            }
+            icon {
+              image {
+                relativePath
+              }
+              alt
+            }
           }
         }
         blogs {

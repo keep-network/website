@@ -14,11 +14,13 @@ import {
 } from "../components"
 import { sections } from "../constants"
 import { actions } from "../redux"
+import GovernanceForum from "../components/GovernanceForum"
 
 export const BuildPageTemplate = ({
   hero = {},
   library = {},
   community = {},
+  governance_forum: governanceForum = {},
   secure = {},
   contact = {},
   signupMailingList = () => {},
@@ -108,6 +110,9 @@ export const BuildPageTemplate = ({
           </Col>
         </Row>
       </PageSection>
+      <PageSection id={sections.build.GOVERNANCE_FORUM}>
+        <GovernanceForum {...governanceForum} />
+      </PageSection>
       <PageSection id={sections.build.SECURE}>
         <Row>
           <Col xs={12}>
@@ -148,6 +153,7 @@ BuildPageTemplate.propTypes = {
   hero: PropTypes.object,
   library: PropTypes.object,
   community: PropTypes.object,
+  governance_forum: PropTypes.object,
   secure: PropTypes.object,
   contact: PropTypes.object,
   signupMailingList: PropTypes.func,
@@ -227,6 +233,24 @@ export const query = graphql`
             button {
               label
               url
+            }
+          }
+        }
+        governance_forum {
+          title
+          body
+          cards {
+            title
+            date
+            button {
+              label
+              url
+            }
+            icon {
+              image {
+                relativePath
+              }
+              alt
             }
           }
         }

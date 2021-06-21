@@ -5,3 +5,10 @@ export function createEnum(...args) {
   }
   return acc
 }
+
+export function truncate(input, maxLength = 50) {
+  if (input.length > maxLength) {
+    return input.substring(0, maxLength) + "..."
+  }
+  return input
+}

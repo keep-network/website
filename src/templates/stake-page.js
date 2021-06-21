@@ -4,13 +4,21 @@ import { Col, Row } from "reactstrap"
 import PropTypes from "prop-types"
 import { graphql, withPrefix } from "gatsby"
 
-import { App, Image, Link, PageSection, FeatureCard } from "../components"
+import {
+  App,
+  Image,
+  Link,
+  PageSection,
+  FeatureCard,
+  Button,
+} from "../components"
 import { sections } from "../constants"
 
 export const StakePageTemplate = ({
   hero = {},
   images = {},
   why = {},
+  stake_options: StakeOptions = {},
   recommended = {},
   banner = {},
   tech_guide: techGuide = {},
@@ -66,6 +74,37 @@ export const StakePageTemplate = ({
             </Col>
           ))}
         </Row>
+      </PageSection>
+      <PageSection id={sections.stake.STAKE_OPTIONS}>
+        <Row>
+          <Col xs={12}>
+            <h2 dangerouslySetInnerHTML={{ __html: StakeOptions.title }} />
+            <h3
+              className="body"
+              dangerouslySetInnerHTML={{ __html: StakeOptions.body }}
+            />
+          </Col>
+        </Row>
+        <div className={"stake-options-section"}>
+          {StakeOptions.cards.map((card, i) => (
+            <FeatureCard
+              icon={`/images/${card.icon.image.relativePath}`}
+              title={card.title}
+              text={card.body}
+              key={`card-${i}`}
+              className={"stake-options__card"}
+            >
+              <div className={"buttons-container"}>
+                {card.buttons[0] && (
+                  <Button {...card.buttons[0]} className={"btn btn-primary"} />
+                )}
+                {card.buttons[1] && (
+                  <Button {...card.buttons[1]} className={"btn btn-default"} />
+                )}
+              </div>
+            </FeatureCard>
+          ))}
+        </div>
       </PageSection>
       <PageSection id={sections.stake.RECOMMENDED}>
         <Row>
@@ -160,6 +199,7 @@ StakePageTemplate.propTypes = {
   hero: PropTypes.object,
   images: PropTypes.object,
   why: PropTypes.object,
+  stake_options: PropTypes.object,
   recommended: PropTypes.object,
   banner: PropTypes.object,
   tech_guide: PropTypes.object,
@@ -214,6 +254,24 @@ export const query = graphql`
           cards {
             title
             body
+            icon {
+              image {
+                relativePath
+              }
+              alt
+            }
+          }
+        }
+        stake_options {
+          title
+          body
+          cards {
+            title
+            body
+            buttons {
+              label
+              url
+            }
             icon {
               image {
                 relativePath

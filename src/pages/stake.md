@@ -25,6 +25,40 @@ why:
       icon:
         image: /images/svg/ic-user-friendly.svg
         alt: User Friendly
+stake_options:
+  title: Staking options
+  body: Earn with your KEEP tokens with the following options
+  cards:
+    - title: Liquidity Pools
+      body: Provide liquidity to one of our liquidity pools to start earning rewards.
+      buttons:
+        - label: Liquidity Pools
+          url: https://dashboard.keep.network/liquidity
+        - label: Learn More
+          url: https://blog.keep.network/the-next-phase-of-liquidity-rewards-c389c0dea047
+      icon:
+        image: /images/svg/ic-liquidity-pools.svg
+        alt: Liquidity Pools
+    - title: KEEP Pool
+      body: No minimum KEEP amount needed to lock your KEEP and start earning rewards.
+      buttons:
+        - label: Keep Pool
+          url: https://dashboard.keep.network/liquidity
+        - label: Learn More
+          url: https://blog.keep.network/launching-the-keep-only-staking-pool-with-no-minimums-249da7a38eef
+      icon:
+        image: /images/svg/ic-keep-pool.svg
+        alt: Liquidity Pools
+    - title: Stake KEEP
+      body: Stake KEEP and earn rewards. Minimum KEEP amount required
+      buttons:
+        - label: Stake Keep
+          url: https://dashboard.keep.network/delegations/granted
+        - label: Learn More
+          url: https://staking.keep.network/
+      icon:
+        image: /images/svg/ic-stake-keep.svg
+        alt: Liquidity Pools
 recommended:
   title: Staking providers
   body: If you’re new to staking, we recommend working with one of our staking

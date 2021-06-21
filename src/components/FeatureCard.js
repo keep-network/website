@@ -22,6 +22,7 @@ const FeatureCard = ({
   subtitle,
   text,
   button,
+  children,
 }) => {
   return (
     <Card className={className}>
@@ -38,6 +39,7 @@ const FeatureCard = ({
         {button && (
           <Button {...button} className={btnClass} onClick={(e) => {}} />
         )}
+        {children}
       </CardBody>
     </Card>
   )
@@ -53,6 +55,10 @@ FeatureCard.propTypes = {
   subtitle: PropTypes.string,
   text: PropTypes.string,
   button: PropTypes.object,
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]),
 }
 
 export default FeatureCard

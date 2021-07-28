@@ -73,7 +73,7 @@ export const reducers = {
   ajaxRequestStates: ajaxRequestStates,
 }
 
-const API_URL = "https://backend.keep.network"
+export const API_URL = "https://backend.keep.network"
 
 const stripQuery = () => {
   window.history.pushState(null, "", window.location.href.split("?")[0])

@@ -42,7 +42,7 @@ stake_options:
     - title: Coverage Pool
       body: Deposit KEEP in the coverage pool to secure the network and earn rewards.
       buttons:
-        - label: Coverage Pool
+        - label: Deposit KEEP
           url: https://dashboard.keep.network/coverage-pools/deposit
         - label: Learn More
           url: https://dashboard.keep.network/coverage-pools/how-it-works

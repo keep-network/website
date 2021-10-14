@@ -39,15 +39,15 @@ stake_options:
       icon:
         image: /images/svg/ic-liquidity-pools.svg
         alt: Liquidity Pools
-    - title: KEEP Pool
-      body: No minimum KEEP amount needed to lock your KEEP and start earning rewards.
+    - title: Coverage Pool
+      body: Deposit KEEP in the coverage pool to secure the network and earn rewards.
       buttons:
-        - label: Keep Pool
-          url: https://dashboard.keep.network/liquidity
+        - label: Coverage Pool
+          url: https://dashboard.keep.network/coverage-pools/deposit
         - label: Learn More
-          url: https://blog.keep.network/launching-the-keep-only-staking-pool-with-no-minimums-249da7a38eef
+          url: https://dashboard.keep.network/coverage-pools/how-it-works
       icon:
-        image: /images/svg/ic-keep-pool.svg
+        image: /images/coverage-pool.svg
         alt: Liquidity Pools
     - title: Stake KEEP
       body: Stake KEEP and earn rewards. Minimum KEEP amount required

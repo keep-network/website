@@ -38,7 +38,7 @@ news:
         have a new token: T."
       date: "2021-06-16T23:00:00.000Z"
       icon:
-        image: /images/hard-fork-merge-gid_4.png
+        image: /images/hard-fork-merge.png
         alt: Decrypt
       url: https://decrypt.co/73800/forget-hard-fork-what-happens-after-kee-nucypher-hard-merge
     - title: Keep Network unveils v2 specs for tBTC protocol

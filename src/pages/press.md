@@ -36,7 +36,7 @@ news:
       source: Decrypt
       excerpt: "After the two networks upgrade and merge into one, token holders will
         have a new token: T."
-      date: "2021-06-16T23:05:00.000Z"
+      date: "2021-06-16T23:00:00.000Z"
       icon:
         image: /images/hard-fork-merge.png
         alt: Decrypt

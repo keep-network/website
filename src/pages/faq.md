@@ -19,8 +19,6 @@ questions:
       transmitting data across many individuals.
   - question: What is a KEEP token?
     answer: The Keep Network's native token is KEEP.
-  - question: Is Keep live?
-    answer: Yes! Keep is live.
   - question: How do I get KEEP tokens?
     answer: You can buy KEEP tokens on an exchange. KEEP is available on Uniswap,
       Balancer, and Kraken. You can also contribute to liquidity pools and earn
@@ -40,14 +38,6 @@ questions:
       KEEP even if you don’t have the minimum KEEP stake available, check out <a
       href="https://staking.keep.network/about-staking/staking-minimums">this
       section</a> of the staking user guide.
-  - question: What is the difference between “staking” and “stakedrop”?
-    answer: <b>Staking</b> refers to two variations of staking on the Keep network.
-      You can stake with a minimum of KEEP tokens, or you can stake both the
-      minimum KEEP and bond a desired amount of ETH in order to support the Keep
-      network. By both staking KEEP and bonding ETH, stakers maximize their KEEP
-      and ETH rewards. <br><br> <b>Stakedrop</b> refers to any period of time
-      during which KEEP rewards are available to stakers under a certain set of
-      conditions.
   - question: What are the rewards of staking?
     answer: Stakers are rewarded in both ETH and KEEP for staking on the Keep
       network, relative to how much KEEP they stake and ETH they bond. Rewards
@@ -61,6 +51,10 @@ questions:
       behaviors. <br><br> Learn more in <a
       href="https://staking.keep.network/about-staking/staking-risks">this
       section</a> of the staking user guide.
+  - question: What is the Keep coverage pool?
+    answer: The Keep coverage pool functions as a form of insurance. It helps secure
+      the network and is an opportunity to earn rewards. Learn more <a
+      href="https://dashboard.keep.network/coverage-pools/how-it-works">here.</a>
 contact:
   title: Keep in touch
   header: Get the Keep Newsletter

@@ -12,6 +12,7 @@ import {
   ImageLink,
   Link,
   PageSection,
+  Ticker,
   SummaryGrid,
   MiniLogoWall,
   KeepBlog,
@@ -19,7 +20,9 @@ import {
 } from "../components"
 import { sections } from "../constants"
 import { actions } from "../redux"
-// import useLiquidityRewardsAPY from "../hooks/useLiquidityRewardsAPY"
+import useLiquidityRewardsAPY from "../hooks/useLiquidityRewardsAPY"
+import LoadingBlocks from "../components/LoadingBlocks"
+import SlideInAnimation from "../components/SlideInAnimation"
 import GovernanceForum from "../components/GovernanceForum"
 
 export const HomePageTemplate = ({
@@ -39,21 +42,19 @@ export const HomePageTemplate = ({
     Aos.init({ once: true })
   }, [])
 
-  // NOTE/TODO: The APY Calculation has been taken down until we can replace it with a cached server call
+  const [liquidityRewardsAPYs, isFetching] = useLiquidityRewardsAPY()
 
-  // const [liquidityRewardsAPYs, isFetching] = useLiquidityRewardsAPY()
+  const renderHighestAPY = () => {
+    if (liquidityRewardsAPYs.length === 0) {
+      return <LoadingBlocks numberOfBlocks={3} animationDurationInSec={1} />
+    }
 
-  // const renderHighestAPY = () => {
-  //   if (liquidityRewardsAPYs.length === 0) {
-  //     return <LoadingBlocks numberOfBlocks={3} animationDurationInSec={1} />
-  //   }
-
-  //   return (
-  //     <SlideInAnimation durationInSec={1}>
-  //       {Math.floor(liquidityRewardsAPYs[0].value).toString()}
-  //     </SlideInAnimation>
-  //   )
-  // }
+    return (
+      <SlideInAnimation durationInSec={1}>
+        {Math.floor(liquidityRewardsAPYs[0].value).toString()}
+      </SlideInAnimation>
+    )
+  }
 
   return (
     <div className="main-content">
@@ -68,6 +69,8 @@ export const HomePageTemplate = ({
           <Col xs={12} lg={10} md={10}>
             <h1>
               <span>{`${hero.title} `}</span>
+              {renderHighestAPY()}
+              <span>{`% APY.`}</span>
             </h1>
             <h4 className="body">{hero.body}</h4>
           </Col>
@@ -86,6 +89,13 @@ export const HomePageTemplate = ({
             ))}
           </ul>
         </Row>
+        {!isFetching && (
+          <Ticker
+            items={liquidityRewardsAPYs.map((_) => ({
+              label: `${_.value}% APY · ${_.pool} POOL`,
+            }))}
+          />
+        )}
       </PageSection>
       <PageSection
         id={sections.home.KEEP_SOLUTION}

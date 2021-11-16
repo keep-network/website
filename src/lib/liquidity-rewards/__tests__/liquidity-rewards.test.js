@@ -13,7 +13,7 @@ import { Token } from "../utils"
 import { UniswapExchangeService } from "../exchange-service"
 import LPRewardsKEEPETH from "../abis/LPRewardsKEEPETH.json"
 import LPRewardsTBTCETH from "../abis/LPRewardsTBTCETH.json"
-import LPRewardsTBTCSaddle from "../abis/LPRewardsTBTCSaddle.json"
+import LPRewardsTBTCv2Saddle from "../abis/LPRewardsTBTCv2Saddle.json"
 import KeepVault from "../abis/KeepVault.json"
 
 jest.mock("ethers")
@@ -83,11 +83,11 @@ describe("Test LiquidityRewards", () => {
     })
 
     test.each`
-      pool                                     | contractArtifact       | expectedPoolInstance
-      ${SUPPORTED_LIQUIDITY_POOLS.KEEP_ETH}    | ${LPRewardsKEEPETH}    | ${LiquidityRewardsUniswap}
-      ${SUPPORTED_LIQUIDITY_POOLS.TBTC_ETH}    | ${LPRewardsTBTCETH}    | ${LiquidityRewardsUniswap}
-      ${SUPPORTED_LIQUIDITY_POOLS.TBTC_SADDLE} | ${LPRewardsTBTCSaddle} | ${LiquidityRewardsSaddle}
-      ${SUPPORTED_LIQUIDITY_POOLS.KEEP}        | ${KeepVault}           | ${LiquidityRewardsKeepVault}
+      pool                                       | contractArtifact         | expectedPoolInstance
+      ${SUPPORTED_LIQUIDITY_POOLS.KEEP_ETH}      | ${LPRewardsKEEPETH}      | ${LiquidityRewardsUniswap}
+      ${SUPPORTED_LIQUIDITY_POOLS.TBTC_ETH}      | ${LPRewardsTBTCETH}      | ${LiquidityRewardsUniswap}
+      ${SUPPORTED_LIQUIDITY_POOLS.TBTCv2_SADDLE} | ${LPRewardsTBTCv2Saddle} | ${LiquidityRewardsSaddle}
+      ${SUPPORTED_LIQUIDITY_POOLS.KEEP}          | ${KeepVault}             | ${LiquidityRewardsKeepVault}
     `(
       "should create the liquidity rewards pool wrapper correctly",
       ({ pool, contractArtifact, expectedPoolInstance }) => {

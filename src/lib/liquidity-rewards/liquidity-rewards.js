@@ -6,9 +6,10 @@ import { UniswapExchangeService } from "./exchange-service"
 import KeepVault from "./abis/KeepVault.json"
 import LPRewardsKEEPETH from "./abis/LPRewardsKEEPETH.json"
 import LPRewardsTBTCETH from "./abis/LPRewardsTBTCETH.json"
-import LPRewardsTBTCSaddle from "./abis/LPRewardsTBTCSaddle.json"
+import LPRewardsTBTCv2Saddle from "./abis/LPRewardsTBTCv2Saddle.json"
 
-/** @typedef {import("./exchange-service").BaseExchangeService} BaseExchangeService */
+/** @typedef {import("./exchange-service").BaseExchangeService}
+ * BaseExchangeService */
 
 const WEEKS_IN_YEAR = 52
 const WEEK_IN_SECONDS = 604800 // 7 days in seconds
@@ -190,7 +191,7 @@ export class LiquidityRewardsKeepVault extends LiquidityRewards {
 export const SUPPORTED_LIQUIDITY_POOLS = {
   KEEP_ETH: "KEEP_ETH",
   TBTC_ETH: "TBTC_ETH",
-  TBTC_SADDLE: "TBTC_SADDLE",
+  TBTCv2_SADDLE: "TBTCv2_SADDLE",
   KEEP: "KEEP",
 }
 
@@ -206,9 +207,9 @@ const LiquidityRewardsPoolManager = {
     pool: LiquidityRewardsUniswap,
     contractArtifact: LPRewardsTBTCETH,
   },
-  [SUPPORTED_LIQUIDITY_POOLS.TBTC_SADDLE]: {
+  [SUPPORTED_LIQUIDITY_POOLS.TBTCv2_SADDLE]: {
     pool: LiquidityRewardsSaddle,
-    contractArtifact: LPRewardsTBTCSaddle,
+    contractArtifact: LPRewardsTBTCv2Saddle,
   },
   [SUPPORTED_LIQUIDITY_POOLS.KEEP]: {
     pool: LiquidityRewardsKeepVault,
@@ -219,9 +220,9 @@ const LiquidityRewardsPoolManager = {
 const uniswapExchangeSercie = new UniswapExchangeService()
 export class LiquidityRewardsFactory {
   /**
-   * asd
-   * @param {('KEEP_ETH' | 'TBTC_ETH' | 'TBTC_SADDLE' | 'KEEP')} typeOfPool - The
-   * supported type of pools.
+   * Creates the Liquidity Rewards wrapper based on the type of pool.
+   * @param {('KEEP_ETH' | 'TBTC_ETH' | 'TBTCv2_SADDLE' | 'KEEP')} typeOfPool -
+   * The supported type of pools.
    * @return {LiquidityRewards} The Liquidity Rewards wrapper.
    */
   static create(typeOfPool) {

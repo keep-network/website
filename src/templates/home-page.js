@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React, { useEffect, useMemo } from "react"
 import { connect } from "react-redux"
 import { Col, Row } from "reactstrap"
 import PropTypes from "prop-types"
@@ -24,6 +24,7 @@ import useLiquidityRewardsAPY from "../hooks/useLiquidityRewardsAPY"
 import LoadingBlocks from "../components/LoadingBlocks"
 import SlideInAnimation from "../components/SlideInAnimation"
 import GovernanceForum from "../components/GovernanceForum"
+import useCoveragePoolsAPY from "../hooks/useCoveragePoolsAPY"
 
 export const HomePageTemplate = ({
   hero = {},
@@ -42,16 +43,32 @@ export const HomePageTemplate = ({
     Aos.init({ once: true })
   }, [])
 
-  const [liquidityRewardsAPYs, isFetching] = useLiquidityRewardsAPY()
+  const [
+    liquidityRewardsAPYs,
+    areLiquidityRewardsAPYsFetching,
+  ] = useLiquidityRewardsAPY()
+
+  const [coveragePoolAPY, isCoveragePoolAPYFetching] = useCoveragePoolsAPY()
+
+  const isFetching = useMemo(() => {
+    return isCoveragePoolAPYFetching || areLiquidityRewardsAPYsFetching
+  }, [isCoveragePoolAPYFetching, areLiquidityRewardsAPYsFetching])
+
+  const APYs = useMemo(() => {
+    if (isFetching) return []
+    return [...liquidityRewardsAPYs, ...coveragePoolAPY].sort(
+      (a, b) => b.value - a.value
+    )
+  }, [isFetching, liquidityRewardsAPYs, coveragePoolAPY])
 
   const renderHighestAPY = () => {
-    if (liquidityRewardsAPYs.length === 0) {
+    if (APYs.length === 0) {
       return <LoadingBlocks numberOfBlocks={3} animationDurationInSec={1} />
     }
 
     return (
       <SlideInAnimation durationInSec={1}>
-        {Math.floor(liquidityRewardsAPYs[0].value).toString()}
+        {Math.floor(APYs[0].value).toString()}
       </SlideInAnimation>
     )
   }
@@ -91,7 +108,7 @@ export const HomePageTemplate = ({
         </Row>
         {!isFetching && (
           <Ticker
-            items={liquidityRewardsAPYs.map((_) => ({
+            items={APYs.map((_) => ({
               label: `${_.value}% APY · ${_.pool} POOL`,
             }))}
           />

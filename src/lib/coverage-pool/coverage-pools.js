@@ -13,7 +13,7 @@ const INFURA_RPC_URL =
 
 const REWARD_DURATION = 604800 // 7 days in seconds
 
-class CoveragePoolV1 {
+export class CoveragePoolV1 {
   /**
    * @param {Contract} _assetPoolContract
    * @param {Contract} _collateralToken
@@ -25,7 +25,6 @@ class CoveragePoolV1 {
     _collateralToken,
     _rewardPoolContract,
     _exchangeService,
-    _web3
   ) {
     this.assetPoolContract = _assetPoolContract
     this.collateralToken = _collateralToken
@@ -39,8 +38,6 @@ class CoveragePoolV1 {
    * collateral token.
    */
   assetPoolCollateralTokenBalance = async () => {
-    console.log("thos.collateralToken", this.collateralToken)
-    console.log("thos.rewardPoolContract", this.rewardPoolContract)
     return (
       await this.collateralToken.balanceOf(this.assetPoolContract.address)
     ).toString()
@@ -103,8 +100,6 @@ class CoveragePoolV1 {
       .toString()
   }
 }
-
-export default CoveragePoolV1
 
 export class CoveragePoolsFactory {
   /**

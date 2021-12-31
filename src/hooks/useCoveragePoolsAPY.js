@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import CoveragePoolsFactory from "../lib/coverage-pool"
+import { CoveragePoolsFactory } from "../lib/coverage-pool"
 
 const coveragePoolV1 = CoveragePoolsFactory.create()
 const useCoveragePoolsAPY = () => {

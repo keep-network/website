@@ -11,7 +11,7 @@ const REWARD_DURATION = 604800 // 7 days in seconds
 
 export class CoveragePoolV1 {
   /**
-   * @param {Contract} e
+   * @param {Contract} _assetPoolContract
    * @param {Contract} _collateralToken
    * @param {Contract} _rewardPoolContract
    * @param {BaseExchangeService} _exchangeService

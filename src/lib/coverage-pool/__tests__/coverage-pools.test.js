@@ -4,7 +4,7 @@ import { UniswapExchangeService } from "../../exchange-api/exchange-service"
 import AssetPool from "../abis/AssetPool.json"
 import KeepToken from "../abis/KeepToken.json"
 import RewardsPool from "../abis/RewardsPool.json"
-import { APYCalculator, Token } from "../../helper";
+import { APYCalculator, Token } from "../../helper"
 import BigNumber from "bignumber.js"
 
 jest.mock("ethers", () => {
@@ -35,7 +35,7 @@ jest.mock("../abis/KeepToken.json", () => {
     ...jest.requireActual("../abis/AssetPool.json"),
     networks: {
       "1": {
-        address: "0x7bCa8838d96D723487823975FbeA80e87d04f342"
+        address: "0x7bCa8838d96D723487823975FbeA80e87d04f342",
       },
     },
     abi: [],

@@ -20,7 +20,7 @@ export class CoveragePoolV1 {
     _assetPoolContract,
     _collateralToken,
     _rewardPoolContract,
-    _exchangeService,
+    _exchangeService
   ) {
     this.assetPoolContract = _assetPoolContract
     this.collateralToken = _collateralToken

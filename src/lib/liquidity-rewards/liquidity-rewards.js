@@ -7,16 +7,13 @@ import KeepVault from "./abis/KeepVault.json"
 import LPRewardsKEEPETH from "./abis/LPRewardsKEEPETH.json"
 import LPRewardsTBTCETH from "./abis/LPRewardsTBTCETH.json"
 import LPRewardsTBTCv2Saddle from "./abis/LPRewardsTBTCv2Saddle.json"
+import { INFURA_RPC_URL, NETWORK } from "../web3-config"
 
 /** @typedef {import("../exchange-api/exchange-service").BaseExchangeService}
  * BaseExchangeService */
 
 const WEEKS_IN_YEAR = 52
 const WEEK_IN_SECONDS = 604800 // 7 days in seconds
-
-const NETWORK = 1
-const INFURA_RPC_URL =
-  "https://mainnet.infura.io/v3/5348113af423473a85e22220ef987de8"
 
 export class LiquidityRewards {
   /**

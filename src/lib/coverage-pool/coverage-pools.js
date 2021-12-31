@@ -6,10 +6,7 @@ import KeepToken from "./abis/KeepToken.json"
 import RewardsPool from "./abis/RewardsPool.json"
 import { UniswapExchangeService } from "../exchange-api/exchange-service"
 import BigNumber from "bignumber.js"
-
-const NETWORK = 1
-const INFURA_RPC_URL =
-  "https://mainnet.infura.io/v3/5348113af423473a85e22220ef987de8"
+import { INFURA_RPC_URL, NETWORK } from "../web3-config"
 
 const REWARD_DURATION = 604800 // 7 days in seconds
 

@@ -67,7 +67,6 @@ export class CoveragePoolV1 {
    */
   rewardPoolRewardRate = async () => {
     return await this.rewardPoolContract.rewardRate()
-    // return await this.rewardPoolContract.makeCall("rewardRate")
   }
 
   /**

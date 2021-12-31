@@ -26,20 +26,16 @@ jest.mock("../../exchange-api/exchange-service", () => {
 jest.mock("../abis/AssetPool.json", () => {
   return {
     ...jest.requireActual("../abis/AssetPool.json"),
-    address: jest
-      .fn()
-      .mockImplementation(() => "0x7bCa8838d96D723487823975FbeA80e87d04f341"),
-    abi: jest.fn(),
+    address: "0x7bCa8838d96D723487823975FbeA80e87d04f341",
+    abi: [],
   }
 })
 
 jest.mock("../abis/AssetPool.json", () => {
   return {
     ...jest.requireActual("../abis/AssetPool.json"),
-    address: jest
-      .fn()
-      .mockImplementation(() => "0x7bCa8838d96D723487823975FbeA80e87d04f341"),
-    abi: jest.fn(),
+    address: "0x7bCa8838d96D723487823975FbeA80e87d04f341",
+    abi: [],
   }
 })
 
@@ -48,24 +44,18 @@ jest.mock("../abis/KeepToken.json", () => {
     ...jest.requireActual("../abis/AssetPool.json"),
     networks: {
       "1": {
-        address: jest
-          .fn()
-          .mockImplementation(
-            () => "0x7bCa8838d96D723487823975FbeA80e87d04f342"
-          ),
+        address: "0x7bCa8838d96D723487823975FbeA80e87d04f342"
       },
     },
-    abi: jest.fn(),
+    abi: [],
   }
 })
 
 jest.mock("../abis/RewardsPool.json", () => {
   return {
     ...jest.requireActual("../abis/AssetPool.json"),
-    address: jest
-      .fn()
-      .mockImplementation(() => "0x7bCa8838d96D723487823975FbeA80e87d04f343"),
-    abi: jest.fn(),
+    address: "0x7bCa8838d96D723487823975FbeA80e87d04f343",
+    abi: [],
   }
 })
 

@@ -30,14 +30,6 @@ jest.mock("../abis/AssetPool.json", () => {
   }
 })
 
-jest.mock("../abis/AssetPool.json", () => {
-  return {
-    ...jest.requireActual("../abis/AssetPool.json"),
-    address: "0x7bCa8838d96D723487823975FbeA80e87d04f341",
-    abi: [],
-  }
-})
-
 jest.mock("../abis/KeepToken.json", () => {
   return {
     ...jest.requireActual("../abis/AssetPool.json"),

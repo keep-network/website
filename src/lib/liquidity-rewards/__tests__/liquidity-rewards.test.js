@@ -9,12 +9,12 @@ import {
   LiquidityRewardsKeepVault,
   SUPPORTED_LIQUIDITY_POOLS,
 } from "../liquidity-rewards"
-import { Token } from "../utils"
-import { UniswapExchangeService } from "../exchange-service"
+import { UniswapExchangeService } from "../../exchange-api/exchange-service"
 import LPRewardsKEEPETH from "../abis/LPRewardsKEEPETH.json"
 import LPRewardsTBTCETH from "../abis/LPRewardsTBTCETH.json"
 import LPRewardsTBTCv2Saddle from "../abis/LPRewardsTBTCv2Saddle.json"
 import KeepVault from "../abis/KeepVault.json"
+import { Token } from "../../helper"
 
 jest.mock("ethers")
 

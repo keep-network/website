@@ -1,5 +1,4 @@
-import { Token } from "../liquidity-rewards/utils"
-import { APYCalculator } from "../helper"
+import { APYCalculator, Token } from "../helper"
 import { Contract, providers } from "ethers"
 import AssetPool from "./abis/AssetPool.json"
 import KeepToken from "./abis/KeepToken.json"
@@ -12,7 +11,7 @@ const REWARD_DURATION = 604800 // 7 days in seconds
 
 export class CoveragePoolV1 {
   /**
-   * @param {Contract} _assetPoolContract
+   * @param {Contract} e
    * @param {Contract} _collateralToken
    * @param {Contract} _rewardPoolContract
    * @param {BaseExchangeService} _exchangeService
@@ -78,11 +77,9 @@ export class CoveragePoolV1 {
     // solution to fetch the collateral token price in USD.
     const collateralTokenPriceInUSD = await this.exchangeService.getKeepTokenPriceInUSD()
 
-    const totalSupplyInUSD = Token.toTokenUnit(
-      totalSupply,
-      18,
-      true
-    ).multipliedBy(collateralTokenPriceInUSD)
+    const totalSupplyInUSD = Token.toTokenUnit(totalSupply, 18).multipliedBy(
+      collateralTokenPriceInUSD
+    )
 
     const rewardRate = APYCalculator.calculatePoolRewardRate(
       collateralTokenPriceInUSD,

@@ -1,13 +1,13 @@
 import { Contract, providers } from "ethers"
 import BigNumber from "bignumber.js"
 
-import { Token } from "./utils"
 import { UniswapExchangeService } from "../exchange-api/exchange-service"
 import KeepVault from "./abis/KeepVault.json"
 import LPRewardsKEEPETH from "./abis/LPRewardsKEEPETH.json"
 import LPRewardsTBTCETH from "./abis/LPRewardsTBTCETH.json"
 import LPRewardsTBTCv2Saddle from "./abis/LPRewardsTBTCv2Saddle.json"
 import { INFURA_RPC_URL, NETWORK } from "../web3-config"
+import { Token } from "../helper"
 
 /** @typedef {import("../exchange-api/exchange-service").BaseExchangeService}
  * BaseExchangeService */

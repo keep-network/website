@@ -1,6 +1,6 @@
 import BigNumber from "bignumber.js"
 
-export class Token {
+export default class Token {
   /**
    * Convert wei amount to token units
    * @param {*} amount amount in wei

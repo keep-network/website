@@ -4,8 +4,7 @@ import { UniswapExchangeService } from "../../exchange-api/exchange-service"
 import AssetPool from "../abis/AssetPool.json"
 import KeepToken from "../abis/KeepToken.json"
 import RewardsPool from "../abis/RewardsPool.json"
-import { Token } from "../../liquidity-rewards/utils"
-import { APYCalculator } from "../../helper"
+import { APYCalculator, Token } from "../../helper";
 import BigNumber from "bignumber.js"
 
 jest.mock("ethers", () => {

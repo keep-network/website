@@ -7,15 +7,8 @@ import LiquidityRewardsFactory, {
 const liquidityRewardsKEEPETH = LiquidityRewardsFactory.create(
   SUPPORTED_LIQUIDITY_POOLS.KEEP_ETH
 )
-const liquidityRewardsTBTCSaddle = LiquidityRewardsFactory.create(
-  SUPPORTED_LIQUIDITY_POOLS.TBTC_SADDLE
-)
-
-const liquidityRewardsTBTCETH = LiquidityRewardsFactory.create(
-  SUPPORTED_LIQUIDITY_POOLS.TBTC_ETH
-)
-const liquidityRewardsKEEP = LiquidityRewardsFactory.create(
-  SUPPORTED_LIQUIDITY_POOLS.KEEP
+const liquidityRewardsTBTCv2Saddle = LiquidityRewardsFactory.create(
+  SUPPORTED_LIQUIDITY_POOLS.TBTCv2_SADDLE
 )
 
 const useLiquidityRewardsAPY = () => {
@@ -29,18 +22,14 @@ const useLiquidityRewardsAPY = () => {
     setIsFetching(true)
     Promise.all([
       liquidityRewardsKEEPETH.calculateAPY(),
-      liquidityRewardsTBTCSaddle.calculateAPY(),
-      liquidityRewardsTBTCETH.calculateAPY(),
-      liquidityRewardsKEEP.calculateAPY(),
+      liquidityRewardsTBTCv2Saddle.calculateAPY(),
     ])
-      .then(([apyKEEPETH, apyTBTCSaddle, apyTBTCETH, apyKEEP]) => {
+      .then(([apyKEEPETH, apyTBTCv2Saddle]) => {
         if (shouldSetState) {
           setLiquidityRewardsAPYs(
             [
               { value: apyKEEPETH, pool: "KEEP/ETH" },
-              { value: apyTBTCSaddle, pool: "TBTC/SADDLE" },
-              { value: apyTBTCETH, pool: "TBTC/ETH" },
-              { value: apyKEEP, pool: "KEEP" },
+              { value: apyTBTCv2Saddle, pool: "TBTCv2/SADDLE" },
             ].sort((a, b) => b.value - a.value)
           )
           setIsFetching(false)

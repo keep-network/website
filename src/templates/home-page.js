@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React, { useEffect, useMemo } from "react"
 import { connect } from "react-redux"
 import { Col, Row } from "reactstrap"
 import PropTypes from "prop-types"
@@ -12,6 +12,7 @@ import {
   ImageLink,
   Link,
   PageSection,
+  Ticker,
   SummaryGrid,
   MiniLogoWall,
   KeepBlog,
@@ -19,8 +20,11 @@ import {
 } from "../components"
 import { sections } from "../constants"
 import { actions } from "../redux"
-// import useLiquidityRewardsAPY from "../hooks/useLiquidityRewardsAPY"
+import useLiquidityRewardsAPY from "../hooks/useLiquidityRewardsAPY"
+import LoadingBlocks from "../components/LoadingBlocks"
+import SlideInAnimation from "../components/SlideInAnimation"
 import GovernanceForum from "../components/GovernanceForum"
+import useCoveragePoolsAPY from "../hooks/useCoveragePoolsAPY"
 
 export const HomePageTemplate = ({
   hero = {},
@@ -39,21 +43,35 @@ export const HomePageTemplate = ({
     Aos.init({ once: true })
   }, [])
 
-  // NOTE/TODO: The APY Calculation has been taken down until we can replace it with a cached server call
+  const [
+    liquidityRewardsAPYs,
+    areLiquidityRewardsAPYsFetching,
+  ] = useLiquidityRewardsAPY()
 
-  // const [liquidityRewardsAPYs, isFetching] = useLiquidityRewardsAPY()
+  const [coveragePoolAPY, isCoveragePoolAPYFetching] = useCoveragePoolsAPY()
 
-  // const renderHighestAPY = () => {
-  //   if (liquidityRewardsAPYs.length === 0) {
-  //     return <LoadingBlocks numberOfBlocks={3} animationDurationInSec={1} />
-  //   }
+  const isFetching = useMemo(() => {
+    return isCoveragePoolAPYFetching || areLiquidityRewardsAPYsFetching
+  }, [isCoveragePoolAPYFetching, areLiquidityRewardsAPYsFetching])
 
-  //   return (
-  //     <SlideInAnimation durationInSec={1}>
-  //       {Math.floor(liquidityRewardsAPYs[0].value).toString()}
-  //     </SlideInAnimation>
-  //   )
-  // }
+  const APYs = useMemo(() => {
+    if (isFetching) return []
+    return [...liquidityRewardsAPYs, ...coveragePoolAPY].sort(
+      (a, b) => b.value - a.value
+    )
+  }, [isFetching, liquidityRewardsAPYs, coveragePoolAPY])
+
+  const renderHighestAPY = () => {
+    if (APYs.length === 0) {
+      return <LoadingBlocks numberOfBlocks={3} animationDurationInSec={1} />
+    }
+
+    return (
+      <SlideInAnimation durationInSec={1}>
+        {Math.floor(APYs[0].value).toString()}
+      </SlideInAnimation>
+    )
+  }
 
   return (
     <div className="main-content">
@@ -68,6 +86,8 @@ export const HomePageTemplate = ({
           <Col xs={12} lg={10} md={10}>
             <h1>
               <span>{`${hero.title} `}</span>
+              {renderHighestAPY()}
+              <span>{`% APY.`}</span>
             </h1>
             <h4 className="body">{hero.body}</h4>
           </Col>
@@ -86,6 +106,13 @@ export const HomePageTemplate = ({
             ))}
           </ul>
         </Row>
+        {!isFetching && (
+          <Ticker
+            items={APYs.map((_) => ({
+              label: `${_.value}% APY · ${_.pool} POOL`,
+            }))}
+          />
+        )}
       </PageSection>
       <PageSection
         id={sections.home.KEEP_SOLUTION}

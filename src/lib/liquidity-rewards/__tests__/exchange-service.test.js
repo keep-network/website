@@ -4,7 +4,7 @@ import BigNumber from "bignumber.js"
 import {
   BaseExchangeService,
   UniswapExchangeService,
-} from "../exchange-service"
+} from "../../exchange-api/exchange-service"
 
 jest.mock("axios")
 

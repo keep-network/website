@@ -8,7 +8,7 @@ const liquidityRewardsKEEPETH = LiquidityRewardsFactory.create(
   SUPPORTED_LIQUIDITY_POOLS.KEEP_ETH
 )
 const liquidityRewardsTBTCv2Saddle = LiquidityRewardsFactory.create(
-  SUPPORTED_LIQUIDITY_POOLS.TBTCv2_SADDLE
+  SUPPORTED_LIQUIDITY_POOLS.TBTCv2_SADDLEV2
 )
 
 const useLiquidityRewardsAPY = () => {
@@ -24,12 +24,12 @@ const useLiquidityRewardsAPY = () => {
       liquidityRewardsKEEPETH.calculateAPY(),
       liquidityRewardsTBTCv2Saddle.calculateAPY(),
     ])
-      .then(([apyKEEPETH, apyTBTCv2Saddle]) => {
+      .then(([apyKEEPETH, apyTBTCv2SaddleV2]) => {
         if (shouldSetState) {
           setLiquidityRewardsAPYs(
             [
               { value: apyKEEPETH, pool: "KEEP/ETH" },
-              { value: apyTBTCv2Saddle, pool: "TBTCv2/SADDLE" },
+              { value: apyTBTCv2SaddleV2, pool: "TBTCv2/SADDLEv2" },
             ].sort((a, b) => b.value - a.value)
           )
           setIsFetching(false)

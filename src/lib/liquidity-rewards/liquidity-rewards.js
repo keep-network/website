@@ -6,6 +6,7 @@ import KeepVault from "./abis/KeepVault.json"
 import LPRewardsKEEPETH from "./abis/LPRewardsKEEPETH.json"
 import LPRewardsTBTCETH from "./abis/LPRewardsTBTCETH.json"
 import LPRewardsTBTCv2Saddle from "./abis/LPRewardsTBTCv2Saddle.json"
+import LPRewardsTBTCv2SaddleV2 from "./abis/LPRewardsTBTCv2SaddleV2.json"
 import { INFURA_RPC_URL, NETWORK } from "../web3-config"
 import { Token } from "../helper"
 
@@ -189,6 +190,7 @@ export const SUPPORTED_LIQUIDITY_POOLS = {
   KEEP_ETH: "KEEP_ETH",
   TBTC_ETH: "TBTC_ETH",
   TBTCv2_SADDLE: "TBTCv2_SADDLE",
+  TBTCv2_SADDLEV2: "TBTCv2_SADDLEV2",
   KEEP: "KEEP",
 }
 
@@ -208,6 +210,10 @@ const LiquidityRewardsPoolManager = {
     pool: LiquidityRewardsSaddle,
     contractArtifact: LPRewardsTBTCv2Saddle,
   },
+  [SUPPORTED_LIQUIDITY_POOLS.TBTCv2_SADDLEV2]: {
+    pool: LiquidityRewardsSaddle,
+    contractArtifact: LPRewardsTBTCv2SaddleV2,
+  },
   [SUPPORTED_LIQUIDITY_POOLS.KEEP]: {
     pool: LiquidityRewardsKeepVault,
     contractArtifact: KeepVault,
@@ -218,7 +224,7 @@ const uniswapExchangeSercie = new UniswapExchangeService()
 export class LiquidityRewardsFactory {
   /**
    * Creates the Liquidity Rewards wrapper based on the type of pool.
-   * @param {('KEEP_ETH' | 'TBTC_ETH' | 'TBTCv2_SADDLE' | 'KEEP')} typeOfPool -
+   * @param {('KEEP_ETH' | 'TBTC_ETH' | 'TBTCv2_SADDLE' | 'TBTCv2_SADDLEV2' | 'KEEP')} typeOfPool -
    * The supported type of pools.
    * @return {LiquidityRewards} The Liquidity Rewards wrapper.
    */

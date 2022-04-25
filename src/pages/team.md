@@ -6,8 +6,8 @@ hero:
   name: Matt Luongo
   title: Thesis Founder, CEO
   body: Matt Luongo is a serial entrepreneur who joined the cryptocurrency space
-    in 2014. He's currently the CEO of Thesis, the crypto venture production
-    studio behind Keep.
+    in 2014. He is the CEO of [Thesis](https://thesis.co/), the crypto venture
+    production studio behind Keep.
   image: /images/matt-bw.png
 team_section:
   title: Keep Team
@@ -19,18 +19,6 @@ team_section:
       subsequently acquired.
     image: /images/doug-bw.png
   team:
-    - name: Laura Wallendal
-      title: General Manager
-      image: /images/laura-bw.png
-    - name: Carolyn Reckhow
-      title: Head of Business Strategy
-      image: /images/carolyn-bw.png
-    - name: Antonio Salazar Cardozo
-      title: Head of Engineering
-      image: /images/antonio-bw.png
-    - name: Michael Gluzman
-      title: Head of Design
-      image: /images/michael-bw.png
     - name: Chris Battenfield
       title: Front-end Engineering Lead
       image: /images/chris-bw.png
@@ -46,15 +34,15 @@ team_section:
     - name: Will Rhodes
       title: Community Manager Lead
       image: /images/will-bw.png
-    - name: Kris Jones
-      title: Community Lead
-      image: /images/kris-bw.png
     - name: Beau Shinkle
       title: Backend Engineer
       image: /images/beau-bw.png
     - name: Dmitry Paremski
       title: Engineer
       image: /images/dmitry-bw.png
+    - name: George Weiler
+      title: Engineer
+      image: /images/george-headshot.png
     - name: Jakub Nowakowski
       title: Engineer
       image: /images/kuba-bw.png

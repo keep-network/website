@@ -6,8 +6,8 @@ hero:
   name: Matt Luongo
   title: Thesis Founder, CEO
   body: Matt Luongo is a serial entrepreneur who joined the cryptocurrency space
-    in 2014. He's currently the CEO of Thesis, the crypto venture production
-    studio behind Keep.
+    in 2014. He is the CEO of [Thesis](https://thesis.co/), the crypto venture
+    production studio behind Keep.
   image: /images/matt-bw.png
 team_section:
   title: Keep Team
@@ -19,63 +19,54 @@ team_section:
       subsequently acquired.
     image: /images/doug-bw.png
   team:
-    - name: Laura Wallendal
-      title: General Manager
-      image: /images/laura-bw.png
-    - name: Carolyn Reckhow
-      title: Head of Business Strategy
-      image: /images/carolyn-bw.png
-    - name: Antonio Salazar Cardozo
-      title: Head of Engineering
-      image: /images/antonio-bw.png
-    - name: Michael Gluzman
-      title: Head of Design
-      image: /images/michael-bw.png
-    - name: Chris Battenfield
-      title: Front-end Engineering Lead
-      image: /images/chris-bw.png
-    - name: Piotr Dyraga
-      title: Tech Lead
-      image: /images/piotr-bw.png
-    - name: Sasha Tanase
-      title: Senior Product Designer
-      image: /images/sasha-bw.png
-    - name: Liz Shinn
-      title: Design Lead
-      image: /images/liz-shinn-bw.png
-    - name: Will Rhodes
-      title: Community Manager Lead
-      image: /images/will-bw.png
-    - name: Kris Jones
-      title: Community Lead
-      image: /images/kris-bw.png
     - name: Beau Shinkle
       title: Backend Engineer
       image: /images/beau-bw.png
+    - name: Chris Battenfield
+      title: Front-end Engineering Lead
+      image: /images/chris-bw.png
     - name: Dmitry Paremski
       title: Engineer
       image: /images/dmitry-bw.png
+    - name: George Weiler
+      title: Engineer
+      image: /images/george.png
     - name: Jakub Nowakowski
       title: Engineer
       image: /images/kuba-bw.png
+    - name: Liz Shinn
+      title: Design Lead
+      image: /images/liz-shinn-bw.png
     - name: Łukasz Zimnoch
       title: Engineer
       image: /images/lukasz-bw.png
-    - name: Promethea Raschke
-      title: Protocol Designer
-      image: /images/promethea-bw.png
     - name: Michal Smiarowski
       title: Engineer
       image: /images/michal-bw.png
     - name: Michalina Cienciala
       title: QA Engineer
       image: /images/michalina-bw.png
+    - name: Piotr Dyraga
+      title: Tech Lead
+      image: /images/piotr-bw.png
+    - name: Promethea Raschke
+      title: Protocol Designer
+      image: /images/promethea-bw.png
     - name: Rafal Czajkowski
       title: Engineer
       image: /images/rafal-bw.png
+    - name: Rusty Mason
+      title: Head of Business Development
+      image: /images/rusty.png
+    - name: Sasha Tanase
+      title: Senior Product Designer
+      image: /images/sasha-bw.png
     - name: Tomasz Słaboń
       title: Engineer
       image: /images/tomasz-bw.png
+    - name: Will Rhodes
+      title: Community Manager Lead
+      image: /images/will-bw.png
 advisors_section:
   title: Advisors
   advisors:

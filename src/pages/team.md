@@ -19,51 +19,54 @@ team_section:
       subsequently acquired.
     image: /images/doug-bw.png
   team:
-    - name: Chris Battenfield
-      title: Front-end Engineering Lead
-      image: /images/chris-bw.png
-    - name: Piotr Dyraga
-      title: Tech Lead
-      image: /images/piotr-bw.png
-    - name: Sasha Tanase
-      title: Senior Product Designer
-      image: /images/sasha-bw.png
-    - name: Liz Shinn
-      title: Design Lead
-      image: /images/liz-shinn-bw.png
-    - name: Will Rhodes
-      title: Community Manager Lead
-      image: /images/will-bw.png
     - name: Beau Shinkle
       title: Backend Engineer
       image: /images/beau-bw.png
+    - name: Chris Battenfield
+      title: Front-end Engineering Lead
+      image: /images/chris-bw.png
     - name: Dmitry Paremski
       title: Engineer
       image: /images/dmitry-bw.png
     - name: George Weiler
       title: Engineer
-      image: /images/george-headshot.png
+      image: /images/george.png
     - name: Jakub Nowakowski
       title: Engineer
       image: /images/kuba-bw.png
+    - name: Liz Shinn
+      title: Design Lead
+      image: /images/liz-shinn-bw.png
     - name: Łukasz Zimnoch
       title: Engineer
       image: /images/lukasz-bw.png
-    - name: Promethea Raschke
-      title: Protocol Designer
-      image: /images/promethea-bw.png
     - name: Michal Smiarowski
       title: Engineer
       image: /images/michal-bw.png
     - name: Michalina Cienciala
       title: QA Engineer
       image: /images/michalina-bw.png
+    - name: Piotr Dyraga
+      title: Tech Lead
+      image: /images/piotr-bw.png
+    - name: Promethea Raschke
+      title: Protocol Designer
+      image: /images/promethea-bw.png
     - name: Rafal Czajkowski
       title: Engineer
       image: /images/rafal-bw.png
+    - name: Rusty Mason
+      title: Head of Business Development
+      image: /images/rusty.png
+    - name: Sasha Tanase
+      title: Senior Product Designer
+      image: /images/sasha-bw.png
     - name: Tomasz Słaboń
       title: Engineer
       image: /images/tomasz-bw.png
+    - name: Will Rhodes
+      title: Community Manager Lead
+      image: /images/will-bw.png
 advisors_section:
   title: Advisors
   advisors:

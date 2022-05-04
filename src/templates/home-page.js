@@ -20,7 +20,7 @@ import {
 } from "../components"
 import { sections } from "../constants"
 import { actions } from "../redux"
-import useLiquidityRewardsAPY from "../hooks/useLiquidityRewardsAPY"
+// import useLiquidityRewardsAPY from "../hooks/useLiquidityRewardsAPY"
 import LoadingBlocks from "../components/LoadingBlocks"
 import SlideInAnimation from "../components/SlideInAnimation"
 import GovernanceForum from "../components/GovernanceForum"

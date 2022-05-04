@@ -20,7 +20,7 @@ import {
 } from "../components"
 import { sections } from "../constants"
 import { actions } from "../redux"
-import useLiquidityRewardsAPY from "../hooks/useLiquidityRewardsAPY"
+// import useLiquidityRewardsAPY from "../hooks/useLiquidityRewardsAPY"
 import LoadingBlocks from "../components/LoadingBlocks"
 import SlideInAnimation from "../components/SlideInAnimation"
 import GovernanceForum from "../components/GovernanceForum"
@@ -43,23 +43,21 @@ export const HomePageTemplate = ({
     Aos.init({ once: true })
   }, [])
 
-  const [
-    liquidityRewardsAPYs,
-    areLiquidityRewardsAPYsFetching,
-  ] = useLiquidityRewardsAPY()
+  // const [
+  //   liquidityRewardsAPYs,
+  //   areLiquidityRewardsAPYsFetching,
+  // ] = useLiquidityRewardsAPY()
 
   const [coveragePoolAPY, isCoveragePoolAPYFetching] = useCoveragePoolsAPY()
 
   const isFetching = useMemo(() => {
-    return isCoveragePoolAPYFetching || areLiquidityRewardsAPYsFetching
-  }, [isCoveragePoolAPYFetching, areLiquidityRewardsAPYsFetching])
+    return isCoveragePoolAPYFetching
+  }, [isCoveragePoolAPYFetching])
 
   const APYs = useMemo(() => {
     if (isFetching) return []
-    return [...liquidityRewardsAPYs, ...coveragePoolAPY].sort(
-      (a, b) => b.value - a.value
-    )
-  }, [isFetching, liquidityRewardsAPYs, coveragePoolAPY])
+    return [...coveragePoolAPY].sort((a, b) => b.value - a.value)
+  }, [isFetching, coveragePoolAPY])
 
   const renderHighestAPY = () => {
     if (APYs.length === 0) {

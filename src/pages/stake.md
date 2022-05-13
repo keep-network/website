@@ -49,16 +49,16 @@ stake_options:
       icon:
         image: /images/coverage-pool.svg
         alt: Liquidity Pools
-    - title: Stake KEEP
-      body: Stake KEEP and earn rewards. Minimum KEEP amount required
+    - title: Stake KEEP on Threshold
+      body: Stake your KEEP on Threshold Network and earn rewards.
       buttons:
-        - label: Stake Keep
-          url: https://dashboard.keep.network/delegations/granted
+        - label: Stake Keep on Threshold
+          url: https://dashboard.keep.network
         - label: Learn More
-          url: https://staking.keep.network/
+          url: https://blog.threshold.network/keep-legacy-stake-upgrade/
       icon:
-        image: /images/svg/ic-stake-keep.svg
-        alt: Liquidity Pools
+        image: /images/staking-on-threshold.png
+        alt: stake keep on threshold
 recommended:
   title: Staking providers
   body: If you’re new to staking, we recommend working with one of our staking

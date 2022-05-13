@@ -5,6 +5,10 @@ title: FAQ
 hero:
   title: FAQ
 questions:
+  - question: How did the Keep and the NuCypher networks merge to form the Threshold
+      network?
+    answer: "You can read the full story of the merge here on the Threshold blog:
+      https://blog.threshold.network/the-story-of-threshold/"
   - question: What is the Keep network?
     answer: Keep is a privacy layer that enables private data to be leveraged on
       public blockchains without compromising the security or confidentiality.
@@ -14,6 +18,9 @@ questions:
   - question: How do I stake KEEP tokens on Threshold?
     answer: "You can learn more about this here on the Threshold blog:
       https://blog.threshold.network/keep-legacy-stake-upgrade"
+  - question: What is the T token?
+    answer: The T token is both a utility token for the Threshold Network and a
+      governance token for the Threshold DAO.
   - question: How do I upgrade my KEEP tokens to T?
     answer: "You can upgrade your liquid KEEP tokens to T on the the Threshold
       dashboard here: https://dashboard.threshold.network/upgrade/keep"
@@ -33,9 +40,6 @@ questions:
     answer: The Keep coverage pool functions as a form of insurance. It helps secure
       the network and is an opportunity to earn rewards. Learn more <a
       href="https://dashboard.keep.network/coverage-pools/how-it-works">here.</a>
-  - question: What is the T token?
-    answer: The T token is both a utility token for the Threshold Network and a
-      governance token for the Threshold DAO.
 contact:
   title: Keep in touch
   header: Get the Keep Newsletter

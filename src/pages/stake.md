@@ -3,17 +3,17 @@ template: stake-page
 path: /stake
 hero:
   title: Stake
-  body: Earn your keep by staking on the Keep network.
+  body: Get started staking on the Keep network.
   cta_buttons:
     - label: Launch Dashboard
       url: https://dashboard.keep.network/
 why:
   title: Why stake with Keep?
   cards:
-    - title: Profitable
-      body: Earn rewards in KEEP and ETH by staking your KEEP tokens.
+    - title: Decentralized
+      body: A truly decentralized network.
       icon:
-        image: /images/svg/ic-profitable.svg
+        image: /images/decentralized.png
         alt: Profitable
     - title: Permissionless
       body: Anyone with KEEP tokens can stake and secure the network.

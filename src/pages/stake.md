@@ -123,8 +123,7 @@ tech_guide:
   title: The Keep and NuCypher networks merged to form the Threshold Network.
   body: Threshold Network is the first ever on-chain merge between two existing
     networks. Access cryptographic tools that ensure full control over your
-    digital assets. Join the [Discord](https://discord.gg/Threshold) to get
-    involved in the DAO.
+    digital assets.
   button:
     label: Learn More
     url: http://threshold.network/

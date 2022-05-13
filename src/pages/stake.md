@@ -119,13 +119,13 @@ banner:
     label: Connect with us
     url: social@keep.network
 tech_guide:
-  intro: Technical Documentation
-  title: How to set up and run your own Keep node
-  body: If you live and breathe the technical specifications of Bash and validator
-    software, consider setting up your own node. View the requirements here.
+  intro: "The Keep and NuCypher networks merged to form the Threshold Network. "
+  title: More about Threshold
+  body: Threshold Network is the first ever on-chain merge between two existing
+    networks.
   button:
-    label: View Docs
-    url: https://docs.keep.network/run-random-beacon.html
+    label: Learn More
+    url: http://threshold.network/
 exchanges:
   title: Keep is listed on the following exchanges
   links:

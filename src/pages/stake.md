@@ -14,7 +14,7 @@ why:
       body: A truly decentralized network.
       icon:
         image: /images/decentralized.png
-        alt: Profitable
+        alt: Decentralized
     - title: Permissionless
       body: Anyone with KEEP tokens can stake and secure the network.
       icon:
@@ -27,7 +27,7 @@ why:
         alt: User Friendly
 stake_options:
   title: Staking options
-  body: Earn with your KEEP tokens with the following options
+  body: "Stake your KEEP tokens with the following options:"
   cards:
     - title: Liquidity Pools
       body: Provide liquidity to one of our liquidity pools to start earning rewards.

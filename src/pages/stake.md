@@ -13,7 +13,7 @@ why:
     - title: Decentralized
       body: A truly decentralized network.
       icon:
-        image: /images/decentralized.png
+        image: /images/decentralize.svg
         alt: Decentralized
     - title: Permissionless
       body: Anyone with KEEP tokens can stake and secure the network.

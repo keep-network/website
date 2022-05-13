@@ -14,8 +14,9 @@ questions:
   - question: How do I stake KEEP tokens on Threshold?
     answer: "You can learn more about this here on the Threshold blog:
       https://blog.threshold.network/keep-legacy-stake-upgrade"
-  - question: What is a KEEP token?
-    answer: The Keep Network's native token is KEEP.
+  - question: How do I upgrade my KEEP tokens to T?
+    answer: "You can upgrade your liquid KEEP tokens to T on the the Threshold
+      dashboard here: https://dashboard.threshold.network/upgrade/keep"
   - question: How do I get KEEP tokens?
     answer: You can buy KEEP tokens on an exchange. KEEP is available on Uniswap,
       Balancer, and Kraken. You can also contribute to liquidity pools and earn

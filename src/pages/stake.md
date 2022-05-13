@@ -27,7 +27,7 @@ why:
         alt: User Friendly
 stake_options:
   title: Staking options
-  body: "Stake your KEEP tokens with the following options:"
+  body: "Get the most out of your KEEP tokens with the following options:"
   cards:
     - title: Liquidity Pools
       body: Provide liquidity to one of our liquidity pools to start earning rewards.

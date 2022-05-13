@@ -55,9 +55,6 @@ team_section:
     - name: Rafal Czajkowski
       title: Engineer
       image: /images/rafal-bw.png
-    - name: Rusty Mason
-      title: Head of Business Development
-      image: /images/rusty.png
     - name: Sasha Tanase
       title: Senior Product Designer
       image: /images/sasha-bw.png

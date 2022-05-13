@@ -52,7 +52,7 @@ stake_options:
     - title: Stake KEEP on Threshold
       body: Stake your KEEP on Threshold Network and earn rewards.
       buttons:
-        - label: Stake Keep on Threshold
+        - label: Stake Keep on T
           url: https://dashboard.keep.network
         - label: Learn More
           url: https://blog.threshold.network/keep-legacy-stake-upgrade/

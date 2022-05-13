@@ -31,13 +31,6 @@ questions:
       a list of our recommended staking providers. For a detailed guide to
       staking, head to the <a href="https://staking.keep.network">staking user
       guide.</a>
-  - question: Is there a minimum staking amount?
-    answer: There is a minimum staking amount to stake on the Keep network as an
-      independent node operator or with a staking provider. The minimum stake
-      reduces over time on a set calendar. To learn about your options to earn
-      KEEP even if you don’t have the minimum KEEP stake available, check out <a
-      href="https://staking.keep.network/about-staking/staking-minimums">this
-      section</a> of the staking user guide.
   - question: What are the rewards of staking?
     answer: Stakers are rewarded in both ETH and KEEP for staking on the Keep
       network, relative to how much KEEP they stake and ETH they bond. Rewards

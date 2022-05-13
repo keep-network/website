@@ -1,5 +1,5 @@
 ---
 template: announcement
-title: Threshold Call for Delegates Announcement
+title: Threshold Network
 ---
-The Threshold DAO is looking for delegates! Find out how to get involved on the Forum. [Learn more](https://forum.threshold.network/t/threshold-dao-delegates/325)
+Threshold Network is live. Upgrade your KEEP and/or NU tokens to the new T token. [Start Now](https://dashboard.threshold.network/upgrade/keep)

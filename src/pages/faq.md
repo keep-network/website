@@ -5,10 +5,9 @@ title: FAQ
 hero:
   title: FAQ
 questions:
-  - question: How did the Keep and the NuCypher networks merge to form the Threshold
-      network?
-    answer: "You can read the full story of the merge here on the Threshold blog:
-      https://blog.threshold.network/the-story-of-threshold/"
+  - question: How did Keep and NuCypher networks merge to form the Threshold network?
+    answer: You can read the full story of the merge here on the [Threshold
+      blog](https://blog.threshold.network/the-story-of-threshold/)
   - question: What is the Keep network?
     answer: Keep is a privacy layer that enables private data to be leveraged on
       public blockchains without compromising the security or confidentiality.
@@ -16,14 +15,14 @@ questions:
       tokenized bitcoin on Ethereum. <a href="https://keep.network/info">Learn
       more about Keep.</a>
   - question: How do I stake KEEP tokens on Threshold?
-    answer: "You can learn more about this here on the Threshold blog:
-      https://blog.threshold.network/keep-legacy-stake-upgrade"
+    answer: You can learn more about this here on the [Threshold
+      blog](https://blog.threshold.network/keep-legacy-stake-upgrade)
   - question: What is the T token?
     answer: The T token is both a utility token for the Threshold Network and a
       governance token for the Threshold DAO.
   - question: How do I upgrade my KEEP tokens to T?
-    answer: "You can upgrade your liquid KEEP tokens to T on the the Threshold
-      dashboard here: https://dashboard.threshold.network/upgrade/keep"
+    answer: You can upgrade your liquid KEEP tokens to T on the the Threshold
+      dashboard [here](https://dashboard.threshold.network/upgrade/keep)
   - question: How do I get KEEP tokens?
     answer: You can buy KEEP tokens on an exchange. KEEP is available on Uniswap,
       Balancer, and Kraken. You can also contribute to liquidity pools and earn

@@ -33,6 +33,9 @@ questions:
     answer: The Keep coverage pool functions as a form of insurance. It helps secure
       the network and is an opportunity to earn rewards. Learn more <a
       href="https://dashboard.keep.network/coverage-pools/how-it-works">here.</a>
+  - question: What is the T token?
+    answer: The T token is both a utility token for the Threshold Network and a
+      governance token for the Threshold DAO.
 contact:
   title: Keep in touch
   header: Get the Keep Newsletter

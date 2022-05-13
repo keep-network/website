@@ -11,12 +11,9 @@ questions:
       Keep is the network behind tBTC, the first secure and decentralized
       tokenized bitcoin on Ethereum. <a href="https://keep.network/info">Learn
       more about Keep.</a>
-  - question: How does a keep work?
-    answer: Keeps are core to the Keep network’s value proposition. The Keep network
-      uses private enclaves known as "keeps" to securely encrypt and store
-      private data. Off-chain keeps are protected using secure multiparty
-      computation (sMPC), generating, securing, storing, encrypting and
-      transmitting data across many individuals.
+  - question: How do I stake KEEP tokens on Threshold?
+    answer: "You can learn more about this here on the Threshold blog:
+      https://blog.threshold.network/keep-legacy-stake-upgrade"
   - question: What is a KEEP token?
     answer: The Keep Network's native token is KEEP.
   - question: How do I get KEEP tokens?
@@ -31,19 +28,6 @@ questions:
       a list of our recommended staking providers. For a detailed guide to
       staking, head to the <a href="https://staking.keep.network">staking user
       guide.</a>
-  - question: What are the rewards of staking?
-    answer: Stakers are rewarded in both ETH and KEEP for staking on the Keep
-      network, relative to how much KEEP they stake and ETH they bond. Rewards
-      right now can be up to 200% APY for Keep stakers. <br><br> Learn more in
-      <a
-      href="https://staking.keep.network/about-staking/staking-economics">this
-      section</a> of the staking user guide.
-  - question: What are the risks of staking?
-    answer: Slashing in the Keep and tBTC systems is not designed to be punitive,
-      and is rather to protect the security of the network from malicious
-      behaviors. <br><br> Learn more in <a
-      href="https://staking.keep.network/about-staking/staking-risks">this
-      section</a> of the staking user guide.
   - question: What is the Keep coverage pool?
     answer: The Keep coverage pool functions as a form of insurance. It helps secure
       the network and is an opportunity to earn rewards. Learn more <a

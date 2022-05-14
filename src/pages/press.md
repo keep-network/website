@@ -40,7 +40,7 @@ news:
         encryption protocol, that will allow CoinList users to stake their T
         tokens and participate in the network’s consensus.
       icon:
-        image: /images/coinlist-image.png
+        image: /images/coinlist-2.png
         alt: CoinList
     - title: Keep Network unveils v2 specs for tBTC protocol
       source: Cointelegraph

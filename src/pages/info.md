@@ -3,21 +3,21 @@ template: info-page
 path: /info
 hero:
   title: Info
-  body: Keep is the privacy-focused infrastructure behind tBTC, the only truly
+  body: Keep is the privacy-focused infrastructure behind tBTCv2, the only truly
     decentralized solution for Bitcoin on Ethereum.
   image: /images/features/lock.png
 feature:
-  title: Keep brings privacy to dapps
-  body: <p>Keep secures private data on public blockchains with “keeps.” Keeps are
-    off-chain containers that allow contracts to manage and use private data
-    without exposing the data itself to the public blockchain.</p><p>In the tBTC
-    solution, the private keys to the bitcoin are stored in keeps, where they
-    cannot be exposed to the public Ethereum blockchain. Keeps are also
-    distributed across validators, ensuring data remains not only private, but
-    decentralized as well.</p>
+  title: The Keep and NuCypher networks merged to form the Threshold network.
+  body: <p>Threshold empowers user sovereignty on the public blockchain with
+    access to a suite of threshold cryptographic tools that ensure full control
+    over your digital assets.</p><p>The Keep team is building tBTCv2 on
+    Threshold. It is a decentralized bridge to bring BTC to the Ethereum
+    network; the only permissionless solution on the market today. Bridge your
+    Bitcoin to Ethereum in a secure and trustless way to participate in
+    DeFi.</p>
 solution:
   title: The Keep solution
-  body: Keep is Ethereum’s first private computer.
+  body: ""
   cards:
     - title: Decentralized
       body: Keep is the only protocol that is truly decentralized.
@@ -38,23 +38,23 @@ solution:
         alt: Private
 tbtc_showcase:
   title: Built on Keep
-  body: tBTC is the first “killer app” to be built on top of the Keep network.
+  body: tBTCv2 allows you to bridge your Bitcoin to Ethereum in a secure and
+    trustless way to participate in DeFi.
   button:
-    label: Check It Out
-    url: http://tbtc.network/
+    label: Learn More
+    url: https://blog.threshold.network/tbtc-v2-vision-for-2022/
   features:
     - name: 1 BTC = 1 TBTC
       icon:
-        image: /images/svg/ic-btc-tbtc.svg
+        image: /images/feature-tbtc1.svg
         alt: 1 BTC = 1 TBTC
     - name: DECENTRALIZED
       icon:
-        image: /images/svg/ic-tbtc-tokens.svg
+        image: /images/feature-tbtc2.svg
         alt: TBTC Tokens
   article:
-    image: /images/features/tbtc-article.png
-    body: tBTC is the safe way to earn with your Bitcoin. Deposit and redeem BTC in
-      DeFi without intermediaries.
+    image: /images/tbtcv2.png
+    body: Deposit and redeem your BTC in DeFi without intermediaries.
 secure:
   title: Securing Keep
   body: Keep and tBTC have been audited by the strongest firms in the ecosystem.

@@ -11,7 +11,7 @@ why:
   title: Why stake with Keep?
   cards:
     - title: Decentralized
-      body: Run a node in the Keep network and participate in a secure and
+      body: Run a node on the Keep network and participate in a secure and
         decentralized network.
       icon:
         image: /images/decentralize.svg

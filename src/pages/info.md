@@ -7,11 +7,10 @@ hero:
     decentralized solution for Bitcoin on Ethereum.
   image: /images/features/lock.png
 feature:
-  title: Keep brings privacy to dapps
-  body: <p>The Keep and NuCypher networks merged to form the Threshold
-    network.</p><p>Threshold empowers user sovereignty on the public blockchain
-    with access to a suite of threshold cryptographic tools that ensure full
-    control over your digital assets.</p><p>The Keep team is building tBTCv2 on
+  title: The Keep and NuCypher networks merged to form the Threshold network.
+  body: <p>Threshold empowers user sovereignty on the public blockchain with
+    access to a suite of threshold cryptographic tools that ensure full control
+    over your digital assets.</p><p>The Keep team is building tBTCv2 on
     Threshold. It is a decentralized bridge to bring BTC to the Ethereum
     network; the only permissionless solution on the market today. Bridge your
     Bitcoin to Ethereum in a secure and trustless way to participate in

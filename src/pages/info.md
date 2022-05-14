@@ -42,21 +42,20 @@ tbtc_showcase:
   body: tBTCv2 allows you to bridge your Bitcoin to Ethereum in a secure and
     trustless way to participate in DeFi.
   button:
-    label: Check It Out
-    url: http://tbtc.network/
+    label: Learn More
+    url: https://blog.threshold.network/tbtc-v2-vision-for-2022/
   features:
     - name: 1 BTC = 1 TBTC
       icon:
-        image: /images/svg/ic-btc-tbtc.svg
+        image: /images/feature-tbtc1.svg
         alt: 1 BTC = 1 TBTC
     - name: DECENTRALIZED
       icon:
-        image: /images/svg/ic-tbtc-tokens.svg
+        image: /images/feature-tbtc2.svg
         alt: TBTC Tokens
   article:
-    image: /images/features/tbtc-article.png
-    body: tBTC is the safe way to earn with your Bitcoin. Deposit and redeem BTC in
-      DeFi without intermediaries.
+    image: /images/tbtcv2.png
+    body: Deposit and redeem your BTC in DeFi without intermediaries.
 secure:
   title: Securing Keep
   body: Keep and tBTC have been audited by the strongest firms in the ecosystem.

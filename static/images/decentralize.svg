@@ -1,0 +1,23 @@
+<svg width="108" height="108" viewBox="0 0 108 108" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M12.3997 64.4001V85.2001" stroke="#48DBB4" stroke-width="4" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M54.0004 22.8003V43.6003" stroke="#48DBB4" stroke-width="4" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M54.0004 64.4001V85.2001" stroke="#48DBB4" stroke-width="4" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M95.6 22.8003V43.6003" stroke="#48DBB4" stroke-width="4" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M12.1034 22.8003V43.6003" stroke="#48DBB4" stroke-width="4" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M95.6 64.4001V85.2001" stroke="#48DBB4" stroke-width="4" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M22.8002 12.3997H43.6002" stroke="#48DBB4" stroke-width="4" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M22.8002 53.9998H43.6002" stroke="#48DBB4" stroke-width="4" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M64.3998 53.9998H85.1998" stroke="#48DBB4" stroke-width="4" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M64.3998 12.7251H85.1998" stroke="#48DBB4" stroke-width="4" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M22.8002 95.5999H43.6002" stroke="#48DBB4" stroke-width="4" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M64.3998 95.5999H85.1998" stroke="#48DBB4" stroke-width="4" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M18.8 2H6C3.79086 2 2 3.79086 2 6V18.8C2 21.0091 3.79086 22.8 6 22.8H18.8C21.0091 22.8 22.8 21.0091 22.8 18.8V6C22.8 3.79086 21.0091 2 18.8 2Z" stroke="#0A0806" stroke-width="4" stroke-miterlimit="10"/>
+<path d="M60.3999 2H47.5999C45.3907 2 43.5999 3.79086 43.5999 6V18.8C43.5999 21.0091 45.3907 22.8 47.5999 22.8H60.3999C62.609 22.8 64.3999 21.0091 64.3999 18.8V6C64.3999 3.79086 62.609 2 60.3999 2Z" stroke="#0A0806" stroke-width="4" stroke-miterlimit="10"/>
+<path d="M102 2H89.2C86.9909 2 85.2 3.79086 85.2 6V18.8C85.2 21.0091 86.9909 22.8 89.2 22.8H102C104.209 22.8 106 21.0091 106 18.8V6C106 3.79086 104.209 2 102 2Z" stroke="#0A0806" stroke-width="4" stroke-miterlimit="10"/>
+<path d="M18.8 43.6001H6C3.79086 43.6001 2 45.391 2 47.6001V60.4001C2 62.6092 3.79086 64.4001 6 64.4001H18.8C21.0091 64.4001 22.8 62.6092 22.8 60.4001V47.6001C22.8 45.391 21.0091 43.6001 18.8 43.6001Z" stroke="#0A0806" stroke-width="4" stroke-miterlimit="10"/>
+<path d="M60.3999 43.6001H47.5999C45.3907 43.6001 43.5999 45.391 43.5999 47.6001V60.4001C43.5999 62.6092 45.3907 64.4001 47.5999 64.4001H60.3999C62.609 64.4001 64.3999 62.6092 64.3999 60.4001V47.6001C64.3999 45.391 62.609 43.6001 60.3999 43.6001Z" stroke="#0A0806" stroke-width="4" stroke-miterlimit="10"/>
+<path d="M102 43.6001H89.2C86.9909 43.6001 85.2 45.391 85.2 47.6001V60.4001C85.2 62.6092 86.9909 64.4001 89.2 64.4001H102C104.209 64.4001 106 62.6092 106 60.4001V47.6001C106 45.391 104.209 43.6001 102 43.6001Z" stroke="#0A0806" stroke-width="4" stroke-miterlimit="10"/>
+<path d="M18.8 85.1997H6C3.79086 85.1997 2 86.9906 2 89.1997V102C2 104.209 3.79086 106 6 106H18.8C21.0091 106 22.8 104.209 22.8 102V89.1997C22.8 86.9906 21.0091 85.1997 18.8 85.1997Z" stroke="#0A0806" stroke-width="4" stroke-miterlimit="10"/>
+<path d="M60.3999 85.1997H47.5999C45.3907 85.1997 43.5999 86.9906 43.5999 89.1997V102C43.5999 104.209 45.3907 106 47.5999 106H60.3999C62.609 106 64.3999 104.209 64.3999 102V89.1997C64.3999 86.9906 62.609 85.1997 60.3999 85.1997Z" stroke="#0A0806" stroke-width="4" stroke-miterlimit="10"/>
+<path d="M102 85.1997H89.2C86.9909 85.1997 85.2 86.9906 85.2 89.1997V102C85.2 104.209 86.9909 106 89.2 106H102C104.209 106 106 104.209 106 102V89.1997C106 86.9906 104.209 85.1997 102 85.1997Z" stroke="#0A0806" stroke-width="4" stroke-miterlimit="10"/>
+</svg>

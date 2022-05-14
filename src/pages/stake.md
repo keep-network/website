@@ -3,18 +3,19 @@ template: stake-page
 path: /stake
 hero:
   title: Stake
-  body: Earn your keep by staking on the Keep network.
+  body: Get started staking on the Keep network.
   cta_buttons:
     - label: Launch Dashboard
       url: https://dashboard.keep.network/
 why:
   title: Why stake with Keep?
   cards:
-    - title: Profitable
-      body: Earn rewards in KEEP and ETH by staking your KEEP tokens.
+    - title: Decentralized
+      body: Run a node on the Keep network and participate in a secure and
+        decentralized network.
       icon:
-        image: /images/svg/ic-profitable.svg
-        alt: Profitable
+        image: /images/decentralize.svg
+        alt: Decentralized
     - title: Permissionless
       body: Anyone with KEEP tokens can stake and secure the network.
       icon:
@@ -27,7 +28,7 @@ why:
         alt: User Friendly
 stake_options:
   title: Staking options
-  body: Earn with your KEEP tokens with the following options
+  body: "Get the most out of your KEEP tokens with the following options:"
   cards:
     - title: Liquidity Pools
       body: Provide liquidity to one of our liquidity pools to start earning rewards.
@@ -49,16 +50,16 @@ stake_options:
       icon:
         image: /images/coverage-pool.svg
         alt: Liquidity Pools
-    - title: Stake KEEP
-      body: Stake KEEP and earn rewards. Minimum KEEP amount required
+    - title: Stake KEEP on Threshold
+      body: Stake your KEEP on Threshold Network and earn rewards.
       buttons:
-        - label: Stake Keep
-          url: https://dashboard.keep.network/delegations/granted
+        - label: Stake Keep on T
+          url: https://dashboard.keep.network
         - label: Learn More
-          url: https://staking.keep.network/
+          url: https://blog.threshold.network/keep-legacy-stake-upgrade/
       icon:
-        image: /images/svg/ic-stake-keep.svg
-        alt: Liquidity Pools
+        image: /images/staking-on-threshold.png
+        alt: stake keep on threshold
 recommended:
   title: Staking providers
   body: If you’re new to staking, we recommend working with one of our staking
@@ -119,13 +120,14 @@ banner:
     label: Connect with us
     url: social@keep.network
 tech_guide:
-  intro: Technical Documentation
-  title: How to set up and run your own Keep node
-  body: If you live and breathe the technical specifications of Bash and validator
-    software, consider setting up your own node. View the requirements here.
+  intro: Network Merge
+  title: The Keep and NuCypher networks merged to form the Threshold network.
+  body: Threshold is the first ever on-chain merge between two existing networks.
+    Access cryptographic tools that ensure full control over your digital
+    assets.
   button:
-    label: View Docs
-    url: https://docs.keep.network/run-random-beacon.html
+    label: Learn More
+    url: http://threshold.network/
 exchanges:
   title: Keep is listed on the following exchanges
   links:

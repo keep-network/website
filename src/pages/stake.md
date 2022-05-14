@@ -121,10 +121,10 @@ banner:
     url: social@keep.network
 tech_guide:
   intro: Network Merge
-  title: The Keep and NuCypher networks merged to form the Threshold Network.
-  body: Threshold Network is the first ever on-chain merge between two existing
-    networks. Access cryptographic tools that ensure full control over your
-    digital assets.
+  title: The Keep and NuCypher networks merged to form the Threshold network.
+  body: Threshold is the first ever on-chain merge between two existing networks.
+    Access cryptographic tools that ensure full control over your digital
+    assets.
   button:
     label: Learn More
     url: http://threshold.network/

@@ -6,7 +6,8 @@ subtitle: For press inquiries, please contact us at <a
   href="mailto:social@keep.network">social@keep.network</a>.
 hero:
   title: Press
-  body: For press inquiries, please contact us at <a href="mailto:social@keep.network">social@keep.network</a>.
+  body: For press inquiries, please contact us at <a
+    href="mailto:social@keep.network">social@keep.network</a>.
   cta_buttons:
     - label: Send Email
       url: social@keep.network
@@ -31,26 +32,44 @@ news:
   title: In the News
   body: Featured Coverage
   cards:
+    - date: "2022-05-09T16:00:00.000Z"
+      url: https://blog.coinlist.co/introducing-threshold-t-staking-on-coinlist/
+      source: Coinlist
+      title: Introducing Threshold (T) Staking on CoinList
+      excerpt: CoinList launched staking for the Threshold Network, a leading data
+        encryption protocol, that will allow CoinList users to stake their T
+        tokens and participate in the network’s consensus.
+      icon:
+        image: /images/coinlist.png
+        alt: CoinList
     - title: Keep Network unveils v2 specs for tBTC protocol
       source: Cointelegraph
-      excerpt: The second iteration of tBTC is expected to require stakers to only lock up Keep rather than both Keep and ETH, alongside introducing changes to its wallet-generation mechanism. The protocol allows users to tokenize their Bitcoin for use on the Ethereum network.
-      date: "4/12/2021"
+      excerpt: The second iteration of tBTC is expected to require stakers to only
+        lock up Keep rather than both Keep and ETH, alongside introducing
+        changes to its wallet-generation mechanism. The protocol allows users to
+        tokenize their Bitcoin for use on the Ethereum network.
+      date: 4/12/2021
       icon:
         image: /images/blog/cointelegraph.png
         alt: Cointelegraph
       url: https://cointelegraph.com/news/keep-network-unveils-v2-specs-for-tbtc-protocol
     - title: "‘Keanu’ Explained: What It Means to Merge Two Ethereum Projects"
       source: CoinDesk
-      excerpt: "Two encryption projects, Keep and NuCypher, both running on the Ethereum blockchain, have begun discussing what they are calling a “hard merge,” codename: Keanu. Crucially, this would be a merger of their protocols’ functions and communities, not of their companies."
-      date: "3/11/2021"
+      excerpt: "Two encryption projects, Keep and NuCypher, both running on the
+        Ethereum blockchain, have begun discussing what they are calling a “hard
+        merge,” codename: Keanu. Crucially, this would be a merger of their
+        protocols’ functions and communities, not of their companies."
+      date: 3/11/2021
       icon:
         image: /images/blog/coindesk-blog.png
         alt: CoinDesk
       url: https://www.coindesk.com/keanu-explained-nucypher-keep-merger-ethereum
-    - title: Keep Network, NuCypher teams pitch protocol merger on the Ethereum blockchain
+    - title: Keep Network, NuCypher teams pitch protocol merger on the Ethereum
+        blockchain
       source: The Block
-      excerpt: Development teams for Keep Protocol and NuCypher are proposing an on-chain merger in a network first for Ethereum.
-      date: "3/8/2021"
+      excerpt: Development teams for Keep Protocol and NuCypher are proposing an
+        on-chain merger in a network first for Ethereum.
+      date: 3/8/2021
       icon:
         image: /images/blog/the-block.png
         alt: The Block
@@ -58,70 +77,91 @@ news:
 press_items_section:
   title: Latest Coverage
   press_items:
+    - date: "2022-05-09T16:00:00.000Z"
+      title: Introducing Threshold (T) Staking on CoinList
+      source: CoinList
+      url: https://blog.coinlist.co/introducing-threshold-t-staking-on-coinlist/
+      excerpt: CoinList launched staking for the Threshold Network, a leading data
+        encryption protocol, that will allow CoinList users to stake their T
+        tokens and participate in the network’s consensus.
     - title: Keep Network unveils v2 specs for tBTC protocol
       source: Cointelegraph
-      excerpt: The second iteration of tBTC is expected to require stakers to only lock up Keep rather than both Keep and ETH, alongside introducing changes to its wallet-generation mechanism. The protocol allows users to tokenize their Bitcoin for use on the Ethereum network.
+      excerpt: The second iteration of tBTC is expected to require stakers to only
+        lock up Keep rather than both Keep and ETH, alongside introducing
+        changes to its wallet-generation mechanism. The protocol allows users to
+        tokenize their Bitcoin for use on the Ethereum network.
       date: "2021-04-12T19:25:00.000Z"
       url: https://cointelegraph.com/news/keep-network-unveils-v2-specs-for-tbtc-protocol
     - title: "‘Keanu’ Explained: What It Means to Merge Two Ethereum Projects"
       source: CoinDesk
-      excerpt: "Two encryption projects, Keep and NuCypher, both running on the Ethereum blockchain, have begun discussing what they are calling a “hard merge,” codename: Keanu. Crucially, this would be a merger of their protocols’ functions and communities, not of their companies."
+      excerpt: "Two encryption projects, Keep and NuCypher, both running on the
+        Ethereum blockchain, have begun discussing what they are calling a “hard
+        merge,” codename: Keanu. Crucially, this would be a merger of their
+        protocols’ functions and communities, not of their companies."
       date: "2021-03-11T19:25:00.000Z"
       url: https://www.coindesk.com/keanu-explained-nucypher-keep-merger-ethereum
-    - title: Keep Network, NuCypher teams pitch protocol merger on the Ethereum blockchain
+    - title: Keep Network, NuCypher teams pitch protocol merger on the Ethereum
+        blockchain
       source: The Block
-      excerpt: Development teams for Keep Protocol and NuCypher are proposing an on-chain merger in a network first for Ethereum.
+      excerpt: Development teams for Keep Protocol and NuCypher are proposing an
+        on-chain merger in a network first for Ethereum.
       date: "2021-03-08T19:25:00.000Z"
       url: https://www.theblockcrypto.com/post/97634/keep-protocol-nucypher-ethereum-merger
     - date: "2020-09-24T19:25:00.000Z"
       title: Keep Network Launches tBTC with KEEP Liquidity Mining Plans
       source: DeFi Rate
-      excerpt: tBTC is an ERC-20 token that allows Bitcoin to be securely on Ethereum as as tBTC. Unlike WBTC, tBTC allows users to trustlessly go to and from the bridge without having to use a centralized custodian.
+      excerpt: tBTC is an ERC-20 token that allows Bitcoin to be securely on Ethereum
+        as as tBTC. Unlike WBTC, tBTC allows users to trustlessly go to and from
+        the bridge without having to use a centralized custodian.
       url: https://defirate.com/tbtc-launch/
     - date: "2020-09-30T13:00:00.000Z"
       title: Nexus Mutual Launches Shield Mining with KEEP Network tBTC
       source: DeFi Rate
-      excerpt: Nexus Mutual has announced a new staking feature called “shield mining” to incentivize smart contract cover, starting with Keep Network.
+      excerpt: Nexus Mutual has announced a new staking feature called “shield mining”
+        to incentivize smart contract cover, starting with Keep Network.
       url: https://defirate.com/nexus-mutual-shield-mining/
     - date: "2020-12-15T03:50:00.000Z"
       title: Exchange adds tBTC minting capabilities, lowering barrier to entry
       source: Cointelegraph
-      excerpt: Users can now mint tBTC, a decentralized version of Bitcoin on the Ethereum blockchain, right on the CoinList exchange.
+      excerpt: Users can now mint tBTC, a decentralized version of Bitcoin on the
+        Ethereum blockchain, right on the CoinList exchange.
       url: https://cointelegraph.com/news/exchange-adds-tbtc-minting-capabilities-lowering-barrier-to-entry
     - date: "2020-09-02T16:36:44.400Z"
       title: "Messari: $500M in BTC tokenized for DeFi is just the beginning"
       source: Cointelegraph
-      excerpt: With more than half a billion dollars worth BTC already tokenized, Messari believes that projects bringing Bitcoin to DeFi will emerge as leaders of the crypto sector.
+      excerpt: With more than half a billion dollars worth BTC already tokenized,
+        Messari believes that projects bringing Bitcoin to DeFi will emerge as
+        leaders of the crypto sector.
       url: https://cointelegraph.com/news/messari-500m-in-btc-tokenized-for-defi-is-just-the-beginning
     - date: "2020-10-12T16:38:19.751Z"
       title: "Blockchain Bites: Bitcoin on Ethereum – The Whos, Whats and Whys"
       source: CoinDesk
-      excerpt: These DeFi applications offer an increasingly large array of potential use cases for bitcoin investors looking for alternative ways to issue loans or make trades on new exchange platforms.
+      excerpt: These DeFi applications offer an increasingly large array of potential
+        use cases for bitcoin investors looking for alternative ways to issue
+        loans or make trades on new exchange platforms.
       url: https://www.coindesk.com/bitcoin-ethereum-musk-bitmex
     - date: "2020-06-26T16:00:00.000Z"
       title: Anchorage Launches Support for DeFi Token KEEP
       source: Cointelegraph
-      excerpt: Crypto custodian Anchorage has launched support for KEEP in its latest bid to emerge as a leading custodian for DeFi tokens.
+      excerpt: Crypto custodian Anchorage has launched support for KEEP in its latest
+        bid to emerge as a leading custodian for DeFi tokens.
       url: https://cointelegraph.com/news/anchorage-launches-support-for-defi-token-keep
     - date: "2020-09-22T19:25:00.000Z"
       title: Bitcoin-on-Ethereum Token tBTC Relaunches Following Buggy Debut in May
       source: Coindesk
-      excerpt:
-        A decentralized way to copy bitcoin (BTC) over to Ethereum relaunches
+      excerpt: A decentralized way to copy bitcoin (BTC) over to Ethereum relaunches
         today. Called tBTC, the Thesis-built protocol was first announced in
         April, and is now ready for a fresh start.
       url: https://www.coindesk.com/thesis-bitcoin-token-tbtc-relaunches-following-buggy-debut
     - date: "2020-09-22T13:00:00.000Z"
       title: Bitcoin-Backed Ethereum Token tBTC Launches—for the Second Time
       source: Decrypt
-      excerpt:
-        Thesis CEO Matt Luongo says the launch of tBTC is an opportunity to
+      excerpt: Thesis CEO Matt Luongo says the launch of tBTC is an opportunity to
         unite two disparate tribes, and galvanize an emerging DeFi market.
       url: https://decrypt.co/42533/bitcoin-backed-ethereum-token-tbtc-launches-for-the-second-time
     - date: "2020-07-28T03:50:00.000Z"
       url: https://www.ibtimes.com/how-millennial-finance-will-make-legacy-banking-system-irrelevant-3017842
-      excerpt:
-        Millennials are often looked to as bellwethers of contemporary society.
+      excerpt: Millennials are often looked to as bellwethers of contemporary society.
         Not since the baby boomers has a generation been so widely analyzed –
         and criticized – as a harbinger of things to come. Among this
         generation’s targets for disruption, finance looms large.
@@ -130,8 +170,7 @@ press_items_section:
     - date: "2020-04-28T16:36:44.400Z"
       url: https://unchainedpodcast.com/tbtc-what-happens-when-the-most-liquid-crypto-asset-hits-defi/
       source: Unchained Podcast
-      title:
-        "Keep CEO on Unchained Podcast – tBTC: What Happens When the Most Liquid
+      title: "Keep CEO on Unchained Podcast – tBTC: What Happens When the Most Liquid
         Crypto Asset Hits DeFi?"
       excerpt: Matt Luongo, CEO of Thesis, the parent company of Fold and Keep,
         describes the just-launched tBTC, his plan for a censorship-resistant
@@ -140,16 +179,14 @@ press_items_section:
       url: https://decrypt.co/24336/bitcoin-to-ethereum-bridge-raises-7-7-million-in-token-sale
       source: Decrypt
       title: Bitcoin to Ethereum bridge raises $7.7 Million in Token Sale
-      excerpt:
-        The Keep Protocol has raised over $7 million for its Ethereum privacy
+      excerpt: The Keep Protocol has raised over $7 million for its Ethereum privacy
         layer solution. Keep is supporting tBTC, a project to build a Bitcoin
         token on the Ethereum network.
     - date: "2020-04-02T16:00:00.000Z"
       url: https://www.bloomberg.com/news/articles/2020-04-02/bitcoin-s-ethereum-rivalry-could-be-assuaged-with-tbtc-bridge
       source: Bloomberg
       title: Bitcoin’s Ethereum Rivalry Could Be Assuaged With tBTC Bridge
-      excerpt:
-        For almost as long as there have been digital currencies, a rivalry has
+      excerpt: For almost as long as there have been digital currencies, a rivalry has
         existed between Bitcoin and Ethereum. Now, a project called tBTC is
         seeking to forge a truce between the two by allowing Bitcoin owners
         access to the financial applications that run on Ethereum.
@@ -163,13 +200,11 @@ press_items_section:
     - title: Announcing tBTC with James Prestwich and Matt Luongo of Cross-Chain Group
       date: "2019-08-21T00:00:00.000Z"
       source: Wyre Talks Podcast
-      excerpt:
-        Cross-Chain Group founders Matt Luongo and James Prestwich join Wyre
+      excerpt: Cross-Chain Group founders Matt Luongo and James Prestwich join Wyre
         hosts Louis Aboud Hogben and Tom Scaria to discuss Bitcoin for DeFi; how
         tBTC facilitates interoperability and brings Bitcoin to other chains.
       url: https://wyre-talks.simplecast.com/episodes/ep-47-announcing-tbtc-with-james-prestwich-and-matt-luongo-of-cross-chain-group-tHcZr3jW
-    - title:
-        Messari adds 11 new Disclosures Registry participants, surpassing 50
+    - title: Messari adds 11 new Disclosures Registry participants, surpassing 50
         members
       date: "2019-08-20T00:00:00.000Z"
       source: Messari
@@ -179,31 +214,27 @@ press_items_section:
     - title: These Bitcoin Users Want DAI and DeFi – Here’s How They Plan to Get It
       date: "2019-08-16T00:00:00.000Z"
       source: Coindesk
-      excerpt:
-        Leigh Cuen covers Cross-Chain Group’s first-ever Cross-Chain Summit for
+      excerpt: Leigh Cuen covers Cross-Chain Group’s first-ever Cross-Chain Summit for
         blockchain interoperability in San Francisco, highlighting the Group’s
         announcement of tBTC.
       url: https://www.coindesk.com/these-bitcoin-users-want-dai-and-defi-heres-how-they-plan-to-get-it
     - title: Episode 041 - Matt Luongo (Keep)
       date: "2019-06-17T00:00:00.000Z"
       source: Baselayer Podcast
-      excerpt:
-        David invited Keep Project Lead, Matt Luongo, to join the podcast and
+      excerpt: David invited Keep Project Lead, Matt Luongo, to join the podcast and
         discuss privacy, interoperability, and the blockchain space as a whole.
       url: https://podcasts.apple.com/us/podcast/base-layer-episode-041-matt-luongo-keep/id1445373535?i=1000441792480
     - title: Keep developers present network component libp2p to IPFS
       date: "2019-05-06T00:00:00.000Z"
       source: IPFS Youtube Channel
-      excerpt:
-        Piotr Dyraga and Raghav Gulati gave a presentation at an IPFS Weekly
+      excerpt: Piotr Dyraga and Raghav Gulati gave a presentation at an IPFS Weekly
         Call + Contributor Office Hours on one of the important components of
         Keep — libp2p.
       url: https://www.youtube.com/watch?v=EamY2U2Ohyk
     - title: Corbin Pon interviewed by Underscore VC Co-Founder
       date: "2019-04-23T00:00:00.000Z"
       source: Underscore VC Youtube Channel
-      excerpt:
-        Discussing the future of blockchain, Corbin Pon and Richard Dulude
+      excerpt: Discussing the future of blockchain, Corbin Pon and Richard Dulude
         covered the possibilities that Keep enables for public blockchains,
         different levels of privacy and security, hopes and plans for a safer
         financial world with ownership certainty, and the top things hindering

@@ -30,6 +30,17 @@ stake_options:
   title: Staking options
   body: "Get the most out of your KEEP tokens with the following options:"
   cards:
+    - title: Stake KEEP on Threshold
+      body: You can upgrade your KEEP to T using the Threshold dashboard. You can also
+        stake your existing KEEP stake on Threshold.
+      buttons:
+        - label: Stake Keep on T
+          url: https://dashboard.threshold.network/upgrade/keep
+        - label: Learn More
+          url: https://blog.threshold.network/keep-legacy-stake-upgrade/
+      icon:
+        image: /images/staking-on-threshold.png
+        alt: stake keep on threshold
     - title: Liquidity Pools
       body: Provide liquidity to one of our liquidity pools to start earning rewards.
       buttons:
@@ -50,16 +61,6 @@ stake_options:
       icon:
         image: /images/coverage-pool.svg
         alt: Liquidity Pools
-    - title: Stake KEEP on Threshold
-      body: Stake your KEEP on Threshold Network and earn rewards.
-      buttons:
-        - label: Stake Keep on T
-          url: https://dashboard.keep.network
-        - label: Learn More
-          url: https://blog.threshold.network/keep-legacy-stake-upgrade/
-      icon:
-        image: /images/staking-on-threshold.png
-        alt: stake keep on threshold
 recommended:
   title: Staking providers
   body: If you’re new to staking, we recommend working with one of our staking

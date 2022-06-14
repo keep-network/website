@@ -3,12 +3,12 @@ template: team-page
 path: /team
 title: Team
 hero:
-  name: Matt Luongo
-  title: Thesis Founder, CEO
-  body: Matt Luongo is a serial entrepreneur who joined the cryptocurrency space
-    in 2014. He is the CEO of [Thesis](https://thesis.co/), the crypto venture
-    production studio behind Keep.
-  image: /images/matt-bw.png
+  name: Keep
+  title: Buidling Bridges
+  body: Below you'll find the crew building tBTCv2, the first decentralized bridge
+    from Bitcoin to Ethereum. The Keep team is an active contributor to
+    Threshold.
+  image: /images/keep.png
 team_section:
   title: Keep Team
   hp:
@@ -22,9 +22,6 @@ team_section:
     - name: Beau Shinkle
       title: Backend Engineer
       image: /images/beau-bw.png
-    - name: Chris Battenfield
-      title: Front-end Engineering Lead
-      image: /images/chris-bw.png
     - name: Dmitry Paremski
       title: Engineer
       image: /images/dmitry-bw.png

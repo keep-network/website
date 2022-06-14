@@ -5,10 +5,10 @@ title: Team
 hero:
   name: " "
   title: Buidling Bridges
-  body: Below you'll find the crew building tBTCv2 on Threshold, the first
+  body: Below you'll find the folks building tBTCv2 on Threshold, the first
     decentralized bridge from Bitcoin to Ethereum. The Keep team is an active
     contributor to Threshold.
-  image: /images/keep.png
+  image: /images/keep-image.png
 team_section:
   title: Keep Team
   hp:

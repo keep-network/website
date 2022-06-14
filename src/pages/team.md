@@ -3,11 +3,11 @@ template: team-page
 path: /team
 title: Team
 hero:
-  name: Keep
+  name: " "
   title: Buidling Bridges
-  body: Below you'll find the crew building tBTCv2, the first decentralized bridge
-    from Bitcoin to Ethereum. The Keep team is an active contributor to
-    Threshold.
+  body: Below you'll find the crew building tBTCv2 on Threshold, the first
+    decentralized bridge from Bitcoin to Ethereum. The Keep team is an active
+    contributor to Threshold.
   image: /images/keep.png
 team_section:
   title: Keep Team

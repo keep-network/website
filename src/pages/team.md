@@ -63,7 +63,7 @@ team_section:
       image: /images/will-bw.png
     - name: Hagan Dietz
       title: Growth Lead
-      image: /images/hagan-dietz.jpg
+      image: /images/hagan-dietz.png
 advisors_section:
   title: Advisors
   advisors:

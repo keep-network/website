@@ -28,7 +28,7 @@ nav_categories:
       - label: Join
         url: /join
       - label: Discord
-        url: https://discordapp.com/invite/wYezN7v
+        url: https://discord.gg/Threshold
       - label: GitHub
         url: https://github.com/keep-network/
       - label: Governance

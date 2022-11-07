@@ -105,5 +105,5 @@ contact:
         alt: Join the community
       link:
         name: Join Discord
-        url: https://discordapp.com/invite/wYezN7v
+        url: https://discord.gg/Threshold
 ---

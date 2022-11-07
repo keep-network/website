@@ -153,7 +153,7 @@ export const HeaderTemplate = ({
             <ul className="external_btn">
               <li className="nav-item">
                 <Link
-                  url="https://discordapp.com/invite/wYezN7v"
+                  url="https://discord.gg/Threshold"
                   target="_blank"
                   className="discord"
                   rel="noopener noreferrer"

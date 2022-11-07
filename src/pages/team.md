@@ -8,7 +8,7 @@ hero:
   body: Below you'll find the folks building tBTCv2 on Threshold, the first
     decentralized bridge from Bitcoin to Ethereum. Threshold Network is the
     network merger between Keep and NuCypher.
-  image: ""
+  image: /images/tbtc-v2.png
 team_section:
   title: Keep Team
   hp:
@@ -63,6 +63,7 @@ team_section:
       image: /images/will-bw.png
     - name: Hagan Dietz
       title: Growth Lead
+      image: /images/hagan-dietz.png
 advisors_section:
   title: Advisors
   advisors:

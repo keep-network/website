@@ -28,6 +28,9 @@ team_section:
     - name: George Weiler
       title: Engineer
       image: /images/george.png
+    - name: Hagan Dietz
+      title: Growth Lead
+      image: /images/hagan-dietz.png
     - name: Jakub Nowakowski
       title: Engineer
       image: /images/kuba-bw.png
@@ -61,9 +64,10 @@ team_section:
     - name: Will Rhodes
       title: Community Manager Lead
       image: /images/will-bw.png
-    - name: Hagan Dietz
-      title: Growth Lead
-      image: /images/hagan-dietz.png
+    - name: Brian Mahoney
+      title: Business Development Lead
+    - name: Eugene Wong
+      title: Social Media Manager
 advisors_section:
   title: Advisors
   advisors:

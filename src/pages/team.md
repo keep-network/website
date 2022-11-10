@@ -22,9 +22,15 @@ team_section:
     - name: Beau Shinkle
       title: Backend Engineer
       image: /images/beau-bw.png
+    - name: Brian Mahoney
+      title: Business Development Lead
+      image: /images/brianmahoney.png
     - name: Dmitry Paremski
       title: Engineer
       image: /images/dmitry-bw.png
+    - name: Eugene Wong
+      title: Social Media Manager
+      image: /images/eugenewong.png
     - name: George Weiler
       title: Engineer
       image: /images/george.png
@@ -64,10 +70,6 @@ team_section:
     - name: Will Rhodes
       title: Community Manager Lead
       image: /images/will-bw.png
-    - name: Brian Mahoney
-      title: Business Development Lead
-    - name: Eugene Wong
-      title: Social Media Manager
 advisors_section:
   title: Advisors
   advisors:

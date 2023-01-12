@@ -57,12 +57,12 @@ contact:
         name: Read Blog
         url: https://blog.keep.network/
     - title: Join the community
-      body: Connect with the Discord community, ask questions, and get in on the
-        ground level for the future of DeFi.
+      body: The Keep community is now in Threshold! Join our community there for the
+        future of DeFi.
       icon:
         image: /images/svg/contact-icon-2.svg
         alt: Join the community
       link:
         name: Join Discord
-        url: https://discord.com/invite/wYezN7v
+        url: https://discord.gg/Threshold
 ---

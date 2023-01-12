@@ -12,7 +12,7 @@ hero:
 team_section:
   title: Keep Team
   hp:
-    name: Doug von Kohorn
+    name: Matt Luongo
     title: H﻿ead of Project
     body: M﻿att is the CEO of Thesis and the project lead for Keep. Keep is included
       in the portfolio of Thesis, a crypto venture studio.

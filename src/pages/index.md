@@ -3,18 +3,16 @@ template: home-page
 path: /
 hero:
   title: Stake on Ethereum’s first private computer and earn up to
-  body: Staking with Keep is the best way to back a truly decentralized network
-    and the future of DeFi.
+  body: The Keep team are the builders of tBTC, the first truly decentralized
+    bridge between Ethereum and Bitcoin.
   bg_video: images/home/keep-castle-clouds.mp4
   bg_image: /images/hero-bg.jpg
   cta_buttons:
-    - label: Start Staking
+    - label: About tBTC
+      url: https://threshold.network/earn/btc
+    - label: Legacy Keep Dashboard
       url: https://dashboard.keep.network/
-    - label: Join Community
-      url: /join
-  tickers:
-    - label: 14% APY · KEEP POOL
-    - label: 79.3% APY · TBTC/SADDLE POOL
+  tickers: []
 carousel:
   - title: Privacy-focused infrastructure for the public blockchain.
     body: The Keep network allows private data to be used on public protocols
@@ -72,34 +70,6 @@ minilogo_grid:
       image: /images/logos/decrypt.png
       alt: Decrypt
       url: https://decrypt.co/
-governance_forum:
-  title: Governance Forum
-  body: Read the latest community proposals and cast your vote
-  cards:
-  - title: "Proposal: Keep and NuCypher Hard Merge"
-    date: "2021-03-08T19:25:00.000Z"
-    button:
-      label: Vote now
-      url: "https://forum.keep.network/t/proposal-keep-and-nucypher-hard-merge/74"
-    icon:
-      image: /images/svg/ic-document.svg
-      alt: image
-  - title: T6 Token Proposal
-    date: "2021-05-11T19:25:00.000Z"
-    button:
-      label: Vote now
-      url: "https://forum.keep.network/t/t6-token-proposal/238"
-    icon:
-      image: /images/svg/ic-document.svg
-      alt: image
-  - title: "Proposal: Migrate the KEEP/ETH Pool 2 from Uniswap to Sushiswap"
-    date: "2021-06-05T19:25:00.000Z"
-    button:
-      label: Vote now
-      url: "https://forum.keep.network/t/proposal-migrate-the-keep-eth-pool-2-from-uniswap-to-sushiswap/280"
-    icon:
-      image: /images/svg/ic-document.svg
-      alt: image
 blogs:
   title: Featured Coverage
   cards:
@@ -135,6 +105,57 @@ blogs:
         image: /images/blog/the-block.png
         alt: The Block
       url: https://www.theblockcrypto.com/post/97634/keep-protocol-nucypher-ethereum-merger
+contact:
+  title: Keep in touch
+  header: Get the Keep Newsletter
+  description: Sign up for our newsletter and never miss an update.
+  cards:
+    - title: Read the Keep blog
+      body: Get the latest updates on the blog. Read about the Keep network, tBTC,
+        partnerships, and more.
+      icon:
+        image: /images/svg/contact-icon-1.svg
+        alt: Read the Keep blog
+      link:
+        name: Read Blog
+        url: https://blog.keep.network/
+    - title: Join the community
+      body: Connect with the Discord community, ask questions, and get in on the
+        ground level for the future of DeFi.
+      icon:
+        image: /images/svg/contact-icon-2.svg
+        alt: Join the community
+      link:
+        name: Join Discord
+        url: https://discord.gg/Threshold
+governance_forum:
+  title: Governance Forum
+  body: Read the latest community proposals and cast your vote
+  cards:
+    - title: "Proposal: Keep and NuCypher Hard Merge"
+      date: "2021-03-08T19:25:00.000Z"
+      button:
+        label: Vote now
+        url: https://forum.keep.network/t/proposal-keep-and-nucypher-hard-merge/74
+      icon:
+        image: /images/svg/ic-document.svg
+        alt: image
+    - title: T6 Token Proposal
+      date: "2021-05-11T19:25:00.000Z"
+      button:
+        label: Vote now
+        url: https://forum.keep.network/t/t6-token-proposal/238
+      icon:
+        image: /images/svg/ic-document.svg
+        alt: image
+    - title: "Proposal: Migrate the KEEP/ETH Pool 2 from Uniswap to Sushiswap"
+      date: "2021-06-05T19:25:00.000Z"
+      button:
+        label: Vote now
+        url: https://forum.keep.network/t/proposal-migrate-the-keep-eth-pool-2-from-uniswap-to-sushiswap/280
+      icon:
+        image: /images/svg/ic-document.svg
+        alt: image
 exchanges:
   title: Keep is listed on the following exchanges
   links:
@@ -153,6 +174,7 @@ exchanges:
         image: /images/svg/kraken.svg
         alt: Kraken
       url: https://www.kraken.com/
+title: Home
 logo_wall:
   title: Keep is backed by the best VCs in the world.
   supporters:
@@ -191,28 +213,4 @@ logo_wall:
         alt: Fabric Ventures Logo
         image: /images/logos/fabricVenturesLogo.png
       url: https://www.fabric.vc/
-contact:
-  title: Keep in touch
-  header: Get the Keep Newsletter
-  description: Sign up for our newsletter and never miss an update.
-  cards:
-    - title: Read the Keep blog
-      body: Get the latest updates on the blog. Read about the Keep network, tBTC,
-        partnerships, and more.
-      icon:
-        image: /images/svg/contact-icon-1.svg
-        alt: Read the Keep blog
-      link:
-        name: Read Blog
-        url: https://blog.keep.network/
-    - title: Join the community
-      body: Connect with the Discord community, ask questions, and get in on the
-        ground level for the future of DeFi.
-      icon:
-        image: /images/svg/contact-icon-2.svg
-        alt: Join the community
-      link:
-        name: Join Discord
-        url: https://discord.gg/Threshold
-title: Home
 ---

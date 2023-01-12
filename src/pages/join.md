@@ -1,17 +1,15 @@
 ---
 template: join-page
 path: /join
-title: Join
 hero:
   title: Join
-  body: Join our passionate community. Browse our library of resources and
-    community-built tools below.
+  body: Our passionate community has merged with Threshold. Join us!
   image: /images/build.png
   cta_buttons:
     - label: Join Our Discord
-      url: https://discord.com/invite/wYezN7v
+      url: https://discord.gg/Threshold
 library:
-  title: Keep resources
+  title: Resources
   body: Learn more about building, designing, and staking on the Keep network.
   cards:
     - title: User Docs
@@ -71,7 +69,7 @@ governance_forum:
       date: "2021-03-08T19:25:00.000Z"
       button:
         label: Vote now
-        url: "https://forum.keep.network/t/proposal-keep-and-nucypher-hard-merge/74"
+        url: https://forum.keep.network/t/proposal-keep-and-nucypher-hard-merge/74
       icon:
         image: /images/svg/ic-document.svg
         alt: image
@@ -79,7 +77,7 @@ governance_forum:
       date: "2021-05-11T19:25:00.000Z"
       button:
         label: Vote now
-        url: "https://forum.keep.network/t/t6-token-proposal/238"
+        url: https://forum.keep.network/t/t6-token-proposal/238
       icon:
         image: /images/svg/ic-document.svg
         alt: image
@@ -87,7 +85,7 @@ governance_forum:
       date: "2021-06-05T19:25:00.000Z"
       button:
         label: Vote now
-        url: "https://forum.keep.network/t/proposal-migrate-the-keep-eth-pool-2-from-uniswap-to-sushiswap/280"
+        url: https://forum.keep.network/t/proposal-migrate-the-keep-eth-pool-2-from-uniswap-to-sushiswap/280
       icon:
         image: /images/svg/ic-document.svg
         alt: image
@@ -125,8 +123,7 @@ contact:
   description: Sign up for our newsletter and never miss an update.
   cards:
     - title: Read the Keep blog
-      body:
-        Get the latest updates on the blog. Read about the Keep network, tBTC,
+      body: Get the latest updates on the blog. Read about the Keep network, tBTC,
         partnerships, and more.
       icon:
         image: /images/svg/contact-icon-1.svg
@@ -135,12 +132,13 @@ contact:
         name: Read Blog
         url: https://blog.keep.network/
     - title: Join the community
-      body: Connect with the Discord community, ask questions, and get in on the
-        ground level for the future of DeFi.
+      body: The Keep community is now in Threshold! Join our community there for the
+        future of DeFi.
       icon:
         image: /images/svg/contact-icon-2.svg
         alt: Join the community
       link:
         name: Join Discord
-        url: https://discord.com/invite/wYezN7v
+        url: https://discord.gg/Threshold
+title: Join
 ---

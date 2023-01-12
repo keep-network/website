@@ -16,7 +16,7 @@ feature:
     Bitcoin to Ethereum in a secure and trustless way to participate in
     DeFi.</p>
 solution:
-  title: The Keep solution
+  title: About
   body: ""
   cards:
     - title: Decentralized
@@ -37,8 +37,8 @@ solution:
         image: /images/svg/ic-private.svg
         alt: Private
 tbtc_showcase:
-  title: Built on Keep
-  body: tBTCv2 allows you to bridge your Bitcoin to Ethereum in a secure and
+  title: Built by Keep
+  body: tBTC allows you to bridge your Bitcoin to Ethereum in a secure and
     trustless way to participate in DeFi.
   button:
     label: Learn More

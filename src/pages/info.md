@@ -3,8 +3,8 @@ template: info-page
 path: /info
 hero:
   title: Info
-  body: Keep is the privacy-focused infrastructure behind tBTCv2, the only truly
-    decentralized solution for Bitcoin on Ethereum.
+  body: The Keep team builds tBTC and contributes to Threshold, the network merger
+    between Keep and NuCypher.
   image: /images/features/lock.png
 feature:
   title: The Keep and NuCypher networks merged to form the Threshold network.
@@ -98,8 +98,8 @@ contact:
         name: Read Blog
         url: https://blog.keep.network/
     - title: Join the community
-      body: Connect with the Discord community, ask questions, and get in on the
-        ground level for the future of DeFi.
+      body: The Keep community is now in Threshold! Join our community there for the
+        future of DeFi.
       icon:
         image: /images/svg/contact-icon-2.svg
         alt: Join the community

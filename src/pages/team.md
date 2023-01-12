@@ -13,11 +13,10 @@ team_section:
   title: Keep Team
   hp:
     name: Doug von Kohorn
-    title: Head of Product
-    body: Doug has been an entrepreneur and operator for over a decade, and most
-      recently served as CEO of the ConsenSys oracle company, Rhombus, which was
-      subsequently acquired.
-    image: /images/doug-bw.png
+    title: H﻿ead of Project
+    body: M﻿att is the CEO of Thesis and the project lead for Keep. Keep is included
+      in the portfolio of Thesis, a crypto venture studio.
+    image: /images/matt-bw.png
   team:
     - name: Beau Shinkle
       title: Backend Engineer

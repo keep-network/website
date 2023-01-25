@@ -3,7 +3,7 @@ template: header-nav
 nav_items:
   - label: Join
     url: /join
-  - label: Stake
+  - label: Mint tBTC
     url: /stake
   - label: Faq
     url: /faq

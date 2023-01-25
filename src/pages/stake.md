@@ -2,11 +2,12 @@
 template: stake-page
 path: /stake
 hero:
-  title: Stake
-  body: Get started staking on the Keep network.
+  title: Mint tBTC
+  body: Mint tBTC and use the first decentralized bridge between Bitcoin and
+    Ethereum.
   cta_buttons:
-    - label: Launch Dashboard
-      url: https://dashboard.keep.network/
+    - label: Mint tBTC
+      url: https://threshold.network/earn/btc
 why:
   title: Why stake with Keep?
   cards:

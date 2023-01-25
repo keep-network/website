@@ -27,7 +27,7 @@ why:
         image: /images/feature-tbtc1.svg
         alt: User Friendly
 stake_options:
-  title: Staking options
+  title: KEEP Staking
   body: "Get the most out of your KEEP tokens with the following options:"
   cards:
     - title: Stake KEEP on Threshold

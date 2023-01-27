@@ -41,7 +41,11 @@ jobs:
     # A push event is a master merge; deploy to primary bucket.
     - if: github.event_name == 'push'
       name: Deploy Master to GCP
-      uses: thesis/gcp-storage-bucket-action@v3.1.0
+      # Temporarily we run the action in version from `alpine-version-413.0.0`
+      # branch, which contains a fix for the issue introduced in the `414.0.0`
+      # version of the `cloud-sdk` (`rsync` fails for users with no
+      # `storage.buckets.get` permission).
+      uses: thesis/gcp-storage-bucket-action@alpine-version-413.0.0 
       with:
         service-key: ${{ secrets.KEEP_NETWORK_UPLOADER_SERVICE_KEY_JSON }}
         project: keep-prod-274401
@@ -50,7 +54,11 @@ jobs:
     # A pull_request event is a PR; deploy to preview bucket.
     - if: github.event_name == 'pull_request'
       name: Deploy PR to GCP
-      uses: thesis/gcp-storage-bucket-action@v3.1.0
+      # Temporarily we run the action in version from `alpine-version-413.0.0`
+      # branch, which contains a fix for the issue introduced in the `414.0.0`
+      # version of the `cloud-sdk` (`rsync` fails for users with no
+      # `storage.buckets.get` permission).
+      uses: thesis/gcp-storage-bucket-action@alpine-version-413.0.0 
       with:
         service-key: ${{ secrets.KEEP_NETWORK_UPLOADER_SERVICE_KEY_JSON }}
         project: keep-prod-274401

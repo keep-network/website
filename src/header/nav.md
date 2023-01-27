@@ -5,6 +5,8 @@ nav_items:
     url: /join
   - label: Mint tBTC
     url: https://threshold.network/earn/btc
+  - label: Stake
+    url: /stake
   - label: Faq
     url: /faq
   - label: News

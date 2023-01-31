@@ -3,7 +3,7 @@ template: header-nav
 nav_items:
   - label: Join
     url: /join
-  - label: Mint tBTC
+  - label: tBTC
     url: https://threshold.network/earn/btc
   - label: Stake
     url: /stake

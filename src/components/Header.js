@@ -169,7 +169,7 @@ export const HeaderTemplate = ({
               </li>
               <li className="nav-item">
                 <Link
-                  url="https://threshold.network/earn/btc/"
+                  url="https://dashboard.threshold.network/tBTC"
                   className="btn btn-primary btn-small nav-item"
                   rel="noopener noreferrer"
                 >

@@ -2,32 +2,32 @@
 template: stake-page
 path: /stake
 hero:
-  title: Stake
-  body: Get started staking on the Keep network.
+  title: Mint tBTC
+  body: Mint tBTC and use the first decentralized bridge between Bitcoin and
+    Ethereum.
   cta_buttons:
-    - label: Launch Dashboard
-      url: https://dashboard.keep.network/
+    - label: Mint tBTC
+      url: https://threshold.network/earn/btc
 why:
-  title: Why stake with Keep?
+  title: Why mint tBTC?
   cards:
     - title: Decentralized
-      body: Run a node on the Keep network and participate in a secure and
-        decentralized network.
+      body: tBTC is the first truly decentralized bridge between Bitcoin and Ethereum.
       icon:
         image: /images/decentralize.svg
         alt: Decentralized
     - title: Permissionless
-      body: Anyone with KEEP tokens can stake and secure the network.
+      body: Anyone can use their BTC tokens to mint tBTC.
       icon:
-        image: /images/svg/ic-permissionless.svg
+        image: /images/feature-tbtc1.svg
         alt: Permissionless
     - title: User Friendly
-      body: Stake your tokens and track rewards using the staking dashboard
+      body: Mint tBTC using the dashboard!
       icon:
-        image: /images/svg/ic-user-friendly.svg
+        image: /images/feature-tbtc1.svg
         alt: User Friendly
 stake_options:
-  title: Staking options
+  title: KEEP Staking
   body: "Get the most out of your KEEP tokens with the following options:"
   cards:
     - title: Stake KEEP on Threshold

@@ -169,11 +169,11 @@ export const HeaderTemplate = ({
               </li>
               <li className="nav-item">
                 <Link
-                  url="https://dashboard.keep.network/"
+                  url="https://dashboard.threshold.network/tBTC"
                   className="btn btn-primary btn-small nav-item"
                   rel="noopener noreferrer"
                 >
-                  Launch
+                  Mint <span style={{ textTransform: "lowercase" }}>t</span>BTC
                 </Link>
               </li>
             </ul>

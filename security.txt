@@ -1,21 +1,28 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA256
 
-Contact: mailto:security@keep.network
-Encryption: https://keybase.io/shadowfiend/pgp_keys.asc
-Encryption: https://keybase.io/mhluongo/pgp_keys.asc
+Contact: mailto:security@threshold.network
 Encryption: https://keybase.io/piotrd/pgp_keys.asc
-Acknowledgments: https://keep.network/disclosed-vulnerabilities
+Encryption: https://keybase.io/mhluongo/pgp_keys.asc
+Encryption: https://keybase.io/shadowfiend/pgp_keys.asc
+Acknowledgments: https://threshold.network/disclosed-vulnerabilities
 Preferred-Languages: en, es, fr
-Canonical: https://keep.network/.well-known/security.txt
-Policy: https://github.com/keep-network/keep-core/tree/master/SECURITY.adoc
+Canonical: https://threshold.network/.well-known/security.txt
+Policy: https://github.com/threshold-network/solidity-contracts/blob/main/SECURITY.md
 -----BEGIN PGP SIGNATURE-----
 
-wsBcBAEBCAAQBQJf+JEvCRCv8ib0prZHlwAAt4AIAImIEKpyGLPOlvXY02EvD3Wo
-WvPFhkn+TfCA5pjii3zNa23RBS7aOC9IIE86zOSUHe/SxdLlFIXRWvPEyFDQ7u1P
-lRsi388Tl7cOAyhsRKwGTD865BXT5VRfFa1Pbuk9f87NS1846zCyOqMf7gip/3cA
-ruoDVLAeZGaMlazWUFXt5PaW+MC86CKW7nGrml/RKkun3XfaNi4UnDckTEJWbZeQ
-W4LMps5m9ma56w3E42pWinbr8SwdtYLmgeE4LeChErdZ9KUdVJSQ2wYEa6LDTNw6
-4qVvHKeajzTf7Be9SZF88P8OSx42zn/KlYlnO1yJFXAE6z9KqhEJCy2PFtKTLGo=
-=1aIf
+iQJLBAEBCAA1FiEEQBSA2QvssUfz8XMPFK15HSiavIcFAmPdF94XHHBpb3RyLmR5
+cmFnYUB0aGVzaXMuY28ACgkQFK15HSiavIc4Ww//VYGNJJBbRdlyJA7CdNi2WLE0
+V1d9veA2LvwVUdcoSy8oCsiLskF51VPH2blI/jAzWwfhyQDfJ/gV6hJ3I6+bLSpt
+NZ0R2lKtdopN/ycTcfqJ6h6CoUu/7wBza4x8+k5ENeWzim8kYgb7GOaJXfIAnIRF
+1nlBYlxY5wHBlSx7OxpzCSKxF39wcYbsQQNb77C5lBtLSvdiTmVKV03UZxPnQX44
+M9QpieJr+Ae2MLo9h1kR4Mo6gkrlnHaK3qgDicqGnLVsonbXfOqBHzK8UOUgf9XI
+o/PdyGioDmIS0Ywo/R6c4BwPkK3e1iNv6P1+KzQO0ZZ4MeiTXyKSG+FoPEgE3Pai
+UHuF9lKlPo6LjUH6ayk388naaMQOc5gbqMHXez0xtd/Vn3t8/DWsZQx7tRxMZr8p
+HfTkTQtONFw3SQMFlKldknfEthUWFqZpevnO2rMeDvn8Bv/K86BqCleAVlOCyoNy
+k2TK68s2T415Mwo80RbiTYMdPybRPMAMufDxAvnMovEsicwKekk2h9JW0lfoO4Ue
+5mQK9CdRzixzMByrmd6IDcRS7eZRvWbruyfNVlHAUkUWnXCPmIFpxejADsL+D9lC
+GQHN7cGY9+ku7ZSKJD1wVjd64VqyUaKslgJzkXcr0xPhluMNEly3WAwcG1hsKGjN
+3E9QWaVzbZSVMWcJxW0=
+=f38p
 -----END PGP SIGNATURE-----

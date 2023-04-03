@@ -2,10 +2,9 @@
 template: home-page
 path: /
 hero:
-  title: Stake on Ethereum’s first private computer and earn up to
+  title: "Empower your Bitcoin: Unleash the potential for portfolio growth!"
   body: >
-    The Keep team are the builders of tBTC, the first truly decentralized bridge
-    between Ethereum and Bitcoin.
+    Say goodbye to middlemen and embrace the future of secure, decentralized finance.
   bg_video: images/home/keep-castle-clouds.mp4
   bg_image: /images/hero-bg.jpg
   cta_buttons:

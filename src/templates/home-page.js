@@ -45,7 +45,7 @@ export const HomePageTemplate = ({
           <video autoPlay muted loop>
             <source src={hero.bg_video} type="video/mp4" />
           </video>
-          <div className="home-video-bg-overlay" />
+          <div className="home-video-bg-overlay" data-aos="fade-in" />
         </div>
         <Row>
           <Col>

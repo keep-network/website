@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo } from "react"
+import React, { useEffect } from "react"
 import { connect } from "react-redux"
 import { Col, Row } from "reactstrap"
 import PropTypes from "prop-types"
@@ -12,7 +12,6 @@ import {
   ImageLink,
   Link,
   PageSection,
-  Ticker,
   SummaryGrid,
   MiniLogoWall,
   KeepBlog,
@@ -20,11 +19,7 @@ import {
 } from "../components"
 import { sections } from "../constants"
 import { actions } from "../redux"
-// import useLiquidityRewardsAPY from "../hooks/useLiquidityRewardsAPY"
-import LoadingBlocks from "../components/LoadingBlocks"
-import SlideInAnimation from "../components/SlideInAnimation"
 import GovernanceForum from "../components/GovernanceForum"
-import useCoveragePoolsAPY from "../hooks/useCoveragePoolsAPY"
 
 export const HomePageTemplate = ({
   hero = {},
@@ -43,34 +38,6 @@ export const HomePageTemplate = ({
     Aos.init({ once: true })
   }, [])
 
-  // const [
-  //   liquidityRewardsAPYs,
-  //   areLiquidityRewardsAPYsFetching,
-  // ] = useLiquidityRewardsAPY()
-
-  const [coveragePoolAPY, isCoveragePoolAPYFetching] = useCoveragePoolsAPY()
-
-  const isFetching = useMemo(() => {
-    return isCoveragePoolAPYFetching
-  }, [isCoveragePoolAPYFetching])
-
-  const APYs = useMemo(() => {
-    if (isFetching) return []
-    return [...coveragePoolAPY].sort((a, b) => b.value - a.value)
-  }, [isFetching, coveragePoolAPY])
-
-  const renderHighestAPY = () => {
-    if (APYs.length === 0) {
-      return <LoadingBlocks numberOfBlocks={3} animationDurationInSec={1} />
-    }
-
-    return (
-      <SlideInAnimation durationInSec={1}>
-        {Math.floor(APYs[0].value).toString()}
-      </SlideInAnimation>
-    )
-  }
-
   return (
     <div className="main-content">
       <PageSection id={sections.home.HOME}>
@@ -78,15 +45,12 @@ export const HomePageTemplate = ({
           <video autoPlay muted loop>
             <source src={hero.bg_video} type="video/mp4" />
           </video>
-          <div className="home-video-bg-overlay" />
+          <div className="home-video-bg-overlay" data-aos="fade-in" />
         </div>
         <Row>
-          <Col xs={12} lg={10} md={10}>
-            <h1>
-              <span>{`${hero.title} `}</span>
-              {renderHighestAPY()}
-              <span>{`% APY.`}</span>
-            </h1>
+          <Col>
+            <h1>{hero.title}</h1>
+            {hero.subtitle && <h2>{hero.subtitle}</h2>}
             <h4 className="body">{hero.body}</h4>
           </Col>
         </Row>
@@ -104,13 +68,6 @@ export const HomePageTemplate = ({
             ))}
           </ul>
         </Row>
-        {!isFetching && (
-          <Ticker
-            items={APYs.map((_) => ({
-              label: `${_.value}% APY · ${_.pool} POOL`,
-            }))}
-          />
-        )}
       </PageSection>
       <PageSection
         id={sections.home.KEEP_SOLUTION}
@@ -372,14 +329,12 @@ export const query = graphql`
       frontmatter {
         hero {
           title
+          subtitle
           body
           bg_video
           cta_buttons {
             label
             url
-          }
-          tickers {
-            label
           }
         }
         carousel {

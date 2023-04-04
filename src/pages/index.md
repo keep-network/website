@@ -2,10 +2,10 @@
 template: home-page
 path: /
 hero:
-  title: Stake on Ethereum’s first private computer and earn up to
+  title: tBTC unlocks Bitcoin on DeFi.
+  subtitle: Put your Bitcoin to work, without CeFi.
   body: >
-    The Keep team are the builders of tBTC, the first truly decentralized bridge
-    between Ethereum and Bitcoin.
+    tBTC is the first decentralized Bitcoin to Ethereum bridge. tBTC is built on top of the Threshold Network, a merger of Keep Network and NuCypher.
   bg_video: images/home/keep-castle-clouds.mp4
   bg_image: /images/hero-bg.jpg
   cta_buttons:
@@ -13,9 +13,6 @@ hero:
       url: https://threshold.network/earn/btc
     - label: Legacy Keep Dashboard
       url: https://dashboard.keep.network/
-  tickers:
-    - label: 14% APY · KEEP POOL
-    - label: 79.3% APY · TBTC/SADDLE POOL
 carousel:
   - title: Privacy-focused infrastructure for the public blockchain.
     body: The Keep network allows private data to be used on public protocols

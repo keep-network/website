@@ -62,9 +62,17 @@
       margin-top: 52px;
     }
 
+    h2 {
+      margin-top: 16px;
+      color: $grey-70;
+      font-weight: 600;
+      font-size: 32px;
+      line-height: 38px;
+    }
+
     .body {
       color: $grey-70;
-      margin-top: 16px;
+      margin-top: 80px;
     }
 
     .cta-section {
@@ -79,29 +87,6 @@
       }
     }
 
-    .ticker {
-      background-color: $mint-30;
-      position: absolute !important;
-      left: 0;
-      bottom: 0;
-      right: 0;
-
-      &-container {
-        height: 81px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
-      &-content {
-        @extend .h5;
-        padding: 20px 10px;
-        margin: 0 40px;
-        text-transform: uppercase;
-        white-space: nowrap;
-      }
-    }
-
     @media (min-width: #{$bp-medium}) {
       min-height: 1000px;
       &-video-bg {
@@ -112,9 +97,17 @@
         margin-top: 87px;
       }
 
+      h2 {
+        color: $grey-70;
+        font-size: 48px;
+        line-height: 52px;
+      }
+
       .body {
-        max-width: 480px;
-        margin: 35px 0 10px;
+        max-width: 850px;
+        margin-bottom: 10px;
+        margin-left: 0;
+        margin-right: 0;
       }
 
       .cta-section {
@@ -130,20 +123,11 @@
           }
         }
       }
-
-      .ticker-content {
-        margin: 0 140px;
-      }
     }
 
     @media (min-width: #{$bp-large}) {
       h1 {
         margin-top: 117px;
-      }
-
-      .body {
-        max-width: 480px;
-        margin: 65px 0 10px;
       }
     }
 

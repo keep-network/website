@@ -40,6 +40,13 @@ collections:
                   minimal: true,
                 }
               - {
+                  label: "Subtitle",
+                  name: "subtitle",
+                  widget: "string",
+                  minimal: true,
+                  required: false,
+                }
+              - {
                   label: "Body",
                   name: "body",
                   widget: "markdown",
@@ -66,14 +73,6 @@ collections:
                       { label: Label, name: label, widget: string },
                       { label: URL, name: url, widget: string },
                     ],
-                }
-              - {
-                  label: "Tickers",
-                  name: "tickers",
-                  widget: "list",
-                  allow_add: true,
-                  required: false,
-                  fields: [{ label: Label, name: label, widget: string }],
                 }
           - label: "Feature Carousel"
             name: "carousel"

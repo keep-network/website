@@ -87,29 +87,6 @@
       }
     }
 
-    .ticker {
-      background-color: $mint-30;
-      position: absolute !important;
-      left: 0;
-      bottom: 0;
-      right: 0;
-
-      &-container {
-        height: 81px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
-      &-content {
-        @extend .h5;
-        padding: 20px 10px;
-        margin: 0 40px;
-        text-transform: uppercase;
-        white-space: nowrap;
-      }
-    }
-
     @media (min-width: #{$bp-medium}) {
       min-height: 1000px;
       &-video-bg {
@@ -145,10 +122,6 @@
             }
           }
         }
-      }
-
-      .ticker-content {
-        margin: 0 140px;
       }
     }
 

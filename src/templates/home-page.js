@@ -336,9 +336,6 @@ export const query = graphql`
             label
             url
           }
-          tickers {
-            label
-          }
         }
         carousel {
           title

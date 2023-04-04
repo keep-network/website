@@ -13,9 +13,6 @@ hero:
       url: https://threshold.network/earn/btc
     - label: Legacy Keep Dashboard
       url: https://dashboard.keep.network/
-  tickers:
-    - label: 14% APY · KEEP POOL
-    - label: 79.3% APY · TBTC/SADDLE POOL
 carousel:
   - title: Privacy-focused infrastructure for the public blockchain.
     body: The Keep network allows private data to be used on public protocols

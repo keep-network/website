@@ -40,6 +40,13 @@ collections:
                   minimal: true,
                 }
               - {
+                  label: "Subtitle",
+                  name: "subtitle",
+                  widget: "string",
+                  minimal: true,
+                  required: false,
+                }
+              - {
                   label: "Body",
                   name: "body",
                   widget: "markdown",

@@ -2,9 +2,10 @@
 template: home-page
 path: /
 hero:
-  title: "Empower your Bitcoin: Unleash the potential for portfolio growth!"
+  title: tBTC unlocks Bitcoin on DeFi.
+  subtitle: Put your Bitcoin to work, without CeFi.
   body: >
-    Say goodbye to middlemen and embrace the future of secure, decentralized finance.
+    tBTC is the first decentralized Bitcoin to Ethereum bridge. tBTC is built on top of the Threshold Network, a merger of Keep Network and NuCypher.
   bg_video: images/home/keep-castle-clouds.mp4
   bg_image: /images/hero-bg.jpg
   cta_buttons:

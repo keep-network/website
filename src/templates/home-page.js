@@ -48,8 +48,9 @@ export const HomePageTemplate = ({
           <div className="home-video-bg-overlay" />
         </div>
         <Row>
-          <Col xs={12} lg={10} md={10}>
-            <h1>{`${hero.title}`}</h1>
+          <Col>
+            <h1>{hero.title}</h1>
+            {hero.subtitle && <h2>{hero.subtitle}</h2>}
             <h4 className="body">{hero.body}</h4>
           </Col>
         </Row>
@@ -328,6 +329,7 @@ export const query = graphql`
       frontmatter {
         hero {
           title
+          subtitle
           body
           bg_video
           cta_buttons {

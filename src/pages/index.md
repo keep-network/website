@@ -24,35 +24,6 @@ carousel:
   - title: Security without compromise.
     body: The Keep network stores data with the highest level of encryption. Keep
       and tBTC have been audited by the strongest firms in the ecosystem.
-summary_grid:
-  title: How to stake
-  body: Learn more about staking on the Keep network to earn rewards and secure
-    the network.
-  cards:
-    - name: About Keep
-      title: How the Keep Network works
-      icon:
-        image: /images/svg/grid-icon-1.svg
-        alt: About Keep
-      url: /info
-    - name: Get Keep
-      title: Where to get KEEP tokens
-      icon:
-        image: /images/svg/grid-icon-2.svg
-        alt: Get Keep
-      url: /#exchanges
-    - name: Stake Keep
-      title: Staking your KEEP tokens
-      icon:
-        image: /images/svg/grid-icon-3.svg
-        alt: Stake Keep
-      url: /stake
-    - name: Launch Dapp
-      title: Manage stake and rewards
-      icon:
-        image: /images/svg/grid-icon-4.svg
-        alt: Launch Dapp
-      url: https://dashboard.keep.network/
 minilogo_grid:
   - icon:
       image: /images/logos/bloomberg.png

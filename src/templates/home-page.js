@@ -11,7 +11,6 @@ import {
   ImageLink,
   Link,
   PageSection,
-  SummaryGrid,
   MiniLogoWall,
   KeepBlog,
 } from "../components"
@@ -21,7 +20,6 @@ import GovernanceForum from "../components/GovernanceForum"
 export const HomePageTemplate = ({
   hero = {},
   carousel = [],
-  summary_grid: summaryGrid = {},
   minilogo_grid: minilogoGrid = [],
   governance_forum: governanceForum = {},
   blogs = {},
@@ -207,9 +205,6 @@ export const HomePageTemplate = ({
           </Col>
         </Row>
       </PageSection>
-      <PageSection id={sections.home.SUMMARY_GRID}>
-        <SummaryGrid {...summaryGrid} />
-      </PageSection>
       <PageSection id={sections.home.MINILOGO_GRID}>
         <MiniLogoWall logos={minilogoGrid} />
       </PageSection>
@@ -269,7 +264,6 @@ export const HomePageTemplate = ({
 HomePageTemplate.propTypes = {
   hero: PropTypes.object,
   carousel: PropTypes.array,
-  summary_grid: PropTypes.object,
   minilogo_grid: PropTypes.array,
   blogs: PropTypes.object,
   exchanges: PropTypes.object,
@@ -312,21 +306,6 @@ export const query = graphql`
         carousel {
           title
           body
-        }
-        summary_grid {
-          title
-          body
-          cards {
-            name
-            title
-            icon {
-              image {
-                relativePath
-              }
-              alt
-            }
-            url
-          }
         }
         minilogo_grid {
           icon {

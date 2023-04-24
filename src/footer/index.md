@@ -15,20 +15,12 @@ nav_categories:
         url: /info#info-secure
   - title: Follow
     items:
-      - label: Blog
-        url: https://blog.keep.network/
       - label: Twitter
         url: https://twitter.com/keep_project
-      - label: Telegram
-        url: https://t.me/KeepNetworkOfficial/
       - label: Reddit
         url: https://www.reddit.com/r/KeepNetwork/
   - title: Community
     items:
-      - label: Join
-        url: /join
-      - label: Discord
-        url: https://discord.gg/Threshold
       - label: GitHub
         url: https://github.com/keep-network/
       - label: Governance

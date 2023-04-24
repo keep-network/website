@@ -42,27 +42,4 @@ questions:
     answer: The Keep coverage pool functions as a form of insurance. It helps secure
       the network and is an opportunity to earn rewards. Learn more <a
       href="https://dashboard.keep.network/coverage-pools/how-it-works">here.</a>
-contact:
-  title: Keep in touch
-  header: Get the Keep Newsletter
-  description: Sign up for our newsletter and never miss an update.
-  cards:
-    - title: Read the Keep blog
-      body: Get the latest updates on the blog. Read about the Keep network, tBTC,
-        partnerships, and more.
-      icon:
-        image: /images/svg/contact-icon-1.svg
-        alt: Read the Keep blog
-      link:
-        name: Read Blog
-        url: https://blog.keep.network/
-    - title: Join the community
-      body: The Keep community is now in Threshold! Join our community there for the
-        future of DeFi.
-      icon:
-        image: /images/svg/contact-icon-2.svg
-        alt: Join the community
-      link:
-        name: Join Discord
-        url: https://discord.gg/Threshold
 ---

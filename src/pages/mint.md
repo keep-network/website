@@ -1,6 +1,6 @@
 ---
-template: stake-page
-path: /stake
+template: mint-page
+path: /mint
 hero:
   title: Mint tBTC
   body: Mint tBTC and use the first decentralized bridge between Bitcoin and

@@ -3,7 +3,7 @@ const { createFilePath } = require("gatsby-source-filesystem")
 const { fmImagesToRelative } = require("gatsby-remark-relative-images")
 
 exports.createPages = async ({ actions, graphql, reporter }) => {
-  const { createPage } = actions
+  const { createPage, createRedirect } = actions
 
   // Filter only for md files in the src/pages directory. Any md files found
   // outside of that should not have a page created for it
@@ -41,6 +41,13 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       component: template,
       context: { id: node.id }, // additional data can be passed via context
     })
+  })
+
+  createRedirect({
+    fromPath: "/stake",
+    toPath: "/mint",
+    redirectInBrowser: true,
+    isPermanent: true,
   })
 }
 

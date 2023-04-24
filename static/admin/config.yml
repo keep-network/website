@@ -607,17 +607,17 @@ collections:
                       },
                     ],
                 }
-      - file: "src/pages/stake.md"
-        label: "Stake"
-        name: "stake"
+      - file: "src/pages/mint.md"
+        label: "Mint"
+        name: "mint"
         fields:
           - {
               label: "Template",
               name: "template",
               widget: "hidden",
-              default: "stake-page",
+              default: "mint-page",
             }
-          - { label: "Path", name: "path", widget: "hidden", default: "/stake" }
+          - { label: "Path", name: "path", widget: "hidden", default: "/mint" }
           - label: "Hero"
             name: "hero"
             widget: "object"
@@ -683,188 +683,6 @@ collections:
                             { label: "Alt", name: "alt", widget: "string" },
                           ],
                       },
-                    ],
-                }
-          - label: "Stake Options"
-            name: "stake_options"
-            widget: "object"
-            fields:
-              - {
-                label: "Title",
-                name: "title",
-                widget: "markdown",
-                minimal: true,
-                }
-              - {
-                label: "Body",
-                name: "body",
-                widget: "markdown",
-                required: false,
-                }
-              - {
-                label: "Cards",
-                name: "cards",
-                widget: "list",
-                allow_add: true,
-                required: false,
-                fields:
-                  [
-                    { label: Title, name: title, widget: string },
-                    { label: Body, name: body, widget: string },
-                    {
-                      label: "Buttons",
-                      name: "buttons",
-                      widget: "list",
-                      allow_add: false,
-                      required: false,
-                      fields:
-                        [
-                          { label: Label, name: label, widget: string },
-                          { label: URL, name: url, widget: string },
-                        ],
-                    },
-                    {
-                      label: Icon,
-                      name: icon,
-                      widget: object,
-                      fields:
-                        [
-                          {
-                            label: "Image",
-                            name: "image",
-                            widget: file,
-                            required: false,
-                            media_library: { config: { multiple: false } },
-                            hint: "SVG only. SVG must have width and height attributes set in the file.",
-                          },
-                          { label: "Alt", name: "alt", widget: "string" },
-                        ],
-                    },
-                  ],
-                }
-          - label: "Recommended"
-            name: "recommended"
-            widget: "object"
-            fields:
-              - {
-                  label: "Title",
-                  name: "title",
-                  widget: "markdown",
-                  minimal: true,
-                }
-              - {
-                  label: "Body",
-                  name: "body",
-                  widget: "markdown",
-                  required: false,
-                }
-              - {
-                  label: "Cards",
-                  name: "cards",
-                  widget: "list",
-                  allow_add: true,
-                  required: false,
-                  fields:
-                    [
-                      { label: Title, name: title, widget: string },
-                      { label: Body, name: body, widget: string },
-                      {
-                        label: Button,
-                        name: button,
-                        widget: object,
-                        fields:
-                          [
-                            { label: Label, name: label, widget: string },
-                            { label: URL, name: url, widget: string },
-                          ],
-                      },
-                      {
-                        label: Icon,
-                        name: icon,
-                        widget: object,
-                        fields:
-                          [
-                            {
-                              label: "Image",
-                              name: "image",
-                              widget: file,
-                              required: false,
-                              media_library: { config: { multiple: false } },
-                              hint: "PNG only. PNG must have width and height attributes set in the file.",
-                            },
-                            { label: "Alt", name: "alt", widget: "string" },
-                          ],
-                      },
-                    ],
-                }
-          - label: "Banner"
-            name: "banner"
-            widget: "object"
-            fields:
-              - {
-                  label: "Body",
-                  name: "body",
-                  widget: "markdown",
-                  required: false,
-                }
-              - {
-                  label: Button,
-                  name: button,
-                  widget: object,
-                  fields:
-                    [
-                      { label: Label, name: label, widget: string },
-                      { label: URL, name: url, widget: string },
-                    ],
-                }
-          - label: "Tech Guide"
-            name: "tech_guide"
-            widget: "object"
-            fields:
-              - { label: "Intro", name: "intro", widget: "markdown" }
-              - { label: "Title", name: "title", widget: "markdown" }
-              - { label: "Body", name: "body", widget: "markdown" }
-              - {
-                  label: Button,
-                  name: button,
-                  widget: object,
-                  fields:
-                    [
-                      { label: Label, name: label, widget: string },
-                      { label: URL, name: url, widget: string },
-                    ],
-                }
-          - label: "Exchanges"
-            name: "exchanges"
-            widget: "object"
-            fields:
-              - { label: "Title", name: "title", widget: "string" }
-              - {
-                  label: "Links",
-                  name: "links",
-                  widget: "list",
-                  allow_add: true,
-                  fields:
-                    [
-                      { label: "Name", name: "name", widget: "string" },
-                      {
-                        label: Icon,
-                        name: icon,
-                        widget: object,
-                        fields:
-                          [
-                            {
-                              label: "Image",
-                              name: "image",
-                              widget: file,
-                              required: false,
-                              media_library: { config: { multiple: false } },
-                              hint: "SVG only. SVG must have width and height attributes set in the file.",
-                            },
-                            { label: "Alt", name: "alt", widget: "string" },
-                          ],
-                      },
-                      { label: "Url", name: "url", widget: "string" },
                     ],
                 }
       - file: "src/pages/faq.md"

@@ -18,7 +18,6 @@ import Ticker from "./Ticker"
 import SummaryGrid from "./SummaryGrid"
 import MiniLogoWall from "./MiniLogoWall"
 import KeepBlog from "./KeepBlog"
-import Contact from "./Contact"
 
 export {
   App,
@@ -41,5 +40,4 @@ export {
   SummaryGrid,
   MiniLogoWall,
   KeepBlog,
-  Contact,
 }

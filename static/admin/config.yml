@@ -246,51 +246,6 @@ collections:
                       },
                     ],
                 }
-          - label: "Contact"
-            name: "contact"
-            widget: "object"
-            fields:
-              - { label: "Title", name: "title", widget: "string" }
-              - { label: "Header", name: "header", widget: "string" }
-              - { label: "Description", name: "description", widget: "string" }
-              - {
-                  label: "Cards",
-                  name: "cards",
-                  widget: "list",
-                  allow_add: true,
-                  fields:
-                    [
-                      { label: "Title", name: "title", widget: "string" },
-                      { label: "Body", name: "body", widget: "string" },
-                      {
-                        label: Icon,
-                        name: icon,
-                        widget: object,
-                        fields:
-                          [
-                            {
-                              label: "Image",
-                              name: "image",
-                              widget: file,
-                              required: false,
-                              media_library: { config: { multiple: false } },
-                              hint: "SVG only. SVG must have width and height attributes set in the file.",
-                            },
-                            { label: "Alt", name: "alt", widget: "string" },
-                          ],
-                      },
-                      {
-                        label: Link,
-                        name: link,
-                        widget: object,
-                        fields:
-                          [
-                            { label: "Name", name: "name", widget: "string" },
-                            { label: "Url", name: "url", widget: "string" },
-                          ],
-                      },
-                    ],
-                }
       - file: "src/pages/mint.md"
         label: "Mint"
         name: "mint"
@@ -397,51 +352,6 @@ collections:
             fields:
               - { label: "Question", name: "question", widget: "string" }
               - { label: "Answer", name: "answer", widget: "string" }
-          - label: "Contact"
-            name: "contact"
-            widget: "object"
-            fields:
-              - { label: "Title", name: "title", widget: "string" }
-              - { label: "Header", name: "header", widget: "string" }
-              - { label: "Description", name: "description", widget: "string" }
-              - {
-                  label: "Cards",
-                  name: "cards",
-                  widget: "list",
-                  allow_add: true,
-                  fields:
-                    [
-                      { label: "Title", name: "title", widget: "string" },
-                      { label: "Body", name: "body", widget: "string" },
-                      {
-                        label: Icon,
-                        name: icon,
-                        widget: object,
-                        fields:
-                          [
-                            {
-                              label: "Image",
-                              name: "image",
-                              widget: file,
-                              required: false,
-                              media_library: { config: { multiple: false } },
-                              hint: "SVG only. SVG must have width and height attributes set in the file.",
-                            },
-                            { label: "Alt", name: "alt", widget: "string" },
-                          ],
-                      },
-                      {
-                        label: Link,
-                        name: link,
-                        widget: object,
-                        fields:
-                          [
-                            { label: "Name", name: "name", widget: "string" },
-                            { label: "Url", name: "url", widget: "string" },
-                          ],
-                      },
-                    ],
-                }
       - file: "src/pages/press.md"
         label: "Press"
         name: "press"
@@ -931,52 +841,7 @@ collections:
                           ],
                       },
                     ],
-                }
-          - label: "Contact"
-            name: "contact"
-            widget: "object"
-            fields:
-              - { label: "Title", name: "title", widget: "string" }
-              - { label: "Header", name: "header", widget: "string" }
-              - { label: "Description", name: "description", widget: "string" }
-              - {
-                  label: "Cards",
-                  name: "cards",
-                  widget: "list",
-                  allow_add: true,
-                  fields:
-                    [
-                      { label: "Title", name: "title", widget: "string" },
-                      { label: "Body", name: "body", widget: "string" },
-                      {
-                        label: Icon,
-                        name: icon,
-                        widget: object,
-                        fields:
-                          [
-                            {
-                              label: "Image",
-                              name: "image",
-                              widget: file,
-                              required: false,
-                              media_library: { config: { multiple: false } },
-                              hint: "SVG only. SVG must have width and height attributes set in the file.",
-                            },
-                            { label: "Alt", name: "alt", widget: "string" },
-                          ],
-                      },
-                      {
-                        label: Link,
-                        name: link,
-                        widget: object,
-                        fields:
-                          [
-                            { label: "Name", name: "name", widget: "string" },
-                            { label: "Url", name: "url", widget: "string" },
-                          ],
-                      },
-                    ],
-                }
+                } 
       - file: "src/pages/privacy-policy.md"
         label: "Privacy Policy"
         name: "privacy_policy"

@@ -1,5 +1,4 @@
 import React, { useEffect } from "react"
-import { connect } from "react-redux"
 import { Col, Row } from "reactstrap"
 import PropTypes from "prop-types"
 import { graphql, withPrefix } from "gatsby"
@@ -15,10 +14,8 @@ import {
   SummaryGrid,
   MiniLogoWall,
   KeepBlog,
-  Contact,
 } from "../components"
 import { sections } from "../constants"
-import { actions } from "../redux"
 import GovernanceForum from "../components/GovernanceForum"
 
 export const HomePageTemplate = ({
@@ -29,10 +26,7 @@ export const HomePageTemplate = ({
   governance_forum: governanceForum = {},
   blogs = {},
   exchanges = {},
-  signupMailingList = () => {},
-  ajaxRequestStates = {},
   logo_wall: logoWall = {},
-  contact = {},
 }) => {
   useEffect(() => {
     Aos.init({ once: true })
@@ -268,17 +262,6 @@ export const HomePageTemplate = ({
           </div>
         </section>
       </PageSection>
-      <PageSection id={sections.home.CONTACT}>
-        <Row>
-          <Col xs={12} sm={12}>
-            <Contact
-              {...contact}
-              signupMailingList={signupMailingList}
-              requestStates={ajaxRequestStates}
-            />
-          </Col>
-        </Row>
-      </PageSection>
     </div>
   )
 }
@@ -290,26 +273,15 @@ HomePageTemplate.propTypes = {
   minilogo_grid: PropTypes.array,
   blogs: PropTypes.object,
   exchanges: PropTypes.object,
-  signupMailingList: PropTypes.func,
-  ajaxRequestStates: PropTypes.object,
   logo_wall: PropTypes.object,
-  contact: PropTypes.object,
   governance_forum: PropTypes.object,
 }
-
-const mapStateToProps = (state) => ({
-  ajaxRequestStates: state.ajaxRequestStates,
-})
-
-export const ConnectedHomePage = connect(mapStateToProps, {
-  signupMailingList: actions.signupMailingList,
-})(HomePageTemplate)
 
 const HomePage = ({ data }) => {
   const { markdownRemark: post } = data
   return (
     <App className="app-home">
-      <ConnectedHomePage {...post.frontmatter} />
+      <HomePageTemplate {...post.frontmatter} />
     </App>
   )
 }
@@ -426,25 +398,6 @@ export const query = graphql`
                 }
               }
               alt
-            }
-          }
-        }
-        contact {
-          title
-          header
-          description
-          cards {
-            title
-            body
-            icon {
-              image {
-                relativePath
-              }
-              alt
-            }
-            link {
-              name
-              url
             }
           }
         }

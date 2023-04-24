@@ -14,8 +14,6 @@ nav_items:
     subitems:
       - label: Press
         url: /press
-      - label: Blog
-        url: https://blog.keep.network/
   - label: About
     url: ""
     subitems:

@@ -1,12 +1,10 @@
 ---
 template: header-nav
 nav_items:
-  - label: Join
-    url: /join
   - label: tBTC
     url: https://threshold.network/earn/btc
   - label: Mint
-    url: /tbtc
+    url: /mint
   - label: Faq
     url: /faq
   - label: News

@@ -212,7 +212,7 @@ export const HomePageTemplate = ({
         <GovernanceForum {...governanceForum} />
       </PageSection>
       <PageSection id={sections.home.KEEP_BLOG}>
-        <KeepBlog {...blogs} isMore={true} />
+        <KeepBlog {...blogs} />
       </PageSection>
       <PageSection
         id={sections.home.EXCHANGES}

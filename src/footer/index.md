@@ -13,18 +13,14 @@ nav_categories:
         url: /team
       - label: Audits
         url: /info#info-secure
-  - title: Follow
+  - title: Projects
     items:
-      - label: Twitter
-        url: https://twitter.com/keep_project
-      - label: Reddit
-        url: https://www.reddit.com/r/KeepNetwork/
-  - title: Community
-    items:
-      - label: GitHub
-        url: https://github.com/keep-network/
-      - label: Governance
-        url: https://forum.keep.network/
+      - label: Mint
+        url: https://keep.network/mint
+      - label: tBTC
+        url: https://dashboard.threshold.network/tBTC
+      - label: Threshold
+        url: https://threshold.network
 copyright_text: <p>A Thesis<sup>*</sup> Build</p><p>© 2021 Keep SEZC. All Rights Reserved.</p>
 legal_links:
   - label: Privacy Policy

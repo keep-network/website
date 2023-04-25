@@ -4,7 +4,7 @@ import { Col, Row } from "reactstrap"
 import PropTypes from "prop-types"
 import { graphql, withPrefix } from "gatsby"
 
-import { App, Link, PageSection, FeatureCard, Button } from "../components"
+import { App, PageSection, FeatureCard, Button } from "../components"
 import { sections } from "../constants"
 
 export const MintPageTemplate = ({ hero = {}, why = {} }) => {

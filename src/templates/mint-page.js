@@ -4,7 +4,7 @@ import { Col, Row } from "reactstrap"
 import PropTypes from "prop-types"
 import { graphql, withPrefix } from "gatsby"
 
-import { App, Link, PageSection, FeatureCard } from "../components"
+import { App, Link, PageSection, FeatureCard, Button } from "../components"
 import { sections } from "../constants"
 
 export const MintPageTemplate = ({ hero = {}, why = {} }) => {
@@ -29,13 +29,12 @@ export const MintPageTemplate = ({ hero = {}, why = {} }) => {
               dangerouslySetInnerHTML={{ __html: hero.body }}
             />
             {hero.cta_buttons.map((btn, i) => (
-              <Link
+              <Button
                 key={`cta-btn-${i}`}
+                label={btn.label}
                 url={btn.url}
                 className="cta-link btn btn-primary"
-              >
-                {btn.label}
-              </Link>
+              />
             ))}
           </Col>
           <Col></Col>

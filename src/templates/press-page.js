@@ -4,7 +4,7 @@ import { Col, Row } from "reactstrap"
 import PropTypes from "prop-types"
 import { graphql } from "gatsby"
 
-import { App, MiniLogoWall, KeepBlog, Link } from "../components"
+import { App, MiniLogoWall, KeepBlog, Link, Button } from "../components"
 import PageSection, { SeeAllButton } from "../components/PageSection"
 import { sections } from "../constants"
 
@@ -102,13 +102,12 @@ export const PressPageTemplate = ({
           />
         </div>
         {hero.cta_buttons.map((btn, i) => (
-          <Link
+          <Button
             key={`cta-btn-${i}`}
+            label={btn.label}
             url={btn.url}
             className="cta-link btn btn-primary"
-          >
-            {btn.label}
-          </Link>
+          />
         ))}
       </PageSection>
       <PageSection id={sections.press.MINILOGO_GRID}>

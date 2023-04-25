@@ -4,14 +4,20 @@ import PropTypes from "prop-types"
 import Link from "./Link"
 
 const Button = ({ className, label, url, onClick }) => {
+  const body = { __html: label }
+
   return url ? (
-    <Link url={url} className={classNames(["btn", className])}>
-      {label}
-    </Link>
+    <Link
+      url={url}
+      className={classNames(["btn", className])}
+      dangerouslySetInnerHTML={body}
+    />
   ) : (
-    <button className={classNames(["btn", className])} onClick={onClick}>
-      {label}
-    </button>
+    <button
+      className={classNames(["btn", className])}
+      onClick={onClick}
+      dangerouslySetInnerHTML={body}
+    />
   )
 }
 

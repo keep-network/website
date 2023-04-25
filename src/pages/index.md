@@ -9,7 +9,7 @@ hero:
   bg_video: images/home/keep-castle-clouds.mp4
   bg_image: /images/hero-bg.jpg
   cta_buttons:
-    - label: Mint tBTC
+    - label: 'Mint <span style="text-transform: lowercase">t</span>BTC'
       url: https://threshold.network/earn/btc
     - label: Legacy Keep Dashboard
       url: https://dashboard.keep.network/

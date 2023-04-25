@@ -1,12 +1,10 @@
 backend:
-  name: github
-  repo: keep-network/website
-  site_domain: keep.network
-  base_url: https://backend.keep.network/
-  auth_endpoint: netlify/auth
+  name: github-gateway
   open_authoring: true
 
 site_url: https://keep.network
+
+local_backend: true
 
 publish_mode: editorial_workflow
 
@@ -70,7 +68,7 @@ collections:
                   required: false,
                   fields:
                     [
-                      { label: Label, name: label, widget: string },
+                      { label: Label, name: label, widget: markdown },
                       { label: URL, name: url, widget: string },
                     ],
                 }
@@ -247,7 +245,7 @@ collections:
                   required: false,
                   fields:
                     [
-                      { label: Label, name: label, widget: string },
+                      { label: Label, name: label, widget: markdown },
                       { label: URL, name: url, widget: string },
                     ],
                 }
@@ -354,7 +352,7 @@ collections:
                   required: false,
                   fields:
                     [
-                      { label: Label, name: label, widget: string },
+                      { label: Label, name: label, widget: markdown },
                       { label: URL, name: url, widget: string },
                     ],
                 }
@@ -705,7 +703,7 @@ collections:
                   widget: object,
                   fields:
                     [
-                      { label: Label, name: label, widget: string },
+                      { label: Label, name: label, widget: markdown },
                       { label: URL, name: url, widget: string },
                     ],
                 }
@@ -785,7 +783,7 @@ collections:
                         widget: object,
                         fields:
                           [
-                            { label: Label, name: label, widget: string },
+                            { label: Label, name: label, widget: markdown },
                             { label: URL, name: url, widget: string },
                           ],
                       },
@@ -947,7 +945,7 @@ collections:
               allow_add: true,
               fields:
                 [
-                  { label: "Label", name: "label", widget: "string" },
+                  { label: "Label", name: "label", widget: "markdown" },
                   {
                     label: "URL",
                     name: "url",
@@ -962,7 +960,7 @@ collections:
                     allow_add: true,
                     fields:
                       [
-                        { label: "Label", name: "label", widget: "string" },
+                        { label: "Label", name: "label", widget: "markdown" },
                         {
                           label: "URL",
                           name: "url",

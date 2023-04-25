@@ -41,13 +41,13 @@ tbtc_showcase:
   body: tBTC allows you to bridge your Bitcoin to Ethereum in a secure and
     trustless way to participate in DeFi.
   button:
-    label: Learn More
-    url: https://blog.threshold.network/tbtc-v2-vision-for-2022/
+    label: 'Mint <span style="text-transform: lowercase">T</span>BTC'
+    url: https://dashboard.threshold.network/tBTC
   features:
-    - name: 1 BTC = 1 TBTC
+    - name: 1 BTC = 1 tBTC
       icon:
         image: /images/feature-tbtc1.svg
-        alt: 1 BTC = 1 TBTC
+        alt: 1 BTC = 1 tBTC
     - name: DECENTRALIZED
       icon:
         image: /images/feature-tbtc2.svg

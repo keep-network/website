@@ -13,6 +13,7 @@ import {
   PageSection,
   MiniLogoWall,
   KeepBlog,
+  Button,
 } from "../components"
 import { sections } from "../constants"
 import GovernanceForum from "../components/GovernanceForum"
@@ -50,12 +51,11 @@ export const HomePageTemplate = ({
           <ul className="cta-links col-sm-12">
             {hero.cta_buttons.map((btn, i) => (
               <li key={`cta-btn-${i}`}>
-                <Link
+                <Button
+                  label={btn.label}
                   url={btn.url}
                   className={`btn ${i === 0 ? "btn-primary" : "btn-default"}`}
-                >
-                  {btn.label}
-                </Link>
+                />
               </li>
             ))}
           </ul>

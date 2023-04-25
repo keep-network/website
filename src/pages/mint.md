@@ -6,7 +6,7 @@ hero:
   body: Mint tBTC and use the first decentralized bridge between Bitcoin and
     Ethereum.
   cta_buttons:
-    - label: Mint tBTC
+    - label: 'Mint <span style="text-transform: lowercase">t</span>BTC'
       url: https://threshold.network/earn/btc
 why:
   title: Why mint tBTC?

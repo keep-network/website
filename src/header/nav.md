@@ -1,14 +1,14 @@
 ---
 template: header-nav
 nav_items:
-  - label: tBTC
+  - label: '<span style="text-transform: lowercase">t</span>BTC'
     url: https://threshold.network/earn/btc
   - label: Mint
     url: /mint
   - label: Faq
     url: /faq
   - label: Press
-    url: "/press"
+    url: /press
   - label: About
     url: ""
     subitems:

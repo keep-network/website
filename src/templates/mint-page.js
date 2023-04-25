@@ -14,7 +14,7 @@ export const MintPageTemplate = ({ hero = {}, why = {} }) => {
         id={sections.stake.HOME}
         style={{
           backgroundImage: `url(${withPrefix(
-            "/images/features/stake-overview.png"
+            "/images/features/tBTC-dApp.png"
           )})`,
         }}
       >

@@ -7,11 +7,8 @@ nav_items:
     url: /mint
   - label: Faq
     url: /faq
-  - label: News
-    url: ""
-    subitems:
-      - label: Press
-        url: /press
+  - label: Press
+    url: "/press"
   - label: About
     url: ""
     subitems:

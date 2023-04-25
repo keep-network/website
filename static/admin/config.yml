@@ -401,6 +401,7 @@ collections:
                         label: "Date & Time",
                         name: "date",
                         widget: "datetime",
+                        format: "M/D/YYYY",
                       },
                       {
                         label: Icon,

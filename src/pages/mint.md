@@ -7,7 +7,9 @@ hero:
     Ethereum.
   cta_buttons:
     - label: 'Mint <span style="text-transform: lowercase">t</span>BTC'
-      url: https://threshold.network/earn/btc
+      url: https://dashboard.threshold.network/tBTC
+    - label: Learn More
+      url: https://threshold.network/earn/btc/
 why:
   title: Why mint tBTC?
   cards:

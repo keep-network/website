@@ -28,14 +28,21 @@ export const MintPageTemplate = ({ hero = {}, why = {} }) => {
               className="body"
               dangerouslySetInnerHTML={{ __html: hero.body }}
             />
-            {hero.cta_buttons.map((btn, i) => (
-              <Button
-                key={`cta-btn-${i}`}
-                label={btn.label}
-                url={btn.url}
-                className="cta-link btn btn-primary"
-              />
-            ))}
+            <Row className="cta-section">
+              <ul className="cta-links col-sm-12">
+                {hero.cta_buttons.map((btn, i) => (
+                  <li key={`cta-btn-${i}`}>
+                    <Button
+                      label={btn.label}
+                      url={btn.url}
+                      className={`btn ${
+                        i === 0 ? "btn-primary" : "btn-default"
+                      }`}
+                    />
+                  </li>
+                ))}
+              </ul>
+            </Row>
           </Col>
           <Col></Col>
         </Row>

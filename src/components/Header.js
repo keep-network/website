@@ -165,12 +165,6 @@ export const HeaderTemplate = ({
                 >
                   <Icons.Discord />
                 </Link>
-                <div className="hint">
-                  <Icons.Dashboard />
-                  <span>
-                    The staking dapp works best for a Desktop experience.
-                  </span>
-                </div>
               </li>
               <li className="nav-item">
                 <Link

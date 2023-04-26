@@ -16,7 +16,7 @@ nav_categories:
   - title: Projects
     items:
       - label: Mint
-        url: https://keep.network/mint
+        url: /mint
       - label: tBTC
         url: https://dashboard.threshold.network/tBTC
       - label: Threshold

@@ -12,8 +12,34 @@
     z-index: 1;
   }
 
+  .cta-section {
+    margin-top: 64px;
+    margin-bottom: 72px;
+
+    .cta-links {
+      li {
+        list-style: none;
+        margin: 0 0 1em;
+      }
+    }
+  }
+
   @media (min-width: #{$bp-medium}) {
     padding: 150px 0;
+
+    .cta-section {
+      margin-top: 40px;
+
+      .cta-links {
+        li {
+          display: inline-block;
+
+          &:first-child {
+            margin-right: 1.5rem;
+          }
+        }
+      }
+    }
   }
 
   &.collapsible {

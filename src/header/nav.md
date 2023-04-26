@@ -1,8 +1,6 @@
 ---
 template: header-nav
 nav_items:
-  - label: '<span style="text-transform: lowercase">t</span>BTC'
-    url: https://threshold.network/earn/btc
   - label: Mint
     url: /mint
   - label: Faq

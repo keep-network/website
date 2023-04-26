@@ -17,19 +17,19 @@
     @media (min-width: #{$bp-small}) {
       background-size: 70%;
       background-position: bottom right -25px;
-      padding-bottom: unset !important;
     }
 
     @media (min-width: #{$bp-medium}) {
-      min-height: 768px;
-      background-repeat: no-repeat;
-      background-position: right bottom;
-      background-size: 40%;
-      min-height: 750px;
+      background-size: 50%;
+      padding-bottom: unset !important;
 
       .body {
         margin: 72px 0 40px;
       }
+    }
+
+    @media (min-width: #{$bp-large}) {
+      background-size: 40%;
     }
   }
 

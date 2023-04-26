@@ -104,12 +104,6 @@
         margin-top: 117px;
       }
     }
-
-    @media (max-width: #{$bp-medium - 1}) {
-      .cta-links > li > a {
-        width: 100%;
-      }
-    }
   }
 
   .keep-solution {

@@ -9,9 +9,9 @@ import { sections } from "../constants"
 
 export const MintPageTemplate = ({ hero = {}, why = {} }) => {
   return (
-    <div className="stake-content">
+    <div className="mint-content">
       <PageSection
-        id={sections.stake.HOME}
+        id={sections.mint.HOME}
         style={{
           backgroundImage: `url(${withPrefix(
             "/images/features/tBTC-dApp.png"
@@ -47,7 +47,7 @@ export const MintPageTemplate = ({ hero = {}, why = {} }) => {
           <Col></Col>
         </Row>
       </PageSection>
-      <PageSection id={sections.stake.WHY}>
+      <PageSection id={sections.mint.WHY}>
         <Row>
           <Col xs={12}>
             <h2 dangerouslySetInnerHTML={{ __html: why.title }} />

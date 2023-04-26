@@ -1,0 +1,64 @@
+.mint-content {
+  .home-mint {
+    min-height: 768px;
+    background-size: 90%;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    padding-bottom: 30% !important;
+
+    .body {
+      color: $grey-70;
+    }
+
+    @media (min-width: 500px) {
+      padding-bottom: 35% !important;
+    }
+
+    @media (min-width: #{$bp-small}) {
+      background-size: 70%;
+      background-position: bottom right -25px;
+      padding-bottom: unset !important;
+    }
+
+    @media (min-width: #{$bp-medium}) {
+      min-height: 768px;
+      background-repeat: no-repeat;
+      background-position: right bottom;
+      background-size: 40%;
+      min-height: 750px;
+
+      .body {
+        margin: 72px 0 40px;
+      }
+    }
+  }
+
+  .why {
+    background-color: $grey-20;
+
+    h2 {
+      margin-bottom: 88px;
+    }
+
+    @media (max-width: #{$bp-medium - 1}) {
+      h2 {
+        margin-bottom: 48px;
+      }
+
+      .card {
+        min-height: 356px;
+      }
+    }
+    @media (min-width: #{$bp-medium}) and (max-width: #{$bp-large - 1}) {
+      .card {
+        min-height: 335px;
+        &-icon {
+          height: 95px;
+        }
+        &-title {
+          font-size: 22px;
+        }
+      }
+    }
+  }
+}

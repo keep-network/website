@@ -18,14 +18,9 @@ const sections = {
     SECURE: "build-secure",
     CONTACT: "contact",
   },
-  stake: {
-    HOME: "home-stake",
+  mint: {
+    HOME: "home-mint",
     WHY: "why",
-    STAKE_OPTIONS: "stake-options",
-    RECOMMENDED: "recommended",
-    BANNER_BUSINESS_TEAM: "banner-business-team",
-    TECH_GUIDE: "tech-guide",
-    EXCHANGES: "exchanges",
   },
   faq: {
     HOME: "home-faq",

@@ -1,5 +1,4 @@
 import React, { useEffect } from "react"
-import { connect } from "react-redux"
 import { Col, Row } from "reactstrap"
 import PropTypes from "prop-types"
 import { graphql, withPrefix } from "gatsby"
@@ -12,27 +11,21 @@ import {
   ImageLink,
   Link,
   PageSection,
-  SummaryGrid,
   MiniLogoWall,
   KeepBlog,
-  Contact,
+  Button,
 } from "../components"
 import { sections } from "../constants"
-import { actions } from "../redux"
 import GovernanceForum from "../components/GovernanceForum"
 
 export const HomePageTemplate = ({
   hero = {},
   carousel = [],
-  summary_grid: summaryGrid = {},
   minilogo_grid: minilogoGrid = [],
   governance_forum: governanceForum = {},
   blogs = {},
   exchanges = {},
-  signupMailingList = () => {},
-  ajaxRequestStates = {},
   logo_wall: logoWall = {},
-  contact = {},
 }) => {
   useEffect(() => {
     Aos.init({ once: true })
@@ -58,12 +51,11 @@ export const HomePageTemplate = ({
           <ul className="cta-links col-sm-12">
             {hero.cta_buttons.map((btn, i) => (
               <li key={`cta-btn-${i}`}>
-                <Link
+                <Button
+                  label={btn.label}
                   url={btn.url}
                   className={`btn ${i === 0 ? "btn-primary" : "btn-default"}`}
-                >
-                  {btn.label}
-                </Link>
+                />
               </li>
             ))}
           </ul>
@@ -213,9 +205,6 @@ export const HomePageTemplate = ({
           </Col>
         </Row>
       </PageSection>
-      <PageSection id={sections.home.SUMMARY_GRID}>
-        <SummaryGrid {...summaryGrid} />
-      </PageSection>
       <PageSection id={sections.home.MINILOGO_GRID}>
         <MiniLogoWall logos={minilogoGrid} />
       </PageSection>
@@ -223,7 +212,7 @@ export const HomePageTemplate = ({
         <GovernanceForum {...governanceForum} />
       </PageSection>
       <PageSection id={sections.home.KEEP_BLOG}>
-        <KeepBlog {...blogs} isMore={true} />
+        <KeepBlog {...blogs} />
       </PageSection>
       <PageSection
         id={sections.home.EXCHANGES}
@@ -268,17 +257,6 @@ export const HomePageTemplate = ({
           </div>
         </section>
       </PageSection>
-      <PageSection id={sections.home.CONTACT}>
-        <Row>
-          <Col xs={12} sm={12}>
-            <Contact
-              {...contact}
-              signupMailingList={signupMailingList}
-              requestStates={ajaxRequestStates}
-            />
-          </Col>
-        </Row>
-      </PageSection>
     </div>
   )
 }
@@ -286,30 +264,18 @@ export const HomePageTemplate = ({
 HomePageTemplate.propTypes = {
   hero: PropTypes.object,
   carousel: PropTypes.array,
-  summary_grid: PropTypes.object,
   minilogo_grid: PropTypes.array,
   blogs: PropTypes.object,
   exchanges: PropTypes.object,
-  signupMailingList: PropTypes.func,
-  ajaxRequestStates: PropTypes.object,
   logo_wall: PropTypes.object,
-  contact: PropTypes.object,
   governance_forum: PropTypes.object,
 }
-
-const mapStateToProps = (state) => ({
-  ajaxRequestStates: state.ajaxRequestStates,
-})
-
-export const ConnectedHomePage = connect(mapStateToProps, {
-  signupMailingList: actions.signupMailingList,
-})(HomePageTemplate)
 
 const HomePage = ({ data }) => {
   const { markdownRemark: post } = data
   return (
     <App className="app-home">
-      <ConnectedHomePage {...post.frontmatter} />
+      <HomePageTemplate {...post.frontmatter} />
     </App>
   )
 }
@@ -340,21 +306,6 @@ export const query = graphql`
         carousel {
           title
           body
-        }
-        summary_grid {
-          title
-          body
-          cards {
-            name
-            title
-            icon {
-              image {
-                relativePath
-              }
-              alt
-            }
-            url
-          }
         }
         minilogo_grid {
           icon {
@@ -426,25 +377,6 @@ export const query = graphql`
                 }
               }
               alt
-            }
-          }
-        }
-        contact {
-          title
-          header
-          description
-          cards {
-            title
-            body
-            icon {
-              image {
-                relativePath
-              }
-              alt
-            }
-            link {
-              name
-              url
             }
           }
         }

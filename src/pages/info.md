@@ -41,13 +41,13 @@ tbtc_showcase:
   body: tBTC allows you to bridge your Bitcoin to Ethereum in a secure and
     trustless way to participate in DeFi.
   button:
-    label: Learn More
-    url: https://blog.threshold.network/tbtc-v2-vision-for-2022/
+    label: 'Mint <span style="text-transform: lowercase">T</span>BTC'
+    url: https://dashboard.threshold.network/tBTC
   features:
-    - name: 1 BTC = 1 TBTC
+    - name: 1 BTC = 1 tBTC
       icon:
         image: /images/feature-tbtc1.svg
-        alt: 1 BTC = 1 TBTC
+        alt: 1 BTC = 1 tBTC
     - name: DECENTRALIZED
       icon:
         image: /images/feature-tbtc2.svg
@@ -83,27 +83,4 @@ secure:
       icon:
         image: /images/svg/ic-secure-built.svg
         alt: Sergi Delgado Audit
-contact:
-  title: Keep in touch
-  header: Get the Keep Newsletter
-  description: Sign up for our newsletter and never miss an update.
-  cards:
-    - title: Read the Keep blog
-      body: Get the latest updates on the blog. Read about the Keep network, tBTC,
-        partnerships, and more.
-      icon:
-        image: /images/svg/contact-icon-1.svg
-        alt: Read the Keep blog
-      link:
-        name: Read Blog
-        url: https://blog.keep.network/
-    - title: Join the community
-      body: The Keep community is now in Threshold! Join our community there for the
-        future of DeFi.
-      icon:
-        image: /images/svg/contact-icon-2.svg
-        alt: Join the community
-      link:
-        name: Join Discord
-        url: https://discord.gg/Threshold
 ---

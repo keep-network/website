@@ -9,7 +9,7 @@ hero:
   bg_video: images/home/keep-castle-clouds.mp4
   bg_image: /images/hero-bg.jpg
   cta_buttons:
-    - label: Mint tBTC
+    - label: 'Mint <span style="text-transform: lowercase">t</span>BTC'
       url: https://threshold.network/earn/btc
     - label: Legacy Keep Dashboard
       url: https://dashboard.keep.network/
@@ -24,35 +24,6 @@ carousel:
   - title: Security without compromise.
     body: The Keep network stores data with the highest level of encryption. Keep
       and tBTC have been audited by the strongest firms in the ecosystem.
-summary_grid:
-  title: How to stake
-  body: Learn more about staking on the Keep network to earn rewards and secure
-    the network.
-  cards:
-    - name: About Keep
-      title: How the Keep Network works
-      icon:
-        image: /images/svg/grid-icon-1.svg
-        alt: About Keep
-      url: /info
-    - name: Get Keep
-      title: Where to get KEEP tokens
-      icon:
-        image: /images/svg/grid-icon-2.svg
-        alt: Get Keep
-      url: /#exchanges
-    - name: Stake Keep
-      title: Staking your KEEP tokens
-      icon:
-        image: /images/svg/grid-icon-3.svg
-        alt: Stake Keep
-      url: /stake
-    - name: Launch Dapp
-      title: Manage stake and rewards
-      icon:
-        image: /images/svg/grid-icon-4.svg
-        alt: Launch Dapp
-      url: https://dashboard.keep.network/
 minilogo_grid:
   - icon:
       image: /images/logos/bloomberg.png
@@ -105,29 +76,6 @@ blogs:
         image: /images/blog/the-block.png
         alt: The Block
       url: https://www.theblockcrypto.com/post/97634/keep-protocol-nucypher-ethereum-merger
-contact:
-  title: Keep in touch
-  header: Get the Keep Newsletter
-  description: Sign up for our newsletter and never miss an update.
-  cards:
-    - title: Read the Keep blog
-      body: Get the latest updates on the blog. Read about the Keep network, tBTC,
-        partnerships, and more.
-      icon:
-        image: /images/svg/contact-icon-1.svg
-        alt: Read the Keep blog
-      link:
-        name: Read Blog
-        url: https://blog.keep.network/
-    - title: Join the community
-      body: The Keep community is now in Threshold! Join our community there for the
-        future of DeFi.
-      icon:
-        image: /images/svg/contact-icon-2.svg
-        alt: Join the community
-      link:
-        name: Join Discord
-        url: https://discord.gg/Threshold
 governance_forum:
   title: Governance Forum
   body: Read the latest community proposals and cast your vote

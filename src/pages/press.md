@@ -32,7 +32,7 @@ news:
   title: In the News
   body: Featured Coverage
   cards:
-    - date: "2022-05-09T04:00:00.000Z"
+    - date: 5/9/2022
       url: https://blog.coinlist.co/introducing-threshold-t-staking-on-coinlist/
       source: Coinlist
       title: Introducing Threshold (T) Staking on CoinList

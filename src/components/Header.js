@@ -33,7 +33,9 @@ const NavItem = ({ label, url, subitems }) => {
         onMouseEnter={toggle}
         onMouseLeave={toggle}
       >
-        <DropdownToggle nav>{label}</DropdownToggle>
+        <DropdownToggle nav>
+          <span dangerouslySetInnerHTML={{ __html: label }} />
+        </DropdownToggle>
         <DropdownMenu>
           {subitems.map((item, i) => (
             <DropdownItem key={`dropdown-item-${i}`}>
@@ -43,13 +45,14 @@ const NavItem = ({ label, url, subitems }) => {
                     href={item.url}
                     rel="noopener noreferrer"
                     target="_blank"
-                  >
-                    {item.label}
-                  </NavLink>
+                    dangerouslySetInnerHTML={{ __html: item.label }}
+                  />
                 ) : (
-                  <Link url={item.url} activeClassName="active">
-                    {item.label}
-                  </Link>
+                  <Link
+                    url={item.url}
+                    activeClassName="active"
+                    dangerouslySetInnerHTML={{ __html: item.label }}
+                  />
                 )}
               </li>
             </DropdownItem>
@@ -64,16 +67,18 @@ const NavItem = ({ label, url, subitems }) => {
   if (regex.test(url)) {
     return (
       <NavScrollItem href={url} to={url.replace(regex, "")} hashSpy={true}>
-        {label}
+        <div dangerouslySetInnerHTML={{ __html: label }} />
       </NavScrollItem>
     )
   }
 
   return (
     <li className="nav-item">
-      <Link url={url} activeClassName="active">
-        {label}
-      </Link>
+      <Link
+        url={url}
+        activeClassName="active"
+        dangerouslySetInnerHTML={{ __html: label }}
+      />
     </li>
   )
 }
@@ -160,12 +165,6 @@ export const HeaderTemplate = ({
                 >
                   <Icons.Discord />
                 </Link>
-                <div className="hint">
-                  <Icons.Dashboard />
-                  <span>
-                    The staking dapp works best for a Desktop experience.
-                  </span>
-                </div>
               </li>
               <li className="nav-item">
                 <Link

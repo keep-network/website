@@ -1,19 +1,14 @@
 import React from "react"
-import { connect } from "react-redux"
 import { Col, Row } from "reactstrap"
 import PropTypes from "prop-types"
 import { graphql } from "gatsby"
 
-import { App, PageSection, Contact, CollapsibleList } from "../components"
+import { App, PageSection, CollapsibleList } from "../components"
 import { sections } from "../constants"
-import { actions } from "../redux"
 
 export const FaqPageTemplate = ({
   hero = {},
   questions = [],
-  contact = {},
-  signupMailingList = () => {},
-  ajaxRequestStates = {},
   plusIcon = {},
 }) => {
   return (
@@ -43,17 +38,6 @@ export const FaqPageTemplate = ({
           </Col>
         </Row>
       </PageSection>
-      <PageSection id={sections.home.CONTACT}>
-        <Row>
-          <Col xs={12} sm={12}>
-            <Contact
-              {...contact}
-              signupMailingList={signupMailingList}
-              requestStates={ajaxRequestStates}
-            />
-          </Col>
-        </Row>
-      </PageSection>
     </div>
   )
 }
@@ -61,29 +45,14 @@ export const FaqPageTemplate = ({
 FaqPageTemplate.propTypes = {
   hero: PropTypes.object,
   questions: PropTypes.array,
-  contact: PropTypes.object,
-  signupMailingList: PropTypes.func,
-  ajaxRequestStates: PropTypes.object,
   plusIcon: PropTypes.object,
 }
 
-const mapStateToProps = (state) => ({
-  ajaxRequestStates: state.ajaxRequestStates,
-})
-
-export const ConnectedFaqPage = connect(mapStateToProps, {
-  signupMailingList: actions.signupMailingList,
-})(FaqPageTemplate)
-
 const FaqPage = ({ data }) => {
-  const { markdownRemark: post, plusIcon, closeIcon } = data
+  const { markdownRemark: post, plusIcon } = data
   return (
     <App className="app-home">
-      <ConnectedFaqPage
-        {...post.frontmatter}
-        plusIcon={{ image: plusIcon }}
-        closeIcon={{ image: closeIcon }}
-      />
+      <FaqPageTemplate {...post.frontmatter} plusIcon={{ image: plusIcon }} />
     </App>
   )
 }
@@ -92,7 +61,6 @@ FaqPage.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.object,
     plusIcon: PropTypes.object,
-    closeIcon: PropTypes.object,
   }),
 }
 
@@ -109,25 +77,6 @@ export const query = graphql`
         questions {
           question
           answer
-        }
-        contact {
-          title
-          header
-          description
-          cards {
-            title
-            body
-            icon {
-              image {
-                relativePath
-              }
-              alt
-            }
-            link {
-              name
-              url
-            }
-          }
         }
       }
     }

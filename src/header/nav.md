@@ -1,21 +1,12 @@
 ---
 template: header-nav
 nav_items:
-  - label: Join
-    url: /join
-  - label: tBTC
-    url: https://threshold.network/earn/btc
-  - label: Stake
-    url: /stake
+  - label: Mint
+    url: /mint
   - label: Faq
     url: /faq
-  - label: News
-    url: ""
-    subitems:
-      - label: Press
-        url: /press
-      - label: Blog
-        url: https://blog.keep.network/
+  - label: Press
+    url: /press
   - label: About
     url: ""
     subitems:

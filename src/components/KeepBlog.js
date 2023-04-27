@@ -3,7 +3,6 @@ import PropTypes from "prop-types"
 import { Row, Col } from "reactstrap"
 
 import Button from "./Button"
-import Link from "./Link"
 import Image from "./Image"
 
 const BlogCard = ({ title, source, excerpt, date, icon, url }) => {
@@ -36,7 +35,7 @@ BlogCard.propTypes = {
   url: PropTypes.string,
 }
 
-const KeepBlog = ({ title, body, cards, isMore = false }) => {
+const KeepBlog = ({ title, body, cards }) => {
   return (
     <Row>
       <Col xs={12}>
@@ -48,11 +47,6 @@ const KeepBlog = ({ title, body, cards, isMore = false }) => {
               <BlogCard key={`blog-card-${i}`} {...blog} />
             ))}
         </div>
-        {isMore && (
-          <div className="keep-blog-footer">
-            <Link url="https://blog.keep.network/">Read more articles</Link>
-          </div>
-        )}
       </Col>
     </Row>
   )
@@ -62,7 +56,6 @@ KeepBlog.propTypes = {
   title: PropTypes.string,
   body: PropTypes.string,
   cards: PropTypes.array,
-  isMore: PropTypes.bool,
 }
 
 export default KeepBlog

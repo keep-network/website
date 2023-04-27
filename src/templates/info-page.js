@@ -1,19 +1,10 @@
 import React from "react"
-import { connect } from "react-redux"
 import { Col, Row } from "reactstrap"
 import PropTypes from "prop-types"
 import { graphql } from "gatsby"
 
-import {
-  App,
-  Image,
-  PageSection,
-  Contact,
-  Button,
-  FeatureCard,
-} from "../components"
+import { App, Image, PageSection, Button, FeatureCard } from "../components"
 import { sections } from "../constants"
-import { actions } from "../redux"
 
 export const InfoPageTemplate = ({
   hero = {},
@@ -21,9 +12,6 @@ export const InfoPageTemplate = ({
   solution = {},
   tbtc_showcase: tbtcShowcase = {},
   secure = {},
-  contact = {},
-  signupMailingList = () => {},
-  ajaxRequestStates = {},
 }) => {
   return (
     <div className="info-content">
@@ -129,17 +117,6 @@ export const InfoPageTemplate = ({
           ))}
         </Row>
       </PageSection>
-      <PageSection id={sections.info.CONTACT}>
-        <Row>
-          <Col xs={12} sm={12}>
-            <Contact
-              {...contact}
-              signupMailingList={signupMailingList}
-              requestStates={ajaxRequestStates}
-            />
-          </Col>
-        </Row>
-      </PageSection>
     </div>
   )
 }
@@ -150,24 +127,13 @@ InfoPageTemplate.propTypes = {
   solution: PropTypes.object,
   tbtc_showcase: PropTypes.object,
   secure: PropTypes.object,
-  contact: PropTypes.object,
-  signupMailingList: PropTypes.func,
-  ajaxRequestStates: PropTypes.object,
 }
-
-const mapStateToProps = (state) => ({
-  ajaxRequestStates: state.ajaxRequestStates,
-})
-
-export const ConnectedInfoPage = connect(mapStateToProps, {
-  signupMailingList: actions.signupMailingList,
-})(InfoPageTemplate)
 
 const InfoPage = ({ data }) => {
   const { markdownRemark: post } = data
   return (
     <App className="app-home">
-      <ConnectedInfoPage {...post.frontmatter} />
+      <InfoPageTemplate {...post.frontmatter} />
     </App>
   )
 }
@@ -253,25 +219,6 @@ export const query = graphql`
                 relativePath
               }
               alt
-            }
-          }
-        }
-        contact {
-          title
-          header
-          description
-          cards {
-            title
-            body
-            icon {
-              image {
-                relativePath
-              }
-              alt
-            }
-            link {
-              name
-              url
             }
           }
         }

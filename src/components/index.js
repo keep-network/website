@@ -1,7 +1,6 @@
 import App from "./App"
 import Announcement from "./Announcement"
 import CollapsibleList from "./CollapsibleList"
-import EmailForm from "./EmailForm"
 import Footer from "./Footer"
 import Header from "./Header"
 import * as Icons from "./Icons"
@@ -15,16 +14,13 @@ import PageSection from "./PageSection"
 import Profile from "./Profile"
 import SubmitButton from "./SubmitButton"
 import Ticker from "./Ticker"
-import SummaryGrid from "./SummaryGrid"
 import MiniLogoWall from "./MiniLogoWall"
 import KeepBlog from "./KeepBlog"
-import Contact from "./Contact"
 
 export {
   App,
   Announcement,
   CollapsibleList,
-  EmailForm,
   Footer,
   Header,
   Icons,
@@ -38,8 +34,6 @@ export {
   Profile,
   SubmitButton,
   Ticker,
-  SummaryGrid,
   MiniLogoWall,
   KeepBlog,
-  Contact,
 }

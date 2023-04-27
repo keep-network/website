@@ -26,6 +26,6 @@ why:
     - title: User Friendly
       body: Mint tBTC using the dashboard!
       icon:
-        image: /images/tbtc-dapp.png
+        image: /images/feature-tbtc2.svg
         alt: User Friendly
 ---

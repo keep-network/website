@@ -5,10 +5,9 @@ title: Team
 hero:
   name: " "
   title: BUIDLing Bridges
-  body: Below you'll find the folks building tBTCv2 on Threshold, the first
-    decentralized bridge from Bitcoin to Ethereum. Threshold Network is the
-    network merger between Keep and NuCypher.
-  image: /images/tbtc-v2.png
+  body: "Meet the folks building tBTCv2: a decentralized bridge from Bitcoin to
+    Ethereum."
+  image: /images/bridge_builder.png
 team_section:
   title: Keep Team
   hp:

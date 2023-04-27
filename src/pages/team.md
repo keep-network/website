@@ -29,12 +29,6 @@ team_section:
     - name: Eugene Wong
       title: Social Media Manager
       image: /images/eugenewong.png
-    - name: George Weiler
-      title: Engineer
-      image: /images/george.png
-    - name: Hagan Dietz
-      title: Growth Lead
-      image: /images/hagan-dietz.png
     - name: Jakub Nowakowski
       title: Engineer
       image: /images/kuba-bw.png

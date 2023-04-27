@@ -16,7 +16,7 @@ why:
     - title: Decentralized
       body: tBTC is the first truly decentralized bridge between Bitcoin and Ethereum.
       icon:
-        image: /images/decentralize.svg
+        image: /images/feature-tbtc2.svg
         alt: Decentralized
     - title: Permissionless
       body: Anyone can use their BTC tokens to mint tBTC.
@@ -26,6 +26,6 @@ why:
     - title: User Friendly
       body: Mint tBTC using the dashboard!
       icon:
-        image: /images/feature-tbtc1.svg
+        image: /images/tbtc-dapp.png
         alt: User Friendly
 ---

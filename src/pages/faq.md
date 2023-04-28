@@ -7,7 +7,7 @@ hero:
 questions:
   - question: What is the Threshold Network?
     answer: The Keep and NuCypher networks merged to form the Threshold Network in
-      2022. You can read the full story of the merge here on the <a
+      2021. You can read the full story of the merge here on the <a
       href="https://blog.threshold.network/the-story-of-threshold/">Threshold
       blog</a>.
   - question: What is tBTC?

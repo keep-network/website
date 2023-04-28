@@ -5,7 +5,7 @@ title: Team
 hero:
   name: " "
   title: BUIDLing Bridges
-  body: "Meet the folks building tBTCv2: a decentralized bridge from Bitcoin to
+  body: "Meet the folks building tBTC: a decentralized bridge from Bitcoin to
     Ethereum."
   image: /images/bridge_builder.png
 team_section:

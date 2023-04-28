@@ -13,8 +13,8 @@ questions:
   - question: What is tBTC?
     answer: tBTC is Threshold’s decentralized bridge to bring BTC to the Ethereum
       network; the only permissionless solution on the market today. The Keep
-      team built tBTCv2 on Threshold Network. Bridge your Bitcoin to Ethereum in
-      a secure and trustless way to participate in DeFi. Mint tBTC on the <a
+      team built tBTC on the Threshold Network. Bridge your Bitcoin to Ethereum
+      in a secure and trustless way to participate in DeFi. Mint tBTC on the <a
       href="https://dashboard.threshold.network/tBTC/mint">dapp</a>!
   - question: What is the T token?
     answer: Threshold's T token is both a utility token for the Threshold Network

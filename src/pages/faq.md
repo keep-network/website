@@ -18,7 +18,9 @@ questions:
       href="https://dashboard.threshold.network/tBTC/mint">dapp</a>!
   - question: What is the T token?
     answer: Threshold's T token is both a utility token for the Threshold Network
-      and a governance token for the Threshold DAO.
+      and a governance token for the Threshold DAO. Learn more about T tokens on
+      the <a href="https://threshold.network/earn/token-holder">Threshold
+      website</a>.
   - question: How do I upgrade my KEEP tokens to T?
     answer: You can upgrade your liquid KEEP tokens to T on the the Threshold
       dashboard <a

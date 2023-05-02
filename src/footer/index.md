@@ -5,8 +5,6 @@ nav_categories:
     items:
       - label: FAQ
         url: /faq
-      - label: Info
-        url: /info
       - label: Press
         url: /press
       - label: Team
@@ -15,13 +13,15 @@ nav_categories:
         url: /info#info-secure
   - title: Projects
     items:
-      - label: Mint
-        url: /mint
       - label: tBTC
         url: https://dashboard.threshold.network/tBTC
       - label: Threshold
         url: https://threshold.network
-copyright_text: <p>A Thesis<sup>*</sup> Build</p><p>© 2021 Keep SEZC. All Rights Reserved.</p>
+      - label: Mint Info
+        url: /mint
+      - label: Threshold Docs
+        url: https://docs.threshold.network/
+copyright_text: <p>A Thesis<sup>*</sup> Build</p><p>© 2023 Keep SEZC. All Rights Reserved.</p>
 legal_links:
   - label: Privacy Policy
     url: /privacy-policy

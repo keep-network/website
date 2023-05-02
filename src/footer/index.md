@@ -21,7 +21,7 @@ nav_categories:
         url: /mint
       - label: Threshold Docs
         url: https://docs.threshold.network/
-copyright_text: <p>A Thesis<sup>*</sup> Build</p><p>© 2021 Keep SEZC. All Rights Reserved.</p>
+copyright_text: <p>A Thesis<sup>*</sup> Build</p><p>© 2023 Keep SEZC. All Rights Reserved.</p>
 legal_links:
   - label: Privacy Policy
     url: /privacy-policy

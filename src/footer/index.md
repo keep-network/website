@@ -21,7 +21,7 @@ nav_categories:
         url: https://dashboard.threshold.network/tBTC
       - label: Threshold
         url: https://threshold.network
-copyright_text: <p>A Thesis<sup>*</sup> Build</p><p>© 2021 Keep SEZC. All Rights Reserved.</p>
+copyright_text: <p>A <a href="https://thesis.co">Thesis<sup>*</sup></a> Build</p><p>© 2021 Keep SEZC. All Rights Reserved.</p>
 legal_links:
   - label: Privacy Policy
     url: /privacy-policy
